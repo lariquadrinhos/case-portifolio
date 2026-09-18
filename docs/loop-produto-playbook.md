@@ -449,3 +449,31 @@ forma e por texto, nunca por cor.
 
 **O que isso ensinou.** Cada fluxo tem pelo menos um fim de fracasso. Um fluxo só com
 caminhos felizes não serve para achar obstáculo, que é para o que ele existe.
+
+### Volta 3 — o fluxo de telas, que é outro artefato
+
+**Pedido**
+
+> pode apagar o diagrama antigo. faz um fluxo de telas
+
+**Voltou.** Primeiro diagrama apagado — 40 nós, formas e conectores. Depois, o fluxo de
+telas: cada tela com o que ela contém, e **o elemento exato que dispara cada transição**
+escrito em cada seta.
+
+**Conferi contra.** A própria biblioteca da Figma, que distingue os dois: fluxo de usuário
+segue o caminho de uma pessoa até um objetivo; fluxo de telas — *UI flow* — tem "foco mais
+profundo em interações de tela específicas". São artefatos diferentes, e agora o board tem
+os dois.
+
+**A diferença que importa na prática.** O fluxo de usuário responde *"a pessoa consegue?"*.
+O fluxo de telas responde *"o que exatamente ela toca para ir daqui para lá?"* — e é esse
+o que a Fase 3 consome, porque é dele que sai a lista de telas a desenhar.
+
+**O que ele expõe que não estava visível.** Três coisas aparecem como nós próprios pela
+primeira vez: a barra fixa como moldura presente em toda página, o contato revelado como
+sobreposição sobre a página em vez de destino, e o visualizador de imagem, que só existe
+em tela estreita.
+
+**Lacuna que o desenho revelou.** O contato revelado precisa voltar para onde estava, e o
+diagrama só consegue apontar para uma página. É limitação da representação — o
+comportamento correto está no contrato de `moldura/botao-contato.md`.
