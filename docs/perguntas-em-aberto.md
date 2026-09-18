@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **18 perguntas**, duas travando
+**Atualizado:** 18 de setembro de 2026 · **20 perguntas**, duas travando
 
 ---
 
@@ -29,6 +29,22 @@ Lidos das variáveis, com o nome preservado, num único lugar de onde tudo deriv
 ---
 
 ## Esperam
+
+### P24 · As demonstrações do Figma contradizem o documento em três pontos
+Lido em 18/09/2026, frames `37:88` e `38:105`. A regra já diz que quem erra é o desenho —
+falta corrigir o arquivo ou confirmar que a demonstração é que está certa.
+1. A hero desenhada tem **dois botões** ("Ver meus trabalhos" e "Quem sou eu"); o documento
+   diz "uma ação principal só".
+2. A hero diz `UX/UI Designer`; o `quem-sou-eu.md` diz `UX Designer`.
+3. A trilha desenhada diz "Wireframes e documentação"; o arquivo do case diz
+   "Desenho e documentação".
+**Momento:** antes da Fase 3, quando as telas forem desenhadas para valer.
+
+### P25 · A coleção "Espaço e forma" não tem frame de documentação
+Os nomes `space/*`, `radius/*`, `stroke/padrao` e `foco/*` vêm do documento de definições,
+não de leitura do arquivo. Não foi possível confirmá-los contra a fonte — o MCP do Figma
+exige seleção no app para ler variáveis.
+**Momento:** antes de a spec visual ser gerada.
 
 ### P22 · O bloco "O Produto", no case de Finanças
 Título sem marcador de trilha, depois do último capítulo. É subseção do último capítulo,
