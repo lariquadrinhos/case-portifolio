@@ -292,83 +292,54 @@ cliente, trabalho não publicado de terceiros.
 
 ---
 
-## Diretriz 9 — Documentação vive em `/docs`
+## Diretriz 9 — Onde cada documento vive
 
-Toda documentação de projeto — **PRDs, ADRs e especificações** — é armazenada em `docs/`,
-versionada junto com o código. Documento que mora em conversa, em nuvem alheia ou na
-cabeça de alguém não existe.
-
-### Os três tipos e para que servem
-
-| Tipo | Responde | Quando nasce |
-|---|---|---|
-| **PRD** | O que o produto é, para quem, e por que vale a pena | Antes de especificar |
-| **Spec** | O que deve fazer, com critérios de aceite e casos de borda | Fluxo do Spec Kit |
-| **ADR** | Por que decidimos assim, e o que descartamos | No momento da decisão |
-
-A diferença que importa: PRD e Spec descrevem **o que será**. O ADR registra **por que
-não foi de outro jeito** — é a única defesa contra refazer a mesma discussão daqui a seis
-meses sem lembrar da conclusão.
-
-### Estrutura
+**Esta estrutura não é escolha minha. Está prescrita nos briefings dela** — eu tinha
+inventado uma diferente e ela estava errada.
 
 ```
 docs/
-├── README.md          índice do que existe
-├── prd/               NN-nome.md
-├── adr/               NNNN-titulo-da-decisao.md
-└── specs/             NNN-nome/  (spec.md, plan.md, tasks.md, checklists/)
+├── prd/01-portfolio.md          o que o produto é, para quem
+├── spec/                        visual, descendo do Figma
+└── comportamento/               o que a aplicação faz
+    ├── README.md
+    ├── _template.md
+    └── <dominio>/<fluxo>.md
+
+loop-produto-playbook.md         o procedimento e os prompts
+<log de decisões>                caminho ainda não prescrito
 ```
 
-Numeração sequencial, nomes em minúsculas com hífen, em português.
+### Os documentos e o que cada um responde
 
-### Redirecionamento obrigatório do Spec Kit
+| Documento | Responde | Manda sobre |
+|---|---|---|
+| **Definições** | por que o site é assim | o contrato |
+| **PRD** | o que o produto é, para quem | — |
+| **Contrato de comportamento** | o que existe e como se comporta | o código |
+| **Perguntas em aberto** | o que falta decidir, e quando deixa de poder esperar | — |
+| **Log de decisões** | o que aconteceu, em que ordem, e o que perdeu | **nada** |
+| **Playbook do loop** | como o trabalho foi conduzido, com os prompts | — |
 
-O Spec Kit grava em `specs/` na raiz por padrão. **Aqui não.** Toda invocação de
-`/speckit-specify` precisa receber:
+**A hierarquia é explícita:** definições → contrato → código. O log não manda sobre nada —
+é memória, não fonte. Nunca resolva dúvida de implementação lendo o log.
 
-```
-SPECIFY_FEATURE_DIRECTORY = docs/specs/<NNN>-<nome-curto>
-```
+### Uma pergunta, um lugar
 
-A skill respeita esse valor quando fornecido explicitamente. Sem ele, ela volta ao
-padrão e a documentação se parte em dois lugares.
-
-### Formato de ADR
-
-Formato Nygard, quatro seções, uma página no máximo:
-
-```markdown
-# NNNN — Título da decisão
-
-**Status:** proposta | aceita | substituída por NNNN
-**Data:** AAAA-MM-DD
-
-## Contexto
-O que era verdade quando decidimos. Restrições reais, não justificativas.
-
-## Decisão
-O que foi decidido, em voz ativa.
-
-## Alternativas descartadas
-O que mais estava na mesa e por que não venceu.
-
-## Consequências
-O que isso facilita e o que isso custa. Incluir o custo, sempre.
-```
-
-ADR não se edita depois de aceito. Mudou de ideia? Escreve um novo e marca o antigo como
-substituído. O histórico da decisão é o valor.
+`perguntas-em-aberto` é a lista única do que falta decidir. O Registro de Incógnitas deste
+documento **é subordinado a ela**: quando o arquivo existir, este registro vira ponteiro.
+Duas listas da mesma coisa é a duplicação que o projeto inteiro existe para evitar.
 
 ### Atenção ao publicar
 
-O GitHub Pages pode ser configurado para servir a partir de `docs/`. Hoje ele serve a
-partir da raiz. **Se algum dia alguém mudar essa configuração, a documentação vira o
-site.** Verificar antes de mexer em Pages.
+O GitHub Pages pode servir a partir de `docs/`. Hoje serve da raiz. Se alguém mudar essa
+configuração, **a documentação vira o site.**
 
-### O que ainda não está decidido
+### Ainda não resolvido
 
-- `[?: a documentação fica pública junto com o repositório, ou parte dela vai para _privado/?]`
+- `[?: docs/adr/ some, já que o log de decisões cobre o papel?]`
+- `[?: onde vive o arquivo do log de decisões — o briefing não prescreve caminho]`
+- `[?: docs/specs/ que criei colide com docs/spec/ dela. Apagar o meu?]`
 
 ---
 
@@ -481,21 +452,31 @@ coincidem** e não foram conciliadas:
 
 ### Sabido não sabido
 
-Travam a Fase 1, segundo o próprio documento de definições:
+**Revisado contra o documento de definições em 18/09/2026.** Correção importante: os seis
+itens abaixo **não são lacunas do documento dela** — são decisões que ela agendou para a
+Fase 1, com o nome "Decidir antes de desenhar". Estão em aberto por projeto, não por
+omissão.
 
-- `[?: stack e hospedagem, com alternativa e motivo]`
+- `[?: stack e hospedagem, com alternativa e motivo registrados]`
 - `[?: como o conteúdo em texto vira página]`
 - `[?: como a estrutura recebe um segundo idioma sem ser refeita]`
-- `[?: o que fica visível na barra em tela estreita]`
-- `[?: como os tokens do Figma entram no código]`
+- `[?: o que fica visível na barra em tela estreita]` — o mínimo já está definido: nome e Trabalhos
+- `[?: como os tokens do Figma entram no código, num único lugar de onde tudo deriva]`
 
-Ausentes do documento de definições:
+Fora da Fase 1, e ausentes do documento dela:
 
-- `[?: qual domínio, já que "domínio próprio" é critério de liberação]`
+- `[?: qual domínio]` — classificada **Espera**, limite: antes da Fase 6
 - `[?: por que "case" no nome do repositório]`
 - `[?: o que significa a pasta "dente"]`
-- `[?: a documentação fica pública junto com o repositório?]`
-- `[?: toda a constituição técnica]`
+- `[?: a documentação e os textos do site ficam públicos desde já?]` — seis arquivos dela
+  entraram no repositório público por um `git add -A` meu
+
+Adaptações que os briefings não resolvem para este projeto:
+
+- `[?: não há Storybook — a checagem de CI 1 se aplica?]`
+- `[?: não há backend, está fora de escopo — o .api.md se aplica?]`
+- `[?: a checagem de CI 3 exige suíte de testes; a stack ainda não foi decidida]`
+- `[?: o Spec Kit continua instalado, ou sai por duplicar o método dela?]`
 
 ### Pistas não confirmadas — **não tratar como fato**
 
