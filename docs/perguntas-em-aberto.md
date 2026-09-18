@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **18 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **17 perguntas**, nenhuma travando
 
 ---
 
@@ -30,18 +30,9 @@ Com dois cases, qual aparece primeiro? O documento não diz, e a ordem comunica 
 código · alfabética, que é a única que não comunica nada.
 **Momento:** antes de desenhar o índice. · *Contrato, `trabalhos/`*
 
-### P28 · Como a foto entra na página "Quem sou eu"
-A convenção de conteúdo cobre imagem dentro do texto — `![](caminho)` mais `Legenda:`.
-A foto não é imagem de texto corrido: é peça da página. Não há marcador para ela.
-**Opções:** um marcador novo em `quem-sou-eu.md` · caminho fixo, declarado no contrato ·
-tratá-la como imagem comum no topo do bloco.
-**Momento:** antes de desenhar a página. · *Contrato, `quem-sou-eu/`*
-
-### P29 · De onde vem o texto da página de erro
-A regra é que o site não inventa conteúdo: tudo vem de um dos três arquivos ou está escrito
-no contrato. **O texto da página de erro não está em nenhum dos dois.**
-**Opções:** um quarto arquivo de conteúdo · um bloco novo dentro de `quem-sou-eu.md` ·
-escrito no próprio contrato, por ser interface e não conteúdo editorial.
+### P31 · O texto da página de erro, em rascunho
+Onde ele vive está decidido (011): no contrato da tela. O texto em si é rascunho meu e
+precisa da voz dela.
 **Momento:** antes de desenhar a página de erro. · *Contrato, `erro/`*
 
 ### P30 · Os sete componentes previstos

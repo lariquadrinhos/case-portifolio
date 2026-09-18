@@ -21,9 +21,21 @@ servidor. Explica o que aconteceu e oferece saída.
 - A página de erro tem a barra fixa, o tema e a tipografia do site — é o site, não uma
   tela de servidor.
 - Ela explica o que aconteceu, em linguagem comum.
+- **O texto desta página vive neste contrato**, não nos arquivos de conteúdo: é copy de
+  interface, não conteúdo autoral.
 - Ela oferece três saídas: os trabalhos, a home e o contato.
 - Vale para qualquer saída que devolva a pessoa para dentro do site, não só para endereço
   digitado errado.
+
+## Texto
+
+> `@lacuna` · **Rascunho, à espera de aprovação dela.** É a voz dela falando no site dela,
+> então o texto abaixo é proposta, não decisão.
+
+**Título** · Essa página não existe.
+**Corpo** · O endereço que você abriu não leva a lugar nenhum. Pode ter mudado, ou pode
+ter vindo com um erro de digitação.
+**Saídas** · Ver os trabalhos · Voltar para a home · Falar comigo
 
 ## Peças
 
@@ -45,9 +57,10 @@ Funcionalidade: Endereço inexistente
     E a página explica o que aconteceu
     E oferece saída para os trabalhos, para a home e para o contato
 
-  @lacuna
-  Cenário: De onde vem o texto da página de erro
-    Então A DEFINIR — ver pergunta P29
+  Cenário: O texto vem do contrato
+    Dado que o texto desta página é copy de interface
+    Então ele vive neste contrato, não nos arquivos de conteúdo
+    E alterá-lo é alterar este arquivo
 
   @lacuna
   Cenário: Como a hospedagem entrega a página de erro

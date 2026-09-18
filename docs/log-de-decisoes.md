@@ -285,3 +285,52 @@ de rodapé. P20 encerrada.
 **Erro meu de leitura**, não dela: o briefing define o contrato como a escrita única do
 comportamento consumida por quatro leitores sem tradução. Eu li isso como justificativa e
 não como definição, e daí tratei a spec como concorrente.
+
+---
+
+## 011 · Copy de interface vive no contrato; conteúdo autoral vive nos arquivos de texto
+
+**Quando** 2026-09-18 · **Fase** 1 · **Domínio** conteudo · `#escopo`
+
+**Gatilho.** Escrever o contrato da página de erro expôs que o texto dela não tinha origem
+prevista. A regra diz que o site não inventa conteúdo — tudo vem de um dos três arquivos ou
+está escrito no contrato — e o texto da página de erro não estava em nenhum dos dois.
+
+**Decisão.** Conteúdo autoral vive nos arquivos de texto; **copy de interface vive no
+contrato da tela que a exibe.** A exceção declarada são os rótulos da trilha, que ficam nos
+arquivos dos cases porque separá-los tornaria um erro de ordem invisível.
+
+**Alternativa descartada.** Um quarto arquivo de conteúdo, ou um bloco novo dentro de
+`quem-sou-eu.md`. Perderam porque copy de interface não é texto de autoria: rótulo de botão
+e mensagem de erro pertencem ao comportamento da tela, e separá-los do contrato faria a
+mesma decisão morar em dois lugares.
+
+**Custo aceito.** Mudar o texto de um botão passa a ser mudar um arquivo de contrato, não
+um arquivo de conteúdo — um pouco menos direto para quem só quer trocar uma palavra.
+
+**Consequência.** Resolve mais do que a página de erro: "Ver meus trabalhos", "Próximo
+case", o rótulo do contato e os rótulos da tira de destaques tinham o mesmo problema e
+agora têm origem. O texto da página de erro foi rascunhado no contrato e aguarda a voz dela
+— pergunta P31.
+
+---
+
+## 012 · A foto da página "Quem sou eu" entra por marcador, não por posição
+
+**Quando** 2026-09-18 · **Fase** 1 · **Domínio** conteudo · `#escopo`
+
+**Gatilho.** A convenção de conteúdo cobre imagem dentro do texto — markdown mais
+`Legenda:` — mas a foto da página não é imagem de texto corrido, e não havia marcador
+para ela.
+
+**Decisão.** `<!-- bloco: foto -->` seguido da imagem em markdown. Reaproveita o vocabulário
+existente, declara a intenção, e o texto alternativo obrigatório vem de graça no markdown.
+
+**Alternativa descartada.** "A primeira imagem do bloco é a foto" — regra por posição, o
+mesmo defeito que a decisão 006 recusou em "ignora a seção chamada Notas de trabalho".
+E caminho fixo declarado no contrato, que tiraria a foto do arquivo de conteúdo e quebraria
+a regra de que atualizar uma página é editar um arquivo de texto.
+
+**Custo aceito.** Mais um marcador na convenção — oito, agora.
+
+**Consequência.** Trocar a foto passa a ser trocar o arquivo apontado, sem tocar em código.

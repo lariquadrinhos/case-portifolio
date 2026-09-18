@@ -28,6 +28,7 @@ aparece no site. Não há seção reconhecida por nome — nome muda, marcador n
 | `<!-- bloco: home -->` | O que segue são os textos da home |
 | `<!-- bloco: hero -->` | Dentro da home: a frase de abertura e o parágrafo |
 | `<!-- bloco: quem-sou-eu -->` | Começa a página "Quem sou eu" |
+| `<!-- bloco: foto -->` | A imagem na linha seguinte é a foto da página, não imagem de texto corrido |
 | `<!-- trilha: Rótulo -->` | O título imediatamente acima é um capítulo, e `Rótulo` é o nome dele na trilha |
 | `<!-- privado -->` | A seção seguinte, e tudo abaixo dela até um título de nível igual ou superior, **não vai para o site** |
 | `Legenda:` | Linha imediatamente após uma imagem — é a legenda dela |
@@ -48,6 +49,10 @@ aparece no site. Não há seção reconhecida por nome — nome muda, marcador n
   legenda carrega o detalhe que o texto abriu mão de contar.
 - A tira de destaques de um case são as linhas `**Chave** · valor` logo abaixo da frase de
   abertura do capítulo 1.
+- **Conteúdo autoral vive nos arquivos de texto; copy de interface vive no contrato da tela
+  que a exibe.** Rótulo de botão, texto da página de erro e rótulo de seção são interface.
+  A exceção declarada são os rótulos da trilha, que ficam nos arquivos dos cases porque
+  separá-los tornaria um erro de ordem invisível.
 
 ## Comportamento
 
@@ -74,6 +79,12 @@ Funcionalidade: Um arquivo de texto vira página
     Quando a construção acontece
     Então nada daquela seção aparece no site
     E ela não conta para a trilha
+
+  Cenário: A foto da página
+    Dado um marcador de foto seguido de uma imagem
+    Quando a construção acontece
+    Então a imagem é tratada como foto da página, não como imagem de texto corrido
+    E o texto alternativo dela é preservado
 
   Cenário: Imagem com legenda
     Dada uma imagem seguida de uma linha iniciada por "Legenda:"

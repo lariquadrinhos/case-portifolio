@@ -18,7 +18,8 @@ cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um
 
 ## Regras
 
-- A página traz foto dela.
+- A página traz foto dela, declarada em `quem-sou-eu.md` com `<!-- bloco: foto -->` seguido
+  da imagem em markdown, cujo texto alternativo é obrigatório.
 - O conteúdo vem de `quem-sou-eu.md`, sob `<!-- bloco: quem-sou-eu -->`: a apresentação e
   os seis valores.
 - **O histórico profissional não aparece na página** — fica no currículo em PDF, acessível
@@ -56,9 +57,11 @@ Funcionalidade: Quem sou eu
     Quando a pessoa aciona o contato
     Então o e-mail e o LinkedIn ficam disponíveis, como na moldura
 
-  @lacuna
-  Cenário: Como a foto entra na página
-    Então A DEFINIR — ver pergunta P28
+  Cenário: A foto é trocada
+    Dado que o arquivo de imagem apontado pelo marcador de foto mudou
+    Quando a construção acontece
+    Então a página mostra a nova foto
+    E nenhum código precisou ser alterado
 
   @lacuna
   Cenário: O currículo ainda não foi produzido
