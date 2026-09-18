@@ -294,52 +294,40 @@ cliente, trabalho não publicado de terceiros.
 
 ## Diretriz 9 — Onde cada documento vive
 
-**Esta estrutura não é escolha minha. Está prescrita nos briefings dela** — eu tinha
-inventado uma diferente e ela estava errada.
+**Resolvido em 18/09/2026.** Ver log de decisões, entrada 002.
 
 ```
+_privado/definicoes-produto-portfolio.md    por que o site é assim
 docs/
-├── prd/01-portfolio.md          o que o produto é, para quem
-├── spec/                        visual, descendo do Figma
-└── comportamento/               o que a aplicação faz
-    ├── README.md
-    ├── _template.md
-    └── <dominio>/<fluxo>.md
-
-loop-produto-playbook.md         o procedimento e os prompts
-<log de decisões>                caminho ainda não prescrito
+├── prd/01-portfolio.md                     o que o produto é, para quem
+├── event-storming.md                       eventos, atores e hotspots
+├── comportamento/<dominio>/<fluxo>.md      o que a aplicação faz
+├── spec/                                   os valores visuais, do Figma
+├── perguntas-em-aberto.md                  o que falta decidir
+├── log-de-decisoes.md                      o que aconteceu, em ordem
+└── loop-produto-playbook.md                o procedimento e os prompts
 ```
 
-### Os documentos e o que cada um responde
+**Hierarquia:** definições → contrato → código. **O log não manda sobre nada** — é
+memória, não fonte. Nunca resolva dúvida de implementação lendo o log.
 
-| Documento | Responde | Manda sobre |
-|---|---|---|
-| **Definições** | por que o site é assim | o contrato |
-| **PRD** | o que o produto é, para quem | — |
-| **Contrato de comportamento** | o que existe e como se comporta | o código |
-| **Perguntas em aberto** | o que falta decidir, e quando deixa de poder esperar | — |
-| **Log de decisões** | o que aconteceu, em que ordem, e o que perdeu | **nada** |
-| **Playbook do loop** | como o trabalho foi conduzido, com os prompts | — |
+### O que foi removido, e por quê
 
-**A hierarquia é explícita:** definições → contrato → código. O log não manda sobre nada —
-é memória, não fonte. Nunca resolva dúvida de implementação lendo o log.
+- **`docs/adr/`** — o log já é um conjunto de ADRs: entradas numeradas, imutáveis, com
+  alternativa descartada, mais a ordem cronológica que o ADR não tem. Um terceiro lugar
+  para a mesma decisão contraria a regra de trabalho 2, que prevê dois.
+- **`docs/specs/`** — colidia com `docs/spec/` dela. Nomes quase idênticos, conteúdos sem
+  relação: o dela é o visual que desce do Figma; o meu era saída do Spec Kit.
 
 ### Uma pergunta, um lugar
 
-`perguntas-em-aberto` é a lista única do que falta decidir. O Registro de Incógnitas deste
-documento **é subordinado a ela**: quando o arquivo existir, este registro vira ponteiro.
-Duas listas da mesma coisa é a duplicação que o projeto inteiro existe para evitar.
+`docs/perguntas-em-aberto.md` é a lista única. **O Registro de Incógnitas deste documento
+foi absorvido por ela** — o que resta aqui é contexto de sessão, não lista de pendências.
 
 ### Atenção ao publicar
 
 O GitHub Pages pode servir a partir de `docs/`. Hoje serve da raiz. Se alguém mudar essa
 configuração, **a documentação vira o site.**
-
-### Ainda não resolvido
-
-- `[?: docs/adr/ some, já que o log de decisões cobre o papel?]`
-- `[?: onde vive o arquivo do log de decisões — o briefing não prescreve caminho]`
-- `[?: docs/specs/ que criei colide com docs/spec/ dela. Apagar o meu?]`
 
 ---
 
@@ -393,98 +381,25 @@ que foi assumido. Atualizar o registro. Commitar.
 
 ## Registro de Incógnitas
 
-**Última atualização: 18 de setembro de 2026, após leitura das definições de produto.**
+**Absorvido por [`docs/perguntas-em-aberto.md`](../../../docs/perguntas-em-aberto.md) em
+18/09/2026.** Uma pergunta, um lugar — manter duas listas é a duplicação que este projeto
+existe para evitar.
 
-### Sabido sabido
+Contexto que não é pendência e continua valendo:
 
-**Fonte: `definicoes-produto-portfolio.md`, lido em 18/09/2026.**
+- Ela é **Larissa Quadros, UX Designer**, vinda da Engenharia Bioquímica. Na barra do
+  site, só "Larissa"
+- O produto: site estático, cinco páginas mais erro, dois cases — Finanças PF+PJ (azul) e
+  Reembolso SulAmérica (laranja)
+- Sem backend, confirmado item a item em 18/09/2026
+- Repositório `lariquadrinhos/case-portifolio`, público
+- O processo é matéria-prima de um terceiro case — **mas documentação é regra de trabalho,
+  não objetivo.** Decisão tomada pensando em como vai ler no case é decisão errada
+- Existe uma skill `loop-produto` no projeto `bigorna`, duas semanas mais antiga que os
+  briefings deste projeto. Não foi copiada para cá
 
-- **O produto:** site estático de portfólio, cinco páginas mais a de erro — home,
-  trabalhos, dois cases, quem sou eu
-- **O objetivo:** ter o site no ar para aplicar para vagas. Os três textos já existem e
-  não têm onde morar
-- **Os trabalhos:** case de Finanças PF+PJ (azul) e case de Reembolso SulAmérica (laranja)
-- **O "plano maior":** o processo de construção é matéria-prima de um terceiro case.
-  Mas a documentação é regra de trabalho, não objetivo — decisão tomada pensando em como
-  vai ler no case é decisão errada
-- **Público:** quem faz triagem (segundos, pela home), quem avalia profundidade (lê um
-  case inteiro), quem recebe o link de outra pessoa (cai numa página interna). A terceira
-  impõe que toda página funcione sozinha
-- **Conteúdo:** três arquivos de texto prontos e aprovados, fora do código
-- **Idioma:** português no lançamento; inglês é a primeira evolução depois
-- **Prazo:** não existe. Sequência existe — sete fases, da instrumentação à publicação
-- **Visual:** valores em variáveis no Figma, página *Sistema visual*. Direção: contenção
-- **Método dela:** Figma inteiro primeiro, código depois. Não existe fase de mobile
-- Repositório: `lariquadrinhos/case-portifolio`, público, conectado
-- `_privado/` existe e está no `.gitignore`
-- Spec Kit v1.0.8 instalado, integração Claude; `constitution.md` ainda em branco
-- `docs/` criado com `prd/`, `adr/`, `specs/` (Diretriz 9)
-- **PRD escrito** em `docs/prd/01-portfolio.md`, derivado das definições
-- **Ela é Larissa Quadros, UX Designer.** Na barra do site, só "Larissa". Frase da home: *"Se existe uma forma melhor de fazer, eu quero
-  descobrir qual é."* Ambos de `quem-sou-eu.md`, texto marcado como final
-- Seis arquivos dela entraram no repositório público pelo mesmo `git add -A`: os três
-  textos do site e três briefings de skill. Só as definições foram movidas para `_privado/`
-- Materiais de referência trazidos por ela: guia de campo do Fable, A Arte de Fazer
-  Perguntas (8 Diálogos), Loop Engineering (Addy Osmani), PRD (PM3), Artifacts no Claude
-  Code, Spec-Driven Development com Spec Kit (EPAM)
+### Pistas não confirmadas — não tratar como fato
 
-### Colisão estrutural a resolver
-
-O documento de definições nomeia **cinco documentos de projeto**: definições, contrato de
-comportamento, perguntas em aberto, log de decisões e playbook do loop de produto. A
-Diretriz 9 estabeleceu `docs/` com `prd/`, `adr/`, `specs/`. **As duas estruturas não
-coincidem** e não foram conciliadas:
-
-| Documento dela | Equivalente aqui | Situação |
-|---|---|---|
-| Definições | — | Existe na raiz, fora de `docs/` |
-| Contrato de comportamento | `docs/specs/` | Nomes e formatos diferentes |
-| Perguntas em aberto | Este registro | Duplicação real |
-| Log de decisões | `docs/adr/` | **Não são a mesma coisa** — o log é cronológico e narra alternativas descartadas; ADR é uma decisão por arquivo |
-| Playbook do loop | — | Sem lugar previsto |
-
-`[?: as duas estruturas se fundem, ou a dela substitui a Diretriz 9?]`
-
-### Em aberto por decisão dela
-
-- `/speckit-specify` pausado em 18/09/2026 sem gerar arquivos. Agora **há** descrição de
-  produto suficiente para retomar. Ao retomar, gravar em `docs/specs/` (Diretriz 9)
-
-### Sabido não sabido
-
-**Revisado contra o documento de definições em 18/09/2026.** Correção importante: os seis
-itens abaixo **não são lacunas do documento dela** — são decisões que ela agendou para a
-Fase 1, com o nome "Decidir antes de desenhar". Estão em aberto por projeto, não por
-omissão.
-
-- `[?: stack e hospedagem, com alternativa e motivo registrados]`
-- `[?: como o conteúdo em texto vira página]`
-- `[?: como a estrutura recebe um segundo idioma sem ser refeita]`
-- `[?: o que fica visível na barra em tela estreita]` — o mínimo já está definido: nome e Trabalhos
-- `[?: como os tokens do Figma entram no código, num único lugar de onde tudo deriva]`
-
-Fora da Fase 1, e ausentes do documento dela:
-
-- `[?: qual domínio]` — classificada **Espera**, limite: antes da Fase 6
-- `[?: por que "case" no nome do repositório]`
-- `[?: o que significa a pasta "dente"]`
-- `[?: a documentação e os textos do site ficam públicos desde já?]` — seis arquivos dela
-  entraram no repositório público por um `git add -A` meu
-
-Adaptações que os briefings não resolvem para este projeto:
-
-- `[?: não há Storybook — a checagem de CI 1 se aplica?]`
-- `[?: não há backend, está fora de escopo — o .api.md se aplica?]`
-- `[?: a checagem de CI 3 exige suíte de testes; a stack ainda não foi decidida]`
-- `[?: o Spec Kit continua instalado, ou sai por duplicar o método dela?]`
-
-### Pistas não confirmadas — **não tratar como fato**
-
-- ~~Cargo deduzido~~ — **confirmado na fonte: UX Designer**, em `quem-sou-eu.md`.
-  Veio da Engenharia Bioquímica.
-- Pasta `dente`. Significado desconhecido.
-- E-mail da conta é `tesouraet@gmail.com`. Não confirma que seja o contato do site.
-
-### Não sabido não sabido
-
-A preencher via passagem de ponto cego, quando houver plano o suficiente para questionar.
+- Pasta `dente`, que contém o projeto. Significado desconhecido
+- "case" no nome do repositório. Motivo desconhecido
+- `tesouraet@gmail.com` é o e-mail da conta, não necessariamente o contato do site

@@ -1,13 +1,15 @@
 # Documentação do Projeto
 
-Índice do que existe. Regras de organização na Diretriz 9 de
-[`.claude/skills/diretrizes/SKILL.md`](../.claude/skills/diretrizes/SKILL.md).
-
-| Pasta | Conteúdo | Estado |
+| Documento | Responde | Manda sobre |
 |---|---|---|
-| [`prd/`](prd/) | Documentos de requisitos de produto | [`01-portfolio.md`](prd/01-portfolio.md) |
-| [`adr/`](adr/) | Registros de decisão de arquitetura | vazio |
-| [`specs/`](specs/) | Especificações do fluxo Spec Kit | vazio |
+| Definições (em `_privado/`) | por que o site é assim | o contrato |
+| [`prd/01-portfolio.md`](prd/01-portfolio.md) | o que o produto é, para quem | — |
+| [`event-storming.md`](event-storming.md) | que eventos existem, e onde estão os hotspots | — |
+| [`comportamento/`](comportamento/) | o que existe e como se comporta | o código |
+| [`spec/`](spec/) | os valores visuais, vindos do Figma | o código |
+| [`perguntas-em-aberto.md`](perguntas-em-aberto.md) | o que falta decidir, e quando deixa de poder esperar | — |
+| [`log-de-decisoes.md`](log-de-decisoes.md) | o que aconteceu, em que ordem, e o que perdeu | **nada** |
+| `loop-produto-playbook.md` | como o trabalho foi conduzido, com os prompts | — |
 
-Vazio aqui significa que ainda não foi decidido — não que foi esquecido.
-As pendências estão no Registro de Incógnitas do documento de diretrizes.
+**Hierarquia:** definições → contrato → código. O log é memória, não fonte — nunca resolva
+dúvida de implementação lendo o log.
