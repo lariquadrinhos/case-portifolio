@@ -259,6 +259,9 @@ preencher por conta própria.
 - [ ] Critérios de aceite — como sabemos que está certo
 - [ ] Casos de borda — o que acontece quando dá errado, quando está vazio, quando é longo demais
 
+O arquivo vive em `docs/prd/` (produto) e `docs/specs/` (funcionalidade), conforme a
+Diretriz 9.
+
 **Camada de plano** — como se encaixa:
 
 - [ ] Estrutura de páginas e navegação
@@ -286,6 +289,86 @@ exige reescrita e força.
 
 Nunca commitar sem verificar: dado pessoal, e-mail, telefone, documento, material de
 cliente, trabalho não publicado de terceiros.
+
+---
+
+## Diretriz 9 — Documentação vive em `/docs`
+
+Toda documentação de projeto — **PRDs, ADRs e especificações** — é armazenada em `docs/`,
+versionada junto com o código. Documento que mora em conversa, em nuvem alheia ou na
+cabeça de alguém não existe.
+
+### Os três tipos e para que servem
+
+| Tipo | Responde | Quando nasce |
+|---|---|---|
+| **PRD** | O que o produto é, para quem, e por que vale a pena | Antes de especificar |
+| **Spec** | O que deve fazer, com critérios de aceite e casos de borda | Fluxo do Spec Kit |
+| **ADR** | Por que decidimos assim, e o que descartamos | No momento da decisão |
+
+A diferença que importa: PRD e Spec descrevem **o que será**. O ADR registra **por que
+não foi de outro jeito** — é a única defesa contra refazer a mesma discussão daqui a seis
+meses sem lembrar da conclusão.
+
+### Estrutura
+
+```
+docs/
+├── README.md          índice do que existe
+├── prd/               NN-nome.md
+├── adr/               NNNN-titulo-da-decisao.md
+└── specs/             NNN-nome/  (spec.md, plan.md, tasks.md, checklists/)
+```
+
+Numeração sequencial, nomes em minúsculas com hífen, em português.
+
+### Redirecionamento obrigatório do Spec Kit
+
+O Spec Kit grava em `specs/` na raiz por padrão. **Aqui não.** Toda invocação de
+`/speckit-specify` precisa receber:
+
+```
+SPECIFY_FEATURE_DIRECTORY = docs/specs/<NNN>-<nome-curto>
+```
+
+A skill respeita esse valor quando fornecido explicitamente. Sem ele, ela volta ao
+padrão e a documentação se parte em dois lugares.
+
+### Formato de ADR
+
+Formato Nygard, quatro seções, uma página no máximo:
+
+```markdown
+# NNNN — Título da decisão
+
+**Status:** proposta | aceita | substituída por NNNN
+**Data:** AAAA-MM-DD
+
+## Contexto
+O que era verdade quando decidimos. Restrições reais, não justificativas.
+
+## Decisão
+O que foi decidido, em voz ativa.
+
+## Alternativas descartadas
+O que mais estava na mesa e por que não venceu.
+
+## Consequências
+O que isso facilita e o que isso custa. Incluir o custo, sempre.
+```
+
+ADR não se edita depois de aceito. Mudou de ideia? Escreve um novo e marca o antigo como
+substituído. O histórico da decisão é o valor.
+
+### Atenção ao publicar
+
+O GitHub Pages pode ser configurado para servir a partir de `docs/`. Hoje ele serve a
+partir da raiz. **Se algum dia alguém mudar essa configuração, a documentação vira o
+site.** Verificar antes de mexer em Pages.
+
+### O que ainda não está decidido
+
+- `[?: a documentação fica pública junto com o repositório, ou parte dela vai para _privado/?]`
 
 ---
 
@@ -330,6 +413,7 @@ que foi assumido. Atualizar o registro. Commitar.
 - [ ] A etapa Esclarecer aconteceu de fato, não foi pulada
 - [ ] O escopo cabe em poucos arquivos; se não cabe, foi fatiado
 - [ ] O portão de revisão correspondente foi aberto por ela, não presumido
+- [ ] Decisão relevante virou ADR em `docs/adr/`
 - [ ] O registro de incógnitas está atualizado
 - [ ] Nada sensível saiu de `_privado/`
 - [ ] Ela consegue explicar, com as próprias palavras, o que foi feito e por quê
@@ -359,7 +443,7 @@ que foi assumido. Atualizar o registro. Commitar.
 
 - `/speckit-specify` foi iniciado em 18/09/2026 e **pausado antes de gerar qualquer
   arquivo** — não havia descrição do que construir, e ela optou por deixar para depois.
-  Nada foi inventado. `specs/` ainda não existe. Retomar quando ela trouxer a descrição.
+  Nada foi inventado. Ao retomar, gravar em `docs/specs/` (Diretriz 9), não em `specs/`.
 - Consequência: `/speckit-plan`, `/speckit-tasks` e `/speckit-implement` seguem bloqueados,
   porque todos partem da especificação.
 
