@@ -1,10 +1,10 @@
 # Case Study — Finanças PF+PJ
 
-## Texto para o card
+<!-- bloco: card -->
 # A planilha que virou produto
 Desenvolvi uma aplicação desktop para organização financeira para pessoas PF+PJ
 
-## Texto para o case
+<!-- bloco: case -->
 
 
 ## 1. Ideia

@@ -4,13 +4,13 @@ Textos finais selecionados para o portfólio.
 
 ---
 
-# Home
+<!-- bloco: home -->
 
 **Nome:** Larissa Quadros
 **Nome curto (barra):** Larissa
 **Cargo:** UX Designer
 
-## Hero
+<!-- bloco: hero -->
 
 ### Se existe uma forma melhor de fazer, eu quero descobrir qual é.
 
@@ -18,7 +18,7 @@ Sou UX Designer, curiosa por natureza e apaixonada por entender como as coisas f
 
 ---
 
-# Quem sou eu
+<!-- bloco: quem-sou-eu -->
 
 ## Apresentação
 

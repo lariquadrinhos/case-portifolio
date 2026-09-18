@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **17 perguntas**, três travando
+**Atualizado:** 18 de setembro de 2026 · **18 perguntas**, duas travando
 
 ---
 
@@ -22,11 +22,6 @@ site estático e HTML escrito à mão. O gerador precisa produzir HTML completo 
 aceitar um script bloqueante curto no `<head>` e ler os três arquivos de conteúdo.
 **Momento:** Fase 1.
 
-### P06 · Como o conteúdo em texto vira página
-Onde o site busca cada texto, como os rótulos da trilha são lidos, como os textos da home
-são marcados dentro do `quem-sou-eu.md`.
-**Momento:** Fase 1.
-
 ### P07 · Como os tokens do Figma entram no código
 Lidos das variáveis, com o nome preservado, num único lugar de onde tudo deriva.
 **Momento:** Fase 1.
@@ -34,6 +29,17 @@ Lidos das variáveis, com o nome preservado, num único lugar de onde tudo deriv
 ---
 
 ## Esperam
+
+### P22 · O bloco "O Produto", no case de Finanças
+Título sem marcador de trilha, depois do último capítulo. É subseção do último capítulo,
+capítulo próprio sem rótulo, ou material que não vai para o site?
+**Momento:** antes de construir a página do case. · *Contrato, `conteudo/`*
+
+### P23 · Imagens, legendas e links dos cases não existem nos arquivos
+Nenhuma imagem referenciada nos três arquivos. Um único link, e é o marcador `[link]`.
+Reembolso cita Repositório sem link. Nenhum link de protótipo. A convenção para escrevê-los
+já existe — falta o conteúdo.
+**Momento:** dependência de conteúdo; trava a publicação se ficar para o fim.
 
 ### P21 · A ordem do "próximo case" com três cases
 A decisão 003 resolve dois cases sem exceção, mas não define a ordem com três.

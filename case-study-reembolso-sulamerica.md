@@ -1,11 +1,11 @@
 # Case Study — Redesign do fluxo de reembolso
 
-## Texto para o Card
+<!-- bloco: card -->
 # Toda semana, do zero
 Redesenhei o fluxo de usuário para pedido de reembolso recorrênte pelo app de seguros.
 
 
-## Texto para o case
+<!-- bloco: case -->
 
 ## 1. Ideia
 <!-- trilha: Introdução -->
@@ -105,7 +105,7 @@ Eu esperava encontrar um app sem sistema. Encontrei **um sistema que o app não 
 
 Com o sistema remontado, os mockups puderam ter a cara do aplicativo de verdade. Então pude comparar de verdade os dois fluxos.
 
-## Onde o arquivo parou de ser desenho ##
+## Onde o arquivo parou de ser desenho
 
 Até aqui eu tinha 44 telas bonitas e um sistema bem documentado. Liguei tudo em um protótipo navegável
 
@@ -156,6 +156,7 @@ Até aqui eu tinha 44 telas bonitas e um sistema bem documentado. Liguei tudo em
 
 ---
 
+<!-- privado -->
 ## Notas de trabalho
 
 - Linha editorial: foco em habilidade, método e critério de decisão. O produto aparece como evidência, nunca como assunto.

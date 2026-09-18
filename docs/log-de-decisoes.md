@@ -133,3 +133,31 @@ script falha. Duas conveniências perdidas, nenhuma informação.
 gerador de site estático e HTML escrito à mão, o que estreita a pergunta P05.
 `docs/comportamento/tema/tema-claro-e-escuro.md` criado. Resolve a tensão da P01: o script
 de tema é bloqueante mas falha em segurança, caindo na preferência do sistema.
+
+---
+
+## 006 · Os arquivos de conteúdo seguem uma convenção declarada, em vez de o site se adaptar a eles
+
+**Quando** 2026-09-18 · **Fase** 1 · **Domínio** conteudo · `#restricao`
+
+**Gatilho.** A medição dos três arquivos encontrou cinco inconsistências estruturais —
+duas grafias de "Texto para o card", `#` significando coisas diferentes em arquivos
+diferentes, `##` ora capítulo ora subseção, um `##` sobrando no fim de um título, e uma
+seção de anotação interna sem nada que a marcasse como não publicável.
+
+**Decisão.** Uma convenção declarada, com uma regra única: **marcador é comentário HTML,
+título é conteúdo.** Os três arquivos foram normalizados — só marcadores, nenhuma palavra
+de prosa alterada.
+
+**Alternativa descartada.** A construção tolerar as variações: aceitar as duas grafias,
+tratar `##` por posição, ignorar a seção chamada "Notas de trabalho" pelo nome. Perdeu
+porque "ignora a seção chamada Notas de trabalho" não é regra verificável — é exceção com
+nome próprio, que quebra no dia em que o título virar "Notas finais". E porque daqui a três
+meses a edição será feita por uma pessoa lendo o arquivo, não por um analisador adivinhando.
+
+**Custo aceito.** Arquivos aprovados foram editados. O risco foi contido restringindo a
+mudança a marcadores e a um `##` sobrando; nenhuma frase mudou.
+
+**Consequência.** `docs/comportamento/conteudo/arquivo-de-texto-vira-pagina.md` criado.
+Abre a pergunta P22, sobre o bloco "O Produto". Requisito novo para a stack: a ferramenta
+precisa ler comentários HTML como marcadores estruturais.
