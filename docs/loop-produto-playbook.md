@@ -259,3 +259,135 @@ da spec, a Fase 1 lida como escolha de ferramenta, e duas perguntas abertas para
 que o documento dela já respondia.
 
 Um erro de mecanismo: `git add -A` publicando seis arquivos que ninguém tinha examinado.
+
+---
+
+## Trecho 7 · Auditoria do que foi criado e não está sendo usado
+
+**Para que serve.** Achar o que existe no projeto e está parado.
+**Antes de começar, precisa existir:** as skills, os contratos e o log.
+
+**Pedido**
+
+> confere se tem mais alguma coisa que foi criada e deveria estar sendo usada mas não esta
+
+**Voltou.** Sete achados. Três substanciais: cinco dos nove domínios sem contrato nenhum;
+a skill do log se comportando ao contrário do que o briefing manda; e Artifacts nunca usado,
+apesar de ser um dos cinco materiais de referência e de a skill `loop-produto` pedir o PRD
+materializado como um.
+
+**Conferi contra.** Os briefings, um por um, na seção "o que a skill deve entregar na
+primeira execução".
+
+**O que isso ensinou.** O padrão por trás dos três é o mesmo: eu criei documento quando
+alguma coisa forçou — uma decisão precisava de registro, uma pergunta precisava virar
+regra — e não quando o método mandava. O playbook foi a vítima mais clara porque é o único
+cujo gatilho é o trabalho simplesmente acontecer.
+
+**O que costuma dar errado.** Construir a ferramenta e considerar a tarefa encerrada.
+A primeira execução é parte da entrega, não um passo futuro.
+
+---
+
+## Trecho 8 · Completar o contrato de comportamento
+
+**Para que serve.** Levar o manual de telas de quatro para nove domínios, com template.
+
+### Volta 1 — o template, e o defeito que ele revelou
+
+**Pedido**
+
+> cria o template e confere se os quatro contratos batem com ele
+
+**Voltou.** Template criado, e a conferência achou três coisas. A primeira parecia erro de
+contrato e era erro do template: o domínio `conteudo` não tem bloco `figma:` nem seção de
+peças — e está certo, porque é comportamento puro e não tem tela. O template exigia de
+todos o que só faz sentido para quem tem tela.
+
+**Conferi contra.** As definições: *"é comportamento puro e não tem tela própria"*.
+
+**As outras duas.** Duas `@lacuna` não apontavam para pergunta nenhuma, contra a regra de
+que toda lacuna cita a pergunta correspondente. Uma tinha pergunta e faltava a citação;
+a outra **não tinha pergunta nenhuma** — a decisão estava marcada como pendente dentro do
+contrato e invisível para quem lê a lista.
+
+### Volta 2 — os cinco domínios que faltavam
+
+**Pedido**
+
+> cria os cinco contratos que faltam
+
+**Voltou.** home, trabalhos, quem-sou-eu, erro e componentes. E aconteceu o que o briefing
+promete: escrever os cinco **revelou quatro decisões que ninguém tinha tomado** — a ordem
+dos cards no índice, como a foto entra na página, de onde vem o texto da página de erro, e
+a lista de componentes.
+
+**Terminou quando.** Nove contratos, nove batendo com o template, e cada `@lacuna` apontando
+para uma pergunta que existe.
+
+**O que costuma dar errado.** Achar que a lista de perguntas cobre o que falta. Ela só
+cobre o que alguém já percebeu que falta — escrever o contrato é o que faz o resto aparecer.
+
+---
+
+## Trecho 9 · Constituição técnica
+
+**Pedido**
+
+> roda o /speckit-constitution
+
+**Voltou.** Constituição em cinco princípios, versão 1.0.0, **cada princípio derivado de uma
+decisão já registrada no log, com a entrada de origem citada dentro dele.**
+
+**Conferi contra.** O próprio log. A regra que me segurou: princípio que não vem de decisão
+tomada aqui é enfeite, e enfeite em documento de governança é pior que ausência, porque dá
+aparência de governo onde não há. O modelo do Spec Kit sugere *Library-First* e *Test-First*
+— teriam preenchido a estrutura e parecido profissionais. Ficaram de fora.
+
+**O que costuma dar errado.** Preencher a estrutura de um modelo porque ela existe.
+
+---
+
+## Trecho 10 · O PRD como Artifact
+
+**Pedido**
+
+> cria o artifact do prd, e abre tudo no vs code pra eu ver todos os documentos
+
+**Voltou.** Página publicada, renderizada no sistema visual do próprio projeto: as cores
+lidas das variáveis do Figma, DM Sans em família única, trilha à esquerda com marcador que
+acompanha a rolagem, título ao lado do texto e coluna entre 65 e 75 caracteres.
+
+**Conferi contra.** As regras visuais dela — cor só onde significa alguma coisa, bloco
+colorido uma por capítulo, o marca-texto uma vez por página. E a regra da fonte única, que
+mudou onde o arquivo mora: ele ficou **fora do repositório**, porque contém hexadecimais
+escritos à mão e commitá-lo criaria a segunda lista de valores que o projeto existe para
+impedir.
+
+**O efeito colateral que vale.** Ela vê o próprio sistema aplicado a um documento longo
+antes de o site existir. Problema de medida de linha ou de contraste no escuro aparece
+agora, e não na Fase 3.
+
+---
+
+## Nota de honestidade, segunda vez
+
+Na primeira leva eu escrevi ao fim da sessão e declarei isso, prometendo registrar durante
+daí em diante. **Os trechos 7 a 10 foram escritos depois também**, quando ela perguntou se
+o playbook estava atualizado. Mesmo erro, com a agravante de já ter sido nomeado.
+
+O que sobrevive é o registro literal da conversa, que continua disponível. O que não
+sobrevive é a ordem em que as coisas pareceram certas.
+
+---
+
+## Estado ao fim desta etapa
+
+| | |
+|---|---|
+| Decisões no log | 14 |
+| Contratos de comportamento | 9 domínios, 11 lacunas, todas apontando para perguntas |
+| Perguntas em aberto | 16, nenhuma travando |
+| Constituição | ratificada, 1.0.0 |
+| Desenhado no Figma | sistema visual; nenhuma tela |
+| Código escrito | nenhum |
