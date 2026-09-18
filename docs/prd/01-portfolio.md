@@ -337,4 +337,9 @@ As que **travam** a Fase 1, nas palavras do próprio documento de definições:
 
 Ausentes do documento de definições, e necessárias para o site existir:
 
-- `[?: qual domínio, já que "domínio próprio" é critério de liberação]`
+**Espera** — classificada segundo a regra das definições:
+
+- `[?: qual domínio]` · **Deixa de poder esperar:** antes da Fase 6 · Publicar.
+  Comprar leva minutos, mas a propagação de DNS e a emissão do certificado levam horas.
+  Publicar em endereço provisório na Fase 4 e apontar o domínio depois não gera
+  retrabalho — por isso espera, e não trava.
