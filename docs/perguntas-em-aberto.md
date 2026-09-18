@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026
+**Atualizado:** 18 de setembro de 2026 · **19 perguntas**, cinco travando
 
 ---
 
@@ -24,17 +24,6 @@ sem depender de script".
 ### P02 · O que acontece sem JavaScript
 Qual tema aparece, a trilha vira o quê, a imagem ainda amplia.
 **Momento:** Fase 1, junto da stack. · *Event storming, hotspot 3*
-
-### P03 · O card do próximo case, no último case
-São dois cases. O do case A leva ao B; o do B leva a quê?
-**Opções:** volta ao A · leva ao índice · some · vira convite ao contato.
-**Momento:** antes de desenhar o domínio Case. · *Event storming, hotspot 5*
-
-### P04 · Contato: dois destinos, um botão
-Contato é e-mail e LinkedIn, e o botão "dispara a ação direto em vez de levar a uma página".
-**Opções:** abre e-mail e o LinkedIn vive em outro lugar · painel com as duas opções, que
-é "levar a uma página" disfarçado.
-**Momento:** antes de desenhar o domínio Moldura. · *Event storming, hotspot 9*
 
 ### P05 · Stack e hospedagem
 Com alternativa considerada e motivo registrados. Recebe como critério concreto as
@@ -53,6 +42,12 @@ Lidos das variáveis, com o nome preservado, num único lugar de onde tudo deriv
 ---
 
 ## Esperam
+
+### P21 · A ordem do "próximo case" com três cases
+A decisão 003 resolve dois cases sem exceção, mas não define a ordem com três.
+**Opções:** ordem fixa do índice, com o último voltando ao primeiro · o case ainda não lido
+nesta sessão · o mais recente primeiro.
+**Momento:** antes de o terceiro case existir. · *Contrato, `case/card-proximo-case.md`*
 
 ### P08 · Peça esperada ausente no arquivo de conteúdo
 Rótulo de trilha faltando, imagem inexistente, legenda ausente, PDF ainda não produzido.
