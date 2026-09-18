@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **14 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **13 perguntas**, nenhuma travando
 
 ---
 
@@ -89,9 +89,3 @@ A checagem de CI 1 e o campo `storybook.usa` se aplicam?
 ### P19 · A checagem de CI 3 exige suíte de testes
 Depende da stack.
 **Momento:** Fase 1.
-
-### P20 · O Spec Kit continua instalado
-Instalado a pedido dela antes de eu ter lido as definições. O fluxo dele duplica o método
-próprio do projeto e não modela as Fases 2 e 3, que são trabalho de Figma.
-**Opções:** desinstalar · manter parado e reavaliar na Fase 4.
-**Momento:** antes da Fase 4.

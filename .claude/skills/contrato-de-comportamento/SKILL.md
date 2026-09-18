@@ -5,13 +5,38 @@ description: Constrói e mantém o contrato de comportamento do produto — um a
 
 # Contrato de comportamento
 
-Mantém, em `docs/comportamento/`, um arquivo por tela ou fluxo descrevendo **o que a
-aplicação faz** — nunca como ela se parece.
+**É o manual de telas do projeto.** Manual e contrato são a mesma coisa, e por isso têm um
+nome só. O nome escolhido é *contrato* porque diz o que ele faz: não descreve o que foi
+construído, **define o que precisa ser verdade**.
 
-O problema que isso resolve: o comportamento de uma tela hoje vive em post-it, em
-reunião, em copy de interface e na memória de quem construiu. É redigitado quatro vezes,
-por quatro pessoas, com quatro interpretações. Aqui é escrito uma vez, por quem tem a
-informação, num formato que os quatro leitores consomem sem tradução.
+Para cada tela criada no Figma existe uma entrada aqui, que a **descreve** e a **liga** —
+ao frame, a cada peça dentro dele, e ao que ela faz. Um arquivo markdown por tela ou fluxo,
+uma pasta por domínio.
+
+## O problema que ele resolve
+
+Hoje o comportamento de uma tela existe em post-it no canvas, em reunião, em copy de
+interface e na memória de quem construiu. Ele é redigitado quatro vezes, por quatro
+pessoas, com quatro interpretações — refinamento, implementação, contrato de API e runbook
+de plantão.
+
+O contrato move a escrita para quem tem a informação, **uma vez só**, num formato que os
+quatro leitores consomem sem tradução.
+
+## Por que ele importa ainda mais quando o time é uma pessoa
+
+Neste projeto, designer e desenvolvedor são a mesma pessoa. Isso não dispensa o contrato —
+**aumenta o valor dele.**
+
+O handoff continua existindo; ele só deixou de atravessar duas pessoas e passou a atravessar
+o tempo. O que foi decidido desenhando precisa chegar inteiro em quem vai implementar,
+mesmo quando essa pessoa é a mesma, semanas depois, sem lembrar por que aquela tela era
+assim. Sem o contrato, a etapa de código vira o lugar onde o design acontece por acidente —
+que é exatamente o que este projeto existe para evitar.
+
+É por isso que o contrato **unifica o trabalho de design e o de desenvolvimento**: ele é o
+único artefato que os dois lados escrevem e leem, e o único formato em que uma decisão de
+experiência chega ao código sem ser redigitada.
 
 ## A regra que separa os dois mundos
 
@@ -22,6 +47,19 @@ informação, num formato que os quatro leitores consomem sem tradução.
 
 Esta skill cuida só da segunda metade. **Descrever em palavras o que o Figma já mostra é
 anti-padrão**, não zelo.
+
+## O que o contrato não é
+
+Distinção que já foi confundida uma vez neste projeto, e não deve ser de novo:
+
+| | Responde | Organiza-se por |
+|---|---|---|
+| **Contrato de comportamento** | O que esta tela faz, e onde ela está no Figma | **Tela ou fluxo** — permanente |
+| **Spec** (`docs/speclist/`) | O que vamos construir agora, em que passos | **Funcionalidade** — temporária |
+
+Não são dois lugares dizendo a mesma coisa. A spec é plano de trabalho e se encerra quando
+o trabalho termina; o contrato é verdade sobre o produto e permanece. Uma spec **consome**
+o contrato; nunca o substitui.
 
 ---
 
@@ -313,7 +351,7 @@ imagem da tela ao lado, as regras em português, como o fluxo termina, as varian
 
 ---
 
-## Adaptações pendentes neste projeto
+## Perguntas abertas neste projeto
 
 O briefing pressupõe um contexto corporativo que **este projeto não tem**. As quatro
 diferenças abaixo são lacunas reais — não preencha sozinha:
@@ -323,8 +361,10 @@ diferenças abaixo são lacunas reais — não preencha sozinha:
 - `[?: a checagem 3 exige suíte de testes; a stack ainda não foi decidida]`
 - `[?: docs/spec/ é descrito como "já existe"; neste projeto ainda não existe]`
 
-Os papéis de design, produto, backend, front e sustentação são **a mesma pessoa** aqui.
-A tabela continua valendo como separação de decisões, não de pessoas.
+Os cinco papéis são **a mesma pessoa** aqui. A tabela continua valendo integralmente — ela
+separa **decisões**, não pessoas. Saber com que chapéu uma decisão está sendo tomada é o que
+impede que a medida seja inventada no código, que o layout seja decidido no refinamento, e
+que o comportamento seja deduzido por quem deveria recebê-lo pronto.
 
 ---
 

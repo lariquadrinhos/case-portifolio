@@ -182,8 +182,12 @@ cerimônia sem ganho.
 
 - **Adotamos:** a ordem das etapas, a decomposição, os portões de revisão (Diretriz 4) e
   a ideia de constituição. A ferramenta está instalada (Spec Kit v1.0.8, integração Claude).
-- **`/speckit-clarify` é obrigatório aqui.** A ferramenta o marca como opcional; neste
-  projeto ele não é. Pular a etapa que caça ambiguidade seria revogar a Diretriz 0 na prática.
+- **A etapa de esclarecer é obrigatória aqui.** A ferramenta marca `/speckit-clarify` como
+  opcional; neste projeto não é. Pular a etapa que caça ambiguidade revoga a Diretriz 0 na
+  prática.
+- **Contrato e spec não competem.** O contrato é o manual de telas — o que cada tela faz e
+  onde ela está no Figma, permanente, por tela. A spec é plano de trabalho — o que vamos
+  construir agora, temporária, por funcionalidade. Uma spec consome o contrato.
 - **Não vale cargo cult:** se uma etapa não estiver produzindo clareza neste projeto, ela
   é dita em voz alta e cortada — não executada por obediência.
 
@@ -316,6 +320,7 @@ docs/
 ├── event-storming.md                       eventos, atores e hotspots
 ├── comportamento/<dominio>/<fluxo>.md      o que a aplicação faz
 ├── spec/                                   os valores visuais, do Figma
+├── speclist/                               specs do Spec Kit, por funcionalidade
 ├── perguntas-em-aberto.md                  o que falta decidir
 ├── log-de-decisoes.md                      o que aconteceu, em ordem
 └── loop-produto-playbook.md                o procedimento e os prompts
@@ -329,8 +334,8 @@ memória, não fonte. Nunca resolva dúvida de implementação lendo o log.
 - **`docs/adr/`** — o log já é um conjunto de ADRs: entradas numeradas, imutáveis, com
   alternativa descartada, mais a ordem cronológica que o ADR não tem. Um terceiro lugar
   para a mesma decisão contraria a regra de trabalho 2, que prevê dois.
-- **`docs/specs/`** — colidia com `docs/spec/` dela. Nomes quase idênticos, conteúdos sem
-  relação: o dela é o visual que desce do Figma; o meu era saída do Spec Kit.
+- **`docs/specs/`** — colidia com `docs/spec/`. A saída do Spec Kit passou a viver em
+  `docs/speclist/`, nome que não se confunde com nenhum vizinho.
 
 ### Uma pergunta, um lugar
 

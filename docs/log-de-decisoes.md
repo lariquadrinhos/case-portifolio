@@ -252,3 +252,36 @@ a ser trabalho nosso. Nenhum dos dois é difícil neste tamanho, mas nenhum vem 
 **Consequência.** P05 fecha na metade da stack. A hospedagem continua em aberto. **Nada
 disso autoriza começar a escrever código:** o produto é desenhado inteiro no Figma antes
 de virar código, e nada foi desenhado ainda.
+
+---
+
+## 010 · O Spec Kit fica, com saída em `docs/speclist/`
+
+**Quando** 2026-09-18 · **Fase** 1 · **Domínio** — · `#recusa-de-ia` `#reversao`
+
+**Gatilho.** Eu havia recomendado desinstalar o Spec Kit, sob o argumento de que as specs
+duplicariam o contrato de comportamento.
+
+**Decisão.** O Spec Kit fica, com invocação automática mantida. A saída passa de `specs/`
+para `docs/speclist/`, e o formato por funcionalidade — `spec.md`, `plan.md`, `tasks.md` —
+permanece.
+
+**Alternativa descartada.** Desinstalar, como eu propunha. Perdeu porque a premissa estava
+errada: contrato e spec não descrevem a mesma coisa. **O contrato é o manual de telas** —
+para cada tela criada no Figma, uma entrada que a descreve e a liga ao frame e às peças,
+permanente, organizada por tela. **A spec é plano de trabalho** — o que se constrói agora,
+em que passos, temporária, organizada por funcionalidade. Uma spec consome o contrato; não
+o substitui. Em um projeto onde designer e desenvolvedor são a mesma pessoa, o contrato é
+justamente o que unifica os dois lados, e derrubá-lo em favor da spec eliminaria a ponte.
+
+**Custo aceito.** Três pastas vizinhas com nomes parecidos — `spec/`, `speclist/`,
+`comportamento/`. Contido com um README em cada uma dizendo o que é e o que não é.
+
+**Consequência.** `speckit-specify` alterada para gravar em `docs/speclist/`.
+A skill `contrato-de-comportamento` reescrita: a identidade dela passa a ser *manual de
+telas*, com o handoff entre design e desenvolvimento no topo do documento em vez de nota
+de rodapé. P20 encerrada.
+
+**Erro meu de leitura**, não dela: o briefing define o contrato como a escrita única do
+comportamento consumida por quatro leitores sem tradução. Eu li isso como justificativa e
+não como definição, e daí tratei a spec como concorrente.
