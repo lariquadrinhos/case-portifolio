@@ -391,3 +391,37 @@ sobrevive é a ordem em que as coisas pareceram certas.
 | Constituição | ratificada, 1.0.0 |
 | Desenhado no Figma | sistema visual; nenhuma tela |
 | Código escrito | nenhum |
+
+---
+
+## Trecho 11 · Do contrato ao Figma
+
+**Para que serve.** Levar o que está decidido nos documentos para o Figma, começando pelo
+fluxo de usuário.
+**Antes de começar, precisa existir:** os nove contratos de comportamento, o event storming
+e o sistema visual em variáveis. Todos existem.
+
+> **Este é o primeiro dos cinco trechos previstos nas definições.** Os dez anteriores foram
+> anteriores a ele — instrumentação, documentação e decisão.
+
+### Volta 1 — o fluxo de usuário em FigJam
+
+**Pedido**
+
+> boa, agora cria um documento lá no figjam e cria o fluxo de usuário, pode já usar as informações do visual design
+
+**Voltou.** Um board em FigJam com o fluxo completo, colorido pela semântica do sistema:
+azul no case de Finanças, laranja no de Reembolso, roxo no que é interação — contato e
+barra — e neutro nas páginas e nas entradas.
+
+**Conferi contra.** O event storming, para as três entradas e as saídas; o contrato de
+`trabalhos/`, para a ordem dos cards; o de `case/`, para o card do próximo ser circular;
+o de `moldura/`, para o contato revelar o e-mail escrito. Nenhum nó foi inventado.
+
+**O que não entrou, de propósito.** O comportamento em tela estreita e a prévia do link
+compartilhado. Os dois estão no event storming, mas não são fluxo de navegação — misturá-los
+tornaria o board ilegível sem acrescentar decisão.
+
+**Limitação a corrigir no Figma.** A trilha aparece como laço sobre o próprio case, porque
+é navegação interna e não transição entre páginas. É representação, não comportamento — o
+comportamento real está no contrato.

@@ -14,3 +14,10 @@
 
 **Hierarquia:** definições → contrato → código. O log é memória, não fonte — nunca resolva
 dúvida de implementação lendo o log.
+
+## Arquivos no Figma
+
+| O quê | Onde |
+|---|---|
+| Sistema visual — variáveis e demonstrações | [design/hwClE9Xpm51OW4vPsCCn8J](https://www.figma.com/design/hwClE9Xpm51OW4vPsCCn8J/?node-id=34-2) |
+| Fluxo de usuário | [board/Ap8gxZtm3c9bFMLJ1DiJ63](https://www.figma.com/board/Ap8gxZtm3c9bFMLJ1DiJ63) |
