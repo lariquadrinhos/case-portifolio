@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **17 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **16 perguntas**, nenhuma travando
 
 ---
 
@@ -23,12 +23,6 @@ Nenhuma.
 **Opções:** transcrição manual · exportar as variáveis para um arquivo e gerar o CSS dele ·
 ler da API na construção.
 **Momento:** depois da Fase 2, quando o design system existir no Figma. Não bloqueia a P05.
-
-### P27 · A ordem dos cards no índice de trabalhos
-Com dois cases, qual aparece primeiro? O documento não diz, e a ordem comunica prioridade.
-**Opções:** o mais recente primeiro · o mais forte primeiro · ordem fixa declarada no
-código · alfabética, que é a única que não comunica nada.
-**Momento:** antes de desenhar o índice. · *Contrato, `trabalhos/`*
 
 ### P31 · O texto da página de erro, em rascunho
 Onde ele vive está decidido (011): no contrato da tela. O texto em si é rascunho meu e

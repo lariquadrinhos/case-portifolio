@@ -334,3 +334,29 @@ a regra de que atualizar uma página é editar um arquivo de texto.
 **Custo aceito.** Mais um marcador na convenção — oito, agora.
 
 **Consequência.** Trocar a foto passa a ser trocar o arquivo apontado, sem tocar em código.
+
+---
+
+## 013 · A ordem dos cards é fixa e declarada, com Finanças primeiro
+
+**Quando** 2026-09-18 · **Fase** 1 · **Domínio** trabalhos · `#escopo`
+
+**Gatilho.** Escrever o contrato do índice expôs que a ordem dos cards nunca tinha sido
+escolhida, e que ela comunica prioridade quer alguém decida quer não.
+
+**Decisão.** Ordem fixa e declarada no contrato: Finanças PF+PJ primeiro, Reembolso
+SulAmérica em seguida.
+
+**Alternativa descartada.** Duas. *Mais recente primeiro* perdeu por decidir sozinha para
+sempre — o terceiro case subiria ao topo automaticamente, sem ninguém olhar, contra a regra
+de que nada avança sem decisão registrada. E *Reembolso primeiro* perdeu por pouco: ele é
+mais fácil de ler de relance — "toda semana, do zero" entrega na hora, contra um tempo a
+mais de "a planilha que virou produto" — mas redesenho de fluxo é o formato que quem faz
+triagem já viu muitas vezes, enquanto designer que foi até código em uso por pessoa real
+é raro.
+
+**Custo aceito.** O primeiro card exige um segundo a mais de leitura do que exigiria o
+outro, justamente no momento em que o tempo é mais curto.
+
+**Consequência.** A ordem passa a ser regra no contrato do índice. Acrescentar um terceiro
+case passa a exigir uma decisão de ordem explícita, em vez de ela acontecer sozinha.

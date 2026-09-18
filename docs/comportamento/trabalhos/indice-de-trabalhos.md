@@ -25,6 +25,17 @@ Os cases em cards. É para onde a home leva e para onde a barra aponta. Existe p
 - Cada card carrega a cor do seu case: Finanças azul, Reembolso laranja.
 - Título e linha vêm do bloco `<!-- bloco: card -->` do arquivo de cada case.
 - **O site nasce com dois cases e sem card de "em breve".**
+- **A ordem dos cards é fixa e declarada, nunca derivada de data.** Hoje: Finanças PF+PJ,
+  depois Reembolso SulAmérica.
+
+**Por que ordem fixa e não "mais recente primeiro":** uma regra automática decide para
+sempre sem ninguém olhar — o terceiro case subiria ao topo sozinho, talvez certo, talvez
+não. Fixa, cada mudança de ordem é uma decisão que alguém tomou.
+
+**Por que Finanças primeiro:** o primeiro card é o que a maioria abre, e esse case é a
+resposta mais completa a "o que essa pessoa sabe fazer" — vai da ideia ao código em uso por
+uma pessoa real. Reembolso é mais fácil de ler de relance, mas redesenho de fluxo é o
+formato que quem faz triagem já viu muitas vezes.
 
 ## Peças
 
@@ -53,10 +64,11 @@ Funcionalidade: Índice de trabalhos
     Quando a pessoa toca em qualquer parte de um card
     Então o case abre pelo topo
 
-  @lacuna
   Cenário: A ordem dos cards
-    Dado que existem dois ou mais cases
-    Então A DEFINIR — ver pergunta P27
+    Quando o índice abre
+    Então o card de Finanças PF+PJ aparece primeiro
+    E o card de Reembolso SulAmérica aparece em seguida
+    E a ordem não é derivada de data de publicação
 
   @lacuna
   Cenário: A imagem de capa não existe
