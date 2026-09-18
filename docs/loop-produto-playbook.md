@@ -475,5 +475,29 @@ sobreposição sobre a página em vez de destino, e o visualizador de imagem, qu
 em tela estreita.
 
 **Lacuna que o desenho revelou.** O contato revelado precisa voltar para onde estava, e o
-diagrama só consegue apontar para uma página. É limitação da representação — o
-comportamento correto está no contrato de `moldura/botao-contato.md`.
+diagrama só consegue apontar para uma página.
+
+### Volta 4 — refeito: fluxo de telas é alto nível
+
+**Corrigi com**
+
+> https://creately.com/guides/what-is-a-screen-flow-diagram/ le aqui pra entender sobre fluxo de telas. o fluxo de telas deve conter só o nome das telas, refaça
+
+**O que estava errado.** Eu tinha enchido cada nó com os elementos de interface da tela —
+"hero, tira de destaques, trilha, capítulos, mídia" — e cada seta com lógica de interação —
+"Esc ou toque fora", "item da trilha rola até a seção". O primeiro é território de
+*wireflow*; o segundo, de fluxo de usuário.
+
+**Conferi contra.** O guia, que define fluxo de telas como **alto nível**, com quatro
+componentes e só quatro: telas, caminhos de navegação, pontos de decisão e **anotações**.
+E é explícito no que fica de fora — ao contrário do wireflow, não traz elementos de
+interface; ao contrário do fluxo de usuário, não traz lógica de interação de baixo nível.
+
+**Voltou.** Dez nós: seis telas pelo nome, duas sobreposições, dois pontos de decisão.
+Mais quatro anotações — que eu tinha ignorado como componente, e que é onde a barra fixa
+passou a viver.
+
+**O que isso ensinou.** A barra fixa não é tela e não devia ser nó. Como só ela leva a
+"Quem sou eu", tirá-la deixaria a página órfã no diagrama — e a saída certa não era
+mantê-la como nó, era usar o componente que eu não tinha usado. **Anotação é parte do
+artefato, não comentário sobre ele.**
