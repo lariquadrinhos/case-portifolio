@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **20 perguntas**, uma travando
+**Atualizado:** 18 de setembro de 2026 · **19 perguntas**, uma travando
 
 ---
 
@@ -32,16 +32,6 @@ aceitar um script bloqueante curto no `<head>` e ler os três arquivos de conte�
 **Opções:** transcrição manual · exportar as variáveis para um arquivo e gerar o CSS dele ·
 ler da API na construção.
 **Momento:** depois da Fase 2, quando o design system existir no Figma. Não bloqueia a P05.
-
-### P24 · As demonstrações do Figma contradizem o documento em três pontos
-Lido em 18/09/2026, frames `37:88` e `38:105`. A regra já diz que quem erra é o desenho —
-falta corrigir o arquivo ou confirmar que a demonstração é que está certa.
-1. A hero desenhada tem **dois botões** ("Ver meus trabalhos" e "Quem sou eu"); o documento
-   diz "uma ação principal só".
-2. A hero diz `UX/UI Designer`; o `quem-sou-eu.md` diz `UX Designer`.
-3. A trilha desenhada diz "Wireframes e documentação"; o arquivo do case diz
-   "Desenho e documentação".
-**Momento:** antes da Fase 3, quando as telas forem desenhadas para valer.
 
 ### P25 · A coleção "Espaço e forma" não tem frame de documentação
 Os nomes `space/*`, `radius/*`, `stroke/padrao` e `foco/*` vêm do documento de definições,

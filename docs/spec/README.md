@@ -89,5 +89,15 @@ por papel funcionando nos dois temas sem duplicar nome.
 | 05 · Demonstração, hero | `37:88` |
 | 06 · Demonstração, leitura do case | `38:105` |
 
-**Demonstração não vira regra por estar desenhada.** Divergências registradas entre os
-frames 05 e 06 e o documento estão na pergunta P24.
+## Os frames 05 e 06 são demonstração
+
+**Nada neles é fonte, nem texto nem estrutura.** Duas regras das definições cobrem isso:
+
+- **Os textos são amostra.** Toda frase ali — hero, títulos, parágrafos, legendas — existe
+  para testar tamanho, medida de linha e contraste. O conteúdo real vem dos arquivos de
+  texto. Nenhuma palavra é copiada daqui para o código.
+- **Demonstração não vira regra por estar desenhada.** Se uma demonstração contrariar uma
+  regra escrita no documento, quem está errado é o desenho.
+
+Divergência entre demonstração e documento, portanto, não é pergunta em aberto — é o
+desenho a corrigir quando as telas forem feitas para valer.
