@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **16 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **17 perguntas**, nenhuma travando
 
 ---
 
@@ -28,6 +28,15 @@ ler da API na construção.
 Onde ele vive está decidido (011): no contrato da tela. O texto em si é rascunho meu e
 precisa da voz dela.
 **Momento:** antes de desenhar a página de erro. · *Contrato, `erro/`*
+
+### P32 · O nome aparece duas vezes na home
+As definições dizem que a home tem "nome, cargo, uma frase e um parágrafo", e que a barra
+tem "meu nome (clicar volta para a home)". No wireframe isso virou "Larissa" na barra e
+"LARISSA QUADROS · UX DESIGNER" na hero. A demonstração do Figma não repete — lá o nome só
+aparece na barra.
+**Opções:** a barra conta como o nome da home e a hero começa pela frase · o nome fica nos
+dois, com pesos diferentes · a hera traz só o cargo.
+**Momento:** antes de fechar o wireframe da home. · *Contrato, `home/`*
 
 ### P30 · Os sete componentes previstos
 Barra, botão, card, item da trilha, bloco de destaque, bloco de mídia com legenda e campo

@@ -501,3 +501,39 @@ passou a viver.
 "Quem sou eu", tirá-la deixaria a página órfã no diagrama — e a saída certa não era
 mantê-la como nó, era usar o componente que eu não tinha usado. **Anotação é parte do
 artefato, não comentário sobre ele.**
+
+---
+
+## Trecho 12 · Do contrato ao wireframe
+
+**Para que serve.** Transformar o contrato de uma tela em estrutura desenhada.
+**Antes de começar, precisa existir:** o contrato da tela, os textos aprovados e a escala
+tipográfica em variáveis. Os três existem.
+
+### Volta 1 — a home em escala de cinza
+
+**Pedido**
+
+> beleza, agora cria uma pagina la no figma (no mesmo documento do visual design) o nome da pagina é wireframe, e cria nessa pagina o wireframe da primeira tela
+
+**Voltou.** Página `Wireframe` criada no arquivo do sistema visual, e a home desenhada em
+1440, em escala de cinza — barra fixa, hero com nome, cargo, frase e parágrafo, e a ação
+única para Trabalhos. Grade de 12 colunas com margem 80 aplicada ao frame.
+
+**Conferi contra.** O contrato `home/home.md` para o conteúdo e a regra da ação única;
+a escala tipográfica do sistema para os tamanhos; a regra de espaço, que proíbe medida
+fora da escala; e o case de Finanças para a decisão de desenhar em cinza — *"desenhei o
+produto inteiro em escala de cinza"*. Cor é do mockup, não do wireframe.
+
+**O que evitou um erro.** O marca-texto precisa cair atrás de um trecho específico do
+título, e eu ia posicioná-lo por estimativa. Em vez disso medi as larguras de sete quebras
+candidatas antes de escolher — e a quebra escolhida faz **"forma melhor" começar a linha 2**,
+o que põe a faixa em x=0, sem cálculo de deslocamento. A hera virou três linhas explícitas,
+como no demo dela, em vez de quebra automática.
+
+**O que o desenho revelou.** O nome aparece duas vezes: na barra e na hera. As definições
+pedem os dois, a demonstração do Figma não repete. Virou a pergunta P32 — é o tipo de
+decisão que só aparece quando alguém desenha.
+
+**Incompleto pela regra dela.** O método diz que *"cada tela é desenhada nas duas larguras
+na mesma sessão, e só sai da mesa quando funciona nas duas"*. Só existe a versão 1440.
