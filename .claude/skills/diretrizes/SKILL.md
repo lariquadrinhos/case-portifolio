@@ -422,54 +422,86 @@ que foi assumido. Atualizar o registro. Commitar.
 
 ## Registro de Incógnitas
 
-**Última atualização: 18 de setembro de 2026.**
+**Última atualização: 18 de setembro de 2026, após leitura das definições de produto.**
 
 ### Sabido sabido
 
-- Repositório: `lariquadrinhos/case-portifolio`, público, no ar, conteúdo zerado
-- Pasta local: `/Users/aipi/Desktop/dente/case-portifolio`
+**Fonte: `definicoes-produto-portfolio.md`, lido em 18/09/2026.**
+
+- **O produto:** site estático de portfólio, cinco páginas mais a de erro — home,
+  trabalhos, dois cases, quem sou eu
+- **O objetivo:** ter o site no ar para aplicar para vagas. Os três textos já existem e
+  não têm onde morar
+- **Os trabalhos:** case de Finanças PF+PJ (azul) e case de Reembolso SulAmérica (laranja)
+- **O "plano maior":** o processo de construção é matéria-prima de um terceiro case.
+  Mas a documentação é regra de trabalho, não objetivo — decisão tomada pensando em como
+  vai ler no case é decisão errada
+- **Público:** quem faz triagem (segundos, pela home), quem avalia profundidade (lê um
+  case inteiro), quem recebe o link de outra pessoa (cai numa página interna). A terceira
+  impõe que toda página funcione sozinha
+- **Conteúdo:** três arquivos de texto prontos e aprovados, fora do código
+- **Idioma:** português no lançamento; inglês é a primeira evolução depois
+- **Prazo:** não existe. Sequência existe — sete fases, da instrumentação à publicação
+- **Visual:** valores em variáveis no Figma, página *Sistema visual*. Direção: contenção
+- **Método dela:** Figma inteiro primeiro, código depois. Não existe fase de mobile
+- Repositório: `lariquadrinhos/case-portifolio`, público, conectado
 - `_privado/` existe e está no `.gitignore`
-- GitHub Pages está ligado; sem `index.html`, o endereço responde 404
-- Decisão dela: construir do zero, da ideia ao código; hospedagem se resolve no fim
-- Decisão dela: sem processo pré-definido por mim — ela conduz, explicando no caminho
-- Existe um plano maior, ainda não descrito
-- Spec Kit v1.0.8 instalado na pasta, integração Claude; `.specify/` e as skills
-  `/speckit-*` existem. `constitution.md` ainda é modelo em branco
-- Materiais de referência trazidos por ela: guia de campo do Fable (incógnitas), A Arte
-  de Fazer Perguntas (8 Diálogos), Loop Engineering (Addy Osmani), PRD (PM3), Artifacts
-  no Claude Code, Spec-Driven Development com Spec Kit (EPAM, out/2025)
+- Spec Kit v1.0.8 instalado, integração Claude; `constitution.md` ainda em branco
+- `docs/` criado com `prd/`, `adr/`, `specs/` (Diretriz 9)
+- **PRD escrito** em `docs/prd/01-portfolio.md`, derivado das definições
+- Materiais de referência trazidos por ela: guia de campo do Fable, A Arte de Fazer
+  Perguntas (8 Diálogos), Loop Engineering (Addy Osmani), PRD (PM3), Artifacts no Claude
+  Code, Spec-Driven Development com Spec Kit (EPAM)
+
+### Colisão estrutural a resolver
+
+O documento de definições nomeia **cinco documentos de projeto**: definições, contrato de
+comportamento, perguntas em aberto, log de decisões e playbook do loop de produto. A
+Diretriz 9 estabeleceu `docs/` com `prd/`, `adr/`, `specs/`. **As duas estruturas não
+coincidem** e não foram conciliadas:
+
+| Documento dela | Equivalente aqui | Situação |
+|---|---|---|
+| Definições | — | Existe na raiz, fora de `docs/` |
+| Contrato de comportamento | `docs/specs/` | Nomes e formatos diferentes |
+| Perguntas em aberto | Este registro | Duplicação real |
+| Log de decisões | `docs/adr/` | **Não são a mesma coisa** — o log é cronológico e narra alternativas descartadas; ADR é uma decisão por arquivo |
+| Playbook do loop | — | Sem lugar previsto |
+
+`[?: as duas estruturas se fundem, ou a dela substitui a Diretriz 9?]`
 
 ### Em aberto por decisão dela
 
-- `/speckit-specify` foi iniciado em 18/09/2026 e **pausado antes de gerar qualquer
-  arquivo** — não havia descrição do que construir, e ela optou por deixar para depois.
-  Nada foi inventado. Ao retomar, gravar em `docs/specs/` (Diretriz 9), não em `specs/`.
-- Consequência: `/speckit-plan`, `/speckit-tasks` e `/speckit-implement` seguem bloqueados,
-  porque todos partem da especificação.
+- `/speckit-specify` pausado em 18/09/2026 sem gerar arquivos. Agora **há** descrição de
+  produto suficiente para retomar. Ao retomar, gravar em `docs/specs/` (Diretriz 9)
 
 ### Sabido não sabido
 
-Nada aqui foi respondido. Não preencher por conta própria.
+Travam a Fase 1, segundo o próprio documento de definições:
 
-- `[?: quem ela é profissionalmente — o que faz, há quanto tempo, com que ferramentas]`
-- `[?: como ela quer ser chamada e nomeada no site]`
-- `[?: qual é o "plano maior" que ela mencionou]`
-- `[?: que trabalho o portfólio mostra]`
-- `[?: para quem o portfólio fala]`
-- `[?: o que ela quer que aconteça depois que alguém vê]`
-- `[?: que material já existe e onde está]`
-- `[?: prazo, se existe]`
-- `[?: referências visuais e o que ela acha bonito]`
-- `[?: em que idioma o site fala]`
-- `[?: por que "case" no nome do repositório — é um case específico?]`
-- `[?: o que significa a pasta "dente" que contém o projeto]`
-- `[?: toda a constituição técnica acima]`
+- `[?: a frase da home]`
+- `[?: stack e hospedagem, com alternativa e motivo]`
+- `[?: como o conteúdo em texto vira página]`
+- `[?: como a estrutura recebe um segundo idioma sem ser refeita]`
+- `[?: o que fica visível na barra em tela estreita]`
+- `[?: como os tokens do Figma entram no código]`
+
+Ausentes do documento de definições:
+
+- `[?: o nome dela e o cargo que aparecem na home e na barra — o documento nunca os nomeia]`
+- `[?: qual domínio, já que "domínio próprio" é critério de liberação]`
+- `[?: por que "case" no nome do repositório]`
+- `[?: o que significa a pasta "dente"]`
+- `[?: a documentação fica pública junto com o repositório?]`
+- `[?: toda a constituição técnica]`
 
 ### Pistas não confirmadas — **não tratar como fato**
 
-- Usuário do GitHub é `lariquadrinhos`. Não confirma nome, área nem que trabalhe com quadrinhos.
-- O projeto está dentro de uma pasta chamada `dente`. Significado desconhecido.
-- E-mail da conta é `tesouraet@gmail.com`. Não confirma que seja o e-mail de contato do site.
+- Ela trabalha com design de produto — deduzido dos cases e do público, **nunca afirmado**.
+  O documento não diz o cargo dela em lugar nenhum.
+- Usuário do GitHub é `lariquadrinhos`. Não confirma nome nem área.
+- Pasta `dente`. Significado desconhecido.
+- E-mail da conta é `tesouraet@gmail.com`. Não confirma que seja o contato do site.
 
 ### Não sabido não sabido
 

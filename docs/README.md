@@ -5,7 +5,7 @@
 
 | Pasta | Conteúdo | Estado |
 |---|---|---|
-| [`prd/`](prd/) | Documentos de requisitos de produto | vazio |
+| [`prd/`](prd/) | Documentos de requisitos de produto | [`01-portfolio.md`](prd/01-portfolio.md) |
 | [`adr/`](adr/) | Registros de decisão de arquitetura | vazio |
 | [`specs/`](specs/) | Especificações do fluxo Spec Kit | vazio |
 
