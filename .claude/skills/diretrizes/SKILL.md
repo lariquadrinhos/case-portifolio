@@ -449,7 +449,7 @@ que foi assumido. Atualizar o registro. Commitar.
 - Spec Kit v1.0.8 instalado, integração Claude; `constitution.md` ainda em branco
 - `docs/` criado com `prd/`, `adr/`, `specs/` (Diretriz 9)
 - **PRD escrito** em `docs/prd/01-portfolio.md`, derivado das definições
-- **Cargo: UX Designer.** Frase da home: *"Se existe uma forma melhor de fazer, eu quero
+- **Ela é Larissa Quadros, UX Designer.** Na barra do site, só "Larissa". Frase da home: *"Se existe uma forma melhor de fazer, eu quero
   descobrir qual é."* Ambos de `quem-sou-eu.md`, texto marcado como final
 - Seis arquivos dela entraram no repositório público pelo mesmo `git add -A`: os três
   textos do site e três briefings de skill. Só as definições foram movidas para `_privado/`
@@ -491,7 +491,6 @@ Travam a Fase 1, segundo o próprio documento de definições:
 
 Ausentes do documento de definições:
 
-- `[?: o nome que aparece na home e na barra]` — o cargo está resolvido
 - `[?: qual domínio, já que "domínio próprio" é critério de liberação]`
 - `[?: por que "case" no nome do repositório]`
 - `[?: o que significa a pasta "dente"]`
@@ -502,7 +501,6 @@ Ausentes do documento de definições:
 
 - ~~Cargo deduzido~~ — **confirmado na fonte: UX Designer**, em `quem-sou-eu.md`.
   Veio da Engenharia Bioquímica.
-- Usuário do GitHub é `lariquadrinhos`. Não confirma nome nem área.
 - Pasta `dente`. Significado desconhecido.
 - E-mail da conta é `tesouraet@gmail.com`. Não confirma que seja o contato do site.
 

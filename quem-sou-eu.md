@@ -6,6 +6,10 @@ Textos finais selecionados para o portfólio.
 
 # Home
 
+**Nome:** Larissa Quadros
+**Nome curto (barra):** Larissa
+**Cargo:** UX Designer
+
 ## Hero
 
 ### Se existe uma forma melhor de fazer, eu quero descobrir qual é.

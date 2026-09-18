@@ -29,7 +29,8 @@ O site precisa estar no ar. Enquanto não está, os textos não existem para nin
 menos de um minuto, o que ela sabe fazer — e, se quiser ir fundo, ler um case inteiro sem
 se perder.
 
-**Quem assina:** UX Designer, vinda da Engenharia Bioquímica. Fonte: `quem-sou-eu.md`.
+**Quem assina:** Larissa Quadros, UX Designer, vinda da Engenharia Bioquímica.
+Fonte: `quem-sou-eu.md`.
 
 ---
 
@@ -100,7 +101,7 @@ Cinco páginas mais a de erro:
 | # | Página | Existe para | Decisão de produto que a define |
 |---|---|---|---|
 | 1 | **Home** | Fazer a pessoa querer ver os trabalhos | É capa, não resumo. Uma ação principal só — o caminho para os trabalhos é o elemento mais evidente da tela |
-| | *Conteúdo da home* | | Nome `[?]` · cargo **UX Designer** · frase *"Se existe uma forma melhor de fazer, eu quero descobrir qual é."* · parágrafo de abertura. Fonte: `quem-sou-eu.md`, marcados sob `# Home` |
+| | *Conteúdo da home* | | Nome **Larissa Quadros** (na barra: **Larissa**) · cargo **UX Designer** · frase *"Se existe uma forma melhor de fazer, eu quero descobrir qual é."* · parágrafo de abertura. Fonte: `quem-sou-eu.md`, marcados sob `# Home` |
 | 2 | **Trabalhos** | Índice dos cases, em cards | Existe porque a home é capa e não lista — e porque é onde um terceiro case cabe sem redesenhar nada |
 | 3–4 | **Cases** (dois, um por página) | Mostrar como ela trabalha | São o coração do site. A forma de conduzir o processo aparece dentro de cada etapa, como evidência, não como declaração à parte |
 | 5 | **Quem sou eu** | Como ela pensa, decide e o que valoriza | Não é cronologia de emprego — isso fica no currículo em PDF |
@@ -336,6 +337,4 @@ As que **travam** a Fase 1, nas palavras do próprio documento de definições:
 
 Ausentes do documento de definições, e necessárias para o site existir:
 
-- `[?: o nome que aparece na home e na barra]` — **o cargo já está resolvido: UX Designer**,
-  em `quem-sou-eu.md`. O nome não aparece em nenhum dos documentos lidos
 - `[?: qual domínio, já que "domínio próprio" é critério de liberação]`
