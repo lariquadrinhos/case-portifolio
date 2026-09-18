@@ -101,3 +101,35 @@ novo a desenhar.
 
 **Consequência.** `docs/comportamento/moldura/botao-contato.md` criado. A lacuna do
 comportamento em tela estreita aponta para a pergunta P10.
+
+---
+
+## 005 · O site é construído por camadas: HTML entrega o produto, JavaScript acrescenta
+
+**Quando** 2026-09-18 · **Fase** 1 · **Domínio** — · `#restricao`
+
+**Gatilho.** O event storming levantou duas perguntas que travavam a escolha de stack:
+o que acontece sem JavaScript, e como aplicar o tema certo antes da primeira pintura sem
+contrariar a regra de que o conteúdo não depende de script.
+
+**Decisão.** O HTML entrega o produto inteiro — textos, imagens, navegação, âncoras da
+trilha, contato, e o tema seguindo a preferência do sistema. O JavaScript acrescenta três
+coisas e só elas: a troca manual de tema com memória, a trilha que se marca sozinha ao
+rolar, e o visualizador de imagem com zoom. Sem script, o site perde essas conveniências
+e não perde nada do produto.
+
+**Alternativa descartada.** Montar a página no navegador, como faz a maior parte das
+ferramentas atuais. Perdeu por dois motivos. O primeiro é a regra já escrita nas
+definições: conteúdo legível sem depender de script. O segundo é mais forte e não é sobre
+quem desliga JavaScript — é que todo visitante passa pelo momento em que o script ainda
+não chegou. Com a exigência de primeira leitura em menos de 2,5 segundos em rede móvel, o
+relógio só para quando o texto aparece; se ele depender de script, começa depois do
+download e da execução.
+
+**Custo aceito.** A trilha não marca sozinha e o tema não troca manualmente quando o
+script falha. Duas conveniências perdidas, nenhuma informação.
+
+**Consequência.** Elimina de saída qualquer stack que renderize no navegador — restam
+gerador de site estático e HTML escrito à mão, o que estreita a pergunta P05.
+`docs/comportamento/tema/tema-claro-e-escuro.md` criado. Resolve a tensão da P01: o script
+de tema é bloqueante mas falha em segurança, caindo na preferência do sistema.

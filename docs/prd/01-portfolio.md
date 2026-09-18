@@ -195,7 +195,7 @@ pessoa vai sair do site.
 | **Desempenho** | Primeira leitura possível em menos de 2,5 s no celular, em rede móvel comum. Imagens em formato moderno, dimensionadas para o tamanho em que aparecem, carregadas sob demanda fora da primeira tela |
 | **Acessibilidade** | WCAG AA. Contraste ≥ 4,5:1 em texto e ≥ 3:1 em elemento interativo, **nos dois temas**. Foco sempre visível. Toda imagem com texto alternativo. Alvo de toque ≥ 44 px |
 | **Temas** | Claro e escuro, com tokens nomeados por papel e não por cor. Padrão segue o sistema; controle na barra sobrescreve. O claro usa fundo cinza claro, não branco puro |
-| **Independência de script** | Conteúdo legível sem depender de script. O texto é o produto; interação é camada |
+| **Construído por camadas** | O HTML entrega o produto inteiro: textos, imagens, navegação, âncoras da trilha, contato e o tema do sistema. O JavaScript acrescenta só a troca manual de tema, a trilha que se marca sozinha e o zoom da imagem. Sem script, perdem-se conveniências, não conteúdo — ver decisão 005 |
 
 **O escuro não é o claro invertido.** Os dois modos foram escolhidos e verificados em
 separado; nenhum valor de um deriva automaticamente do outro.

@@ -9,25 +9,17 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **19 perguntas**, cinco travando
+**Atualizado:** 18 de setembro de 2026 · **17 perguntas**, três travando
 
 ---
 
 ## Travam
 
-### P01 · Tema sem piscar, em site estático
-Aplicar o tema certo antes da primeira pintura exige ler a preferência salva no navegador,
-o que em site estático é script bloqueante no `<head>` — e tensiona com "conteúdo legível
-sem depender de script".
-**Momento:** Fase 1, junto da stack. · *Event storming, hotspot 2*
-
-### P02 · O que acontece sem JavaScript
-Qual tema aparece, a trilha vira o quê, a imagem ainda amplia.
-**Momento:** Fase 1, junto da stack. · *Event storming, hotspot 3*
-
 ### P05 · Stack e hospedagem
-Com alternativa considerada e motivo registrados. Recebe como critério concreto as
-P01 e P02.
+Com alternativa considerada e motivo registrados.
+**Já restringido pela decisão 005:** nada que renderize no navegador. Restam gerador de
+site estático e HTML escrito à mão. O gerador precisa produzir HTML completo na construção,
+aceitar um script bloqueante curto no `<head>` e ler os três arquivos de conteúdo.
 **Momento:** Fase 1.
 
 ### P06 · Como o conteúdo em texto vira página
