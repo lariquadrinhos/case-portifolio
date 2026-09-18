@@ -1,0 +1,74 @@
+---
+fluxo: quem-sou-eu/quem-sou-eu
+dominio: quem-sou-eu
+dono: design
+status: rascunho
+atualizado: 2026-09-18
+
+figma:
+  file: hwClE9Xpm51OW4vPsCCn8J
+  pagina: "34:2"
+  tela: "@lacuna · não desenhado"
+---
+
+# Quem sou eu
+
+Foco em como ela pensa, como trabalha, como toma decisões e no que valoriza — **não em
+cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um case.
+
+## Regras
+
+- A página traz foto dela.
+- O conteúdo vem de `quem-sou-eu.md`, sob `<!-- bloco: quem-sou-eu -->`: a apresentação e
+  os seis valores.
+- **O histórico profissional não aparece na página** — fica no currículo em PDF, acessível
+  a partir daqui.
+- O contato também existe aqui, junto do currículo.
+- A página menciona que o próprio site está sendo documentado enquanto é construído. É o
+  que transforma a ausência de um terceiro case em demonstração, em vez de lacuna.
+
+## Peças
+
+| Nome no cenário | Figma | Storybook |
+|---|---|---|
+| foto | `@lacuna` | não se aplica |
+| currículo em PDF | `@lacuna` | não se aplica |
+
+## Comportamento
+
+```gherkin
+# language: pt
+Funcionalidade: Quem sou eu
+
+  Cenário: A pessoa quer saber quem está por trás do trabalho
+    Quando a página abre
+    Então a foto aparece
+    E a apresentação e os valores aparecem
+    E nenhuma cronologia de emprego aparece na página
+
+  Cenário: A pessoa baixa o currículo
+    Dado que a página está aberta
+    Quando a pessoa aciona o currículo
+    Então o arquivo em PDF é entregue
+
+  Cenário: A pessoa entra em contato a partir daqui
+    Dado que a página está aberta
+    Quando a pessoa aciona o contato
+    Então o e-mail e o LinkedIn ficam disponíveis, como na moldura
+
+  @lacuna
+  Cenário: Como a foto entra na página
+    Então A DEFINIR — ver pergunta P28
+
+  @lacuna
+  Cenário: O currículo ainda não foi produzido
+    Dado que o PDF não existe
+    Então A DEFINIR — ver pergunta P08
+```
+
+## Transições
+
+| De | Gatilho | Para |
+|---|---|---|
+| Quem sou eu | Currículo | Download do PDF |
+| Quem sou eu | Contato | Contato revelado, sem sair da página |

@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **14 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **18 perguntas**, nenhuma travando
 
 ---
 
@@ -23,6 +23,31 @@ Nenhuma.
 **Opções:** transcrição manual · exportar as variáveis para um arquivo e gerar o CSS dele ·
 ler da API na construção.
 **Momento:** depois da Fase 2, quando o design system existir no Figma. Não bloqueia a P05.
+
+### P27 · A ordem dos cards no índice de trabalhos
+Com dois cases, qual aparece primeiro? O documento não diz, e a ordem comunica prioridade.
+**Opções:** o mais recente primeiro · o mais forte primeiro · ordem fixa declarada no
+código · alfabética, que é a única que não comunica nada.
+**Momento:** antes de desenhar o índice. · *Contrato, `trabalhos/`*
+
+### P28 · Como a foto entra na página "Quem sou eu"
+A convenção de conteúdo cobre imagem dentro do texto — `![](caminho)` mais `Legenda:`.
+A foto não é imagem de texto corrido: é peça da página. Não há marcador para ela.
+**Opções:** um marcador novo em `quem-sou-eu.md` · caminho fixo, declarado no contrato ·
+tratá-la como imagem comum no topo do bloco.
+**Momento:** antes de desenhar a página. · *Contrato, `quem-sou-eu/`*
+
+### P29 · De onde vem o texto da página de erro
+A regra é que o site não inventa conteúdo: tudo vem de um dos três arquivos ou está escrito
+no contrato. **O texto da página de erro não está em nenhum dos dois.**
+**Opções:** um quarto arquivo de conteúdo · um bloco novo dentro de `quem-sou-eu.md` ·
+escrito no próprio contrato, por ser interface e não conteúdo editorial.
+**Momento:** antes de desenhar a página de erro. · *Contrato, `erro/`*
+
+### P30 · Os sete componentes previstos
+Barra, botão, card, item da trilha, bloco de destaque, bloco de mídia com legenda e campo
+de foco. Nenhum desenhado, e a lista pode estar incompleta.
+**Momento:** Fase 2. · *Contrato, `componentes/`*
 
 ### P26 · Escolha manual de tema × mudança da preferência do sistema
 O leitor escolhe um tema no site e, depois, muda a preferência do sistema operacional.
