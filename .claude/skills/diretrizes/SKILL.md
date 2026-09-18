@@ -351,22 +351,21 @@ configuração, **a documentação vira o site.**
 
 ## Constituição técnica
 
-Esta seção é a parte da constituição que trata de código. **Está vazia de propósito** —
-não há stack decidida, e inventar uma antes de saber o que o site precisa fazer seria
-violar a Diretriz 0.
+**Deixou de estar vazia em 18/09/2026.** Vive em
+[`.specify/memory/constitution.md`](../../../.specify/memory/constitution.md), versão 1.0.0.
 
-Autoria de constituição exige julgamento sênior e revisão repetida; não se resolve
-preenchendo campos.
+Cinco princípios, cada um derivado de uma decisão registrada no log:
 
-- `[?: linguagem, ferramentas e versões]`
-- `[?: convenções de nome de arquivo, pasta e classe]`
-- `[?: intenção arquitetural — onde cada coisa mora e por quê]`
-- `[?: bibliotecas permitidas e proibidas, e critério para aprovar uma nova]`
-- `[?: requisitos de acessibilidade — contraste, teclado, leitor de tela]`
-- `[?: requisitos de desempenho — peso da página, tempo de carga]`
-- `[?: o site precisa funcionar bem em qual tamanho de tela, prioritariamente?]`
+1. O HTML entrega o produto; o script acrescenta
+2. Uma informação, uma fonte
+3. Lacuna é marcada, nunca preenchida
+4. O contrato é fonte, não registro
+5. Acessibilidade mora dentro de cada componente
 
-Estas respostas vêm da especificação, não antes dela.
+Mais restrições técnicas, fluxo de trabalho e governança.
+
+**A divisão com este documento:** método e conduta aqui; princípios técnicos lá. Emenda na
+constituição exige entrada no log com a alternativa descartada.
 
 ---
 

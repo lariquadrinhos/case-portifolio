@@ -360,3 +360,33 @@ outro, justamente no momento em que o tempo é mais curto.
 
 **Consequência.** A ordem passa a ser regra no contrato do índice. Acrescentar um terceiro
 case passa a exigir uma decisão de ordem explícita, em vez de ela acontecer sozinha.
+
+---
+
+## 014 · A constituição técnica é ratificada na versão 1.0.0
+
+**Quando** 2026-09-18 · **Fase** 1 · **Domínio** — · `#escopo`
+
+**Gatilho.** `/speckit-constitution` nunca havia rodado, e `.specify/memory/constitution.md`
+continuava sendo o modelo em branco desde a instalação. Era um arquivo que afirmava guardar
+os princípios do projeto e não guardava nenhum.
+
+**Decisão.** Constituição escrita em cinco princípios, mais restrições técnicas, fluxo de
+trabalho e governança. **Todo princípio deriva de uma decisão já registrada no log, com a
+entrada de origem citada** — nada foi inventado para preencher a estrutura do modelo.
+
+**Alternativa descartada.** Duas. Preenchê-la mais cedo, quando eu a apontei como vazia —
+perdeu na hora, porque as respostas dependiam da stack, do comportamento sem script e da
+convenção de conteúdo, e nenhuma das três existia. E escrevê-la a partir dos exemplos do
+modelo, que sugerem princípios genéricos como *Library-First* e *Test-First* — perdeu
+porque princípio que não vem de decisão tomada aqui é enfeite, e enfeite em documento de
+governança é pior que ausência.
+
+**Custo aceito.** Mais um documento na pilha, e a fronteira com as `diretrizes` precisa ser
+lida para não confundir: método e conduta lá, princípios técnicos aqui. A própria
+constituição declara essa divisão no topo, mas depender de alguém ler é custo real.
+
+**Consequência.** `.specify/memory/constitution.md` deixa de ser modelo em branco. Toda
+emenda futura passa a exigir entrada no log com a alternativa descartada. A seção
+"Constituição técnica" das `diretrizes`, que estava vazia de propósito, passa a apontar
+para cá.
