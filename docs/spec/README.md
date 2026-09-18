@@ -3,6 +3,10 @@
 **Os valores não moram aqui.** Moram em variáveis no Figma, e é de lá que descem.
 Duas listas do mesmo hexadecimal criariam a briga que este projeto existe para evitar.
 
+> **Retrato de um sistema incompleto.** O design system ainda será construído no Figma,
+> com todas as variáveis e componentes. O que está abaixo é o que existia em 18/09/2026 —
+> vai crescer e pode mudar de nome. Não é especificação fechada.
+
 O que este arquivo guarda é o **inventário de nomes** — o que o contrato pode citar, e o
 que a checagem de CI 4 verifica.
 

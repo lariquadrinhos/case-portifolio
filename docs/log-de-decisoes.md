@@ -161,3 +161,34 @@ mudança a marcadores e a um `##` sobrando; nenhuma frase mudou.
 **Consequência.** `docs/comportamento/conteudo/arquivo-de-texto-vira-pagina.md` criado.
 Abre a pergunta P22, sobre o bloco "O Produto". Requisito novo para a stack: a ferramenta
 precisa ler comentários HTML como marcadores estruturais.
+
+---
+
+## 007 · O mecanismo de exportação dos tokens não se decide agora
+
+**Quando** 2026-09-18 · **Fase** 1 · **Domínio** — · `#recusa-de-ia` `#reversao`
+
+**Gatilho.** Larissa interrompeu a discussão sobre como exportar as variáveis do Figma:
+o design system ainda não existe, e decidir a exportação antes de haver o que exportar é
+decidir no vazio.
+
+**Decisão.** A P07 se divide. O **princípio** fica decidido agora, porque restringe o
+resto: os valores descem das variáveis, o nome é preservado (`bg/page` → `--bg-page`,
+barra vira hífen e nada mais muda), e existe um único lugar de onde tudo deriva. O
+**mecanismo** — transcrição, exportação para arquivo, ou leitura pela API na construção —
+fica para depois da Fase 2, quando o design system estiver fechado no Figma.
+
+**Alternativa descartada.** Fechar o mecanismo agora, como eu vinha propondo. Perdeu
+porque a escolha depende do que o design system for quando existir — quantas coleções,
+quantos componentes, com que frequência muda — e nenhuma dessas informações existe hoje.
+
+**Custo aceito.** Nenhum identificado. A P07 também não era bloqueio da stack, ao
+contrário do que eu havia classificado: qualquer gerador de site estático consome um
+arquivo CSS gerado, então ela não elimina candidato nenhum.
+
+**Consequência.** P07 sai de "travam" para "esperam", com momento "depois da Fase 2".
+A P05 deixa de esperar por ela. O inventário em `docs/spec/README.md` passa a valer como
+retrato de um sistema incompleto, não como especificação fechada.
+
+**Correção de rota minha**, não dela: eu li "como os tokens entram no código" na Fase 1
+como escolha de ferramenta, quando o que está escrito é princípio.

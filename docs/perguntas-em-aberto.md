@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **20 perguntas**, duas travando
+**Atualizado:** 18 de setembro de 2026 · **20 perguntas**, uma travando
 
 ---
 
@@ -22,13 +22,16 @@ site estático e HTML escrito à mão. O gerador precisa produzir HTML completo 
 aceitar um script bloqueante curto no `<head>` e ler os três arquivos de conteúdo.
 **Momento:** Fase 1.
 
-### P07 · Como os tokens do Figma entram no código
-Lidos das variáveis, com o nome preservado, num único lugar de onde tudo deriva.
-**Momento:** Fase 1.
-
 ---
 
 ## Esperam
+
+### P07 · O mecanismo de exportação dos tokens do Figma
+**Princípio já decidido** (decisão 007): valores descem das variáveis, nome preservado
+(`bg/page` → `--bg-page`), um único lugar de onde tudo deriva. Falta só o mecanismo.
+**Opções:** transcrição manual · exportar as variáveis para um arquivo e gerar o CSS dele ·
+ler da API na construção.
+**Momento:** depois da Fase 2, quando o design system existir no Figma. Não bloqueia a P05.
 
 ### P24 · As demonstrações do Figma contradizem o documento em três pontos
 Lido em 18/09/2026, frames `37:88` e `38:105`. A regra já diz que quem erra é o desenho —
