@@ -355,6 +355,14 @@ que foi assumido. Atualizar o registro. Commitar.
   de Fazer Perguntas (8 Diálogos), Loop Engineering (Addy Osmani), PRD (PM3), Artifacts
   no Claude Code, Spec-Driven Development com Spec Kit (EPAM, out/2025)
 
+### Em aberto por decisão dela
+
+- `/speckit-specify` foi iniciado em 18/09/2026 e **pausado antes de gerar qualquer
+  arquivo** — não havia descrição do que construir, e ela optou por deixar para depois.
+  Nada foi inventado. `specs/` ainda não existe. Retomar quando ela trouxer a descrição.
+- Consequência: `/speckit-plan`, `/speckit-tasks` e `/speckit-implement` seguem bloqueados,
+  porque todos partem da especificação.
+
 ### Sabido não sabido
 
 Nada aqui foi respondido. Não preencher por conta própria.
