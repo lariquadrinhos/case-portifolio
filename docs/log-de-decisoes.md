@@ -192,3 +192,33 @@ retrato de um sistema incompleto, não como especificação fechada.
 
 **Correção de rota minha**, não dela: eu li "como os tokens entram no código" na Fase 1
 como escolha de ferramenta, quando o que está escrito é princípio.
+
+---
+
+## 008 · Os números de ritmo ficam no documento; só os valores de token vivem no Figma
+
+**Quando** 2026-09-18 · **Fase** 1 · **Domínio** — · `#reversao`
+
+**Gatilho.** A revisão encontrou uma contradição no documento de definições: ele afirma
+duas vezes não conter nenhum valor visual — *"este documento não tem nenhum, de
+propósito"* — e contém 96 entre capítulos, 28 entre parágrafos, 8 ou 12 dentro de um
+bloco, grade de 12 colunas, margem de 80 e medida de linha entre 65 e 75 caracteres.
+
+**Decisão.** A frase muda; os números ficam. O documento passa a distinguir duas perguntas:
+*"quanto vale?"* é do Figma — hex, tamanho de fonte, entrelinha, quanto mede `space/96`.
+*"quanto disso, e onde?"* é do documento — espaço entre capítulos, colunas da grade,
+caracteres por linha.
+
+**Alternativa descartada.** Levar os números de ritmo para o Figma, para que a afirmação
+original ficasse verdadeira. Perdeu porque eles não são valores: não definem token nenhum,
+escolhem qual token se aplica onde. Levá-los para variáveis criaria tokens sem papel
+semântico — `espaco-entre-capitulos` seria um apelido de `space/96`, e apelido de token é
+a duplicação que a separação existe para evitar.
+
+**Custo aceito.** A regra de fronteira deixa de caber numa frase e passa a exigir duas.
+Alguém com pressa pode ler o documento e achar que ele contradiz a si mesmo — agora a
+distinção está escrita, mas precisa ser lida.
+
+**Consequência.** `_privado/definicoes-produto-portfolio.md` alterado em três pontos, na
+seção *Especificação visual*. As sete regras acrescentadas ao PRD nesta mesma revisão
+passam a ter fundamento explícito: elas citam números de ritmo, não valores.
