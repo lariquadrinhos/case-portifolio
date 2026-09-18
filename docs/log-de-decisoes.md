@@ -52,3 +52,52 @@ que é a pergunta mais frequente.
 
 **Consequência.** `docs/adr/` e `docs/specs/` removidos. Diretriz 9 reescrita. A skill
 `loop-produto` não é copiada para este projeto enquanto prescrever a estrutura antiga.
+
+---
+
+## 003 · O card do próximo case é circular, sem exceção no último
+
+**Quando** 2026-09-18 · **Fase** 0 · **Domínio** case · `#escopo`
+
+**Gatilho.** O event storming perguntou o que o card ao fim do segundo case oferece, já que
+o site nasce com dois. Parecia oferecer algo já lido.
+
+**Decisão.** O card de cada case aponta para o outro. Não há caso especial para o último.
+
+**Alternativa descartada.** Levar ao índice de Trabalhos, ou fazer o card sumir no último
+case. Perderam quando ficou claro que um dos três públicos chega direto numa página interna
+por link compartilhado — para quem cai no segundo case sem passar pela home, o card
+circular aponta para conteúdo novo, não repetido. As duas alternativas também criariam uma
+exceção no componente, contra a promessa de que um terceiro case cabe sem redesenhar nada.
+
+**Custo aceito.** Quem leu os dois na ordem recebe, ao fim, a oferta do que acabou de ler.
+
+**Consequência.** `docs/comportamento/case/card-proximo-case.md` criado. Abre uma lacuna
+nova: com três cases, a ordem do "próximo" não está definida — marcada no contrato, sem
+travar.
+
+---
+
+## 004 · O botão de contato revela o e-mail escrito, em vez de disparar mailto
+
+**Quando** 2026-09-18 · **Fase** 0 · **Domínio** moldura · `#recusa-de-ia`
+
+**Gatilho.** As definições dizem que contato é e-mail e LinkedIn e que o botão dispara a
+ação direto — mas são dois destinos e uma ação só.
+
+**Decisão.** O botão fica à direita da barra, como definido, e ao ser acionado revela o
+endereço `llquadros95@gmail.com` escrito por extenso, copiável, com o LinkedIn ao lado.
+
+**Alternativa descartada.** Duas. Disparar `mailto:` direto e deixar o LinkedIn em "Quem
+sou eu" — perdeu porque `mailto:` sem cliente configurado falha calado, e o público de
+triagem costuma estar no computador, em webmail. E a proposta de Larissa de deixar o e-mail
+visível ao lado do nome na barra — perdeu por três motivos: não cabe em tela estreita sem
+truncar, o que torna o endereço inútil; tornaria o contato a informação mais destacada de
+toda página, contra a regra de que contato não deve competir com os cases; e ocuparia mais
+espaço horizontal que "Trabalhos" e "Quem sou eu" somados.
+
+**Custo aceito.** Um toque a mais que a versão com o e-mail sempre visível, e um componente
+novo a desenhar.
+
+**Consequência.** `docs/comportamento/moldura/botao-contato.md` criado. A lacuna do
+comportamento em tela estreita aponta para a pergunta P10.
