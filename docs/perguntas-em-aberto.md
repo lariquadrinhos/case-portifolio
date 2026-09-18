@@ -9,22 +9,13 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **15 perguntas**, uma travando
+**Atualizado:** 18 de setembro de 2026 · **14 perguntas**, nenhuma travando
 
 ---
 
 ## Travam
 
-### P05 · Stack e hospedagem
-Com alternativa considerada e motivo registrados.
-**Já restringido pela decisão 005:** nada que renderize no navegador. Restam gerador de
-site estático e HTML escrito à mão. O gerador precisa produzir HTML completo na construção,
-aceitar um script bloqueante curto no `<head>` e ler os três arquivos de conteúdo.
-**Momento:** Fase 1.
-
----
-
-## Esperam
+Nenhuma.
 
 ### P07 · O mecanismo de exportação dos tokens do Figma
 **Princípio já decidido** (decisão 007): valores descem das variáveis, nome preservado
@@ -75,8 +66,11 @@ Quem recebe link de outra pessoa pode querer apontar para uma etapa específica.
 A pessoa abre o protótipo em nova aba e volta. Trilha e rolagem preservadas?
 **Momento:** antes do código. · *Event storming, hotspot 7*
 
-### P15 · Qual domínio
-"Domínio próprio" é critério de liberação; nenhum foi escolhido.
+### P15 · Hospedagem e domínio
+A stack ficou decidida (009); a hospedagem, não. GitHub Pages já está ligado e aceita
+domínio próprio de graça, mas precisaria de um arquivo de automação que constrói a cada
+push. Alternativa: Cloudflare Pages, que constrói sozinho, ao custo de mais uma conta.
+"Domínio próprio" é critério de liberação; nenhum domínio foi escolhido.
 **Momento:** antes da Fase 6.
 
 ### P16 · Os textos do site ficam públicos desde já

@@ -222,3 +222,33 @@ distinção está escrita, mas precisa ser lida.
 **Consequência.** `_privado/definicoes-produto-portfolio.md` alterado em três pontos, na
 seção *Especificação visual*. As sete regras acrescentadas ao PRD nesta mesma revisão
 passam a ter fundamento explícito: elas citam números de ritmo, não valores.
+
+---
+
+## 009 · A stack é HTML e CSS próprios, com uma construção escrita por nós, sem framework
+
+**Quando** 2026-09-18 · **Fase** 1 · **Domínio** — · `#restricao`
+
+**Gatilho.** A P05 era a última pergunta travando. Os requisitos vinham acumulados de
+decisões anteriores: HTML completo na construção, script curto e bloqueante no `<head>`,
+leitura dos marcadores próprios, três arquivos de conteúdo sem frontmatter, CSS gerado,
+hospedagem estática.
+
+**Decisão.** HTML e CSS escritos por nós, com uma etapa de construção própria que lê os
+três arquivos de conteúdo e gera as páginas. Sem framework. A construção existe porque a
+regra é que atualizar uma página seja editar um arquivo de texto — sem ela, editar uma
+página seria editar HTML.
+
+**Alternativa descartada.** Astro, que eu havia recomendado, e Eleventy. O argumento que eu
+usei a favor do Astro era a otimização de imagem — e ele caiu quando ficou claro que o
+conjunto de imagens dos cases é **fixo**, preparado uma vez, não gerado a cada construção.
+O que sobrou do outro lado pesou mais: a convenção de marcadores é própria, então o código
+de leitura seria nosso em qualquer opção; são cinco páginas e três arquivos; e um framework
+esconderia justamente a parte que o terceiro case existe para mostrar.
+
+**Custo aceito.** Imagens responsivas e pré-visualização durante o desenvolvimento passam
+a ser trabalho nosso. Nenhum dos dois é difícil neste tamanho, mas nenhum vem de graça.
+
+**Consequência.** P05 fecha na metade da stack. A hospedagem continua em aberto. **Nada
+disso autoriza começar a escrever código:** o produto é desenhado inteiro no Figma antes
+de virar código, e nada foi desenhado ainda.
