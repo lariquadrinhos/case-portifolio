@@ -60,10 +60,9 @@ stroke/padrao
 foco/largura      foco/afastamento
 ```
 
-> **`@lacuna`** · Esta coleção **não tem frame de documentação na página Sistema visual**.
-> Os frames vão de `00 · Princípios` a `06 · Demonstração`, cobrindo Neutros, Acentos nos
-> dois temas e Tipografia. Os nomes acima vêm do documento de definições, não de leitura
-> do arquivo — e portanto não estão confirmados contra a fonte.
+Sem frame de documentação na página — os frames cobrem Neutros, Acentos nos dois temas e
+Tipografia. Os nomes acima vêm do documento de definições, não de leitura do arquivo.
+Serão confirmados quando o design system for construído.
 
 ---
 

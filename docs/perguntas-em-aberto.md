@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **19 perguntas**, uma travando
+**Atualizado:** 18 de setembro de 2026 · **18 perguntas**, uma travando
 
 ---
 
@@ -32,12 +32,6 @@ aceitar um script bloqueante curto no `<head>` e ler os três arquivos de conte�
 **Opções:** transcrição manual · exportar as variáveis para um arquivo e gerar o CSS dele ·
 ler da API na construção.
 **Momento:** depois da Fase 2, quando o design system existir no Figma. Não bloqueia a P05.
-
-### P25 · A coleção "Espaço e forma" não tem frame de documentação
-Os nomes `space/*`, `radius/*`, `stroke/padrao` e `foco/*` vêm do documento de definições,
-não de leitura do arquivo. Não foi possível confirmá-los contra a fonte — o MCP do Figma
-exige seleção no app para ler variáveis.
-**Momento:** antes de a spec visual ser gerada.
 
 ### P22 · O bloco "O Produto", no case de Finanças
 Título sem marcador de trilha, depois do último capítulo. É subseção do último capítulo,
