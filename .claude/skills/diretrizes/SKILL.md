@@ -167,12 +167,25 @@ Honestidade de escala: o método nasceu para sistemas corporativos com muitos se
 código legado. Este projeto é um site pessoal. Adotar a burocracia inteira seria
 cerimônia sem ganho.
 
-- **Adotamos:** a ordem das seis etapas, a etapa Esclarecer, a decomposição, os portões
-  de revisão (Diretriz 4) e a ideia de constituição.
-- **Fica em aberto:** instalar a ferramenta Spec Kit de fato, com seus comandos
-  `/speckit-*`. É decisão dela, não minha. `[?: instalar o Spec Kit ou só seguir o método?]`
+- **Adotamos:** a ordem das etapas, a decomposição, os portões de revisão (Diretriz 4) e
+  a ideia de constituição. A ferramenta está instalada (Spec Kit v1.0.8, integração Claude).
+- **`/speckit-clarify` é obrigatório aqui.** A ferramenta o marca como opcional; neste
+  projeto ele não é. Pular a etapa que caça ambiguidade seria revogar a Diretriz 0 na prática.
 - **Não vale cargo cult:** se uma etapa não estiver produzindo clareza neste projeto, ela
   é dita em voz alta e cortada — não executada por obediência.
+
+### As duas constituições
+
+Existem dois arquivos de constituição, com divisão de trabalho declarada:
+
+| Arquivo | Trata de | Quem escreve |
+|---|---|---|
+| `.claude/skills/diretrizes/SKILL.md` (este) | Método, conduta, como perguntar, o que não assumir | Nós, à mão |
+| `.specify/memory/constitution.md` | Princípios técnicos: stack, padrões, testes, qualidade | `/speckit-constitution`, com ela |
+
+O segundo ainda é um modelo cheio de marcadores. Preenchê-lo é a primeira etapa do fluxo
+e **exige a participação dela** — é o momento em que a Constituição Técnica deste
+documento deixa de estar vazia.
 
 ---
 
@@ -336,6 +349,8 @@ que foi assumido. Atualizar o registro. Commitar.
 - Decisão dela: construir do zero, da ideia ao código; hospedagem se resolve no fim
 - Decisão dela: sem processo pré-definido por mim — ela conduz, explicando no caminho
 - Existe um plano maior, ainda não descrito
+- Spec Kit v1.0.8 instalado na pasta, integração Claude; `.specify/` e as skills
+  `/speckit-*` existem. `constitution.md` ainda é modelo em branco
 - Materiais de referência trazidos por ela: guia de campo do Fable (incógnitas), A Arte
   de Fazer Perguntas (8 Diálogos), Loop Engineering (Addy Osmani), PRD (PM3), Artifacts
   no Claude Code, Spec-Driven Development com Spec Kit (EPAM, out/2025)
@@ -356,7 +371,6 @@ Nada aqui foi respondido. Não preencher por conta própria.
 - `[?: em que idioma o site fala]`
 - `[?: por que "case" no nome do repositório — é um case específico?]`
 - `[?: o que significa a pasta "dente" que contém o projeto]`
-- `[?: instalar a ferramenta Spec Kit, ou só seguir o método?]`
 - `[?: toda a constituição técnica acima]`
 
 ### Pistas não confirmadas — **não tratar como fato**
