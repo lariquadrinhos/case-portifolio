@@ -73,6 +73,24 @@ Site foi publicado
 
 ---
 
+## Linha 1b · Antes de qualquer página
+
+*Um evento acontece antes de o site ser aberto, e é fácil esquecer dele.*
+
+```
+Alguém colou o endereço num aplicativo de mensagem
+        ↓
+A prévia do link foi montada — imagem de compartilhamento e descrição da página
+        ↓
+A pessoa decidiu se clica
+```
+
+Esse é o primeiro contato de quem recebe o link de outra pessoa, e acontece **sem que
+nenhuma página carregue**. A imagem de compartilhamento e as descrições de página estão
+listadas como dependência.
+
+---
+
 ## Linha 2 · Chegada
 
 ```
@@ -182,9 +200,31 @@ Card do próximo case oferecido · contato convidado
 
 ---
 
+## Linha 4b · Quem sou eu
+
+```
+Página aberta — pela barra, ou por link direto
+        ↓
+Foto e apresentação exibidas
+        ↓
+Valores exibidos
+        ↓
+   ┌────────────────┬──────────────────┐
+   ↓                ↓                  ↓
+Currículo      Contato            Volta aos
+baixado        acionado           trabalhos
+```
+
+> **Hotspot 11 · O currículo ainda não existe.** É dependência listada, e a página oferece
+> um botão para um arquivo que ainda não foi produzido. O comportamento dessa falta é o
+> mesmo caso da pergunta P08.
+
+---
+
 ## Linha 5 · Saídas
 
 ```
+Botão de voltar ao topo apareceu ─→ só depois que a rolagem começou
 Contato disparado ──→ e-mail ou LinkedIn (sem formulário, sem servidor)
 Currículo baixado ──→ arquivo PDF
 Repositório aberto ─→ link externo
@@ -242,3 +282,4 @@ Imagem de desktop tocada → visualizador com zoom
 | 8 | Link para seção | espera | antes de desenhar o domínio Case |
 | 9 | Contato: dois destinos, um botão | **trava** | antes de desenhar a Moldura |
 | 10 | O que sai da barra | espera | Fase 1 |
+| 11 | Currículo ainda não existe | espera | mesmo caso da P08 |

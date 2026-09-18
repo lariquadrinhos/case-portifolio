@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **18 perguntas**, uma travando
+**Atualizado:** 18 de setembro de 2026 · **15 perguntas**, uma travando
 
 ---
 
@@ -38,12 +38,6 @@ Título sem marcador de trilha, depois do último capítulo. É subseção do ú
 capítulo próprio sem rótulo, ou material que não vai para o site?
 **Momento:** antes de construir a página do case. · *Contrato, `conteudo/`*
 
-### P23 · Imagens, legendas e links dos cases não existem nos arquivos
-Nenhuma imagem referenciada nos três arquivos. Um único link, e é o marcador `[link]`.
-Reembolso cita Repositório sem link. Nenhum link de protótipo. A convenção para escrevê-los
-já existe — falta o conteúdo.
-**Momento:** dependência de conteúdo; trava a publicação se ficar para o fim.
-
 ### P21 · A ordem do "próximo case" com três cases
 A decisão 003 resolve dois cases sem exceção, mas não define a ordem com três.
 **Opções:** ordem fixa do índice, com o último voltando ao primeiro · o case ainda não lido
@@ -57,7 +51,9 @@ lacuna visível na tela.
 **Momento:** antes de desenhar o domínio Conteúdo. · *Event storming, hotspot 1*
 
 ### P09 · Como a estrutura recebe um segundo idioma
-Sem ser refeita depois.
+**O comportamento já está definido:** trocar de idioma mantém a pessoa na mesma página e na
+mesma altura da leitura; o conteúdo já vive separado do código e o controle está previsto
+na barra. Falta só o mecanismo estrutural.
 **Momento:** Fase 1.
 
 ### P10 · O que sai da barra em tela estreita
@@ -74,10 +70,6 @@ demais para contar como animação · a regra não se aplica a indicador de posi
 ### P12 · Endereço para uma seção do case
 Quem recebe link de outra pessoa pode querer apontar para uma etapa específica.
 **Momento:** antes de desenhar o domínio Case. · *Event storming, hotspot 8*
-
-### P13 · A home não tem segunda oferta
-Uma ação principal só, por decisão. É intencional ou é lacuna?
-**Momento:** antes de desenhar a Home. · *Event storming, hotspot 4*
 
 ### P14 · Volta do protótipo
 A pessoa abre o protótipo em nova aba e volta. Trilha e rolagem preservadas?
@@ -99,11 +91,6 @@ serão públicos no site de qualquer forma; a questão é se antes dele existir.
 ### P17 · Não há Storybook
 A checagem de CI 1 e o campo `storybook.usa` se aplicam?
 **Momento:** primeira execução da skill do contrato.
-
-### P18 · Não há backend
-Confirmado sem backend. O `.api.md` e o papel de backend ficam inativos — a skill os
-mantém para os próximos produtos.
-**Momento:** resolvido em 18/09/2026.
 
 ### P19 · A checagem de CI 3 exige suíte de testes
 Depende da stack.

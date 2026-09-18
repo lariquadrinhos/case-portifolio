@@ -209,6 +209,9 @@ mobile.**
 
 - **A trilha lateral não cabe.** Vira faixa fina de progresso abaixo da barra do topo,
   tocável para abrir a lista completa de etapas
+- **A tira de destaques empilha.** Ela fica no topo do case, abaixo do título e da frase de
+  abertura, e é o elemento mais escaneável da página — para quem faz triagem rápida, pode
+  ser o mais útil da tela inteira
 - **A barra do topo** decide o que fica visível e o que vai para menu, sem espremer a
   ponto de matar a legibilidade que é o ponto dela. Mínimo visível: nome e Trabalhos
 - **Imagem de desktop em tela de celular.** Os dois cases pedem tratamentos diferentes.
@@ -236,6 +239,26 @@ gradiente, sem ornamento.
   nenhum outro. Se a cor sair e a tela continuar dizendo a mesma coisa, ela não deveria
   estar lá
 - **Cor não julga.** Nada é vermelho por ser ruim nem verde por ser bom
+
+### Regras de uso, que não são valores
+
+- **Bloco colorido é pontuação, não estilo de parágrafo.** Serve para a frase que sustenta
+  o capítulo — **uma por capítulo, no máximo.** Texto corrido sobre cor cansa e anula o efeito.
+- **O marca-texto é da hero.** Faixa de tom pálido atrás de parte do título, **uma vez por
+  página** e só onde há título grande. Fora da hero, não existe.
+- **Tom pálido é superfície, tom forte é detalhe gráfico.** O pálido recebe texto escuro e
+  é fundo de bloco, card ou marca-texto. O forte é marcador, ícone, linha, botão — e nunca
+  é fundo de parágrafo.
+- **Todo elemento interativo tem foco visível**, no tom forte do acento da página. Não é
+  acabamento: é o que torna o site navegável por teclado, e foi exatamente o que uma
+  auditoria pegou no case de Finanças.
+- **Medida de linha entre 65 e 75 caracteres** no texto corrido. **É o número que governa a
+  largura da coluna de texto, não o contrário.**
+- **Grade de 12 colunas** em desktop. Na leitura do case a trilha ocupa as duas primeiras
+  colunas, o título as três seguintes e o texto as cinco últimas — **título ao lado do
+  texto, não acima dele.**
+- **Nenhuma medida fora da escala.** Espaço só sai da coleção de espaço. Valor escolhido
+  caso a caso é o começo do fim do ritmo.
 
 **Uma cor por case**, atribuída uma vez e nunca escolhida no momento de montar a página:
 Finanças azul, Reembolso laranja, sistema roxo. Verde e rosa reservados para um terceiro
