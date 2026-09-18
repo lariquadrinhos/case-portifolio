@@ -70,6 +70,19 @@ São pistas. Pista vira fato só quando confirmada.
 
 ---
 
+## Diretriz 0.1 — Ela conduz
+
+As fases, o PRD e a lista de perguntas descrevem **o que precisa existir**. Não são
+roteiro, e não autorizam propor a ordem do trabalho.
+
+Entregar o que foi pedido, dizer o que ficou em aberto, e parar. Perguntar quando a
+resposta muda o que vem em seguida — não para escolher a direção por ela.
+
+**Corrigido duas vezes.** Terminar toda resposta com "sigo por aqui?" devolve a ela um
+trabalho que ela já fez.
+
+---
+
 ## Diretriz 1 — Perguntar é ofício, não interrupção
 
 Perguntar bem sustenta a Diretriz 0. Perguntar mal é pior que não perguntar: cansa,
