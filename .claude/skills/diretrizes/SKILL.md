@@ -449,6 +449,10 @@ que foi assumido. Atualizar o registro. Commitar.
 - Spec Kit v1.0.8 instalado, integração Claude; `constitution.md` ainda em branco
 - `docs/` criado com `prd/`, `adr/`, `specs/` (Diretriz 9)
 - **PRD escrito** em `docs/prd/01-portfolio.md`, derivado das definições
+- **Cargo: UX Designer.** Frase da home: *"Se existe uma forma melhor de fazer, eu quero
+  descobrir qual é."* Ambos de `quem-sou-eu.md`, texto marcado como final
+- Seis arquivos dela entraram no repositório público pelo mesmo `git add -A`: os três
+  textos do site e três briefings de skill. Só as definições foram movidas para `_privado/`
 - Materiais de referência trazidos por ela: guia de campo do Fable, A Arte de Fazer
   Perguntas (8 Diálogos), Loop Engineering (Addy Osmani), PRD (PM3), Artifacts no Claude
   Code, Spec-Driven Development com Spec Kit (EPAM)
@@ -479,7 +483,6 @@ coincidem** e não foram conciliadas:
 
 Travam a Fase 1, segundo o próprio documento de definições:
 
-- `[?: a frase da home]`
 - `[?: stack e hospedagem, com alternativa e motivo]`
 - `[?: como o conteúdo em texto vira página]`
 - `[?: como a estrutura recebe um segundo idioma sem ser refeita]`
@@ -488,7 +491,7 @@ Travam a Fase 1, segundo o próprio documento de definições:
 
 Ausentes do documento de definições:
 
-- `[?: o nome dela e o cargo que aparecem na home e na barra — o documento nunca os nomeia]`
+- `[?: o nome que aparece na home e na barra]` — o cargo está resolvido
 - `[?: qual domínio, já que "domínio próprio" é critério de liberação]`
 - `[?: por que "case" no nome do repositório]`
 - `[?: o que significa a pasta "dente"]`
@@ -497,8 +500,8 @@ Ausentes do documento de definições:
 
 ### Pistas não confirmadas — **não tratar como fato**
 
-- Ela trabalha com design de produto — deduzido dos cases e do público, **nunca afirmado**.
-  O documento não diz o cargo dela em lugar nenhum.
+- ~~Cargo deduzido~~ — **confirmado na fonte: UX Designer**, em `quem-sou-eu.md`.
+  Veio da Engenharia Bioquímica.
 - Usuário do GitHub é `lariquadrinhos`. Não confirma nome nem área.
 - Pasta `dente`. Significado desconhecido.
 - E-mail da conta é `tesouraet@gmail.com`. Não confirma que seja o contato do site.
