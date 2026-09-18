@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **13 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **14 perguntas**, nenhuma travando
 
 ---
 
@@ -23,6 +23,14 @@ Nenhuma.
 **Opções:** transcrição manual · exportar as variáveis para um arquivo e gerar o CSS dele ·
 ler da API na construção.
 **Momento:** depois da Fase 2, quando o design system existir no Figma. Não bloqueia a P05.
+
+### P26 · Escolha manual de tema × mudança da preferência do sistema
+O leitor escolhe um tema no site e, depois, muda a preferência do sistema operacional.
+Qual ganha?
+**Opções:** a escolha manual continua valendo até ser trocada de novo, que é o padrão mais
+comum · a preferência do sistema volta a mandar · o controle ganha uma terceira posição,
+"seguir o sistema", que devolve o automático.
+**Momento:** antes de desenhar o controle de tema. · *Contrato, `tema/`*
 
 ### P22 · O bloco "O Produto", no case de Finanças
 Título sem marcador de trilha, depois do último capítulo. É subseção do último capítulo,

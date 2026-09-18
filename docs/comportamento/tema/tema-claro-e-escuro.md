@@ -87,7 +87,7 @@ Funcionalidade: Tema claro e escuro
   Cenário: O leitor muda a preferência do sistema depois de ter escolhido manualmente
     Dado que o leitor escolheu um tema manualmente
     Quando ele muda a preferência do sistema operacional
-    Então A DEFINIR
+    Então A DEFINIR — ver pergunta P26
     # Opções: a escolha manual continua valendo até ser trocada de novo (padrão comum) ·
     # a preferência do sistema volta a mandar · existe uma terceira posição no controle,
     # "seguir o sistema", que devolve o automático.

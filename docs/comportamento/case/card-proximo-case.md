@@ -70,7 +70,7 @@ Funcionalidade: Card do próximo case
   Cenário: Um terceiro case é publicado
     Dado que existem três cases
     Quando o leitor alcança o fim de um deles
-    Então A DEFINIR — qual é o próximo
+    Então A DEFINIR — ver pergunta P21
     # A decisão de circular resolve dois cases sem exceção, mas não define a ordem
     # com três. Opções: ordem fixa do índice, com o último voltando ao primeiro ·
     # o case ainda não lido nesta sessão · o mais recente primeiro.
