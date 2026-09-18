@@ -423,5 +423,29 @@ compartilhado. Os dois estão no event storming, mas não são fluxo de navegaç
 tornaria o board ilegível sem acrescentar decisão.
 
 **Limitação a corrigir no Figma.** A trilha aparece como laço sobre o próprio case, porque
-é navegação interna e não transição entre páginas. É representação, não comportamento — o
-comportamento real está no contrato.
+é navegação interna e não transição entre páginas.
+
+### Volta 2 — refeito, porque não era um fluxo de usuário
+
+**Corrigi com**
+
+> https://www.figma.com/resource-library/user-flow/ le aqui pra você entender como fazer o fluxo de usuario e refaça
+
+**O que estava errado.** O que eu entreguei era um **sitemap com setas**: o sistema inteiro
+de uma vez, sem usuário definido, sem objetivo único, sem ponto de decisão e sem fim.
+
+**Conferi contra.** A biblioteca de recursos da Figma, que define fluxo de usuário como
+*"os passos que ele dá para completar uma tarefa específica"*, com **um objetivo por fluxo**,
+entrada, decisões e um fim que significa tarefa concluída — e avisa que fluxo com
+ramificação demais fica difícil de acompanhar.
+
+**Voltou.** Três fluxos, um por público, cada um com o seu objetivo: triagem em segundos ·
+avaliar profundidade · chegou por link, sem contexto.
+
+**A decisão de cor que a regra dela forçou.** Fluxo costuma pintar sucesso de verde e falha
+de vermelho. A regra dela é *"cor não julga — nada é vermelho por ser ruim nem verde por ser
+bom"*, e verde e rosa estão reservados para um terceiro case. Os fins são distinguidos por
+forma e por texto, nunca por cor.
+
+**O que isso ensinou.** Cada fluxo tem pelo menos um fim de fracasso. Um fluxo só com
+caminhos felizes não serve para achar obstáculo, que é para o que ele existe.
