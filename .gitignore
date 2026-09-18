@@ -1,0 +1,4 @@
+.DS_Store
+
+# Arquivos só para o Claude ler — nunca vão para o GitHub
+_privado/
