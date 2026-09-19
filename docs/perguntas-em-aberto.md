@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **17 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **16 perguntas**, nenhuma travando
 
 ---
 
@@ -61,12 +61,6 @@ A decisão 003 resolve dois cases sem exceção, mas não define a ordem com tr�
 **Opções:** ordem fixa do índice, com o último voltando ao primeiro · o case ainda não lido
 nesta sessão · o mais recente primeiro.
 **Momento:** antes de o terceiro case existir. · *Contrato, `case/card-proximo-case.md`*
-
-### P08 · Peça esperada ausente no arquivo de conteúdo
-Rótulo de trilha faltando, imagem inexistente, legenda ausente, PDF ainda não produzido.
-**Opções:** a construção falha · a página gera sem a peça e registra aviso · a falta vira
-lacuna visível na tela.
-**Momento:** antes de desenhar o domínio Conteúdo. · *Event storming, hotspot 1*
 
 ### P09 · Como a estrutura recebe um segundo idioma
 **O comportamento já está definido:** trocar de idioma mantém a pessoa na mesma página e na

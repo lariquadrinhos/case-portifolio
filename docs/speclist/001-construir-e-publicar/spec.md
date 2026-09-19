@@ -15,6 +15,12 @@
 > `docs/comportamento/`. Aqui está o que precisa ser construído para que aquele
 > comportamento exista — e nada do que já está escrito lá foi repetido.
 
+## Clarifications
+
+### Session 2026-09-19
+
+- Q: Quando a construção encontra uma peça que deveria existir e não existe, o que deve acontecer? (FR-011) → A: Os dois, por contexto — na construção local a lacuna aparece visível na tela; no caminho de publicação a construção recusa e nada sobe.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Uma página vazia no ar (Priority: P1)
@@ -86,8 +92,8 @@ nenhum comando local.
 ### Edge Cases
 
 - **Uma peça esperada não está no arquivo** — rótulo de trilha faltando, imagem referenciada
-  que não existe, legenda ausente, PDF do currículo ainda não produzido.
-  Ver FR-011.
+  que não existe, legenda ausente, PDF do currículo ainda não produzido. Localmente a página
+  gera com a falta visível; na publicação, nada sobe. Ver FR-011.
 - **Um marcador desconhecido aparece** num arquivo de conteúdo: a construção precisa dizer
   qual arquivo, qual linha e qual marcador, em vez de ignorar em silêncio.
 - **A construção falha** depois de o site já estar no ar: o que está publicado não pode ser
@@ -120,9 +126,10 @@ nenhum comando local.
 - **FR-009**: O tema MUST estar aplicado antes da primeira pintura, sem troca visível depois.
 - **FR-010**: Nenhum valor visual MUST ser escrito à mão no código. Todos vêm das quatro
   coleções de variáveis.
-- **FR-011**: Quando uma peça esperada faltar, a construção MUST
-  [NEEDS CLARIFICATION: falhar e não publicar · gerar sem a peça e registrar aviso · gerar
-  com a falta visível na tela — ver pergunta P08].
+- **FR-011**: Quando uma peça esperada faltar, a construção MUST se comportar por contexto:
+  na **construção local**, gerar a página com a falta **visível na tela**, nomeando a peça
+  que falta; no **caminho de publicação**, recusar e não publicar nada. A lacuna é vista por
+  quem trabalha e nunca por quem visita.
 - **FR-012**: A publicação MUST acontecer em
   [NEEDS CLARIFICATION: GitHub Pages com arquivo de automação · Cloudflare Pages, que
   constrói sozinho — ver pergunta P15].

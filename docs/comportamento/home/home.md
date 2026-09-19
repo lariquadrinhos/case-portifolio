@@ -92,10 +92,12 @@ Funcionalidade: Home
     Quando a pessoa aciona o caminho para Trabalhos
     Então o índice de trabalhos abre
 
-  @lacuna
   Cenário: Um dos quatro textos da home falta no arquivo
     Dado que o bloco da home não traz um dos quatro elementos
-    Então A DEFINIR — ver pergunta P08
+    Quando a construção acontece localmente
+    Então a página gera com a falta visível, nomeando o elemento
+    Quando a construção acontece no caminho de publicação
+    Então ela recusa e nada é publicado
 ```
 
 ## Transições

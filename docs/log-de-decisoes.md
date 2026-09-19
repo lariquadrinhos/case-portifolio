@@ -634,3 +634,31 @@ conteúdo seguem a convenção de marcadores.
 resolve (exige token pessoal do Figma), `Cenário:` tem teste (P19), `storybook.usa` (P17,
 não se aplica), e frame batendo com token de grade — que a decisão 021 mostrou não ser
 automatizável, porque a grade do Figma recusa vínculo com variável.
+
+---
+
+## 023 · Peça ausente: visível na construção local, bloqueante na publicação
+
+**Quando** 2026-09-19 · **Fase** 4 · **Domínio** conteudo · `#restricao`
+
+**Gatilho.** A clarificação da spec 001 pegou a pergunta mais antiga ainda aberta: o que a
+construção faz quando uma peça esperada não está no arquivo — rótulo de trilha, imagem,
+legenda, currículo.
+
+**Decisão.** Os dois comportamentos, por contexto. Na **construção local**, a página gera
+com a falta **visível na tela**, nomeando a peça. No **caminho de publicação**, a construção
+recusa e nada sobe. A lacuna é vista por quem trabalha e nunca por quem visita.
+
+**Alternativa descartada.** Três, e cada uma escolhia um lado perdendo o outro. *Falhar
+sempre* — seguro para o site, mas uma legenda por escrever impediria qualquer
+pré-visualização. *Gerar com aviso em log* — o site nunca trava, mas o aviso é ignorável e
+a página quebrada vai ao ar; é falha silenciosa, que este projeto trata como o pior tipo.
+*Lacuna visível sempre* — impossível de ignorar, inclusive para quem visita.
+
+**Custo aceito.** A construção passa a ter dois modos, e alguém pode publicar achando que
+está em modo local. O modo precisa ser evidente na saída, não inferido.
+
+**Consequência.** FR-011 fechado. **Quatro contratos tinham `@lacuna` apontando para esta
+pergunta** — conteúdo, home, trabalhos e quem sou eu — e os quatro viraram cenário real.
+É a Diretriz 0 aplicada à construção: a lacuna é marcada, nunca preenchida, e nunca
+publicada em silêncio.

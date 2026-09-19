@@ -92,13 +92,12 @@ Funcionalidade: Um arquivo de texto vira página
     Então a imagem aparece com sua legenda
     E o texto alternativo da imagem é preservado
 
-  @lacuna
-  Cenário: Peça esperada não está no arquivo
-    Dado que uma peça esperada falta — rótulo de trilha, legenda, imagem, link
-    Quando a construção acontece
-    Então A DEFINIR — ver pergunta P08
-    # Opções: a construção falha e o site não publica · a página gera sem a peça e
-    # registra aviso · a falta vira lacuna visível na tela.
+  Cenário: Uma peça esperada não está no arquivo
+    Dado que uma peça esperada falta
+    Quando a construção acontece localmente
+    Então a página gera com a falta visível na tela, nomeando a peça
+    Quando a construção acontece no caminho de publicação
+    Então ela recusa e nada é publicado
 
   @lacuna
   Cenário: Bloco "O Produto" do case de Finanças

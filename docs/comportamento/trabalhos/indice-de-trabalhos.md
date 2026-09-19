@@ -70,10 +70,12 @@ Funcionalidade: Índice de trabalhos
     E o card de Reembolso SulAmérica aparece em seguida
     E a ordem não é derivada de data de publicação
 
-  @lacuna
   Cenário: A imagem de capa não existe
     Dado que o arquivo de capa de um case não foi produzido
-    Então A DEFINIR — ver pergunta P08
+    Quando a construção acontece localmente
+    Então o card gera com a falta visível no lugar da capa
+    Quando a construção acontece no caminho de publicação
+    Então ela recusa e nada é publicado
 ```
 
 ## Transições

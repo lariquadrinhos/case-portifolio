@@ -63,10 +63,12 @@ Funcionalidade: Quem sou eu
     Então a página mostra a nova foto
     E nenhum código precisou ser alterado
 
-  @lacuna
   Cenário: O currículo ainda não foi produzido
     Dado que o PDF não existe
-    Então A DEFINIR — ver pergunta P08
+    Quando a construção acontece localmente
+    Então a página gera com a falta visível no lugar do currículo
+    Quando a construção acontece no caminho de publicação
+    Então ela recusa e nada é publicado
 ```
 
 ## Transições
