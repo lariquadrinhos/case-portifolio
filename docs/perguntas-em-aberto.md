@@ -38,6 +38,9 @@ valores citados existem.
 quebrando o ritmo da escala · o valor some do documento e a distância entre parágrafos passa
 a ser escolhida por contexto, contra a regra.
 **Momento:** antes de desenhar qualquer tela com texto corrido em vários parágrafos.
+**Relacionado:** a decisão 019 encontrou o mesmo padrão — valores escolhidos à mão (100, 30)
+que a escala não oferece. Se isso se repetir, a pergunta deixa de ser sobre o 28 e passa a
+ser se a escala tem passos demais ou de menos.
 
 ### P32 · O nome aparece duas vezes na home
 As definições dizem que a home tem "nome, cargo, uma frase e um parágrafo", e que a barra

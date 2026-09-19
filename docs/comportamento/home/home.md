@@ -29,6 +29,19 @@ querer ver os trabalhos.
   pensa, não por quem ela é — a identificação vem depois de a frase ter feito o trabalho,
   imediatamente antes da ação.
 - **O cargo aparece uma vez só**, na linha de identificação. O parágrafo não o repete.
+
+### Respiro
+
+- **A frase tem o mesmo respiro acima e abaixo.** A distância entre a barra e a frase é
+  igual à distância entre a frase e o parágrafo. É isso que faz a hero respirar sem que ela
+  fique deslocada para cima ou para baixo.
+- **Parágrafo, identificação e ação são igualmente espaçados entre si**, dentro de um bloco
+  próprio. O bloco se lê como uma unidade; a frase se lê sozinha.
+- Os dois valores saem da escala de espaço. Hoje: **96 e 32** em desktop, **64 e 24** em
+  tela estreita.
+
+O que a regra fixa é a **relação** — respiro igual em cima e embaixo, espaçamento uniforme
+dentro do bloco. Os números mudam com a largura; a relação não.
 - O marca-texto cobre parte do título, **uma vez por página**, no acento de sistema.
   Fora da hero não existe.
 - **O destaque é de sentido, não de ritmo.** Ele cobre um trecho que fecha uma ideia, e a

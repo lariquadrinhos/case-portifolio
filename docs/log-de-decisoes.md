@@ -503,3 +503,35 @@ correspondente. O parágrafo foi reescrito para não repetir o cargo: *"Sou UX D
 curiosa por natureza e apaixonada..."* virou *"Sou curiosa e apaixonada..."*, e
 `quem-sou-eu.md` foi sincronizado — **a mudança tinha sido feita só no Figma, e o arquivo
 de texto é a fonte.**
+
+---
+
+## 019 · O respiro da hero é uma relação, não um valor
+
+**Quando** 2026-09-19 · **Fase** 3 · **Domínio** home · `#restricao`
+
+**Gatilho.** Larissa ajustou o respiro do frame à mão e depois explicou a intenção: hero
+com bastante ar, **com o mesmo respiro entre a barra e a frase e entre a frase e o
+parágrafo**, e os três elementos do bloco de apresentação igualmente espaçados entre si.
+Os valores que ela usou — 100 e 30 — não existem na coleção de espaço.
+
+**Decisão.** A regra fixa a **relação**, não o número: respiro igual acima e abaixo da
+frase, espaçamento uniforme dentro do bloco de apresentação. Os valores saem da escala e
+mudam com a largura — hoje 96 e 32 em desktop, 64 e 24 em tela estreita.
+
+**Alternativa descartada.** Duas. *Acrescentar `space/100` e `space/30` à coleção*, para
+que os valores manuais virassem tokens — perdeu porque quebraria o ritmo da escala, que
+progride por volta de 1,5× e não comporta 100 entre 96 e 128. E *deixar como estava*, com
+medidas fora da escala — perdeu contra a regra dela de que espaço só sai de `space/*`.
+
+**Custo aceito.** Quatro pixels a menos de respiro que ela tinha escolhido à mão, e dois a
+mais entre os elementos do bloco. Diferença imperceptível; se não for, a escala é que
+precisa de decisão, não o frame.
+
+**Consequência.** As duas larguras passam a seguir a regra. A tela estreita foi
+reestruturada para a mesma ordem do desktop, que ainda não tinha recebido a decisão 018, e
+o texto do parágrafo foi sincronizado — **ele estava desatualizado lá também.**
+
+**A observação dela é o ponto.** Ajuste manual não se reproduz na próxima tela; regra se
+reproduz. Foi ela quem disse: *"talvez eu devia ter explicado o que eu queria ao invés de
+fazer manualmente"*. É exatamente para isso que o contrato existe.
