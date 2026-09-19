@@ -421,3 +421,55 @@ limite de 75. Corrigido para **628px**, que são seis colunas da grade de doze e
 caracteres. **A grade e a medida coincidem em seis colunas**, o que torna a regra
 verificável sem contar caractere: se o texto corrido ocupa metade da grade, a medida está
 certa.
+
+---
+
+## 016 · A medida em tela estreita é de 34 a 45 caracteres, não de 35 a 45
+
+**Quando** 2026-09-19 · **Fase** 3 · **Domínio** — · `#reversao` `#restricao`
+
+**Reverte parcialmente a entrada 015.**
+
+**Gatilho.** A 015 fixou a faixa de tela estreita em 35 a 45 caracteres, calculada sobre um
+corpo de 18px que eu havia **suposto**. A leitura das variáveis mostrou os valores reais do
+modo `Tela pequena`, e o parágrafo da home usa `abertura`, que ali vale 20/32 — não 18/30.
+
+**Decisão.** A faixa passa a ser **34 a 45 caracteres**, e deixa de ser arbitrada: ela é o
+resultado da escala estreita aplicada aos 327px de coluna. `abertura` a 20px dá 34
+caracteres; `corpo` a 18px dá 38; `apoio` a 15px dá 45. **Os extremos da faixa são os
+extremos da própria escala** — não há número escolhido à mão.
+
+**Alternativa descartada.** Manter 35 e usar `corpo` em vez de `abertura` no parágrafo da
+home, o que daria 38 e caberia na faixa antiga. Perdeu porque trocaria o nível tipográfico
+para salvar um número: no desktop o parágrafo é `abertura`, e mudar de nível só em tela
+estreita quebraria a correspondência entre as duas larguras.
+
+**Custo aceito.** Nenhum além de uma entrada de reversão logo depois da original.
+
+**Consequência.** Definições e PRD atualizados. O wireframe estreito foi refeito com os
+valores reais.
+
+---
+
+## 017 · O PRD deixa de repetir as regras de uso e passa a apontar para as definições
+
+**Quando** 2026-09-19 · **Fase** 3 · **Domínio** — · `#recusa-de-ia`
+
+**Gatilho.** Larissa perguntou onde as regras estavam sendo registradas. A conferência
+mostrou que as regras visuais existiam **nos dois** arquivos: definições e PRD. Cinco
+testadas, cinco duplicadas.
+
+**Decisão.** As definições são a fonte das regras de uso. O PRD guarda direção de produto —
+contenção, a trilha como único elemento gráfico, a riqueza vindo das imagens, cor como
+exceção, uma cor por case — e **aponta** para as definições no resto.
+
+**Alternativa descartada.** Manter a repetição e assumir o compromisso de atualizar os dois
+a cada mudança. Perdeu porque foi exatamente o que falhou: a regra da medida de linha
+mudou na 015 e eu precisei editar dois arquivos, o que é a definição do problema.
+
+**Custo aceito.** O PRD fica mais magro, e o ponteiro só resolve para quem tem acesso às
+definições — que hoje estão em `_privado/`. Isso amarra a leitura do PRD à pergunta P16,
+sobre o que fica público.
+
+**Consequência.** Duplicação desfeita. **Erro meu, criado ao escrever o PRD e agravado na
+revisão**, quando acrescentei sete regras que já existiam na fonte.

@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **18 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **17 perguntas**, nenhuma travando
 
 ---
 
@@ -28,13 +28,6 @@ ler da API na construção.
 Onde ele vive está decidido (011): no contrato da tela. O texto em si é rascunho meu e
 precisa da voz dela.
 **Momento:** antes de desenhar a página de erro. · *Contrato, `erro/`*
-
-### P34 · Os valores da escala tipográfica em tela pequena
-O modo "Tela pequena" existe na coleção de Tipografia, mas os valores não foram lidos — o
-MCP exige seleção no app para ler variáveis. O wireframe estreito usa **40/40 no display**,
-escolhido por medição: é o maior tamanho em que a quebra de quatro linhas cabe em 327px.
-É valor provisório e precisa ser conferido contra a variável.
-**Momento:** antes do mockup da primeira tela.
 
 ### P32 · O nome aparece duas vezes na home
 As definições dizem que a home tem "nome, cargo, uma frase e um parágrafo", e que a barra

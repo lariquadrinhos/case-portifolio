@@ -240,26 +240,15 @@ gradiente, sem ornamento.
   estar lá
 - **Cor não julga.** Nada é vermelho por ser ruim nem verde por ser bom
 
-### Regras de uso, que não são valores
+### As regras de uso não moram aqui
 
-- **Bloco colorido é pontuação, não estilo de parágrafo.** Serve para a frase que sustenta
-  o capítulo — **uma por capítulo, no máximo.** Texto corrido sobre cor cansa e anula o efeito.
-- **O marca-texto é da hero.** Faixa de tom pálido atrás de parte do título, **uma vez por
-  página** e só onde há título grande. Fora da hero, não existe.
-- **Tom pálido é superfície, tom forte é detalhe gráfico.** O pálido recebe texto escuro e
-  é fundo de bloco, card ou marca-texto. O forte é marcador, ícone, linha, botão — e nunca
-  é fundo de parágrafo.
-- **Todo elemento interativo tem foco visível**, no tom forte do acento da página. Não é
-  acabamento: é o que torna o site navegável por teclado, e foi exatamente o que uma
-  auditoria pegou no case de Finanças.
-- **Medida de linha entre 65 e 75 caracteres onde houver largura para isso.** Aí é o número
-  que governa a largura da coluna, não o contrário — e nunca passa de 75. **Em tela estreita
-  quem governa é a margem**, que não desce de 24, e a medida cai entre 35 e 45 caracteres.
-- **Grade de 12 colunas** em desktop. Na leitura do case a trilha ocupa as duas primeiras
-  colunas, o título as três seguintes e o texto as cinco últimas — **título ao lado do
-  texto, não acima dele.**
-- **Nenhuma medida fora da escala.** Espaço só sai da coleção de espaço. Valor escolhido
-  caso a caso é o começo do fim do ritmo.
+Bloco colorido como pontuação, o marca-texto uma vez por página, tom pálido como superfície
+e tom forte como detalhe, foco visível no acento da página, medida de linha, grade de doze
+colunas, escala de espaço: **tudo isso vive no documento de definições**, que é a fonte.
+
+Repeti-las aqui criaria a segunda fonte de verdade que o projeto existe para evitar — e foi
+exatamente o que aconteceu até 19/09/2026, quando a duplicação foi encontrada e desfeita
+(decisão 017).
 
 **Uma cor por case**, atribuída uma vez e nunca escolhida no momento de montar a página:
 Finanças azul, Reembolso laranja, sistema roxo. Verde e rosa reservados para um terceiro
