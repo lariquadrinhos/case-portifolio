@@ -3,7 +3,7 @@ fluxo: home/home
 dominio: home
 dono: design
 status: rascunho
-atualizado: 2026-09-18
+atualizado: 2026-09-19
 
 figma:
   file: hwClE9Xpm51OW4vPsCCn8J
@@ -18,7 +18,8 @@ querer ver os trabalhos.
 
 ## Regras
 
-- O caminho para Trabalhos é **o elemento mais evidente da tela**.
+- O caminho para Trabalhos é **o elemento mais evidente da tela**, rotulado
+  **Ver os meus trabalhos**.
 - **Uma ação principal só.** A home não repete o contato como botão: a barra é fixa, então
   o contato já está visível no topo. Duplicar divide a atenção no único momento em que o
   site quer uma direção só.
@@ -31,6 +32,17 @@ querer ver os trabalhos.
 
 **Por que o frame 37:88 não vale como referência:** ele é demonstração, tem dois botões e
 diz `UX/UI Designer`. Demonstração não vira regra por estar desenhada.
+
+## Texto
+
+Copy de interface, que por decisão 011 vive aqui e não nos arquivos de conteúdo:
+
+| Peça | Texto |
+|---|---|
+| Ação principal | **Ver os meus trabalhos** |
+
+Nome, cargo, frase e parágrafo **não** estão aqui: são conteúdo autoral e vêm de
+`quem-sou-eu.md`, sob `<!-- bloco: home -->`.
 
 ## Peças
 
@@ -48,7 +60,8 @@ Funcionalidade: Home
   Cenário: Quem faz triagem abre a home
     Quando a home abre
     Então o nome, o cargo, a frase de abertura e o parágrafo aparecem
-    E o caminho para Trabalhos é o elemento mais evidente da tela
+    E o caminho para Trabalhos aparece rotulado "Ver os meus trabalhos"
+    E ele é o elemento mais evidente da tela
     E não há segunda ação principal competindo com ele
 
   Cenário: A pessoa segue para os trabalhos
