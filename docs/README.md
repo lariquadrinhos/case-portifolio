@@ -12,6 +12,9 @@
 | [`log-de-decisoes.md`](log-de-decisoes.md) | o que aconteceu, em que ordem, e o que perdeu | **nada** |
 | `loop-produto-playbook.md` | como o trabalho foi conduzido, com os prompts | — |
 
+**Verificação:** `node scripts/checagens.mjs` confere estrutura dos contratos, lacunas
+apontando para perguntas existentes, tokens citados e a convenção dos arquivos de conteúdo.
+
 **Hierarquia:** definições → contrato → código. O log é memória, não fonte — nunca resolva
 dúvida de implementação lendo o log.
 

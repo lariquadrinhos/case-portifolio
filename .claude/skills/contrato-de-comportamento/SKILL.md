@@ -332,7 +332,9 @@ imagem da tela ao lado, as regras em português, como o fluxo termina, as varian
 1. A estrutura de pastas `docs/comportamento/`
 2. O `README.md` explicando como escrever
 3. O `_template.md` com o esqueleto completo e comentado
-4. O script das quatro checagens de CI
+4. O script das checagens — `scripts/checagens.mjs`. **As que não puderem rodar ainda
+   ficam declaradas na saída, com o motivo e a pergunta correspondente**, nunca omitidas:
+   checagem ausente e checagem impossível parecem iguais quando as duas somem
 5. **O primeiro contrato real, de uma tela que já existe** — porque o teste de escrita é
    esse: se for penoso para o designer, o formato está errado, não a pessoa
 

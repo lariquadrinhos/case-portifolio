@@ -602,3 +602,35 @@ três. `colunas` em tela pequena vale **1** — isso descreve o que existe hoje,
 única entre margens, e não uma decisão de grade estreita, que ninguém tomou. A grade foi
 aplicada aos dois frames. Pede uma checagem nova: **todo frame bate com o token do seu
 modo** — hoje ninguém verifica isso.
+
+---
+
+## 022 · As checagens são escritas em Node, sem dependência nenhuma
+
+**Quando** 2026-09-19 · **Fase** 3 · **Domínio** — · `#restricao`
+
+**Gatilho.** O script das quatro checagens era a última entrega pendente da primeira
+execução da skill do contrato, e escrevê-lo obriga a escolher uma linguagem — a primeira
+coisa do projeto a fazer isso.
+
+**Decisão.** Node, sem dependência nenhuma. `scripts/checagens.mjs`, executável com
+`node scripts/checagens.mjs`.
+
+**Alternativa descartada.** Python, que está disponível na máquina e é mais curto para
+manipular texto. Perdeu porque a construção do site será a mesma linguagem, e ter duas
+linguagens num projeto de cinco páginas é custo sem ganho — a decisão 009 já disse que a
+construção é nossa, e o ecossistema de site estático é Node.
+
+**Custo aceito.** A escolha da linguagem de construção foi feita aqui, por um script
+auxiliar, em vez de na decisão que tratava de stack. Fica registrado que foi assim, e não
+por análise do que a construção precisa.
+
+**Consequência.** Das quatro checagens do briefing, **duas rodam hoje** — estrutura do
+contrato, e toda `@lacuna` apontando para pergunta que existe. Uma passa por vacuidade:
+nenhum contrato cita token ainda. Uma quarta foi acrescentada por mim: os arquivos de
+conteúdo seguem a convenção de marcadores.
+
+**As quatro bloqueadas estão declaradas na saída do script**, não omitidas: `figma.tela`
+resolve (exige token pessoal do Figma), `Cenário:` tem teste (P19), `storybook.usa` (P17,
+não se aplica), e frame batendo com token de grade — que a decisão 021 mostrou não ser
+automatizável, porque a grade do Figma recusa vínculo com variável.
