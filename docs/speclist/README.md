@@ -13,4 +13,6 @@ Saída do Spec Kit: uma pasta por funcionalidade, com `spec.md`, `plan.md` e `ta
 Uma spec **consome** o contrato de comportamento; nunca o substitui. O contrato é verdade
 sobre o produto, a spec é plano de trabalho.
 
-Vazio significa que nenhuma funcionalidade entrou em construção ainda.
+| Spec | Estado |
+|---|---|
+| [`001-construir-e-publicar`](001-construir-e-publicar/) | Rascunho · 3 clarificações pendentes (P07, P08, P15) |

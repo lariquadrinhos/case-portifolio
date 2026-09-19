@@ -565,3 +565,33 @@ lacuna é marcada, nunca preenchida.
 
 **Ainda provisório.** O display de 40 foi escolhido por caber, não por vir da variável —
 o modo "Tela pequena" existe na coleção mas não foi lido. Registrado na P34.
+
+---
+
+## Trecho 13 · A primeira spec
+
+**Para que serve.** Transformar o que está contratado em plano de trabalho.
+**Antes de começar, precisa existir:** os contratos, a constituição e o script das checagens.
+
+**Pedido**
+
+> roda o /speckit-specify agora
+
+**Voltou.** O fluxo parou na mesma etapa 1 da primeira tentativa — *"If empty: ERROR"* —
+mas dessa vez com candidatos reais em vez de pergunta em branco.
+
+**O que a preparação descobriu, e que decidiu a escolha.** Para qualquer coisa em formato de
+tela, **a spec duplicaria o contrato**: o template pede cenários, requisitos funcionais e
+critérios de sucesso, e o contrato da Home já tem os três, em Gherkin. **A spec só
+acrescenta onde não há tela.** Isso eliminou a Home e deixou a construção e a publicação.
+
+**Conferi contra.** A constituição, carregada como o fluxo manda, e os nove contratos — para
+não reescrever nenhuma regra que já existisse neles.
+
+**Terminou quando.** `docs/speclist/001-construir-e-publicar/` existe, com três marcadores
+de clarificação apontando para P07, P08 e P15 — no limite de três que o fluxo permite, e
+nenhum deles inventado para preencher.
+
+**O que costuma dar errado.** Preencher os campos do template porque eles existem. Três
+seções da spec só têm conteúdo porque havia decisão registrada para colocar nelas; as
+Assumptions citam as decisões 009 e 022 por número, justamente para o plano não reabri-las.
