@@ -390,3 +390,34 @@ constituição declara essa divisão no topo, mas depender de alguém ler é cus
 emenda futura passa a exigir entrada no log com a alternativa descartada. A seção
 "Constituição técnica" das `diretrizes`, que estava vazia de propósito, passa a apontar
 para cá.
+
+---
+
+## 015 · A medida de linha vale onde há largura; em tela estreita quem governa é a margem
+
+**Quando** 2026-09-19 · **Fase** 3 · **Domínio** — · `#restricao`
+
+**Gatilho.** O wireframe da home em 375px expôs que a regra *"medida de linha entre 65 e 75
+caracteres — é o número que governa a largura da coluna, não o contrário"* não pode ser
+cumprida em tela estreita.
+
+**Decisão.** A regra passa a ser escopada. Onde a largura permite, a medida governa a coluna
+e nunca passa de 75. **Em tela estreita quem governa é a margem**, que não desce de 24, e a
+medida resultante fica entre 35 e 45 caracteres — faixa confortável para leitura em tela
+estreita.
+
+**Alternativa descartada.** Duas, e as duas caíram por aritmética, não por preferência.
+*Encolher a margem para ganhar caracteres:* em 375px com **margem zero**, DM Sans a 18px
+cabe **44 caracteres** — 21 a menos que o alvo. Nenhuma margem alcança 65. *Encolher o
+corpo:* para 65 caracteres em 327px o corpo precisaria de cerca de **10px**, abaixo de
+qualquer piso de legibilidade e contra a regra de que corpo e apoio não encolhem.
+
+**Custo aceito.** A regra deixa de ser uma frase e passa a ter duas metades, uma por
+contexto. Quem ler só a primeira vai achar que o celular está errado.
+
+**Consequência.** Definições e PRD alterados. A medição também encontrou o erro inverso no
+desktop: o parágrafo do wireframe estava em 720px, o que dá **82 caracteres** — acima do
+limite de 75. Corrigido para **628px**, que são seis colunas da grade de doze e dão 72
+caracteres. **A grade e a medida coincidem em seis colunas**, o que torna a regra
+verificável sem contar caractere: se o texto corrido ocupa metade da grade, a medida está
+certa.

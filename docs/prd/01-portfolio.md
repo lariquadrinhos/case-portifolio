@@ -252,8 +252,9 @@ gradiente, sem ornamento.
 - **Todo elemento interativo tem foco visível**, no tom forte do acento da página. Não é
   acabamento: é o que torna o site navegável por teclado, e foi exatamente o que uma
   auditoria pegou no case de Finanças.
-- **Medida de linha entre 65 e 75 caracteres** no texto corrido. **É o número que governa a
-  largura da coluna de texto, não o contrário.**
+- **Medida de linha entre 65 e 75 caracteres onde houver largura para isso.** Aí é o número
+  que governa a largura da coluna, não o contrário — e nunca passa de 75. **Em tela estreita
+  quem governa é a margem**, que não desce de 24, e a medida cai entre 35 e 45 caracteres.
 - **Grade de 12 colunas** em desktop. Na leitura do case a trilha ocupa as duas primeiras
   colunas, o título as três seguintes e o texto as cinco últimas — **título ao lado do
   texto, não acima dele.**
