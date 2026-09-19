@@ -25,6 +25,10 @@ querer ver os trabalhos.
   site quer uma direção só.
 - Os quatro textos vêm de `quem-sou-eu.md`, sob `<!-- bloco: home -->`: nome
   **Larissa Quadros**, cargo **UX Designer**, a frase de abertura e o parágrafo.
+- **A ordem na tela é: frase, parágrafo, nome e cargo, ação.** A página abre pelo que ela
+  pensa, não por quem ela é — a identificação vem depois de a frase ter feito o trabalho,
+  imediatamente antes da ação.
+- **O cargo aparece uma vez só**, na linha de identificação. O parágrafo não o repete.
 - O marca-texto cobre parte do título, **uma vez por página**, no acento de sistema.
   Fora da hero não existe.
 - **O destaque é de sentido, não de ritmo.** Ele cobre um trecho que fecha uma ideia, e a
@@ -63,8 +67,10 @@ Funcionalidade: Home
 
   Cenário: Quem faz triagem abre a home
     Quando a home abre
-    Então o nome, o cargo, a frase de abertura e o parágrafo aparecem
-    E o caminho para Trabalhos aparece rotulado "Ver os meus trabalhos"
+    Então a frase de abertura aparece primeiro
+    E o parágrafo aparece abaixo dela
+    E o nome e o cargo aparecem depois do parágrafo
+    E o caminho para Trabalhos aparece por último, rotulado "Ver os meus trabalhos"
     E ele é o elemento mais evidente da tela
     E não há segunda ação principal competindo com ele
 

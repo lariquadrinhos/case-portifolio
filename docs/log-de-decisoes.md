@@ -473,3 +473,33 @@ sobre o que fica público.
 
 **Consequência.** Duplicação desfeita. **Erro meu, criado ao escrever o PRD e agravado na
 revisão**, quando acrescentei sete regras que já existiam na fonte.
+
+---
+
+## 018 · A home abre pela frase; nome e cargo vêm depois do parágrafo
+
+**Quando** 2026-09-19 · **Fase** 3 · **Domínio** home · `#reversao`
+
+**Reverte a ordem implícita no wireframe original**, que vinha da leitura literal de
+"nome, cargo, uma frase e um parágrafo" como sequência.
+
+**Gatilho.** Larissa reorganizou o frame à mão. A linha de identificação, que estava acima
+do título, desceu para logo abaixo do parágrafo, imediatamente antes da ação.
+
+**Decisão.** A ordem na tela é **frase → parágrafo → nome e cargo → ação**. A página abre
+pelo que ela pensa, não por quem ela é: a identificação chega depois de a frase ter feito
+o trabalho, e encosta na ação.
+
+**Alternativa descartada.** Abrir pela identificação, que era o wireframe anterior. Perdeu
+porque para quem faz triagem em segundos o gancho é a frase, não o nome — o nome já está
+na barra, e repeti-lo no topo gastava a primeira linha de atenção com um dado que não
+convence ninguém a continuar.
+
+**Custo aceito.** A lista das definições — "nome, cargo, uma frase e um parágrafo" — deixa
+de ser lida como ordem. Quem ler o documento sem ver a tela vai supor a sequência errada.
+
+**Consequência.** Contrato da home atualizado com a ordem e com o cenário em Gherkin
+correspondente. O parágrafo foi reescrito para não repetir o cargo: *"Sou UX Designer,
+curiosa por natureza e apaixonada..."* virou *"Sou curiosa e apaixonada..."*, e
+`quem-sou-eu.md` foi sincronizado — **a mudança tinha sido feita só no Figma, e o arquivo
+de texto é a fonte.**

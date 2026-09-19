@@ -14,7 +14,7 @@ Textos finais selecionados para o portfólio.
 
 ### Se existe uma forma melhor de fazer, eu quero descobrir qual é.
 
-Sou UX Designer, curiosa por natureza e apaixonada por entender como as coisas funcionam. Gosto de fazer perguntas, desmontar complexidades e encontrar aquela solução simples que, depois de pronta, parece que sempre deveria ter sido assim.
+Sou curiosa e apaixonada por entender como as coisas funcionam. Gosto de fazer perguntas, desmontar complexidades e encontrar aquela solução simples que, depois de pronta, parece que sempre deveria ter sido assim.
 
 ---
 
