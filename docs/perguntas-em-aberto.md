@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **17 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **18 perguntas**, nenhuma travando
 
 ---
 
@@ -28,6 +28,20 @@ ler da API na construção.
 Onde ele vive está decidido (011): no contrato da tela. O texto em si é rascunho meu e
 precisa da voz dela.
 **Momento:** antes de desenhar a página de erro. · *Contrato, `erro/`*
+
+### P36 · A coleção não modela a grade
+A auditoria dos dois frames contra `Espaço e forma` deixou uma só medida fora da escala: a
+**margem de 80** da barra. Ela fica a 16 de `space/64` e a 16 de `space/96` — equidistante,
+e um passo inteiro de cada lado, que é o sinal que a decisão 020 declarou como "a escala
+precisa de decisão, não o frame".
+O diagnóstico é mais específico: **nenhum valor de grade é token.** Nem a margem de 80, nem
+as 12 colunas, nem a calha de 24. A grade é um sistema à parte que ninguém tokenizou.
+**Opções:** a coleção ganha `grade/margem`, `grade/colunas` e `grade/calha`, e a grade passa
+a mudar num lugar só · a grade fica declarada só nas definições, e a regra de espaço passa a
+dizer explicitamente que não alcança valores de grade · a margem muda para 64 ou 96 para
+caber na escala, o que reconstrói o layout inteiro.
+**Momento:** antes de desenhar a segunda tela — a partir da terceira, mudar a grade vira
+trabalho manual em muitos frames.
 
 ### P32 · O nome aparece duas vezes na home
 As definições dizem que a home tem "nome, cargo, uma frase e um parágrafo", e que a barra
