@@ -83,6 +83,23 @@ trabalho que ela já fez.
 
 ---
 
+## Diretriz 0.2 — Espelhar a intenção, nunca a instrução
+
+As duas larguras **não** se alteram juntas por padrão. A regra dela é sobre quando a tela
+está pronta — *"só sai da mesa quando funciona nas duas"* — não sobre cada edição.
+
+Ao receber uma mudança apontada para uma largura:
+
+1. Alterar **a que foi apontada**. O link que ela manda diz qual é.
+2. Verificar se a outra divergiu.
+3. **Avisar.** Não decidir sozinha que a outra acompanha.
+
+**A mesma instrução produz coisas diferentes em larguras diferentes**, porque a quebra de
+linha muda. "Destaca a linha inteira" deu uma frase com sentido no desktop e um pedaço
+terminado em preposição no celular. O que se espelha é a intenção; a execução se recalcula.
+
+---
+
 ## Diretriz 1 — Perguntar é ofício, não interrupção
 
 Perguntar bem sustenta a Diretriz 0. Perguntar mal é pior que não perguntar: cansa,

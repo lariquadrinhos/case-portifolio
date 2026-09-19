@@ -27,6 +27,10 @@ querer ver os trabalhos.
   **Larissa Quadros**, cargo **UX Designer**, a frase de abertura e o parágrafo.
 - O marca-texto cobre parte do título, **uma vez por página**, no acento de sistema.
   Fora da hero não existe.
+- **O destaque é de sentido, não de ritmo.** Ele cobre um trecho que fecha uma ideia, e a
+  quebra de linha de cada largura é escolhida em função dele — não o contrário. Hoje o
+  trecho é *"forma melhor"*, que em 1440 divide linha com o resto da frase e em 375 ocupa
+  uma linha só.
 - A home não tem arquivo de conteúdo próprio — são quatro linhas que mudam junto com a
   forma como ela se apresenta.
 
