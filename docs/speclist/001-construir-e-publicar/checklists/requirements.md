@@ -26,8 +26,9 @@
 - [x] Scope is clearly bounded
 - [x] Dependencies and assumptions identified
 
-> **Dois marcadores permanecem.** FR-012 e FR-013 apontam para P15 e P07. O FR-011 foi
-> fechado em 19/09/2026 pela sessão de clarificação. Os originais apontavam Não são ambiguidade de redação: são decisões registradas como
+> **Um marcador permanece.** FR-013 aponta para P07, adiada por decisão dela até a Fase 2.
+> FR-011 foi fechado na sessão de clarificação; FR-012 deixou de ser clarificação e virou
+> decisão de plano. Os marcadores originais apontavam Não são ambiguidade de redação: são decisões registradas como
 > abertas na lista de perguntas, cada uma com opções e momento. Fechá-las aqui seria
 > preencher lacuna por conta própria.
 

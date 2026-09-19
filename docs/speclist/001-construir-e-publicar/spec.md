@@ -21,6 +21,12 @@
 
 - Q: Quando a construção encontra uma peça que deveria existir e não existe, o que deve acontecer? (FR-011) → A: Os dois, por contexto — na construção local a lacuna aparece visível na tela; no caminho de publicação a construção recusa e nada sobe.
 
+**Sessão encerrada com uma pergunta.** Duas outras foram tiradas da fila antes de serem
+feitas: o mecanismo de exportação dos tokens (FR-013), que já estava decidido como adiado
+até a Fase 2, e a escolha do serviço de hospedagem (FR-012), que é comparação de stack —
+excluída do escopo desta etapa pela própria skill, e pertencente ao `/speckit-plan`.
+O domínio segue adiado por decisão dela, com limite antes da Fase 6.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Uma página vazia no ar (Priority: P1)
@@ -130,9 +136,10 @@ nenhum comando local.
   na **construção local**, gerar a página com a falta **visível na tela**, nomeando a peça
   que falta; no **caminho de publicação**, recusar e não publicar nada. A lacuna é vista por
   quem trabalha e nunca por quem visita.
-- **FR-012**: A publicação MUST acontecer em
-  [NEEDS CLARIFICATION: GitHub Pages com arquivo de automação · Cloudflare Pages, que
-  constrói sozinho — ver pergunta P15].
+- **FR-012**: A publicação MUST acontecer em hospedagem estática, com domínio próprio
+  quando ele existir, e a construção MUST NOT poder derrubar o que já está no ar.
+  **Qual serviço e como a construção chega lá é decisão de plano**, não de especificação —
+  a skill de clarificação exclui comparação de stack do seu escopo.
 - **FR-013**: Os valores das variáveis do Figma MUST chegar ao código por
   [NEEDS CLARIFICATION: transcrição · exportação para arquivo com geração de CSS · leitura
   pela API na construção — ver pergunta P07].

@@ -87,12 +87,12 @@ Quem recebe link de outra pessoa pode querer apontar para uma etapa específica.
 A pessoa abre o protótipo em nova aba e volta. Trilha e rolagem preservadas?
 **Momento:** antes do código. · *Event storming, hotspot 7*
 
-### P15 · Hospedagem e domínio
-A stack ficou decidida (009); a hospedagem, não. GitHub Pages já está ligado e aceita
-domínio próprio de graça, mas precisaria de um arquivo de automação que constrói a cada
-push. Alternativa: Cloudflare Pages, que constrói sozinho, ao custo de mais uma conta.
-"Domínio próprio" é critério de liberação; nenhum domínio foi escolhido.
-**Momento:** antes da Fase 6.
+### P15 · Qual domínio
+"Domínio próprio" é critério de liberação; nenhum foi escolhido. Publicar em
+`lariquadrinhos.github.io` funciona desde já, e apontar um domínio depois não gera
+retrabalho — por isso espera.
+**Momento:** antes da Fase 6. Comprar leva minutos, mas a propagação de DNS e a emissão do
+certificado levam horas.
 
 ### P16 · Os textos do site ficam públicos desde já
 Seis arquivos entraram no repositório público por um `git add -A`. Os três textos do site
