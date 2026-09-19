@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **18 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **17 perguntas**, nenhuma travando
 
 ---
 
@@ -28,19 +28,6 @@ ler da API na construção.
 Onde ele vive está decidido (011): no contrato da tela. O texto em si é rascunho meu e
 precisa da voz dela.
 **Momento:** antes de desenhar a página de erro. · *Contrato, `erro/`*
-
-### P35 · O valor 28 não existe na escala de espaço
-As definições dizem "entre capítulos de um case, 96; entre parágrafos, **28**; dentro de um
-bloco, 8 ou 12" — na mesma seção em que proíbem medida fora da escala. A coleção
-`Espaço e forma` tem 4, 8, 12, 16, 24, 32, 48, 64, 96, 128. **Não tem 28.** Os outros três
-valores citados existem.
-**Opções:** o documento passa a dizer 24 ou 32, o que existir · a coleção ganha `space/28`,
-quebrando o ritmo da escala · o valor some do documento e a distância entre parágrafos passa
-a ser escolhida por contexto, contra a regra.
-**Momento:** antes de desenhar qualquer tela com texto corrido em vários parágrafos.
-**Relacionado:** a decisão 019 encontrou o mesmo padrão — valores escolhidos à mão (100, 30)
-que a escala não oferece. Se isso se repetir, a pergunta deixa de ser sobre o 28 e passa a
-ser se a escala tem passos demais ou de menos.
 
 ### P32 · O nome aparece duas vezes na home
 As definições dizem que a home tem "nome, cargo, uma frase e um parágrafo", e que a barra

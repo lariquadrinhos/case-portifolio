@@ -535,3 +535,35 @@ o texto do parágrafo foi sincronizado — **ele estava desatualizado lá també
 **A observação dela é o ponto.** Ajuste manual não se reproduz na próxima tela; regra se
 reproduz. Foi ela quem disse: *"talvez eu devia ter explicado o que eu queria ao invés de
 fazer manualmente"*. É exatamente para isso que o contrato existe.
+
+---
+
+## 020 · A escala de espaço fica como está; o que muda é quando se escolhe o valor
+
+**Quando** 2026-09-19 · **Fase** 3 · **Domínio** — · `#restricao`
+
+**Gatilho.** Três valores de espaço apareceram fora da coleção: **28**, citado nas
+definições para distância entre parágrafos, e **100** e **30**, escolhidos à mão no frame
+da hero. A regra diz que espaço só sai de `space/*`.
+
+**Decisão.** A coleção não muda. As definições passam a dizer **32** entre parágrafos, e
+ganham uma regra nova: **todo valor sai da coleção, inclusive quando foi escolhido a olho.**
+Número ajustado na tela até parecer certo é arredondado para o token mais próximo antes de
+ser escrito em qualquer lugar.
+
+**Alternativa descartada.** Duas. *Acrescentar `space/28` e `space/30`* — perdeu porque a
+escala progride alternando ×1,5 e ×1,33 de ponta a ponta, e esses dois criariam passos de
+×1,17 e ×1,14 num trecho só, quebrando o ritmo para resolver dois casos. E *aceitar valor
+fora da escala quando o olho pedir* — perdeu porque é a própria regra que o projeto tem,
+e abandoná-la na primeira vez que incomoda é não ter regra.
+
+**O que decidiu a questão.** Os três valores estão a **4px ou menos** de um token existente:
+100 fica a 4 de 96, 30 a 2 de 32, 28 a 4 dos dois vizinhos. **Nenhum deles aponta para um
+passo faltando** — apontam para um momento em que ninguém consultou a escala. O problema
+não era a ferramenta, era o procedimento.
+
+**Custo aceito.** Continua possível que um dia a escala realmente falte um passo, e a regra
+de arredondar esconda isso. Por isso a regra tem uma saída declarada: se o token mais
+próximo parecer errado **por mais de um passo**, a decisão volta para a escala.
+
+**Consequência.** Definições alteradas em dois pontos. P35 encerrada.
