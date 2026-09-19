@@ -567,3 +567,38 @@ de arredondar esconda isso. Por isso a regra tem uma saída declarada: se o toke
 próximo parecer errado **por mais de um passo**, a decisão volta para a escala.
 
 **Consequência.** Definições alteradas em dois pontos. P35 encerrada.
+
+---
+
+## 021 · A grade vira coleção própria, com dois modos
+
+**Quando** 2026-09-19 · **Fase** 3 · **Domínio** — · `#restricao`
+
+**Gatilho.** A auditoria deixou a margem de 80 como única medida fora da escala, e o
+diagnóstico foi mais fundo: **nenhum valor de grade era token** — nem margem, nem colunas,
+nem calha.
+
+**Decisão.** Coleção **Grade**, com modos `Desktop` e `Tela pequena`, e três variáveis:
+`margem` (80 / 24), `colunas` (12 / 1), `calha` (24 / 0). A regra de que espaço só sai de
+`space/*` passa a declarar que **não alcança a grade** — composição é outro sistema.
+
+**Alternativa descartada.** Três. *Acrescentar `grade/*` à coleção Espaço e forma* — perdeu
+porque aquela coleção tem um modo só, e a grade muda com a largura; dar-lhe dois modos
+obrigaria todos os valores de espaço a existirem em duplicata sem variar. *Deixar a grade só
+nas definições e amendar a regra de espaço* — perdeu porque o código precisa da margem, e a
+constituição diz que nenhum valor visual é digitado à mão sem vir de uma coleção; a saída
+seria abrir exceção para valor em prosa, que é o buraco que o sistema de tokens existe para
+fechar. *Mudar a margem para 64 ou 96* — perdeu por reconstruir o layout inteiro para
+obedecer uma regra que não era sobre ele.
+
+**Custo aceito, e é grande.** **A grade do Figma não aceita vínculo com variável** —
+testado, `setBoundVariable` recusa o campo `layoutGrids`. O token é fonte para o código e
+referência declarada, mas **não propaga para os frames**: mudar a margem continua exigindo
+edição manual em cada frame. O ganho é ter um lugar declarado e um valor que o código pode
+consumir legalmente; não é propagação automática.
+
+**Consequência.** Quarta coleção no arquivo, e as definições passam a dizer quatro em vez de
+três. `colunas` em tela pequena vale **1** — isso descreve o que existe hoje, uma coluna
+única entre margens, e não uma decisão de grade estreita, que ninguém tomou. A grade foi
+aplicada aos dois frames. Pede uma checagem nova: **todo frame bate com o token do seu
+modo** — hoje ninguém verifica isso.

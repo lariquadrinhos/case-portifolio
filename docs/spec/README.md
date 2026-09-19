@@ -51,6 +51,21 @@ Família: DM Sans, em toda a interface. **O nível se marca pelo tamanho, nunca 
 Em tela pequena a escala reduz pelo topo: títulos encolhem, corpo e apoio não, porque são
 o piso de legibilidade.
 
+## Coleção Grade · modos `Desktop` e `Tela pequena`
+
+```
+margem      colunas      calha
+```
+
+Composição, não espaçamento. **A regra de que espaço só sai de `space/*` não alcança a
+grade** — margem de 80 não é um passo faltando na escala de espaço, é um valor de outro
+sistema.
+
+> **A grade do Figma não aceita vínculo com variável.** Testado: `setBoundVariable` recusa
+> o campo `layoutGrids`. O token é fonte para o código e referência declarada, mas **não
+> propaga sozinho para os frames** — mudar o token exige atualizar cada frame à mão. Isso
+> pede uma checagem: todo frame deve bater com o token do seu modo.
+
 ## Coleção Espaço e forma
 
 ```
