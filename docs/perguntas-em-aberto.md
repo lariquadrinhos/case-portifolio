@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **17 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **19 perguntas**, nenhuma travando
 
 ---
 
@@ -28,6 +28,23 @@ ler da API na construção.
 Onde ele vive está decidido (011): no contrato da tela. O texto em si é rascunho meu e
 precisa da voz dela.
 **Momento:** antes de desenhar a página de erro. · *Contrato, `erro/`*
+
+### P33 · A medida de linha de 65-75 caracteres não cabe em tela estreita
+A regra diz que a medida governa a largura da coluna, não o contrário. Em 375px com margem
+de 24 sobram 327px, e a 18px de corpo isso dá cerca de 36 caracteres. Para 65 seriam
+necessários ~585px. **A regra é verdadeira no desktop e impossível no celular.**
+**Opções:** a regra passa a valer só onde há largura para ela, e em tela estreita a margem
+é que governa · a margem estreita encolhe abaixo de 24 para ganhar caracteres, ao custo do
+conforto de leitura · o corpo encolhe em tela estreita, contra a regra de que corpo e apoio
+são o piso de legibilidade.
+**Momento:** antes de fechar qualquer tela estreita com texto corrido.
+
+### P34 · Os valores da escala tipográfica em tela pequena
+O modo "Tela pequena" existe na coleção de Tipografia, mas os valores não foram lidos — o
+MCP exige seleção no app para ler variáveis. O wireframe estreito usa **40/40 no display**,
+escolhido por medição: é o maior tamanho em que a quebra de quatro linhas cabe em 327px.
+É valor provisório e precisa ser conferido contra a variável.
+**Momento:** antes do mockup da primeira tela.
 
 ### P32 · O nome aparece duas vezes na home
 As definições dizem que a home tem "nome, cargo, uma frase e um parágrafo", e que a barra

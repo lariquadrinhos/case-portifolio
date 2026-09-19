@@ -537,3 +537,31 @@ decisão que só aparece quando alguém desenha.
 
 **Incompleto pela regra dela.** O método diz que *"cada tela é desenhada nas duas larguras
 na mesma sessão, e só sai da mesa quando funciona nas duas"*. Só existe a versão 1440.
+
+### Volta 2 — a versão estreita, e a regra que não cabe nela
+
+**Pedido**
+
+> faz a versão estreita da home
+
+**Voltou.** A home em 375, ao lado da de 1440. A frase virou quatro linhas em vez de três,
+e **40/40 é o maior tamanho em que a quebra cabe** — em 44, "de fazer, eu quero" estoura em
+sete pixels. A quebra escolhida mantém "forma melhor" como linha inteira, então o
+marca-texto continua em x=0, como no desktop.
+
+**Conferi contra.** A medição, de novo, em três tamanhos. E as regras dela: alvo de toque
+confortável, mínimo declarado da barra, corpo e apoio como piso de legibilidade.
+
+**O que a tela estreita expôs.** A regra de **medida de linha entre 65 e 75 caracteres não
+cabe em 375px**. Sobram 327px de coluna, e a 18px isso dá cerca de 36 caracteres; para 65
+seriam necessários uns 585. A regra diz que a medida governa a largura da coluna, não o
+contrário — mas numa tela de 375 quem governa é a tela. **A regra é verdadeira no desktop e
+impossível no celular.** Virou a P33.
+
+**Lacuna desenhada em vez de preenchida.** O que mais fica na barra em tela estreita segue
+indeciso (P10). Em vez de inventar um menu, o wireframe traz um marcador tracejado dizendo
+qual pergunta está aberta e o que ela decide. É a regra do contrato aplicada ao desenho:
+lacuna é marcada, nunca preenchida.
+
+**Ainda provisório.** O display de 40 foi escolhido por caber, não por vir da variável —
+o modo "Tela pequena" existe na coleção mas não foi lido. Registrado na P34.
