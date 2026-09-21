@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **11 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **13 perguntas**, nenhuma travando
 
 ---
 
@@ -30,6 +30,21 @@ aparece na barra.
 **Opções:** a barra conta como o nome da home e a hero começa pela frase · o nome fica nos
 dois, com pesos diferentes · a hera traz só o cargo.
 **Momento:** antes de fechar o wireframe da home. · *Contrato, `home/`*
+
+### P39 · A página de Trabalhos tem título?
+O documento descreve a página como "índice dos cases, em cards" e não menciona título. Sem
+ele, a página começa direto nos cards, logo abaixo da barra. Com ele, ganha um elemento que
+nenhuma definição pediu.
+**Opções:** sem título, e a barra com o sublinhado basta para dizer onde se está · título
+visível, no nível de `titulo-case` ou `titulo-cap` · título presente só na marcação, para
+leitor de tela, sem aparecer na tela.
+**Momento:** antes de fechar o desenho de Trabalhos. · *Wireframe, marcado na tela*
+
+### P40 · Os valores provisórios do card de case
+Três decisões foram tomadas por mim para o componente existir, e nenhuma vem de documento:
+**capa em 3:2**, **título em `titulo-cap`** (36 desktop / 26 estreito) e **linha em `corpo`**.
+Elas sustentam o wireframe, mas não foram escolhidas — foram preenchidas.
+**Momento:** Fase 2, quando o componente for fechado de verdade.
 
 ### P30 · Os sete componentes previstos
 Barra, botão, card, item da trilha, bloco de destaque, bloco de mídia com legenda e campo

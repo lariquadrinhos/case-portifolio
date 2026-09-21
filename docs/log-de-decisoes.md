@@ -1148,3 +1148,37 @@ o que faz falta, e reverter custa remover um marcador.
 **Consequência.** O contrato passou a declarar que **privado tem dois usos legítimos**:
 anotação de trabalho e material de origem. Antes só o primeiro estava previsto, e é por isso
 que este bloco não tinha classificação possível.
+
+---
+
+## 039 · O card de case é componente, construído antes do resto do design system
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** componentes · `#restricao`
+
+**Gatilho.** Desenhar a tela de Trabalhos exigia o card — que aparece **em dois lugares**:
+no índice e ao fim de cada case.
+
+**Decisão.** O card foi construído como **componente**, não como desenho copiado, e as duas
+telas usam instâncias dele.
+
+**Alternativa descartada.** Desenhá-lo solto em Trabalhos e de novo na página de case, como
+o resto do wireframe foi feito. Perdeu porque é exatamente assim que duas versões do mesmo
+elemento divergem — e o contrato do índice já declara que os dois usos são o mesmo
+componente.
+
+**O que isso admite.** As telas estão sendo desenhadas **antes** do design system, que é a
+Fase 2. A Home foi assim e o card também seria, se não fosse usado duas vezes. **Construir
+este componente fora de ordem é reconhecer que a ordem foi invertida**, não corrigi-la.
+
+**Custo aceito, e ele é concreto.** O componente **não mantém a proporção da capa ao ser
+redimensionado**: a altura é fixa e precisou ser ajustada à mão nas instâncias estreitas.
+Enquanto isso não for resolvido, cada tela ajusta por conta e elas voltam a divergir — que
+é o problema que o componente existe para evitar.
+
+**Três valores foram preenchidos por mim, não escolhidos:** capa em 3:2, título em
+`titulo-cap`, linha em `corpo`. Estão marcados na pergunta **P40** e na descrição do
+componente. Eles sustentam o wireframe; não são decisão de design system.
+
+**Consequência.** Trabalhos existe nas duas larguras, e é a **primeira tela a mostrar o
+sublinhado de página atual** (decisão 031). Abre também a **P39**: a página tem título? O
+documento não diz, e o wireframe traz a lacuna marcada em vez de um título inventado.

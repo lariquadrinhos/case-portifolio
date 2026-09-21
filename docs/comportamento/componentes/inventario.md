@@ -25,11 +25,23 @@ existir.
   respeito a movimento reduzido aparecem dentro de cada um.
 - Um nome só, nos três lugares: frame no Figma, título aqui, nome no código.
 
+### card de case
+
+Usado no índice de Trabalhos e ao fim de cada case. Carrega a cor do case de destino.
+
+- **Capa em 3:2**, no topo, ocupando a largura do card.
+- Abaixo dela, título e a linha de tensão, com respiro entre os dois e margem em volta.
+- **O componente não mantém a proporção da capa ao ser redimensionado** — a altura é fixa e
+  precisa ser ajustada em cada instância. É limitação da construção de hoje, e a Fase 2
+  precisa resolver, senão cada tela ajusta à mão e elas divergem.
+- Valores de tipo e proporção são **provisórios** — ver pergunta P40.
+
 ## Peças
 
 | Nome no cenário | Figma | Storybook |
 |---|---|---|
-| — nenhum componente desenhado ainda | `@lacuna` | não se aplica |
+| card de case | `101:8` | não se aplica |
+| — os outros seis | `@lacuna` | não se aplica |
 
 ## Comportamento
 
@@ -47,7 +59,9 @@ Funcionalidade: Inventário de componentes
   Cenário: Os sete componentes previstos
     Então A DEFINIR — ver pergunta P30
     # Previstos: barra · botão · card · item da trilha · bloco de destaque ·
-    # bloco de mídia com legenda · campo de foco. Nenhum desenhado.
+    # bloco de mídia com legenda · campo de foco.
+    # O card de case existe desde 21/09/2026, construído fora de ordem por ser
+    # usado em dois lugares — índice e fim de case. Os outros seis não existem.
 ```
 
 ## Transições
