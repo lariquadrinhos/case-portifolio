@@ -1603,7 +1603,7 @@ aqui, você só vai embora. Sublinhado prometeria sair do site — e as três le
 
 | Forma | Promete | Onde |
 |---|---|---|
-| Contorno de botão | ação principal que acontece dentro do site | reservado |
+| Contorno de botão | ação que acontece dentro do site **e é a principal da página** | um lugar: o convite ao contato no fim de um case |
 | Palavra sublinhada | vai para fora do site | currículo, LinkedIn, e-mail, repositório |
 | Palavra simples | navegação para outra página daqui | barra, saídas da página de erro |
 
@@ -1748,3 +1748,26 @@ imagem grande não se lê como seção.
 de proporção continua pendente e é **ação de interface**: a API expõe `targetAspectRatio`
 como somente leitura. O inventário de materiais ganhou a especificação da capa, com o mínimo
 de 1252×835 para alta densidade.
+
+## 060 · O contato revelado ganha desenho, e o véu é decisão de dedo
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** moldura · `#lacuna-fechada`
+
+**Gatilho.** Larissa, sobre o botão no fim do case: *"aqui falar como é botão mesmo né? o que
+acontece ao clicar ali?"* A resposta existia em oito cenários do contrato e em nenhum pixel.
+
+**Decisão.** O contato revelado foi desenhado nas duas larguras — `152:42` e `152:61`. É
+**caixa sobre a mesma página**, não página nova: o e-mail escrito por extenso e o LinkedIn,
+os dois como palavra sublinhada, porque os dois saem do site.
+
+**As duas larguras não se comportam igual, e a razão é o dedo.** No desktop a caixa ancora
+logo abaixo do que a abriu e **não tem véu**: o clique fora tem mira precisa, e escurecer a
+página inteira cobraria caro por uma caixa pequena. Em tela estreita ela ocupa a largura e
+**ganha véu**, porque o dedo não tem mira fina e o véu é o que dá um alvo grande para
+recolher. Mesma função, dois aparelhos de apontar.
+
+**Consequência.** A tabela da decisão 055 foi corrigida: ela registrava só o destino
+("acontece dentro do site") e tinha deixado cair o qualificador que a 047 já trazia — **"e é
+a ação principal da página"**. Sem ele, "Falar comigo" como botão no fim do case e como
+palavra na tela de erro pareciam contradição; com ele, as duas estão certas. Era falha de
+registro, não de desenho.

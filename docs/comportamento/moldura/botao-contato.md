@@ -52,6 +52,11 @@ e-mail escrito por extenso e o LinkedIn.
 - Quando a página atual está dentro do menu, **é a palavra "Menu" que recebe o sublinhado**.
   Sem isso, a única página escondida seria também a única sem indicador.
 - Acionar o botão revela duas saídas: o e-mail e o LinkedIn.
+- **A caixa se comporta diferente nas duas larguras, e o que decide é o dedo.** No desktop
+  ela ancora logo abaixo do que a abriu e não tem véu — o clique fora tem mira precisa. Em
+  tela estreita ela ocupa a largura e ganha véu, que é o alvo grande para recolher.
+- **O e-mail e o LinkedIn aparecem como palavra sublinhada**, porque os dois saem do site —
+  a mesma forma que eles têm em "Quem sou eu".
 - **O e-mail aparece escrito por extenso — `llquadros95@gmail.com` — visível e copiável.**
 - Não há formulário de contato.
 - O contato também existe dentro de "Quem sou eu", junto do currículo em PDF.
@@ -65,9 +70,12 @@ vista, mesmo que nada abra, a pessoa copia.
 
 | Nome no cenário | Figma | Storybook |
 |---|---|---|
-| contato | `@lacuna` | não se aplica |
-| endereço de e-mail | `@lacuna` | — |
-| atalho do LinkedIn | `@lacuna` | — |
+| contato na barra | dentro de qualquer tela | não se aplica |
+| contato revelado · desktop | `152:42` | não se aplica |
+| contato revelado · estreita | `152:61` | não se aplica |
+| endereço de e-mail | dentro de `152:42` | — |
+| atalho do LinkedIn | dentro de `152:42` | — |
+| botão "Falar comigo" | `146:63`, `148:203` | não se aplica |
 
 ## Comportamento
 
@@ -120,6 +128,17 @@ Funcionalidade: Contato na barra
     Dado que o atalho do LinkedIn está visível
     Quando o leitor o aciona
     Então o perfil abre em nova aba
+
+  Cenário: A caixa em desktop
+    Dado que o leitor acionou o contato num computador
+    Então a caixa aparece ancorada logo abaixo do que a abriu
+    E a página atrás não escurece
+
+  Cenário: A caixa em tela estreita
+    Dado que o leitor acionou o contato numa tela estreita
+    Então a caixa ocupa a largura da tela
+    E a página atrás escurece
+    E tocar no escurecido recolhe a caixa
 
   Cenário: Leitor desiste
     Dado que o contato está revelado
