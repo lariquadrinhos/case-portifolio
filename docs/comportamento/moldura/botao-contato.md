@@ -46,6 +46,12 @@ e-mail escrito por extenso e o LinkedIn.
 - **Em tela estreita a barra é: Larissa · Trabalhos · Contato · Menu.** "Quem sou eu" e o
   controle de tema vão para dentro do menu. **Nenhum item vira ícone** — a barra é toda
   palavra, nas duas larguras.
+- **O que decide a divisão é a largura, medida, não a arrumação.** A barra estreita tem
+  327px úteis. "Quem sou eu" é o rótulo mais longo do site, 113px, e a combinação que cabe
+  — Larissa · Trabalhos · Contato · Menu, 308px — deixa 19px de folga. Nenhum arranjo com
+  "Quem sou eu" na barra fecha: com Menu falta 24px, no lugar de Contato falta 47px, com
+  tudo aberto falta 109px. **Então o menu guarda uma página só, e isso não é desarrumação:
+  é o resto de uma conta.** Uma terceira página futura cai ali também.
 - **Todo item da barra é escrito do mesmo jeito: inicial maiúscula.** "Tema" e "Menu"
   seguem a grafia de "Trabalhos" e "Contato" — se são palavras como as outras, são escritas
   como as outras. Uniformidade inclui grafia.

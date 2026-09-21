@@ -1901,3 +1901,25 @@ checagem acusar, desfiz. Checagem que nunca falhou é checagem que ninguém sabe
 **Consequência.** Duas correções no contrato do tema: a referência posicional, e a regra de
 "escolher não fecha", que carregava a refutação do motivo errado da 061 — argumento contra
 uma ideia morta é matéria do log, não do manual. Quem abre o contrato quer saber o que vale.
+
+## 065 · A divisão da barra estreita passa a trazer a conta que a obriga
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** moldura · `#instrumentacao`
+
+**Gatilho.** Larissa, olhando o painel do menu: *"porque aqui diz 'quem sou eu'?"* O contrato
+afirmava que "Quem sou eu" e o tema vão para o menu, e não dizia o que força isso.
+
+**Decisão.** A regra passa a trazer a medida: barra estreita tem **327px** úteis; a
+combinação que cabe soma **308px**, com 19 de folga; "Quem sou eu" tem **113px** e não entra
+em arranjo nenhum — falta 24px mesmo sacrificando Contato, 47px no lugar de Contato, 109px
+com tudo aberto.
+
+**Por quê registrar o número.** Sem ele a divisão parece escolha de organização, e escolha de
+organização se rediscute. Com ele, a única coisa que muda a divisão é mudar a largura da tela
+ou encurtar o rótulo. **Uma regra que não traz a restrição que a produziu convida a ser
+desfeita por alguém de boa-fé.**
+
+**O que a pergunta também nomeou.** O menu guarda **uma página só**. É estranho para um menu,
+e é honesto: ele não existe por juntar coisas parecidas, existe por não caber. Está escrito
+assim no contrato, para que ninguém tente "consertar" a estranheza sem saber que o consertar
+não cabe.
