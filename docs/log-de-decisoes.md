@@ -869,3 +869,35 @@ porque botão era o que ele deixou de ser. A regra de uniformidade subiu para va
 barra inteira, incluindo o controle de tema, que eu havia deixado em cinza mais claro —
 mesmo erro do círculo sem rótulo: um item mais apagado lê como menos importante, não como
 espaço reservado.
+
+---
+
+## 031 · A barra indica a página atual com sublinhado no acento de sistema
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** moldura · `#reversao`
+
+**Reverte a decisão 028**, que estabelecia indicação só na marcação, sem canal visual.
+
+**Gatilho.** Larissa, depois de ler a 028, decidiu que a página atual deve ganhar destaque.
+
+**Decisão.** O item da página atual recebe **sublinhado no acento de sistema**, e continua
+sendo declarado como página atual na marcação. Dois canais: cor e sublinhado.
+
+**Alternativa descartada.** *Peso*, como segundo canal no lugar do sublinhado — perdeu
+porque a decisão 026 acabou de remover diferença de peso da barra, e reintroduzi-la
+confundiria **estado** com **hierarquia**, que são coisas diferentes no sistema dela.
+*Marcador gráfico*, como o da trilha — perdeu porque a trilha é declarada como o único
+elemento gráfico distintivo do site, e repetir seu vocabulário na barra diluiria isso.
+
+**O que mudou em relação à 028.** Nada nos fatos: o indicador continua aparecendo em **duas
+das seis páginas**, e continua mudo nos dois cases, que é onde a pessoa passa mais tempo.
+O que mudou foi o peso dado a esse custo — **é decisão dela, e ela a tomou com o argumento
+na mão.** A 028 está registrada e não foi apagada; esta a substitui.
+
+**Custo aceito.** O destaque existe em duas páginas e falta em quatro, o que pode ler como
+inconsistência em vez de ausência intencional.
+
+**Consequência.** Abre a **P38**: a página de case sublinha "Trabalhos" como seção? Responder
+que sim exigiria declarar o que é seção, coisa que o documento não faz. O wireframe da home
+**não pode demonstrar a regra** — na home nenhum item de navegação é a página atual, porque
+ela é alcançada pelo nome. O primeiro desenho que mostra o destaque é o de Trabalhos.

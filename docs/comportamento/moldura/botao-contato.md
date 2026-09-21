@@ -20,9 +20,10 @@ figma:
 > tamanho, nunca pela cor — e dois itens do mesmo nível não têm o que marcar. *"Trabalhos em
 > primeiro lugar"* é ordem, não ênfase.
 >
-> **A barra não indica visualmente a página atual.** Mas o item correspondente é **declarado
-> como página atual na marcação**, para quem navega por leitor de tela. A informação existe
-> para quem precisa dela e não acrescenta canal visual para quem não precisa.
+> **A barra indica a página atual.** O item correspondente recebe **sublinhado no acento de
+> sistema** e continua sendo declarado como página atual na marcação. Cor e sublinhado
+> juntos, porque cor sozinha não basta; peso fica de fora, para não confundir estado com
+> hierarquia.
 
 Fica à direita da barra fixa. Navegação diz para onde ir; contato diz o que fazer — e essa
 diferença é de **comportamento, não de aparência**. Ao ser acionado, revela o endereço de
@@ -60,17 +61,20 @@ Funcionalidade: Contato na barra
   Contexto:
     Dado que a barra fixa está visível em qualquer página
 
-  Cenário: Leitor de tela percorre a navegação estando em Trabalhos
-    Dado que o leitor está na página de trabalhos
-    Quando ele percorre a barra por leitor de tela
-    Então o item "Trabalhos" é anunciado como página atual
-    E nenhum item da barra muda de cor ou de peso
+  Cenário: O leitor está numa página que a barra nomeia
+    Dado que o leitor está em Trabalhos ou em Quem sou eu
+    Quando a página abre
+    Então o item correspondente recebe sublinhado no acento de sistema
+    E é anunciado como página atual por leitor de tela
+    E nenhum item muda de peso
 
-  Cenário: Leitor está numa página de case
-    Dado que o leitor está numa página de case
-    Quando ele percorre a barra
-    Então nenhum item é anunciado como página atual
-    # Um case está sob Trabalhos, mas não é Trabalhos.
+  Cenário: O leitor está numa página que a barra não nomeia
+    Dado que o leitor está na home, num case ou na página de erro
+    Quando a página abre
+    Então nenhum item da barra é sublinhado
+    E nenhum item é anunciado como página atual
+    # A home é alcançada pelo nome, que não é item de navegação.
+    # Um case está sob Trabalhos, mas não é Trabalhos — ver pergunta P38.
 
   Cenário: Leitor procura como falar com ela
     Quando o leitor aciona o contato
