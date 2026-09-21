@@ -65,7 +65,7 @@ marcação de proveniência, protótipo navegável.
 
 | O que falta | Onde |
 |---|---|
-| **Foto** | Página "Quem sou eu" |
+| **Foto** | Página "Quem sou eu" — marcador já declarado no arquivo, apontando para `publico/larissa.jpg` |
 | **Currículo em PDF** | Página "Quem sou eu" |
 | **Imagem de compartilhamento** e descrições de página | Prévia do link, antes de qualquer página carregar |
 
@@ -79,6 +79,8 @@ conteúdo:
 - O convite ao contato ao fim de cada case.
 - O texto da página de erro — rascunhado, à espera da voz dela (P31).
 - O título da página de Trabalhos — rascunhado, à espera da voz dela (P41).
+- **O parágrafo sobre o site sendo documentado**, em "Quem sou eu" (P44). Não é copy de
+  interface: é texto autoral, e é o que sustenta o site nascer com dois cases.
 - O convite ao repositório — rascunhado: *"O processo inteiro está no repositório, decisão
   por decisão."*
 
@@ -94,6 +96,7 @@ conteúdo:
 | Capas de card | **2**, uma por case |
 | Materiais fora dos cases | **3** |
 | Textos de interface | **4** |
+| Texto autoral a escrever | **1** |
 
 **Nada disso trava o desenho.** Trava a publicação — as definições listam imagens, capas,
 currículo, protótipos e imagem de compartilhamento como dependências, não acabamento.

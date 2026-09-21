@@ -163,11 +163,15 @@ for (const nome of CONTEUDO) {
       problemas.push(`marcador de trilha "${m[1]}" não está logo abaixo de um título`);
   }
 
-  // imagem exige legenda na linha seguinte
+  // imagem de prova exige legenda; a foto da página não
   linhas.forEach((l, i) => {
     if (/^!\[.*\]\(.+\)/.test(l)) {
+      const alt = l.match(/^!\[(.*?)\]/)?.[1] ?? '';
+      if (!alt.trim()) problemas.push(`imagem na linha ${i + 1} sem texto alternativo`);
+      const ehFoto = (linhas[i - 1] || '').includes('<!-- bloco: foto -->');
+      if (ehFoto) return;
       const prox = (linhas[i + 1] || '').trim();
-      if (!prox.startsWith('Legenda:')) problemas.push(`imagem na linha ${i + 1} sem Legenda: na linha seguinte`);
+      if (!prox.startsWith('Legenda:')) problemas.push(`imagem de prova na linha ${i + 1} sem Legenda: na linha seguinte`);
     }
   });
 

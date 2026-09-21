@@ -1423,3 +1423,48 @@ repositório, hoje rascunhado como *"O processo inteiro está no repositório, d
 decisão."* O contrato ganhou o cenário da saída externa. E a promessa de "protótipo em cada
 case" deixa de existir — a lista de dependências do PRD já não pode cobrar um protótipo que
 não será feito.
+
+---
+
+## 048 · Em "Quem sou eu", currículo é botão e contato é texto
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** quem-sou-eu · `#escopo`
+
+**Gatilho.** A página precisa oferecer currículo e contato, e a decisão 047 acabou de
+estabelecer que botão promete ação dentro do site e palavra promete ir embora.
+
+**Decisão.** O currículo é **botão** — baixar um arquivo é ação que acontece aqui. O e-mail
+e o LinkedIn aparecem como **texto**, porque levam para fora.
+
+**Alternativa descartada.** Os dois como botão, que era o desenho anterior do contato antes
+da decisão 030. Perdeu porque trataria destinos diferentes com a mesma promessa.
+
+**O que isso confirma.** A regra da 047 não era sobre links externos: era sobre **forma
+prometendo destino**. Aplicada aqui, ela separa duas coisas que pareciam iguais — baixar e
+sair — sem precisar de rótulo explicando.
+
+---
+
+## 049 · A legenda obrigatória vale para imagem de prova, não para a foto
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** conteudo · `#reversao`
+
+**Reverte "toda imagem tem legenda, e sem ela não entra."**
+
+**Gatilho.** Ao acrescentar o marcador de foto ao `quem-sou-eu.md`, **a checagem recusou o
+arquivo**: imagem sem `Legenda:` na linha seguinte.
+
+**Decisão.** **Texto alternativo é obrigatório em toda imagem**, sem exceção. **Legenda é
+obrigatória em imagem de prova** — sem ela a imagem não entra. **A foto declarada por
+`<!-- bloco: foto -->` é exceção**: não prova afirmação nenhuma, é peça da página.
+
+**Alternativa descartada.** Escrever uma legenda para a foto, só para satisfazer a regra.
+Perdeu porque seria legenda sem função — e a razão da regra é que *"a legenda carrega o
+detalhe que o texto abriu mão de contar"*, o que só faz sentido para imagem que prova algo.
+
+**Quem encontrou foi a checagem, não eu.** A regra tinha sido escrita pensando só em mídia
+de case, e valia para tudo. O primeiro uso fora desse contexto a quebrou — que é
+exatamente o que uma verificação automática serve para fazer.
+
+**Consequência.** Contrato e script atualizados, com três cenários no lugar de um: imagem de
+prova com legenda, imagem de prova sem legenda, e a foto da página.

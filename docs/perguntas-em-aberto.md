@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **15 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **17 perguntas**, nenhuma travando
 
 ---
 
@@ -30,6 +30,21 @@ aparece na barra.
 **Opções:** a barra conta como o nome da home e a hero começa pela frase · o nome fica nos
 dois, com pesos diferentes · a hera traz só o cargo.
 **Momento:** antes de fechar o wireframe da home. · *Contrato, `home/`*
+
+### P44 · O parágrafo sobre o site sendo documentado não existe
+O contrato de "Quem sou eu" exige que a página mencione que o próprio site está sendo
+documentado enquanto é construído, e o escopo explica por quê: *"o 'Quem sou eu' menciona
+que o próprio site está sendo documentado, o que transforma a ausência em demonstração"*.
+**Esse parágrafo não está no arquivo de conteúdo.** Sem ele, a falta do terceiro case é só
+falta.
+**Momento:** antes de publicar. É a única coisa que justifica o site nascer com dois cases.
+
+### P45 · "Apresentação" é título de conteúdo ou rótulo de estrutura?
+No `quem-sou-eu.md`, `## Apresentação` e `## Meus valores` estão no mesmo nível. "Meus
+valores" lê como seção que deve aparecer na página; "Apresentação" lê como rótulo de
+organização, do mesmo tipo de "Texto para o card", que a decisão 006 transformou em
+marcador. O wireframe desenhou sem exibir "Apresentação".
+**Momento:** antes de implementar a construção desta página.
 
 ### P43 · A coluna de mídia comporta captura de tela de desktop?
 A grade nova dá **411px** à mídia de prova. As definições dizem que o case de Finanças mostra

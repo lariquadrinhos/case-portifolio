@@ -47,9 +47,12 @@ aparece no site. Não há seção reconhecida por nome — nome muda, marcador n
 - **Privado tem dois usos, e os dois são legítimos:** anotação de trabalho que nunca sai do
   arquivo, e **material de origem** — texto escrito para alimentar outra peça, como as
   legendas das imagens, em vez de virar prosa na página.
-- Toda imagem tem texto alternativo no próprio markdown e uma `Legenda:` na linha seguinte.
-  **Imagem sem legenda não entra**: cada imagem precisa provar uma afirmação do texto, e a
-  legenda carrega o detalhe que o texto abriu mão de contar.
+- **Toda imagem tem texto alternativo**, sem exceção — é exigência de acessibilidade.
+- **Imagem de prova exige `Legenda:` na linha seguinte, e sem ela não entra.** A legenda
+  carrega o detalhe que o texto abriu mão de contar, e é por isso que a imagem prova alguma
+  coisa. Sem legenda, vira galeria.
+- **A foto declarada por `<!-- bloco: foto -->` é exceção**: ela não prova afirmação
+  nenhuma, é peça da página. Texto alternativo continua obrigatório; legenda, não.
 - A tira de destaques de um case são as linhas `**Chave** · valor` logo abaixo da frase de
   abertura do capítulo 1.
 - **Conteúdo autoral vive nos arquivos de texto; copy de interface vive no contrato da tela
@@ -89,11 +92,22 @@ Funcionalidade: Um arquivo de texto vira página
     Então a imagem é tratada como foto da página, não como imagem de texto corrido
     E o texto alternativo dela é preservado
 
-  Cenário: Imagem com legenda
+  Cenário: Imagem de prova com legenda
     Dada uma imagem seguida de uma linha iniciada por "Legenda:"
     Quando a construção acontece
     Então a imagem aparece com sua legenda
     E o texto alternativo da imagem é preservado
+
+  Cenário: Imagem de prova sem legenda
+    Dada uma imagem de prova sem "Legenda:" na linha seguinte
+    Quando a construção acontece
+    Então ela não é publicada
+
+  Cenário: A foto da página não exige legenda
+    Dada a imagem declarada por marcador de foto
+    Quando a construção acontece
+    Então ela aparece sem exigir legenda
+    E o texto alternativo dela continua obrigatório
 
   Cenário: Uma peça esperada não está no arquivo
     Dado que uma peça esperada falta

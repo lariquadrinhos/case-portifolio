@@ -3,7 +3,7 @@ fluxo: quem-sou-eu/quem-sou-eu
 dominio: quem-sou-eu
 dono: design
 status: rascunho
-atualizado: 2026-09-18
+atualizado: 2026-09-21
 
 figma:
   file: hwClE9Xpm51OW4vPsCCn8J
@@ -27,13 +27,16 @@ cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um
 - O contato também existe aqui, junto do currículo.
 - A página menciona que o próprio site está sendo documentado enquanto é construído. É o
   que transforma a ausência de um terceiro case em demonstração, em vez de lacuna.
+  **Esse parágrafo ainda não existe no arquivo de conteúdo** — ver pergunta P44.
+- **O currículo é botão; o contato é texto.** Baixar um arquivo é ação dentro do site, e
+  botão promete isso; o e-mail e o LinkedIn levam para fora e aparecem como palavra.
 
 ## Peças
 
 | Nome no cenário | Figma | Storybook |
 |---|---|---|
-| foto | `@lacuna` | não se aplica |
-| currículo em PDF | `@lacuna` | não se aplica |
+| foto | `116:48` | não se aplica |
+| currículo em PDF | `116:73` | não se aplica |
 
 ## Comportamento
 
