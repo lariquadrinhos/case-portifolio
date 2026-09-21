@@ -11,10 +11,12 @@ figma:
   tela: "@lacuna · nada desenhado ainda"
 ---
 
-# Botão de contato
+# Contato na barra
 
-> **Regra que vale para a barra inteira, e não só para o contato:** os itens de navegação
-> são do mesmo nível e **não se diferenciam por peso nem por cor**. O nível se marca pelo
+> **A barra é uniforme.** Todos os seus itens — Trabalhos, Quem sou eu, Contato e o
+> controle de tema — usam o mesmo peso e a mesma cor. Nenhum recebe borda, fundo ou
+> destaque. Os itens de navegação são do mesmo nível e **não se diferenciam por peso nem
+> por cor**. O nível se marca pelo
 > tamanho, nunca pela cor — e dois itens do mesmo nível não têm o que marcar. *"Trabalhos em
 > primeiro lugar"* é ordem, não ênfase.
 >
@@ -22,14 +24,15 @@ figma:
 > como página atual na marcação**, para quem navega por leitor de tela. A informação existe
 > para quem precisa dela e não acrescenta canal visual para quem não precisa.
 
-Fica à direita da barra fixa, visualmente distinto dos itens de menu. Navegação diz para
-onde ir; contato diz o que fazer — e misturar os dois faz o contato competir por atenção
-com os cases. Ao ser acionado, revela o endereço de e-mail escrito por extenso e o
-LinkedIn.
+Fica à direita da barra fixa. Navegação diz para onde ir; contato diz o que fazer — e essa
+diferença é de **comportamento, não de aparência**. Ao ser acionado, revela o endereço de
+e-mail escrito por extenso e o LinkedIn.
 
 ## Regras
 
-- O botão não é item de navegação e não leva a uma página.
+- O contato não é item de navegação e não leva a uma página.
+- **Não tem destaque visual.** A ordem da barra é: nome · Trabalhos · Quem sou eu · Contato
+  · controle de tema, com o tema por último.
 - Acionar o botão revela duas saídas: o e-mail e o LinkedIn.
 - **O e-mail aparece escrito por extenso — `llquadros95@gmail.com` — visível e copiável.**
 - Não há formulário de contato.
@@ -44,7 +47,7 @@ vista, mesmo que nada abra, a pessoa copia.
 
 | Nome no cenário | Figma | Storybook |
 |---|---|---|
-| botão de contato | `@lacuna` | não se aplica |
+| contato | `@lacuna` | não se aplica |
 | endereço de e-mail | `@lacuna` | — |
 | atalho do LinkedIn | `@lacuna` | — |
 
@@ -52,7 +55,7 @@ vista, mesmo que nada abra, a pessoa copia.
 
 ```gherkin
 # language: pt
-Funcionalidade: Botão de contato
+Funcionalidade: Contato na barra
 
   Contexto:
     Dado que a barra fixa está visível em qualquer página
@@ -70,7 +73,7 @@ Funcionalidade: Botão de contato
     # Um case está sob Trabalhos, mas não é Trabalhos.
 
   Cenário: Leitor procura como falar com ela
-    Quando o leitor aciona o botão de contato
+    Quando o leitor aciona o contato
     Então o endereço de e-mail aparece escrito por extenso
     E o atalho do LinkedIn aparece ao lado
     E a página por trás continua onde estava
@@ -95,10 +98,10 @@ Funcionalidade: Botão de contato
     Dado que o contato está revelado
     Quando o leitor aciona a tecla Esc ou toca fora
     Então o contato se recolhe
-    E o foco volta para o botão de contato
+    E o foco volta para o contato
 
   @lacuna
-  Cenário: O botão em tela estreita
+  Cenário: O contato em tela estreita
     Dado que a tela é estreita
     Quando a barra decide o que mostrar
     Então A DEFINIR — ver pergunta P10
@@ -110,7 +113,7 @@ Funcionalidade: Botão de contato
 
 | De | Gatilho | Para |
 |---|---|---|
-| Qualquer página | Acionar o botão | Contato revelado, sobre a mesma página |
+| Qualquer página | Acionar o contato | Contato revelado, sobre a mesma página |
 | Contato revelado | Tocar no endereço | Cliente de e-mail, ou nada — o endereço permanece |
 | Contato revelado | Acionar o LinkedIn | Nova aba com o perfil |
 | Contato revelado | Esc ou toque fora | Contato recolhido, foco de volta no botão |

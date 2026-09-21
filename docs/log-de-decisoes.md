@@ -833,3 +833,39 @@ posição, e esta entrada é o ponto de partida dela.
 simétrico que faltava: quem **nunca** escolheu continua acompanhando o sistema. A forma do
 controle deixa de estar bloqueada — duas posições —, mas o **desenho** dele segue sendo
 trabalho da Fase 2, não desta decisão.
+
+---
+
+## 030 · A barra é uniforme: contato sem destaque, tema por último
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** moldura · `#reversao`
+
+**Reverte a regra de que o contato é visualmente distinto**, escrita nas definições.
+
+**Gatilho.** Larissa pediu barra uniforme: tirar o destaque do contato e mover o controle de
+tema para o último item.
+
+**Decisão.** Todos os itens da barra usam o mesmo peso e a mesma cor. Nenhum recebe borda,
+fundo ou destaque. A ordem é: nome · Trabalhos · Quem sou eu · Contato · controle de tema.
+
+**Alternativa descartada.** Manter o contato como botão com borda, que era a regra escrita:
+*"Fica na direita da barra, visualmente distinto dos itens de menu"*.
+
+**O que decidiu foi a própria razão da regra, que apontava para o outro lado.** A frase
+seguinte das definições diz: *"misturar os dois faz o contato competir por atenção com os
+cases"*. **Um botão com borda compete mais que texto simples** — a regra pedia destaque, e o
+motivo pedia discrição. A mudança segue o motivo e a regra foi reescrita.
+
+A distinção entre navegação e ação **não desaparece: deixa de ser de aparência e passa a ser
+só de comportamento.** Contato continua disparando a ação em vez de levar a uma página.
+
+**Custo aceito.** Nada na barra indica que o contato se comporta diferente dos vizinhos.
+Quem toca espera mudar de página e recebe uma revelação sobre a mesma página. É surpresa
+pequena e de baixo custo, mas é surpresa.
+
+**Consequência.** Definições reescritas no ponto do contato. O contrato mudou de nome —
+`botão-contato.md` continua sendo o arquivo, mas o título passou a ser "Contato na barra",
+porque botão era o que ele deixou de ser. A regra de uniformidade subiu para valer sobre a
+barra inteira, incluindo o controle de tema, que eu havia deixado em cinza mais claro —
+mesmo erro do círculo sem rótulo: um item mais apagado lê como menos importante, não como
+espaço reservado.
