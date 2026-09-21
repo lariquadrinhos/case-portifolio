@@ -29,6 +29,13 @@ cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um
   que transforma a ausência de um terceiro case em demonstração, em vez de lacuna.
   **Esse parágrafo ainda não existe no arquivo de conteúdo.** É falta de material, não de
   decisão: o comportamento está definido, o texto é que precisa ser escrito. A P44 cobra.
+- **Os valores se organizam em linhas, não em colunas.** Cada linha comporta dois valores, e
+  os títulos alinham horizontalmente. Colunas independentes cresceriam em ritmos diferentes
+  e os títulos deixariam de bater.
+- **A ordem visual acompanha a do arquivo**, lida da esquerda para a direita: Amor,
+  Curiosidade, Movimento, Melhor possível, Impacto positivo, Questionamento. Em colunas, a
+  ordem visual seria 1-2-3 à esquerda e 4-5-6 à direita, divergindo da ordem em que o texto
+  é lido por quem não vê o arranjo.
 - **O currículo é botão; o contato é texto.** Baixar um arquivo é ação dentro do site, e
   botão promete isso; o e-mail e o LinkedIn levam para fora e aparecem como palavra.
 
@@ -38,12 +45,19 @@ cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um
 |---|---|---|
 | foto | `116:48` | não se aplica |
 | currículo em PDF | `116:73` | não se aplica |
+| valores em linhas | `117:32` | não se aplica |
 
 ## Comportamento
 
 ```gherkin
 # language: pt
 Funcionalidade: Quem sou eu
+
+  Cenário: A pessoa lê os valores
+    Quando a seção de valores aparece
+    Então os valores se organizam em linhas de dois
+    E os títulos de cada linha alinham horizontalmente
+    E a ordem em que aparecem é a ordem em que estão no arquivo
 
   Cenário: A pessoa quer saber quem está por trás do trabalho
     Quando a página abre
