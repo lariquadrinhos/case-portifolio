@@ -720,3 +720,49 @@ texto e imagem, a diferença é pequena diante do requisito de 2,5 segundos — 
 
 **Consequência.** O domínio segue adiado (P15), e até lá o endereço é o do Pages. Apontar um
 domínio depois não gera retrabalho.
+
+---
+
+## 026 · Itens de navegação são do mesmo nível e não se diferenciam por cor
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** moldura · `#recusa-de-ia`
+
+**Gatilho.** Larissa perguntou por que "Quem sou eu" tinha cor diferente de "Trabalhos" no
+wireframe da barra.
+
+**Decisão.** Os itens de navegação são do mesmo nível e usam o mesmo peso e a mesma cor.
+
+**Alternativa descartada.** Dar mais peso a "Trabalhos", que era o que eu tinha feito.
+Perdeu por dois motivos, e o segundo é mais forte que o primeiro. As definições dizem
+*"Trabalhos em primeiro lugar"* — **isso é ordem, não ênfase**, e eu li como ênfase. E mesmo
+que fosse ênfase, o canal estaria errado: a regra dela é que *"o nível se marca pelo
+tamanho, nunca pela cor"*, e dois itens do mesmo nível não têm o que marcar.
+
+**Custo aceito.** Nenhum. A barra fica mais quieta, que é o que a direção de contenção pede.
+
+**Consequência.** Corrigido nas duas larguras. A regra subiu para o contrato da moldura,
+onde vale para a barra inteira e não só para o contato. **Abriu a pergunta P37**: estando
+numa das páginas, o item correspondente indica isso? A trilha tem marcador de etapa ativa
+dentro de um case; a navegação não tem equivalente declarado.
+
+---
+
+## 027 · O controle de tema é espaço reservado rotulado, não um círculo mudo
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** tema · `#recusa-de-ia`
+
+**Gatilho.** Larissa perguntou o que era "aquela bolinha vazia" na barra.
+
+**Decisão.** O espaço do controle de tema é uma peça **rotulada** — lê-se "tema" — em vez de
+um círculo cinza sem legenda.
+
+**Alternativa descartada.** Desenhar o controle de verdade agora. Perdeu porque sua forma
+depende da P26, ainda aberta: se o controle tem dois estados ou três, com a posição "seguir
+o sistema", muda o que ele é.
+
+**Custo aceito.** Um rótulo em texto onde provavelmente haverá um ícone. É wireframe: a
+palavra diz o que a forma ainda não pode dizer.
+
+**O que isso ensinou.** Espaço reservado sem rótulo não é neutro — **é ambíguo**. Um círculo
+cinza numa barra pode ser avatar, ícone ou foto, e quem olha precisa perguntar. A mesma
+regra do contrato vale para o desenho: a lacuna é marcada, nunca deixada em branco.

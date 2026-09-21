@@ -13,6 +13,11 @@ figma:
 
 # Botão de contato
 
+> **Regra que vale para a barra inteira, e não só para o contato:** os itens de navegação
+> são do mesmo nível e **não se diferenciam por peso nem por cor**. O nível se marca pelo
+> tamanho, nunca pela cor — e dois itens do mesmo nível não têm o que marcar. *"Trabalhos em
+> primeiro lugar"* é ordem, não ênfase.
+
 Fica à direita da barra fixa, visualmente distinto dos itens de menu. Navegação diz para
 onde ir; contato diz o que fazer — e misturar os dois faz o contato competir por atenção
 com os cases. Ao ser acionado, revela o endereço de e-mail escrito por extenso e o

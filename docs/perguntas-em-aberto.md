@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **15 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **16 perguntas**, nenhuma travando
 
 ---
 
@@ -42,6 +42,17 @@ dois, com pesos diferentes · a hera traz só o cargo.
 Barra, botão, card, item da trilha, bloco de destaque, bloco de mídia com legenda e campo
 de foco. Nenhum desenhado, e a lista pode estar incompleta.
 **Momento:** Fase 2. · *Contrato, `componentes/`*
+
+### P37 · O item da barra indica a página em que se está?
+A barra tem "Trabalhos" e "Quem sou eu". Estando numa delas, o item correspondente muda de
+alguma forma? O documento não diz. A trilha tem marcador de etapa ativa dentro de um case,
+mas a navegação não tem equivalente declarado.
+**Opções:** nenhuma indicação — a barra só leva, nunca informa onde se está · o item da
+página atual recebe o acento de sistema, que é estado e portanto cor permitida · o item
+atual deixa de ser clicável, sem mudança visual.
+**Momento:** antes de desenhar a segunda página, quando a barra deixar de ser sempre igual.
+**Origem:** ela perguntou por que os dois itens tinham cores diferentes no wireframe. A
+diferença era erro meu, mas a pergunta por trás não tinha resposta.
 
 ### P26 · Escolha manual de tema × mudança da preferência do sistema
 O leitor escolhe um tema no site e, depois, muda a preferência do sistema operacional.
