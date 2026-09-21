@@ -662,3 +662,61 @@ está em modo local. O modo precisa ser evidente na saída, não inferido.
 pergunta** — conteúdo, home, trabalhos e quem sou eu — e os quatro viraram cenário real.
 É a Diretriz 0 aplicada à construção: a lacuna é marcada, nunca preenchida, e nunca
 publicada em silêncio.
+
+---
+
+## 024 · A construção terá analisador de markdown próprio, e os testes usam o Node
+
+**Quando** 2026-09-21 · **Fase** 4 · **Domínio** — · `#restricao`
+
+**Gatilho.** A Fase 0 do plano da spec 001 precisava resolver duas incógnitas técnicas:
+quanto de markdown a construção entende, e como testar sem acrescentar dependência.
+
+**Decisão.** Analisador próprio do subconjunto medido — títulos, negrito, itálico, tabelas,
+listas, réguas e parágrafos, mais o padrão `**Chave** ·` da tira de destaques. Testes com
+`node:test`, embutido.
+
+**Alternativa descartada.** *Uma biblioteca de markdown* — uma linha de código contra
+centenas de recursos não usados e atualizações de segurança para acompanhar; contraria a
+decisão 022. *Vitest ou Jest* — melhores em projeto grande, dependências que envelhecem.
+
+**O que decidiu foi medição, não preferência.** Os três arquivos de conteúdo usam um
+subconjunto pequeno, e **três recursos não aparecem em lugar nenhum**: citação, código
+embutido e link. O único `[link]` existente é marcador não resolvido. Isso põe o analisador
+na casa de 150 a 200 linhas.
+
+**Custo aceito, e é o maior deste plano.** Um erro no analisador corrompe os textos dela em
+silêncio — e os textos são o produto. Por isso a suíte de testes deixa de ser desejável e
+passa a ser condição: cada recurso do subconjunto precisa de teste que o cite pelo nome.
+
+**Consequência.** A **P19** fecha: ela estava bloqueada por falta de suíte, e `node:test`
+existe no Node instalado. A checagem 3 do contrato — *"todo `Cenário:` é citado por um
+teste"* — deixa de ser impossível e passa a ser pendente. O script de checagens foi
+atualizado para dizer isso.
+
+---
+
+## 025 · Publicação por GitHub Pages, com a automação versionada
+
+**Quando** 2026-09-21 · **Fase** 4 · **Domínio** — · `#restricao`
+
+**Gatilho.** FR-012 foi retirado da clarificação por ser comparação de stack, e delegado ao
+plano. A Fase 0 o resolveu.
+
+**Decisão.** GitHub Pages, com um arquivo de automação no repositório que constrói a cada
+envio e publica a saída.
+
+**Alternativa descartada.** *Cloudflare Pages* — constrói sozinho, sem arquivo de automação,
+e entrega mais rápido; perdeu porque a configuração de construção passaria a viver num
+painel web que o Git não vê. *Commitar a saída construída* — dispensa automação, mas mistura
+fonte com gerado e enche o histórico de HTML.
+
+**O que pesou mais.** Não foi o desempenho nem a conveniência: foi **a configuração de
+publicação ser um arquivo versionado**. Num projeto cuja regra é decisão registrada em
+arquivo, ter parte de como o site é construído fora do repositório seria incoerente.
+
+**Custo aceito.** A entrega do Pages é mais lenta que a do Cloudflare. Para cinco páginas de
+texto e imagem, a diferença é pequena diante do requisito de 2,5 segundos — mas existe.
+
+**Consequência.** O domínio segue adiado (P15), e até lá o endereço é o do Pages. Apontar um
+domínio depois não gera retrabalho.

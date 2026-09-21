@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **16 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **15 perguntas**, nenhuma travando
 
 ---
 
@@ -107,6 +107,3 @@ serão públicos no site de qualquer forma; a questão é se antes dele existir.
 A checagem de CI 1 e o campo `storybook.usa` se aplicam?
 **Momento:** primeira execução da skill do contrato.
 
-### P19 · A checagem de CI 3 exige suíte de testes
-Depende da stack.
-**Momento:** Fase 1.
