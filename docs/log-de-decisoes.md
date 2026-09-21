@@ -1535,3 +1535,32 @@ principal disputando atenção.
 **Consequência.** O bloco `116:73` foi substituído por `127:32`. O contrato ganhou o cenário
 dos três caminhos com a mesma forma. Com isso, o botão deixa de existir em "Quem sou eu" —
 resta como forma apenas onde há ação principal dentro do site.
+
+## 053 · O site não explica por que tem dois cases
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** quem-sou-eu · `#reversao` `#escopo`
+
+**Reverte** a exigência, escrita nas definições e no contrato, de que "Quem sou eu" mencione
+que o próprio site está sendo documentado enquanto é construído.
+
+**Gatilho.** Larissa, vendo a nota de lacuna no wireframe: *"essa nota aqui não precisa, não
+pretendo adicionar esse parágrafo."*
+
+**Decisão.** O parágrafo não será escrito. O site publica com dois cases e **não comenta a
+ausência do terceiro** em lugar nenhum. O terceiro entra quando estiver escrito.
+
+**Por quê.** A ideia original era transformar a ausência em demonstração. Mas o texto que faz
+isso precisa primeiro apontar a ausência — e um portfólio que explica quantos cases não tem
+chama atenção para a conta em vez do trabalho. Dois cases não são uma falta que precise de
+nota de rodapé; são dois cases. O terceiro vai demonstrar o processo **sendo** o case, não
+sendo anunciado antes de existir.
+
+**Alternativa descartada.** Manter o parágrafo em versão mais curta e discreta. Perdeu pelo
+mesmo motivo: qualquer versão dele precisa nomear a ausência para justificá-la.
+
+**Custo aceito.** Perde-se o enquadramento que fazia o site parecer deliberadamente
+inacabado. Quem chegar antes do terceiro case vê um portfólio de dois cases, sem contexto de
+que há mais vindo.
+
+**Consequência.** A nota `@lacuna P44` saiu do wireframe. P44 fechada. Exigência removida do
+contrato, das definições e do PRD.

@@ -115,7 +115,7 @@ tema claro e escuro · português.
 | Fora | Motivo |
 |---|---|
 | **Versão em inglês** | Primeira evolução após o lançamento. A estrutura nasce preparada, mas traduzir e revisar dois cases mais uma página é trabalho de conteúdo que não vale segurar a publicação. Tradução malfeita custa mais caro que ausência de tradução |
-| **Terceiro case** | É este projeto — só pode ser escrito depois que o site existir. Sem card de "em breve"; o "Quem sou eu" menciona que o site está sendo documentado, o que transforma a ausência em demonstração |
+| **Terceiro case** | É este projeto — só pode ser escrito depois que o site existir. Sem card de "em breve" e sem menção à ausência em lugar nenhum: o case entra quando estiver pronto (decisão 053) |
 | **Página de método separada** | Os cases mostram o método dentro de cada etapa, o que é mais forte que declarar em página própria |
 | **Blog, CMS, animação elaborada, medição, qualquer coisa com backend** | Fora por natureza do produto |
 

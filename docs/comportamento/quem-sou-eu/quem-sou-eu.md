@@ -25,10 +25,8 @@ cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um
 - **O histórico profissional não aparece na página** — fica no currículo em PDF, acessível
   a partir daqui.
 - O contato também existe aqui, junto do currículo.
-- A página menciona que o próprio site está sendo documentado enquanto é construído. É o
-  que transforma a ausência de um terceiro case em demonstração, em vez de lacuna.
-  **Esse parágrafo ainda não existe no arquivo de conteúdo.** É falta de material, não de
-  decisão: o comportamento está definido, o texto é que precisa ser escrito. A P44 cobra.
+- **A página não explica por que há dois cases.** O terceiro entra quando existir; até lá a
+  ausência não é comentada (decisão 053).
 - **Os valores se organizam em linhas, não em colunas.** Cada linha comporta dois valores, e
   os títulos alinham horizontalmente. Colunas independentes cresceriam em ritmos diferentes
   e os títulos deixariam de bater.

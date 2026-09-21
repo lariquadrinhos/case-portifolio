@@ -31,13 +31,8 @@ aparece na barra.
 dois, com pesos diferentes · a hera traz só o cargo.
 **Momento:** antes de fechar o wireframe da home. · *Contrato, `home/`*
 
-### P44 · O parágrafo sobre o site sendo documentado não existe
-O contrato de "Quem sou eu" exige que a página mencione que o próprio site está sendo
-documentado enquanto é construído, e o escopo explica por quê: *"o 'Quem sou eu' menciona
-que o próprio site está sendo documentado, o que transforma a ausência em demonstração"*.
-**Esse parágrafo não está no arquivo de conteúdo.** Sem ele, a falta do terceiro case é só
-falta.
-**Momento:** antes de publicar. É a única coisa que justifica o site nascer com dois cases.
+### ~~P44~~ · Resolvida pela decisão 053
+O parágrafo não será escrito. O site publica com dois cases e sem comentar a ausência.
 
 ### P45 · "Apresentação" é título de conteúdo ou rótulo de estrutura?
 No `quem-sou-eu.md`, `## Apresentação` e `## Meus valores` estão no mesmo nível. "Meus
