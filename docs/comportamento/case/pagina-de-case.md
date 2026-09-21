@@ -32,6 +32,9 @@ etapa, como evidência, não como declaração à parte.
 - **O título fica junto do texto, acima dele.** O que fica ao lado é **a mídia que prova a
   afirmação daquele capítulo**. Na leitura: trilha nas colunas 1 e 2, título e texto nas
   3 a 8, mídia nas 9 a 12.
+- **A mídia alinha com o texto, não com o título.** O topo dela acompanha a primeira linha
+  do texto do capítulo — se o título quebrar em duas linhas, a mídia desce junto. O título
+  pertence ao texto; a mídia é prova do que o texto afirma, e começa onde a afirmação começa.
 - **Cada capítulo tem a sua prova ao lado**, com legenda abaixo dela. Imagem que não prova
   nada vira galeria, e galeria ninguém olha.
 - **O texto corrido ocupa seis colunas, não cinco.** Cinco dariam 61 caracteres por linha,
@@ -76,6 +79,7 @@ Funcionalidade: Página de case
     Então o título dele fica acima do texto a que pertence
     E o texto corrido ocupa seis colunas
     E a mídia que prova aquele capítulo fica ao lado, com legenda abaixo
+    E o topo da mídia alinha com a primeira linha do texto, não com o título
 
   Cenário: A pessoa lê um capítulo em tela estreita
     Dado que a página está aberta em tela estreita
