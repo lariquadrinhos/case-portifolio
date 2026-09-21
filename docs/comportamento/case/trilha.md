@@ -30,6 +30,14 @@ função, não por decoração.
   capítulo**.
 - A etapa ativa se distingue por marcador maior, peso e cor; as demais ficam em apoio.
 
+### Em tela estreita
+
+- A trilha **não cabe** e vira uma **faixa fina de progresso**, logo abaixo da barra,
+  tocável para abrir a lista completa de etapas.
+- **A faixa nomeia a etapa atual e diz a posição** — "Descoberta · 2 de 6". Sem isso ela
+  daria só *quanto falta* e perderia *onde estou*, que é metade da razão de a trilha
+  existir. Ver decisão 043.
+
 ## Peças
 
 | Nome no cenário | Figma | Storybook |
@@ -37,6 +45,7 @@ função, não por decoração.
 | traço | `107:23` | não se aplica |
 | marcador | `107:22` | não se aplica |
 | marcador da etapa ativa | `107:22` | não se aplica |
+| faixa de progresso | `108:30` | não se aplica |
 
 ## Comportamento
 
@@ -60,6 +69,14 @@ Funcionalidade: Trilha de leitura
     Então os itens continuam levando às seções, por âncora
     E o marcador não acompanha a rolagem
     E nenhum conteúdo do case deixa de ser legível
+
+  Cenário: A trilha em tela estreita
+    Dado que a tela é estreita
+    Quando o case abre
+    Então a trilha aparece como faixa fina de progresso, abaixo da barra
+    E a faixa nomeia a etapa atual e diz a posição dela no total
+    Quando a pessoa toca a faixa
+    Então a lista completa de etapas aparece
 
   @lacuna
   Cenário: A trilha e o respeito a movimento reduzido

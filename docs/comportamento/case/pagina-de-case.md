@@ -30,6 +30,8 @@ etapa, como evidência, não como declaração à parte.
 - **O texto corrido ocupa seis colunas, não cinco.** Cinco dariam 61 caracteres por linha,
   abaixo do mínimo de 65 — e a regra da medida governa a largura da coluna, não o contrário.
   Ver decisão 042.
+- **Em tela estreita o título do capítulo fica acima do texto**, não ao lado: a largura não
+  comporta duas faixas. A regra do título ao lado vale onde há grade para ela.
 - Ao fim da página vêm o card do próximo case e o convite ao contato.
 - A barra marca **Trabalhos** como seção, porque um case pertence a Trabalhos.
 
@@ -41,6 +43,7 @@ etapa, como evidência, não como declaração à parte.
 | tira de destaques | `106:36` | não se aplica |
 | capítulo | `107:36` | não se aplica |
 | marca-texto | `106:34` | não se aplica |
+| página em tela estreita | `108:22` | não se aplica |
 
 ## Comportamento
 
@@ -54,11 +57,17 @@ Funcionalidade: Página de case
     E a barra marca "Trabalhos" como seção
     E o marca-texto cobre parte do título, uma vez só
 
-  Cenário: A pessoa lê um capítulo
-    Dado que a página está aberta
+  Cenário: A pessoa lê um capítulo em desktop
+    Dado que a página está aberta em tela larga
     Quando um capítulo aparece
     Então o título dele fica ao lado do texto, não acima
     E o texto corrido ocupa seis colunas
+
+  Cenário: A pessoa lê um capítulo em tela estreita
+    Dado que a página está aberta em tela estreita
+    Quando um capítulo aparece
+    Então o título dele fica acima do texto
+    E a tira de destaques aparece empilhada
 
   @lacuna
   Cenário: A construção separa o hero dos capítulos

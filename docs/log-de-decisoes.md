@@ -1263,3 +1263,31 @@ número, e quem ler o documento sem ver esta entrada vai desenhar cinco colunas.
 arquivo: `pagina-de-case.md` e `trilha.md`. Abre a **P42**: nos arquivos de case, o hero
 está dentro do primeiro capítulo, e a construção só conseguiria separá-lo por posição — o
 tipo de regra que a decisão 006 recusou.
+
+---
+
+## 043 · A faixa de progresso nomeia a etapa, não só mede o quanto falta
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** case · `#escopo`
+
+**Gatilho.** Desenhar o case em tela estreita exigiu a faixa de progresso que substitui a
+trilha. As definições a descrevem como *"uma faixa fina de progresso, tocável para abrir a
+lista completa de etapas"* — e não dizem o que ela mostra.
+
+**Decisão.** A faixa **nomeia a etapa atual e diz a posição** — "Descoberta · 2 de 6" —
+além do trilho preenchido.
+
+**Alternativa descartada.** Uma faixa apenas gráfica, um trilho com a parte percorrida
+preenchida. Perdeu porque **daria só metade da informação**: as definições dizem que a
+trilha *"dá duas informações ao mesmo tempo: onde estou e quanto falta"*. Um trilho sozinho
+responde quanto falta e **perde onde estou** — e é justamente em tela estreita, onde não há
+lista visível, que saber onde se está fica mais difícil.
+
+**Custo aceito.** A faixa deixa de ser fina de verdade: passa a ter altura de texto, e come
+espaço vertical numa tela que já tem pouco.
+
+**Consequência.** A regra subiu para o contrato da trilha, com o cenário correspondente. E
+o contrato da página ganhou a regra que a largura impõe: **em tela estreita o título do
+capítulo fica acima do texto**, porque não há grade para duas faixas — *"título ao lado do
+texto" vale onde há grade para isso*, do mesmo jeito que a medida de linha vale onde há
+largura.
