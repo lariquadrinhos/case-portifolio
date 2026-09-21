@@ -3,7 +3,7 @@ fluxo: tema/tema-claro-e-escuro
 dominio: tema
 dono: design
 status: rascunho
-atualizado: 2026-09-18
+atualizado: 2026-09-21
 
 figma:
   file: hwClE9Xpm51OW4vPsCCn8J
@@ -22,7 +22,10 @@ apareceu.
 
 - Na primeira visita, o tema segue a preferência declarada pelo sistema.
 - O controle na barra sobrescreve a preferência do sistema.
-- A escolha manual é lembrada entre visitas.
+- A escolha manual é lembrada entre visitas e **vale até ser trocada de novo**. Mudança na
+  preferência do sistema **não a desfaz**.
+- **O controle tem duas posições**, claro e escuro. Não há posição "seguir o sistema": o
+  automático vale enquanto ninguém tiver escolhido, e não volta depois.
 - **O tema certo é aplicado antes da primeira pintura.** Nunca há piscada.
 - **Sem JavaScript, o tema segue a preferência do sistema e o conteúdo permanece legível.**
   O script é reforço que falha em segurança, não dependência.
@@ -41,7 +44,7 @@ tema no elemento raiz. Se ele não executar, o CSS cai na preferência do sistem
 
 | Nome no cenário | Figma | Storybook |
 |---|---|---|
-| controle de tema | `@lacuna` | não se aplica |
+| controle de tema · duas posições | `@lacuna` | não se aplica |
 
 ## Comportamento
 
@@ -83,14 +86,16 @@ Funcionalidade: Tema claro e escuro
     E todo o conteúdo permanece legível
     E o controle de tema não promete o que não pode cumprir
 
-  @lacuna
   Cenário: O leitor muda a preferência do sistema depois de ter escolhido manualmente
     Dado que o leitor escolheu um tema manualmente
     Quando ele muda a preferência do sistema operacional
-    Então A DEFINIR — ver pergunta P26
-    # Opções: a escolha manual continua valendo até ser trocada de novo (padrão comum) ·
-    # a preferência do sistema volta a mandar · existe uma terceira posição no controle,
-    # "seguir o sistema", que devolve o automático.
+    Então o site continua no tema que ele escolheu
+    E a preferência do sistema segue ignorada até ele trocar de novo
+
+  Cenário: O leitor nunca escolheu e muda a preferência do sistema
+    Dado que o leitor nunca acionou o controle neste site
+    Quando ele muda a preferência do sistema operacional
+    Então o site acompanha a nova preferência
 
   @lacuna
   Cenário: O controle de tema em tela estreita

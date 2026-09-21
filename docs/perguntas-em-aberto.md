@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **15 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **14 perguntas**, nenhuma travando
 
 ---
 
@@ -42,14 +42,6 @@ dois, com pesos diferentes · a hera traz só o cargo.
 Barra, botão, card, item da trilha, bloco de destaque, bloco de mídia com legenda e campo
 de foco. Nenhum desenhado, e a lista pode estar incompleta.
 **Momento:** Fase 2. · *Contrato, `componentes/`*
-
-### P26 · Escolha manual de tema × mudança da preferência do sistema
-O leitor escolhe um tema no site e, depois, muda a preferência do sistema operacional.
-Qual ganha?
-**Opções:** a escolha manual continua valendo até ser trocada de novo, que é o padrão mais
-comum · a preferência do sistema volta a mandar · o controle ganha uma terceira posição,
-"seguir o sistema", que devolve o automático.
-**Momento:** antes de desenhar o controle de tema. · *Contrato, `tema/`*
 
 ### P22 · O bloco "O Produto", no case de Finanças
 Título sem marcador de trilha, depois do último capítulo. É subseção do último capítulo,

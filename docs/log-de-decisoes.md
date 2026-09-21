@@ -800,3 +800,36 @@ inconsistência: é o mesmo conteúdo chegando por canais diferentes.
 **Custo aceito.** Um comportamento que não se vê no Figma e só se verifica em teste ou com
 leitor de tela. Por isso virou dois cenários no contrato, nomeados — incluindo o caso do
 case, em que **nenhum** item é anunciado.
+
+---
+
+## 029 · A escolha de tema vale até ser trocada de novo; o controle tem duas posições
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** tema · `#restricao`
+
+**Gatilho.** O contrato do tema tinha uma lacuna desde o primeiro dia: o leitor escolhe um
+tema no site e depois muda a preferência do sistema operacional — qual ganha? A pergunta
+também segurava a forma do controle, e com ela o wireframe da barra.
+
+**Decisão.** A escolha manual vale até ser trocada de novo. Mudança na preferência do
+sistema não a desfaz. O controle tem **duas posições**, claro e escuro; não há posição
+"seguir o sistema" — o automático vale enquanto ninguém tiver escolhido, e não volta depois.
+
+**Alternativa descartada.** Duas. *A preferência do sistema voltar a mandar* — perdeu porque
+a pessoa escolheu e o site desfaria; mesmo sendo defensável como "a preferência mais
+recente", **isso lê como defeito**: ela volta, vê o tema que não escolheu, e conclui que o
+site esqueceu. Falha que parece bug é pior que falha que ninguém nota. *Uma terceira posição,
+"seguir o sistema"* — perdeu por custo: na barra, isso é um seletor segmentado largo demais
+para uma tela estreita que já está no mínimo de nome e Trabalhos, ou um botão que cicla,
+em que não se sabe o estado atual sem olhar duas vezes.
+
+**Custo aceito, e é o mais concreto desta decisão.** Quem usa sistema que troca sozinho de
+claro para escuro à noite, e tocou no controle uma vez, **perde essa troca automática neste
+site, em silêncio**. Há saída — voltar o controle para o tema que bate com o sistema — mas
+ela devolve a cor, não o automático. Se algum dia isso incomodar, a reversão é a terceira
+posição, e esta entrada é o ponto de partida dela.
+
+**Consequência.** Duas lacunas do contrato do tema viraram cenário, incluindo o caso
+simétrico que faltava: quem **nunca** escolheu continua acompanhando o sistema. A forma do
+controle deixa de estar bloqueada — duas posições —, mas o **desenho** dele segue sendo
+trabalho da Fase 2, não desta decisão.
