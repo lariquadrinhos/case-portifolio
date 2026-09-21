@@ -35,7 +35,12 @@ etapa, como evidência, não como declaração à parte.
 - **A mídia alinha com o texto, não com o título.** O topo dela acompanha a primeira linha
   do texto do capítulo — se o título quebrar em duas linhas, a mídia desce junto. O título
   pertence ao texto; a mídia é prova do que o texto afirma, e começa onde a afirmação começa.
-- **Cada capítulo tem a sua prova ao lado**, com legenda abaixo dela. Imagem que não prova
+- **Cada capítulo tem a sua prova ao lado**, com legenda abaixo dela.
+- **Vídeo não é pré-carregado e não toca sozinho.** Até a pessoa pedir, baixa zero byte; o
+  que carrega é a imagem de pôster, que segue as mesmas regras de qualquer imagem.
+- **Vídeo é servido pelo próprio site, nunca incorporado de terceiro.** Incorporar do
+  YouTube ou Vimeo traz script e cookie de rastreamento, e reintroduz o aviso de
+  consentimento que a decisão de não medir existiu para evitar. Imagem que não prova
   nada vira galeria, e galeria ninguém olha.
 - **O texto corrido ocupa seis colunas, não cinco.** Cinco dariam 61 caracteres por linha,
   abaixo do mínimo de 65 — e a regra da medida governa a largura da coluna, não o contrário.
@@ -80,6 +85,14 @@ Funcionalidade: Página de case
     E o texto corrido ocupa seis colunas
     E a mídia que prova aquele capítulo fica ao lado, com legenda abaixo
     E o topo da mídia alinha com a primeira linha do texto, não com o título
+
+  Cenário: A pessoa abre um capítulo que tem vídeo
+    Dado que a mídia daquele capítulo é um vídeo
+    Quando a página abre
+    Então só a imagem de pôster é baixada
+    E o vídeo não toca sozinho
+    Quando a pessoa aciona o vídeo
+    Então ele é baixado e tocado, servido pelo próprio site
 
   Cenário: A pessoa lê um capítulo em tela estreita
     Dado que a página está aberta em tela estreita

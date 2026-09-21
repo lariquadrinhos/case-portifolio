@@ -15,7 +15,7 @@ carrega o detalhe que o texto abriu mão de contar."*
 
 | Capítulo | O que produzir | Prova a afirmação |
 |---|---|---|
-| 1 · Introdução | **Vídeo curto** do produto em uso | "funcionando e em uso por uma pessoa real" |
+| 1 · Introdução | **Vídeo curto** do produto em uso, **mais a imagem de pôster** | "funcionando e em uso por uma pessoa real" |
 | 2 · Descoberta | A skill e o modelo de domínio, com os hotspots marcados | "nenhuma lacuna é preenchida por suposição" |
 | 3 · Desenho e documentação | Fluxo mapeado ao lado de uma especificação de tela | "quem implementa não precisa perguntar nada que já não esteja escrito" |
 | 4 · Design system | O par PF/PJ nos dois temas, com os números de contraste | "reprovava no escuro" |
@@ -23,6 +23,9 @@ carrega o detalhe que o texto abriu mão de contar."*
 | 6 · Resultados | Capturas do produto rodando de verdade | "existe, funciona e está em uso" |
 
 **Seis legendas**, uma por imagem. Nenhuma escrita.
+
+> O vídeo precisa de **duas peças**: o arquivo e a imagem de pôster. Só o pôster é baixado
+> quando a página abre — o vídeo, só se a pessoa pedir. Ver decisão 046.
 
 > O capítulo 5 é o que as definições chamam de prova mais forte disponível neste portfólio:
 > *"mockup e produto funcionando lado a lado"*. É o que substitui o link que não existe.

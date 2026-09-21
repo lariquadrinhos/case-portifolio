@@ -1357,3 +1357,34 @@ saídas têm custo e nenhuma está escolhida.
 **Consequência.** Definições e contrato reescritos. Em tela estreita o que muda é o outro
 lado: **a mídia desce para baixo do texto**, porque não há grade para duas faixas — mesma
 forma das outras regras que valem "onde há grade para isso".
+
+---
+
+## 046 · Vídeo é servido pelo próprio site, sem pré-carregamento e sem tocar sozinho
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** case · `#restricao`
+
+**Gatilho.** A primeira mídia do case de Finanças é um vídeo do produto em uso, e Larissa
+perguntou se isso não deixaria o site pesado.
+
+**Decisão.** O vídeo **não é pré-carregado**: até a pessoa pedir, baixa zero byte, e o que
+carrega é a imagem de pôster. **Não toca sozinho.** E é **servido pelo próprio site**, nunca
+incorporado de terceiro.
+
+**Alternativa descartada.** Duas. *Incorporar do YouTube ou Vimeo*, que é o caminho mais
+fácil — perdeu porque traz script e cookie de rastreamento, e **reintroduziria o aviso de
+consentimento que a decisão de não medir existiu justamente para evitar**. *Trocar o vídeo
+por sequência de capturas* — perdeu porque as definições pedem o vídeo, e porque produto em
+movimento é o que prova "em uso".
+
+**O que respondeu a pergunta do peso.** Nada, do ponto de vista da primeira leitura: sem
+pré-carregamento, o custo é o pôster, que é só mais uma imagem. E a regra que garante isso
+já existia por outro motivo — *"nada que se mova sem o leitor pedir"*, escrita por conforto
+de leitura, resolve o desempenho de graça.
+
+**Custo aceito.** O arquivo vive no repositório, e o Git guarda binário sem compressão
+incremental: cada versão nova soma ao histórico para sempre. Um recorte curto é irrelevante
+diante dos limites, mas trocar o vídeo cinco vezes deixa cinco cópias lá dentro.
+
+**Consequência.** O vídeo passa a ser **duas peças** no inventário de materiais: o arquivo e
+a imagem de pôster.
