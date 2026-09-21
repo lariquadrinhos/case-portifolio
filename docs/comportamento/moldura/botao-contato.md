@@ -20,10 +20,19 @@ figma:
 > tamanho, nunca pela cor — e dois itens do mesmo nível não têm o que marcar. *"Trabalhos em
 > primeiro lugar"* é ordem, não ênfase.
 >
-> **A barra indica a página atual.** O item correspondente recebe **sublinhado no acento de
-> sistema** e continua sendo declarado como página atual na marcação. Cor e sublinhado
-> juntos, porque cor sozinha não basta; peso fica de fora, para não confundir estado com
-> hierarquia.
+> **A barra indica onde a pessoa está.** O item correspondente recebe **sublinhado no acento
+> de sistema** e é declarado na marcação. Cor e sublinhado juntos, porque cor sozinha não
+> basta; peso fica de fora, para não confundir estado com hierarquia.
+>
+> **Um case pertence a Trabalhos.** É a única relação de pertencimento do site — nenhuma
+> outra página está dentro de outra. Numa página de case, "Trabalhos" recebe o mesmo
+> sublinhado, como seção. A distinção entre "estou em Trabalhos" e "estou dentro de
+> Trabalhos" não é marcada: as duas significam a mesma coisa para quem se orienta, e
+> diferenciá-las exigiria um terceiro tratamento visual sem consequência prática.
+>
+> **Home e erro não recebem sublinhado, e isso é resposta, não ausência.** Na home a pessoa
+> está na entrada, não dentro de uma seção; a home é alcançada pelo nome, que é identidade e
+> não item de navegação. Na página de erro ela não está em lugar nenhum.
 
 Fica à direita da barra fixa. Navegação diz para onde ir; contato diz o que fazer — e essa
 diferença é de **comportamento, não de aparência**. Ao ser acionado, revela o endereço de
@@ -68,14 +77,19 @@ Funcionalidade: Contato na barra
     E é anunciado como página atual por leitor de tela
     E nenhum item muda de peso
 
-  Cenário: O leitor está numa página que a barra não nomeia
-    Dado que o leitor está na home, num case ou na página de erro
+  Cenário: O leitor está numa página de case
+    Dado que o leitor está num dos dois cases
+    Quando a página abre
+    Então "Trabalhos" recebe sublinhado, como seção a que o case pertence
+    E é declarado na marcação como a seção atual
+    E a cor do case segue dominando a tela, com o acento de sistema só no que é interativo
+
+  Cenário: O leitor está na home ou na página de erro
+    Dado que o leitor está numa dessas duas
     Quando a página abre
     Então nenhum item da barra é sublinhado
-    E nenhum item é anunciado como página atual
-    # A home é alcançada pelo nome, que não é item de navegação.
-    # Um case está sob Trabalhos, mas não é Trabalhos. A P38 discute se isso deve mudar;
-    # o comportamento de hoje, porém, está decidido — isto não é lacuna.
+    # Não é ausência de indicador: na home a pessoa está na entrada, não dentro de uma
+    # seção, e na página de erro não está em lugar nenhum.
 
   Cenário: Leitor procura como falar com ela
     Quando o leitor aciona o contato

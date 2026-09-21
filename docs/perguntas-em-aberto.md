@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **15 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **14 perguntas**, nenhuma travando
 
 ---
 
@@ -28,17 +28,6 @@ ler da API na construção.
 Onde ele vive está decidido (011): no contrato da tela. O texto em si é rascunho meu e
 precisa da voz dela.
 **Momento:** antes de desenhar a página de erro. · *Contrato, `erro/`*
-
-### P38 · A página de case sublinha "Trabalhos" como seção?
-A decisão 031 dá sublinhado ao item da página atual. Mas o destaque aparece em **duas das
-seis páginas**: na home ninguém está em Trabalhos nem em Quem sou eu, nas duas de case
-nenhum item é a página atual, e a de erro também não.
-Os cases são onde a pessoa passa mais tempo, e são justamente onde o indicador fica mudo.
-**Opções:** só a página exata recebe o sublinhado, e as quatro ficam sem — como está hoje ·
-a página de case sublinha "Trabalhos" como seção, o que exige declarar o que é seção, já
-que o documento não define · a home sublinha o próprio nome, tratando-o como item.
-**Momento:** antes de desenhar a página de Trabalhos, que é a primeira em que o destaque
-aparece.
 
 ### P32 · O nome aparece duas vezes na home
 As definições dizem que a home tem "nome, cargo, uma frase e um parágrafo", e que a barra

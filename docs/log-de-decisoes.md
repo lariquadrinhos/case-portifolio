@@ -901,3 +901,36 @@ inconsistência em vez de ausência intencional.
 que sim exigiria declarar o que é seção, coisa que o documento não faz. O wireframe da home
 **não pode demonstrar a regra** — na home nenhum item de navegação é a página atual, porque
 ela é alcançada pelo nome. O primeiro desenho que mostra o destaque é o de Trabalhos.
+
+---
+
+## 032 · A página de case sublinha "Trabalhos" como seção
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** moldura · `#escopo`
+
+**Gatilho.** A decisão 031 deu sublinhado ao item da página atual, e o indicador aparecia em
+duas das seis páginas — mudo justamente nos dois cases, que é onde a pessoa passa mais
+tempo.
+
+**Decisão.** Um case pertence a Trabalhos, e numa página de case "Trabalhos" recebe o mesmo
+sublinhado, como seção. **É a única relação de pertencimento do site** — nenhuma outra página
+está dentro de outra.
+
+**Alternativa descartada.** Duas. *Deixar só a página exata* — o indicador ficaria mudo em
+quatro de seis, e nos cases a ausência seria sentida como esquecimento. *A home sublinhar o
+próprio nome*, o que daria simetria — perdeu porque transformaria o elemento de identidade
+em item de navegação; o nome é a marca do site, não uma aba.
+
+**O que decidiu não foi simetria.** Foi perceber que **as duas ausências que sobram são
+respostas certas, não falhas**: na home a pessoa está na entrada, não dentro de uma seção;
+na página de erro não está em lugar nenhum. Quatro de seis com motivo vale mais que seis de
+seis por preenchimento.
+
+**Custo aceito.** "Estou em Trabalhos" e "estou dentro de Trabalhos" ficam indistinguíveis.
+Diferenciá-las exigiria um terceiro tratamento visual, e as duas significam a mesma coisa
+para quem se orienta.
+
+**Verificado contra a regra da cor dominante.** Numa página de case o sublinhado é roxo, de
+sistema, enquanto a trilha é azul ou laranja. Isso não viola *"uma cor dominante por tela"*:
+a regra diz que, dentro de um case, a cor do case domina e **a de sistema aparece só nos
+elementos interativos** — e o item da barra é um link.
