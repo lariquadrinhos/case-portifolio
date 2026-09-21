@@ -3,6 +3,8 @@
 **Os valores não moram aqui.** Moram em variáveis no Figma, e é de lá que descem.
 Duas listas do mesmo hexadecimal criariam a briga que este projeto existe para evitar.
 
+> **`size/display` em Tela pequena passou de 44 para 42 em 21/09/2026** — decisão 034.
+>
 > **Retrato de um sistema incompleto.** O design system ainda será construído no Figma,
 > com todas as variáveis e componentes. O que está abaixo é o que existia em 18/09/2026 —
 > vai crescer e pode mudar de nome. Não é especificação fechada.

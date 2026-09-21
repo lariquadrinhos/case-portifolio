@@ -969,3 +969,35 @@ e tema. A decisão 032 ganhou um caso novo: quando a página atual está dentro 
 palavra "menu" que recebe o sublinhado** — sem isso, a única página escondida seria também a
 única sem indicador. A forma do menu aberto é trabalho da Fase 3; o comportamento dele já
 está contratado.
+
+---
+
+## 034 · O display de tela pequena baixa de 44 para 42, para a frase caber em quatro linhas
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** home · `#restricao`
+
+**Gatilho.** Larissa achou a quebra da hero estreita estranha em cinco linhas e pediu
+quatro, com *"de fazer,"* e *"eu quero"* na mesma linha — antecipando que talvez fosse
+preciso diminuir um pouco.
+
+**Decisão.** `size/display` no modo `Tela pequena` passa de **44 para 42**. `line/display`
+fica em 48. A frase quebra em quatro linhas: *"Se existe uma / forma melhor / de fazer, eu
+quero / descobrir qual é."*
+
+**Alternativa descartada.** Três. *Manter 44 e cinco linhas* — a quebra partia "de fazer,"
+de "eu quero", separando uma unidade de sentido. *Usar 43* — cabe, mas em **327 exatos**,
+sem nenhuma folga: qualquer diferença de renderização quebraria a linha. *Apertar o
+espaçamento entre letras* — traria os 334 para dentro de 327, mas seria valor visual
+escolhido à mão numa tela, exatamente o que a decisão 020 proíbe.
+
+**O que decidiu entre 42 e 43 foi a folga, não o tamanho.** Em 42 a linha mais larga mede
+319, com oito pixels de margem. Em 43 mede 327, que é o limite. E 42 é par, como todos os
+outros valores da escala estreita.
+
+**Custo aceito.** A hero da home encolhe 2px em tela estreita. `line/display` fica em 48
+para um corpo de 42, proporção maior que a de antes — o que é desejável em tamanho menor,
+mas foi consequência, não escolha deliberada de entrelinha.
+
+**Consequência.** A quebra da frase subiu para o contrato da home: **ela é escolhida, não
+automática**, e cada linha fecha uma unidade de sentido. Nenhum outro elemento usa `display`
+em tela estreita, então a mudança não alcança nada além da hero da home.

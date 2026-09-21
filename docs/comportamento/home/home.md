@@ -48,6 +48,9 @@ dentro do bloco. Os números mudam com a largura; a relação não.
   quebra de linha de cada largura é escolhida em função dele — não o contrário. Hoje o
   trecho é *"forma melhor"*, que em 1440 divide linha com o resto da frase e em 375 ocupa
   uma linha só.
+- **A quebra da frase é escolhida, não automática.** Cada linha fecha uma unidade de
+  sentido. Em 1440 são três linhas; em 375, quatro:
+  *"Se existe uma / forma melhor / de fazer, eu quero / descobrir qual é."*
 - A home não tem arquivo de conteúdo próprio — são quatro linhas que mudam junto com a
   forma como ela se apresenta.
 
