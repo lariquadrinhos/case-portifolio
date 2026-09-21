@@ -33,3 +33,9 @@ A trilha sozinha tem comportamento suficiente para um.
 **Acessibilidade não é domínio.** Foco visível, navegação por teclado e respeito a
 movimento reduzido valem em todo componente e aparecem dentro de cada um. Domínio para
 isso vira a página que ninguém abre — e é assim que acessibilidade deixa de ser feita.
+
+**Contrato não aponta para regra por posição.** Nada de *"as duas últimas regras"* ou *"a
+regra acima"* — nomeie a regra. Referência por posição quebra em silêncio quando alguém
+insere uma linha no meio: o texto continua lendo bem e passa a descrever outra coisa. A
+checagem 5 cobra isso. Descrever a tela — *"logo abaixo da barra"* — não é apontar para o
+documento e continua valendo.

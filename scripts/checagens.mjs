@@ -180,6 +180,34 @@ for (const nome of CONTEUDO) {
     : ok(`${nome} — ${blocos.length} bloco(s), ${trilhas.length} capítulo(s)`);
 }
 
+titulo(5, 'Nenhum contrato aponta para uma regra por posição');
+
+// A decisão 006 recusou regra por posição nos arquivos de conteúdo. O mesmo vale para os
+// contratos: "as duas últimas regras" quebra em silêncio quando alguém insere uma no meio —
+// foi o que aconteceu no contrato do tema em 21/09/2026.
+//
+// Só conta apontar para o DOCUMENTO. "logo abaixo da barra" descreve a tela e é legítimo;
+// "a regra acima" aponta para o texto e quebra quando o texto se mexe. A primeira versão
+// desta checagem não separava os dois e acusou seis frases corretas.
+const POSICIONAL = new RegExp(
+  '\\b(?:' +
+    '(?:as|os)\\s+(?:duas|dois|tr\u00eas|quatro|cinco)?\\s*(?:\u00faltim[ao]s?|primeir[ao]s?|anterior(?:es)?)\\s+(?:regras?|itens|pontos|cen\u00e1rios?|par\u00e1grafos?)' +
+    '|(?:a|o)\\s+(?:regra|item|ponto|cen\u00e1rio|par\u00e1grafo|lista|tabela)\\s+(?:acima|abaixo|anterior|seguinte|de cima|de baixo)' +
+  ')\\b',
+  'gi'
+);
+
+let posicionais = 0;
+for (const arq of contratos) {
+  const t = readFileSync(arq, 'utf8');
+  const achados = [...t.matchAll(POSICIONAL)].map((m) => m[0]);
+  if (achados.length) {
+    posicionais += achados.length;
+    erro(`${relative(p('docs/comportamento'), arq)} — aponta por posição: ${[...new Set(achados)].join(', ')}`);
+  }
+}
+if (!posicionais) ok(`${contratos.length} contrato(s) — nenhuma referência por posição`);
+
 // ─────────────────────────────────────────────────────────────
 titulo('—', 'Checagens declaradas e ainda bloqueadas');
 

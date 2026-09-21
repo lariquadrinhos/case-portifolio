@@ -1871,3 +1871,33 @@ resistir a ser reusado**, não só a descrever o que foi feito.
 **Consequência.** Contrato do tema reescrito no ponto, com o fechamento por Esc e clique fora
 explicitado em cenário próprio — ele estava implícito por analogia com o contato, e
 implícito não é verificável.
+
+## 064 · Contrato não aponta para regra por posição, e agora a checagem cobra
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** instrumentacao · `#restricao`
+
+**Gatilho.** Larissa: *"regra tá escrita certo?"* Não estava. O contrato do tema terminava
+com *"Como as duas últimas regras convivem com não piscar"* — e as duas últimas já não eram
+aquelas: eu tinha inserido quatro regras no meio dez minutos antes.
+
+**Decisão.** Contrato não aponta para regra por posição. Nomeia a regra. O parágrafo virou
+*"Como 'sem JavaScript' convive com 'nunca há piscada'"*. **Checagem 5 criada** para cobrar
+isso nos onze contratos.
+
+**Por quê.** É o mesmo defeito que a decisão 006 recusou nos arquivos de conteúdo, aparecendo
+em outro lugar. Referência por posição quebra **em silêncio**: o texto continua lendo bem,
+só passa a descrever outra coisa. Ninguém percebe até tentar usar.
+
+**A primeira versão da checagem estava errada, e isso foi o mais útil.** Ela acusou seis
+frases corretas — *"a faixa aparece logo abaixo da barra"*, *"a caixa ancora logo abaixo do
+que a abriu"*. Nenhuma aponta para o documento: descrevem a tela, onde posição é justamente o
+que se quer dizer. **A distinção que faltava é entre apontar para o texto e descrever a
+interface.** Uma checagem que acusa o inocente é pior que checagem nenhuma, porque ensina a
+ignorar a saída.
+
+**Como foi verificada.** Reintroduzi o defeito original no contrato do tema, rodei, vi a
+checagem acusar, desfiz. Checagem que nunca falhou é checagem que ninguém sabe se funciona.
+
+**Consequência.** Duas correções no contrato do tema: a referência posicional, e a regra de
+"escolher não fecha", que carregava a refutação do motivo errado da 061 — argumento contra
+uma ideia morta é matéria do log, não do manual. Quem abre o contrato quer saber o que vale.
