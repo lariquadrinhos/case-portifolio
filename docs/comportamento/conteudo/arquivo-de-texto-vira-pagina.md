@@ -44,6 +44,9 @@ aparece no site. Não há seção reconhecida por nome — nome muda, marcador n
 - A ordem das etapas na trilha é a ordem em que os marcadores aparecem no arquivo. **Não
   existe lista de etapas em outro lugar** — assim um erro de ordem é impossível de não ver.
 - Seção marcada `<!-- privado -->` não é publicada e não conta para a trilha.
+- **Privado tem dois usos, e os dois são legítimos:** anotação de trabalho que nunca sai do
+  arquivo, e **material de origem** — texto escrito para alimentar outra peça, como as
+  legendas das imagens, em vez de virar prosa na página.
 - Toda imagem tem texto alternativo no próprio markdown e uma `Legenda:` na linha seguinte.
   **Imagem sem legenda não entra**: cada imagem precisa provar uma afirmação do texto, e a
   legenda carrega o detalhe que o texto abriu mão de contar.
@@ -99,12 +102,11 @@ Funcionalidade: Um arquivo de texto vira página
     Quando a construção acontece no caminho de publicação
     Então ela recusa e nada é publicado
 
-  @lacuna
-  Cenário: Bloco "O Produto" do case de Finanças
-    Dado o título "O Produto", sem marcador de trilha, depois do último capítulo
-    Então A DEFINIR — ver pergunta P22
-    # É subseção do último capítulo, capítulo próprio sem rótulo, ou material que não
-    # vai para o site?
+  Cenário: Seção de material de origem
+    Dado um título precedido de marcador privado
+    Quando a construção acontece
+    Então nada dela aparece na página
+    E ela continua no arquivo, disponível para quem escreve as legendas
 ```
 
 ## Transições

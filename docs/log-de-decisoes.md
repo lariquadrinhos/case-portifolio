@@ -1112,3 +1112,39 @@ corpo e entrelinha" (decisão 036) passou a rodar, e confirma: oito níveis dist
 dois modos, com `abertura` e `corpo` dividindo o corpo 18 em tela estreita e separados pela
 entrelinha. E o FR-013 da spec 001 fechou — **a spec não tem mais nenhum marcador de
 clarificação.**
+
+---
+
+## 038 · "O Produto" é material de origem para as legendas, não seção da página
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** conteudo · `#escopo`
+
+**Gatilho.** O bloco "O Produto", no fim do case de Finanças: 45 linhas descrevendo
+funcionalidades, com título e sem marcador de trilha. A convenção o trataria como subseção
+do capítulo 6, e ninguém tinha decidido se era isso mesmo.
+
+**Decisão.** Marcado `<!-- privado -->`. Não vai para a página; **continua no arquivo como
+material de origem para as legendas das imagens.**
+
+**Alternativa descartada.** Três. *Capítulo próprio com rótulo de trilha* — quebraria o
+arco, que vai de Ideia a Resultados; um capítulo depois da conclusão chega tarde. *Subseção
+do capítulo 6* — o que a convenção faria hoje, e desequilibra: uma reflexão curta seguida de
+45 linhas que não são "o que ficou", são "o que é". *Descartar o texto* — perderia material
+bom e necessário.
+
+**O que decidiu foi uma frase das próprias definições**, que eu tinha lido sem conectar:
+*"quando os textos dos cases perderam os exemplos concretos, **o específico saiu junto — e é
+nas imagens que ele volta**; a legenda carrega o detalhe que o texto abriu mão de contar."*
+"O Produto" **é** o específico que saiu — Pendências, treemaps, Consumo Livre, os 18
+indicadores. É conteúdo de legenda escrito em forma de prosa. E a linha editorial fecha:
+*"o produto aparece como evidência, nunca como assunto"*, e uma seção chamada "O Produto"
+faz dele o assunto.
+
+**Custo aceito.** Quem ler o case não aprende, em palavras corridas, o que o produto faz —
+vai depender das imagens e das legendas existirem e serem boas. **Isso transfere peso para
+uma dependência que ainda não foi produzida.** Se as imagens ficarem fracas, este texto é
+o que faz falta, e reverter custa remover um marcador.
+
+**Consequência.** O contrato passou a declarar que **privado tem dois usos legítimos**:
+anotação de trabalho e material de origem. Antes só o primeiro estava previsto, e é por isso
+que este bloco não tinha classificação possível.

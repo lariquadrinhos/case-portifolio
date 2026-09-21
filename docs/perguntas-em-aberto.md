@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **12 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **11 perguntas**, nenhuma travando
 
 ---
 
@@ -35,11 +35,6 @@ dois, com pesos diferentes · a hera traz só o cargo.
 Barra, botão, card, item da trilha, bloco de destaque, bloco de mídia com legenda e campo
 de foco. Nenhum desenhado, e a lista pode estar incompleta.
 **Momento:** Fase 2. · *Contrato, `componentes/`*
-
-### P22 · O bloco "O Produto", no case de Finanças
-Título sem marcador de trilha, depois do último capítulo. É subseção do último capítulo,
-capítulo próprio sem rótulo, ou material que não vai para o site?
-**Momento:** antes de construir a página do case. · *Contrato, `conteudo/`*
 
 ### P21 · A ordem do "próximo case" com três cases
 A decisão 003 resolve dois cases sem exceção, mas não define a ordem com três.
