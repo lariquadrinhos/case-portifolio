@@ -43,15 +43,17 @@ cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um
 - **Todos os seis blocos têm a mesma largura.** Palavra sozinha na última linha é resolvida
   por `text-wrap: pretty`, não por estreitar um bloco: a largura por bloco não existe na
   versão estreita, onde a margem governa.
-- **O currículo é botão; o contato é texto.** Baixar um arquivo é ação dentro do site, e
-  botão promete isso; o e-mail e o LinkedIn levam para fora e aparecem como palavra.
+- **Nada aqui é botão.** Currículo, LinkedIn e e-mail são palavra sublinhada. Os três apontam
+  para fora do site — o PDF abre no leitor, o LinkedIn em outra aba, o e-mail no cliente de
+  correio — e a forma promete o mesmo destino para os três.
+- **Os três vêm sob um convite único**, "Mais sobre mim:", em vez de um convite por link.
 
 ## Peças
 
 | Nome no cenário | Figma | Storybook |
 |---|---|---|
 | foto | `116:48` | não se aplica |
-| currículo em PDF | `116:73` | não se aplica |
+| mais sobre mim | `127:32` | não se aplica |
 | valores em linhas | `117:32` | não se aplica |
 
 ## Comportamento
@@ -76,6 +78,13 @@ Funcionalidade: Quem sou eu
     Dado que a página está aberta
     Quando a pessoa aciona o currículo
     Então o arquivo em PDF é entregue
+    E o currículo aparece como palavra sublinhada, não como botão
+
+  Cenário: Os três caminhos para fora têm a mesma forma
+    Dado que a página está aberta
+    Quando o fim da página aparece
+    Então currículo, LinkedIn e e-mail aparecem como palavra sublinhada
+    E nenhum deles aparece como botão
 
   Cenário: A pessoa entra em contato a partir daqui
     Dado que a página está aberta

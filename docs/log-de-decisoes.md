@@ -1506,3 +1506,32 @@ existe lá. `text-wrap: pretty` resolve nas duas larguras, de graça, e degrada 
 
 **Consequência.** Regra dos blocos curtos escrita nas definições. P46 resolvida: medida abaixo
 de 65 é permitida nesses blocos, com piso em torno de 45. Os seis valores voltaram a 411px.
+
+## 052 · Em "Quem sou eu" nada é botão: os três caminhos para fora têm a mesma forma
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** quem-sou-eu · `#reversao`
+
+**Reverte a decisão 048**, que tinha posto o currículo como botão e o contato como texto.
+
+**Gatilho.** Larissa, redesenhando o fim da página: o currículo passa a ser link escrito, o
+LinkedIn ganha link próprio, e os três entram sob um convite único — "Mais sobre mim:".
+
+**Decisão.** Currículo, LinkedIn e e-mail são **palavra sublinhada**. Nada nessa página é
+botão.
+
+**Por quê.** A 048 tinha lido "baixar um arquivo" como ação que acontece dentro do site. Mas
+o PDF não acontece dentro: ele abre no leitor, ou vai para a pasta de downloads. Os três
+saem — o que muda é para onde, não se saem. A regra da 047 ("a forma promete o destino")
+continua valendo; o que estava errado era a classificação do download, não a regra.
+
+**Alternativa descartada.** Manter o botão e mudar só o LinkedIn. Perdeu porque deixaria dois
+destinos externos com formas diferentes na mesma lista de quatro linhas, e a diferença de
+forma teria que significar alguma coisa que não significa.
+
+**Custo aceito.** O currículo perde destaque — era o único contorno da página. Aceito porque
+o convite acima ("Mais sobre mim:") já agrupa os três, e a página inteira não tem ação
+principal disputando atenção.
+
+**Consequência.** O bloco `116:73` foi substituído por `127:32`. O contrato ganhou o cenário
+dos três caminhos com a mesma forma. Com isso, o botão deixa de existir em "Quem sou eu" —
+resta como forma apenas onde há ação principal dentro do site.
