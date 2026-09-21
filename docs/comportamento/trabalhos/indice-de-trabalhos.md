@@ -3,7 +3,7 @@ fluxo: trabalhos/indice-de-trabalhos
 dominio: trabalhos
 dono: design
 status: rascunho
-atualizado: 2026-09-18
+atualizado: 2026-09-21
 
 figma:
   file: hwClE9Xpm51OW4vPsCCn8J
@@ -25,6 +25,7 @@ Os cases em cards. É para onde a home leva e para onde a barra aponta. Existe p
 - Cada card carrega a cor do seu case: Finanças azul, Reembolso laranja.
 - Título e linha vêm do bloco `<!-- bloco: card -->` do arquivo de cada case.
 - **O site nasce com dois cases e sem card de "em breve".**
+- **A página tem título**, acima dos cards, convidando a olhá-los.
 - **A ordem dos cards é fixa e declarada, nunca derivada de data.** Hoje: Finanças PF+PJ,
   depois Reembolso SulAmérica.
 
@@ -36,6 +37,21 @@ não. Fixa, cada mudança de ordem é uma decisão que alguém tomou.
 resposta mais completa a "o que essa pessoa sabe fazer" — vai da ideia ao código em uso por
 uma pessoa real. Reembolso é mais fácil de ler de relance, mas redesenho de fluxo é o
 formato que quem faz triagem já viu muitas vezes.
+
+## Texto
+
+Copy de interface, que por decisão 011 vive aqui e não nos arquivos de conteúdo:
+
+| Peça | Texto |
+|---|---|
+| Título da página | **Dois problemas que eu vi de perto, e o que fiz com eles.** |
+
+> `@lacuna` · **Rascunho meu, à espera da voz dela.** É ela falando no site dela. O título
+> convida e diz algo verdadeiro dos dois cases — os dois começaram observando uma pessoa
+> travar numa tarefa comum. Ver pergunta P41.
+
+Título e linha de cada card **não** estão aqui: são conteúdo autoral e vêm do bloco
+`<!-- bloco: card -->` do arquivo de cada case.
 
 ## Peças
 
@@ -55,6 +71,7 @@ Funcionalidade: Índice de trabalhos
 
   Cenário: A pessoa escolhe entre os trabalhos
     Quando o índice abre
+    Então o título da página aparece acima dos cards
     Então cada case aparece como um card, com capa, título e uma linha
     E cada card carrega a cor do seu case
     E nenhum card mostra a categoria do produto

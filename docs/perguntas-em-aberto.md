@@ -31,14 +31,10 @@ aparece na barra.
 dois, com pesos diferentes · a hera traz só o cargo.
 **Momento:** antes de fechar o wireframe da home. · *Contrato, `home/`*
 
-### P39 · A página de Trabalhos tem título?
-O documento descreve a página como "índice dos cases, em cards" e não menciona título. Sem
-ele, a página começa direto nos cards, logo abaixo da barra. Com ele, ganha um elemento que
-nenhuma definição pediu.
-**Opções:** sem título, e a barra com o sublinhado basta para dizer onde se está · título
-visível, no nível de `titulo-case` ou `titulo-cap` · título presente só na marcação, para
-leitor de tela, sem aparecer na tela.
-**Momento:** antes de fechar o desenho de Trabalhos. · *Wireframe, marcado na tela*
+### P41 · O texto do título de Trabalhos, em rascunho
+Que a página tem título está decidido (040). O texto — *"Dois problemas que eu vi de perto,
+e o que fiz com eles."* — é rascunho meu e precisa da voz dela.
+**Momento:** antes de publicar Trabalhos.
 
 ### P40 · Os valores provisórios do card de case
 Três decisões foram tomadas por mim para o componente existir, e nenhuma vem de documento:

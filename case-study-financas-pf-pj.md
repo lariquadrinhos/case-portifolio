@@ -131,8 +131,8 @@ abre o detalhe e permite **redirecionar dinheiro na hora**.
 Todo relatório navega mês a mês, com Consolidado/PF/PJ e Pago/Previsto sempre à vista, nunca atrás
 de um filtro escondido.
 
-**Consumo Livre** foi pensado para quem quer ter um dinehrio livre para gastar como quiser sem rótulo.
-Um clique,só o valor. Sem categoria, sem conta, sem data.
+**Consumo Livre** foi pensado para quem quer ter um dinheiro livre para gastar como quiser sem rótulo.
+Um clique, só o valor. Sem categoria, sem conta, sem data.
 **Entradas e Saídas** mostra de onde veio e pra onde foi o dinheiro do mês, linha a linha. E todo
 pagamento, reajuste ou divergência gera um **Evento** automático.
 

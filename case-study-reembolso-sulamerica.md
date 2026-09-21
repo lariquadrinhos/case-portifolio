@@ -2,7 +2,7 @@
 
 <!-- bloco: card -->
 # Toda semana, do zero
-Redesenhei o fluxo de usuário para pedido de reembolso recorrênte pelo app de seguros.
+Redesenhei o fluxo de usuário para pedido de reembolso recorrente pelo app de seguros.
 
 
 <!-- bloco: case -->
@@ -12,7 +12,7 @@ Redesenhei o fluxo de usuário para pedido de reembolso recorrênte pelo app de 
 
 # Toda semana, do zero
 
-**Observei de perto alguem que precisa fazer pedido de reembolso. Apesar de ser uma tarefa recorrênte, o aplicativo trata como se fosse sempre a primeira vez. Decidi redesenhar o fluxo para que a segunda vez fosse diferente da primeira.**
+**Observei de perto alguém que precisa fazer pedido de reembolso. Apesar de ser uma tarefa recorrente, o aplicativo trata como se fosse sempre a primeira vez. Decidi redesenhar o fluxo para que a segunda vez fosse diferente da primeira.**
 
 **Papel** · UX/UI Designer. Do diagnóstico ao protótipo.
 
@@ -22,7 +22,7 @@ Redesenhei o fluxo de usuário para pedido de reembolso recorrênte pelo app de 
 
 **Repositório** · Documentação do processo, do diagnóstico às regras de implementação 
 
-Acompanhei a frustação de alguém que eu conheço repetindo todo mês um processo que o aplicativo tornava mais difícil do que precisava ser. Antes de propor qualquer coisa eu medi o fluxo real, tela por tela. E  reconstruí o sistema visual do próprio aplicativo. O resultado é :um fluxo que se resolve em 5 telas com imput ativo e captura inicial que despensa digitação e um oboarding que coleta informações para que o usuário não precise repetir. Este case vai até o prototipo, onde o fluxo proposto pode ser testado.
+Acompanhei a frustração de alguém que eu conheço repetindo todo mês um processo que o aplicativo tornava mais difícil do que precisava ser. Antes de propor qualquer coisa eu medi o fluxo real, tela por tela. E reconstruí o sistema visual do próprio aplicativo. O resultado é: um fluxo que se resolve em 5 telas com input ativo e captura inicial que dispensa digitação e um onboarding que coleta informações para que o usuário não precise repetir. Este case vai até o protótipo, onde o fluxo proposto pode ser testado.
 
 ---
 
@@ -33,15 +33,15 @@ Acompanhei a frustação de alguém que eu conheço repetindo todo mês um proce
 
 Fiz uma pesquisa qualitativa com um participante: observação repetida, conversa e devolutiva sobre a proposta. O que me deu uma suspeita antes de abrir qualquer ferramenta: o problema não era uma tela específica, era a desordem.
 
-**Tranformei "acho que tá ruim" em diagnóstico.**
+**Transformei "acho que tá ruim" em diagnóstico.**
 
-Percorri o fluxo real tela por tela e avaliei cada uma contra as dez heurísticas de usabilidade de Nilsen, com nota e gravidade, amarrando cada problema ao lugar exato onde acontece.
+Percorri o fluxo real tela por tela e avaliei cada uma contra as dez heurísticas de usabilidade de Nielsen, com nota e gravidade, amarrando cada problema ao lugar exato onde acontece.
 
 Depois mapeei o caminho como a pessoa o vive, anotando em cada etapa o que ela faz e o que trava. Foi esse mapa que mostrou onde alguém provavelmente desiste.
 
 **A restrição não era o inimigo.**
 
-Percebi que muitas das etapas mais pesadas existem por obrigação regulatória e nenhum redesenho pode removê-las. O peso não vinha delas, vinham de onde estavam e quantas vezes se repetiam. A validação biométrica acontecia no fim, quando desistir já custa caro. O termo reaparecia a cada pediso. Os dados bancários eram redigitados todo mês, mesmo já estando no cadastro do plano. Marquei cada uma e mudei a pergunta: em vez de "isso precisa existir?", passei a perguntar "isso precisa existir *assim*, e *agora*?". 
+Percebi que muitas das etapas mais pesadas existem por obrigação regulatória e nenhum redesenho pode removê-las. O peso não vinha delas, vinham de onde estavam e quantas vezes se repetiam. A validação biométrica acontecia no fim, quando desistir já custa caro. O termo reaparecia a cada pedido. Os dados bancários eram redigitados todo mês, mesmo já estando no cadastro do plano. Marquei cada uma e mudei a pergunta: em vez de "isso precisa existir?", passei a perguntar "isso precisa existir *assim*, e *agora*?". 
 
 ---
 
@@ -52,9 +52,9 @@ Percebi que muitas das etapas mais pesadas existem por obrigação regulatória 
 
 Antes de desenhar escrevi cinco princípios, cada um amarrado às heuristicas que ele corrige.
 
-1. OCR e reuso subbstituem digitação sempre que o dado já existe em algum lugar.
+1. OCR e reuso substituem digitação sempre que o dado já existe em algum lugar.
 2. Stepper persistente, porque ninguém deveria se perguntar quanto falta.
-3. Validação no momento da digitação, com memsagem que diz o que fazer.
+3. Validação no momento da digitação, com mensagem que diz o que fazer.
 4. Linguagem cidadã, com ajuda ao lado do termo difícil.
 5. Modo recorrente, porque pedir pela quarta vez não pode pesar como a primeira.
 
@@ -91,11 +91,11 @@ validação de identidade.
 
 **Um fluxo no papel é uma hipótese. Desenhar cada tela é como se testa.**
 
-Levei o fluxo novo para o figma e criei os wirefreames. Nesta etapa foi importante observar a necessidade de telas menos obvias do fluxo: as telas de erro, para cumprir a promessa de validação inline com mensagem prescritiva. Também desenhei as telas de carregamento, primeiro acesso e histórico.
+Levei o fluxo novo para o Figma e criei os wireframes. Nesta etapa foi importante observar a necessidade de telas menos óbvias do fluxo: as telas de erro, para cumprir a promessa de validação inline com mensagem prescritiva. Também desenhei as telas de carregamento, primeiro acesso e histórico.
 
 Com a estrutura montada, veio a necessidade de ver como as telas reais ficariam. E eu não precisava inventar uma identidade visual. Mantendo a mesma linguagem visual, a única variável que muda é o fluxo, e a comparação passa a significar alguma coisa.
 
-Então reconstrui, o mais fielmente possível, o sistema visual que já existia. Primeiro, eu li o CSS público do site da SulAmérica, que expõe o design system da empresa: 149 variáveis de cor, rampas completas e a família tipográfica declarada. Segundo, medi as capturas capturas de tela do app. Escrevi scripts que contam pixels: frequência de cada cor, altura de caixa alta para deduzir o corpo do texto,perfil da curva dos cantos para achar o raio, contraste de cada par de texto e fundo.
+Então reconstruí, o mais fielmente possível, o sistema visual que já existia. Primeiro, eu li o CSS público do site da SulAmérica, que expõe o design system da empresa: 149 variáveis de cor, rampas completas e a família tipográfica declarada. Segundo, medi as capturas de tela do app. Escrevi scripts que contam pixels: frequência de cada cor, altura de caixa alta para deduzir o corpo do texto, perfil da curva dos cantos para achar o raio, contraste de cada par de texto e fundo.
 ### O achado que mudou meu diagnóstico
 
 **O app não segue o sistema da própria empresa.**

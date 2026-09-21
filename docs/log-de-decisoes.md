@@ -1182,3 +1182,52 @@ componente. Eles sustentam o wireframe; não são decisão de design system.
 **Consequência.** Trabalhos existe nas duas larguras, e é a **primeira tela a mostrar o
 sublinhado de página atual** (decisão 031). Abre também a **P39**: a página tem título? O
 documento não diz, e o wireframe traz a lacuna marcada em vez de um título inventado.
+
+---
+
+## 040 · Trabalhos tem título, e ele convida em vez de rotular
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** trabalhos · `#escopo`
+
+**Gatilho.** O wireframe trazia a lacuna P39: o documento descreve a página como "índice
+dos cases, em cards" e não menciona título.
+
+**Decisão.** A página tem título, acima dos cards, e ele **convida em vez de rotular**.
+Rascunho: *"Dois problemas que eu vi de perto, e o que fiz com eles."*
+
+**Alternativa descartada.** Duas. *Sem título*, com a barra sublinhada bastando para dizer
+onde se está — perdeu porque a barra diz **onde**, e o título pode dizer **por que vale
+olhar**, que é outra função. *Um rótulo como "Trabalhos"* — repetiria o item da barra e não
+acrescentaria nada.
+
+**Por que este texto.** Ele diz algo que é verdade dos dois cases e que nenhum dos dois diz
+sozinho: **ambos começaram observando uma pessoa travar numa tarefa comum.** Finanças partiu
+de alguém tentando juntar duas vidas financeiras numa planilha; Reembolso, de alguém
+repetindo todo mês um pedido que o aplicativo tratava como se fosse o primeiro.
+
+**Custo aceito.** É rascunho meu na voz dela — registrado como P41.
+
+---
+
+## 041 · Correção de digitação nos textos passa a ser feita sem perguntar
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** conteudo · `#escopo`
+
+**Gatilho.** Apontei um erro de digitação no card de Reembolso e Larissa autorizou a
+corrigir sempre.
+
+**Decisão.** Erros de digitação e pontuação nos arquivos de conteúdo são corrigidos sem
+perguntar. **Mudança de palavra, de sentido ou de construção continua sendo dela.**
+
+**Alternativa descartada.** Continuar apontando cada um — perdeu por atrito sem ganho: um
+erro de digitação não tem duas leituras possíveis.
+
+**Consequência imediata.** 22 correções, 20 delas no case de Reembolso. A mais séria era
+**"Nilsen" onde se lê Nielsen** — o nome do autor das dez heurísticas, num case cujo método
+é avaliação heurística. É o tipo de erro que quem faz triagem em UX nota.
+
+**Um efeito colateral que vale registrar.** Corrigir o arquivo de texto **não corrigiu o
+desenho**: as instâncias do card no Figma tinham a cópia antiga, e precisaram ser
+sincronizadas à mão. É a mesma classe de problema da exportação de tokens (decisão 037) —
+**o Figma guarda cópias daquilo que o repositório é fonte**, e nada avisa quando as duas
+divergem.
