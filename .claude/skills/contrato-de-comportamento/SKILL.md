@@ -205,6 +205,10 @@ Marca todo caminho não decidido. **Use sem economia.**
 Quando a lacuna for escolha entre caminhos, escreva as opções como comentário — para a
 decisão ser **tomada**, não opinada.
 
+**A frase `ver pergunta PNN` é reservada a lacunas.** Um cenário decidido pode mencionar uma
+pergunta relacionada, mas com outra redação — senão a checagem conta citação onde não há
+lacuna, e um comportamento decidido passa a parecer indeciso.
+
 ---
 
 ## 4. O `.api.md`

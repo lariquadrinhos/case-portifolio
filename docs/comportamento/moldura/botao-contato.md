@@ -74,7 +74,8 @@ Funcionalidade: Contato na barra
     Então nenhum item da barra é sublinhado
     E nenhum item é anunciado como página atual
     # A home é alcançada pelo nome, que não é item de navegação.
-    # Um case está sob Trabalhos, mas não é Trabalhos — ver pergunta P38.
+    # Um case está sob Trabalhos, mas não é Trabalhos. A P38 discute se isso deve mudar;
+    # o comportamento de hoje, porém, está decidido — isto não é lacuna.
 
   Cenário: Leitor procura como falar com ela
     Quando o leitor aciona o contato

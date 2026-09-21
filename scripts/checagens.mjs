@@ -67,6 +67,8 @@ for (const f of contratos) {
 
 // ─────────────────────────────────────────────────────────────
 titulo(2, 'Toda @lacuna aponta para uma pergunta que existe');
+nota('A frase `ver pergunta PNN` é reservada a lacunas: cenário decidido que mencione uma');
+nota('  pergunta relacionada usa outra redação, senão a contagem acusa lacuna onde não há.');
 
 const perguntasTxt = existsSync(p('docs/perguntas-em-aberto.md'))
   ? readFileSync(p('docs/perguntas-em-aberto.md'), 'utf8')
