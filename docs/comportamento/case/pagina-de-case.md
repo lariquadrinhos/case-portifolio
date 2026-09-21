@@ -52,6 +52,11 @@ etapa, como evidência, não como declaração à parte.
   Ver decisão 042.
 - **Em tela estreita a mídia desce para baixo do texto**, em vez de ficar ao lado: a largura
   não comporta duas faixas. A regra da mídia ao lado vale onde há grade para ela.
+- **Saída para fora do site é link, não botão.** Botão promete ação dentro do site; palavra
+  sublinhada promete ir embora. O rótulo avisa que abre em nova aba.
+- Cada link externo vem **precedido de um convite** que diz o que a pessoa vai encontrar lá.
+- **Protótipo só onde existe.** Reembolso tem; Finanças não tem e não terá — nele o link
+  verificável é o repositório.
 - Ao fim da página vêm o card do próximo case e o convite ao contato.
 - A barra marca **Trabalhos** como seção, porque um case pertence a Trabalhos.
 
@@ -64,6 +69,7 @@ etapa, como evidência, não como declaração à parte.
 | capítulo | `107:36` | não se aplica |
 | marca-texto | `110:23`, `110:24` | não se aplica |
 | página em tela estreita | `108:22` | não se aplica |
+| convite ao repositório | `114:27` | não se aplica |
 
 ## Comportamento
 
@@ -90,6 +96,13 @@ Funcionalidade: Página de case
     E o texto corrido ocupa seis colunas
     E a mídia que prova aquele capítulo fica ao lado, com legenda abaixo
     E o topo da mídia alinha com a primeira linha do texto, não com o título
+
+  Cenário: A pessoa vai para fora do site
+    Dado que o case tem link externo
+    Quando ela chega ao fim da leitura
+    Então um convite diz o que ela vai encontrar
+    E o endereço aparece como palavra sublinhada, não como botão
+    E o rótulo avisa que abre em nova aba
 
   Cenário: Alguém não consegue ver o vídeo
     Dado que a mídia daquele capítulo é um vídeo sem áudio
@@ -124,4 +137,4 @@ Funcionalidade: Página de case
 |---|---|---|
 | Case | Fim da página | Card do próximo case e convite ao contato |
 | Case | Item da trilha | A mesma página, na seção correspondente |
-| Case | Botão de protótipo | Nova aba |
+| Case | Link externo | Nova aba |

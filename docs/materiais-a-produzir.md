@@ -38,10 +38,12 @@ carrega o detalhe que o texto abriu mão de contar."*
 
 | O que falta | Onde aparece |
 |---|---|
-| Endereço do **protótipo** | Botão ao fim da página |
-| Endereço do **repositório** | Botão ao fim da página, e na tira de destaques |
+| Endereço do **repositório** | Link ao fim da página, e na tira de destaques |
 
 O arquivo de conteúdo traz hoje o marcador `[link]` na linha do repositório, sem endereço.
+
+**O protótipo saiu.** Este case não tem protótipo e não terá — o link verificável dele é o
+repositório. Ver decisão 047.
 
 ### Imagem de capa
 
@@ -77,6 +79,8 @@ conteúdo:
 - O convite ao contato ao fim de cada case.
 - O texto da página de erro — rascunhado, à espera da voz dela (P31).
 - O título da página de Trabalhos — rascunhado, à espera da voz dela (P41).
+- O convite ao repositório — rascunhado: *"O processo inteiro está no repositório, decisão
+  por decisão."*
 
 ---
 
@@ -86,10 +90,10 @@ conteúdo:
 |---|---|
 | Imagens e vídeo | **6**, só no case de Finanças |
 | Legendas | **6** |
-| Links | **2** |
+| Links | **1** |
 | Capas de card | **2**, uma por case |
 | Materiais fora dos cases | **3** |
-| Textos de interface | **3** |
+| Textos de interface | **4** |
 
 **Nada disso trava o desenho.** Trava a publicação — as definições listam imagens, capas,
 currículo, protótipos e imagem de compartilhamento como dependências, não acabamento.

@@ -1388,3 +1388,38 @@ diante dos limites, mas trocar o vídeo cinco vezes deixa cinco cópias lá dent
 
 **Consequência.** O vídeo passa a ser **duas peças** no inventário de materiais: o arquivo e
 a imagem de pôster.
+
+---
+
+## 047 · Saída para fora do site é link, não botão; e o protótipo sai deste case
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** case · `#reversao` `#escopo`
+
+**Reverte "botão de protótipo em cada case"**, escrito nas definições — nas duas metades da
+frase.
+
+**Gatilho.** Larissa, vendo o fim da página desenhado: **"botão dá sensação de dentro do
+site; link sublinhado o usuário entende que vai pra fora."** E: o protótipo do case de
+Finanças não existe e não será feito.
+
+**Decisão.** Saída para fora do site é **link sublinhado**, precedido de um convite que diz
+o que a pessoa vai encontrar. **Protótipo só onde existe** — Reembolso tem, Finanças não.
+
+**Alternativa descartada.** Manter o botão com rótulo avisando que sai. Perdeu porque
+**a forma promete antes do rótulo explicar**: botão é a forma de "acontece algo aqui", e um
+aviso em letra menor não desfaz a promessa que o contorno já fez. A afordância chega
+primeiro que o texto.
+
+**O que isso generaliza.** A decisão 030 já tinha tirado o contorno do contato por ele
+competir com os cases; aqui o contorno sai por outro motivo — **prometia o destino errado**.
+São razões diferentes chegando na mesma conclusão: neste site, contorno de botão é reservado
+para a ação principal, e o resto é palavra.
+
+**Custo aceito.** Um link é menos visível que um botão. O repositório é a única prova
+verificável deste case, e passa a chamar menos atenção do que chamava.
+
+**Consequência.** O inventário de materiais perdeu um link e ganhou um texto: o convite ao
+repositório, hoje rascunhado como *"O processo inteiro está no repositório, decisão por
+decisão."* O contrato ganhou o cenário da saída externa. E a promessa de "protótipo em cada
+case" deixa de existir — a lista de dependências do PRD já não pode cobrar um protótipo que
+não será feito.
