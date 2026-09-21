@@ -8,6 +8,7 @@
 | [`comportamento/`](comportamento/) | o manual de telas: o que cada tela faz e onde ela está no Figma | o código |
 | [`speclist/`](speclist/) | o que vamos construir agora, em que passos | — |
 | [`spec/`](spec/) | os valores visuais, vindos do Figma | o código |
+| [`materiais-a-produzir.md`](materiais-a-produzir.md) | o que falta de imagem, link e texto, derivado do desenho | — |
 | [`perguntas-em-aberto.md`](perguntas-em-aberto.md) | o que falta decidir, e quando deixa de poder esperar | — |
 | [`log-de-decisoes.md`](log-de-decisoes.md) | o que aconteceu, em que ordem, e o que perdeu | **nada** |
 | `loop-produto-playbook.md` | como o trabalho foi conduzido, com os prompts | — |
