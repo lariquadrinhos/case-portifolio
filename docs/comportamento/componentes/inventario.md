@@ -34,6 +34,10 @@ Usado no índice de Trabalhos e ao fim de cada case. Carrega a cor do case de de
 - **O componente não mantém a proporção da capa ao ser redimensionado** — a altura é fixa e
   precisa ser ajustada em cada instância. É limitação da construção de hoje, e a Fase 2
   precisa resolver, senão cada tela ajusta à mão e elas divergem.
+- **Texto padrão do componente propaga para as instâncias; texto sobrescrito, não.** O card
+  traz o conteúdo de um dos cases como padrão, e o outro é sobrescrito em cada uso — então
+  corrigir o arquivo de conteúdo sincroniza um e deixa o outro para trás. Enquanto o Figma
+  guardar cópia do texto, essa assimetria existe.
 - Valores de tipo e proporção são **provisórios**: preenchidos para o componente existir,
   não escolhidos. A pergunta P40 os trata; o componente, porém, existe e funciona — isto
   não é lacuna.

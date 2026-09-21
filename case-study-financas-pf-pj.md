@@ -2,7 +2,7 @@
 
 <!-- bloco: card -->
 # A planilha que virou produto
-Desenvolvi uma aplicação desktop para organização financeira para pessoas PF+PJ
+Desenvolvi uma aplicação desktop para organização financeira para pessoas PF+PJ.
 
 <!-- bloco: case -->
 
