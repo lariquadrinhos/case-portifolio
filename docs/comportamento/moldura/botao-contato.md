@@ -58,6 +58,9 @@ e-mail escrito por extenso e o LinkedIn.
 - Quando a página atual está dentro do menu, **é a palavra "Menu" que recebe o sublinhado**.
   Sem isso, a única página escondida seria também a única sem indicador.
 - Acionar o botão revela duas saídas: o e-mail e o LinkedIn.
+- **Toda sobreposição fica a 12px do que a abriu** — contato, menu e tema, nas duas larguras.
+  Quando o gatilho é item da barra, a caixa pende da borda de baixo da barra, não da palavra:
+  a palavra acaba dentro da barra, e uma caixa saindo do meio dela cobriria a própria barra.
 - **A caixa se comporta diferente nas duas larguras, e o que decide é o dedo.** No desktop
   ela ancora logo abaixo do que a abriu e não tem véu — o clique fora tem mira precisa. Em
   tela estreita ela ocupa a largura e ganha véu, que é o alvo grande para recolher.

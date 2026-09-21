@@ -1976,3 +1976,25 @@ que não nomeia nada — então as opções precisam se nomear sozinhas. **Não 
 
 **Consequência.** Os três rótulos alinham na mesma coluna: "Quem sou eu" reserva a largura do
 sinal de escolhido mesmo sem tê-lo. Sem isso a lista ficava desencontrada em 28px.
+
+## 068 · As sobreposições ficam todas a 12px do que as abriu
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** moldura · `#correcao`
+
+**Gatilho.** Larissa: *"agora o desktop, abre e vê se ficou certo."* A caixa de tema estava a
+16px da barra; as outras três a 12px.
+
+**Decisão.** Doze, nas quatro. E a regra ganha a parte que faltava: **quando o gatilho é item
+da barra, a caixa pende da borda de baixo da barra, não da palavra.** A palavra acaba dentro
+da barra — uma caixa saindo do meio dela cobriria a própria barra.
+
+**Por que um número solto passa despercebido.** Dezesseis é valor legítimo da escala, e a
+caixa não parecia errada olhando sozinha. Só aparece comparando as quatro, e ninguém compara
+quatro telas espalhadas pelo arquivo de propósito. **Foi conferência pedida que achou, não
+inspeção de rotina** — e é o tipo de divergência que nenhuma das cinco checagens pega, porque
+elas leem os documentos e este número mora no Figma.
+
+**O que mais foi conferido e estava certo.** A caixa termina em 1360, igual ao fim de "Tema"
+e à margem da página. Os dois rótulos começam na mesma coluna, com "Escuro" reservando a
+largura do sinal. A tipografia é 18/30, a dos itens da barra — o menu estreito usa 18/32
+porque lá a escala é outra.
