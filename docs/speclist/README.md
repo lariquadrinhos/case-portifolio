@@ -15,4 +15,4 @@ sobre o produto, a spec é plano de trabalho.
 
 | Spec | Estado |
 |---|---|
-| [`001-construir-e-publicar`](001-construir-e-publicar/) | Rascunho · 3 clarificações pendentes (P07, P08, P15) |
+| [`001-construir-e-publicar`](001-construir-e-publicar/) | Spec, plano e 41 tarefas · US1 disponível agora; US2 parcialmente bloqueada pelas Fases 2 e 3 |

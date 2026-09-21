@@ -595,3 +595,43 @@ nenhum deles inventado para preencher.
 **O que costuma dar errado.** Preencher os campos do template porque eles existem. Três
 seções da spec só têm conteúdo porque havia decisão registrada para colocar nelas; as
 Assumptions citam as decisões 009 e 022 por número, justamente para o plano não reabri-las.
+
+---
+
+## Trecho 14 · Do contrato ao plano de trabalho
+
+**Para que serve.** Transformar a spec em tarefas executáveis.
+**Antes de começar, precisa existir:** a spec clarificada e a constituição.
+
+**Pedidos**
+
+> roda o /speckit-clarify
+
+> roda o /speckit-plan
+
+> roda o /speckit-tasks
+
+**Voltou.** Uma sessão de clarificação com **uma** pergunta feita, o plano com fases 0 e 1,
+e 41 tarefas em seis fases.
+
+**Conferi contra.** A constituição, em portão por portão, antes e depois da Fase 1. E os
+arquivos reais do projeto: a maior incógnita do plano — quanto de markdown a construção
+precisa entender — foi **medida**, não estimada, e o resultado mostrou três recursos que não
+aparecem em lugar nenhum.
+
+**O que a medição mudou.** Sem ela, escrever um analisador próprio seria teimosia e usar uma
+biblioteca seria prudência. Com ela, o subconjunto cabe em 150 a 200 linhas e a decisão vira
+defensável. **Medir transformou uma questão de gosto numa questão de tamanho.**
+
+**Duas coisas que eu me recusei a gerar.** A pasta `contracts/`, que o template prevê — a
+interface entre os textos e a construção já é o contrato do domínio `conteudo`, e criá-la
+duplicaria. E qualquer tarefa que decidisse aparência: isso é das Fases 2 e 3, no Figma, e
+trazê-lo para as tarefas seria o design acontecendo por acidente dentro da implementação.
+
+**O achado que vale mais.** Mapeando as tarefas ficou claro que **as três histórias não estão
+igualmente disponíveis**: a US1 não depende de nenhum desenho e pode ser feita hoje; a US2
+tem a estrutura livre e a aparência bloqueada pelas Fases 2 e 3. Isso está escrito no topo do
+arquivo, em vez de descoberto por quem fosse executar.
+
+**O que costuma dar errado.** Gerar tarefas na ordem do template em vez da ordem das
+dependências reais — e produzir uma lista em que a primeira tarefa não pode começar.
