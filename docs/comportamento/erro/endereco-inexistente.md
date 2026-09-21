@@ -34,13 +34,14 @@ servidor. Explica o que aconteceu e oferece saída.
 
 ## Texto
 
-> `@lacuna` · **Rascunho, à espera de aprovação dela.** É a voz dela falando no site dela,
-> então o texto abaixo é proposta, não decisão. A P47 cobra.
-
-**Título** · Essa página não existe.
-**Corpo** · O endereço que você abriu não leva a lugar nenhum. Pode ter mudado, ou pode
-ter vindo com um erro de digitação.
+**Título** · Esse endereço não leva a lugar nenhum.
+**Corpo** · Pode ser um link meu que envelheceu, ou um erro de digitação. De qualquer
+forma, o que você procurava deve estar em um desses caminhos.
 **Saídas** · Ver os trabalhos · Voltar para a home · Falar comigo
+
+> **O corpo assume a falha antes de oferecer a saída.** "Um link meu que envelheceu" tira a
+> culpa de quem leu — é a mesma postura dos cases, olhar o sistema e não o usuário. Alterar
+> este texto é alterar este arquivo.
 
 ## Peças
 
@@ -76,9 +77,9 @@ Funcionalidade: Endereço inexistente
     E nenhuma aparece sublinhada
     E nenhum item da barra aparece como página atual
 
-  @lacuna
-  Cenário: O texto desta página ainda é rascunho
-    Então A DEFINIR — ver pergunta P47
+  Cenário: O corpo não culpa quem leu
+    Dado que a página de erro está aberta
+    Então o corpo levanta a hipótese do link quebrado antes da digitação errada
 
   @lacuna
   Cenário: Como a hospedagem entrega a página de erro

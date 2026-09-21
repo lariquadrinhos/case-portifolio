@@ -1620,3 +1620,31 @@ hierarquia editorial, não promessa de destino, e o site já expressa hierarquia
 **Consequência.** Contrato da página de erro escrito e desenhado nas duas larguras. A regra
 das três formas vale para o site inteiro e passa a ser o teste para qualquer elemento novo:
 **a pergunta não é "quanto destaque isso merece", é "para onde isso leva".**
+
+## 056 · O texto da página de erro assume a falha antes de oferecer a saída
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** erro · `#conteudo`
+
+**Resolve a P47.**
+
+**Gatilho.** O texto da página era rascunho meu. Três direções foram escritas inteiras —
+título, corpo e os três rótulos juntos, porque voz se escolhe em bloco, não em pedaços.
+
+**Decisão.** Título: *"Esse endereço não leva a lugar nenhum."* Corpo: *"Pode ser um link
+meu que envelheceu, ou um erro de digitação. De qualquer forma, o que você procurava deve
+estar em um desses caminhos."* Saídas inalteradas.
+
+**Por quê.** A ordem das duas hipóteses é a decisão inteira: **o link quebrado vem antes do
+erro de digitação.** Isso tira a culpa de quem leu antes de oferecer a saída, e é a mesma
+postura dos cases — olhar o sistema, não o usuário. A versão anterior dizia "pode ter
+mudado, ou pode ter vindo com um erro de digitação", que é a mesma informação com o dedo
+apontado para o outro lado.
+
+**Alternativas descartadas.** Uma versão neutra, que resolveria e liberaria — perdeu por ser
+o 404 de qualquer site. E uma que transformava o erro em conversa, pedindo aviso do link
+quebrado — perdeu porque pede trabalho de quem já se frustrou, e porque trocaria "Falar
+comigo" por um rótulo de uso único.
+
+**Consequência.** A caixa de lacuna saiu das duas larguras. P47 fechada. O contrato ganhou o
+cenário que fixa a ordem das hipóteses — sem ele, uma reescrita futura poderia inverter as
+duas frases sem perceber que inverte a postura.
