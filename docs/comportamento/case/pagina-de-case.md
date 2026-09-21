@@ -70,6 +70,7 @@ etapa, como evidência, não como declaração à parte.
 | marca-texto | `110:23`, `110:24` | não se aplica |
 | página em tela estreita | `108:22` | não se aplica |
 | convite ao repositório | `114:27` | não se aplica |
+| convite ao repositório · estreita | `115:76` | não se aplica |
 
 ## Comportamento
 
@@ -124,6 +125,7 @@ Funcionalidade: Página de case
     Então o título fica acima do texto
     E a mídia desce para baixo do texto, em vez de ficar ao lado
     E a tira de destaques aparece empilhada
+    E a legenda de cada mídia continua logo abaixo dela
 
   @lacuna
   Cenário: A construção separa o hero dos capítulos
