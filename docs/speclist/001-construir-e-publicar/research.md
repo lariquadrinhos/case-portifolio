@@ -93,8 +93,8 @@ invisível, que é o defeito. *Dois scripts separados* — duplica o código da 
 
 ## 5. Como os valores visuais chegam ao CSS
 
-**Não resolvido, e por decisão dela.** O mecanismo de exportação dos tokens espera a Fase 2,
-quando o design system existir no Figma (**P07**, decisão 007). O princípio já está fixado:
+**Resolvido em 21/09/2026, decisão 037.** Exportação para `docs/spec/tokens.json`, do qual o
+CSS é gerado. A construção não consulta o Figma pela rede. O princípio já estava fixado:
 os valores descem das variáveis, o nome é preservado — `bg/page` vira `--bg-page` — e existe
 um único lugar de onde tudo deriva.
 

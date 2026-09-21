@@ -22,8 +22,9 @@
 - Q: Quando a construção encontra uma peça que deveria existir e não existe, o que deve acontecer? (FR-011) → A: Os dois, por contexto — na construção local a lacuna aparece visível na tela; no caminho de publicação a construção recusa e nada sobe.
 
 **Sessão encerrada com uma pergunta.** Duas outras foram tiradas da fila antes de serem
-feitas: o mecanismo de exportação dos tokens (FR-013), que já estava decidido como adiado
-até a Fase 2, e a escolha do serviço de hospedagem (FR-012), que é comparação de stack —
+feitas: o mecanismo de exportação dos tokens (FR-013), adiado então até a Fase 2 e
+**resolvido em 21/09/2026 pela decisão 037**, e a escolha do serviço de hospedagem (FR-012),
+que é comparação de stack —
 excluída do escopo desta etapa pela própria skill, e pertencente ao `/speckit-plan`.
 O domínio segue adiado por decisão dela, com limite antes da Fase 6.
 
@@ -140,9 +141,9 @@ nenhum comando local.
   quando ele existir, e a construção MUST NOT poder derrubar o que já está no ar.
   **Qual serviço e como a construção chega lá é decisão de plano**, não de especificação —
   a skill de clarificação exclui comparação de stack do seu escopo.
-- **FR-013**: Os valores das variáveis do Figma MUST chegar ao código por
-  [NEEDS CLARIFICATION: transcrição · exportação para arquivo com geração de CSS · leitura
-  pela API na construção — ver pergunta P07].
+- **FR-013**: Os valores das variáveis do Figma MUST chegar ao código por **exportação para
+  um arquivo versionado** (`docs/spec/tokens.json`), do qual o CSS é gerado. Nem o arquivo
+  nem o CSS MUST ser editados à mão. A construção MUST NOT consultar o Figma pela rede.
 - **FR-014**: A construção MUST recusar marcador desconhecido, nomeando arquivo, linha e
   marcador.
 - **FR-015**: Imagem sem `Legenda:` na linha seguinte MUST NOT ser publicada.

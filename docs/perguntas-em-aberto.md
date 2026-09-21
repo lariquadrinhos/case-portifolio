@@ -9,20 +9,13 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **13 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **12 perguntas**, nenhuma travando
 
 ---
 
 ## Travam
 
 Nenhuma.
-
-### P07 · O mecanismo de exportação dos tokens do Figma
-**Princípio já decidido** (decisão 007): valores descem das variáveis, nome preservado
-(`bg/page` → `--bg-page`), um único lugar de onde tudo deriva. Falta só o mecanismo.
-**Opções:** transcrição manual · exportar as variáveis para um arquivo e gerar o CSS dele ·
-ler da API na construção.
-**Momento:** depois da Fase 2, quando o design system existir no Figma. Não bloqueia a P05.
 
 ### P31 · O texto da página de erro, em rascunho
 Onde ele vive está decidido (011): no contrato da tela. O texto em si é rascunho meu e

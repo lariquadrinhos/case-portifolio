@@ -1074,3 +1074,41 @@ de exportação dos tokens (**P07**).
 **Nota de registro.** Não havia pergunta P39. O achado foi registrado na decisão 035 e na
 spec visual, mas **nunca virou pergunta na lista** — omissão minha. Esta entrada fecha o
 assunto sem que a pergunta tenha chegado a existir.
+
+---
+
+## 037 · Os tokens descem por exportação para arquivo versionado
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** — · `#restricao`
+
+**Gatilho.** Cinco checagens estavam declaradas e bloqueadas, três delas pela mesma razão:
+os valores das variáveis não existiam no repositório. A decisão 007 havia adiado o mecanismo
+até a Fase 2, e o design system já tem as quatro coleções com valores reais.
+
+**Decisão.** As variáveis são **exportadas** para `docs/spec/tokens.json`, versionado no
+repositório. O CSS de custom properties é **gerado** desse arquivo. Nem o arquivo nem o CSS
+são editados à mão. **A construção não consulta o Figma pela rede.**
+
+**Alternativa descartada.** Duas. *Transcrição manual* — contraria diretamente a regra de que
+nenhum valor visual é digitado à mão. *Leitura pela API na construção* — perdeu por tornar a
+publicação dependente de o Figma estar no ar e de um segredo válido: uma indisponibilidade
+lá impediria publicar aqui, e a decisão 009 escolheu um sistema sem dependência justamente
+para não ter esse tipo de acoplamento.
+
+**A objeção que precisei responder.** Escrever hexadecimais num arquivo do repositório
+parece a "segunda lista" que a regra proíbe. Não é, e a distinção importa: **duas listas
+mantidas à mão divergem; um arquivo gerado não diverge.** Ele está em dia ou desatualizado —
+e desatualizado é um **estado detectável**, não uma contradição silenciosa. O README da spec
+continua guardando só nomes e regras de uso.
+
+**Custo aceito, e é o ponto fraco real.** A exportação é disparada à mão. Se uma variável
+mudar no Figma e ninguém reexportar, o site fica com o valor velho **sem que nada acuse**.
+Não há detecção automática porque ela exigiria acesso do repositório ao Figma, que é o
+acoplamento recusado acima. A mitigação é de procedimento: mudou variável, reexporta.
+
+**Consequência — três checagens destravaram.** "Todo token citado existe" passou a conferir
+contra os 54 tokens reais em vez de nomes extraídos de prosa. "Dois níveis nunca compartilham
+corpo e entrelinha" (decisão 036) passou a rodar, e confirma: oito níveis distinguíveis nos
+dois modos, com `abertura` e `corpo` dividindo o corpo 18 em tela estreita e separados pela
+entrelinha. E o FR-013 da spec 001 fechou — **a spec não tem mais nenhum marcador de
+clarificação.**

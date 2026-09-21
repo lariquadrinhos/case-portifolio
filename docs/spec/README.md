@@ -95,7 +95,25 @@ Serão confirmados quando o design system for construído.
 ## Como os nomes viram código
 
 `/` vira `-`, e nada mais muda: `bg/page` → `--bg-page`, `accent/azul/strong` →
-`--accent-azul-strong`. **O nome é preservado**, como as definições exigem.
+`--accent-azul-strong`, `space/96` → `--space-96`. **O nome é preservado**, como as
+definições exigem.
+
+**Os modos viram contexto, não nomes diferentes.** Cor gera dois blocos com os mesmos nomes,
+um por tema. Tipografia e Grade geram dois blocos, um por largura, sob consulta de mídia.
+Espaço e forma tem modo único e gera um bloco só. **O nome nunca carrega o modo** — é isso
+que permite escrever `var(--bg-page)` uma vez e obter o valor certo nos dois temas.
+
+## O ciclo
+
+```
+Variáveis no Figma          ← a fonte, e o único lugar onde se edita valor
+        ↓  exportação
+docs/spec/tokens.json       ← gerado, versionado, nunca editado à mão
+        ↓  geração
+CSS de custom properties    ← gerado, nunca editado à mão
+        ↓
+todo o resto do CSS deriva  ← só consome, com var()
+```
 
 Os dois modos de cada coleção viram os mesmos nomes com valores diferentes por contexto —
 tema para Cor, largura de tela para Tipografia. É o que torna possível ter tokens nomeados

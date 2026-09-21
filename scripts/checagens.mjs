@@ -95,37 +95,49 @@ for (const f of contratos) {
 // ─────────────────────────────────────────────────────────────
 titulo(3, 'Todo token citado existe no inventário');
 
-const specTxt = existsSync(p('docs/spec/README.md')) ? readFileSync(p('docs/spec/README.md'), 'utf8') : '';
-const tokens = new Set();
-for (const bloco of specTxt.matchAll(/```([\s\S]*?)```/g)) {
-  for (const m of bloco[1].matchAll(/[a-z]+\/[a-z-]+(?:\/\{[^}]+\}|\/[a-z-]+)?/g)) {
-    const nome = m[0];
-    if (nome.includes('{')) {
-      const [base, chaves] = nome.split('/{');
-      for (const k of chaves.replace('}', '').split(',')) tokens.add(`${base}/${k.trim()}`);
-    } else tokens.add(nome);
-  }
+const tokensPath = p('docs/spec/tokens.json');
+let tokens = new Set(), colecoes = null;
+if (existsSync(tokensPath)) {
+  colecoes = JSON.parse(readFileSync(tokensPath, 'utf8')).colecoes;
+  for (const c of Object.values(colecoes)) for (const nome of Object.keys(c.variaveis)) tokens.add(nome);
+  nota(`${tokens.size} tokens exportados do Figma, em ${Object.keys(colecoes).length} coleções`);
+} else {
+  erro('docs/spec/tokens.json não existe — reexporte do Figma');
 }
-// famílias com variantes por acento
-for (const cor of ['roxo', 'laranja', 'verde', 'rosa', 'azul'])
-  for (const tom of ['surface', 'strong']) tokens.add(`accent/${cor}/${tom}`);
-for (const n of [4, 8, 12, 16, 24, 32, 48, 64, 96, 128]) tokens.add(`space/${n}`);
-nota(`${tokens.size} tokens no inventário`);
 
-const PADRAO = /`((?:space|radius|stroke|foco|text|bg|accent|size|line|grade)\/[a-z0-9-]+(?:\/[a-z0-9-]+)?)`/g;
+const PADRAO = /`((?:space|radius|stroke|foco|text|bg|accent|size|line|margem|colunas|calha|family)\/?[a-z0-9-]*(?:\/[a-z0-9-]+)?)`/g;
 let citadosTotal = 0;
-for (const f of [...contratos, ...arquivosMd(p('docs/prd'))]) {
+for (const f of [...contratos, ...arquivosMd(p('docs/prd')), ...arquivosMd(p('docs/speclist'))]) {
   const nome = relative(p('docs'), f);
   const t = readFileSync(f, 'utf8');
-  const citados = [...new Set([...t.matchAll(PADRAO)].map((m) => m[1]))];
+  const citados = [...new Set([...t.matchAll(PADRAO)].map((m) => m[1]))].filter((c) => c.includes('/'));
   citadosTotal += citados.length;
   const orfaos = citados.filter((c) => !tokens.has(c));
   if (orfaos.length) erro(`${nome} — token inexistente: ${orfaos.join(', ')}`);
 }
-if (citadosTotal === 0) nota('nenhum contrato cita token ainda — a checagem passa por vacuidade');
+if (citadosTotal === 0) nota('nenhum documento cita token ainda');
 else ok(`${citadosTotal} citação(ões) de token, todas resolvidas`);
 
 // ─────────────────────────────────────────────────────────────
+titulo('3b', 'Dois níveis tipográficos nunca compartilham corpo e entrelinha');
+
+if (colecoes && colecoes['Tipografia']) {
+  const tp = colecoes['Tipografia'];
+  const niveis = [...new Set(Object.keys(tp.variaveis).filter((k) => k.startsWith('size/')).map((k) => k.slice(5)))];
+  for (const modo of tp.modos) {
+    const pares = [];
+    for (let i = 0; i < niveis.length; i++)
+      for (let j = i + 1; j < niveis.length; j++) {
+        const a = niveis[i], b = niveis[j];
+        const mesmoCorpo = tp.variaveis[`size/${a}`][modo] === tp.variaveis[`size/${b}`][modo];
+        const mesmaLinha = tp.variaveis[`line/${a}`][modo] === tp.variaveis[`line/${b}`][modo];
+        if (mesmoCorpo && mesmaLinha) pares.push(`${a} = ${b}`);
+        else if (mesmoCorpo) nota(`${modo}: ${a} e ${b} dividem o corpo ${tp.variaveis[`size/${a}`][modo]}, separados pela entrelinha`);
+      }
+    pares.length ? erro(`${modo} — indistinguíveis: ${pares.join(', ')}`) : ok(`${modo} — ${niveis.length} níveis, todos distinguíveis`);
+  }
+} else nota('sem coleção de Tipografia no export');
+
 titulo(4, 'Os arquivos de conteúdo seguem a convenção');
 
 const CONTEUDO = ['case-study-financas-pf-pj.md', 'case-study-reembolso-sulamerica.md', 'quem-sou-eu.md'];
@@ -172,9 +184,6 @@ nota('  fora do editor lê o arquivo. Os node-id dos contratos seguem @lacuna de
 nota('Todo `Cenário:` é citado por um teste — a suíte usará `node --test testes/`, decidida');
 nota('  na pesquisa da spec 001. A checagem entra quando o primeiro teste existir.');
 nota('Todo `storybook.usa` existe — não se aplica: não há Storybook. Ver pergunta P17.');
-nota('Dois níveis tipográficos nunca compartilham corpo E entrelinha no mesmo modo —');
-nota('  a escala converge por construção, e é a entrelinha que separa quem divide o corpo.');
-nota('  Bloqueada: os valores da escala não estão no repositório. Ver pergunta P07.');
 nota('Todo frame bate com o token de grade do seu modo — a grade do Figma não aceita vínculo');
 nota('  com variável (decisão 021), então a conferência não pode ser automática daqui.');
 

@@ -17,7 +17,7 @@
 
 ## Requirement Completeness
 
-- [ ] No [NEEDS CLARIFICATION] markers remain
+- [x] No [NEEDS CLARIFICATION] markers remain
 - [x] Requirements are testable and unambiguous
 - [x] Success criteria are measurable
 - [x] Success criteria are technology-agnostic
@@ -26,9 +26,8 @@
 - [x] Scope is clearly bounded
 - [x] Dependencies and assumptions identified
 
-> **Um marcador permanece.** FR-013 aponta para P07, adiada por decisão dela até a Fase 2.
-> FR-011 foi fechado na sessão de clarificação; FR-012 deixou de ser clarificação e virou
-> decisão de plano. Os marcadores originais apontavam Não são ambiguidade de redação: são decisões registradas como
+> **Nenhum marcador permanece.** FR-011 fechou na sessão de clarificação, FR-012 virou
+> decisão de plano, e FR-013 fechou pela decisão 037. Os marcadores originais apontavam Não são ambiguidade de redação: são decisões registradas como
 > abertas na lista de perguntas, cada uma com opções e momento. Fechá-las aqui seria
 > preencher lacuna por conta própria.
 
