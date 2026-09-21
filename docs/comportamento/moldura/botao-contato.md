@@ -17,6 +17,10 @@ figma:
 > são do mesmo nível e **não se diferenciam por peso nem por cor**. O nível se marca pelo
 > tamanho, nunca pela cor — e dois itens do mesmo nível não têm o que marcar. *"Trabalhos em
 > primeiro lugar"* é ordem, não ênfase.
+>
+> **A barra não indica visualmente a página atual.** Mas o item correspondente é **declarado
+> como página atual na marcação**, para quem navega por leitor de tela. A informação existe
+> para quem precisa dela e não acrescenta canal visual para quem não precisa.
 
 Fica à direita da barra fixa, visualmente distinto dos itens de menu. Navegação diz para
 onde ir; contato diz o que fazer — e misturar os dois faz o contato competir por atenção
@@ -52,6 +56,18 @@ Funcionalidade: Botão de contato
 
   Contexto:
     Dado que a barra fixa está visível em qualquer página
+
+  Cenário: Leitor de tela percorre a navegação estando em Trabalhos
+    Dado que o leitor está na página de trabalhos
+    Quando ele percorre a barra por leitor de tela
+    Então o item "Trabalhos" é anunciado como página atual
+    E nenhum item da barra muda de cor ou de peso
+
+  Cenário: Leitor está numa página de case
+    Dado que o leitor está numa página de case
+    Quando ele percorre a barra
+    Então nenhum item é anunciado como página atual
+    # Um case está sob Trabalhos, mas não é Trabalhos.
 
   Cenário: Leitor procura como falar com ela
     Quando o leitor aciona o botão de contato

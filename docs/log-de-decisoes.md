@@ -766,3 +766,37 @@ palavra diz o que a forma ainda não pode dizer.
 **O que isso ensinou.** Espaço reservado sem rótulo não é neutro — **é ambíguo**. Um círculo
 cinza numa barra pode ser avatar, ícone ou foto, e quem olha precisa perguntar. A mesma
 regra do contrato vale para o desenho: a lacuna é marcada, nunca deixada em branco.
+
+---
+
+## 028 · A barra não indica a página atual visualmente, mas declara na marcação
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** moldura · `#restricao`
+
+**Gatilho.** A correção da decisão 026 deixou os dois itens iguais, e isso expôs uma
+pergunta que ninguém tinha feito: como alguém sabe em que página está?
+
+**Decisão.** Nenhuma indicação visual. O item correspondente é **declarado como página atual
+na marcação**, para quem navega por leitor de tela.
+
+**Alternativa descartada.** Duas. *Dar o acento de sistema ao item atual* — é cor de estado,
+que a regra permite; perdeu no teste dela: *"se a cor sair e a tela continuar dizendo a mesma
+coisa, ela não deveria estar lá"*, e a página de Trabalhos continua dizendo que é Trabalhos
+sem o destaque. E perdeu num segundo ponto: indicar só por cor contraria a exigência de não
+depender de cor sozinha, e o canal alternativo seria peso — que a decisão 026 acabou de
+remover. *Tornar o item atual não clicável* — some sem avisar, que é pior que não indicar.
+
+**O argumento que eu não tinha visto antes de mapear.** Com dois itens e seis páginas, o
+indicador **ficaria mudo em quatro**: na home ninguém está em Trabalhos nem em Quem sou eu, e
+nas duas páginas de case nenhum dos dois é a página atual. **Os cases são onde a pessoa passa
+mais tempo.** Um sinal ausente onde mais se lê é um sinal fraco.
+
+**Por que a metade não visual fica mesmo assim.** Quem enxerga recebe a orientação da própria
+página — título, conteúdo, trilha. Quem percorre a barra por leitor de tela, item a item,
+não tem esse contexto naquele momento. A declaração na marcação **compensa uma diferença no
+modo de consumir a página**, e não acrescenta nada para quem não precisa dela. Não é
+inconsistência: é o mesmo conteúdo chegando por canais diferentes.
+
+**Custo aceito.** Um comportamento que não se vê no Figma e só se verifica em teste ou com
+leitor de tela. Por isso virou dois cenários no contrato, nomeados — incluindo o caso do
+case, em que **nenhum** item é anunciado.
