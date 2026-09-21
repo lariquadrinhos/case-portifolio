@@ -1948,3 +1948,31 @@ três e acertava por acaso. Agora cada uma tem o seu.
 tamanho igual **e** cor igual prometeriam um toque que não existe. A intenção dela era "os
 dois são irmãos" — e é isso que o tamanho passa a dizer. O resto continua distinguindo o que
 de fato difere.
+
+## 067 · O rótulo "Tema" some do menu; as opções se nomeiam
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** tema · `#correcao`
+
+**Corrige a decisão 066, tomada minutos antes.**
+
+**Gatilho.** Larissa, de novo: *"tema tá diferente ainda."* A 066 tinha igualado o tamanho e
+mantido a cor diferente, com o argumento de que cor marcaria "não se toca".
+
+**O que eu estava fazendo de errado.** Duas tentativas seguidas de **marcar** que "Tema" não
+era tocável — primeiro com tamanho, depois com cor. Nenhuma atacava o fato de haver, no meio
+de uma lista de alvos, uma linha que não era alvo.
+
+**Decisão.** O rótulo "Tema" **deixa de existir**. As opções passam a se nomear: "Tema claro"
+e "Tema escuro". Com isso **tudo o que está no menu tem a mesma forma e tudo se toca**.
+
+**Por que isto é melhor que acertar a marcação.** A pergunta certa não era *como sinalizar a
+exceção*, era *por que existe exceção*. Removê-la custou duas palavras e eliminou uma classe
+inteira de problema — não há mais o que marcar, então não há mais como marcar errado.
+
+**Por que o desktop não muda.** Lá as opções continuam "Claro" e "Escuro", porque a palavra
+"Tema" está logo acima, na barra, e é ela que as nomeia. No menu estreito o gatilho é "Menu",
+que não nomeia nada — então as opções precisam se nomear sozinhas. **Não é inconsistência:
+é a mesma regra, que é o rótulo vir de algum lugar.**
+
+**Consequência.** Os três rótulos alinham na mesma coluna: "Quem sou eu" reserva a largura do
+sinal de escolhido mesmo sem tê-lo. Sem isso a lista ficava desencontrada em 28px.

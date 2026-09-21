@@ -36,10 +36,12 @@ apareceu.
 - **Em tela estreita o tema vive dentro do menu**, e ali mostra as duas posições **em linha,
   sem abrir outra caixa**: o menu já é a camada aberta, e sobrepor camada em camada é o que
   se evita.
-- **Dentro do menu, "Tema" tem o mesmo tamanho de "Quem sou eu".** Os dois são o que o menu
-  guarda, e tamanho é como este site marca nível. O que os separa são dois outros eixos:
-  **cor**, porque "Tema" é nome e não se toca, e **recuo**, porque Claro e Escuro pertencem
-  a ele. Encolher "Tema" marcaria nível onde não há diferença de nível.
+- **Dentro do menu não existe rótulo "Tema": as opções se nomeiam.** As linhas são
+  "Tema claro" e "Tema escuro". Assim **tudo o que está no menu é da mesma forma e tudo se
+  toca** — nenhuma linha parece alvo sem ser. No desktop as opções continuam "Claro" e
+  "Escuro", porque ali a palavra "Tema" está logo acima, na barra, e é ela que as nomeia.
+- **Os rótulos das três linhas alinham na mesma coluna.** "Quem sou eu" reserva a largura do
+  sinal de escolhido mesmo não tendo sinal, senão a lista fica desencontrada.
 - **Escolher não fecha a caixa** — nem no desktop, nem dentro do menu. Trocar de tema é
   controle de *experimentar*: a ação mais provável logo depois de escolher é escolher de
   novo, para comparar. Fechar cobraria uma reabertura por tentativa. Navegação não tem esse
