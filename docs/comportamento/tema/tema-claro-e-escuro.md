@@ -26,6 +26,17 @@ apareceu.
   preferência do sistema **não a desfaz**.
 - **O controle tem duas posições**, claro e escuro. Não há posição "seguir o sistema": o
   automático vale enquanto ninguém tiver escolhido, e não volta depois.
+- **"Tema" abre as duas posições; não troca direto.** A caixa mostra Claro e Escuro com a que
+  está em vigor marcada. Trocar direto custaria um toque a menos, mas nunca diria qual das
+  duas está valendo — e com o tema seguindo o sistema na primeira visita, quem chega não sabe
+  se o que vê foi escolhido ou herdado.
+- **A posição em vigor é marcada, não só colorida.** Vale aqui a mesma regra da barra: cor
+  sozinha não basta.
+- **No desktop a caixa ancora sob "Tema", sem véu. Em tela estreita o tema vive dentro do
+  menu** — e ali mostra as duas posições **em linha, sem abrir outra caixa**: o menu já é a
+  camada aberta, e sobrepor camada em camada é o que se evita.
+- **Escolher não fecha o menu.** A troca acontece atrás e é visível; fechar esconderia o
+  resultado no mesmo gesto que o produz.
 - **O tema certo é aplicado antes da primeira pintura.** Nunca há piscada.
 - **Sem JavaScript, o tema segue a preferência do sistema e o conteúdo permanece legível.**
   O script é reforço que falha em segurança, não dependência.
@@ -44,9 +55,33 @@ tema no elemento raiz. Se ele não executar, o CSS cai na preferência do sistem
 
 | Nome no cenário | Figma | Storybook |
 |---|---|---|
-| controle de tema · duas posições | `@lacuna` | não se aplica |
+| controle de tema · desktop | `154:89` | não se aplica |
+| controle de tema · dentro do menu | `154:42` | não se aplica |
 
 ## Comportamento
+
+```gherkin
+# language: pt
+Funcionalidade: Forma do controle de tema
+
+  Cenário: O leitor abre o controle em desktop
+    Quando o leitor aciona "Tema"
+    Então as duas posições aparecem numa caixa ancorada sob "Tema"
+    E a posição em vigor aparece marcada, e não apenas colorida
+    E a página atrás não escurece
+
+  Cenário: O leitor abre o controle em tela estreita
+    Dado que o tema vive dentro do menu
+    Quando o leitor aciona "Menu"
+    Então as duas posições do tema aparecem dentro do próprio menu
+    E nenhuma caixa nova abre por cima do menu
+
+  Cenário: O leitor troca de tema com o menu aberto
+    Dado que o menu está aberto
+    Quando o leitor escolhe a outra posição
+    Então o tema troca
+    E o menu continua aberto
+```
 
 ```gherkin
 # language: pt

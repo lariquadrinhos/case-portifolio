@@ -1771,3 +1771,36 @@ recolher. Mesma função, dois aparelhos de apontar.
 a ação principal da página"**. Sem ele, "Falar comigo" como botão no fim do case e como
 palavra na tela de erro pareciam contradição; com ele, as duas estão certas. Era falha de
 registro, não de desenho.
+
+## 061 · "Tema" abre as duas posições, e o menu estreito não empilha camada
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** tema · `#restricao`
+
+**Gatilho.** O menu da tela estreita contém "Quem sou eu" e o controle de tema — e o controle
+estava marcado como *"forma a definir"* desde que a barra foi desenhada. Não dava para
+desenhar o menu sem resolver.
+
+**Decisão.** "Tema" **abre uma caixa com as duas posições**, Claro e Escuro, com a que está em
+vigor marcada. Não troca direto.
+
+**Por quê, entre três formas possíveis.** Trocar direto custaria um toque a menos, mas nunca
+diria *qual das duas está valendo* — e como o tema segue o sistema na primeira visita, quem
+chega não sabe se o que vê foi escolhido ou herdado. Nomear o destino ("Escuro" quando o site
+está claro) resolveria isso, mas faria o rótulo da barra mudar sozinho entre visitas.
+Mostrar as duas posições é o que o contrato já descrevia — *"o controle tem duas posições"* —
+e usa o mesmo padrão do contato: **três sobreposições no site, um jeito só de abrir e fechar**.
+
+**Custo aceito.** Dois toques para alternar entre duas coisas.
+
+**O que a tela estreita acrescentou.** Lá o tema vive dentro do menu, e o menu **já é a camada
+aberta**. Abrir uma caixa sobre a caixa seria empilhar camada em camada por uma escolha entre
+dois itens — então as duas posições aparecem **em linha, dentro do próprio menu**. E
+**escolher não fecha o menu**: a troca acontece atrás e é visível; fechar esconderia o
+resultado no mesmo gesto que o produz.
+
+**A posição em vigor é marcada, não só colorida** — a mesma regra que a barra já aplica ao
+indicador de página atual.
+
+**Consequência.** Duas telas novas: `154:42` (menu aberto, estreita) e `154:89` (tema
+revelado, desktop). A lacuna do controle de tema fechou no contrato do tema. A moldura ganhou
+o menu na tabela de peças.

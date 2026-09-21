@@ -76,6 +76,7 @@ vista, mesmo que nada abra, a pessoa copia.
 | endereço de e-mail | dentro de `152:42` | — |
 | atalho do LinkedIn | dentro de `152:42` | — |
 | botão "Falar comigo" | `146:63`, `148:203` | não se aplica |
+| menu aberto · estreita | `154:42` | não se aplica |
 
 ## Comportamento
 
