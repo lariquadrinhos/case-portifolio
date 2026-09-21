@@ -24,7 +24,11 @@ etapa, como evidência, não como declaração à parte.
 - **A tira de destaques é o elemento mais escaneável da página** e, para quem faz triagem
   rápida, pode ser o mais útil da tela inteira. Traz papel, método ou escopo, entregas,
   status e repositório. Em tela estreita, empilha.
-- O marca-texto cobre parte do título, **uma vez por página**.
+- O marca-texto cobre um trecho da hero, **uma vez por página** — título **ou** frase de
+  abertura. Neste case ele cobre *"Decidi transformar essa cena em um aplicativo desktop."*,
+  que é a virada da frase: observação, **decisão**, resultado.
+- Quando o trecho destacado atravessa mais de uma linha, **a faixa acompanha a quebra**,
+  uma por linha, e não se escolhe a quebra em função dela — parágrafo reflui, título não.
 - **Título ao lado do texto, não acima dele.** Na leitura, a trilha ocupa as colunas 1 e 2,
   o título do capítulo as colunas 4 a 6, e o texto as colunas 7 a 12.
 - **O texto corrido ocupa seis colunas, não cinco.** Cinco dariam 61 caracteres por linha,
@@ -42,7 +46,7 @@ etapa, como evidência, não como declaração à parte.
 | hero do case | `106:32` | não se aplica |
 | tira de destaques | `106:36` | não se aplica |
 | capítulo | `107:36` | não se aplica |
-| marca-texto | `106:34` | não se aplica |
+| marca-texto | `110:23`, `110:24` | não se aplica |
 | página em tela estreita | `108:22` | não se aplica |
 
 ## Comportamento
@@ -55,7 +59,13 @@ Funcionalidade: Página de case
     Quando a página abre
     Então o título, a frase de abertura e a tira de destaques aparecem antes dos capítulos
     E a barra marca "Trabalhos" como seção
-    E o marca-texto cobre parte do título, uma vez só
+    E o marca-texto cobre um trecho da hero, uma vez só
+
+  Cenário: O trecho destacado atravessa mais de uma linha
+    Dado que o trecho destacado está no meio de um parágrafo
+    Quando a página é montada
+    Então a faixa acompanha a quebra de linha, uma por linha atravessada
+    E a quebra do parágrafo não é alterada para acomodar a faixa
 
   Cenário: A pessoa lê um capítulo em desktop
     Dado que a página está aberta em tela larga

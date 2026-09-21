@@ -42,8 +42,9 @@ querer ver os trabalhos.
 
 O que a regra fixa é a **relação** — respiro igual em cima e embaixo, espaçamento uniforme
 dentro do bloco. Os números mudam com a largura; a relação não.
-- O marca-texto cobre parte do título, **uma vez por página**, no acento de sistema.
-  Fora da hero não existe.
+- O marca-texto cobre um trecho da hero, **uma vez por página**, no acento de sistema.
+  Na home esse trecho está no título; num case pode estar na frase de abertura. Fora da
+  hero não existe.
 - **O destaque é de sentido, não de ritmo.** Ele cobre um trecho que fecha uma ideia, e a
   quebra de linha de cada largura é escolhida em função dele — não o contrário. Hoje o
   trecho é *"forma melhor"*, que em 1440 divide linha com o resto da frase e em 375 ocupa

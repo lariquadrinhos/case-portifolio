@@ -1291,3 +1291,34 @@ o contrato da página ganhou a regra que a largura impõe: **em tela estreita o 
 capítulo fica acima do texto**, porque não há grade para duas faixas — *"título ao lado do
 texto" vale onde há grade para isso*, do mesmo jeito que a medida de linha vale onde há
 largura.
+
+---
+
+## 044 · O marca-texto cobre um trecho da hero, não necessariamente do título
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** case · `#reversao`
+
+**Reverte "uma faixa atrás de parte do título"**, escrito nas definições.
+
+**Gatilho.** Larissa quis destacar *"Decidi transformar essa cena em um aplicativo
+desktop."* — frase que está na abertura do case, não no título.
+
+**Decisão.** O marca-texto cobre um trecho **da hero**, uma vez por página: do título **ou**
+da frase de abertura. A restrição de estar na hero, e de acontecer uma vez só, não muda.
+
+**Alternativa descartada.** Manter o destaque no título e não atender o pedido. Perdeu
+porque o trecho escolhido é a **virada da frase** — a abertura tem três tempos, observação,
+**decisão** e resultado, e destacar o segundo marca onde o case começa de fato. Destacar
+"A planilha" no título marcaria o assunto, que a linha editorial dela diz não ser o ponto:
+*"o produto aparece como evidência, nunca como assunto."*
+
+**O que a mudança trouxe de técnico.** O trecho cai no meio de um parágrafo e **atravessa
+duas linhas**, então a faixa virou duas, com deslocamentos diferentes — 281px na primeira,
+zero na segunda. A regra nova diz explicitamente que **a faixa acompanha a quebra, e a
+quebra não é escolhida em função da faixa**: parágrafo reflui conforme a largura, título
+não. É o oposto da decisão 034, onde a quebra do título foi escolhida pelo destaque.
+
+**Custo aceito.** No wireframe as faixas foram posicionadas por medição e ficam presas a
+esta quebra; qualquer mudança de largura, corpo ou texto exige recalcular. No site isso é
+gratuito — a faixa é propriedade do trecho, não posição na tela —, mas no Figma é trabalho
+manual a cada ajuste.
