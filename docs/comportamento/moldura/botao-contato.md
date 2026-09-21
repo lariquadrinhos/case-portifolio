@@ -43,10 +43,13 @@ e-mail escrito por extenso e o LinkedIn.
 - O contato não é item de navegação e não leva a uma página.
 - **Não tem destaque visual.** A ordem da barra em desktop é: nome · Trabalhos · Quem sou eu
   · Contato · controle de tema, com o tema por último.
-- **Em tela estreita a barra é: nome · Trabalhos · Contato · menu.** "Quem sou eu" e o
+- **Em tela estreita a barra é: Larissa · Trabalhos · Contato · Menu.** "Quem sou eu" e o
   controle de tema vão para dentro do menu. **Nenhum item vira ícone** — a barra é toda
   palavra, nas duas larguras.
-- Quando a página atual está dentro do menu, **é a palavra "menu" que recebe o sublinhado**.
+- **Todo item da barra é escrito do mesmo jeito: inicial maiúscula.** "Tema" e "Menu"
+  seguem a grafia de "Trabalhos" e "Contato" — se são palavras como as outras, são escritas
+  como as outras. Uniformidade inclui grafia.
+- Quando a página atual está dentro do menu, **é a palavra "Menu" que recebe o sublinhado**.
   Sem isso, a única página escondida seria também a única sem indicador.
 - Acionar o botão revela duas saídas: o e-mail e o LinkedIn.
 - **O e-mail aparece escrito por extenso — `llquadros95@gmail.com` — visível e copiável.**
@@ -127,22 +130,22 @@ Funcionalidade: Contato na barra
   Cenário: A barra em tela estreita
     Dado que a tela é estreita
     Quando a página abre
-    Então a barra mostra nome, Trabalhos, Contato e menu, todos em palavra
+    Então a barra mostra Larissa, Trabalhos, Contato e Menu, todos em palavra
     E "Quem sou eu" e o controle de tema ficam dentro do menu
     E nenhum item da barra é ícone
 
   Cenário: O leitor abre o menu em tela estreita
     Dado que a barra estreita está visível
-    Quando o leitor aciona "menu"
+    Quando o leitor aciona "Menu"
     Então "Quem sou eu" e o controle de tema aparecem
     Quando o leitor aciona a tecla Esc ou toca fora
     Então o menu se recolhe
-    E o foco volta para "menu"
+    E o foco volta para "Menu"
 
   Cenário: O leitor está em Quem sou eu, em tela estreita
     Dado que "Quem sou eu" está dentro do menu
     Quando a página abre
-    Então a palavra "menu" recebe o sublinhado no acento de sistema
+    Então a palavra "Menu" recebe o sublinhado no acento de sistema
 ```
 
 ## Transições
