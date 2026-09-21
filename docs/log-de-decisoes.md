@@ -2032,3 +2032,33 @@ deve fazer — ela é um desvio curto, não um destino.
 contato foi construída sozinha, antes de existirem as outras três. Cada uma pareceu certa no
 dia. **A divergência só existe em comparação, e comparação não acontece por acaso** — foi
 pedida duas vezes seguidas, e das duas vezes achou coisa.
+
+## 070 · Conferência do menu e do tema: três defeitos nas peças de referência
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** moldura · `#correcao`
+
+**Gatilho.** Larissa: *"confere o menu e o tema também então."* Eu tinha acabado de usar as
+duas como referência para consertar o contato — sem nunca as ter conferido.
+
+**Três defeitos, todos invisíveis olhando uma caixa por vez.**
+
+1. **A divisória do menu tinha respiro diferente dos dois lados** — 12px acima, 20px abaixo,
+   por causa de um espaçador de 8px que sobrou da montagem. Espaço assimétrico em volta de
+   uma linha lê como erro de impressão, não como separação.
+2. **A caixa de tema tinha largura escolhida na mão: 200px.** Nenhuma outra tem. A de contato
+   abraça o conteúdo; a do menu ocupa a largura disponível. Duzentos não vinha de nada — e
+   número que não vem de nada é número que ninguém sabe manter.
+3. **As linhas do tema não ocupavam a caixa.** "Claro" tinha alvo 15px mais estreito que
+   "Escuro": duas opções irmãs com áreas de toque diferentes.
+
+**Decisão.** Divisória simétrica. Caixa de tema abraça o conteúdo — 136px, que é a linha mais
+larga. Linhas preenchem a caixa, então o alvo é sempre a linha inteira.
+
+**O que custou.** A caixa de tema teve de ser reconstruída do zero. Patch por patch, o nó de
+texto ficou preso numa largura antiga e passou a quebrar "Escuro" em duas linhas; aumentar a
+caixa não desfazia. **Remontar no molde que já funcionava foi mais rápido que consertar o que
+já estava torto** — e é o terceiro episódio hoje em que a leitura de tamanho no Figma vem
+defasada e me leva por um caminho errado.
+
+**O que isso diz sobre conferir.** Usei menu e tema como régua para corrigir o contato sem
+ter conferido a régua. As duas tinham defeito. **Referência não confere a si mesma.**

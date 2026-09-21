@@ -63,6 +63,11 @@ e-mail escrito por extenso e o LinkedIn.
   inteira é o alvo**, não o texto dentro dela. Tocar ao lado da palavra tem que funcionar.
 - **Cada linha tem 12px de respiro em cima e embaixo**, o que dá alvo de 54px no desktop e
   56px na tela estreita. O mínimo confortável para dedo é 44; texto solto numa caixa dá 32.
+- **A linha ocupa a caixa inteira, mesmo quando o texto é curto.** Sem isso, "Claro" teria
+  alvo 15px mais estreito que "Escuro" — duas opções irmãs com áreas de toque diferentes.
+- **A divisória tem o mesmo respiro dos dois lados.**
+- **A caixa abraça o conteúdo; a largura não é escolhida.** Ela acompanha a linha mais larga.
+  Na tela estreita, onde a caixa ocupa a largura disponível, quem manda é a margem.
 - **Os rótulos são do tamanho dos itens da barra**, 18. Uma sobreposição é lista de alvos, não
   texto de leitura — o corpo maior aqui só faria a caixa disputar com a página atrás.
 - **Toda sobreposição fica a 12px do que a abriu** — contato, menu e tema, nas duas larguras.
