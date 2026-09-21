@@ -141,7 +141,7 @@ if (colecoes && colecoes['Tipografia']) {
 titulo(4, 'Os arquivos de conteúdo seguem a convenção');
 
 const CONTEUDO = ['case-study-financas-pf-pj.md', 'case-study-reembolso-sulamerica.md', 'quem-sou-eu.md'];
-const BLOCOS_VALIDOS = ['card', 'case', 'home', 'hero', 'quem-sou-eu', 'foto'];
+const BLOCOS_VALIDOS = ['card', 'case', 'home', 'hero', 'quem-sou-eu', 'apresentacao', 'foto'];
 
 for (const nome of CONTEUDO) {
   const f = p(nome);

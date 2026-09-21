@@ -34,12 +34,8 @@ dois, com pesos diferentes · a hera traz só o cargo.
 ### ~~P44~~ · Resolvida pela decisão 053
 O parágrafo não será escrito. O site publica com dois cases e sem comentar a ausência.
 
-### P45 · "Apresentação" é título de conteúdo ou rótulo de estrutura?
-No `quem-sou-eu.md`, `## Apresentação` e `## Meus valores` estão no mesmo nível. "Meus
-valores" lê como seção que deve aparecer na página; "Apresentação" lê como rótulo de
-organização, do mesmo tipo de "Texto para o card", que a decisão 006 transformou em
-marcador. O wireframe desenhou sem exibir "Apresentação".
-**Momento:** antes de implementar a construção desta página.
+### ~~P45~~ · Resolvida pela decisão 054
+"Apresentação" era rótulo de estrutura e virou `<!-- bloco: apresentacao -->`.
 
 ### P43 · A coluna de mídia comporta captura de tela de desktop?
 A grade nova dá **411px** à mídia de prova. As definições dizem que o case de Finanças mostra

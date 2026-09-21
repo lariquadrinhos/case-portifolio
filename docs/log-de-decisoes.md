@@ -1564,3 +1564,29 @@ que há mais vindo.
 
 **Consequência.** A nota `@lacuna P44` saiu do wireframe. P44 fechada. Exigência removida do
 contrato, das definições e do PRD.
+
+## 054 · "Apresentação" era rótulo de estrutura, não título
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** conteudo · `#restricao`
+
+**Resolve a P45.**
+
+**Gatilho.** Em `quem-sou-eu.md`, `## Apresentação` e `## Meus valores` estavam no mesmo
+nível, mas o wireframe desenhou um e não o outro — sem nenhuma regra explicando a diferença.
+
+**Decisão.** `## Apresentação` virou `<!-- bloco: apresentacao -->`. "Meus valores" continua
+título.
+
+**Por quê.** A regra da 006 diz *marcador é comentário HTML, título é conteúdo* — mas ela
+resolve a forma, não a classificação. Faltava o teste. Ele é: **a quem a palavra se dirige.**
+"Meus valores" é frase dita a quem visita a página. "Apresentação" é palavra usada para
+organizar o arquivo — ninguém escreve "Apresentação" acima da própria apresentação. O `##`
+estava escondendo um rótulo dentro da forma de título.
+
+**Alternativa descartada.** Apagar a linha e deixar a construção entender por posição — tudo
+entre a foto e o primeiro `##` seria a apresentação. Perdeu pelo mesmo motivo que a 006
+recusou regra por posição: funciona até alguém inserir um parágrafo em outro lugar.
+
+**Consequência.** Vocabulário de blocos ganhou `apresentacao`. `BLOCOS_VALIDOS` atualizado no
+script. O contrato de conteúdo ganhou a seção "Como separar título de rótulo", com o teste
+escrito para a próxima vez.

@@ -28,6 +28,7 @@ aparece no site. Não há seção reconhecida por nome — nome muda, marcador n
 | `<!-- bloco: home -->` | O que segue são os textos da home |
 | `<!-- bloco: hero -->` | Dentro da home: a frase de abertura e o parágrafo |
 | `<!-- bloco: quem-sou-eu -->` | Começa a página "Quem sou eu" |
+| `<!-- bloco: apresentacao -->` | Dentro de "Quem sou eu": os parágrafos de apresentação, sem título visível |
 | `<!-- bloco: foto -->` | A imagem na linha seguinte é a foto da página, não imagem de texto corrido |
 | `<!-- trilha: Rótulo -->` | O título imediatamente acima é um capítulo, e `Rótulo` é o nome dele na trilha |
 | `<!-- privado -->` | A seção seguinte, e tudo abaixo dela até um título de nível igual ou superior, **não vai para o site** |
@@ -130,3 +131,17 @@ Funcionalidade: Um arquivo de texto vira página
 | Arquivo editado | Construção | Páginas geradas |
 | Marcador de trilha lido | Construção | Etapa na trilha do case |
 | Marcador privado lido | Construção | Conteúdo excluído da saída |
+
+## Como separar título de rótulo
+
+A regra da decisão 006 — *marcador é comentário HTML, título é conteúdo* — diz qual forma
+usar, mas não diz qual dos dois um texto é. O teste é a **quem a palavra se dirige**:
+
+- **"Meus valores" é dito ao leitor.** É uma frase que Larissa diria a alguém visitando a
+  página. Continua título.
+- **"Apresentação" é dito ao autor.** É a palavra que se usa para organizar o arquivo, não
+  para apresentar a seção a quem lê — ninguém escreve "Apresentação" acima da própria
+  apresentação. Virou marcador.
+
+Quando a dúvida aparecer de novo: se a palavra some da tela sem que o leitor perca nada,
+ela nunca foi título.

@@ -23,7 +23,7 @@ Sou curiosa e apaixonada por entender como as coisas funcionam. Gosto de fazer p
 <!-- bloco: foto -->
 ![Larissa Quadros](publico/larissa.jpg)
 
-## Apresentação
+<!-- bloco: apresentacao -->
 
 Sou UX Designer e gosto de trabalhar onde pessoas, lógica e criatividade se encontram. Meu interesse vai além da interface: quero entender o problema, o contexto e tudo o que influencia uma experiência para tomar decisões de design que realmente façam sentido. Vim da Engenharia Bioquímica e trouxe comigo a curiosidade de uma cientista, o raciocínio lógico e o olhar para processos e sistemas. Gosto de entender como as pequenas partes se relacionam e como, juntas, fazem algo muito maior funcionar. Acredito que o design não deve falar mais alto do que as necessidades do usuário.
 

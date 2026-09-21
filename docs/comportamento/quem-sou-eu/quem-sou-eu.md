@@ -22,6 +22,9 @@ cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um
   da imagem em markdown, cujo texto alternativo é obrigatório.
 - O conteúdo vem de `quem-sou-eu.md`, sob `<!-- bloco: quem-sou-eu -->`: a apresentação e
   os seis valores.
+- **A apresentação não tem título visível.** Ela é declarada por `<!-- bloco: apresentacao -->`
+  e abre a página direto pelo primeiro parágrafo. "Meus valores", que vem depois, tem título
+  — porque é palavra dita ao leitor, e "Apresentação" não era.
 - **O histórico profissional não aparece na página** — fica no currículo em PDF, acessível
   a partir daqui.
 - O contato também existe aqui, junto do currículo.
