@@ -8,7 +8,8 @@ atualizado: 2026-09-21
 figma:
   file: hwClE9Xpm51OW4vPsCCn8J
   pagina: "56:2"
-  tela: "106:22"
+  tela: "106:22 (Finanças) · 108:22 (Finanças, estreita)"
+  tela2: "144:32 (Reembolso) · 148:37 (Reembolso, estreita)"
 ---
 
 # Página de case
@@ -71,6 +72,19 @@ etapa, como evidência, não como declaração à parte.
 | página em tela estreita | `108:22` | não se aplica |
 | convite ao repositório | `114:27` | não se aplica |
 | convite ao repositório · estreita | `115:76` | não se aplica |
+| página do segundo case | `144:32` | não se aplica |
+| página do segundo case · estreita | `148:37` | não se aplica |
+| tabela de comparação | dentro de `144:32` | não se aplica |
+
+## Tabelas dentro do case
+
+- **Tabela ocupa a largura inteira do conteúdo, não a coluna de leitura.** A regra da medida
+  governa prosa; tabela é dado, e o que governa é a comparação ficar legível lado a lado.
+- **Em tela estreita a tabela rola na horizontal**, dentro da própria janela, e a página não
+  rola junto. Empilhar as linhas destruiria a comparação, que é a única razão de a tabela
+  existir.
+- **A rolagem é avisada em palavras** logo abaixo. Sem aviso, quem não arrasta nunca descobre
+  que existe uma coluna à direita.
 
 ## Comportamento
 

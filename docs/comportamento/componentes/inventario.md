@@ -27,7 +27,7 @@ existir.
 
 ## A lista
 
-Oito, conferidos contra as cinco telas — não sete. Cada um vira arquivo próprio quando for
+Nove, conferidos contra as telas desenhadas — a lista abriu em sete e já mudou duas vezes. Cada um vira arquivo próprio quando for
 desenhado.
 
 | # | Componente | Onde aparece | Existe no Figma? |
@@ -40,6 +40,7 @@ desenhado.
 | 6 | botão | **um lugar só**: o convite ao contato no fim do case | não |
 | 7 | marca-texto | home e case, nas duas larguras | não |
 | 8 | marcador de falta | case e "Quem sou eu", 19 ocorrências | não |
+| 9 | tabela de comparação | case de Reembolso, nas duas larguras | não |
 
 ### O que mudou em relação aos sete previstos
 
@@ -50,6 +51,12 @@ desenhado.
   existem nas variáveis. Mantê-lo na lista criaria uma peça que ninguém instancia.
 - **O botão encolheu de escopo.** Depois das decisões 047, 052 e 055 ele sobrevive em um único
   lugar. Continua componente, mas com uma variante e um uso.
+
+### A nona entrou pelo próprio teste
+
+A **tabela de comparação** apareceu quando o segundo case foi desenhado, dias depois de a
+lista ser fechada em oito. Ela entrou sozinha: aparece nas duas larguras, que é o teste. Isso
+é a lista funcionando, não a lista furando — o inventário foi escrito para crescer assim.
 
 ### O que a lista revelou
 

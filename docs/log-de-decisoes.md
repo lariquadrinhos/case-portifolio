@@ -1683,3 +1683,32 @@ cópias, porque cópias não têm do que divergir até alguém editar uma.
 **Consequência.** Lacuna fechada no contrato, que ganhou a tabela dos oito e os dois cenários
 que a mantêm honesta. Desenhar os sete que faltam continua sendo trabalho da Fase 2 — o que
 esta decisão fecha é *qual é a lista*, não *que ela está construída*.
+
+## 058 · O segundo case desenhado, e a tabela entra no inventário
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** case · `#escopo`
+
+**Gatilho.** O case de Reembolso precisava existir em desenho. Ele tem cinco capítulos, não
+seis, e **três tabelas** — elemento que o case de Finanças não tem.
+
+**Decisão.** Tela desenhada nas duas larguras. A **tabela de comparação** entra no inventário
+como nono componente, e ganha duas regras: ocupa a largura inteira do conteúdo, não a coluna
+de leitura; e **em tela estreita rola na horizontal dentro da própria janela**, com aviso em
+palavras.
+
+**Por quê a tabela não obedece à medida de linha.** A regra dos 65–75 governa prosa. Tabela é
+dado, e o que governa é a comparação ficar legível lado a lado — a coluna "fluxo atual" ao
+lado de "novo fluxo" é a frase inteira que a tabela diz. Empilhar as linhas no estreito
+destruiria exatamente isso.
+
+**O aviso não é enfeite.** Sem ele, quem não arrasta nunca descobre que existe uma coluna à
+direita — e a tabela mente por omissão, mostrando metade da comparação como se fosse toda.
+
+**O que o desenho confirmou sobre a P42.** O capítulo 1 deste case **não tem título próprio**:
+o `#` que existe dentro dele é o título do case, consumido pelo hero. O mesmo acontece no case
+de Finanças. Não é coincidência dos dois arquivos — é a estrutura que eles compartilham, e é
+por isso que a construção precisa de um marcador em vez de deduzir por posição.
+
+**Consequência.** Contrato do case ganhou a seção das tabelas e o cenário da rolagem.
+Inventário foi para nove — **a lista mudou duas vezes em dois dias**, o que é o teste de
+entrada funcionando, não furando.
