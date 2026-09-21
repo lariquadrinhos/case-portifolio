@@ -1804,3 +1804,35 @@ indicador de página atual.
 **Consequência.** Duas telas novas: `154:42` (menu aberto, estreita) e `154:89` (tema
 revelado, desktop). A lacuna do controle de tema fechou no contrato do tema. A moldura ganhou
 o menu na tabela de peças.
+
+## 062 · O anel de foco, e por que uma cor só basta
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** componentes · `#restricao`
+
+**Gatilho.** Foco visível estava declarado como princípio em três lugares e especificado em
+nenhum: os tokens traziam `foco/largura` e `foco/afastamento`, e mais nada.
+
+**Decisão.** Anel de 2px, afastado 2px, seguindo a forma do elemento, em `text/primary` do
+tema em vigor. Aparece no foco por teclado, não no clique. Demonstrado em `155:42` sobre os
+seis tipos de alvo que o site tem.
+
+**O afastamento é o que decide a cor.** Eu ia propor um anel de dois tons — claro por dentro,
+escuro por fora — que é a solução padrão quando o fundo é imprevisível. Fui verificar e não
+era necessário: **como o anel nunca encosta no elemento, ele cai sempre sobre a superfície de
+fundo**, e dentro de um tema todas as superfícies são da mesma família de claridade,
+inclusive as cinco cores de case. O afastamento, que parecia detalhe estético, é o que torna
+uma cor suficiente.
+
+**O alvo é o elemento inteiro.** No card de case o anel envolve o card, não o título: o card
+todo é o link. Se o anel marcasse só o texto, ele mentiria sobre o tamanho da área clicável.
+
+**Região que rola recebe foco.** A tabela em tela estreita precisa ser alcançável pelo
+teclado para poder ser rolada. Sem isso, a decisão 058 — que mandou a tabela rolar em vez de
+empilhar — deixaria metade da comparação inacessível para quem não usa o dedo. A regra de
+rolagem criou a necessidade de foco; as duas só funcionam juntas.
+
+**Duas faltas encontradas pelo caminho, as duas abertas como pergunta.** O **atalho de salto**
+(P48) não existe em contrato nenhum, e é o único elemento do site cuja existência inteira é
+um estado de foco — está desenhado como proposta. E **"acento de sistema" não existe como
+token** (P49), apesar de ser citado nas definições, em três contratos e em três decisões; o
+anel foi definido com `text/primary` para não depender dele.

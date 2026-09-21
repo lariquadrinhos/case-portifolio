@@ -23,6 +23,26 @@ existir.
   inventar na hora de construir.**
 - **Acessibilidade não é componente à parte.** Foco visível, navegação por teclado e
   respeito a movimento reduzido aparecem dentro de cada um.
+
+### O anel de foco, que vale para todos
+
+Demonstrado em `155:42`.
+
+- **Anel de 2px, afastado 2px do elemento, seguindo a forma dele** — canto arredondado no
+  botão, canto do card no card, caixa do texto no link.
+- **O afastamento é o que permite uma cor só por tema.** Como o anel nunca encosta no
+  elemento, ele cai sempre sobre a superfície de fundo — e dentro de um tema todas as
+  superfícies são da mesma família de claridade, inclusive as cinco cores de case. Sem o
+  afastamento, o anel disputaria com a cor do próprio elemento e precisaria de dois tons.
+- **Aparece no foco por teclado, não no clique.** Quem usa o rato não vê anel nenhum; quem
+  navega por teclado vê sempre.
+- **O que recebe foco é o alvo inteiro, não o texto dentro dele.** No card de case o anel
+  envolve o card, porque o card todo é o link — não só o título.
+- **Região que rola recebe foco.** A tabela em tela estreita precisa ser alcançável pelo
+  teclado para poder ser rolada; sem isso, metade da comparação fica inacessível a quem não
+  usa o dedo.
+- A cor do anel usa `text/primary` do tema em vigor. **Não usa "acento de sistema"** — que é
+  citado em três contratos e nas definições, e não existe como token. Ver P49.
 - Um nome só, nos três lugares: frame no Figma, título aqui, nome no código.
 
 ## A lista

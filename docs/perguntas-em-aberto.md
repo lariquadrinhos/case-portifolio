@@ -40,6 +40,22 @@ O parágrafo não será escrito. O site publica com dois cases e sem comentar a 
 ### ~~P47~~ · Resolvida pela decisão 056
 Texto aprovado e escrito no contrato.
 
+### P48 · O atalho de salto não existe em nenhum contrato
+Um case tem 7.000px e toda página tem barra fixa. Sem um "Pular para o conteúdo", quem
+navega por teclado atravessa a barra inteira em cada página antes de chegar ao texto. Ele é
+um elemento que **só existe enquanto tem foco** — invisível para quem usa o rato. Está
+desenhado como proposta em `155:42`.
+**Momento:** antes de publicar.
+
+### P49 · "Acento de sistema" não existe como token
+As definições, três contratos e três decisões citam um *acento de sistema* — o sublinhado da
+página atual, o que é interativo dentro de um case. **Nenhum token com esse nome existe:**
+todos os acentos da paleta são por case (roxo, laranja, verde, rosa, azul). O anel de foco
+foi definido com `text/primary` justamente para não depender dele.
+**Opções:** eleger uma das cinco cores como a do sistema · criar uma sexta, neutra ao
+conjunto · assumir `text/primary` também para o sublinhado, e o site não ter acento próprio.
+**Momento:** antes do visual design.
+
 ### P43 · A coluna de mídia comporta captura de tela de desktop?
 A grade nova dá **411px** à mídia de prova. As definições dizem que o case de Finanças mostra
 telas de desktop largas e que elas **são a prova visual do trabalho** — reduzidas demais,
