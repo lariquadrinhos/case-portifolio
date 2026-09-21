@@ -37,24 +37,24 @@ Existe algo muito especial, para mim, no momento em que uma pergunta muda a form
 
 ### Amor
 
-É difícil para mim fazer alguma coisa sem amor e encontrar sentido nela. Amor, para mim, não é só um sentimento: é uma forma de estar no mundo. É o cuidado que coloco nas coisas que faço, nas pessoas com quem me relaciono e naquilo que escolho construir.
+Amor, para mim, é uma forma de estar no mundo. É o cuidado que coloco nas coisas que faço, nas pessoas com quem me relaciono e naquilo que escolho construir.
 
 ### Curiosidade
 
-Eu quero entender. Essa talvez seja uma das coisas que mais me definem. Gosto de fazer perguntas, descobrir como as coisas funcionam e entrar em assuntos que ainda não conheço. Mundos desconhecidos não me assustam; me instigam. Aprender é uma das coisas que mais me dá energia.
+Eu quero entender. Gosto de fazer perguntas, descobrir como as coisas funcionam e entrar em assuntos que ainda não conheço. Mundos desconhecidos não me assustam; me instigam.
 
 ### Movimento
 
-Não gosto de estagnação. O mundo está se transformando o tempo todo e eu também. Quero continuar mudando, aprendendo, experimentando e descobrindo novos caminhos. Também gosto de provocar movimento: uma pergunta pode mudar uma ideia, uma conversa pode abrir um caminho e uma pequena mudança pode transformar um processo inteiro.
+O mundo está se transformando o tempo todo e eu também. Gosto de provocar movimento: uma pergunta pode mudar uma ideia, uma conversa pode abrir um caminho e uma pequena mudança pode transformar um processo inteiro.
 
 ### Melhor possível
 
-Gosto muito da palavra **melhor**. Ela me lembra o lema que aprendi como escoteira: *melhor possível*. Para mim, isso não significa exigir de mim mesma uma perfeição que ainda não posso alcançar. Significa fazer o melhor que consigo agora, aprender com isso e continuar buscando um melhor possível amanhã.
+Acredito que podemos deixar o mundo um lugar melhor do que encontramos. E *melhor possível* é um lema que significa: fazer o melhor que consigo agora, aprender com isso e continuar buscando um melhor possível amanhã.
 
 ### Impacto positivo
 
-Quero deixar as coisas melhores do que as encontrei. Isso vale para coisas grandes e pequenas. Até quando converso com alguém, penso no que posso acrescentar àquela pessoa e se existe alguma coisa que posso dizer que provoque uma movimentação positiva. Gosto da ideia de que nossas ações podem deixar pequenas marcas boas por onde passamos.
+Quero deixar as coisas melhores do que as encontrei. Isso vale para coisas grandes e pequenas. Gosto da ideia de que nossas ações podem deixar pequenas marcas boas por onde passamos.
 
 ### Questionamento
 
-Tenho dificuldade em aceitar algo simplesmente porque sempre foi feito daquela maneira. Gosto de perguntar por quê, entender o que existe por trás das coisas e imaginar se existe uma forma melhor de fazer. Para mim, questionar não é destruir o que existe; é abrir espaço para descobrir o que ainda pode existir.
+Para mim, questionar não é destruir o que existe; é abrir espaço para descobrir o que ainda pode existir.

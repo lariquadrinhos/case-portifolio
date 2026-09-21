@@ -1468,3 +1468,41 @@ exatamente o que uma verificação automática serve para fazer.
 
 **Consequência.** Contrato e script atualizados, com três cenários no lugar de um: imagem de
 prova com legenda, imagem de prova sem legenda, e a foto da página.
+
+## 050 · Os textos dos valores foram reescritos no Figma e voltaram para o arquivo
+
+**Contexto.** Larissa enxugou os seis textos de valores direto no Figma, buscando blocos mais
+parelhos. O arquivo `quem-sou-eu.md` seguia com as versões longas.
+
+**Decisão.** Os textos do Figma foram transcritos de volta para `quem-sou-eu.md`, que continua
+sendo a fonte: é dele que o site é construído.
+
+**Por quê.** A regra do projeto diz que nenhuma palavra é copiada do Figma para o código — e
+ela continua valendo. Mas ela descreve o fluxo normal, em que o Figma recebe amostras. Aqui o
+fluxo se inverteu: a escrita aconteceu no Figma. O que a regra protege é o arquivo ser a
+fonte, não a direção em que o texto viaja uma vez. Então o texto volta para o arquivo, e o
+arquivo segue mandando.
+
+**Consequência.** Os seis blocos encurtaram. Duas correções de digitação entraram junto: um
+espaço duplo em "Amor" e uma vírgula solta em "um lema, que significa". A ênfase em
+*melhor possível*, que existia no arquivo e se perdeu no texto simples do Figma, foi
+restaurada.
+
+## 051 · Blocos curtos em grade: largura única, viúva é trabalho do navegador
+
+**Contexto.** Em 411px, dois dos seis valores terminavam com uma palavra sozinha na última
+linha — "passamos." e "existir.". Larissa estreitou esses dois para 380px, o que resolveu, e
+perguntou como isso ficava nas regras.
+
+**Decisão.** A largura volta a ser única (411px, 4 colunas) para todos os blocos da mesma
+grade. A viúva passa a ser resolvida por `text-wrap: pretty` no site, e por edição do texto
+quando incomodar de verdade.
+
+**Por quê.** O ajuste dela estava certo no diagnóstico e errado na alavanca. Largura por bloco
+tem três problemas: quebra o alinhamento das linhas, fica fora da grade (380px são 3,72
+colunas), e serve a uma frase exata — trocar uma palavra desfaz o motivo e deixa o número. O
+que pesa mais: no estreito a largura é ditada pela margem, então o ajuste simplesmente não
+existe lá. `text-wrap: pretty` resolve nas duas larguras, de graça, e degrada em silêncio.
+
+**Consequência.** Regra dos blocos curtos escrita nas definições. P46 resolvida: medida abaixo
+de 65 é permitida nesses blocos, com piso em torno de 45. Os seis valores voltaram a 411px.

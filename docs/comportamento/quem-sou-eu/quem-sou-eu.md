@@ -39,7 +39,10 @@ cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um
 - **O texto de cada valor tem largura presa em 4 colunas (411px), não na célula.** A célula
   continua ocupando a metade da grade (6 colunas, 628px); só o parágrafo é mais estreito. A
   sobra fica dentro de cada metade, e as duas colunas seguem ancoradas nas metades da grade
-  em vez de deixarem um vazio na direita da seção. Ver @lacuna P46 quanto à medida de linha.
+  em vez de deixarem um vazio na direita da seção.
+- **Todos os seis blocos têm a mesma largura.** Palavra sozinha na última linha é resolvida
+  por `text-wrap: pretty`, não por estreitar um bloco: a largura por bloco não existe na
+  versão estreita, onde a margem governa.
 - **O currículo é botão; o contato é texto.** Baixar um arquivo é ação dentro do site, e
   botão promete isso; o e-mail e o LinkedIn levam para fora e aparecem como palavra.
 
