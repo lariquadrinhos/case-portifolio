@@ -1001,3 +1001,38 @@ mas foi consequência, não escolha deliberada de entrelinha.
 **Consequência.** A quebra da frase subiu para o contrato da home: **ela é escolhida, não
 automática**, e cada linha fecha uma unidade de sentido. Nenhum outro elemento usa `display`
 em tela estreita, então a mudança não alcança nada além da hero da home.
+
+---
+
+## 035 · A abertura em tela estreita baixa para 18, com a entrelinha preservada em 32
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** home · `#restricao`
+
+**Gatilho.** Larissa pediu o mesmo tratamento do título para o parágrafo da home estreita,
+e perguntou como isso alteraria as regras. A pergunta valeu mais que o ajuste.
+
+**Decisão.** `size/abertura` no modo `Tela pequena` passa de **20 para 18**. `line/abertura`
+**permanece em 32**.
+
+**Alternativa descartada.** Duas. *Trocar o parágrafo para `corpo` só em tela estreita* —
+perdeu pelo mesmo motivo da decisão 016: mudaria o nível tipográfico entre as larguras, e o
+parágrafo da home é `abertura` no desktop. *Baixar `line/abertura` junto, para 30* — perdeu
+porque igualaria `abertura` e `corpo` por completo; mantendo 32 contra 30, os dois ficam com
+o mesmo corpo e **entrelinhas diferentes**, e a distinção sobrevive no ar entre as linhas,
+que é onde ela faz sentido numa linha de abertura.
+
+**O que a medição expôs, e é mais importante que o ajuste.** O parágrafo a 20px cabia
+**33 caracteres**, não 34 — abaixo do piso que a decisão 016 fixou. O motivo não é erro de
+cálculo: aquele piso foi medido com **o texto antigo**, que Larissa reescreveu depois.
+**Medida em caracteres depende do texto, não só do corpo** — letras têm larguras
+diferentes, e o mesmo tamanho dá contagens diferentes em frases diferentes.
+
+**Consequência: a regra da medida foi reescrita para ser verificável.** O que se verifica é
+a **coluna** — largura da tela menos as duas margens —, e a medida em caracteres passa a ser
+declarada como **consequência, não alvo**, em torno de 35 a 45. Uma regra que só pode ser
+conferida contra um texto específico não é regra, é observação.
+
+**Segundo achado.** A escala estreita tem **oito níveis e sete valores distintos**:
+`subtitulo` e `abertura` eram ambos 20. A colapso não é novo, só mudou de lugar — agora
+`abertura` e `corpo` compartilham o corpo 18, mas com entrelinhas diferentes, o que é menos
+colapso do que havia antes.
