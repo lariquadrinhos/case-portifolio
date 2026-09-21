@@ -1923,3 +1923,28 @@ desfeita por alguém de boa-fé.**
 e é honesto: ele não existe por juntar coisas parecidas, existe por não caber. Está escrito
 assim no contrato, para que ninguém tente "consertar" a estranheza sem saber que o consertar
 não cabe.
+
+## 066 · Dentro do menu, "Tema" tem o tamanho de "Quem sou eu"
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** tema · `#correcao`
+
+**Gatilho.** Larissa, sobre o painel do menu: *"estranho é o tema tá com fonte diferente do
+quem sou eu, os dois estão igualmente dentro do menu."*
+
+**O que estava errado.** Eu tinha desenhado "Tema" como rótulo de grupo — 13px, cinza — o que
+marca **nível**. Mas não há diferença de nível: os dois são exatamente o que o menu guarda.
+A regra da barra já dizia *"o nível se marca pelo tamanho"*, e eu usei tamanho para marcar
+outra coisa.
+
+**Decisão.** "Tema" passa a 18px, igual a "Quem sou eu". A diferença real — que "Quem sou eu"
+se toca e "Tema" não — vai para dois eixos que não são o de nível: **cor**, que diz que é
+nome e não alvo, e **recuo**, que põe Claro e Escuro visivelmente debaixo dele.
+
+**O que isso separa.** Três coisas diferentes estavam apoiadas no mesmo eixo: *nível*
+(tamanho), *interatividade* (cor) e *pertencimento* (recuo). Encolher o rótulo misturava as
+três e acertava por acaso. Agora cada uma tem o seu.
+
+**Por que não deixar os dois idênticos**, que era o que a observação pedia ao pé da letra:
+tamanho igual **e** cor igual prometeriam um toque que não existe. A intenção dela era "os
+dois são irmãos" — e é isso que o tamanho passa a dizer. O resto continua distinguindo o que
+de fato difere.
