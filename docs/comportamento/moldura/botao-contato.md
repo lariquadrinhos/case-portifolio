@@ -58,6 +58,13 @@ e-mail escrito por extenso e o LinkedIn.
 - Quando a página atual está dentro do menu, **é a palavra "Menu" que recebe o sublinhado**.
   Sem isso, a única página escondida seria também a única sem indicador.
 - Acionar o botão revela duas saídas: o e-mail e o LinkedIn.
+- **As quatro sobreposições do site são a mesma peça: contato, menu e tema.** Mesma casca —
+  canto de 10, traço de 1, sombra — e mesmo miolo: a caixa é uma lista de linhas, e **a linha
+  inteira é o alvo**, não o texto dentro dela. Tocar ao lado da palavra tem que funcionar.
+- **Cada linha tem 12px de respiro em cima e embaixo**, o que dá alvo de 54px no desktop e
+  56px na tela estreita. O mínimo confortável para dedo é 44; texto solto numa caixa dá 32.
+- **Os rótulos são do tamanho dos itens da barra**, 18. Uma sobreposição é lista de alvos, não
+  texto de leitura — o corpo maior aqui só faria a caixa disputar com a página atrás.
 - **Toda sobreposição fica a 12px do que a abriu** — contato, menu e tema, nas duas larguras.
   Quando o gatilho é item da barra, a caixa pende da borda de baixo da barra, não da palavra:
   a palavra acaba dentro da barra, e uma caixa saindo do meio dela cobriria a própria barra.

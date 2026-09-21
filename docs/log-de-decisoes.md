@@ -1998,3 +1998,37 @@ elas leem os documentos e este número mora no Figma.
 e à margem da página. Os dois rótulos começam na mesma coluna, com "Escuro" reservando a
 largura do sinal. A tipografia é 18/30, a dos itens da barra — o menu estreito usa 18/32
 porque lá a escala é outra.
+
+## 069 · As quatro sobreposições passam a ser a mesma peça
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** moldura · `#correcao`
+
+**Gatilho.** Larissa: *"agora confere o contato também."* A conferência comparou as quatro
+caixas lado a lado pela primeira vez.
+
+**O que estava errado.** A casca era igual nas quatro — canto 10, traço 1, sombra y8 r24 — e
+**o miolo era de duas famílias**. Contato: texto solto numa caixa com respiro de 24, alvo de
+32 a 34px. Tema e menu: linhas com respiro próprio, alvo de 54 a 56px.
+
+**Três defeitos, em ordem de gravidade.**
+
+1. **Alvo pequeno demais.** 32px de altura em tela estreita, abaixo dos 44 confortáveis para
+   dedo — e eram justamente os dois links que existem para ser tocados.
+2. **Só o texto era alvo, não a linha.** No menu, tocar em qualquer ponto da linha funciona;
+   no contato, tocar ao lado de "LinkedIn" não fazia nada. A mesma caixa ensinava duas
+   coisas diferentes sobre onde se pode tocar.
+3. **Tipo diferente sem critério.** Contato no desktop a 21/34, tema a 18/30. Na tela estreita
+   os dois já usavam 18 — o que mostra que o 21 não era escolha, era sobra de ter construído
+   a primeira caixa por analogia com texto de leitura.
+
+**Decisão.** Uma peça só. A caixa é lista de linhas; a linha inteira é o alvo; cada linha tem
+12px de respiro em cima e embaixo; o rótulo é 18, o tamanho dos itens da barra.
+
+**Por que o 18 e não o 21.** Sobreposição é lista de alvos, não texto de leitura. O corpo
+maior fazia a caixa disputar atenção com a página atrás, que é justamente o que ela não
+deve fazer — ela é um desvio curto, não um destino.
+
+**O que a conferência ensina sobre as anteriores.** Este defeito nasceu quando a caixa de
+contato foi construída sozinha, antes de existirem as outras três. Cada uma pareceu certa no
+dia. **A divergência só existe em comparação, e comparação não acontece por acaso** — foi
+pedida duas vezes seguidas, e das duas vezes achou coisa.
