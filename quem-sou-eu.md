@@ -53,8 +53,8 @@ Acredito que podemos deixar o mundo um lugar melhor do que encontramos. E *melho
 
 ### Impacto positivo
 
-Quero deixar as coisas melhores do que as encontrei. Isso vale para coisas grandes e pequenas. Gosto da ideia de que nossas ações podem deixar pequenas marcas boas por onde passamos.
+Gosto da ideia de que nossas ações podem deixar pequenas marcas boas por onde passamos. Antes de agir, eu penso na melhor forma de agregar positivamente.
 
 ### Questionamento
 
-Para mim, questionar não é destruir o que existe; é abrir espaço para descobrir o que ainda pode existir.
+Para mim, questionar não é querer destruir o que já existe; é abrir espaço para descobrir o que ainda pode existir.
