@@ -70,10 +70,9 @@ Três decisões foram tomadas por mim para o componente existir, e nenhuma vem d
 Elas sustentam o wireframe, mas não foram escolhidas — foram preenchidas.
 **Momento:** Fase 2, quando o componente for fechado de verdade.
 
-### P30 · Os sete componentes previstos
-Barra, botão, card, item da trilha, bloco de destaque, bloco de mídia com legenda e campo
-de foco. Nenhum desenhado, e a lista pode estar incompleta.
-**Momento:** Fase 2. · *Contrato, `componentes/`*
+### ~~P30~~ · Resolvida pela decisão 057
+A lista fechou em oito: entraram marca-texto e marcador de falta, saiu campo de foco.
+Desenhar os sete que faltam é trabalho da Fase 2.
 
 ### P21 · A ordem do "próximo case" com três cases
 A decisão 003 resolve dois cases sem exceção, mas não define a ordem com três.

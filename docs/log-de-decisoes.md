@@ -1648,3 +1648,38 @@ comigo" por um rótulo de uso único.
 **Consequência.** A caixa de lacuna saiu das duas larguras. P47 fechada. O contrato ganhou o
 cenário que fixa a ordem das hipóteses — sem ele, uma reescrita futura poderia inverter as
 duas frases sem perceber que inverte a postura.
+
+## 057 · O inventário de componentes fecha em oito, e revela que só um existe
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** componentes · `#restricao`
+
+**Resolve a P30.**
+
+**Gatilho.** A lista dos sete previstos foi escrita antes de qualquer tela existir. Com as
+cinco desenhadas nas duas larguras, dava para conferi-la contra o que o arquivo realmente
+tem, em vez de aceitá-la.
+
+**Decisão.** A lista fecha em **oito**: barra fixa, card de case, trilha, tira de destaques,
+bloco de mídia com legenda, botão, marca-texto e marcador de falta.
+
+**O que mudou.** Entraram **marca-texto** (8 ocorrências, home e case) e **marcador de
+falta** (19 ocorrências, quatro telas) — nenhum dos dois estava previsto. Saiu **campo de
+foco**, que não é componente: é token. A própria regra deste inventário diz que
+acessibilidade vive dentro de cada componente, e `foco/largura` e `foco/afastamento` já
+existem nas variáveis; mantê-lo criaria uma peça que ninguém instancia. E o **botão**
+encolheu — depois das decisões 047, 052 e 055 ele sobrevive em um lugar só, o convite ao
+contato no fim do case.
+
+**O teste que a lista passou a ter.** Um elemento entra no inventário quando aparece em mais
+de uma tela **ou** em mais de uma largura. Foi ele que trouxe marca-texto e marcador de falta,
+e foi ele que deixou campo de foco de fora.
+
+**O que a conferência revelou, e que ninguém tinha perguntado.** Dos oito, **só o card de
+case é componente de verdade no Figma**. A barra fixa está copiada **dez vezes**: mudá-la
+hoje é mudá-la em dez lugares à mão. As duas telas construídas nesta sessão clonaram a barra
+de telas existentes — a décima cópia nasceu hoje. Nenhuma checagem pega divergência entre
+cópias, porque cópias não têm do que divergir até alguém editar uma.
+
+**Consequência.** Lacuna fechada no contrato, que ganhou a tabela dos oito e os dois cenários
+que a mantêm honesta. Desenhar os sete que faltam continua sendo trabalho da Fase 2 — o que
+esta decisão fecha é *qual é a lista*, não *que ela está construída*.

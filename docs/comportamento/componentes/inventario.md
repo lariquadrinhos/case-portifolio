@@ -2,8 +2,8 @@
 fluxo: componentes/inventario
 dominio: componentes
 dono: design
-status: rascunho
-atualizado: 2026-09-18
+status: lista fechada, sete por desenhar
+atualizado: 2026-09-21
 ---
 
 # Inventário de componentes
@@ -24,6 +24,38 @@ existir.
 - **Acessibilidade não é componente à parte.** Foco visível, navegação por teclado e
   respeito a movimento reduzido aparecem dentro de cada um.
 - Um nome só, nos três lugares: frame no Figma, título aqui, nome no código.
+
+## A lista
+
+Oito, conferidos contra as cinco telas — não sete. Cada um vira arquivo próprio quando for
+desenhado.
+
+| # | Componente | Onde aparece | Existe no Figma? |
+|---|---|---|---|
+| 1 | barra fixa | as cinco telas, nas duas larguras | não — **10 cópias soltas** |
+| 2 | card de case | índice e fim de case | **sim**, `101:8` |
+| 3 | trilha | case: trilha lateral no desktop, faixa de progresso no estreito | não |
+| 4 | tira de destaques | case, chave e valor | não |
+| 5 | bloco de mídia com legenda | case, 12 ocorrências | não |
+| 6 | botão | **um lugar só**: o convite ao contato no fim do case | não |
+| 7 | marca-texto | home e case, nas duas larguras | não |
+| 8 | marcador de falta | case e "Quem sou eu", 19 ocorrências | não |
+
+### O que mudou em relação aos sete previstos
+
+- **Entraram dois** que a lista não tinha: **marca-texto** e **marcador de falta**. Os dois se
+  repetem em mais de uma tela e em mais de uma largura, que é o teste.
+- **Saiu um: campo de foco.** Não é componente — é token. A regra deste inventário já diz que
+  acessibilidade vive dentro de cada componente, e `foco/largura` e `foco/afastamento` já
+  existem nas variáveis. Mantê-lo na lista criaria uma peça que ninguém instancia.
+- **O botão encolheu de escopo.** Depois das decisões 047, 052 e 055 ele sobrevive em um único
+  lugar. Continua componente, mas com uma variante e um uso.
+
+### O que a lista revelou
+
+**Só um dos oito é componente de verdade.** A barra está copiada dez vezes no arquivo: mudar
+a barra hoje é mudar dez lugares à mão, e as telas novas desta sessão foram construídas
+clonando a barra de uma tela existente. Nenhuma checagem pega divergência entre cópias.
 
 ### card de case
 
@@ -47,7 +79,7 @@ Usado no índice de Trabalhos e ao fim de cada case. Carrega a cor do case de de
 | Nome no cenário | Figma | Storybook |
 |---|---|---|
 | card de case | `101:8` | não se aplica |
-| — os outros seis | `@lacuna` | não se aplica |
+| — os outros sete | por desenhar | não se aplica |
 
 ## Comportamento
 
@@ -61,13 +93,16 @@ Funcionalidade: Inventário de componentes
     E o arquivo lista suas variantes, seus estados e quando não usar
     E o arquivo não repete nenhum valor que já vive nas variáveis
 
-  @lacuna
-  Cenário: Os sete componentes previstos
-    Então A DEFINIR — ver pergunta P30
-    # Previstos: barra · botão · card · item da trilha · bloco de destaque ·
-    # bloco de mídia com legenda · campo de foco.
-    # O card de case existe desde 21/09/2026, construído fora de ordem por ser
-    # usado em dois lugares — índice e fim de case. Os outros seis não existem.
+  Cenário: A lista de componentes está fechada
+    Dado que as cinco telas estão desenhadas nas duas larguras
+    Então o inventário lista oito componentes
+    E cada um deles aparece em mais de uma tela ou em mais de uma largura
+    E nenhum item da lista é um valor que já vive nas variáveis
+
+  Cenário: Um elemento repetido que não está na lista
+    Quando um elemento passa a aparecer em mais de uma tela ou largura
+    Então ele entra neste inventário
+    E deixa de ser cópia solta
 ```
 
 ## Transições
