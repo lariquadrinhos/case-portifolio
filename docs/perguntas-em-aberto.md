@@ -127,3 +127,21 @@ serão públicos no site de qualquer forma; a questão é se antes dele existir.
 A checagem de CI 1 e o campo `storybook.usa` se aplicam?
 **Momento:** primeira execução da skill do contrato.
 
+## P46 — A regra de medida de linha vale para blocos curtos?
+
+A regra diz: medida de linha entre 65 e 75 caracteres no texto corrido, onde houver largura
+para isso. Os textos dos valores agora têm 411px, o que dá **49 caracteres** — bem abaixo da
+faixa — e havia largura para 74 caracteres.
+
+A tensão é real: 65–75 existe para leitura contínua, onde o olho precisa achar o começo da
+próxima linha muitas vezes seguidas. Os valores são blocos de cinco ou seis linhas, lidos em
+varredura. Mas a regra, como está escrita, não faz essa distinção.
+
+Dois caminhos:
+
+- **Escopar a regra**: 65–75 governa leitura contínua (corpo do case, apresentação); blocos
+  curtos em grade podem ser mais estreitos. Precisa de um limite inferior, senão vira
+  exceção sem borda.
+- **Manter a regra como está** e tratar os valores como exceção registrada.
+
+Não bloqueia nada. A decisão muda o texto da regra, então é dela.
