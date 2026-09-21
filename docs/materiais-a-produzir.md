@@ -50,6 +50,12 @@ repositório. Ver decisão 047.
 O card deste case, no índice de Trabalhos e ao fim do outro case, tem espaço de capa e
 nenhuma imagem.
 
+**Proporção 3:2**, exibida em 626×417 no desktop e 325×217 no estreito — então o arquivo
+precisa de pelo menos **1252×835** para aguentar tela de alta densidade.
+
+**É composição, não captura.** O material bruto deste case não é 3:2, e recortar uma captura
+larga até caber joga fora justamente o que ela prova. A capa precisa ser montada.
+
 ---
 
 ## Case de Reembolso SulAmérica

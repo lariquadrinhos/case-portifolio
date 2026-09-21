@@ -68,7 +68,14 @@ clonando a barra de uma tela existente. Nenhuma checagem pega divergência entre
 
 Usado no índice de Trabalhos e ao fim de cada case. Carrega a cor do case de destino.
 
-- **Capa em 3:2**, no topo, ocupando a largura do card.
+- **Capa em 3:2 exato**, no topo, ocupando a largura do card. **Quem decide a proporção é a
+  tela estreita.** A mesma imagem serve os dois tamanhos: em 628 ela tem 417px de altura, em
+  327 tem 218. Uma proporção mais rasa — 2:1 — daria 163px no card estreito, curto demais
+  para uma composição de produto continuar legível. O desktop toleraria qualquer coisa; o
+  estreito não.
+- **Consequência da proporção: a capa é composição, não captura.** Nenhum dos dois cases tem
+  material nativo em 3:2 — Finanças são capturas largas de desktop, Reembolso são telas altas
+  de celular. As duas capas precisam ser montadas.
 - Abaixo dela, título e a linha de tensão, com respiro entre os dois e margem em volta.
 - **O componente não mantém a proporção da capa ao ser redimensionado** — a altura é fixa e
   precisa ser ajustada em cada instância. É limitação da construção de hoje, e a Fase 2
@@ -77,9 +84,15 @@ Usado no índice de Trabalhos e ao fim de cada case. Carrega a cor do case de de
   traz o conteúdo de um dos cases como padrão, e o outro é sobrescrito em cada uso — então
   corrigir o arquivo de conteúdo sincroniza um e deixa o outro para trás. Enquanto o Figma
   guardar cópia do texto, essa assimetria existe.
-- Valores de tipo e proporção são **provisórios**: preenchidos para o componente existir,
-  não escolhidos. A pergunta P40 os trata; o componente, porém, existe e funciona — isto
-  não é lacuna.
+- **Título em `titulo-cap`** (36 desktop / 26 estreito). O card mostra um **título de case**,
+  que na página do case é `titulo-case`. Um degrau abaixo é a forma reduzida do mesmo texto.
+  Dois degraus — `subtitulo`, 22 — poriam o título de um case abaixo dos nomes dos valores em
+  "Quem sou eu", invertendo a ordem das coisas.
+- **Linha de tensão em `corpo`** (18/30). É frase para ler, não metadado. `apoio` a
+  rebaixaria a legenda; `abertura` a faria competir com o título.
+- **A trava de proporção da capa é ação de interface.** A API expõe `targetAspectRatio` como
+  somente leitura, então ligar a trava precisa ser feito no Figma à mão. Enquanto não for,
+  redimensionar o card à mão pode desalinhar a capa — hoje as nove cópias estão em 1,501.
 
 ## Peças
 

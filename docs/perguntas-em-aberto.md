@@ -64,15 +64,9 @@ Que a página tem título está decidido (040). O texto — *"Dois problemas que
 e o que fiz com eles."* — é rascunho meu e precisa da voz dela.
 **Momento:** antes de publicar Trabalhos.
 
-### P40 · Os valores provisórios do card de case
-Três decisões foram tomadas por mim para o componente existir, e nenhuma vem de documento:
-**capa em 3:2**, **título em `titulo-cap`** (36 desktop / 26 estreito) e **linha em `corpo`**.
-Elas sustentam o wireframe, mas não foram escolhidas — foram preenchidas.
-**Momento:** Fase 2, quando o componente for fechado de verdade.
-
-### ~~P30~~ · Resolvida pela decisão 057
-A lista fechou em oito: entraram marca-texto e marcador de falta, saiu campo de foco.
-Desenhar os sete que faltam é trabalho da Fase 2.
+### ~~P40~~ · Resolvida pela decisão 059
+Os três valores foram escolhidos e deixaram de ser provisórios. Capa 3:2 porque a tela
+estreita decide; título um degrau abaixo de `titulo-case`; linha em `corpo`.
 
 ### P21 · A ordem do "próximo case" com três cases
 A decisão 003 resolve dois cases sem exceção, mas não define a ordem com três.

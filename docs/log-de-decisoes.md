@@ -1712,3 +1712,39 @@ por isso que a construção precisa de um marcador em vez de deduzir por posiç�
 **Consequência.** Contrato do case ganhou a seção das tabelas e o cenário da rolagem.
 Inventário foi para nove — **a lista mudou duas vezes em dois dias**, o que é o teste de
 entrada funcionando, não furando.
+
+## 059 · Os três valores do card deixam de ser provisórios
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** componentes · `#restricao`
+
+**Resolve a P40.**
+
+**Gatilho.** Capa em 3:2, título em `titulo-cap` e linha em `corpo` sustentavam o card desde
+que ele foi construído, mas nenhum dos três tinha sido escolhido — foram preenchidos para o
+componente existir.
+
+**Capa em 3:2 — quem decide é a tela estreita.** A mesma imagem serve 628 e 327 de largura.
+Em 327, uma proporção de 2:1 daria 163px de altura: curto demais para uma composição de
+produto continuar legível. 3:2 dá 218. O desktop toleraria qualquer proporção; o card
+estreito é que tem piso. **A restrição mais apertada é que escolhe**, e ela não estava no
+tamanho maior.
+
+**E isso decide outra coisa que ninguém tinha perguntado:** nenhum dos dois cases tem material
+nativo em 3:2 — Finanças são capturas largas de desktop, Reembolso são telas altas de
+celular. Então **a capa é composição, não captura**. Recortar uma captura larga até caber
+jogaria fora justamente o que ela prova.
+
+**Título em `titulo-cap`.** O card mostra um título de case, que na própria página do case é
+`titulo-case`. Um degrau abaixo é a forma reduzida do mesmo texto. Dois degraus — `subtitulo`
+— poriam o título de um case abaixo dos nomes dos valores em "Quem sou eu".
+**Custo aceito:** no fim de um case o título do card iguala o nível dos títulos de capítulo.
+Aceito porque a capa acima dele marca o card como objeto, não como cabeçalho — 36px sob uma
+imagem grande não se lê como seção.
+
+**Linha em `corpo`.** É frase para ler, não metadado. `apoio` a rebaixaria a legenda;
+`abertura` a faria competir com o título.
+
+**Consequência.** A capa foi cravada em 3:2 exato nas nove cópias — estavam em 1,494. A trava
+de proporção continua pendente e é **ação de interface**: a API expõe `targetAspectRatio`
+como somente leitura. O inventário de materiais ganhou a especificação da capa, com o mínimo
+de 1252×835 para alta densidade.
