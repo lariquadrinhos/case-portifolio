@@ -49,13 +49,27 @@ cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um
   correio — e a forma promete o mesmo destino para os três.
 - **Os três vêm sob um convite único**, "Mais sobre mim:", em vez de um convite por link.
 
+### Na tela estreita
+
+- **A foto sobe para cima da apresentação.** No desktop as duas ficam lado a lado; em 375 não
+  há largura para duas colunas, e a foto vem primeiro — é ela que responde "quem" antes de o
+  texto responder "o quê".
+- **Os valores viram uma coluna só.** A regra das linhas existe para alinhar títulos entre
+  colunas; com uma coluna não há o que alinhar, e a ordem do arquivo já é a ordem visual.
+- **O destaque de página atual fica em "Menu".** "Quem sou eu" não é item da barra estreita:
+  ele mora dentro do Menu. Vale o mesmo que já valia para a página de case, que sublinha
+  "Trabalhos" — a página que não está na barra destaca o item a que pertence.
+
 ## Peças
 
 | Nome no cenário | Figma | Storybook |
 |---|---|---|
+| tela, desktop | `116:32` | não se aplica |
+| tela, estreita | `132:32` | não se aplica |
 | foto | `116:48` | não se aplica |
 | mais sobre mim | `127:32` | não se aplica |
 | valores em linhas | `117:32` | não se aplica |
+| valores em coluna | dentro de `132:32` | não se aplica |
 
 ## Comportamento
 
@@ -80,6 +94,13 @@ Funcionalidade: Quem sou eu
     Quando a pessoa aciona o currículo
     Então o arquivo em PDF é entregue
     E o currículo aparece como palavra sublinhada, não como botão
+
+  Cenário: A tela estreita empilha foto e apresentação
+    Dado que a tela é estreita
+    Quando a página abre
+    Então a foto aparece acima da apresentação
+    E os valores aparecem em uma coluna só
+    E o destaque de página atual aparece em "Menu"
 
   Cenário: Os três caminhos para fora têm a mesma forma
     Dado que a página está aberta
