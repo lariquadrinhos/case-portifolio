@@ -1231,3 +1231,35 @@ desenho**: as instâncias do card no Figma tinham a cópia antiga, e precisaram 
 sincronizadas à mão. É a mesma classe de problema da exportação de tokens (decisão 037) —
 **o Figma guarda cópias daquilo que o repositório é fonte**, e nada avisa quando as duas
 divergem.
+
+---
+
+## 042 · O texto do case ocupa seis colunas, não cinco
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** case · `#reversao`
+
+**Reverte a grade de leitura escrita nas definições.**
+
+**Gatilho.** Antes de desenhar a página de case, medi a grade que as definições descrevem —
+*"a trilha ocupa as duas primeiras colunas, o título as três seguintes e o texto as cinco
+últimas"* — contra a regra da medida de linha.
+
+**Decisão.** O texto ocupa **seis colunas**. A grade de leitura fica: trilha nas colunas 1 e
+2, título nas 4 a 6, texto nas 7 a 12. Fecha exatamente em doze.
+
+**Alternativa descartada.** Manter cinco colunas, como está escrito. Perdeu por medição:
+cinco colunas dão 519px e **61 caracteres** por linha, quatro abaixo do mínimo de 65. Seis
+dão 628px e 74 caracteres, dentro da faixa.
+
+**Quem decidiu foi a própria hierarquia das regras dela.** A regra da medida diz, com todas
+as letras, que *"é o número que governa a largura da coluna de texto, **não o contrário**"*.
+Entre uma grade que diz cinco e uma medida que exige seis, a medida ganha por declaração
+expressa — não por eu ter escolhido.
+
+**Custo aceito.** A frase das definições sobre a grade de leitura fica desatualizada em um
+número, e quem ler o documento sem ver esta entrada vai desenhar cinco colunas.
+
+**Consequência.** Dois contratos novos no domínio case, que era o mais denso e tinha só um
+arquivo: `pagina-de-case.md` e `trilha.md`. Abre a **P42**: nos arquivos de case, o hero
+está dentro do primeiro capítulo, e a construção só conseguiria separá-lo por posição — o
+tipo de regra que a decisão 006 recusou.

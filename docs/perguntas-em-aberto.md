@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **13 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **14 perguntas**, nenhuma travando
 
 ---
 
@@ -30,6 +30,15 @@ aparece na barra.
 **Opções:** a barra conta como o nome da home e a hero começa pela frase · o nome fica nos
 dois, com pesos diferentes · a hera traz só o cargo.
 **Momento:** antes de fechar o wireframe da home. · *Contrato, `home/`*
+
+### P42 · Como a construção separa o hero dos capítulos
+Nos arquivos de case, o título, a frase de abertura e a tira de destaques estão **dentro do
+primeiro capítulo**, antes da prosa dele. A construção precisa distingui-los — e hoje só
+conseguiria por posição, que é o tipo de regra que a decisão 006 recusou.
+**Opções:** marcar o hero com `<!-- bloco: hero -->`, que já existe no vocabulário e é usado
+em `quem-sou-eu.md` · separar o hero num bloco próprio antes do primeiro capítulo · aceitar
+regra por posição só neste caso.
+**Momento:** antes de implementar a construção da página de case.
 
 ### P41 · O texto do título de Trabalhos, em rascunho
 Que a página tem título está decidido (040). O texto — *"Dois problemas que eu vi de perto,
