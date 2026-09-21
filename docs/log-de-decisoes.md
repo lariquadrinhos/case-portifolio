@@ -1036,3 +1036,41 @@ conferida contra um texto específico não é regra, é observação.
 `subtitulo` e `abertura` eram ambos 20. A colapso não é novo, só mudou de lugar — agora
 `abertura` e `corpo` compartilham o corpo 18, mas com entrelinhas diferentes, o que é menos
 colapso do que havia antes.
+
+---
+
+## 036 · A escala converge por construção; a regra é distinguibilidade, não corpos distintos
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** — · `#restricao`
+
+**Gatilho.** A decisão 035 expôs que a escala estreita tem oito níveis e sete corpos
+distintos. Larissa pediu para resolver o colapso.
+
+**Decisão.** Não se resolve mudando números: **o colapso é consequência aritmética da regra
+que a produz.** Uma escala que comprime pelo topo contra um piso fixo converge — os níveis
+de cima descem, `corpo`, `apoio` e `etiqueta` não se movem, e em algum ponto dois se
+encontram. A regra passa a ser explícita: **dois níveis nunca têm ao mesmo tempo o mesmo
+corpo e a mesma entrelinha.** Hoje `abertura` 18/32 e `corpo` 18/30 dividem o corpo e se
+separam pela entrelinha.
+
+**Alternativa descartada.** Duas. *Separar `abertura` e `corpo` por tamanho*, pondo abertura
+em 19 — perdeu por introduzir um ímpar numa escala inteiramente par, para resolver algo que
+não é problema. *Reduzir a escala estreita a sete níveis*, eliminando um — perdeu porque a
+correspondência entre as larguras se quebraria: um elemento que é `abertura` no desktop
+precisaria virar outra coisa em tela estreita, exatamente o que a decisão 016 recusou.
+
+**Medição que sustenta a decisão.** No desktop **não há nenhum** par com o mesmo corpo. Em
+tela estreita há **um**, e ele é distinguível. Os três níveis do piso são idênticos nas duas
+larguras — a compressão acontece toda acima deles.
+
+**Custo aceito.** A escala estreita tem um par que só se distingue por entrelinha, o que é
+uma diferença mais sutil que a de corpo. Em textos curtos, de uma ou duas linhas, a
+entrelinha quase não se manifesta e os dois níveis parecerão iguais.
+
+**Consequência.** A regra virou **checagem declarada** no script, e está bloqueada pela
+mesma razão que outras: os valores da escala não estão no repositório, e esperam o mecanismo
+de exportação dos tokens (**P07**).
+
+**Nota de registro.** Não havia pergunta P39. O achado foi registrado na decisão 035 e na
+spec visual, mas **nunca virou pergunta na lista** — omissão minha. Esta entrada fecha o
+assunto sem que a pergunta tenha chegado a existir.

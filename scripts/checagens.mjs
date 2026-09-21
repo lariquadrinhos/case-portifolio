@@ -172,6 +172,9 @@ nota('  fora do editor lê o arquivo. Os node-id dos contratos seguem @lacuna de
 nota('Todo `Cenário:` é citado por um teste — a suíte usará `node --test testes/`, decidida');
 nota('  na pesquisa da spec 001. A checagem entra quando o primeiro teste existir.');
 nota('Todo `storybook.usa` existe — não se aplica: não há Storybook. Ver pergunta P17.');
+nota('Dois níveis tipográficos nunca compartilham corpo E entrelinha no mesmo modo —');
+nota('  a escala converge por construção, e é a entrelinha que separa quem divide o corpo.');
+nota('  Bloqueada: os valores da escala não estão no repositório. Ver pergunta P07.');
 nota('Todo frame bate com o token de grade do seu modo — a grade do Figma não aceita vínculo');
 nota('  com variável (decisão 021), então a conferência não pode ser automática daqui.');
 

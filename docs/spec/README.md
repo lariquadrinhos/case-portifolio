@@ -6,8 +6,13 @@ Duas listas do mesmo hexadecimal criariam a briga que este projeto existe para e
 > **Alterações no modo Tela pequena em 21/09/2026:** `size/display` de 44 para 42 (decisão
 > 034) e `size/abertura` de 20 para 18 (decisão 035). `line/abertura` permanece em 32.
 >
-> **A escala estreita tem oito níveis e sete valores distintos.** `subtitulo` e `abertura`
-> eram ambos 20; agora `abertura` e `corpo` são ambos 18, com entrelinhas diferentes.
+> **A escala converge em tela estreita, por construção.** Ela comprime pelo topo contra um
+> piso fixo — `corpo`, `apoio` e `etiqueta` são idênticos nas duas larguras —, então níveis
+> vizinhos acabam compartilhando corpo. Hoje `abertura` e `corpo` são ambos 18.
+>
+> **A regra não é oito corpos distintos; é oito níveis distinguíveis.** Dois níveis nunca
+> podem ter ao mesmo tempo o mesmo corpo **e** a mesma entrelinha. Hoje: `abertura` 18/32
+> contra `corpo` 18/30.
 >
 > **Retrato de um sistema incompleto.** O design system ainda será construído no Figma,
 > com todas as variáveis e componentes. O que está abaixo é o que existia em 18/09/2026 —
