@@ -29,13 +29,16 @@ etapa, como evidência, não como declaração à parte.
   que é a virada da frase: observação, **decisão**, resultado.
 - Quando o trecho destacado atravessa mais de uma linha, **a faixa acompanha a quebra**,
   uma por linha, e não se escolhe a quebra em função dela — parágrafo reflui, título não.
-- **Título ao lado do texto, não acima dele.** Na leitura, a trilha ocupa as colunas 1 e 2,
-  o título do capítulo as colunas 4 a 6, e o texto as colunas 7 a 12.
+- **O título fica junto do texto, acima dele.** O que fica ao lado é **a mídia que prova a
+  afirmação daquele capítulo**. Na leitura: trilha nas colunas 1 e 2, título e texto nas
+  3 a 8, mídia nas 9 a 12.
+- **Cada capítulo tem a sua prova ao lado**, com legenda abaixo dela. Imagem que não prova
+  nada vira galeria, e galeria ninguém olha.
 - **O texto corrido ocupa seis colunas, não cinco.** Cinco dariam 61 caracteres por linha,
   abaixo do mínimo de 65 — e a regra da medida governa a largura da coluna, não o contrário.
   Ver decisão 042.
-- **Em tela estreita o título do capítulo fica acima do texto**, não ao lado: a largura não
-  comporta duas faixas. A regra do título ao lado vale onde há grade para ela.
+- **Em tela estreita a mídia desce para baixo do texto**, em vez de ficar ao lado: a largura
+  não comporta duas faixas. A regra da mídia ao lado vale onde há grade para ela.
 - Ao fim da página vêm o card do próximo case e o convite ao contato.
 - A barra marca **Trabalhos** como seção, porque um case pertence a Trabalhos.
 
@@ -70,13 +73,15 @@ Funcionalidade: Página de case
   Cenário: A pessoa lê um capítulo em desktop
     Dado que a página está aberta em tela larga
     Quando um capítulo aparece
-    Então o título dele fica ao lado do texto, não acima
+    Então o título dele fica acima do texto a que pertence
     E o texto corrido ocupa seis colunas
+    E a mídia que prova aquele capítulo fica ao lado, com legenda abaixo
 
   Cenário: A pessoa lê um capítulo em tela estreita
     Dado que a página está aberta em tela estreita
     Quando um capítulo aparece
-    Então o título dele fica acima do texto
+    Então o título fica acima do texto
+    E a mídia desce para baixo do texto, em vez de ficar ao lado
     E a tira de destaques aparece empilhada
 
   @lacuna

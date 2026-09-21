@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **14 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **15 perguntas**, nenhuma travando
 
 ---
 
@@ -30,6 +30,16 @@ aparece na barra.
 **Opções:** a barra conta como o nome da home e a hero começa pela frase · o nome fica nos
 dois, com pesos diferentes · a hera traz só o cargo.
 **Momento:** antes de fechar o wireframe da home. · *Contrato, `home/`*
+
+### P43 · A coluna de mídia comporta captura de tela de desktop?
+A grade nova dá **411px** à mídia de prova. As definições dizem que o case de Finanças mostra
+telas de desktop largas e que elas **são a prova visual do trabalho** — reduzidas demais,
+viram mancha ilegível. Em 411px uma captura de 1440 cabe em 29% do tamanho.
+**Opções:** a mídia larga rompe a coluna e ocupa a largura inteira, quebrando o padrão de
+"ao lado" em casos específicos · a captura mostra recorte de detalhe em vez da tela inteira,
+o que as definições já preveem para tela estreita · a coluna de mídia cresce e a leitura
+encolhe, o que a regra da medida não permite.
+**Momento:** antes de produzir as imagens do case de Finanças.
 
 ### P42 · Como a construção separa o hero dos capítulos
 Nos arquivos de case, o título, a frase de abertura e a tira de destaques estão **dentro do

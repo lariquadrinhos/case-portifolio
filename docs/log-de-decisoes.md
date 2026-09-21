@@ -1322,3 +1322,38 @@ não. É o oposto da decisão 034, onde a quebra do título foi escolhida pelo d
 esta quebra; qualquer mudança de largura, corpo ou texto exige recalcular. No site isso é
 gratuito — a faixa é propriedade do trecho, não posição na tela —, mas no Figma é trabalho
 manual a cada ajuste.
+
+---
+
+## 045 · O título fica junto do texto; ao lado vai a mídia de prova
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** case · `#reversao`
+
+**Reverte a decisão 042 e a grade de leitura original**, em que o título ocupava uma faixa
+própria ao lado do texto.
+
+**Gatilho.** Larissa, vendo o case inteiro desenhado: o título pertence ao texto e deve
+ficar acima dele; **o que merece a faixa ao lado é a imagem que prova aquele capítulo.**
+
+**Decisão.** Grade de leitura: trilha nas colunas 1 e 2, título e texto juntos nas 3 a 8,
+mídia de prova nas 9 a 12. Fecha em doze exatas, sem coluna de folga.
+
+**Alternativa descartada.** A grade anterior — título nas colunas 4 a 6, texto nas 7 a 12,
+mídia empilhada abaixo do texto. Perdeu por duas razões que só apareceram com a página
+inteira montada. **A imagem empurrava o texto para baixo**, e a página ficava 25% mais
+longa: 7242px contra 5414px. E a faixa lateral ficava com um título de três palavras
+enquanto a prova visual do capítulo esperava a vez lá embaixo.
+
+**O que isso corrige de fundo.** A regra *"cada imagem precisa provar uma afirmação do
+texto"* pedia que a prova estivesse **perto da afirmação**. Empilhada, ela chegava depois de
+todo o texto; ao lado, ela chega junto.
+
+**Custo aceito, e virou a P43.** A coluna de mídia tem **411px**. As definições dizem que
+este case mostra telas de desktop largas e que **elas são a prova visual do trabalho** —
+uma captura de 1440 cabe ali em 29% do tamanho. Ou a mídia larga rompe a coluna, ou mostra
+recorte em vez da tela inteira, ou a leitura encolhe abaixo do mínimo de medida. As três
+saídas têm custo e nenhuma está escolhida.
+
+**Consequência.** Definições e contrato reescritos. Em tela estreita o que muda é o outro
+lado: **a mídia desce para baixo do texto**, porque não há grade para duas faixas — mesma
+forma das outras regras que valem "onde há grade para isso".
