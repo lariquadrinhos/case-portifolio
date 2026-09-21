@@ -34,7 +34,9 @@ Usado no índice de Trabalhos e ao fim de cada case. Carrega a cor do case de de
 - **O componente não mantém a proporção da capa ao ser redimensionado** — a altura é fixa e
   precisa ser ajustada em cada instância. É limitação da construção de hoje, e a Fase 2
   precisa resolver, senão cada tela ajusta à mão e elas divergem.
-- Valores de tipo e proporção são **provisórios** — ver pergunta P40.
+- Valores de tipo e proporção são **provisórios**: preenchidos para o componente existir,
+  não escolhidos. A pergunta P40 os trata; o componente, porém, existe e funciona — isto
+  não é lacuna.
 
 ## Peças
 
