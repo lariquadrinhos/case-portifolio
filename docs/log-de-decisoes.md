@@ -1590,3 +1590,33 @@ recusou regra por posição: funciona até alguém inserir um parágrafo em outr
 **Consequência.** Vocabulário de blocos ganhou `apresentacao`. `BLOCOS_VALIDOS` atualizado no
 script. O contrato de conteúdo ganhou a seção "Como separar título de rótulo", com o teste
 escrito para a próxima vez.
+
+## 055 · O site tem três formas, não duas: contorno, sublinhado e palavra simples
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** erro · `#restricao`
+
+**Gatilho.** A página de erro precisa oferecer três saídas, e nenhuma das duas formas que o
+projeto tinha escrito servia. Botão prometeria "acontece algo aqui" — e não acontece nada
+aqui, você só vai embora. Sublinhado prometeria sair do site — e as três levam para dentro.
+
+**Decisão.** O vocabulário de formas fica explícito, com três entradas:
+
+| Forma | Promete | Onde |
+|---|---|---|
+| Contorno de botão | ação principal que acontece dentro do site | reservado |
+| Palavra sublinhada | vai para fora do site | currículo, LinkedIn, e-mail, repositório |
+| Palavra simples | navegação para outra página daqui | barra, saídas da página de erro |
+
+**Por quê.** A terceira forma já existia — é a da barra fixa — mas nunca tinha sido nomeada.
+Por isso as decisões 047 e 052 pareciam tratar de uma escolha binária, e por isso a 048
+errou: com só duas formas na cabeça, baixar um arquivo teve que virar botão por eliminação.
+Com três, cada caso tem onde cair.
+
+**Alternativa descartada.** Dar contorno à saída principal ("Ver os trabalhos") e deixar as
+outras duas como palavra. Perdeu porque a diferença de forma teria que significar alguma
+coisa, e ali ela significaria só "essa é a que eu prefiro que você clique" — que é
+hierarquia editorial, não promessa de destino, e o site já expressa hierarquia pela ordem.
+
+**Consequência.** Contrato da página de erro escrito e desenhado nas duas larguras. A regra
+das três formas vale para o site inteiro e passa a ser o teste para qualquer elemento novo:
+**a pergunta não é "quanto destaque isso merece", é "para onde isso leva".**

@@ -37,6 +37,12 @@ O parágrafo não será escrito. O site publica com dois cases e sem comentar a 
 ### ~~P45~~ · Resolvida pela decisão 054
 "Apresentação" era rótulo de estrutura e virou `<!-- bloco: apresentacao -->`.
 
+### P47 · O texto da página de erro é rascunho meu
+Título (*"Essa página não existe."*), corpo e os três rótulos de saída foram escritos por
+mim para a tela existir. É copy de interface, vive no contrato — mas continua sendo a voz
+dela falando no site dela.
+**Momento:** antes de publicar.
+
 ### P43 · A coluna de mídia comporta captura de tela de desktop?
 A grade nova dá **411px** à mídia de prova. As definições dizem que o case de Finanças mostra
 telas de desktop largas e que elas **são a prova visual do trabalho** — reduzidas demais,

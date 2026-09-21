@@ -2,13 +2,13 @@
 fluxo: erro/endereco-inexistente
 dominio: erro
 dono: design
-status: rascunho
-atualizado: 2026-09-18
+status: desenhado
+atualizado: 2026-09-21
 
 figma:
   file: hwClE9Xpm51OW4vPsCCn8J
-  pagina: "34:2"
-  tela: "@lacuna · não desenhado"
+  pagina: "56:2"
+  tela: "136:32 (desktop) · 136:51 (estreita)"
 ---
 
 # Endereço inexistente
@@ -24,13 +24,18 @@ servidor. Explica o que aconteceu e oferece saída.
 - **O texto desta página vive neste contrato**, não nos arquivos de conteúdo: é copy de
   interface, não conteúdo autoral.
 - Ela oferece três saídas: os trabalhos, a home e o contato.
+- **As três saídas são palavra simples** — sem contorno e sem sublinhado. Contorno prometeria
+  ação que acontece aqui, e não acontece nada aqui; sublinhado prometeria sair do site, e as
+  três levam para dentro. Navegação interna já tem forma neste site: é a da barra.
+- **Nenhum item da barra recebe destaque de página atual.** A página de erro não é seção do
+  site, então não há item a que ela pertença — como já acontece na home.
 - Vale para qualquer saída que devolva a pessoa para dentro do site, não só para endereço
   digitado errado.
 
 ## Texto
 
 > `@lacuna` · **Rascunho, à espera de aprovação dela.** É a voz dela falando no site dela,
-> então o texto abaixo é proposta, não decisão.
+> então o texto abaixo é proposta, não decisão. A P47 cobra.
 
 **Título** · Essa página não existe.
 **Corpo** · O endereço que você abriu não leva a lugar nenhum. Pode ter mudado, ou pode
@@ -41,7 +46,9 @@ ter vindo com um erro de digitação.
 
 | Nome no cenário | Figma | Storybook |
 |---|---|---|
-| saídas da página de erro | `@lacuna` | não se aplica |
+| tela, desktop | `136:32` | não se aplica |
+| tela, estreita | `136:51` | não se aplica |
+| saídas da página de erro | dentro de `136:32` | não se aplica |
 
 ## Comportamento
 
@@ -61,6 +68,17 @@ Funcionalidade: Endereço inexistente
     Dado que o texto desta página é copy de interface
     Então ele vive neste contrato, não nos arquivos de conteúdo
     E alterá-lo é alterar este arquivo
+
+  Cenário: As saídas não se disfarçam de outra coisa
+    Dado que a página de erro está aberta
+    Então as três saídas aparecem como palavra simples
+    E nenhuma aparece como botão
+    E nenhuma aparece sublinhada
+    E nenhum item da barra aparece como página atual
+
+  @lacuna
+  Cenário: O texto desta página ainda é rascunho
+    Então A DEFINIR — ver pergunta P47
 
   @lacuna
   Cenário: Como a hospedagem entrega a página de erro
