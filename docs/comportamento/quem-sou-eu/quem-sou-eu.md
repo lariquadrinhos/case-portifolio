@@ -27,7 +27,8 @@ cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um
 - O contato também existe aqui, junto do currículo.
 - A página menciona que o próprio site está sendo documentado enquanto é construído. É o
   que transforma a ausência de um terceiro case em demonstração, em vez de lacuna.
-  **Esse parágrafo ainda não existe no arquivo de conteúdo** — ver pergunta P44.
+  **Esse parágrafo ainda não existe no arquivo de conteúdo.** É falta de material, não de
+  decisão: o comportamento está definido, o texto é que precisa ser escrito. A P44 cobra.
 - **O currículo é botão; o contato é texto.** Baixar um arquivo é ação dentro do site, e
   botão promete isso; o e-mail e o LinkedIn levam para fora e aparecem como palavra.
 
