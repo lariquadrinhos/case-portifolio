@@ -934,3 +934,38 @@ para quem se orienta.
 sistema, enquanto a trilha é azul ou laranja. Isso não viola *"uma cor dominante por tela"*:
 a regra diz que, dentro de um case, a cor do case domina e **a de sistema aparece só nos
 elementos interativos** — e o item da barra é um link.
+
+---
+
+## 033 · A barra estreita é toda palavra: nome, Trabalhos, Contato e menu
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** moldura · `#restricao`
+
+**Gatilho.** Larissa propôs usar ícones para caber tudo na barra estreita, dizendo que
+gostava da literalidade do texto e perguntando o que eu achava. É a pergunta P10, aberta
+desde o começo.
+
+**Decisão.** Barra estreita com **nome · Trabalhos · Contato · menu**, tudo em palavra.
+"Quem sou eu" e o controle de tema vão para dentro do menu. **Nenhum item vira ícone.**
+
+**Alternativa descartada.** *Quatro ícones com o nome em texto* — perdeu por medição, antes
+de qualquer argumento: em 327px de largura útil, quatro ícones ocupam 300 e a versão toda em
+palavra ocupa 309. **Os ícones economizariam nove pixels.** *Tudo em texto sem menu* — não
+cabe: 434.
+
+**Os argumentos que vieram depois do número, e que sustentariam a decisão sozinhos.** A
+direção visual já excluía ícones — *"tipografia e cor fazem o trabalho, e fazem sozinhas;
+sem ornamento"* — e a regra de cor os antecipava, ao listar *"ícone que não é estado"* entre
+os lugares onde a cor não entra. A trilha é declarada o **único** elemento gráfico
+distintivo do site, e quatro ícones criariam um segundo vocabulário presente em toda página.
+E **"Quem sou eu" não tem ícone**: uma silhueta de pessoa diz perfil, conta ou login, não
+"quem eu sou".
+
+**Custo aceito.** "Quem sou eu" e o tema ficam a um toque de distância em tela estreita —
+que é onde a maior parte das pessoas abre portfólio.
+
+**Consequência.** P10 encerrada, e com ela as duas últimas lacunas dos contratos de moldura
+e tema. A decisão 032 ganhou um caso novo: quando a página atual está dentro do menu, **é a
+palavra "menu" que recebe o sublinhado** — sem isso, a única página escondida seria também a
+única sem indicador. A forma do menu aberto é trabalho da Fase 3; o comportamento dele já
+está contratado.

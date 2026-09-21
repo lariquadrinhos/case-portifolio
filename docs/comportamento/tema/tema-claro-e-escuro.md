@@ -97,10 +97,11 @@ Funcionalidade: Tema claro e escuro
     Quando ele muda a preferência do sistema operacional
     Então o site acompanha a nova preferência
 
-  @lacuna
   Cenário: O controle de tema em tela estreita
     Dado que a tela é estreita
-    Então A DEFINIR — ver pergunta P10
+    Quando a barra é montada
+    Então o controle de tema fica dentro do menu, não na barra
+    E continua tendo duas posições
 ```
 
 ## Transições

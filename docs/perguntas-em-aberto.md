@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 18 de setembro de 2026 · **14 perguntas**, nenhuma travando
+**Atualizado:** 18 de setembro de 2026 · **13 perguntas**, nenhuma travando
 
 ---
 
@@ -59,11 +59,6 @@ nesta sessão · o mais recente primeiro.
 mesma altura da leitura; o conteúdo já vive separado do código e o controle está previsto
 na barra. Falta só o mecanismo estrutural.
 **Momento:** Fase 1.
-
-### P10 · O que sai da barra em tela estreita
-Mínimo definido: nome e Trabalhos. Falta decidir "Quem sou eu", controle de tema e botão
-de contato.
-**Momento:** Fase 1. · *Event storming, hotspot 10*
 
 ### P11 · Trilha que se move × movimento reduzido
 Tensão entre duas regras: o marcador se move sozinho, e nada se move sem o leitor pedir.
