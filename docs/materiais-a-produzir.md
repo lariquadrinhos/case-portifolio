@@ -26,6 +26,10 @@ carrega o detalhe que o texto abriu mão de contar."*
 
 > O vídeo precisa de **duas peças**: o arquivo e a imagem de pôster. Só o pôster é baixado
 > quando a página abre — o vídeo, só se a pessoa pedir. Ver decisão 046.
+>
+> **O pôster tem de ser um quadro do próprio vídeo**, senão há salto visual ao tocar. E a
+> **legenda dele descreve o que acontece na tela**, não comenta: é a alternativa em texto
+> que a WCAG AA exige para vídeo sem áudio.
 
 > O capítulo 5 é o que as definições chamam de prova mais forte disponível neste portfólio:
 > *"mockup e produto funcionando lado a lado"*. É o que substitui o link que não existe.

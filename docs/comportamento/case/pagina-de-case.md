@@ -38,6 +38,11 @@ etapa, como evidência, não como declaração à parte.
 - **Cada capítulo tem a sua prova ao lado**, com legenda abaixo dela.
 - **Vídeo não é pré-carregado e não toca sozinho.** Até a pessoa pedir, baixa zero byte; o
   que carrega é a imagem de pôster, que segue as mesmas regras de qualquer imagem.
+- **A imagem de pôster é um quadro do próprio vídeo.** Se for outra imagem, há salto visual
+  no momento em que ele toca, e o vídeo parece quebrado.
+- **A legenda do vídeo descreve o que acontece nele**, não comenta. Vídeo sem áudio exige
+  alternativa em texto: para quem não consegue vê-lo, a legenda é o conteúdo. "O produto em
+  uso" não cumpre; dizer o que a pessoa faz na tela, cumpre.
 - **Vídeo é servido pelo próprio site, nunca incorporado de terceiro.** Incorporar do
   YouTube ou Vimeo traz script e cookie de rastreamento, e reintroduz o aviso de
   consentimento que a decisão de não medir existiu para evitar. Imagem que não prova
@@ -85,6 +90,12 @@ Funcionalidade: Página de case
     E o texto corrido ocupa seis colunas
     E a mídia que prova aquele capítulo fica ao lado, com legenda abaixo
     E o topo da mídia alinha com a primeira linha do texto, não com o título
+
+  Cenário: Alguém não consegue ver o vídeo
+    Dado que a mídia daquele capítulo é um vídeo sem áudio
+    Quando alguém chega à legenda sem ver as imagens
+    Então a legenda descreve o que acontece na tela
+    E a afirmação do capítulo continua provada
 
   Cenário: A pessoa abre um capítulo que tem vídeo
     Dado que a mídia daquele capítulo é um vídeo
