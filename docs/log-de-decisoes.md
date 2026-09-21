@@ -1836,3 +1836,38 @@ rolagem criou a necessidade de foco; as duas só funcionam juntas.
 um estado de foco — está desenhado como proposta. E **"acento de sistema" não existe como
 token** (P49), apesar de ser citado nas definições, em três contratos e em três decisões; o
 anel foi definido com `text/primary` para não depender dele.
+
+## 063 · A caixa de tema continua aberta — mas pela razão certa
+
+**Quando** 2026-09-21 · **Fase** 3 · **Domínio** tema · `#correcao`
+
+**Corrige a justificativa da decisão 061.** O comportamento não muda; o motivo escrito
+estava errado.
+
+**Gatilho.** Larissa: *"se escolher o tema não fecha a caixa de tema, pra fechar é só clicar
+fora?"* A resposta é sim — Esc ou clicar fora, como as outras duas sobreposições. Mas a
+pergunta obrigou a reler por que a caixa não fecha sozinha, e a razão registrada não se
+sustentava.
+
+**O que a 061 dizia.** *"Fechar esconderia o resultado no mesmo gesto que o produz."*
+
+**Por que está errado.** O resultado da troca de tema é **a página inteira** mudando de cor.
+Fechar a caixa mostra mais da página, não menos. O único resultado que a caixa exibe é o
+sinal passando de uma posição para a outra — que é a parte menos importante do que acabou de
+acontecer.
+
+**A razão certa.** Trocar de tema é **controle de experimentar**: a ação mais provável logo
+depois de escolher escuro é olhar e voltar ao claro, para comparar. Fechar a cada escolha
+cobraria abrir-escolher-abrir-escolher para comparar duas opções. Navegação não tem esse
+padrão — quem escolhe "Quem sou eu" não quer voltar e escolher outra coisa. Tema tem, e é o
+que separa este controle de um menu comum.
+
+**O que isso ensina sobre o método.** A 061 chegou ao comportamento certo por um argumento
+que não resistia a uma pergunta simples. Um motivo errado não estraga a decisão de hoje, mas
+estraga a próxima: quem ler *"fechar esconde o resultado"* vai aplicar isso a algum controle
+onde a caixa realmente é o resultado, e acertar por acaso — ou errar. **O registro precisa
+resistir a ser reusado**, não só a descrever o que foi feito.
+
+**Consequência.** Contrato do tema reescrito no ponto, com o fechamento por Esc e clique fora
+explicitado em cenário próprio — ele estava implícito por analogia com o contato, e
+implícito não é verificável.

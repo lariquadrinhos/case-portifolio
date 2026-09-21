@@ -35,8 +35,13 @@ apareceu.
 - **No desktop a caixa ancora sob "Tema", sem véu. Em tela estreita o tema vive dentro do
   menu** — e ali mostra as duas posições **em linha, sem abrir outra caixa**: o menu já é a
   camada aberta, e sobrepor camada em camada é o que se evita.
-- **Escolher não fecha o menu.** A troca acontece atrás e é visível; fechar esconderia o
-  resultado no mesmo gesto que o produz.
+- **Escolher não fecha a caixa** — nem no desktop, nem dentro do menu. **E a razão não é
+  deixar o resultado à vista:** o resultado é a página inteira mudando, e fechar mostraria
+  mais dela, não menos. É que trocar de tema é controle de *experimentar* — a ação mais
+  provável logo depois de escolher é escolher de novo, para comparar. Fechar cobraria uma
+  reabertura por tentativa. Navegação não tem esse padrão; tema tem. Ver decisão 063.
+- **Para fechar: Esc ou clicar fora**, igual ao contato e ao menu. As três sobreposições do
+  site abrem e fecham do mesmo jeito, e o foco volta para o que as abriu.
 - **O tema certo é aplicado antes da primeira pintura.** Nunca há piscada.
 - **Sem JavaScript, o tema segue a preferência do sistema e o conteúdo permanece legível.**
   O script é reforço que falha em segurança, não dependência.
@@ -76,11 +81,18 @@ Funcionalidade: Forma do controle de tema
     Então as duas posições do tema aparecem dentro do próprio menu
     E nenhuma caixa nova abre por cima do menu
 
-  Cenário: O leitor troca de tema com o menu aberto
-    Dado que o menu está aberto
+  Cenário: O leitor troca de tema com a caixa aberta
+    Dado que a caixa de tema está aberta
     Quando o leitor escolhe a outra posição
     Então o tema troca
-    E o menu continua aberto
+    E a caixa continua aberta
+    E a marca passa para a posição escolhida
+
+  Cenário: O leitor fecha a caixa de tema
+    Dado que a caixa de tema está aberta
+    Quando o leitor aciona a tecla Esc ou clica fora
+    Então a caixa se recolhe
+    E o foco volta para "Tema"
 ```
 
 ```gherkin
