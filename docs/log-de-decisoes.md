@@ -2976,3 +2976,28 @@ que a regra dela proíbe.
 **Consequência.** Quatro instâncias, duas por largura. Na tela estreita os dois capítulos
 ganharam colunas de leitura para o bloco poder sangrar, como a decisão 098 estabeleceu. As
 duas telas do case foram reempilhadas.
+
+## 101 · Todo capítulo estreito tem a mesma largura, com bloco ou sem
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#correcao`
+
+**Gatilho.** Larissa: *"tem uns frames que não estão do tamanho certo."* Tinha.
+
+**O que estava desencontrado.** Na tela estreita, os capítulos ficaram com **duas larguras**:
+375 em x=0 nos que ganharam bloco, e 327 em x=24 nos outros. O texto alinhava nos dois — os
+dois entregam 327 de medida —, mas **"capítulo" deixou de ser uma coisa só**. E um capítulo
+que ganhasse bloco depois precisaria ser remontado.
+
+**Decisão.** Todos os onze capítulos estreitos passam a ter 375 em x=0, com o respiro dentro de
+uma coluna de leitura. A moldura fica igual; o que muda é o que ela guarda.
+
+**A diferença que fica entre as larguras, com causa escrita.** No desktop o bloco **não
+sangra**, e o texto dentro dele tem 564 contra 628 da prosa — 66 caracteres contra 74. Não é
+descuido nem inconsistência por preguiça: **a coluna de mídia fica ao lado, a 24 de
+distância**, e um bloco sangrando invadiria ela. Sessenta e seis está dentro da faixa de 65 a
+75; na tela estreita, onde não há mídia ao lado, a medida caía abaixo do piso e por isso o
+bloco sangra lá.
+
+**O que isso vale como método.** Uma diferença entre larguras é defeito quando não tem causa,
+e é decisão quando tem. **A única forma de não confundir as duas é escrever a causa junto** —
+senão a próxima pessoa a olhar vai "consertar" a diferença e quebrar a razão dela.

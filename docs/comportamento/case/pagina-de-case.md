@@ -96,9 +96,16 @@ etapa, como evidência, não como declaração à parte.
   linha é contraditório — ele existe para o olho descansar, não para a linha quebrar mais
   vezes.
 - **Em tela estreita, o bloco sangra até as bordas.** A cor vai de ponta a ponta e o respiro
-  do bloco ocupa o lugar da margem da página, então o texto fica em 327, igual ao resto. No
-  desktop ele fica na coluna de leitura: o respiro de 32 deixa a linha em 66 caracteres, que
-  continua dentro da faixa.
+  do bloco ocupa o lugar da margem da página, então o texto fica em 327, igual ao resto.
+- **No desktop o bloco fica dentro da coluna de leitura, e não sangra.** Não é escolha
+  estética: **a coluna de mídia fica ao lado**, a 24 de distância, e um bloco sangrando
+  invadiria ela. O respiro de 32 deixa a linha em 66 caracteres — mais curta que os 74 da
+  prosa, mas dentro da faixa de 65 a 75. **A diferença entre as larguras tem causa estrutural,
+  não é descuido.**
+- **Todo capítulo em tela estreita tem 375 de largura**, com o respiro dentro de colunas de
+  leitura — tenha bloco ou não. Antes só os capítulos com bloco eram assim, e os outros tinham
+  327: o texto alinhava, mas "capítulo" deixava de ser uma coisa só, e ganhar um bloco depois
+  obrigava a remontar a moldura.
 
 ### Os dois do case de Finanças
 
