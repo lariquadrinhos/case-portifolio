@@ -88,7 +88,10 @@ etapa, como evidência, não como declaração à parte.
   convenção a trataria como subseção do último capítulo, que é outra coisa.
 - **É separada por divisória e rotulada.** O case acabou; o que vem depois precisa dizer que
   é outra coisa, senão lê como um capítulo que ninguém anunciou.
-- Fica **antes do convite ao repositório**, na coluna de leitura.
+- Fica **depois do convite ao repositório**, na coluna de leitura. O repositório é o que
+  **fecha o case** — a última coisa do arco, a prova verificável do processo. O extra vem
+  depois porque não é do arco: encerrar primeiro e depois oferecer o extra deixa claro onde
+  uma coisa termina e a outra começa.
 
 ### O extra do case de Finanças
 

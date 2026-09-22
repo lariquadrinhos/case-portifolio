@@ -3069,3 +3069,24 @@ apagaria a razão de ela poder falar do produto, que é **não** pertencer ao ar
 capítulo e subseção, e extra não é nenhum dos dois. O contrato do case ganhou a seção. A tela
 ganhou divisória e rótulo **EXTRA** antes do título: o case acabou, e o que vem depois precisa
 dizer que é outra coisa.
+
+## 104 · O convite ao repositório fecha o case, antes do extra
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#correcao`
+
+**Gatilho.** Larissa, apontando o convite ao repositório: *"vai acima de O produto, fechando
+o case."*
+
+**O que eu tinha feito.** Pus o extra logo depois do último capítulo, antes do repositório. A
+ordem ficava: capítulos, extra, repositório, próximo case.
+
+**Por que está errado.** **O repositório é o que fecha o case** — é a última coisa do arco e
+a prova verificável do processo que os seis capítulos descrevem. Pôr o extra no meio separa a
+conclusão da sua prova, e faz o extra parecer parte do arco, que é exatamente o que ele não é.
+
+**Ordem correta:** capítulos, convite ao repositório, extra, próximo case, contato. **Encerra
+primeiro e depois oferece o extra** — assim fica claro onde uma coisa termina e a outra
+começa, o que é a razão de o extra ter divisória e rótulo.
+
+**Consequência.** As duas telas do case de Finanças reordenadas. O de Reembolso não muda: não
+tem extra, e lá o repositório já era a última coisa antes do próximo case.
