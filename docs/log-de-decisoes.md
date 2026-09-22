@@ -2776,3 +2776,35 @@ saiu porque marcava uma hierarquia que não existe.
 
 **Nenhum dos sete botões era instância.** Eram quadros soltos, cada um com o seu respiro. Os
 sete viraram instâncias de duas variantes.
+
+## 094 · O bloco de destaque existe, e tinha caído da lista por colisão de nome
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#correcao`
+
+**Gatilho.** Larissa pediu o componente de bloco de destaque.
+
+**Ele estava previsto e eu o perdi.** Aparece três vezes nas definições dela — na lista dos
+sete componentes da Fase 2, na lista dos cinco lugares onde cor entra, e na regra *"bloco
+colorido é pontuação, não estilo de parágrafo"*. **E não aparece uma vez sequer no contrato do
+case.** Quando a decisão 057 fechou a lista de componentes em oito, ele não estava lá.
+
+**Por que passou.** Colisão de nome. O case tem uma **"tira de destaques"** — as chaves
+Papel, Método, Entregas no topo da página — e um **"bloco de destaque"**, que é o fundo pálido
+atrás de uma frase. Ao auditar as telas eu encontrei a tira e li como se cobrisse o bloco.
+**Nomes parecidos para coisas diferentes fazem uma passar pela outra**, e nenhuma checagem
+pega isso: as duas existem, com nomes válidos.
+
+**Decisão.** Componente criado, quatro variantes — duas cores por duas larguras. Usa o tom
+pálido do case, que é o papel de superfície. Inventário vai a doze.
+
+**O que fica pendente, e é dela.** **Nenhuma tela usa o bloco.** Hoje as frases que sustentam
+capítulos são marcadas por **peso**, em Medium. A contagem:
+
+| | frases fortes por capítulo |
+|---|---|
+| Finanças | 0, 1, 1, 1, 1, 1 |
+| Reembolso | 0, **3**, **3**, **2**, 1 |
+
+No case de Finanças a troca seria direta — uma por capítulo, como a regra pede. **No de
+Reembolso, três capítulos têm mais frases fortes do que a regra permite blocos**, e escolher
+qual delas carrega o bloco é decisão de conteúdo: é escolher qual frase sustenta o capítulo.
