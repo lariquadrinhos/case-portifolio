@@ -2744,3 +2744,35 @@ demonstração que é a tela, não.
 
 **E ganharam a altura do próprio conteúdo.** Antes cortavam no meio de um parágrafo, o que lê
 como defeito e não como recorte.
+
+## 093 · O botão é neutro e preenchido, e o documento de definições se reconcilia
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#reversao`
+
+**Gatilho.** Larissa pediu os componentes de botão. Antes de construir, a inspeção encontrou
+que **o documento de definições dela e as decisões do projeto dizem coisas diferentes**, e
+ninguém tinha reconciliado.
+
+**As duas filosofias.** As definições diziam: *"link, foco, botão de contato — aqui a cor não
+é decoração: é a única forma de dizer 'isto responde ao toque'"*. As decisões 047, 055 e 088
+dizem o contrário: **a forma promete o destino**, e a cor fica para a posição do leitor.
+
+**Decisão dela: neutro.** Botão em `text/primary`, link em `text/primary`, e o roxo reservado
+a foco e página atual. **O roxo passa a significar uma coisa só — "onde você está"** — e isso
+é o que torna a regra aprendível.
+
+**Três correções no documento de definições**, que estava desatualizado desde a decisão 084:
+a linha de "estado e interação" virou "posição do leitor"; a tabela de acentos passou a ter
+três papéis em vez de um "Sistema" que acumulava tudo; e o botão saiu da lista de usos do tom
+forte.
+
+**Dois defeitos que a construção expôs.**
+
+**"Falar comigo" era contorno no desktop e preenchido no estreito** — mesmo botão, dois
+estilos por largura. E a escolha dela resolveu isso sozinha: **se a cor não distingue, o
+preenchimento é a única diferença possível entre dois botões — e o site não tem dois.** Botão
+é a ação principal da página, e nenhuma página tem duas. Um estilo só, preenchido; o contorno
+saiu porque marcava uma hierarquia que não existe.
+
+**Nenhum dos sete botões era instância.** Eram quadros soltos, cada um com o seu respiro. Os
+sete viraram instâncias de duas variantes.

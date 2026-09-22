@@ -61,7 +61,7 @@ desenhado.
 | 3 | trilha | trilha lateral no desktop, faixa de progresso no estreito | **sim**, `173:31` e `174:35` |
 | 4 | tira de destaques | case, chave e valor | **sim**, `173:38` |
 | 5 | bloco de mídia com legenda | case, 12 ocorrências | **sim**, `174:26` |
-| 6 | botão | **um lugar só**: o convite ao contato no fim do case | **sim**, `173:22` |
+| 6 | botão | dois lugares: a ação da home e o convite ao contato no fim do case | **sim**, 2 variantes |
 | 7 | marca-texto | home e case, nas duas larguras | **sim**, `174:30` |
 | 8 | marcador de falta | case e "Quem sou eu", 19 ocorrências | **sim**, `173:34` |
 | 9 | tabela de comparação | case de Reembolso, nas duas larguras | **sim**, `173:49` |
@@ -158,6 +158,18 @@ Realce atrás da frase que carrega a home ou o case. É o único uso de acento f
   cases, menos duas que ficam para o sistema — uma para estado e uma para a hero. Ver P49.
 - **Cobre a frase, não a linha.** Começa onde a frase começa, mesmo que seja no meio de uma
   linha, e termina onde ela termina.
+
+### botão
+
+Duas variantes: desktop, que abraça o rótulo, e estreita, que ocupa a coluna.
+
+- **Preenchido em `text/primary`, rótulo em `bg/surface`.** Os dois invertem junto com o tema.
+- **Não existe contorno.** Botão é a ação principal da página e o site nunca tem duas — não há
+  botão secundário para um contorno marcar. Antes do acerto, "Falar comigo" era contorno no
+  desktop e preenchido no estreito: a mesma peça com dois pesos, sem razão.
+- **Não usa cor de acento.** A cor de estado ficou reservada à posição do leitor — foco e
+  página atual. Ver decisão 093.
+- Existe em dois lugares: a ação da home e o convite ao contato no fim de um case.
 
 ### card de case
 

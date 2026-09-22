@@ -75,9 +75,14 @@ merece*, é *para onde isso leva*:
 
 | Forma | Promete | Onde |
 |---|---|---|
-| Contorno de botão | ação que acontece aqui **e é a principal da página** | um lugar: o convite ao contato no fim de um case |
+| Botão preenchido | ação que acontece aqui **e é a principal da página** | dois lugares: a ação da home e o convite ao contato no fim de um case |
 | Palavra sublinhada | vai para fora do site | currículo, LinkedIn, e-mail, repositório |
 | Palavra simples | outra página daqui | barra, menu, saídas da página de erro |
+
+**Botão não usa cor de acento.** É preenchido em `text/primary`, com rótulo em `bg/surface`
+— os dois invertem junto com o tema. **Não existe botão secundário**, porque botão é a ação
+principal da página e o site nunca tem duas; por isso não há variante de contorno para marcar
+uma hierarquia que não existe.
 
 **Link não usa a cor de estado.** O sublinhado da página atual e o sublinhado de um link são
 a mesma forma — traço de 2px sob a palavra — e hoje só a cor os separa: roxo num, cor de texto

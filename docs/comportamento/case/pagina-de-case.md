@@ -56,7 +56,8 @@ etapa, como evidência, não como declaração à parte.
 - **O link usa a cor do texto, não a de estado.** O sublinhado dele e o sublinhado da página
   atual na barra têm a mesma forma; a cor é o que os separa. Ver decisão 088.
 - **Saída para fora do site é link, não botão.** Botão promete ação dentro do site; palavra
-  sublinhada promete ir embora. O rótulo avisa que abre em nova aba.
+  sublinhada promete ir embora. O botão do fim do case é **preenchido**, como o da home — o
+  site não tem botão secundário, então não há contorno marcando hierarquia. O rótulo avisa que abre em nova aba.
 - Cada link externo vem **precedido de um convite** que diz o que a pessoa vai encontrar lá.
 - **Protótipo só onde existe.** Reembolso tem; Finanças não tem e não terá — nele o link
   verificável é o repositório.

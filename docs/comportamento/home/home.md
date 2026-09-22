@@ -20,6 +20,8 @@ querer ver os trabalhos.
 
 - O caminho para Trabalhos é **o elemento mais evidente da tela**, rotulado
   **Ver os meus trabalhos**.
+- **A ação é botão preenchido**, a mesma peça do convite ao contato no fim de um case. Os
+  dois são a ação principal da sua página, e o site nunca tem duas — por isso há um estilo só.
 - **Uma ação principal só.** A home não repete o contato como botão: a barra é fixa, então
   o contato já está visível no topo. Duplicar divide a atenção no único momento em que o
   site quer uma direção só.
