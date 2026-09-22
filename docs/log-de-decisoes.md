@@ -2367,3 +2367,37 @@ número variável de linhas — cinco etapas num case, seis no outro — não po
 caixa: monta-se copiando a casca e instanciando as linhas. **Só a linha é reutilizável de
 verdade**, e é por isso que a checagem 6 precisa continuar existindo: ela é o que mantém as
 cópias da casca honestas umas com as outras.
+
+## 081 · O card de case vira quatro variantes, e três defeitos caem junto
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#correcao`
+
+**Gatilho.** Larissa pediu regra e componente completo para o card. A inspeção achou mais do
+que faltava — achou coisa errada.
+
+**Três defeitos.**
+
+1. **Nenhuma cor estava vinculada a variável.** Branco, cinza e quase-preto escritos à mão. O
+   card **não respondia ao tema escuro**: ficaria branco numa página escura, com o contraste
+   invertido.
+2. **A cor do case não existia na peça.** O contrato diz *"carrega a cor do case de destino"*
+   desde sempre, os nomes das instâncias diziam "(azul)" e "(laranja)", e não havia acento
+   nenhum no desenho. O nome fazia o trabalho que a cor deveria fazer.
+3. **No case de Reembolso em tela estreita, o card do próximo case apontava para o próprio
+   Reembolso.** O desktop apontava certo. Quem lesse o case no celular chegaria ao fim e seria
+   convidado a ler de novo o que acabou de ler.
+
+**Decisão.** Quatro variantes — cor × largura —, tudo vinculado a variável, e a superfície do
+card carrega a cor do case no tom pálido, que é o papel de `surface` no sistema. As oito
+instâncias foram trocadas pelas variantes certas, com o texto vindo dos arquivos de conteúdo.
+
+**O que a variante de largura resolve sozinha.** As larguras eram ajustadas instância a
+instância, e o inventário já registrava o risco: *"a altura é fixa e precisa ser ajustada em
+cada instância"*. Com largura como variante, ninguém estica o card — e a capa não sai do 3:2
+porque não há o que esticar. **O problema não foi consertado: deixou de ser possível.**
+
+**E uma assimetria antiga sumiu por um motivo simples.** O inventário registrava que texto
+padrão do componente propaga e texto sobrescrito não — então corrigir o arquivo de conteúdo
+sincronizava um case e deixava o outro para trás. A causa era o padrão do componente ser o
+conteúdo de um dos cases. **Com o padrão genérico — "Título do case" — toda instância
+sobrescreve, e nenhuma finge estar sincronizada.**

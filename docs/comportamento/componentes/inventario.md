@@ -125,33 +125,28 @@ claro depois de conferir as quatro lado a lado.
 
 ### card de case
 
-Usado no índice de Trabalhos e ao fim de cada case. Carrega a cor do case de destino.
+Usado no índice de Trabalhos e ao fim de cada case. **Quatro variantes: cor × largura.**
 
-- **Capa em 3:2 exato**, no topo, ocupando a largura do card. **Quem decide a proporção é a
-  tela estreita.** A mesma imagem serve os dois tamanhos: em 628 ela tem 417px de altura, em
-  327 tem 218. Uma proporção mais rasa — 2:1 — daria 163px no card estreito, curto demais
-  para uma composição de produto continuar legível. O desktop toleraria qualquer coisa; o
-  estreito não.
-- **Consequência da proporção: a capa é composição, não captura.** Nenhum dos dois cases tem
-  material nativo em 3:2 — Finanças são capturas largas de desktop, Reembolso são telas altas
-  de celular. As duas capas precisam ser montadas.
-- Abaixo dela, título e a linha de tensão, com respiro entre os dois e margem em volta.
-- **O componente não mantém a proporção da capa ao ser redimensionado** — a altura é fixa e
-  precisa ser ajustada em cada instância. É limitação da construção de hoje, e a Fase 2
-  precisa resolver, senão cada tela ajusta à mão e elas divergem.
-- **Texto padrão do componente propaga para as instâncias; texto sobrescrito, não.** O card
-  traz o conteúdo de um dos cases como padrão, e o outro é sobrescrito em cada uso — então
-  corrigir o arquivo de conteúdo sincroniza um e deixa o outro para trás. Enquanto o Figma
-  guardar cópia do texto, essa assimetria existe.
-- **Título em `titulo-cap`** (36 desktop / 26 estreito). O card mostra um **título de case**,
-  que na página do case é `titulo-case`. Um degrau abaixo é a forma reduzida do mesmo texto.
-  Dois degraus — `subtitulo`, 22 — poriam o título de um case abaixo dos nomes dos valores em
-  "Quem sou eu", invertendo a ordem das coisas.
-- **Linha de tensão em `corpo`** (18/30). É frase para ler, não metadado. `apoio` a
-  rebaixaria a legenda; `abertura` a faria competir com o título.
-- **A trava de proporção da capa é ação de interface.** A API expõe `targetAspectRatio` como
-  somente leitura, então ligar a trava precisa ser feito no Figma à mão. Enquanto não for,
-  redimensionar o card à mão pode desalinhar a capa — hoje as nove cópias estão em 1,501.
+- **A superfície do card carrega a cor do case de destino**, no tom pálido — que é o papel
+  de `surface` no sistema: recebe texto escuro e não disputa com a leitura. O tom forte fica
+  para detalhe gráfico, e o card não usa nenhum.
+- **Capa em 3:2 exato**, no topo, ocupando a largura do card. A proporção foi escolhida pela
+  tela estreita: em 327 de largura, 2:1 daria 163px de altura, curto demais para uma
+  composição de produto continuar legível.
+- **Título em `titulo-cap`** (36 desktop / 26 estreito). O card mostra um título de case, que
+  na página dele é `titulo-case`; um degrau abaixo é a forma reduzida do mesmo texto.
+- **Linha de tensão em `corpo`**. É frase para ler, não metadado.
+- **Toda cor vem de variável.** O card funciona nos dois temas — antes tinha branco, cinza e
+  preto escritos à mão, e teria ficado branco numa página escura.
+- **Acrescentar um case é acrescentar variante, não redimensionar à mão.** As larguras eram
+  ajustadas instância a instância; agora cada largura é uma variante, e a capa não sai do 3:2
+  porque ninguém a estica.
+- **O texto padrão do componente é genérico** — "Título do case". Isso resolve a assimetria
+  que existia: quando o padrão era o conteúdo de um dos cases, corrigir o arquivo de texto
+  sincronizava aquele e deixava o outro para trás. Com padrão genérico, **toda instância
+  sobrescreve**, e nenhuma finge estar sincronizada.
+- **Alturas diferentes entre instâncias são do texto, não do desenho.** Uma linha de tensão
+  que ocupa três linhas faz o card crescer; isso é o componente funcionando.
 
 ## Peças
 
