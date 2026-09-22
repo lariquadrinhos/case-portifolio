@@ -87,7 +87,7 @@ Descrição, estados e quando não usar ficam no inventário. Aqui ficam só os 
 | faixa de progresso | `174:35` | — |
 | tira de destaques / item | `173:38` | — |
 | mídia com legenda | `174:26` | — |
-| botão | `173:22` | — |
+| botão | conjunto | largura: desktop, estreita |
 | marca-texto | `174:30` | — |
 | marcador de falta | `173:34` | — |
 | tabela / linha | `173:49` | tipo: dado, cabeçalho |
@@ -115,6 +115,11 @@ leitura; ligar a trava é ação de interface, à mão. Sem ela, redimensionar o
 desalinhar a capa.
 
 **Atalho de salto** (P48). Existe desenhado como proposta e não está em contrato nenhum.
+
+**Traço fora do token, encontrado ao componentizar.** Os botões do desktop usavam 1,5 e os da
+tela estreita 1, com `stroke/padrao` valendo 1. Corrigido nos cinco. O defeito sobreviveu
+porque ninguém compara o traço de um botão com o de outro numa tela diferente — e é
+exatamente o que um componente impede.
 
 **As telas ainda não usam os componentes.** Eles foram criados depois dos wireframes, que
 seguem montados com cópias. Enquanto isso não for trocado, a checagem 6 é a única coisa que

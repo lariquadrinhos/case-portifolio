@@ -2151,3 +2151,32 @@ interface, o atalho de salto sem contrato.
 
 **Uma conferência feita no caminho.** Mover o card de case para a página nova podia quebrar as
 instâncias nos wireframes. Nove instâncias, nenhuma perdida.
+
+## 074 · Componentizar encontrou três defeitos que os wireframes escondiam
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#correcao`
+
+**Gatilho.** Larissa: *"confere tem umas coisas quebradas."* Estavam.
+
+**Dois defeitos eram meus, de ter inventado medida em vez de ler a peça.** O respiro do botão
+saiu 17/34/18/34 — com vertical **assimétrico** — quando o original é 16/32. E o quadro da
+mídia saiu 274 de altura quando o original tem 308. Componente que não bate com o que
+substitui é pior que cópia: ele parece autoridade.
+
+**Um era de construção.** No marca-texto o realce tinha largura fixa de 240 sob um texto de
+261 — a última palavra ficava de fora. Refeito com o realce em posição absoluta e restrição
+esticada, para acompanhar a frase qualquer que seja ela.
+
+**E um estava nos wireframes desde sempre, escondido.** Os botões do desktop usam traço de
+**1,5**; os da tela estreita, **1**. O token `stroke/padrao` vale **1**. Ou seja: cinco botões
+fora do sistema, e a diferença de 3px que eu perseguia entre componente e original vinha
+exatamente daí — traço de 1,5 desenhado por fora soma 3 à caixa.
+
+**Decisão.** Traço 1 nos dois, pelo token. Cinco botões corrigidos nos wireframes. E o botão
+ganhou a **variante estreita** que eu não tinha visto: 327 de largura cheia, sem respiro
+lateral — ela existe nos wireframes desde que o case estreito foi desenhado.
+
+**Por que isso escapou de tudo.** Ninguém compara o traço de um botão com o de outro numa
+tela diferente. A checagem 6 só olha sobreposições. O olho não vê meio pixel de traço. **Só
+apareceu porque componentizar obriga a responder "qual é a medida certa?" uma vez só** — e aí
+as duas respostas diferentes ficam no mesmo lugar, impossíveis de ignorar.
