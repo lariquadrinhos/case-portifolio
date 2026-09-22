@@ -2952,3 +2952,27 @@ de texto sobre fundo escuro.
 
 **O que fica de regra.** Quadro de arrumação não tem fundo. Se um quadro precisa de cor, ele
 deixou de ser arrumação e virou superfície — e superfície é uma das três.
+
+## 100 · Os dois parágrafos do case de Finanças, e a regra dos três parágrafos
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#conteudo`
+
+**Decisão.** Dois blocos no case de Finanças: *"Conduzi o projeto inteiro com IA…"* no
+capítulo de Descoberta (33% do capítulo) e *"E a documentação virou artefato de handoff…"* no
+de Desenho e documentação (24%).
+
+**Quatro capítulos ficam sem, pelo mesmo motivo.** Têm dois parágrafos de prosa ou menos. E
+daí saiu uma regra que faltava: **o capítulo precisa de pelo menos três parágrafos de prosa
+para receber bloco.** Com dois, colorir um não é pontuação — é **alternância**: o olho lê
+"colorido, não colorido" como padrão, não como pausa. Com um só, o bloco vira o capítulo — em
+Resultados ele ocuparia 55%.
+
+**Os dois cases têm densidades diferentes, e isso é consequência do texto.** O Reembolso tem
+capítulos de quatro a sete parágrafos e levou três blocos; o de Finanças tem capítulos de dois
+a quatro e levou dois. **Onde não há sequência longa, não há parede para quebrar** — e forçar
+o bloco a aparecer em todo capítulo o transformaria de pontuação em estilo, que é exatamente o
+que a regra dela proíbe.
+
+**Consequência.** Quatro instâncias, duas por largura. Na tela estreita os dois capítulos
+ganharam colunas de leitura para o bloco poder sangrar, como a decisão 098 estabeleceu. As
+duas telas do case foram reempilhadas.

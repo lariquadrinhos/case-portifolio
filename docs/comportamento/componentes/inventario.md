@@ -173,7 +173,8 @@ duas cores por duas larguras.
   bloco substitui a margem da página, e o texto dentro fica com a mesma medida da prosa. Por
   isso o capítulo estreito passou a ter 375 de largura, com o respiro dentro das colunas de
   leitura em vez de no capítulo.
-- **Em uso no case de Reembolso**, três capítulos de cinco. O de Finanças ainda não usa.
+- **Em uso nos dois cases**: três capítulos no Reembolso, dois no de Finanças. A diferença
+  vem do texto — o Reembolso tem capítulos longos, o outro tem capítulos curtos e uniformes.
 - **Qual frase recebe o bloco é decisão de conteúdo**, não de layout: é escolher qual frase
   sustenta o capítulo. Ver as escolhas em `case/pagina-de-case.md`.
 - **Ele caiu da lista quando a P30 foi resolvida**, e o motivo provável é colisão de nome: o

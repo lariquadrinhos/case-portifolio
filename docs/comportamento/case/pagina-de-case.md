@@ -89,6 +89,9 @@ etapa, como evidência, não como declaração à parte.
 - **Não usar nas frases curtas em peso forte.** Elas já estão marcadas, e pôr fundo atrás de
   uma linha só faz uma etiqueta, não um respiro.
 - **Não usar em lista.** Lista já tem ritmo próprio; o fundo compete com ele.
+- **O capítulo precisa de pelo menos três parágrafos de prosa.** Com dois, colorir um não é
+  pontuação: é **alternância** — o olho lê "colorido, não colorido" como padrão, não como
+  pausa. E com um só, o bloco vira o capítulo.
 - **O texto dentro do bloco tem a mesma medida da prosa em volta.** Um respiro que aperta a
   linha é contraditório — ele existe para o olho descansar, não para a linha quebrar mais
   vezes.
@@ -96,6 +99,22 @@ etapa, como evidência, não como declaração à parte.
   do bloco ocupa o lugar da margem da página, então o texto fica em 327, igual ao resto. No
   desktop ele fica na coluna de leitura: o respiro de 32 deixa a linha em 66 caracteres, que
   continua dentro da faixa.
+
+### Os dois do case de Finanças
+
+| Capítulo | Parágrafo | Quanto do capítulo |
+|---|---|---|
+| 1 · Introdução | nenhum — dois parágrafos só | — |
+| 2 · Descoberta | *"Conduzi o projeto inteiro com IA…"* | 33% |
+| 3 · Desenho e documentação | *"E a documentação virou artefato de handoff…"* | 24% |
+| 4 · Design system | nenhum — dois parágrafos só | — |
+| 5 · Desenvolvimento | nenhum — dois parágrafos só | — |
+| 6 · Resultados | nenhum — um parágrafo só, que seria 55% | — |
+
+**Os dois cases não têm a mesma densidade de bloco, e isso é consequência do texto, não
+escolha de layout.** O Reembolso tem capítulos longos com quatro a sete parágrafos; o de
+Finanças tem capítulos curtos e uniformes, com dois a quatro. Onde não há sequência longa, não
+há parede para quebrar.
 
 ### Os três do case de Reembolso
 
