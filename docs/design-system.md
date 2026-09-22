@@ -103,7 +103,9 @@ lado e o anel em cada tipo de alvo que o site tem.
 
 **Medida de linha entre 65 e 75 caracteres no texto corrido, onde houver largura.** Blocos
 curtos em grade podem ficar abaixo, com piso por volta de 45. Tabela não obedece: é dado, e o
-que governa é a comparação ficar legível lado a lado.
+que governa é a comparação ficar legível lado a lado. **A banda do extra é a única exceção
+declarada** — 148 caracteres, o dobro do teto, porque ali a largura é o que diz que aquilo
+não é o case.
 
 ---
 

@@ -3115,3 +3115,31 @@ regra. A cor sangra, o texto não — a banda é para separar, não para esticar
 **Consequência.** O extra do case de Finanças é hoje o **único lugar do site onde uma cor de
 case ocupa a largura inteira da tela**. Combina com a natureza dele: é a única parte que não
 pertence ao arco.
+
+## 106 · A linha do extra ocupa a tela: a única exceção à medida
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#reversao`
+
+**Gatilho.** Larissa: *"aumenta a largura da linha, completando a tela."*
+
+**Decisão dela.** O texto da banda do extra vai de margem a margem: **1280px no desktop, 148
+caracteres por linha** — contra 73 na coluna de leitura. É **o dobro do teto** da regra de 65
+a 75, e **a única exceção a ela em todo o site**.
+
+**O que a exceção compra.** A banda existe para dizer *"isto não é o case"*, e a largura é
+parte de como ela diz. Com a linha na medida de leitura, a cor mudava mas o ritmo continuava o
+mesmo — o extra ainda lia como um capítulo pintado de azul. Com a linha inteira, o corpo do
+texto muda de forma antes de a primeira frase ser lida.
+
+**O que a exceção custa, dito sem rodeio.** Cento e quarenta e oito caracteres é uma linha
+longa para leitura contínua. O risco é o olho perder a linha ao voltar para a esquerda — pular
+uma ou repetir. **A regra existe por isso, e aqui ela foi trocada por outra coisa
+conscientemente.**
+
+**O que fica aberto (P54).** Linha longa cansa menos com mais entrelinha. A banda usa `corpo`,
+18/30, e a escala não tem um 18 com entrelinha maior. Anotado para o visual design, quando dá
+para ver a tela pintada e julgar.
+
+**Uma coisa que eu tinha errado antes.** Na primeira versão mantive a medida de leitura dentro
+da banda, e declarei a escolha. Estava errado no julgamento mas certo no método: **a decisão
+não era minha, e deixá-la visível foi o que permitiu que ela fosse corrigida numa frase.**

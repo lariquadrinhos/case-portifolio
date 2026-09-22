@@ -90,10 +90,9 @@ etapa, como evidência, não como declaração à parte.
   pálido daquele case. O case acabou, e o extra precisa dizer isso antes da primeira palavra —
   uma divisória fina não bastava, porque o olho lê divisória como pausa e não como mudança de
   assunto.
-- **A medida de leitura não muda dentro da banda.** A cor vai de ponta a ponta; o texto
-  continua na largura da coluna de leitura e alinhado com ela. Texto de 1280px daria cerca de
-  125 caracteres por linha, contra os 65 a 75 da regra — a banda é para separar, não para
-  esticar a linha.
+- **A linha também ocupa a tela**, entre as margens da página. São **148 caracteres por
+  linha** contra 73 na coluna de leitura: **a única exceção à regra de medida em todo o
+  site**, e ela é deliberada. Ver decisão 106.
 - **Mantém o rótulo EXTRA** acima do título.
 - Fica **depois do convite ao repositório**, na coluna de leitura. O repositório é o que
   **fecha o case** — a última coisa do arco, a prova verificável do processo. O extra vem
