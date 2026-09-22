@@ -186,6 +186,11 @@ existe e cabe no pai.
 4. **Rode `node scripts/checagens.mjs`.** Sete checagens. A sexta e a sétima imprimem a data
    do export, para você saber se está conferindo o presente ou o passado.
 
+**Conjunto de variantes cabe na largura da seção.** As variantes se organizam em linhas que
+quebram em 1440 — a largura útil do quadro. Em fila única, o card de case dava 2054px e a
+trilha 2057: **o que passava da borda era cortado e simplesmente não existia para quem
+olhasse**. Variante escondida é pior que variante ausente, porque a lista parece completa.
+
 **Toda cor vem de variável, e a checagem 7 cobra.** O único isento é o que está marcado como
 *anotação* no próprio nome do nó — cromo de documentação, como as colunas do diagrama de
 grade. A marca fica no nome para a isenção ser visível no Figma, e não só no script.

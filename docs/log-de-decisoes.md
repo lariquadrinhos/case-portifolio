@@ -2679,3 +2679,28 @@ que não trava o processo.
 **O tipo de erro.** Não foi erro de execução: a migração está tecnicamente correta e a
 checagem 7 é útil. Foi erro de **alcance** — uma tarefa que eu tratei como técnica tinha uma
 consequência que só ela podia autorizar.
+
+## 091 · Dois conjuntos de variantes estavam sendo cortados pela seção
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#correcao`
+
+**Gatilho.** Larissa: *"tem uns frames escondendo conteúdo."* Tinha.
+
+**O que estava escondido.** O quadro 07 tem 1440px de largura útil. Em fila única, o conjunto
+**card de case** media **2054px** e o **trilha / item**, **2057px**. As variantes que passavam
+da borda eram cortadas pela moldura da seção — a de cor laranja do card e as três do marcador
+laranja da trilha **não existiam para quem olhasse a página**.
+
+**Por que isso é pior que faltar.** Uma variante ausente se nota: a lista tem buraco. Uma
+variante cortada **não se nota**, porque a lista parece completa — quem abrir a página vê
+quatro cards e conclui que são todos.
+
+**Decisão.** As variantes passam a se organizar em linhas que quebram na largura útil da
+seção. O card foi para 2×2, a trilha para 3 na primeira linha e 3 na segunda, e a barra ficou
+com cada variante de desktop na sua linha, porque cada uma já tem 1440.
+
+**Varredura completa, com cinco tipos de defeito.** Conteúdo cortado pelo pai, texto preso em
+altura menor que a entrelinha, nó invisível, opacidade zerada e tamanho achatado. Nas duas
+páginas. Fora os dois conjuntos, só apareceram quatro casos na página das telas, **todos
+intencionais**: as duas tabelas que rolam na horizontal (decisão 058) e os dois recortes que
+mostram só o topo de uma página.
