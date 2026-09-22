@@ -2925,3 +2925,30 @@ posição absoluta, nenhuma margem negativa.
 **O que isso custou em estrutura.** Cada capítulo com bloco ganhou dois quadros de coluna. É o
 preço de um elemento que sangra dentro de uma coluna: **alguém precisa segurar a margem, e se
 não é o capítulo, são os filhos dele.**
+
+## 099 · Cento e trinta e sete quadros brancos por cima do creme
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#correcao`
+
+**Gatilho.** Larissa: *"arruma o bg, tá branco."*
+
+**O que era.** `figma.createAutoLayout` cria o quadro com **fundo branco por padrão**. Todos
+os quadros de arrumação deste arquivo — colunas, capítulos, linhas de tabela, cabeçalhos,
+células — nasceram brancos, e **a migração de cor da decisão 089 preservou o branco em vez de
+removê-lo**: `#FFFFFF` virou `bg/surface`, que é branco de propósito.
+
+**Por que passou pela checagem 7.** Ela pergunta *"esta cor vem de variável?"*, e a resposta
+era sim. **A cor estava certa e o elemento não deveria ter cor nenhuma** — é o mesmo tipo de
+erro da varredura geométrica que não achou o texto encolhido: a checagem estava certa e a
+pergunta estava errada.
+
+**Por que passou pelo olho.** Branco sobre creme é quase invisível no Figma, onde a prancheta
+já é clara. Só aparece quando se olha a tela inteira sabendo que o fundo deveria ser creme.
+
+**Decisão.** Cento e trinta e sete quadros perderam o fundo. **Três coisas continuam pintando
+superfície neste site:** a página em `bg/page`, a sobreposição em `bg/surface`, e o card, que
+usa o tom pálido do case. Os rótulos de botão também seguem em `bg/surface`, porque ali é cor
+de texto sobre fundo escuro.
+
+**O que fica de regra.** Quadro de arrumação não tem fundo. Se um quadro precisa de cor, ele
+deixou de ser arrumação e virou superfície — e superfície é uma das três.

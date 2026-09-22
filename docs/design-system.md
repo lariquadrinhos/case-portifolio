@@ -196,6 +196,12 @@ quebram em 1440 — a largura útil do quadro. Em fila única, o card de case da
 trilha 2057: **o que passava da borda era cortado e simplesmente não existia para quem
 olhasse**. Variante escondida é pior que variante ausente, porque a lista parece completa.
 
+**Quadro de arrumação não tem fundo.** Só três coisas pintam superfície neste site: a página
+(`bg/page`), a sobreposição (`bg/surface`) e o card, que usa o tom pálido do case. Coluna,
+capítulo, linha de tabela, cabeçalho — tudo isso é transparente, e é o creme da página que
+aparece através. Um quadro branco no meio de uma página creme é quase invisível no Figma e
+gritante na tela.
+
 **Toda cor vem de variável, e a checagem 7 cobra.** O único isento é o que está marcado como
 *anotação* no próprio nome do nó — cromo de documentação, como as colunas do diagrama de
 grade. A marca fica no nome para a isenção ser visível no Figma, e não só no script.
