@@ -3199,3 +3199,28 @@ comportamento inteiro é HTML puro — nada a construir, nada a degradar.
 **Consequência.** Componente novo, quatro variantes; inventário vai a treze. As duas telas do
 case mostram a aba fechada, que é o estado padrão, e dois quadros novos mostram o estado
 aberto — mesmo padrão das sobreposições, que também vivem em quadro próprio.
+
+## 109 · O convite ao contato é uma frase só
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#conteudo`
+
+**Gatilho.** Larissa, sobre o rascunho no fim do case: *"vamo pensar nesse texto."*
+
+**O que estava errado.** *"Quer conversar sobre isso?"* — e o **isso** não tinha referência.
+Podia ser o case, o problema descrito, o jeito de trabalhar. Um pronome sem antecedente no
+último elemento da página.
+
+**Decisão dela: a versão seca.** *"Vamos conversar?"*, sem linha de apoio. Só a frase e o
+botão.
+
+**As duas que perderam, e o que elas queriam comprar.** Uma reconhecia a leitura —
+*"Você leu até aqui"* — apostando que atravessar 7.000px é um sinal real. Outra oferecia o
+motivo da conversa e repetia, em uma linha, o método que o case inteiro mostrou: entender antes
+de propor.
+
+**Por que a seca ganha mesmo sendo a mais comum.** O case já fez o trabalho inteiro. **Um
+convite que argumenta disputa com ele no último centímetro da página** — e argumentar depois
+de já ter provado é insegurança, não generosidade. A página termina leve.
+
+**Consequência.** Cinco lugares atualizados, e o marcador de falta saiu de três deles: o texto
+deixou de faltar.

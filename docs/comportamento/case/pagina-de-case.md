@@ -79,6 +79,18 @@ etapa, como evidência, não como declaração à parte.
 | página do segundo case · estreita | `148:37` | não se aplica |
 | tabela de comparação | dentro de `144:32` | não se aplica |
 
+## O convite ao contato
+
+**Texto** · *"Vamos conversar?"* — e o botão, sem linha de apoio.
+
+- **Uma frase só, sem preparação.** O case já fez o trabalho inteiro; um convite que
+  argumenta disputa com ele no último centímetro da página.
+- **Não menciona o case nem o que a pessoa leu.** A frase anterior era *"Quer conversar sobre
+  isso?"*, e o *isso* não tinha referência clara — podia ser o case, o problema, o jeito de
+  trabalhar.
+- É a **última coisa da página**, depois do card do próximo case. Quem quer continuar lendo já
+  foi servido; quem chegou aqui tem uma porta.
+
 ## Conteúdo extra
 
 - **Um case pode ter uma seção extra depois do último capítulo.** Ela **não entra na trilha**:
