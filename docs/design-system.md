@@ -129,7 +129,12 @@ sobreposição — nenhum dos quatro estava na lista original de sete.
 
 ## O que o sistema ainda não tem
 
-**Acento de sistema** (P49). As definições, três contratos e três decisões citam um *acento de
+**Papéis de acento, resolvidos.** Das cinco cores, **azul** é o case de Finanças, **laranja**
+o de Reembolso, **roxo** é a cor de estado, **verde** é a da hero e **rosa** fica para o
+terceiro case. Estado e hero existem como referência — `accent/estado/*` e `accent/hero/*` —
+apontando para roxo e verde: trocar um papel é trocar num lugar só.
+
+**~~Acento de sistema~~** (era P49). As definições, três contratos e três decisões citam um *acento de
 sistema*. Não existe variável com esse nome — **mas ele foi planejado.** O quadro **02 · Acentos** diz, sobre as cinco cores: *"duas cores sobram para o sistema: uma para
 estado (link, foco, item ativo) e uma livre para a hero."* Com dois cases usando azul e
 laranja, sobram **roxo, verde e rosa**. Falta escolher qual é a de estado e batizá-la. O anel

@@ -2458,3 +2458,34 @@ quebra diferente entre as larguras, o número de retângulos muda, e é aí que 
 da cor que a página *Sistema visual* chama de *"livre para a hero"*. Com azul e laranja nos
 dois cases, sobram **roxo, verde e rosa** para três papéis: estado, hero, e o terceiro case.
 Hoje está em verde, provisório. A P49 foi reescrita para tratar das três de uma vez.
+
+## 084 · Roxo é estado, verde é hero, rosa é o terceiro case
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#restricao`
+
+**Resolve a P49**, aberta quando o anel de foco foi definido e não havia cor de sistema.
+
+**Gatilho.** O marca-texto apareceu com três cores diferentes e nenhuma na paleta, o que
+obrigou a perguntar qual das cinco ele deveria usar. A página *Sistema visual* já dizia que
+duas das cinco ficam para o sistema — uma para estado, uma para a hero — mas nenhuma tinha
+sido escolhida.
+
+**Decisão de Larissa.** Roxo para estado, verde para hero, rosa para o terceiro case.
+
+**Como foi implementado.** Não pintando roxo nas coisas, mas criando **referências**:
+`accent/estado/surface`, `accent/estado/strong`, `accent/hero/surface` e `accent/hero/strong`,
+cada uma apontando para a cor escolhida. **Trocar um papel passa a ser trocar num lugar só** —
+e quem lê a peça vê "estado", não "roxo", que é o que importa saber.
+
+**O que recebeu cada uma.** Treze marca-texto foram para `hero/surface`. Os quatro sublinhados
+de página atual, que o contrato sempre chamou de *"acento de sistema"*, foram para
+`estado/strong`. E o anel de foco também — a página *Sistema visual* lista *foco* entre os usos
+da cor de estado, então a decisão 062, que usou `text/primary` por não haver cor, se resolve
+sozinha agora que há.
+
+**Duas coisas que a distribuição expôs, abertas como pergunta em vez de resolvidas por mim.**
+A **trilha ativa** (P50): o contrato dela diz que carrega a cor do case, e a *Sistema visual*
+diz que item ativo usa a cor de estado — as duas frases apontam para cores diferentes, e hoje
+o marcador está em `text/primary`, que não é nenhuma. E os **links** (P51): a *Sistema visual*
+lista *link* entre os usos da cor de estado, mas a decisão 055 já dá essa informação pela
+forma — sublinhado promete sair do site. Pintar de roxo pode ser reforço ou ruído, e é dela.

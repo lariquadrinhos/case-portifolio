@@ -46,26 +46,31 @@ navega por teclado atravessa a barra inteira em cada página antes de chegar ao 
 um elemento que **só existe enquanto tem foco** — invisível para quem usa o rato. Está desenhado como proposta no quadro 05 da página *Sistema visual*.
 **Momento:** antes de publicar.
 
-### P49 · Qual das cinco cores é o acento de sistema
-As definições, três contratos e três decisões citam um *acento de sistema* — o sublinhado da
-página atual, o que é interativo num case, e agora o anel de foco. **Não existe variável com
-esse nome.**
+### ~~P49~~ · Resolvida pela decisão 084
+Roxo para estado, verde para hero, rosa para o terceiro case. Criadas `accent/estado/*` e
+`accent/hero/*` como referências.
 
-**Mas ele foi planejado.** A página *Sistema visual* (`34:2`) diz, sobre os cinco acentos:
-*"Duas cores sobram para o sistema: uma para estado (link, foco, item ativo) e uma livre para
-a hero."* Ou seja: a cor de estado sempre saiu de dentro das cinco — só nunca foi escolhida.
+### P50 · A trilha ativa usa a cor do case ou a de estado?
+O contrato da trilha diz que ela **é do case e carrega a cor dele**. A página *Sistema visual*
+diz que a cor de estado serve a *"link, foco, item ativo"* — e o marcador ativo da trilha é
+item ativo. As duas frases apontam para cores diferentes.
 
-Com dois cases usando **azul** (Finanças) e **laranja** (Reembolso), sobram **roxo, verde e
-rosa**. Duas delas são o sistema; a terceira fica para o terceiro case.
+Hoje o marcador ativo está em `text/primary`, que não é nenhuma das duas.
 
-**São três cores livres e três papéis:** estado (sublinhado da página atual, foco), hero (o
-marca-texto), e o terceiro case, quando existir. Cada uma das três — roxo, verde, rosa — vai
-para um papel.
+**Opções:** a trilha é exceção declarada, e usa a cor do case — o que exige variantes de cor
+no componente, dobrando as seis atuais · a trilha usa a cor de estado como todo item ativo, e
+a frase "carrega a cor dele" passa a valer só para outros elementos do case · o marcador ativo
+fica neutro e a cor do case aparece só na tira de destaques e no card.
+**Momento:** antes do visual design.
 
-**O que falta:** distribuir as três, criar `accent/sistema/*` e `accent/hero/*` apontando para
-as escolhidas, e decidir se o anel de foco passa a usar a de estado ou continua em
-`text/primary`. Hoje o marca-texto está em `accent/verde/surface`, provisório.
-**Momento:** antes do visual design. Não bloqueia: o anel já está definido sem ela.
+### P51 · Link usa a cor de estado?
+A página *Sistema visual* lista *link* entre os usos da cor de estado. Hoje todo link do site
+é palavra sublinhada em `text/primary`, e a decisão 055 diz que **a forma promete o destino** —
+o sublinhado já faz esse trabalho.
+
+Pintar os links de roxo acrescentaria uma segunda marca para a mesma informação. Pode ser
+reforço útil, ou ruído.
+**Momento:** antes do visual design. Não bloqueia.
 
 ### P43 · A coluna de mídia comporta captura de tela de desktop?
 A grade nova dá **411px** à mídia de prova. As definições dizem que o case de Finanças mostra
