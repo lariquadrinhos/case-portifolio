@@ -1,28 +1,27 @@
 # Design system
 
-**O sistema mora em duas páginas do arquivo `hwClE9Xpm51OW4vPsCCn8J`, e elas não são cópias
-uma da outra.**
+**O sistema inteiro vive numa página só:** arquivo Figma `hwClE9Xpm51OW4vPsCCn8J`, página
+**Sistema visual** (`34:2`).
 
-**Sistema visual** (`34:2`) é o **argumento**: por que o fundo é creme e não branco, por que
-cada case adota uma cor, o que o tom pálido faz e o que o tom forte faz. E carrega a **prova**
-— doze pares de contraste medidos, nos dois temas, com o valor de cada um. É lá que se
-descobre *por quê*.
+Ela começou como o lugar onde a aparência foi pensada e as regras dela escritas. A biblioteca
+de peças nasceu numa página separada e voltou para cá — porque as duas iam repetir cor e
+tipografia, e informação repetida diverge. **Um lugar só é impossível de divergir.**
 
-**Design System** (`171:14`) é a **referência**: as variáveis como espécime vivo, a escala, a
-grade e as peças como componentes de verdade. É daqui que se monta uma tela.
+| Quadro | O que traz |
+|---|---|
+| 00 · Princípios | por que cada cor existe, e o que bloco colorido faz |
+| 01 · Neutros | os sete neutros, nos dois temas, com contraste medido |
+| 02 · Acentos, tema claro | as cinco cores de case, com contraste de cada par |
+| 03 · Acentos, tema escuro | os mesmos cinco papéis, com valores próprios |
+| 04 · Tipografia | os oito níveis e o que cada um faz |
+| 05 · Espaço e forma | a escala, os cantos, o traço, o foco |
+| 06 · Grade | 12 colunas no desktop, 1 na tela estreita |
+| 07 · Componentes | as dez peças, como componentes de verdade |
+| 08–09 · Demonstrações | hero e leitura de case, com as peças em uso |
 
-Quando as duas divergirem, a referência está errada até prova em contrário — mas o argumento
-é que explica, e apagá-lo perderia a razão das escolhas.
-
-### Seções da página Design System
-
-| Seção | Nó | O que traz |
-|---|---|---|
-| Cor | `171:15` | 17 variáveis, dois modos, amostras vinculadas à variável |
-| Tipografia | `171:159` | 8 níveis, dois modos, espécime de cada um |
-| Espaço e forma | `172:2` | escala de espaço, cantos, traço, foco |
-| Grade | `172:77` | 12 colunas no desktop, 1 na tela estreita |
-| Componentes | `174:81` | as dez peças, como componentes de verdade |
+**O custo aceito:** a página é longa, e mistura dois ritmos — as regras quase não mudam, a
+biblioteca muda toda semana. Aceito porque o outro arranjo já tinha começado a divergir no
+primeiro dia.
 
 ---
 
@@ -38,6 +37,10 @@ atravessam todas as peças, e o que o sistema ainda não tem.
 Comportamento de tela fica nos contratos, em `docs/comportamento/`. Descrição de cada peça
 fica no inventário, em `docs/comportamento/componentes/inventario.md`. Este documento é o mapa
 que liga os três.
+
+**Três autoridades, sem sobreposição.** Valor é a variável. Regra de aparência é a página
+*Sistema visual*. Comportamento é o contrato. Quem discordar de uma delas está errado no seu
+próprio terreno.
 
 ---
 
@@ -93,6 +96,8 @@ que governa é a comparação ficar legível lado a lado.
 
 Descrição, estados e quando não usar ficam no inventário. Aqui ficam só os endereços.
 
+As peças vivem no quadro **07 · Componentes**.
+
 | Peça | Nó | Variantes |
 |---|---|---|
 | barra fixa | `174:21` | largura: desktop, estreita |
@@ -120,8 +125,7 @@ sobreposição — nenhum dos quatro estava na lista original de sete.
 ## O que o sistema ainda não tem
 
 **Acento de sistema** (P49). As definições, três contratos e três decisões citam um *acento de
-sistema*. Não existe variável com esse nome — **mas ele foi planejado.** A página *Sistema
-visual* diz, sobre as cinco cores de acento: *"duas cores sobram para o sistema: uma para
+sistema*. Não existe variável com esse nome — **mas ele foi planejado.** O quadro **02 · Acentos** diz, sobre as cinco cores: *"duas cores sobram para o sistema: uma para
 estado (link, foco, item ativo) e uma livre para a hero."* Com dois cases usando azul e
 laranja, sobram **roxo, verde e rosa**. Falta escolher qual é a de estado e batizá-la. O anel
 de foco usa `text/primary` até lá.

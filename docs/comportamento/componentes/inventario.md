@@ -8,8 +8,8 @@ atualizado: 2026-09-21
 
 # Inventário de componentes
 
-> **As peças existem como componentes de verdade** na página **Design System** (`171:14`) do
-> arquivo de design. Os endereços de cada uma estão em [`docs/design-system.md`](../../design-system.md),
+> **As peças existem como componentes de verdade** no quadro **07 · Componentes** da página
+> **Sistema visual** (`34:2`) do arquivo de design. Os endereços de cada uma estão em [`docs/design-system.md`](../../design-system.md),
 > que também traz as quatro coleções de variáveis e as regras que atravessam todas as peças.
 
 O design system. **Cada componente ganha o seu próprio arquivo neste domínio** quando for

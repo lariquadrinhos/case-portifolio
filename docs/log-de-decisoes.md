@@ -2238,3 +2238,38 @@ argumento é o que explica, e apagá-lo perderia a razão das escolhas.
 **Consequência.** P49 reescrita com a intenção que já existia; ela deixou de ser "inventar uma
 cor" e virou "escolher entre roxo, verde e rosa". O documento do sistema passou a apontar para
 a prova de contraste em vez de afirmar a regra no vazio.
+
+## 077 · O sistema volta a ser uma página só
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#reversao`
+
+**Reverte a decisão 076**, que tinha dado papéis separados a duas páginas.
+
+**Gatilho.** Larissa, depois de ver as duas: *"o Sistema visual eu criei para pensar na
+aparência do site e criar regras para essa aparência. O design system é a biblioteca que tem
+tudo o que vai ser usado. Você acha que deveríamos juntar os dois?"* E escolheu juntar.
+
+**O que a conferência mostrou primeiro.** Os valores **não divergiam**: as amostras da página
+dela já estavam vinculadas às mesmas variáveis, hexadecimal por hexadecimal. O que diferia é
+que **a página dela diz mais** — cada cor com o papel escrito e o contraste medido. A minha
+mostrava o mesmo quadrado sem nada disso. Não era divergência: era a minha ser uma versão
+pior da dela.
+
+**Decisão.** Uma página só. *Espaço e forma*, *Grade* e *Componentes* viraram os quadros 05,
+06 e 07 da *Sistema visual*; as demonstrações renumeraram para 08 e 09; minhas seções de cor e
+tipografia foram apagadas, por serem duplicata mais pobre das dela. A página *Design System*
+deixou de existir.
+
+**Por que juntar venceu.** A divisão que eu tinha proposto — argumento × referência — obriga
+as duas a falarem de cor e de tipografia. A divisão dela — regras × biblioteca — não obriga,
+mas ainda assim as duas iam repetir os tokens. **Um lugar só é impossível de divergir**, e a
+divergência já tinha começado no primeiro dia.
+
+**Custo aceito, dito por ela:** a página fica longa e mistura dois ritmos — as regras quase
+não mudam, a biblioteca muda toda semana.
+
+**O que quase se perdeu.** Cinquenta e uma molduras internas tinham fundo branco herdado de
+quando as seções viviam numa página branca; sobre o creme da página dela, apareceram como
+retângulos brancos no meio do conteúdo. E os cabeçalhos ficaram espremidos numa coluna de
+100px. Nenhum dos dois é visível sem olhar — **mudar de contexto revela o que estava apoiado
+no contexto antigo.**
