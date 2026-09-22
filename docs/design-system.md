@@ -17,7 +17,7 @@ tipografia, e informação repetida diverge. **Um lugar só é impossível de di
 | 05 · Espaço, forma e foco | a escala, os cantos, o traço, e o anel de foco em cada tipo de alvo |
 | 06 · Grade | 12 colunas no desktop, 1 na tela estreita |
 | 07 · Componentes | as dez peças, como componentes de verdade |
-| 08–09 · Demonstrações | hero e leitura de case, com as peças em uso |
+| 08–09 · Demonstrações | hero e leitura de case, **recortados das telas reais** e montados com as peças |
 
 **O custo aceito:** a página é longa, e mistura dois ritmos — as regras quase não mudam, a
 biblioteca muda toda semana. Aceito porque o outro arranjo já tinha começado a divergir no

@@ -2704,3 +2704,43 @@ altura menor que a entrelinha, nó invisível, opacidade zerada e tamanho achata
 páginas. Fora os dois conjuntos, só apareceram quatro casos na página das telas, **todos
 intencionais**: as duas tabelas que rolam na horizontal (decisão 058) e os dois recortes que
 mostram só o topo de uma página.
+
+## 092 · As demonstrações mostravam um site que já não existe
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#correcao`
+
+**Gatilho.** Larissa: *"continua olhando o design system, o que mais tem quebrado?"*
+
+**O que estava quebrado.** Os quadros 08 e 09 — as duas demonstrações — mostravam um desenho
+**anterior a praticamente todas as decisões deste projeto**:
+
+| | demonstração | sistema |
+|---|---|---|
+| barra | 72px, itens 15px | 64px, itens 18px |
+| nome na barra | "Larissa Quadros" | "Larissa" |
+| Contato | **pílula roxa** | palavra simples |
+| hero | 88/92 | 96/96 |
+| marca-texto | lilás | verde, `accent/hero` |
+| ações na home | duas | uma |
+| capítulos | numerados | sem número |
+| instâncias de componente | zero | — |
+
+**A pílula roxa do Contato é literalmente o desenho anterior à decisão 030** — a que tirou o
+destaque do contato porque ele competia com os cases.
+
+**Por que parei antes de mexer.** As demonstrações não estavam erradas: eram **registro de
+como o site foi proposto**, o mesmo tipo de marco que os wireframes em cinza eram. Tendo
+destruído um registro hoje por conta própria (decisão 090), apresentei as opções e esperei.
+**Foi a Diretriz 0.3 funcionando na primeira vez em que podia.**
+
+**Decisão dela: atualizar.** O registro da proposta original sai do arquivo de trabalho; ele
+continua existindo no histórico de versões do Figma, que é onde esse tipo de coisa sobrevive
+sem poluir o presente.
+
+**Como foram refeitas.** Não redesenhadas: **recortadas das telas reais**. O quadro 08 é o
+topo da home, o 09 é a trilha e o capítulo 3 do case de Reembolso. Trazem seis instâncias de
+componente entre as duas. Uma demonstração desenhada à parte diverge no dia seguinte; uma
+demonstração que é a tela, não.
+
+**E ganharam a altura do próprio conteúdo.** Antes cortavam no meio de um parágrafo, o que lê
+como defeito e não como recorte.
