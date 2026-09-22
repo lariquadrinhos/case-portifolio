@@ -51,7 +51,7 @@ Demonstrado no quadro **05 · Espaço, forma e foco** da página *Sistema visual
 
 ## A lista
 
-Doze, conferidos contra as telas desenhadas — a lista abriu em sete e já mudou cinco vezes. Cada um vira arquivo próprio quando for
+Treze, conferidos contra as telas desenhadas — a lista abriu em sete e já mudou seis vezes. Cada um vira arquivo próprio quando for
 desenhado.
 
 | # | Componente | Onde aparece | Existe no Figma? |
@@ -67,7 +67,8 @@ desenhado.
 | 9 | tabela de comparação | case de Reembolso, nas duas larguras | **sim**, `173:49` |
 | 10 | sobreposição | contato, menu e tema — 4 telas, as duas larguras | **sim**, `173:13` e `173:19` |
 | 11 | item da barra | dentro da barra, 27 ocorrências | **sim** |
-| 12 | bloco de destaque | case de Reembolso, 4 por largura | **sim**, 4 variantes |
+| 12 | bloco de destaque | os dois cases | **sim**, 4 variantes |
+| 13 | aba retrátil | extra do case de Finanças | **sim**, 4 variantes |
 
 ### O que mudou em relação aos sete previstos
 
@@ -159,6 +160,17 @@ Realce atrás da frase que carrega a home ou o case. É o único uso de acento f
   cases, menos duas que ficam para o sistema — uma para estado e uma para a hero. Ver P49.
 - **Cobre a frase, não a linha.** Começa onde a frase começa, mesmo que seja no meio de uma
   linha, e termina onde ela termina.
+
+### aba retrátil
+
+Cabeçalho de seção que abre e fecha. Quatro variantes: dois estados por duas larguras.
+
+- **A linha inteira é o alvo**, não só a seta. A seta indica o estado — para baixo quando
+  fechada, para cima quando aberta —, não é um botão à parte.
+- **Abre e fecha sem JavaScript**: na web é `details`/`summary` nativo, que já traz o
+  comportamento e o anúncio por leitor de tela. **É o único componente do site cujo
+  comportamento inteiro é HTML puro.**
+- **Usada no extra do case**, onde o conteúdo é oferecido e não imposto.
 
 ### bloco de destaque
 

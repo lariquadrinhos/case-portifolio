@@ -3168,3 +3168,34 @@ virar um bloco solto de outra página.
 
 **A exceção à medida continua, menor.** Cento e vinte e dois contra o teto de 75. Segue sendo
 a única do site, e a razão é a mesma: ali a largura é o que diz que aquilo não é o case.
+
+## 108 · O extra vira aba retrátil, e chega fechada
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#escopo`
+
+**Gatilho.** Larissa: *"essa seção de O produto fica retrátil. Uma aba que pode ser aberta e
+fechada. Vamos pôr um título: Leia mais sobre o produto, clica no botão de setinha ela abre, e
+pode ser fechada de novo."*
+
+**Decisão.** O extra vira aba. Chega **fechada**: banda de cor com o título
+*"Leia mais sobre o produto"* e uma seta. A linha inteira é o alvo, não só a seta — a seta
+indica o estado, como o sinal indica a opção em vigor no controle de tema.
+
+**O que a aba resolve, e que a seção aberta não resolvia.** O extra tem 1.200px de texto sobre
+funcionalidades, depois de um case que já terminou. Aberto por padrão, ele **empurra o próximo
+case e o contato para baixo de uma parede de prosa** que nem todo leitor quer. Fechado, a
+página termina em 6.025px em vez de 7.354 — e **o conteúdo passa a ser oferecido, não
+imposto**, que é a diferença entre extra e apêndice.
+
+**E isso reconcilia uma tensão que estava aberta sem ninguém ter notado.** As definições dizem
+*"nenhuma interação obrigatória para acessar conteúdo"*. Uma aba fechada parece contrariar
+isso — mas a regra fala de conteúdo do site, e o extra é declaradamente o que **não** é do
+arco. A interação aqui não bloqueia: ela oferece.
+
+**O que ganhamos de graça.** Na web isso é `details`/`summary` nativo: **abre e fecha sem
+JavaScript**, e já é anunciado por leitor de tela. É o único componente do site cujo
+comportamento inteiro é HTML puro — nada a construir, nada a degradar.
+
+**Consequência.** Componente novo, quatro variantes; inventário vai a treze. As duas telas do
+case mostram a aba fechada, que é o estado padrão, e dois quadros novos mostram o estado
+aberto — mesmo padrão das sobreposições, que também vivem em quadro próprio.

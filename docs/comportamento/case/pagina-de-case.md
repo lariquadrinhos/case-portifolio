@@ -86,21 +86,21 @@ etapa, como evidência, não como declaração à parte.
   que os capítulos não têm.
 - **Vem declarada por `<!-- bloco: extra -->`** no arquivo de conteúdo. Sem o marcador, a
   convenção a trataria como subseção do último capítulo, que é outra coisa.
-- **Não segue a formatação do case: é uma banda de cor que sangra a tela inteira**, no tom
-  pálido daquele case. O case acabou, e o extra precisa dizer isso antes da primeira palavra —
-  uma divisória fina não bastava, porque o olho lê divisória como pausa e não como mudança de
-  assunto.
-- **A linha começa onde começa o texto dos capítulos e vai até a margem direita.** No desktop
-  são 1063px — **exatamente a largura de um capítulo**, coluna de leitura mais calha mais
-  coluna de mídia. O extra ocupa o espaço inteiro que um capítulo ocupa, só que com texto no
-  lugar de texto-e-prova.
-- São **122 caracteres por linha** contra 73 na coluna de leitura: **a única exceção à regra
-  de medida em todo o site**, e ela é deliberada. Ver decisão 106.
-- **Mantém o rótulo EXTRA** acima do título.
-- Fica **depois do convite ao repositório**, na coluna de leitura. O repositório é o que
-  **fecha o case** — a última coisa do arco, a prova verificável do processo. O extra vem
-  depois porque não é do arco: encerrar primeiro e depois oferecer o extra deixa claro onde
-  uma coisa termina e a outra começa.
+- **É uma aba retrátil, e chega fechada.** O título convida — *"Leia mais sobre o produto"* —
+  e uma seta indica que há mais. **O conteúdo é oferecido, não imposto:** quem quiser só o
+  case fecha o case e vai embora; quem quiser mais, abre.
+- **A linha inteira do cabeçalho é o alvo**, não só a seta. A seta indica o estado, não é um
+  botão à parte.
+- **Abre e fecha sem JavaScript.** Na web é `details`/`summary` nativo, que já faz isso e já é
+  anunciado por leitor de tela. O script não é dependência aqui — não há script.
+- **É uma banda de cor que sangra a tela**, no tom pálido daquele case, fechada ou aberta. O
+  case acabou, e a aba precisa dizer isso antes da primeira palavra.
+- **Aberta, a linha começa onde começa o texto dos capítulos e vai até a margem direita** — no
+  desktop 1063px, exatamente a largura de um capítulo. São 122 caracteres por linha contra 73
+  na coluna de leitura: **a única exceção à regra de medida em todo o site**, e ela é
+  deliberada. Ver decisões 106 e 107.
+- Fica **depois do convite ao repositório**. O repositório é o que fecha o case — a última
+  coisa do arco, a prova verificável do processo. O extra vem depois porque não é do arco.
 
 ### O extra do case de Finanças
 
