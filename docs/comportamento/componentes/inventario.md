@@ -51,7 +51,7 @@ Demonstrado no quadro **05 · Espaço, forma e foco** da página *Sistema visual
 
 ## A lista
 
-Dez, conferidos contra as telas desenhadas — a lista abriu em sete e já mudou três vezes. Cada um vira arquivo próprio quando for
+Onze, conferidos contra as telas desenhadas — a lista abriu em sete e já mudou quatro vezes. Cada um vira arquivo próprio quando for
 desenhado.
 
 | # | Componente | Onde aparece | Existe no Figma? |
@@ -66,6 +66,7 @@ desenhado.
 | 8 | marcador de falta | case e "Quem sou eu", 19 ocorrências | **sim**, `173:34` |
 | 9 | tabela de comparação | case de Reembolso, nas duas larguras | **sim**, `173:49` |
 | 10 | sobreposição | contato, menu e tema — 4 telas, as duas larguras | **sim**, `173:13` e `173:19` |
+| 11 | item da barra | dentro da barra, 27 ocorrências | **sim** |
 
 ### O que mudou em relação aos sete previstos
 
@@ -106,6 +107,12 @@ divergência entre telas continua possível.
 - **Home e erro usam `atual=nenhuma`.** Não é ausência de indicador: na home a pessoa está na
   entrada, e na página de erro não está em lugar nenhum.
 - Nenhum item recebe borda, fundo ou destaque. Toda cor vem de variável.
+- **Os itens são instâncias de `barra / item`.** As seis variantes guardavam 27 nós de texto
+  com o mesmo estilo; mudar o corpo dos itens era editar 27 lugares. Agora é um.
+- **Contato, Tema e Menu não têm componente próprio, e não precisam.** São o mesmo item da
+  barra — a barra **não distingue navegação de gatilho por aparência, só por comportamento**,
+  e foi a decisão 030 que estabeleceu isso. Um componente por gatilho acrescentaria camada
+  sem tirar cópia, e criaria uma diferença visual onde o projeto decidiu não ter nenhuma.
 
 ### sobreposição
 

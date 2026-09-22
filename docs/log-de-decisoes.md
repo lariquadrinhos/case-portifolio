@@ -2521,3 +2521,34 @@ outra forma.
 **Dois erros de conteúdo achados na troca.** A faixa do case de Finanças dizia "2 de 5" e ele
 tem seis etapas. A do Reembolso dizia "Descoberta", que é capítulo do Finanças — herança de a
 tela ter sido construída a partir da outra. Nenhum dos dois apareceria sem trocar a peça.
+
+## 086 · O item da barra vira componente; Contato, Tema e Menu não
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** moldura · `#restricao`
+
+**Gatilho.** Larissa: *"da barra fixa, contato, tema e menu, não precisam de componentes?"*
+
+**Contato, Tema e Menu: não, e o motivo é uma decisão antiga.** Os três só existem dentro da
+barra, e a barra **não distingue navegação de gatilho por aparência, só por comportamento** —
+foi o que a decisão 030 estabeleceu ao tirar o destaque do contato. Um componente por gatilho
+acrescentaria camada sem tirar cópia, e abriria a porta para uma diferença visual que o
+projeto decidiu não ter.
+
+**O item da barra: sim, e o motivo é um número.** As seis variantes guardavam **27 nós de
+texto** com o mesmo estilo — seis "Larissa", seis "Trabalhos", seis "Contato", três de cada um
+dos outros. Mudar o corpo dos itens era editar 27 lugares. Este projeto já viu isso falhar
+três vezes: a sobreposição divergiu em quatro cópias, o marca-texto em onze, o botão em cinco.
+
+**E o item levou o sublinhado junto.** Ele era um retângulo posicionado à mão em cada variante,
+com a largura copiada do rótulo. Agora vive dentro do item e **acompanha a largura sozinho** —
+some a chance de o sublinhado ficar mais curto ou mais longo que a palavra.
+
+**O que a pergunta encontrou, e fica para ela (P52).** Nenhum dos três gatilhos **mostra que
+está aberto**. Com a caixa de tema aberta, "Tema" é idêntico a "Contato". No desktop a
+proximidade da caixa diz de onde ela veio; na tela estreita, onde a caixa ocupa a largura
+inteira, não diz nada.
+
+**Uma nota sobre trocar conjunto de variantes.** Apaguei o conjunto da barra e criei outro do
+zero, com as dezesseis telas apontando para o antigo. **Elas reapontaram sozinhas**, porque o
+Figma religa instâncias pelo nome da variante. Vale saber: funciona enquanto os nomes forem
+os mesmos — mudar um nome de variante, não.
