@@ -2118,3 +2118,36 @@ e ninguém reexportar, ela aprova o passado com cara de presente. É a mesma lim
 **E o que resolveria de verdade.** Nada disso seria preciso se a sobreposição fosse componente
 de verdade no Figma — aí a uniformidade seria imposta, não conferida. Esta checagem é muleta
 enquanto as dez peças do inventário forem nove cópias e um componente.
+
+## 073 · O design system ganha página própria, componentes de verdade e documento
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#instrumentacao`
+
+**Gatilho.** Larissa: *"cria uma página lá no figma chama de Design System e cria tudo lá,
+design system completo, tokens, variáveis, componentes... e cria o documento."*
+
+**O que foi feito.** Página **Design System** (`171:14`) com cinco seções: Cor, Tipografia,
+Espaço e forma, Grade e Componentes. As amostras de cor são **vinculadas à variável**, não
+repintadas: trocar a variável muda a amostra, e os dois modos aparecem lado a lado no mesmo
+quadro. As dez peças do inventário viraram **componentes de verdade**, três delas com
+variantes.
+
+**O que isso resolve.** A decisão 057 tinha encontrado que só o card era componente e a barra
+estava copiada dez vezes — e que nenhuma checagem pega divergência entre cópias, porque cópias
+não divergem até alguém editar uma. Agora a uniformidade passa a ser imposta pelo Figma em vez
+de conferida depois.
+
+**O que isso não resolve, e precisa ficar dito.** **As telas ainda não usam os componentes.**
+Os wireframes seguem montados com as cópias antigas, feitas antes de as peças existirem.
+Trocar cópia por instância é trabalho que falta, e até lá a checagem 6 continua sendo a única
+coisa que compara as sobreposições — comparando um export, não o arquivo.
+
+**O documento.** `docs/design-system.md`, e ele **não repete nenhum valor**. Escrever "18px"
+ali criaria a segunda fonte de verdade que o projeto existe para evitar, e ela envelheceria em
+silêncio no primeiro ajuste. O que entra é o que a variável não diz: qual coleção governa o
+quê, as regras que atravessam todas as peças, os endereços, e **uma lista do que o sistema
+ainda não tem** — o acento de sistema que não existe, a trava de proporção que é ação de
+interface, o atalho de salto sem contrato.
+
+**Uma conferência feita no caminho.** Mover o card de case para a página nova podia quebrar as
+instâncias nos wireframes. Nove instâncias, nenhuma perdida.

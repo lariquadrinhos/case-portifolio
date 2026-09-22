@@ -8,6 +8,10 @@ atualizado: 2026-09-21
 
 # Inventário de componentes
 
+> **As peças existem como componentes de verdade** na página **Design System** (`171:14`) do
+> arquivo de design. Os endereços de cada uma estão em [`docs/design-system.md`](../../design-system.md),
+> que também traz as quatro coleções de variáveis e as regras que atravessam todas as peças.
+
 O design system. **Cada componente ganha o seu próprio arquivo neste domínio** quando for
 desenhado; este inventário existe para que a lista seja visível antes de qualquer um
 existir.
@@ -52,16 +56,16 @@ desenhado.
 
 | # | Componente | Onde aparece | Existe no Figma? |
 |---|---|---|---|
-| 1 | barra fixa | as cinco telas, nas duas larguras | não — **10 cópias soltas** |
+| 1 | barra fixa | as cinco telas, nas duas larguras | **sim**, `174:21` |
 | 2 | card de case | índice e fim de case | **sim**, `101:8` |
-| 3 | trilha | case: trilha lateral no desktop, faixa de progresso no estreito | não |
-| 4 | tira de destaques | case, chave e valor | não |
-| 5 | bloco de mídia com legenda | case, 12 ocorrências | não |
-| 6 | botão | **um lugar só**: o convite ao contato no fim do case | não |
-| 7 | marca-texto | home e case, nas duas larguras | não |
-| 8 | marcador de falta | case e "Quem sou eu", 19 ocorrências | não |
-| 9 | tabela de comparação | case de Reembolso, nas duas larguras | não |
-| 10 | sobreposição | contato, menu e tema — 4 telas, as duas larguras | não |
+| 3 | trilha | trilha lateral no desktop, faixa de progresso no estreito | **sim**, `173:31` e `174:35` |
+| 4 | tira de destaques | case, chave e valor | **sim**, `173:38` |
+| 5 | bloco de mídia com legenda | case, 12 ocorrências | **sim**, `174:26` |
+| 6 | botão | **um lugar só**: o convite ao contato no fim do case | **sim**, `173:22` |
+| 7 | marca-texto | home e case, nas duas larguras | **sim**, `174:30` |
+| 8 | marcador de falta | case e "Quem sou eu", 19 ocorrências | **sim**, `173:34` |
+| 9 | tabela de comparação | case de Reembolso, nas duas larguras | **sim**, `173:49` |
+| 10 | sobreposição | contato, menu e tema — 4 telas, as duas larguras | **sim**, `173:13` e `173:19` |
 
 ### O que mudou em relação aos sete previstos
 
@@ -81,9 +85,13 @@ lista ser fechada em oito. Ela entrou sozinha: aparece nas duas larguras, que é
 
 ### O que a lista revelou
 
-**Só um dos oito é componente de verdade.** A barra está copiada dez vezes no arquivo: mudar
-a barra hoje é mudar dez lugares à mão, e as telas novas desta sessão foram construídas
-clonando a barra de uma tela existente. Nenhuma checagem pega divergência entre cópias.
+**Quando esta lista foi fechada, só um dos oito era componente de verdade.** A barra estava
+copiada dez vezes: mudá-la era mudar dez lugares à mão. Isso foi resolvido em 22/09 — as dez
+peças viraram componentes na página Design System.
+
+**Mas as telas ainda não os usam.** Os wireframes seguem montados com cópias, feitas antes de
+os componentes existirem. Trocar cópia por instância é trabalho que falta, e até lá a
+divergência entre telas continua possível.
 
 ### sobreposição
 
