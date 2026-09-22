@@ -183,5 +183,9 @@ existe e cabe no pai.
    tipo, respiro e área de toque — nada disso apareceu até serem comparadas lado a lado.
 3. **Reexporte `docs/spec/tokens.json` e `docs/spec/sobreposicoes.json`** depois de mexer no
    Figma. Os dois são gerados; editar à mão quebra o propósito.
-4. **Rode `node scripts/checagens.mjs`.** Seis checagens, e a sexta imprime a data do export
-   para você saber se está conferindo o presente ou o passado.
+4. **Rode `node scripts/checagens.mjs`.** Sete checagens. A sexta e a sétima imprimem a data
+   do export, para você saber se está conferindo o presente ou o passado.
+
+**Toda cor vem de variável, e a checagem 7 cobra.** O único isento é o que está marcado como
+*anotação* no próprio nome do nó — cromo de documentação, como as colunas do diagrama de
+grade. A marca fica no nome para a isenção ser visível no Figma, e não só no script.

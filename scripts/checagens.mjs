@@ -265,6 +265,35 @@ else {
   nota(`medidas exportadas do Figma em ${exportado}; se o desenho mudou depois, reexporte`);
 }
 
+titulo(7, 'Toda cor vem de variável');
+
+// Três peças apareceram no mesmo dia com cor escrita à mão e fora da paleta: o card (branco,
+// cinza e quase-preto), o marca-texto (três cores, duas inexistentes) e os links (#2E2E2E,
+// quando text/primary é #221F20). Nenhuma respondia ao tema escuro. A varredura que veio
+// depois achou 774 cores soltas — os wireframes inteiros estavam numa paleta de cinzas que
+// não era a do sistema.
+//
+// Só é isento o que está marcado como anotação: cromo de documentação, não cor de produto.
+// A marca fica no NOME do nó, para a isenção ser visível no Figma e não só aqui.
+
+const fCores = p('docs/spec/cores-soltas.json');
+if (!existsSync(fCores)) erro('docs/spec/cores-soltas.json não encontrado');
+else {
+  const { exportado, soltas, nosVarridos, variaveisDeCor } = JSON.parse(readFileSync(fCores, 'utf8'));
+  const naoIsentas = soltas.filter((s) => !/· anotação$/.test(s.nome));
+
+  if (naoIsentas.length) {
+    const porCor = {};
+    for (const s of naoIsentas) (porCor[s.cor] ||= []).push(`${s.pagina} › ${s.nome}`);
+    for (const [cor, onde] of Object.entries(porCor))
+      erro(`${cor} escrita à mão em ${onde.length} lugar(es): ${onde.slice(0, 3).join(', ')}${onde.length > 3 ? '…' : ''}`);
+  } else {
+    ok(`${nosVarridos} nós varridos, ${variaveisDeCor} variáveis de cor — nenhuma cor de produto escrita à mão`);
+    if (soltas.length) nota(`${soltas.length} isenta(s), todas marcadas como anotação`);
+  }
+  nota(`varredura exportada do Figma em ${exportado}; se o desenho mudou depois, reexporte`);
+}
+
 // ─────────────────────────────────────────────────────────────
 titulo('—', 'Checagens declaradas e ainda bloqueadas');
 

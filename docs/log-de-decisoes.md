@@ -2614,3 +2614,38 @@ regras do projeto discordam, vale a que foi escrita sabendo da outra.
 `#2E2E2E`, **que não existe na paleta** — `text/primary` é `#221F20`. Nenhum estava vinculado
 a variável, então nenhum respondia ao tema. Catorze correções. É a terceira peça hoje a
 aparecer com cor fora da paleta escrita à mão: antes foram o card e o marca-texto.
+
+## 089 · Checagem 7, e os wireframes migram para a paleta
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** instrumentacao · `#instrumentacao`
+
+**Gatilho.** Três peças apareceram no mesmo dia com cor escrita à mão e fora da paleta — o
+card, o marca-texto e os links. Larissa pediu uma checagem para isso.
+
+**A varredura achou muito mais do que a pergunta.** **Setecentas e setenta e quatro cores
+soltas.** E o padrão não era descuido pontual: `#2E2E2E` em 257 lugares, `#7A7A7A` em 105,
+branco em 144. **Os wireframes inteiros estavam numa paleta de cinzas neutros que não é a do
+sistema** — desenhados antes de a paleta existir e nunca migrados. O fundo das telas era
+branco puro quando a regra diz *"o tema claro usa fundo cinza claro, não branco puro"*.
+
+**Migrar veio antes de checar.** Uma checagem que falha 774 vezes é uma checagem que se
+aprende a ignorar. Setecentas e cinquenta cores foram mapeadas para as variáveis por faixa de
+luminosidade e papel; nenhuma ficou sem destino.
+
+**O efeito é maior que o esperado.** As telas deixaram de ser cinzas e passaram a mostrar o
+site que o sistema descreve: fundo creme, texto quente, e os cards vestindo a cor de cada
+case. O wireframe passou a ser uma previsão do site, não um esboço dele.
+
+**Um token novo.** O véu era a única cor do site sem variável. Virou `overlay/veu`, e o valor
+do tema escuro é diferente do claro por uma razão: **a página escura já é escura, e 8% de
+preto sobre ela quase não separa**. Está em 45%, e fica anotado que esse valor nunca foi visto
+numa tela pintada.
+
+**A checagem.** Compara `docs/spec/cores-soltas.json`, exportado do Figma, e exige que só
+restem elementos **marcados como anotação no próprio nome**. A marca vive no nome do nó, e não
+numa lista dentro do script, para a isenção ser visível no Figma por quem estiver desenhando.
+
+**Como foi verificada.** Os três defeitos reais de hoje foram reintroduzidos um a um — o
+cinza dos links, o cinza da capa, o amarelo do marca-texto — e a checagem acusou os três. Uma
+anotação nova foi acrescentada e ela não acusou. **Testada nos dois sentidos**: pega o que
+deve pegar, e não acusa o inocente — que foi a lição da checagem 5.

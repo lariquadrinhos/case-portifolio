@@ -1,0 +1,26 @@
+{
+  "_": "GERADO A PARTIR DO FIGMA — NÃO EDITAR À MÃO. Lista toda cor sólida que NÃO está vinculada a uma variável, nas páginas Wireframe e Sistema visual. A checagem 7 exige que só restem elementos marcados como anotação. Para atualizar, reexporte.",
+  "arquivo": "hwClE9Xpm51OW4vPsCCn8J",
+  "exportado": "2026-09-22",
+  "nosVarridos": 1684,
+  "variaveisDeCor": 22,
+  "soltas": [
+    { "pagina": "Wireframe", "nome": "faixa da nota · anotação", "onde": "fill", "cor": "#FFFFFF" },
+    { "pagina": "Wireframe", "nome": "limite da tela · anotação", "onde": "fill", "cor": "#E0E0E0" },
+    { "pagina": "Wireframe", "nome": "faixa da nota · anotação", "onde": "fill", "cor": "#FFFFFF" },
+    { "pagina": "Wireframe", "nome": "limite da tela · anotação", "onde": "fill", "cor": "#E0E0E0" },
+    { "pagina": "Sistema visual", "nome": "coluna 1 · anotação", "onde": "fill", "cor": "#FA6B6B" },
+    { "pagina": "Sistema visual", "nome": "coluna 2 · anotação", "onde": "fill", "cor": "#FA6B6B" },
+    { "pagina": "Sistema visual", "nome": "coluna 3 · anotação", "onde": "fill", "cor": "#FA6B6B" },
+    { "pagina": "Sistema visual", "nome": "coluna 4 · anotação", "onde": "fill", "cor": "#FA6B6B" },
+    { "pagina": "Sistema visual", "nome": "coluna 5 · anotação", "onde": "fill", "cor": "#FA6B6B" },
+    { "pagina": "Sistema visual", "nome": "coluna 6 · anotação", "onde": "fill", "cor": "#FA6B6B" },
+    { "pagina": "Sistema visual", "nome": "coluna 7 · anotação", "onde": "fill", "cor": "#FA6B6B" },
+    { "pagina": "Sistema visual", "nome": "coluna 8 · anotação", "onde": "fill", "cor": "#FA6B6B" },
+    { "pagina": "Sistema visual", "nome": "coluna 9 · anotação", "onde": "fill", "cor": "#FA6B6B" },
+    { "pagina": "Sistema visual", "nome": "coluna 10 · anotação", "onde": "fill", "cor": "#FA6B6B" },
+    { "pagina": "Sistema visual", "nome": "coluna 11 · anotação", "onde": "fill", "cor": "#FA6B6B" },
+    { "pagina": "Sistema visual", "nome": "coluna 12 · anotação", "onde": "fill", "cor": "#FA6B6B" },
+    { "pagina": "Sistema visual", "nome": "coluna 1 · anotação", "onde": "fill", "cor": "#FA6B6B" }
+  ]
+}
