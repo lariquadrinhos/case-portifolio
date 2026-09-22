@@ -86,8 +86,15 @@ etapa, como evidência, não como declaração à parte.
   que os capítulos não têm.
 - **Vem declarada por `<!-- bloco: extra -->`** no arquivo de conteúdo. Sem o marcador, a
   convenção a trataria como subseção do último capítulo, que é outra coisa.
-- **É separada por divisória e rotulada.** O case acabou; o que vem depois precisa dizer que
-  é outra coisa, senão lê como um capítulo que ninguém anunciou.
+- **Não segue a formatação do case: é uma banda de cor que sangra a tela inteira**, no tom
+  pálido daquele case. O case acabou, e o extra precisa dizer isso antes da primeira palavra —
+  uma divisória fina não bastava, porque o olho lê divisória como pausa e não como mudança de
+  assunto.
+- **A medida de leitura não muda dentro da banda.** A cor vai de ponta a ponta; o texto
+  continua na largura da coluna de leitura e alinhado com ela. Texto de 1280px daria cerca de
+  125 caracteres por linha, contra os 65 a 75 da regra — a banda é para separar, não para
+  esticar a linha.
+- **Mantém o rótulo EXTRA** acima do título.
 - Fica **depois do convite ao repositório**, na coluna de leitura. O repositório é o que
   **fecha o case** — a última coisa do arco, a prova verificável do processo. O extra vem
   depois porque não é do arco: encerrar primeiro e depois oferecer o extra deixa claro onde

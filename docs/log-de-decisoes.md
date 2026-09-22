@@ -3090,3 +3090,28 @@ começa, o que é a razão de o extra ter divisória e rótulo.
 
 **Consequência.** As duas telas do case de Finanças reordenadas. O de Reembolso não muda: não
 tem extra, e lá o repositório já era a última coisa antes do próximo case.
+
+## 105 · O extra é banda de cor, não seção com divisória
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#correcao`
+
+**Gatilho.** Larissa, sobre a seção extra: *"não segue a mesma formatação do case, o texto
+preenche a tela e ganha o destaque de cor."*
+
+**O que eu tinha feito.** Desenhei o extra **com a formatação do case** — mesma coluna de
+leitura, fundo creme, separado só por uma divisória fina e um rótulo. Seguia o padrão quando
+o ponto dele era justamente não seguir.
+
+**Decisão.** O extra vira uma **banda que sangra a tela inteira**, no tom pálido do case. O
+case acabou, e o extra precisa dizer isso **antes da primeira palavra** — uma divisória não
+bastava, porque o olho lê divisória como pausa, não como mudança de assunto. A divisória saiu;
+a cor faz o trabalho dela melhor.
+
+**Uma decisão que tomei dentro da instrução dela, e que fica declarada.** *"O texto preenche a
+tela"* podia significar que a linha também vai de ponta a ponta. **Mantive a medida de
+leitura**: 1280px a 18px dariam cerca de **125 caracteres por linha**, contra os 65 a 75 da
+regra. A cor sangra, o texto não — a banda é para separar, não para esticar a linha.
+
+**Consequência.** O extra do case de Finanças é hoje o **único lugar do site onde uma cor de
+case ocupa a largura inteira da tela**. Combina com a natureza dele: é a única parte que não
+pertence ao arco.
