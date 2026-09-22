@@ -93,20 +93,9 @@ Documentação organizada sustenta o processo mesmo quando quem escreveu não es
 
 Aprendi a decidir o que as coisas são, e sustentar essa decisão em cada tela depois. Aprendi a escrever para quem vem depois de mim, e descobri que documentar bem é o que faz o design sobreviver ao contato com a implementação. E aprendi que trabalhar com IA se decide antes, não depois: o que define a qualidade do que volta é a regra que eu estabeleci no começo, não a minha avaliação de cada resposta. Sem ela, qualquer resultado plausível passa.
 
-<!-- privado -->
+<!-- bloco: extra -->
 ## O Produto
 
-<!--
-  Não vai para a página. É material de origem para as legendas das imagens.
-
-  As definições dizem: "quando os textos dos cases perderam os exemplos concretos, o
-  específico saiu junto — e é nas imagens que ele volta. Cada imagem precisa provar uma
-  afirmação do texto, e a legenda carrega o detalhe que o texto abriu mão de contar."
-
-  E a linha editorial: "o produto aparece como evidência, nunca como assunto."
-
-  Para publicar como prosa, basta remover o marcador privado acima. Ver decisão 038.
--->
 
 Quem tem pessoa jurídica além da física não tem uma vida financeira: tem duas. Misturadas na
 mesma planilha podem virar uma bagunça.

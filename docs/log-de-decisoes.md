@@ -3036,3 +3036,36 @@ variante cortada, recorte de tela e texto encolhido. Acusou os quatro.
 quadro que cortava — e esticou os dois recortes de sobreposição, que cortam de propósito. Foi
 o que motivou a exceção viver no nome: **sem marca visível, quem conserta não sabe o que é
 defeito.**
+
+## 103 · "O Produto" vai para a página como extra, fora da trilha
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#reversao`
+
+**Reverte a decisão 038**, que marcou a seção como privada.
+
+**Gatilho.** Larissa: *"a seção 'O produto' fala justamente do produto porque o resto do texto
+inteiro não fala, por isso achei importante incluir essa seção. Essa seção é essencial, do
+jeito que foi escrita."*
+
+**Por que a 038 errou.** Ela se apoiou na linha editorial *"o produto aparece como evidência,
+nunca como assunto"* e concluiu que uma seção chamada "O Produto" faz dele o assunto. **Mas
+evidência de quê?** Os seis capítulos falam de processo — ensinar a ferramenta, o Figma como
+entrega, o design system, a auditoria. Nenhum diz o que a aplicação faz. **Sem a seção, o case
+descreve como uma coisa foi construída sem nunca dizer o que a coisa é.**
+
+A 038 também apostou o concreto nas legendas das imagens — e registrou isso como custo:
+*"transfere peso para uma dependência que ainda não foi produzida"*. Um dia depois, nenhuma
+imagem dos dois cases existe.
+
+**Decisão dela: publicar, e fora da trilha.** *"É um conteúdo à parte, é extra. Por isso tem a
+liberdade de falar sobre o produto: ele tem um objetivo diferente do resto todo."*
+
+**O que eu tinha feito de errado no meio do caminho.** Publiquei como capítulo 7, com rótulo
+de trilha. Estava errado por dois motivos que ela corrigiu de uma vez: entrar na trilha faria
+dela parte do arco Ideia→Resultados, quebrando-o — que foi exatamente o que a 038 previu —, e
+apagaria a razão de ela poder falar do produto, que é **não** pertencer ao arco.
+
+**Consequência.** Vocabulário ganhou `<!-- bloco: extra -->`, porque a convenção só conhecia
+capítulo e subseção, e extra não é nenhum dos dois. O contrato do case ganhou a seção. A tela
+ganhou divisória e rótulo **EXTRA** antes do título: o case acabou, e o que vem depois precisa
+dizer que é outra coisa.

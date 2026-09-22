@@ -79,6 +79,23 @@ etapa, como evidência, não como declaração à parte.
 | página do segundo case · estreita | `148:37` | não se aplica |
 | tabela de comparação | dentro de `144:32` | não se aplica |
 
+## Conteúdo extra
+
+- **Um case pode ter uma seção extra depois do último capítulo.** Ela **não entra na trilha**:
+  é conteúdo à parte, com objetivo diferente do arco do case, e por isso tem liberdade de tom
+  que os capítulos não têm.
+- **Vem declarada por `<!-- bloco: extra -->`** no arquivo de conteúdo. Sem o marcador, a
+  convenção a trataria como subseção do último capítulo, que é outra coisa.
+- **É separada por divisória e rotulada.** O case acabou; o que vem depois precisa dizer que
+  é outra coisa, senão lê como um capítulo que ninguém anunciou.
+- Fica **antes do convite ao repositório**, na coluna de leitura.
+
+### O extra do case de Finanças
+
+*"O Produto"* — nove parágrafos sobre o que a aplicação faz. Existe porque **os seis capítulos
+falam de processo e não do produto**: sem ela, o case descreve como uma coisa foi construída
+sem nunca dizer o que a coisa é.
+
 ## O bloco de destaque
 
 - **É um parágrafo inteiro sobre fundo pálido da cor do case**, e serve para **dar respiro
