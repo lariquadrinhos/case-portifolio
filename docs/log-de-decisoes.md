@@ -2896,3 +2896,32 @@ do piso; dentro do bloco ela cai abaixo. **Um respiro que aperta a linha é cont
 A saída seria o bloco **sangrar até as bordas da tela** no estreito — 375 de largura com
 respiro de 24 —, o que faria o texto dentro dele ter exatamente a largura da prosa. Fica
 anotado como P53: muda a estrutura da coluna e é decisão dela.
+
+## 098 · O bloco sangra até as bordas na tela estreita
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#restricao`
+
+**Resolve a P53.**
+
+**O problema.** O bloco tem respiro lateral, então o texto dentro dele era mais estreito que a
+prosa em volta: **279px contra 327 na tela estreita, cerca de 33 caracteres contra 38.** A
+medida da tela estreita já é consequência da margem e anda perto do piso de 35 — dentro do
+bloco ela caía abaixo. **Um respiro que aperta a linha é contraditório:** ele existe para o
+olho descansar, não para a linha quebrar mais vezes.
+
+**Decisão.** Em tela estreita o bloco **ocupa a largura da tela**. A cor vai de ponta a ponta e
+o respiro do bloco ocupa o lugar da margem da página, então o texto dentro fica em **327 —
+exatamente a medida da prosa**.
+
+**No desktop nada muda**, e isso foi verificado, não assumido: lá o bloco fica na coluna de
+leitura de 628 e o respiro de 32 deixa a linha em **66 caracteres**, dentro da faixa de 65 a
+75. Consertar o que não está quebrado seria churn.
+
+**Como foi feito, sem truque.** O capítulo estreito passou de 327 para 375 de largura, sem
+respiro próprio, e o respiro migrou para dentro de duas **colunas de leitura** — uma antes e
+uma depois do bloco. O bloco fica entre elas, preenchendo a largura. Só auto-layout; nenhuma
+posição absoluta, nenhuma margem negativa.
+
+**O que isso custou em estrutura.** Cada capítulo com bloco ganhou dois quadros de coluna. É o
+preço de um elemento que sangra dentro de uma coluna: **alguém precisa segurar a margem, e se
+não é o capítulo, são os filhos dele.**

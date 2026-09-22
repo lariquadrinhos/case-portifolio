@@ -89,6 +89,13 @@ etapa, como evidência, não como declaração à parte.
 - **Não usar nas frases curtas em peso forte.** Elas já estão marcadas, e pôr fundo atrás de
   uma linha só faz uma etiqueta, não um respiro.
 - **Não usar em lista.** Lista já tem ritmo próprio; o fundo compete com ele.
+- **O texto dentro do bloco tem a mesma medida da prosa em volta.** Um respiro que aperta a
+  linha é contraditório — ele existe para o olho descansar, não para a linha quebrar mais
+  vezes.
+- **Em tela estreita, o bloco sangra até as bordas.** A cor vai de ponta a ponta e o respiro
+  do bloco ocupa o lugar da margem da página, então o texto fica em 327, igual ao resto. No
+  desktop ele fica na coluna de leitura: o respiro de 32 deixa a linha em 66 caracteres, que
+  continua dentro da faixa.
 
 ### Os três do case de Reembolso
 

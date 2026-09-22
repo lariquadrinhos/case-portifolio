@@ -169,7 +169,11 @@ duas cores por duas larguras.
   corrido inteiro sobre cor cansa e anula o efeito.
 - Usa o **tom pálido** do case, que é o papel de superfície — recebe texto escuro e não disputa
   com a prosa em volta.
-- **Em uso no case de Reembolso**, quatro capítulos de cinco. O de Finanças ainda não usa.
+- **Em tela estreita a instância ocupa a largura da tela**, não a da coluna: o respiro do
+  bloco substitui a margem da página, e o texto dentro fica com a mesma medida da prosa. Por
+  isso o capítulo estreito passou a ter 375 de largura, com o respiro dentro das colunas de
+  leitura em vez de no capítulo.
+- **Em uso no case de Reembolso**, três capítulos de cinco. O de Finanças ainda não usa.
 - **Qual frase recebe o bloco é decisão de conteúdo**, não de layout: é escolher qual frase
   sustenta o capítulo. Ver as escolhas em `case/pagina-de-case.md`.
 - **Ele caiu da lista quando a P30 foi resolvida**, e o motivo provável é colisão de nome: o
