@@ -47,7 +47,7 @@ Demonstrado em `155:42`.
 
 ## A lista
 
-Nove, conferidos contra as telas desenhadas — a lista abriu em sete e já mudou duas vezes. Cada um vira arquivo próprio quando for
+Dez, conferidos contra as telas desenhadas — a lista abriu em sete e já mudou três vezes. Cada um vira arquivo próprio quando for
 desenhado.
 
 | # | Componente | Onde aparece | Existe no Figma? |
@@ -61,6 +61,7 @@ desenhado.
 | 7 | marca-texto | home e case, nas duas larguras | não |
 | 8 | marcador de falta | case e "Quem sou eu", 19 ocorrências | não |
 | 9 | tabela de comparação | case de Reembolso, nas duas larguras | não |
+| 10 | sobreposição | contato, menu e tema — 4 telas, as duas larguras | não |
 
 ### O que mudou em relação aos sete previstos
 
@@ -83,6 +84,28 @@ lista ser fechada em oito. Ela entrou sozinha: aparece nas duas larguras, que é
 **Só um dos oito é componente de verdade.** A barra está copiada dez vezes no arquivo: mudar
 a barra hoje é mudar dez lugares à mão, e as telas novas desta sessão foram construídas
 clonando a barra de uma tela existente. Nenhuma checagem pega divergência entre cópias.
+
+### sobreposição
+
+Contato revelado, menu da tela estreita e controle de tema. **É uma peça só**, e só ficou
+claro depois de conferir as quatro lado a lado.
+
+- **Casca:** canto de 10, traço de 1, sombra a 8 de deslocamento e 24 de raio, respiro de 8
+  em cima e embaixo, sem espaço entre as linhas.
+- **Miolo:** lista de linhas. **A linha inteira é o alvo**, com 12 de respiro em cima e
+  embaixo — 54px de alvo no desktop, 56 na estreita. Texto solto daria 32, abaixo dos 44
+  confortáveis para dedo.
+- **A linha ocupa a caixa mesmo com texto curto**, senão opções irmãs ficam com alvos
+  diferentes.
+- **Coluna do sinal** só existe onde há escolha marcada — tema e menu têm, contato não. Onde
+  existe, todas as linhas a reservam, inclusive as sem marca, para os rótulos alinharem.
+- **Largura:** abraça o conteúdo no desktop, ocupa a largura disponível na estreita. Nunca é
+  número escolhido.
+- **Fica a 12 do que a abriu.** Quando o gatilho é item da barra, pende da borda de baixo da
+  barra, não da palavra.
+- **Véu só na tela estreita** — ali o dedo não tem mira fina e o véu é o alvo grande para
+  recolher; no desktop o clique fora já é preciso.
+- Esc ou acionar fora recolhe, e o foco volta para o que a abriu.
 
 ### card de case
 

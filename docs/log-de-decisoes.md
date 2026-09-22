@@ -2062,3 +2062,28 @@ defasada e me leva por um caminho errado.
 
 **O que isso diz sobre conferir.** Usei menu e tema como régua para corrigir o contato sem
 ter conferido a régua. As duas tinham defeito. **Referência não confere a si mesma.**
+
+## 071 · A sobreposição é o décimo componente, e as quatro finalmente batem
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#restricao`
+
+**Gatilho.** Larissa: *"confere as quatro de novo lado a lado."* Terceira conferência
+seguida, e a terceira achou coisa.
+
+**Dois restos.** No contato do desktop **as linhas ainda não ocupavam a caixa** — o mesmo
+defeito corrigido no tema minutos antes, que passou porque aquela caixa era a única declarada
+como "abraça", e caixa que abraça faz as linhas abraçarem também. E a **coluna do sinal tinha
+dois nomes**, `marca de escolhido` e `coluna do sinal`, contra a regra do inventário de um
+nome só nos três lugares.
+
+**A decisão maior.** Contato, menu e tema **são um componente**, e ele entra no inventário
+como o décimo. Passa o teste de entrada com folga: quatro telas, duas larguras. Estava
+faltando não por descuido da lista, mas porque **a peça não existia quando a lista foi
+fechada** — a primeira caixa foi desenhada depois, e as outras três nasceram como cópias
+dela sem que ninguém declarasse que eram a mesma coisa.
+
+**O que três conferências seguidas ensinaram.** A primeira achou um vão de 16 onde as outras
+tinham 12. A segunda achou três famílias de miolo. A terceira achou o resto da segunda. Em
+nenhuma delas o defeito era visível olhando uma caixa; em todas ele era óbvio na tabela
+comparativa. **Uniformidade não se vê em série, só em coluna** — e nada no processo de hoje
+produz colunas sozinho. As três vieram porque foram pedidas.
