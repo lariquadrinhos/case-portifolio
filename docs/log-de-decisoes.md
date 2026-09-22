@@ -2300,3 +2300,39 @@ no quadro 05, que passou a se chamar **05 · Espaço, forma e foco**.
 errado. A decisão 077 juntou duas páginas porque informação repetida diverge; esta move uma
 peça porque **documento guardado junto do trabalho some dentro do trabalho** — ninguém procura
 a definição do anel de foco no meio das cinco telas.
+
+## 079 · A trilha troca numa linha a um terço do topo, não pela maior parte da tela
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#reversao`
+
+**Reverte a regra** *"a trilha marca a etapa cuja seção ocupa a maior parte da tela"*, escrita
+no contrato desde o primeiro desenho.
+
+**Gatilho.** Larissa pediu o componente da trilha e **a regra que define onde ele muda**.
+Antes de construir, simulei a regra existente contra os capítulos reais dos dois cases, com
+janela de 900px.
+
+**O que a simulação mostrou.** A regra **castiga capítulo curto**. A Introdução do case de
+Reembolso tem 240px de altura; o Diagnóstico, logo abaixo, tem 898. A Introdução nunca chega a
+ocupar mais da janela que o vizinho, e fica ativa por **400px de rolagem — menos de meia
+tela**. A pessoa passa por ela sem registrar que existe.
+
+**Decisão.** A etapa ativa é **a última cujo início já passou de uma linha a um terço do topo
+da tela**. Com ela, a Introdução do Reembolso fica ativa por 760px, e nenhuma etapa dos dois
+cases fica abaixo de meia tela. Nenhuma das duas regras pisca ou volta atrás — a diferença é
+só a distribuição.
+
+**Sobre "a regra para cada case", que foi o pedido.** Não existe uma por case, e é isso que
+está certo: **os pontos de troca são os começos dos capítulos**, e os capítulos vêm dos
+marcadores `<!-- trilha: -->` do arquivo de conteúdo. Muda-se o arquivo, mudam-se os pontos,
+sem tocar em regra nenhuma. Uma regra, e cada case fornece os dados.
+
+**O componente.** O traço passou a viver **dentro de cada item**, em vez de ser uma linha à
+parte. Empilhar itens produz linha contínua para qualquer número de capítulos — o case de
+seis etapas e o de cinco usam a mesma peça. Seis variantes: estado ativo/inativo × posição
+primeira/meio/última. As posições existem porque o traço começa no ponto na primeira e termina
+no ponto na última; sem elas sobra um toco de 12px acima da primeira etapa, que lê como erro.
+
+**Um cenário novo no contrato, verificável:** nenhuma etapa fica ativa por menos de meia tela.
+É a forma escrita do defeito que a simulação encontrou — se alguém mudar a regra de novo, o
+cenário cobra.

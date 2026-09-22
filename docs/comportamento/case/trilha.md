@@ -20,15 +20,29 @@ função, não por decoração.
 ## Regras
 
 - A trilha é **do case, não do sistema**: existe só dentro de um case e carrega a cor dele.
-- **A trilha marca a etapa cuja seção ocupa a maior parte da tela.** O marcador se move
-  sozinho conforme a pessoa rola.
+- **A etapa ativa é a última cujo início já passou de uma linha a um terço do topo da tela.**
+  O marcador se move sozinho conforme a pessoa rola.
+- **Onde ele muda, em qualquer case:** um capítulo assume quando seu topo cruza essa linha.
+  Os pontos de troca não são escritos por case — são **os começos dos capítulos**, e os
+  capítulos vêm dos marcadores `<!-- trilha: -->` do arquivo de conteúdo. Muda-se o arquivo,
+  mudam-se os pontos, sem tocar em regra nenhuma.
+- **Por que não é "a etapa que ocupa a maior parte da tela"**, que era a regra anterior: ela
+  castiga capítulo curto. A Introdução do case de Reembolso tem 240px de altura contra 898 do
+  Diagnóstico — ela nunca chega a ocupar mais da janela que o vizinho, e ficaria ativa por
+  **400px de rolagem, menos de meia tela**. Com a linha de um terço, fica 760px. Ver decisão
+  079.
 - Cada item é clicável e leva à seção correspondente.
 - **Os rótulos vêm dos arquivos dos cases**, como comentário abaixo de cada título de
   capítulo. Não existe lista de etapas em outro lugar — assim um erro de ordem é impossível
   de não ver.
 - Os rótulos usam termos conhecidos do processo de design e **não repetem o título do
   capítulo**.
-- A etapa ativa se distingue por marcador maior, peso e cor; as demais ficam em apoio.
+- A etapa ativa se distingue por **marcador maior, peso e cor** — três marcas, porque cor
+  sozinha não basta.
+- **O traço vive dentro de cada item**, não como linha à parte. Empilhar itens produz linha
+  contínua para qualquer número de capítulos, e um case com cinco etapas e outro com seis
+  usam a mesma peça. O item tem três posições — primeira, meio, última — porque o traço
+  começa no ponto na primeira e termina no ponto na última.
 
 ### Em tela estreita
 
@@ -42,10 +56,9 @@ função, não por decoração.
 
 | Nome no cenário | Figma | Storybook |
 |---|---|---|
-| traço | `107:23` | não se aplica |
-| marcador | `107:22` | não se aplica |
-| marcador da etapa ativa | `107:22` | não se aplica |
-| faixa de progresso | `108:30` | não se aplica |
+| item da trilha | componente, 6 variantes | não se aplica |
+| trilha montada | exemplo de 5 etapas, quadro 07 | não se aplica |
+| faixa de progresso | componente | não se aplica |
 
 ## Comportamento
 
@@ -55,9 +68,20 @@ Funcionalidade: Trilha de leitura
 
   Cenário: A pessoa rola o case
     Dado que a trilha está visível
-    Quando a seção de uma etapa passa a ocupar a maior parte da tela
-    Então o marcador se move para essa etapa
-    E a etapa ativa se distingue das demais
+    Quando o início de um capítulo cruza a linha a um terço do topo da tela
+    Então o marcador se move para a etapa daquele capítulo
+    E a etapa ativa se distingue por marcador maior, peso e cor
+
+  Cenário: Nenhuma etapa fica ativa por menos de meia tela
+    Dado que um case tem capítulos de alturas diferentes
+    Quando a pessoa rola do começo ao fim
+    Então cada etapa fica ativa por pelo menos meia tela de rolagem
+    E o marcador nunca volta para uma etapa que já deixou
+
+  Cenário: O case tem outro número de etapas
+    Dado que um case tem cinco capítulos e outro tem seis
+    Então os dois montam a trilha com o mesmo item
+    E a linha continua contínua entre os pontos
 
   Cenário: A pessoa pula para uma etapa
     Quando a pessoa aciona um item da trilha
