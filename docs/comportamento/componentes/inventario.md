@@ -106,6 +106,9 @@ claro depois de conferir as quatro lado a lado.
 - **Véu só na tela estreita** — ali o dedo não tem mira fina e o véu é o alvo grande para
   recolher; no desktop o clique fora já é preciso.
 - Esc ou acionar fora recolhe, e o foco volta para o que a abriu.
+- **A checagem 6 confere as quatro contra `docs/spec/sobreposicoes.json`**, que é exportado do
+  Figma. Ela existe porque a peça ainda é quatro cópias: se virar componente de verdade, a
+  uniformidade passa a ser imposta e a checagem vira redundante.
 
 ### card de case
 

@@ -1,0 +1,20 @@
+{
+  "_": "GERADO A PARTIR DO FIGMA — NÃO EDITAR À MÃO. A fonte é o arquivo de design; este arquivo é o transporte, para que a checagem 6 possa comparar as quatro sobreposições sem abrir o Figma. Para atualizar, reexporte.",
+  "arquivo": "hwClE9Xpm51OW4vPsCCn8J",
+  "pagina": "56:2",
+  "exportado": "2026-09-22",
+  "sobreposicoes": [
+    { "nome": "contato · desktop", "tela": "Contato revelado · desktop 1440", "no": "163:47", "largura": "desktop",
+      "casca": { "vao": 12, "raio": 10, "traco": 1, "sombra": "y8 r24 12", "respiro": "8/8", "gapEntreLinhas": 0 },
+      "miolo": { "linhas": 2, "respiroDaLinha": ["12/24/12/24"], "alturaDaLinha": [54], "tipo": ["18/30"], "linhaPreencheCaixa": true, "rotulosAlinhados": true, "temColunaDoSinal": false, "colunaEmTodasAsLinhas": false } },
+    { "nome": "tema · desktop", "tela": "Tema revelado · desktop 1440", "no": "164:55", "largura": "desktop",
+      "casca": { "vao": 12, "raio": 10, "traco": 1, "sombra": "y8 r24 12", "respiro": "8/8", "gapEntreLinhas": 0 },
+      "miolo": { "linhas": 2, "respiroDaLinha": ["12/24/12/24"], "alturaDaLinha": [54], "tipo": ["18/30"], "linhaPreencheCaixa": true, "rotulosAlinhados": true, "temColunaDoSinal": true, "colunaEmTodasAsLinhas": true } },
+    { "nome": "contato · estreita", "tela": "Contato revelado · tela estreita 375", "no": "163:52", "largura": "estreita",
+      "casca": { "vao": 12, "raio": 10, "traco": 1, "sombra": "y8 r24 12", "respiro": "8/8", "gapEntreLinhas": 0 },
+      "miolo": { "linhas": 2, "respiroDaLinha": ["12/24/12/24"], "alturaDaLinha": [56], "tipo": ["18/32"], "linhaPreencheCaixa": true, "rotulosAlinhados": true, "temColunaDoSinal": false, "colunaEmTodasAsLinhas": false } },
+    { "nome": "menu · estreita", "tela": "Menu aberto · tela estreita 375", "no": "154:71", "largura": "estreita",
+      "casca": { "vao": 12, "raio": 10, "traco": 1, "sombra": "y8 r24 12", "respiro": "8/8", "gapEntreLinhas": 0 },
+      "miolo": { "linhas": 3, "respiroDaLinha": ["12/24/12/24"], "alturaDaLinha": [56], "tipo": ["18/32"], "linhaPreencheCaixa": true, "rotulosAlinhados": true, "temColunaDoSinal": true, "colunaEmTodasAsLinhas": true } }
+  ]
+}

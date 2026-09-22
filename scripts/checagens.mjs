@@ -208,6 +208,63 @@ for (const arq of contratos) {
 }
 if (!posicionais) ok(`${contratos.length} contrato(s) — nenhuma referência por posição`);
 
+titulo(6, 'As sobreposições são todas a mesma peça');
+
+// Contato, menu e tema são um componente só (decisão 071), mas nenhum deles é componente de
+// verdade no Figma — são quatro cópias. Divergência entre cópias não aparece olhando uma:
+// três conferências seguidas em 21/09 acharam um vão de 16 onde as outras tinham 12, três
+// famílias de miolo, e o resto disso. Esta checagem transforma "comparar lado a lado" em
+// algo que acontece sozinho.
+//
+// Lê docs/spec/sobreposicoes.json, que é EXPORTADO do Figma. Se o export envelhecer, a
+// checagem valida o passado — a mesma limitação de tokens.json, declarada na decisão 007.
+
+const fSobre = p('docs/spec/sobreposicoes.json');
+if (!existsSync(fSobre)) erro('docs/spec/sobreposicoes.json não encontrado');
+else {
+  const { exportado, sobreposicoes: sobre } = JSON.parse(readFileSync(fSobre, 'utf8'));
+  const problemas = [];
+
+  // A casca é igual nas quatro, sem exceção de largura.
+  for (const campo of ['vao', 'raio', 'traco', 'sombra', 'respiro', 'gapEntreLinhas']) {
+    const vistos = [...new Set(sobre.map((s) => JSON.stringify(s.casca[campo])))];
+    if (vistos.length > 1)
+      problemas.push(`casca.${campo} diverge: ` + sobre.map((s) => `${s.nome}=${s.casca[campo]}`).join(', '));
+  }
+
+  // O miolo é igual dentro de cada largura — o tipo e a altura da linha mudam com a escala.
+  for (const largura of ['desktop', 'estreita']) {
+    const grupo = sobre.filter((s) => s.largura === largura);
+    for (const campo of ['respiroDaLinha', 'alturaDaLinha', 'tipo']) {
+      const vistos = [...new Set(grupo.map((s) => JSON.stringify(s.miolo[campo])))];
+      if (vistos.length > 1)
+        problemas.push(`${largura}: miolo.${campo} diverge: ` + grupo.map((s) => `${s.nome}=${s.miolo[campo].join('|')}`).join(', '));
+    }
+    for (const s of grupo)
+      if (s.miolo.alturaDaLinha.length > 1)
+        problemas.push(`${s.nome}: linhas de alturas diferentes (${s.miolo.alturaDaLinha.join(', ')})`);
+  }
+
+  // Invariantes que valem para qualquer sobreposição, em qualquer largura.
+  const ALVO_MINIMO = 44;
+  for (const s of sobre) {
+    if (!s.miolo.linhaPreencheCaixa)
+      problemas.push(`${s.nome}: a linha não ocupa a caixa — alvos de tamanhos diferentes na mesma lista`);
+    if (!s.miolo.rotulosAlinhados)
+      problemas.push(`${s.nome}: rótulos em colunas diferentes`);
+    if (s.miolo.temColunaDoSinal && !s.miolo.colunaEmTodasAsLinhas)
+      problemas.push(`${s.nome}: só algumas linhas reservam a coluna do sinal`);
+    const alvo = Math.min(...s.miolo.alturaDaLinha);
+    if (alvo < ALVO_MINIMO)
+      problemas.push(`${s.nome}: alvo de ${alvo}px, abaixo dos ${ALVO_MINIMO} confortáveis para dedo`);
+  }
+
+  problemas.length
+    ? problemas.forEach(erro)
+    : ok(`${sobre.length} sobreposições conferem — casca idêntica, miolo igual por largura, alvo ≥ ${ALVO_MINIMO}px`);
+  nota(`medidas exportadas do Figma em ${exportado}; se o desenho mudou depois, reexporte`);
+}
+
 // ─────────────────────────────────────────────────────────────
 titulo('—', 'Checagens declaradas e ainda bloqueadas');
 

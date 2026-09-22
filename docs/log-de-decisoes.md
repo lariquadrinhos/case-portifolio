@@ -2087,3 +2087,34 @@ tinham 12. A segunda achou três famílias de miolo. A terceira achou o resto da
 nenhuma delas o defeito era visível olhando uma caixa; em todas ele era óbvio na tabela
 comparativa. **Uniformidade não se vê em série, só em coluna** — e nada no processo de hoje
 produz colunas sozinho. As três vieram porque foram pedidas.
+
+## 072 · Checagem 6: comparar as quatro sobreposições deixa de depender de alguém pedir
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** instrumentacao · `#instrumentacao`
+
+**Gatilho.** Larissa: *"cria uma checagem pra isso."* Três conferências seguidas acharam
+defeito, e as três aconteceram porque foram pedidas.
+
+**O problema de fazer isso virar checagem.** As medidas moram no Figma e o script lê
+documentos. O projeto já tinha resolvido esse impasse uma vez, para os tokens: **exporta-se
+do Figma para um arquivo gerado, e a checagem confere o arquivo.**
+
+**Decisão.** `docs/spec/sobreposicoes.json`, gerado, nunca editado à mão. **Checagem 6**
+compara as quatro em três camadas: a **casca** tem de ser idêntica nas quatro, sem exceção de
+largura; o **miolo** tem de ser igual dentro de cada largura, porque tipo e altura mudam com a
+escala; e alguns invariantes valem sempre — linha ocupa a caixa, rótulos alinhados, coluna do
+sinal em todas as linhas ou em nenhuma, e **alvo nunca abaixo de 44px**.
+
+**Como foi verificada.** Cada um dos defeitos reais encontrados ontem e hoje foi reintroduzido
+no arquivo, um por vez, e a checagem acusou os seis: vão de 16, linha que não ocupa a caixa,
+alvo de 32, tipo 21 contra 18, coluna do sinal em parte das linhas, sombra diferente.
+**Checagem que nunca falhou é checagem que ninguém sabe se funciona** — é a segunda vez hoje
+que este projeto verifica o verificador.
+
+**O que ela não faz, dito em voz alta.** Confere o **export**, não o Figma. Se o desenho mudar
+e ninguém reexportar, ela aprova o passado com cara de presente. É a mesma limitação de
+`tokens.json` e a saída é a mesma: a checagem imprime a data do export toda vez que roda.
+
+**E o que resolveria de verdade.** Nada disso seria preciso se a sobreposição fosse componente
+de verdade no Figma — aí a uniformidade seria imposta, não conferida. Esta checagem é muleta
+enquanto as dez peças do inventário forem nove cópias e um componente.
