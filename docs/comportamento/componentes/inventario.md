@@ -137,6 +137,21 @@ claro depois de conferir as quatro lado a lado.
   Figma. Ela existe porque a peça ainda é quatro cópias: se virar componente de verdade, a
   uniformidade passa a ser imposta e a checagem vira redundante.
 
+### marca-texto
+
+Realce atrás da frase que carrega a home ou o case. É o único uso de acento fora dos cases.
+
+- **Altura: 75% da entrelinha, centrada na linha.** Vinte e seis numa linha de 34, vinte e
+  quatro numa de 32, setenta e dois numa de 96. Antes cada realce era ajustado à mão e a
+  proporção variava de 71% a 79% conforme o tamanho.
+- **Um realce por linha quebrada.** No site é um elemento só e o navegador desenha por linha;
+  no Figma cada linha precisa do seu retângulo. Quando a frase quebra diferente entre as
+  larguras, o número de realces muda — e é aí que se esquece um.
+- **A cor vem de variável**, e é a reservada à hero: as cinco cores de acento pertencem aos
+  cases, menos duas que ficam para o sistema — uma para estado e uma para a hero. Ver P49.
+- **Cobre a frase, não a linha.** Começa onde a frase começa, mesmo que seja no meio de uma
+  linha, e termina onde ela termina.
+
 ### card de case
 
 Usado no índice de Trabalhos e ao fim de cada case. **Quatro variantes: cor × largura.**

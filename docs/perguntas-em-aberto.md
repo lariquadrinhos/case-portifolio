@@ -58,8 +58,13 @@ a hero."* Ou seja: a cor de estado sempre saiu de dentro das cinco — só nunca
 Com dois cases usando **azul** (Finanças) e **laranja** (Reembolso), sobram **roxo, verde e
 rosa**. Duas delas são o sistema; a terceira fica para o terceiro case.
 
-**O que falta:** escolher qual é a de estado, criar `accent/sistema/*` apontando para ela, e
-decidir se o anel de foco passa a usá-la ou continua em `text/primary`.
+**São três cores livres e três papéis:** estado (sublinhado da página atual, foco), hero (o
+marca-texto), e o terceiro case, quando existir. Cada uma das três — roxo, verde, rosa — vai
+para um papel.
+
+**O que falta:** distribuir as três, criar `accent/sistema/*` e `accent/hero/*` apontando para
+as escolhidas, e decidir se o anel de foco passa a usar a de estado ou continua em
+`text/primary`. Hoje o marca-texto está em `accent/verde/surface`, provisório.
 **Momento:** antes do visual design. Não bloqueia: o anel já está definido sem ela.
 
 ### P43 · A coluna de mídia comporta captura de tela de desktop?

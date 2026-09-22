@@ -2430,3 +2430,31 @@ comparando. Corrigido, e a medição foi reexportada para a checagem 6.
 
 **O que este componente encerra.** Era a última peça montada à mão em toda tela. Com ela,
 barra, card, trilha, faixa e sobreposição — tudo que se repete entre telas — é instância.
+
+## 083 · O marca-texto tinha três cores e duas proporções
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#correcao`
+
+**Gatilho.** Larissa pediu regra e componente completo para o marca-texto.
+
+**Três cores para o mesmo elemento.** Home e case de Finanças em `#E6E6E6`, cinza. Case de
+Reembolso em `#FFE28A`, amarelo — esse fui eu, ao construir a tela. Componente em
+`accent/verde/surface`. **Nenhuma das onze ocorrências no wireframe estava vinculada a
+variável**, e duas das três cores não existem na paleta.
+
+**Duas proporções.** O realce ocupava 76% da entrelinha nos cases e 71% a 79% na home, cada
+um ajustado à mão. Agora é **75% da entrelinha, centrada** — que bate com o que os cases já
+faziam e escala para qualquer nível de tipo.
+
+**E um defeito que só a padronização revelou.** Na home em tela estreita, a frase destacada é
+*"forma melhor de fazer,"*. No desktop ela cabe numa linha e era destacada inteira; no
+estreito quebra em duas — *"forma melhor"* e *"de fazer,"* — e **só a primeira tinha realce**.
+Metade da frase destacada, metade não, desde que a tela foi desenhada.
+
+É exatamente o que a regra *um realce por linha quebrada* existe para evitar: quando a frase
+quebra diferente entre as larguras, o número de retângulos muda, e é aí que se esquece um.
+
+**Sobre a cor, que fica para ela.** O marca-texto aparece na home e no hero do case — é o uso
+da cor que a página *Sistema visual* chama de *"livre para a hero"*. Com azul e laranja nos
+dois cases, sobram **roxo, verde e rosa** para três papéis: estado, hero, e o terceiro case.
+Hoje está em verde, provisório. A P49 foi reescrita para tratar das três de uma vez.
