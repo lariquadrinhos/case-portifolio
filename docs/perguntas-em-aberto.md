@@ -47,14 +47,21 @@ um elemento que **só existe enquanto tem foco** — invisível para quem usa o 
 desenhado como proposta em `155:42`.
 **Momento:** antes de publicar.
 
-### P49 · "Acento de sistema" não existe como token
+### P49 · Qual das cinco cores é o acento de sistema
 As definições, três contratos e três decisões citam um *acento de sistema* — o sublinhado da
-página atual, o que é interativo dentro de um case. **Nenhum token com esse nome existe:**
-todos os acentos da paleta são por case (roxo, laranja, verde, rosa, azul). O anel de foco
-foi definido com `text/primary` justamente para não depender dele.
-**Opções:** eleger uma das cinco cores como a do sistema · criar uma sexta, neutra ao
-conjunto · assumir `text/primary` também para o sublinhado, e o site não ter acento próprio.
-**Momento:** antes do visual design.
+página atual, o que é interativo num case, e agora o anel de foco. **Não existe variável com
+esse nome.**
+
+**Mas ele foi planejado.** A página *Sistema visual* (`34:2`) diz, sobre os cinco acentos:
+*"Duas cores sobram para o sistema: uma para estado (link, foco, item ativo) e uma livre para
+a hero."* Ou seja: a cor de estado sempre saiu de dentro das cinco — só nunca foi escolhida.
+
+Com dois cases usando **azul** (Finanças) e **laranja** (Reembolso), sobram **roxo, verde e
+rosa**. Duas delas são o sistema; a terceira fica para o terceiro case.
+
+**O que falta:** escolher qual é a de estado, criar `accent/sistema/*` apontando para ela, e
+decidir se o anel de foco passa a usá-la ou continua em `text/primary`.
+**Momento:** antes do visual design. Não bloqueia: o anel já está definido sem ela.
 
 ### P43 · A coluna de mídia comporta captura de tela de desktop?
 A grade nova dá **411px** à mídia de prova. As definições dizem que o case de Finanças mostra

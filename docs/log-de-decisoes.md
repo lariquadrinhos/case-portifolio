@@ -2207,3 +2207,34 @@ chamadas.
 folga constante. A amostra de `display` no desktop foi encurtada para caber em uma linha — um
 espécime de tipo que quebra em três linhas não mostra o nível, mostra o parágrafo. Varredura
 final: zero textos presos na página do sistema e zero nos wireframes.
+
+## 076 · O sistema mora em duas páginas, e eu criei a segunda sem ler a primeira
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#correcao`
+
+**Gatilho.** Larissa: *"confere as outras páginas também."* As outras estavam íntegras. O
+problema era a relação entre elas.
+
+**O que eu fiz errado.** Criei a página *Design System* sem ler a página *Sistema visual*, que
+já existia com oito quadros. Isso é a Diretriz 0 — não assumir premissas — quebrada da forma
+mais simples possível: assumi que não havia sistema porque ninguém me disse que havia.
+
+**Duas coisas estavam lá e não na minha.**
+
+1. **Doze pares de contraste medidos**, nos dois temas, com o valor de cada um. Eu tinha
+   escrito no documento a regra dos 4,5:1 **sem a prova** — que já existia, medida, a uma
+   página de distância.
+2. **A resposta da P49**, escrita desde sempre: *"duas cores sobram para o sistema: uma para
+   estado (link, foco, item ativo) e uma livre para a hero."* O acento de sistema nunca esteve
+   faltando do plano — **esteve faltando só o batismo.** Eu tinha aberto a pergunta como "não
+   existe", quando o certo era "não foi escolhido qual das cinco".
+
+**Decisão.** As duas páginas ficam, com papéis declarados. *Sistema visual* é o **argumento** e
+a prova: por que o fundo é creme, por que cada case tem cor, e o contraste de cada par.
+*Design System* é a **referência**: variáveis como espécime vivo, escala, grade e as peças
+como componentes. Quando divergirem, a referência está errada até prova em contrário — mas o
+argumento é o que explica, e apagá-lo perderia a razão das escolhas.
+
+**Consequência.** P49 reescrita com a intenção que já existia; ela deixou de ser "inventar uma
+cor" e virou "escolher entre roxo, verde e rosa". O documento do sistema passou a apontar para
+a prova de contraste em vez de afirmar a regra no vazio.

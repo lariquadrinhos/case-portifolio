@@ -1,6 +1,20 @@
 # Design system
 
-**Onde ele vive:** arquivo Figma `hwClE9Xpm51OW4vPsCCn8J`, página **Design System** (`171:14`).
+**O sistema mora em duas páginas do arquivo `hwClE9Xpm51OW4vPsCCn8J`, e elas não são cópias
+uma da outra.**
+
+**Sistema visual** (`34:2`) é o **argumento**: por que o fundo é creme e não branco, por que
+cada case adota uma cor, o que o tom pálido faz e o que o tom forte faz. E carrega a **prova**
+— doze pares de contraste medidos, nos dois temas, com o valor de cada um. É lá que se
+descobre *por quê*.
+
+**Design System** (`171:14`) é a **referência**: as variáveis como espécime vivo, a escala, a
+grade e as peças como componentes de verdade. É daqui que se monta uma tela.
+
+Quando as duas divergirem, a referência está errada até prova em contrário — mas o argumento
+é que explica, e apagá-lo perderia a razão das escolhas.
+
+### Seções da página Design System
 
 | Seção | Nó | O que traz |
 |---|---|---|
@@ -106,9 +120,11 @@ sobreposição — nenhum dos quatro estava na lista original de sete.
 ## O que o sistema ainda não tem
 
 **Acento de sistema** (P49). As definições, três contratos e três decisões citam um *acento de
-sistema* — o sublinhado da página atual, o que é interativo num case. **Não existe variável com
-esse nome:** todos os acentos são por case. O anel de foco foi definido com `text/primary`
-justamente para não depender dele.
+sistema*. Não existe variável com esse nome — **mas ele foi planejado.** A página *Sistema
+visual* diz, sobre as cinco cores de acento: *"duas cores sobram para o sistema: uma para
+estado (link, foco, item ativo) e uma livre para a hero."* Com dois cases usando azul e
+laranja, sobram **roxo, verde e rosa**. Falta escolher qual é a de estado e batizá-la. O anel
+de foco usa `text/primary` até lá.
 
 **Trava de proporção da capa do card.** A API do Figma expõe `targetAspectRatio` como somente
 leitura; ligar a trava é ação de interface, à mão. Sem ela, redimensionar o card pode
