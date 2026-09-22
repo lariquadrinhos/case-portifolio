@@ -26,8 +26,8 @@ função, não por decoração.
   Os pontos de troca não são escritos por case — são **os começos dos capítulos**, e os
   capítulos vêm dos marcadores `<!-- trilha: -->` do arquivo de conteúdo. Muda-se o arquivo,
   mudam-se os pontos, sem tocar em regra nenhuma.
-- **Por que não é "a etapa que ocupa a maior parte da tela"**, que era a regra anterior: ela
-  castiga capítulo curto. A Introdução do case de Reembolso tem 240px de altura contra 898 do
+- **Por que não é "a etapa que ocupa a maior parte da tela"**, que valeu até a decisão 079:
+  ela castiga capítulo curto. A Introdução do case de Reembolso tem 240px de altura contra 898 do
   Diagnóstico — ela nunca chega a ocupar mais da janela que o vizinho, e ficaria ativa por
   **400px de rolagem, menos de meia tela**. Com a linha de um terço, fica 760px. Ver decisão
   079.
