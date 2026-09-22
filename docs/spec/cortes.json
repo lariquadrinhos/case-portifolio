@@ -1,0 +1,12 @@
+{
+  "_": "GERADO A PARTIR DO FIGMA — NÃO EDITAR À MÃO. Lista todo quadro que corta o próprio conteúdo nas páginas Wireframe e Sistema visual. A checagem 8 exige que só restem os declarados: '· recorte' para janela sobre uma página maior, 'rola na horizontal' para conteúdo que rola. Para atualizar, reexporte.",
+  "arquivo": "hwClE9Xpm51OW4vPsCCn8J",
+  "exportado": "2026-09-22",
+  "nosVarridos": 1801,
+  "cortando": [
+    { "pagina": "Wireframe", "quadro": "tabela · O que o novo fluxo mudou · rola na horizontal", "tam": "327×615", "sobra": "233 à direita" },
+    { "pagina": "Wireframe", "quadro": "tabela · O que eu entreguei · rola na horizontal", "tam": "327×342", "sobra": "233 à direita" },
+    { "pagina": "Wireframe", "quadro": "Contato revelado · tela estreita 375 · recorte", "tam": "375×700", "sobra": "224 embaixo" },
+    { "pagina": "Wireframe", "quadro": "Menu aberto · tela estreita 375 · recorte", "tam": "375×700", "sobra": "224 embaixo" }
+  ]
+}

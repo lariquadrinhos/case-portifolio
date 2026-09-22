@@ -3001,3 +3001,38 @@ bloco sangra lá.
 **O que isso vale como método.** Uma diferença entre larguras é defeito quando não tem causa,
 e é decisão quando tem. **A única forma de não confundir as duas é escrever a causa junto** —
 senão a próxima pessoa a olhar vai "consertar" a diferença e quebrar a razão dela.
+
+## 102 · Checagem 8, contra o defeito mais silencioso do arquivo
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** instrumentacao · `#instrumentacao`
+
+**Gatilho.** Larissa, apontando dois capítulos do case de Finanças: *"o frame não mostra todo
+conteúdo, não é a primeira vez que isso acontece."* Não era.
+
+**A causa dos dois.** Os capítulos do case de Finanças no desktop são **quadros sem
+auto-layout, com altura fixa e corte ligado**. Quando o bloco de destaque entrou, a coluna de
+leitura cresceu para 730 dentro de um quadro de 652 — e o quadro cortou 78px em silêncio. Os
+capítulos do Reembolso não tiveram o problema porque eu os construí com auto-layout, que
+cresce sozinho.
+
+**Quatro ocorrências no mesmo dia, do mesmo defeito.** A frase de abertura presa em 10px de
+altura; vinte e nove textos encolhidos na página do sistema; duas variantes de componente
+cortadas pela seção; e agora dois capítulos. **O padrão é sempre o mesmo: o conteúdo existe,
+cabe na estrutura, e não aparece.**
+
+**Por que nenhuma outra checagem pegava.** A de cor pergunta se a cor vem de variável. A de
+sobreposição compara peças entre si. A varredura geométrica que eu mesmo rodei procurava
+conteúdo **transbordando**, e este é o contrário: conteúdo **contido e escondido**.
+
+**Decisão.** Checagem 8, contra `docs/spec/cortes.json`. **Os dois cortes legítimos ficam
+declarados no nome do quadro** — `· recorte` para janela sobre uma página maior,
+`rola na horizontal` para conteúdo que rola —, para a exceção ser visível no Figma por quem
+estiver desenhando, e não escondida numa lista dentro do script.
+
+**Verificada com os quatro casos reais do dia**, reintroduzidos um a um: capítulo cortado,
+variante cortada, recorte de tela e texto encolhido. Acusou os quatro.
+
+**Um erro cometido no conserto, e corrigido.** A primeira passada ajustou a altura de **todo**
+quadro que cortava — e esticou os dois recortes de sobreposição, que cortam de propósito. Foi
+o que motivou a exceção viver no nome: **sem marca visível, quem conserta não sabe o que é
+defeito.**

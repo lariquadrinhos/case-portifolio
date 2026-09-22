@@ -188,8 +188,14 @@ existe e cabe no pai.
    tipo, respiro e área de toque — nada disso apareceu até serem comparadas lado a lado.
 3. **Reexporte `docs/spec/tokens.json` e `docs/spec/sobreposicoes.json`** depois de mexer no
    Figma. Os dois são gerados; editar à mão quebra o propósito.
-4. **Rode `node scripts/checagens.mjs`.** Sete checagens. A sexta e a sétima imprimem a data
+4. **Rode `node scripts/checagens.mjs`.** Oito checagens. A sexta e a sétima imprimem a data
    do export, para você saber se está conferindo o presente ou o passado.
+
+**Quadro não corta o próprio conteúdo, e a checagem 8 cobra.** Conteúdo cortado é o defeito
+mais silencioso deste arquivo: ele existe, cabe na estrutura e simplesmente não aparece.
+Aconteceu quatro vezes num dia. Os dois cortes legítimos — janela sobre uma página maior e
+conteúdo que rola — ficam declarados **no nome do quadro**: `· recorte` e
+`rola na horizontal`.
 
 **Conjunto de variantes cabe na largura da seção.** As variantes se organizam em linhas que
 quebram em 1440 — a largura útil do quadro. Em fila única, o card de case dava 2054px e a

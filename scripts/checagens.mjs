@@ -294,6 +294,37 @@ else {
   nota(`varredura exportada do Figma em ${exportado}; se o desenho mudou depois, reexporte`);
 }
 
+titulo(8, 'Nenhum quadro corta o próprio conteúdo');
+
+// Quatro vezes em um dia: a frase de abertura presa em 10px, vinte e nove textos encolhidos
+// na página do sistema, duas variantes de componente cortadas pela seção, e dois capítulos
+// do case de Finanças que não cresceram quando o bloco de destaque entrou.
+//
+// O padrão é sempre o mesmo e sempre silencioso: o conteúdo existe, cabe na estrutura, e
+// simplesmente não aparece. Nenhuma outra checagem pega — a de cor pergunta se a cor vem de
+// variável, a de sobreposição compara peças entre si, e conteúdo cortado passa por todas.
+//
+// Dois cortes são de propósito e ficam declarados NO NOME do quadro, para a exceção ser
+// visível no Figma: "· recorte" mostra uma janela sobre uma página maior, e
+// "rola na horizontal" é conteúdo que rola dentro da própria caixa.
+
+const fCortes = p('docs/spec/cortes.json');
+if (!existsSync(fCortes)) erro('docs/spec/cortes.json não encontrado');
+else {
+  const { exportado, cortando, nosVarridos } = JSON.parse(readFileSync(fCortes, 'utf8'));
+  const DECLARADOS = /· recorte$|rola na horizontal/;
+  const inesperados = cortando.filter((c) => !DECLARADOS.test(c.quadro));
+
+  if (inesperados.length)
+    for (const c of inesperados)
+      erro(`${c.pagina} › "${c.quadro}" (${c.tam}) esconde ${c.sobra}`);
+  else {
+    ok(`${nosVarridos} nós varridos — nenhum conteúdo escondido por corte`);
+    if (cortando.length) nota(`${cortando.length} corte(s) de propósito, todos declarados no nome`);
+  }
+  nota(`varredura exportada do Figma em ${exportado}; se o desenho mudou depois, reexporte`);
+}
+
 // ─────────────────────────────────────────────────────────────
 titulo('—', 'Checagens declaradas e ainda bloqueadas');
 
