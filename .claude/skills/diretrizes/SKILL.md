@@ -100,6 +100,22 @@ terminado em preposição no celular. O que se espelha é a intenção; a execu�
 
 ---
 
+## Diretriz 0.3 · Mudar o estágio de um artefato é decisão, não efeito colateral
+
+Rascunho, wireframe, mockup, versão final: cada estágio é **registro de como a coisa nasceu**,
+e este projeto documenta o processo porque o processo é o material do terceiro case. Apagar um
+estágio apaga documentação.
+
+**Nenhuma tarefa técnica pode mudar o estágio de um artefato por tabela.** Vincular cores a
+variáveis é higiene; se a higiene transforma um wireframe em mockup, a higiene virou decisão
+de fidelidade — e decisão é dela.
+
+O teste: *depois desta mudança, a peça ainda é a mesma coisa que era?* Se a resposta for não,
+para e pergunta.
+
+**E o inverso também vale:** o que não trava o processo espera o comando dela. Trazer a demanda
+na hora em que ela precisa ser resolvida é o que se pede; adiantar o que ninguém pediu, não.
+
 ## Diretriz 1 — Perguntar é ofício, não interrupção
 
 Perguntar bem sustenta a Diretriz 0. Perguntar mal é pior que não perguntar: cansa,

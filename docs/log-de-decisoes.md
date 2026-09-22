@@ -2649,3 +2649,33 @@ numa lista dentro do script, para a isenção ser visível no Figma por quem est
 cinza dos links, o cinza da capa, o amarelo do marca-texto — e a checagem acusou os três. Uma
 anotação nova foi acrescentada e ela não acusou. **Testada nos dois sentidos**: pega o que
 deve pegar, e não acusa o inocente — que foi a lição da checagem 5.
+
+## 090 · Os wireframes viraram mockup sem que ninguém decidisse isso
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** processo · `#licao`
+
+**O que aconteceu.** A decisão 089 migrou 750 cores dos wireframes para as variáveis do
+sistema, como tarefa de higiene para a checagem 7 poder existir. As variáveis são a paleta
+real — fundo creme, texto quente, cor por case. **Os wireframes deixaram de ser wireframes.**
+
+**O que se perdeu.** Larissa: *"não era o que eu queria. o processo é importante pra mim, e
+documentar o processo é essencial. os wireframes como estavam eram um marco de como as telas
+nasceram."* Este projeto documenta o próprio processo porque **o processo é o material do
+terceiro case**. O estágio em cinza era registro, e registro apagado não volta.
+
+**Havia sinal, e eu passei por cima.** Antes da migração, os cards eram cinzas e a cor do case
+vivia **só no nome da camada** — "card · Finanças PF+PJ (azul)". Isso é convenção de
+wireframe: anota-se a intenção, não se pinta. Alguém tinha escolhido aquilo, e eu li como
+lacuna.
+
+**Decisão dela.** Não voltar atrás: os wireframes seguem como mockup das telas reais.
+
+**O que muda daqui em diante.** Diretriz 0.3 escrita: **mudar o estágio de um artefato é
+decisão, não efeito colateral.** O teste é *depois desta mudança, a peça ainda é a mesma coisa
+que era?* — e se não for, para e pergunta. E o complemento, que ela pediu com as mesmas
+palavras: **trazer a demanda na hora em que ela precisa ser resolvida**, e deixar esperar o
+que não trava o processo.
+
+**O tipo de erro.** Não foi erro de execução: a migração está tecnicamente correta e a
+checagem 7 é útil. Foi erro de **alcance** — uma tarefa que eu tratei como técnica tinha uma
+consequência que só ela podia autorizar.
