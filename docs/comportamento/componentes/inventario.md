@@ -93,6 +93,20 @@ peças viraram componentes na página Design System.
 os componentes existirem. Trocar cópia por instância é trabalho que falta, e até lá a
 divergência entre telas continua possível.
 
+### barra fixa
+
+**Seis variantes: duas larguras por três páginas atuais.**
+
+- **Altura 64 nas duas larguras.** O conteúdo é do mesmo tamanho nos dois, então não havia o
+  que justificasse 72 no desktop. O respiro passa a ser consequência da altura, não escolha.
+- **O sublinhado da página atual mora dentro da peça**, como variante — antes era retângulo
+  solto, posicionado à mão em cada tela.
+- **Em tela estreita, `atual=quem-sou-eu` sublinha "Menu"**, porque é lá que essa página mora.
+  A variante carrega essa regra em vez de deixá-la para quem monta a tela lembrar.
+- **Home e erro usam `atual=nenhuma`.** Não é ausência de indicador: na home a pessoa está na
+  entrada, e na página de erro não está em lugar nenhum.
+- Nenhum item recebe borda, fundo ou destaque. Toda cor vem de variável.
+
 ### sobreposição
 
 Contato revelado, menu da tela estreita e controle de tema. **É uma peça só**, e só ficou

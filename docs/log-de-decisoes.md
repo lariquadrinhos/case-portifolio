@@ -2401,3 +2401,32 @@ padrão do componente propaga e texto sobrescrito não — então corrigir o arq
 sincronizava um case e deixava o outro para trás. A causa era o padrão do componente ser o
 conteúdo de um dos cases. **Com o padrão genérico — "Título do case" — toda instância
 sobrescreve, e nenhuma finge estar sincronizada.**
+
+## 082 · A barra tem 64 nas duas larguras, e o sublinhado entra na peça
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** moldura · `#correcao`
+
+**Gatilho.** Larissa pediu regra e componente completo para a barra fixa.
+
+**O número que ninguém tinha explicado.** A barra era **72 no desktop e 64 na estreita**. O
+conteúdo é do mesmo tamanho nos dois — texto de 18/30 —, então a diferença virava respiro de
+**21px contra 17**, e os dois estão fora da escala de espaço. Não havia razão escrita para
+nenhum dos três números.
+
+**Decisão.** **64 nas duas larguras**, que é valor de escala e já era o do estreito. O respiro
+passa a ser consequência da altura, não escolha — a mesma forma de raciocinar que a tela
+estreita usa para a medida de linha. As dezesseis telas foram trocadas e o conteúdo do desktop
+subiu 8px em cada uma.
+
+**O sublinhado sai da tela e entra na peça.** Ele era um retângulo solto, posicionado à mão em
+cada tela — dezesseis oportunidades de errar a posição. Agora é variante: `atual` com três
+valores. E a variante carrega a regra que antes dependia de alguém lembrar: **em tela estreita,
+`atual=quem-sou-eu` sublinha "Menu"**, porque é lá que essa página mora.
+
+**Um resto encontrado na conferência.** Depois da troca, a caixa de contato no desktop ficou a
+**13** do botão em vez de 12 — sobra de o botão ter mudado de altura quando o traço foi
+corrigido na decisão 074, somada ao deslocamento de 8. Um pixel, invisível olhando, achado
+comparando. Corrigido, e a medição foi reexportada para a checagem 6.
+
+**O que este componente encerra.** Era a última peça montada à mão em toda tela. Com ela,
+barra, card, trilha, faixa e sobreposição — tudo que se repete entre telas — é instância.

@@ -13,6 +13,9 @@ figma:
 
 # Contato na barra
 
+> **A barra tem 64 de altura nas duas larguras**, e o respiro é consequência disso, não
+> escolha. Era 72 no desktop sem razão escrita, com o mesmo conteúdo dos dois lados.
+>
 > **A barra é uniforme.** Todos os seus itens — Trabalhos, Quem sou eu, Contato e o
 > controle de tema — usam o mesmo peso e a mesma cor. Nenhum recebe borda, fundo ou
 > destaque. Os itens de navegação são do mesmo nível e **não se diferenciam por peso nem
@@ -98,6 +101,7 @@ vista, mesmo que nada abra, a pessoa copia.
 | atalho do LinkedIn | dentro de `152:42` | — |
 | botão "Falar comigo" | `146:63`, `148:203` | não se aplica |
 | menu aberto · estreita | `154:42` | não se aplica |
+| barra fixa | componente, 6 variantes | não se aplica |
 
 ## Comportamento
 
