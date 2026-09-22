@@ -90,6 +90,19 @@ etapa, como evidência, não como declaração à parte.
   uma linha só faz uma etiqueta, não um respiro.
 - **Não usar em lista.** Lista já tem ritmo próprio; o fundo compete com ele.
 
+### Os três do case de Reembolso
+
+| Capítulo | Parágrafo | Quanto do capítulo |
+|---|---|---|
+| 1 · Introdução | nenhum — tem um parágrafo só, e colorir seria colorir o capítulo | — |
+| 2 · Diagnóstico | *"Percebi que muitas das etapas mais pesadas…"* | 33% |
+| 3 · Novo fluxo | *"Separei o que acontece uma vez na vida…"* | 14% |
+| 4 · Wireframes e interface | *"Então reconstruí, o mais fielmente possível…"* | 25% |
+| 5 · Resultados | nenhum — só tem listas | — |
+
+Três em cinco capítulos, e espaçados: 2, 3, 4. O respiro se distribui pela leitura em vez de
+se concentrar num ponto.
+
 ## Tabelas dentro do case
 
 - **Tabela ocupa a largura inteira do conteúdo, não a coluna de leitura.** A regra da medida

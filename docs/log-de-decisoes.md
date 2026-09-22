@@ -2872,3 +2872,27 @@ definições e reescrita no contrato do case, agora **começando pelo para quê*
 quê* é ambígua mesmo quando parece precisa — e a ambiguidade só aparece quando alguém a
 executa. **Escrever a razão junto não é enfeite: é o que torna a regra verificável por quem
 não estava lá.**
+
+## 097 · Os três parágrafos do case de Reembolso que ganham bloco
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#conteudo`
+
+**Decisão.** Três blocos em cinco capítulos, nos parágrafos mais longos de cada um:
+*"Percebi que muitas das etapas mais pesadas…"* (8 linhas), *"Separei o que acontece uma vez
+na vida…"* (5) e *"Então reconstruí, o mais fielmente possível…"* (7).
+
+**Dois capítulos ficam sem**, e por razões diferentes: a **Introdução** tem um parágrafo só, e
+colorir seria colorir o capítulo inteiro — deixaria de ser pontuação. **Resultados** só tem
+listas, e a regra proíbe.
+
+**A proporção se mantém entre as larguras** — 33%, 14% e 25% do capítulo no desktop; 32%, 16%
+e 25% no estreito. O parágrafo cresce no estreito, mas o capítulo também.
+
+**Um efeito colateral que fica aberto.** O bloco tem respiro lateral, então **o texto dentro
+dele é mais estreito que a prosa em volta**: no estreito são 279px contra 327, o que dá cerca
+de 33 caracteres contra 38. A medida da tela estreita já é consequência da margem e anda perto
+do piso; dentro do bloco ela cai abaixo. **Um respiro que aperta a linha é contraditório.**
+
+A saída seria o bloco **sangrar até as bordas da tela** no estreito — 375 de largura com
+respiro de 24 —, o que faria o texto dentro dele ter exatamente a largura da prosa. Fica
+anotado como P53: muda a estrutura da coluna e é decisão dela.

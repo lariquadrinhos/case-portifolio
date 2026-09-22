@@ -62,6 +62,17 @@ barra, que continua clara e tocável.
 Link não usa a cor de estado: ela é o que distingue o sublinhado de página atual do sublinhado
 de link, que têm a mesma forma.
 
+### P53 · O bloco de destaque sangra até a borda na tela estreita?
+O bloco tem respiro lateral de 24, então o texto dentro dele fica **mais estreito que a prosa
+em volta**: 279px contra 327, cerca de 33 caracteres contra 38. Na tela estreita a medida já é
+consequência da margem e anda perto do piso — dentro do bloco ela cai abaixo. **Um respiro que
+aperta a linha é contraditório.**
+
+**Opções:** o bloco sangra até as bordas da tela, 375 de largura, e o texto dentro fica com a
+mesma largura da prosa · o respiro lateral cai para 0 no estreito, mantendo o bloco na coluna ·
+aceita-se a linha mais curta, porque o bloco é pausa e não leitura contínua.
+**Momento:** antes de fechar o case. Não bloqueia.
+
 ### P43 · A coluna de mídia comporta captura de tela de desktop?
 A grade nova dá **411px** à mídia de prova. As definições dizem que o case de Finanças mostra
 telas de desktop largas e que elas **são a prova visual do trabalho** — reduzidas demais,
