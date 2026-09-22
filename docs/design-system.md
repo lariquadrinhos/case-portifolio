@@ -79,6 +79,11 @@ merece*, é *para onde isso leva*:
 | Palavra sublinhada | vai para fora do site | currículo, LinkedIn, e-mail, repositório |
 | Palavra simples | outra página daqui | barra, menu, saídas da página de erro |
 
+**Link não usa a cor de estado.** O sublinhado da página atual e o sublinhado de um link são
+a mesma forma — traço de 2px sob a palavra — e hoje só a cor os separa: roxo num, cor de texto
+no outro. Pintar links de roxo colapsaria a única distinção entre *onde estou* e *isto sai
+daqui*. A cor de estado fica para a posição do leitor; a forma já diz o destino.
+
 **Alvo nunca abaixo de 44px.** Vale para toda linha de lista, toda opção, todo botão. A
 checagem 6 cobra nas sobreposições.
 

@@ -53,6 +53,8 @@ etapa, como evidência, não como declaração à parte.
   Ver decisão 042.
 - **Em tela estreita a mídia desce para baixo do texto**, em vez de ficar ao lado: a largura
   não comporta duas faixas. A regra da mídia ao lado vale onde há grade para ela.
+- **O link usa a cor do texto, não a de estado.** O sublinhado dele e o sublinhado da página
+  atual na barra têm a mesma forma; a cor é o que os separa. Ver decisão 088.
 - **Saída para fora do site é link, não botão.** Botão promete ação dentro do site; palavra
   sublinhada promete ir embora. O rótulo avisa que abre em nova aba.
 - Cada link externo vem **precedido de um convite** que diz o que a pessoa vai encontrar lá.

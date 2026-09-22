@@ -58,14 +58,9 @@ do case. O marcador ativo veste a cor do case.
 O gatilho não muda de aparência, mas declara o estado na marcação. E o véu passou a parar na
 barra, que continua clara e tocável.
 
-### P51 · Link usa a cor de estado?
-A página *Sistema visual* lista *link* entre os usos da cor de estado. Hoje todo link do site
-é palavra sublinhada em `text/primary`, e a decisão 055 diz que **a forma promete o destino** —
-o sublinhado já faz esse trabalho.
-
-Pintar os links de roxo acrescentaria uma segunda marca para a mesma informação. Pode ser
-reforço útil, ou ruído.
-**Momento:** antes do visual design. Não bloqueia.
+### ~~P51~~ · Resolvida pela decisão 088
+Link não usa a cor de estado: ela é o que distingue o sublinhado de página atual do sublinhado
+de link, que têm a mesma forma.
 
 ### P43 · A coluna de mídia comporta captura de tela de desktop?
 A grade nova dá **411px** à mídia de prova. As definições dizem que o case de Finanças mostra

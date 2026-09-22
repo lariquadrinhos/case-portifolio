@@ -2586,3 +2586,31 @@ abaixo da barra.**
 foram montadas sobre o case de Reembolso e herdaram a faixa do case de Finanças —
 *"Descoberta · 2 de 6"* onde deveria estar *"Diagnóstico · 2 de 5"*, e na cor errada. É a
 segunda vez que uma tela construída a partir de outra carrega o conteúdo da origem.
+
+## 088 · Link não usa a cor de estado, porque ela é o que o distingue
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#restricao`
+
+**Resolve a P51**, aberta porque a página *Sistema visual* lista *link* entre os usos da cor
+de estado.
+
+**A conferência decidiu.** Os dois sublinhados do site têm **a mesma forma** — traço de 2px
+sob a palavra — e são separados **só pela cor**:
+
+| | forma | cor |
+|---|---|---|
+| página atual, na barra | 2px sob a palavra | roxo, `accent/estado/strong` |
+| link que sai do site | 2px sob a palavra | cor do texto |
+
+**Pintar links de roxo colapsaria a única distinção entre *onde estou* e *isto sai daqui*.** A
+cor de estado fica para a posição do leitor; a forma já diz o destino, que é o que a decisão
+055 estabeleceu.
+
+**Sobre a frase da página dela.** *"Estado (link, foco, item ativo)"* foi escrita antes de o
+vocabulário de formas existir — a decisão 055 é posterior e mais específica. Quando duas
+regras do projeto discordam, vale a que foi escrita sabendo da outra.
+
+**Um defeito achado no caminho.** Os oito links e os quatro riscos de sublinhado usavam
+`#2E2E2E`, **que não existe na paleta** — `text/primary` é `#221F20`. Nenhum estava vinculado
+a variável, então nenhum respondia ao tema. Catorze correções. É a terceira peça hoje a
+aparecer com cor fora da paleta escrita à mão: antes foram o card e o marca-texto.
