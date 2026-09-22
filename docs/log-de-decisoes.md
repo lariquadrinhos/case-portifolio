@@ -3224,3 +3224,33 @@ de já ter provado é insegurança, não generosidade. A página termina leve.
 
 **Consequência.** Cinco lugares atualizados, e o marcador de falta saiu de três deles: o texto
 deixou de faltar.
+
+## 110 · O bloco de provas: repositório, Figma e, onde existe, protótipo
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#escopo`
+
+**Gatilho.** Larissa: *"vamo pensar no texto do convite ao repositório, também vai entrar link
+pro figma, acha uma boa ideia colocar o figma?"*
+
+**Sobre o Figma: sim, e o motivo é do próprio case.** Um capítulo do case de Finanças se chama
+**"O Figma era metade da entrega"**. Linkar o repositório e não o arquivo faz o case afirmar
+uma coisa e mostrar a prova de outra. **Afirmação com link é evidência; sem link é alegação.**
+
+**Um buraco achado no caminho.** Os dois cases tinham **exatamente o mesmo bloco**, com só o
+link do repositório — mas a decisão 047 já dizia *"protótipo só onde existe: Reembolso tem"*,
+e o próprio texto do Reembolso promete *"43 telas alcançáveis, 145 ligações, zero becos sem
+saída"*. **O link do protótipo nunca tinha sido desenhado.** O bloco foi clonado de um case
+para o outro e ninguém conferiu o que cada um prometia.
+
+**Decisão.** O bloco vira **"as provas do case"**, sob o convite *"Está tudo aberto."* Cada
+prova traz uma linha dizendo o que há lá e o link. Finanças tem duas; Reembolso, três.
+
+**Por que o convite mudou.** *"O processo inteiro está no repositório, decisão por decisão"*
+falava de uma prova só. Com duas ou três, o convite precisa cobrir todas — e
+*"Está tudo aberto"* é também uma afirmação incomum: a maioria dos portfólios mostra resultado
+e esconde arquivo.
+
+**Um risco registrado, que não é motivo para não linkar.** Quem abre um arquivo do Figma vê
+camadas, nomes, sobras, páginas de rascunho. **Vale abrir os dois arquivos antes de publicar e
+conferir se eles sustentam o que o case afirma sobre eles** — o link transforma o arquivo em
+parte do argumento.

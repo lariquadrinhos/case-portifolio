@@ -58,9 +58,22 @@ etapa, como evidência, não como declaração à parte.
 - **Saída para fora do site é link, não botão.** Botão promete ação dentro do site; palavra
   sublinhada promete ir embora. O botão do fim do case é **preenchido**, como o da home — o
   site não tem botão secundário, então não há contorno marcando hierarquia. O rótulo avisa que abre em nova aba.
-- Cada link externo vem **precedido de um convite** que diz o que a pessoa vai encontrar lá.
-- **Protótipo só onde existe.** Reembolso tem; Finanças não tem e não terá — nele o link
-  verificável é o repositório.
+- Cada link externo vem **precedido de uma linha que diz o que a pessoa vai encontrar lá**.
+- **O bloco de provas fecha o case**, sob o convite *"Está tudo aberto."* Ele reúne tudo que
+  pode ser conferido, e cada case tem o seu conjunto:
+
+| Case | Provas |
+|---|---|
+| Finanças | repositório · arquivo do Figma |
+| Reembolso | repositório · arquivo do Figma · protótipo |
+
+- **O Figma entra porque o case afirma coisas sobre ele.** Um capítulo do case de Finanças se
+  chama *"O Figma era metade da entrega"*; linkar só o repositório faria o case afirmar uma
+  coisa e mostrar a prova de outra. **Afirmação com link é evidência; sem link é alegação.**
+- **Protótipo só onde existe.** Reembolso tem — 43 telas alcançáveis, 145 ligações. Finanças
+  não tem e não terá.
+- **Os dois cases não têm o mesmo número de provas, e isso é honesto:** cada um mostra o que
+  de fato produziu.
 - Ao fim da página vêm o card do próximo case e o convite ao contato.
 - A barra marca **Trabalhos** como seção, porque um case pertence a Trabalhos.
 
