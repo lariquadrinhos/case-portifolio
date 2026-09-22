@@ -30,7 +30,7 @@ existir.
 
 ### O anel de foco, que vale para todos
 
-Demonstrado em `155:42`.
+Demonstrado no quadro **05 · Espaço, forma e foco** da página *Sistema visual*.
 
 - **Anel de 2px, afastado 2px do elemento, seguindo a forma dele** — canto arredondado no
   botão, canto do card no card, caixa do texto no link.

@@ -43,8 +43,7 @@ Texto aprovado e escrito no contrato.
 ### P48 · O atalho de salto não existe em nenhum contrato
 Um case tem 7.000px e toda página tem barra fixa. Sem um "Pular para o conteúdo", quem
 navega por teclado atravessa a barra inteira em cada página antes de chegar ao texto. Ele é
-um elemento que **só existe enquanto tem foco** — invisível para quem usa o rato. Está
-desenhado como proposta em `155:42`.
+um elemento que **só existe enquanto tem foco** — invisível para quem usa o rato. Está desenhado como proposta no quadro 05 da página *Sistema visual*.
 **Momento:** antes de publicar.
 
 ### P49 · Qual das cinco cores é o acento de sistema

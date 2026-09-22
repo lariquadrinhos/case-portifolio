@@ -2273,3 +2273,30 @@ quando as seções viviam numa página branca; sobre o creme da página dela, ap
 retângulos brancos no meio do conteúdo. E os cabeçalhos ficaram espremidos numa coluna de
 100px. Nenhum dos dois é visível sem olhar — **mudar de contexto revela o que estava apoiado
 no contexto antigo.**
+
+## 078 · A amostra de foco não explicava foco, e a demonstração morava no lugar errado
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** componentes · `#correcao`
+
+**Gatilho.** Larissa, apontando para a amostra: *"o que é esse foco?"*
+
+**A pergunta era o defeito.** A amostra mostrava um quadrado escrito "Alvo com foco" com um
+anel em volta, ao lado de dois nomes de variável e de uma frase — *"o afastamento é o que faz
+uma cor bastar por tema"* — que é uma conclusão sem a premissa. Nada ali dizia **o que foco
+é**, nem **quem precisa dele**. Um espécime que só é legível para quem já sabe não é
+espécime; é lembrete.
+
+**Refeito.** Os dois estados lado a lado — em repouso e com foco —, porque a diferença é o
+conteúdo da amostra e não dava para vê-la com um estado só. E uma frase em português antes das
+medidas: quem navega pelo teclado precisa ver em que elemento está a cada Tab; quem usa rato
+nunca vê o anel.
+
+**E a demonstração completa estava na página errada.** O quadro com o anel em cada tipo de
+alvo — item da barra, link, botão, opção, card inteiro, região que rola, atalho de salto —
+vivia na página *Wireframe*, entre as telas do site. É documento de sistema, não tela. Entrou
+no quadro 05, que passou a se chamar **05 · Espaço, forma e foco**.
+
+**O que isso continua mostrando.** É a terceira vez hoje que algo estava certo e no lugar
+errado. A decisão 077 juntou duas páginas porque informação repetida diverge; esta move uma
+peça porque **documento guardado junto do trabalho some dentro do trabalho** — ninguém procura
+a definição do anel de foco no meio das cinco telas.

@@ -14,7 +14,7 @@ tipografia, e informação repetida diverge. **Um lugar só é impossível de di
 | 02 · Acentos, tema claro | as cinco cores de case, com contraste de cada par |
 | 03 · Acentos, tema escuro | os mesmos cinco papéis, com valores próprios |
 | 04 · Tipografia | os oito níveis e o que cada um faz |
-| 05 · Espaço e forma | a escala, os cantos, o traço, o foco |
+| 05 · Espaço, forma e foco | a escala, os cantos, o traço, e o anel de foco em cada tipo de alvo |
 | 06 · Grade | 12 colunas no desktop, 1 na tela estreita |
 | 07 · Componentes | as dez peças, como componentes de verdade |
 | 08–09 · Demonstrações | hero e leitura de case, com as peças em uso |
@@ -82,9 +82,14 @@ merece*, é *para onde isso leva*:
 **Alvo nunca abaixo de 44px.** Vale para toda linha de lista, toda opção, todo botão. A
 checagem 6 cobra nas sobreposições.
 
-**Foco visível em tudo que recebe foco**, inclusive região que rola. O anel tem afastamento —
-e é o afastamento que faz uma cor bastar por tema, porque o anel cai sempre sobre a superfície
-de fundo, nunca sobre a cor do elemento.
+**Foco visível em tudo que recebe foco**, inclusive região que rola. Foco é o que mostra em
+que elemento a pessoa está quando navega pelo teclado em vez do rato — sem ele, quem aperta
+Tab navega às cegas. Aparece só na navegação por teclado.
+
+O anel tem **afastamento**, e ele não é enfeite: é o que garante que o anel caia sempre sobre
+a superfície de fundo, nunca sobre a cor do próprio elemento — e é por isso que **uma cor de
+anel basta por tema**, sem precisar de dois tons. O quadro 05 mostra os dois estados lado a
+lado e o anel em cada tipo de alvo que o site tem.
 
 **Medida de linha entre 65 e 75 caracteres no texto corrido, onde houver largura.** Blocos
 curtos em grade podem ficar abaixo, com piso por volta de 45. Tabela não obedece: é dado, e o
