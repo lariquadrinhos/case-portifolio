@@ -2552,3 +2552,37 @@ inteira, não diz nada.
 zero, com as dezesseis telas apontando para o antigo. **Elas reapontaram sozinhas**, porque o
 Figma religa instâncias pelo nome da variante. Vale saber: funciona enquanto os nomes forem
 os mesmos — mudar um nome de variante, não.
+
+## 087 · O gatilho não pinta que abriu — declara
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** moldura · `#restricao`
+
+**Resolve a P52.**
+
+**Decisão.** Contato, Tema e Menu **não mudam de aparência** enquanto a caixa está aberta.
+Mas **declaram o estado na marcação**, e o leitor de tela anuncia.
+
+**Por quê, visualmente não.** A caixa aberta já é o sinal, e ela se identifica sozinha: o
+conteúdo do menu diz "Quem sou eu / Tema claro / Tema escuro", o do contato mostra um e-mail.
+No desktop ela ainda ancora logo abaixo da palavra. Pintar o gatilho acrescentaria uma segunda
+marca para a mesma informação — e a barra ser uniforme foi decisão tomada e paga na 030, que
+já aceitou como custo que *"nada na barra indica que o contato se comporta diferente"*.
+
+**Na tela estreita nem apareceria.** Lá a caixa ocupa a largura inteira e o véu cobre o que
+está atrás — um destaque no gatilho estaria sob o véu, ou obrigaria o gatilho a furar o véu
+para ser visto, o que é muita construção para pouca informação.
+
+**Por que na marcação sim.** Quem usa leitor de tela não tem a caixa como pista visual, e o
+foco volta para o gatilho quando a caixa fecha — sem o estado declarado, a pessoa não sabe se
+acionar de novo abre ou fecha. É o mesmo tipo de regra que o sublinhado da página atual já
+segue: *"é anunciado como página atual por leitor de tela"*.
+
+**E a pergunta descobriu outra coisa.** O véu cobria a barra inteira. Isso diz *"isto não está
+disponível"* sobre a única coisa que continua disponível — a barra segue tocável com a caixa
+aberta, e tocar nela é como se troca de destino sem fechar antes. **O véu passou a começar
+abaixo da barra.**
+
+**Dois erros de conteúdo achados junto.** As duas telas de sobreposição em largura estreita
+foram montadas sobre o case de Reembolso e herdaram a faixa do case de Finanças —
+*"Descoberta · 2 de 6"* onde deveria estar *"Diagnóstico · 2 de 5"*, e na cor errada. É a
+segunda vez que uma tela construída a partir de outra carrega o conteúdo da origem.

@@ -54,18 +54,9 @@ Roxo para estado, verde para hero, rosa para o terceiro case. Criadas `accent/es
 Sem conflito: a página *Sistema visual* nomeia "marcador da trilha" entre os usos do tom forte
 do case. O marcador ativo veste a cor do case.
 
-### P52 · Um gatilho mostra que está aberto?
-Contato, Tema e Menu abrem sobreposições. **Nenhum dos três muda de aparência enquanto a sua
-caixa está aberta** — com a caixa de tema aberta, "Tema" é idêntico a "Contato".
-
-No desktop a caixa ancora logo abaixo do gatilho, então a proximidade diz de onde ela veio. Na
-tela estreita a caixa ocupa a largura inteira, e a proximidade não diz nada. E o contato tem
-ainda um gatilho fora da barra — o botão no fim do case.
-
-**A tensão:** a decisão 030 diz que a barra é uniforme e nenhum item recebe destaque. Mas
-uniformidade é sobre hierarquia em repouso; estado aberto é retorno de ação, não hierarquia.
-As duas coisas podem conviver — ou não, e aí a proximidade basta.
-**Momento:** antes do visual design. Não bloqueia.
+### ~~P52~~ · Resolvida pela decisão 087
+O gatilho não muda de aparência, mas declara o estado na marcação. E o véu passou a parar na
+barra, que continua clara e tocável.
 
 ### P51 · Link usa a cor de estado?
 A página *Sistema visual* lista *link* entre os usos da cor de estado. Hoje todo link do site

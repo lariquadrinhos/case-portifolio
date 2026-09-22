@@ -166,6 +166,18 @@ Funcionalidade: Contato na barra
     E a página atrás escurece
     E tocar no escurecido recolhe a caixa
 
+  Cenário: O gatilho declara que abriu
+    Dado que o leitor acionou um gatilho da barra
+    Quando a caixa aparece
+    Então o gatilho não muda de aparência
+    E é declarado na marcação como aberto
+    E o leitor de tela anuncia esse estado
+
+  Cenário: A barra continua clara com a caixa aberta
+    Dado que a tela é estreita e a caixa está aberta
+    Então o véu cobre a página abaixo da barra
+    E a barra continua sem escurecer
+
   Cenário: Leitor desiste
     Dado que o contato está revelado
     Quando o leitor aciona a tecla Esc ou toca fora
