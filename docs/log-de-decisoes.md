@@ -3143,3 +3143,28 @@ para ver a tela pintada e julgar.
 **Uma coisa que eu tinha errado antes.** Na primeira versão mantive a medida de leitura dentro
 da banda, e declarei a escolha. Estava errado no julgamento mas certo no método: **a decisão
 não era minha, e deixá-la visível foi o que permitiu que ela fosse corrigida numa frase.**
+
+## 107 · A linha do extra vai do texto do case até a margem
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#correcao`
+
+**Corrige a decisão 106**, que tinha esticado a linha de margem a margem.
+
+**Gatilho.** Larissa: *"ficou ruim largo assim, faz começando do mesmo lugar do texto do case
+e indo até o final da tela."*
+
+**Decisão.** O texto começa em **297** — exatamente onde começa o texto dos capítulos — e vai
+até a margem direita. São **1063px, 122 caracteres por linha**, contra os 1280 e 148 da versão
+anterior.
+
+**A largura não é arbitrária, e isso só ficou claro depois de medir.** Mil e sessenta e três é
+**exatamente a largura de um capítulo**: coluna de leitura mais calha mais coluna de mídia. O
+extra ocupa o espaço inteiro que um capítulo ocupa, com texto no lugar de texto-e-prova. Ele
+continua alinhado com o que veio antes e, ainda assim, muda de forma.
+
+**O que a versão de margem a margem perdia.** Começando em 80, o texto do extra não se
+alinhava com nada da página — e a banda deixava de ser "o capítulo que virou outra coisa" para
+virar um bloco solto de outra página.
+
+**A exceção à medida continua, menor.** Cento e vinte e dois contra o teto de 75. Segue sendo
+a única do site, e a razão é a mesma: ali a largura é o que diz que aquilo não é o case.

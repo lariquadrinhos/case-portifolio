@@ -67,7 +67,7 @@ Em tela estreita o bloco sangra até as bordas, e o texto dentro fica com a mesm
 prosa. No desktop ele fica na coluna, com 66 caracteres, dentro da faixa.
 
 ### P54 · A linha de 148 caracteres precisa de mais entrelinha?
-A banda do extra tem 148 caracteres por linha, o dobro do teto da regra. Linha longa cansa
+A banda do extra tem 122 caracteres por linha, contra o teto de 75 da regra. Linha longa cansa
 menos com mais entrelinha: o olho precisa achar o começo da linha seguinte, e quanto mais
 longa a linha, mais fácil é pular ou repetir uma.
 
@@ -75,7 +75,8 @@ Hoje ela usa `corpo`, 18/30. A escala não tem um nível de 18 com entrelinha ma
 seria acrescentar token, e mexer na escala por causa de um lugar só pode não valer.
 
 **Opções:** entrelinha maior só ali, fora da escala e com a razão escrita · usar `abertura`
-(21/34), que tem mais entrelinha mas também corpo maior, e aí a linha vai a ~127 caracteres ·
+(21/34), que tem mais entrelinha mas também corpo maior, e aí a linha encurta para cerca de
+105 caracteres ·
 deixar como está e ver na tela pintada.
 **Momento:** antes do visual design. Não bloqueia.
 
