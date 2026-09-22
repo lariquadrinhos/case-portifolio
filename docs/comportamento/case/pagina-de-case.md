@@ -81,26 +81,14 @@ etapa, como evidência, não como declaração à parte.
 
 ## O bloco de destaque
 
-- **Uma frase por capítulo ganha fundo pálido da cor do case**, no máximo. Bloco colorido é
-  pontuação, não estilo de parágrafo: texto corrido inteiro sobre cor cansa e anula o efeito.
-- **Zero é permitido.** Um capítulo sem frase que o sustente não ganha bloco por obrigação.
-- **A frase escolhida é a que diz o que o capítulo prova**, não a que o narra — e **nunca a
-  que repete o título do capítulo**, porque aí o bloco diria duas vezes a mesma coisa.
-- As outras frases em peso forte do capítulo continuam em peso forte. O bloco é o degrau
-  acima delas, não o substituto.
-
-### As escolhas do case de Reembolso
-
-| Capítulo | Frase com bloco |
-|---|---|
-| 1 · Introdução | nenhuma — o capítulo não tem frase forte |
-| 2 · Diagnóstico | *"Transformei 'acho que tá ruim' em diagnóstico."* |
-| 3 · Novo fluxo | *"Cinco princípios, e um filtro para cada decisão."* |
-| 4 · Wireframes e interface | *"Um fluxo no papel é uma hipótese. Desenhar cada tela é como se testa."* |
-| 5 · Resultados | *"O resultado é um fluxo redesenhado…"* |
-
-No capítulo 2 a escolha não foi a frase de abertura: ela é *"Antes de qualquer análise houve
-observação"*, e o título do capítulo é *"Olhar antes de opinar"* — o bloco repetiria o título.
+- **É um parágrafo inteiro sobre fundo pálido da cor do case**, e serve para **dar respiro
+  numa leitura longa**. Não marca importância: marca ritmo. Uma por capítulo, no máximo, e
+  zero é permitido.
+- **Mesmo corpo e mesmo peso da prosa em volta.** Se o texto mudasse de tamanho ou de peso, o
+  bloco passaria a dizer "isto é mais importante", que é outra coisa.
+- **Não usar nas frases curtas em peso forte.** Elas já estão marcadas, e pôr fundo atrás de
+  uma linha só faz uma etiqueta, não um respiro.
+- **Não usar em lista.** Lista já tem ritmo próprio; o fundo compete com ele.
 
 ## Tabelas dentro do case
 

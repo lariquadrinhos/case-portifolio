@@ -2840,3 +2840,35 @@ que é mais surpreendente nele** — e o achado sobre o sistema já tem subtítu
 **Consequência.** Oito instâncias, quatro por largura. As duas telas do case foram
 reempilhadas: o desktop cresceu 279px e a estreita 312. As outras frases em peso forte
 continuam em peso forte — o bloco é o degrau acima delas, não o substituto.
+
+## 096 · O bloco de destaque é parágrafo, não frase — e serve ao ritmo, não à importância
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#correcao`
+
+**Reverte a aplicação da decisão 095.**
+
+**Gatilho.** Larissa, depois de ver o resultado: *"não sei por que escrevi na regra 'frase'. o
+que eu queria destacar são parágrafos, pra dar um respiro na leitura."*
+
+**O que eu tinha feito.** Pus fundo pálido atrás de **frases curtas em peso forte** — uma
+linha cada. Elas já estavam marcadas pelo peso, então o bloco virou etiqueta em cima de
+etiqueta, e não deu respiro nenhum. O texto em volta continuou a mesma parede.
+
+**Por que li errado, e o que faltava para não ler.** As definições diziam *"o fundo pálido
+atrás da frase que sustenta um capítulo"*, e as telas tinham frases curtas em Medium que
+encaixavam perfeitamente em "frase que sustenta". **A regra dizia o quê e não dizia o
+para quê.** *"Dar respiro numa leitura longa"* nunca esteve escrito — e é a única coisa que
+teria desfeito a ambiguidade.
+
+**Decisão.** O bloco é **um parágrafo inteiro**, com **o mesmo corpo e o mesmo peso da prosa
+em volta** — se mudasse de tamanho, diria "isto é mais importante", que é outra coisa. Não
+vai em frase curta nem em lista.
+
+**Consequência.** Os oito blocos saíram e as frases voltaram a peso forte. O componente foi
+refeito: texto em `corpo`, Regular, em `text/primary` sobre o tom pálido. Regra corrigida nas
+definições e reescrita no contrato do case, agora **começando pelo para quê**.
+
+**O que isso ensina sobre as regras deste projeto.** Uma regra que diz o *quê* sem o *para
+quê* é ambígua mesmo quando parece precisa — e a ambiguidade só aparece quando alguém a
+executa. **Escrever a razão junto não é enfeite: é o que torna a regra verificável por quem
+não estava lá.**
