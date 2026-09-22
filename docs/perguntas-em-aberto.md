@@ -50,18 +50,9 @@ um elemento que **só existe enquanto tem foco** — invisível para quem usa o 
 Roxo para estado, verde para hero, rosa para o terceiro case. Criadas `accent/estado/*` e
 `accent/hero/*` como referências.
 
-### P50 · A trilha ativa usa a cor do case ou a de estado?
-O contrato da trilha diz que ela **é do case e carrega a cor dele**. A página *Sistema visual*
-diz que a cor de estado serve a *"link, foco, item ativo"* — e o marcador ativo da trilha é
-item ativo. As duas frases apontam para cores diferentes.
-
-Hoje o marcador ativo está em `text/primary`, que não é nenhuma das duas.
-
-**Opções:** a trilha é exceção declarada, e usa a cor do case — o que exige variantes de cor
-no componente, dobrando as seis atuais · a trilha usa a cor de estado como todo item ativo, e
-a frase "carrega a cor dele" passa a valer só para outros elementos do case · o marcador ativo
-fica neutro e a cor do case aparece só na tira de destaques e no card.
-**Momento:** antes do visual design.
+### ~~P50~~ · Resolvida pela decisão 085
+Sem conflito: a página *Sistema visual* nomeia "marcador da trilha" entre os usos do tom forte
+do case. O marcador ativo veste a cor do case.
 
 ### P51 · Link usa a cor de estado?
 A página *Sistema visual* lista *link* entre os usos da cor de estado. Hoje todo link do site

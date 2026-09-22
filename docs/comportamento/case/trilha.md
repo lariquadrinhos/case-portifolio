@@ -39,6 +39,13 @@ função, não por decoração.
   capítulo**.
 - A etapa ativa se distingue por **marcador maior, peso e cor** — três marcas, porque cor
   sozinha não basta.
+- **A cor do marcador ativo é o tom forte do case, não a cor de estado do site.** A página
+  *Sistema visual* nomeia *"marcador da trilha"* entre os usos do tom forte, e a trilha é do
+  case. O "item ativo" que usa a cor de estado é outro: item da barra, opção de tema.
+- **O traço e os marcadores inativos ficam neutros.** A trilha existe por função, não por
+  decoração — pintar a linha inteira de cor forte a transformaria em ornamento.
+- **A barra da faixa, em tela estreita, usa a mesma cor do marcador ativo.** É a trilha em
+  outra forma, e a cor do case a acompanha.
 - **O traço vive dentro de cada item**, não como linha à parte. Empilhar itens produz linha
   contínua para qualquer número de capítulos, e um case com cinco etapas e outro com seis
   usam a mesma peça. O item tem três posições — primeira, meio, última — porque o traço
@@ -66,9 +73,9 @@ função, não por decoração.
 
 | Nome no cenário | Figma | Storybook |
 |---|---|---|
-| item da trilha | componente, 6 variantes | não se aplica |
+| item da trilha | componente, 9 variantes | não se aplica |
 | trilha montada | exemplo de 5 etapas, quadro 07 | não se aplica |
-| faixa de progresso | componente | não se aplica |
+| faixa de progresso | componente, 2 cores | não se aplica |
 | faixa aberta | exemplo no quadro 07 | não se aplica |
 
 ## Comportamento
@@ -88,6 +95,13 @@ Funcionalidade: Trilha de leitura
     Quando a pessoa rola do começo ao fim
     Então cada etapa fica ativa por pelo menos meia tela de rolagem
     E o marcador nunca volta para uma etapa que já deixou
+
+  Cenário: A trilha veste a cor do case
+    Dado que o leitor está num case
+    Quando a trilha aparece
+    Então o marcador da etapa ativa usa o tom forte daquele case
+    E o traço e os marcadores inativos ficam neutros
+    E dois cases diferentes mostram marcadores de cores diferentes
 
   Cenário: O case tem outro número de etapas
     Dado que um case tem cinco capítulos e outro tem seis

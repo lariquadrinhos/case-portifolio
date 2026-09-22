@@ -2489,3 +2489,35 @@ diz que item ativo usa a cor de estado — as duas frases apontam para cores dif
 o marcador está em `text/primary`, que não é nenhuma. E os **links** (P51): a *Sistema visual*
 lista *link* entre os usos da cor de estado, mas a decisão 055 já dá essa informação pela
 forma — sublinhado promete sair do site. Pintar de roxo pode ser reforço ou ruído, e é dela.
+
+## 085 · A trilha veste a cor do case, e a resposta já estava escrita
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#restricao`
+
+**Resolve a P50**, que eu tinha aberto como conflito entre duas frases.
+
+**Não havia conflito.** O quadro 02 da página *Sistema visual* diz, sobre o tom forte de cada
+case: *"o tom forte é detalhe gráfico — **marcador da trilha**, ícone, linha."* A trilha está
+nomeada ali, explicitamente. O *"item ativo"* que a mesma página lista sob a cor de estado é
+outro: item da barra, opção de tema.
+
+**Eu abri a pergunta por não ter lido a frase inteira** — é a segunda vez hoje. A P49 também
+tinha resposta escrita na mesma página, e também virou pergunta por leitura apressada. O
+documento dela responde mais do que eu estava perguntando.
+
+**Decisão.** O marcador ativo usa `accent/<case>/strong`. Nove variantes: três marcadores —
+inativo, ativo azul, ativo laranja — por três posições. Acrescentar um case acrescenta um
+marcador, não uma trilha inteira.
+
+**O que fica neutro, e por quê.** O traço e os marcadores inativos continuam em `border` e
+`text/tertiary`. A mesma frase lista *"linha"* entre os usos do tom forte, mas pintar uma
+linha vertical de 3.700px em cor forte transformaria a trilha em ornamento — e o contrato dela
+abre dizendo que **existe por função, não por decoração**. Cor forte marca *onde estou*, não
+*onde a trilha passa*.
+
+**A faixa acompanha.** Em tela estreita a barra de progresso usa a mesma cor: é a trilha em
+outra forma.
+
+**Dois erros de conteúdo achados na troca.** A faixa do case de Finanças dizia "2 de 5" e ele
+tem seis etapas. A do Reembolso dizia "Descoberta", que é capítulo do Finanças — herança de a
+tela ter sido construída a partir da outra. Nenhum dos dois apareceria sem trocar a peça.
