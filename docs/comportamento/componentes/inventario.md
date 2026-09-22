@@ -114,6 +114,11 @@ claro depois de conferir as quatro lado a lado.
 - **Véu só na tela estreita** — ali o dedo não tem mira fina e o véu é o alvo grande para
   recolher; no desktop o clique fora já é preciso.
 - Esc ou acionar fora recolhe, e o foco volta para o que a abriu.
+- **A caixa é casca, não recipiente.** Instância do Figma não aceita filho novo, então uma
+  sobreposição com número variável de linhas — a lista de etapas tem cinco num case e seis no
+  outro — é montada copiando a casca e instanciando as linhas. Só a linha é reutilizável de
+  verdade. **É por isso que a checagem 6 precisa existir:** ela é o que mantém as cópias da
+  casca honestas umas com as outras.
 - **A checagem 6 confere as quatro contra `docs/spec/sobreposicoes.json`**, que é exportado do
   Figma. Ela existe porque a peça ainda é quatro cópias: se virar componente de verdade, a
   uniformidade passa a ser imposta e a checagem vira redundante.

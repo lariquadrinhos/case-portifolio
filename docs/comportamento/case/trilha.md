@@ -51,6 +51,16 @@ função, não por decoração.
 - **A faixa nomeia a etapa atual e diz a posição** — "Descoberta · 2 de 6". Sem isso ela
   daria só *quanto falta* e perderia *onde estou*, que é metade da razão de a trilha
   existir. Ver decisão 043.
+- **A barra mede quanto da leitura já passou, não a proporção de etapas** — e isso é
+  deliberado, não descuido. As duas medidas divergem: no case de Reembolso, ao fim do
+  Diagnóstico, a proporção de etapas dá 40% e a rolagem real dá 24%. Numa página de 9.214px,
+  **dezesseis pontos são cerca de 1.500px que a barra estaria prometendo já terem passado.**
+  O texto responde *onde estou*; a barra responde *quanto falta*. Ver decisão 080.
+- **Não iguale as duas.** Fazer a barra acompanhar "2 de 5" deixaria os dois indicadores
+  coerentes entre si e mentirosos sobre o resto da leitura.
+- **Tocar a faixa abre a lista completa**, que é a sobreposição do site: mesma casca, mesmas
+  linhas, mesma forma de fechar. A etapa atual vem marcada com sinal, como a opção em vigor
+  no controle de tema.
 
 ## Peças
 
@@ -59,6 +69,7 @@ função, não por decoração.
 | item da trilha | componente, 6 variantes | não se aplica |
 | trilha montada | exemplo de 5 etapas, quadro 07 | não se aplica |
 | faixa de progresso | componente | não se aplica |
+| faixa aberta | exemplo no quadro 07 | não se aplica |
 
 ## Comportamento
 
@@ -101,6 +112,14 @@ Funcionalidade: Trilha de leitura
     E a faixa nomeia a etapa atual e diz a posição dela no total
     Quando a pessoa toca a faixa
     Então a lista completa de etapas aparece
+    E a etapa atual aparece marcada
+    E a lista fecha por Esc ou toque fora, como as outras sobreposições
+
+  Cenário: A barra e o número medem coisas diferentes
+    Dado que a faixa mostra "2 de 5"
+    Quando dois quintos das etapas já passaram mas só um quarto da leitura
+    Então a barra mostra um quarto
+    E não dois quintos
 
   @lacuna
   Cenário: A trilha e o respeito a movimento reduzido

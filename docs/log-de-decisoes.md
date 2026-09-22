@@ -2336,3 +2336,34 @@ no ponto na última; sem elas sobra um toco de 12px acima da primeira etapa, que
 **Um cenário novo no contrato, verificável:** nenhuma etapa fica ativa por menos de meia tela.
 É a forma escrita do defeito que a simulação encontrou — se alguém mudar a regra de novo, o
 cenário cobra.
+
+## 080 · A barra da faixa mede leitura, não etapas
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#restricao`
+
+**Gatilho.** Larissa pediu regra e componente completo para a faixa de progresso. A faixa
+tinha uma decisão escondida que ninguém tinha tomado: **o que a barrinha mede.**
+
+**O que a medição mostrou.** Proporção de etapas e proporção de leitura divergem. No case de
+Finanças a diferença chega a 8 pontos; no de Reembolso, a **16** — ao fim do Diagnóstico, dois
+quintos das etapas passaram mas só um quarto da leitura. Numa página de 9.214px, dezesseis
+pontos são cerca de **1.500px que a barra estaria prometendo já terem passado**.
+
+**Decisão.** A barra mede **quanto da leitura já passou**. O texto continua dizendo a etapa e
+a posição dela entre as etapas. **As duas medidas são diferentes de propósito:** o texto
+responde *onde estou*, a barra responde *quanto falta* — que são exatamente as duas coisas
+que a decisão 043 disse que a faixa precisa dar.
+
+**A regra que faltava, escrita para o futuro.** *Não iguale as duas.* Fazer a barra acompanhar
+o "2 de 5" deixaria os dois indicadores coerentes entre si — e mentirosos sobre o resto da
+leitura. É o tipo de conserto que parece arrumação.
+
+**O estado aberto, que nunca tinha sido desenhado.** Tocar a faixa abre a lista completa, e
+ela é a sobreposição do site: mesma casca, mesmas linhas, mesma forma de fechar, com a etapa
+atual marcada por sinal — como a opção em vigor no controle de tema.
+
+**Um limite do Figma que virou regra.** Instância não aceita filho novo. Uma sobreposição com
+número variável de linhas — cinco etapas num case, seis no outro — não pode ser instância da
+caixa: monta-se copiando a casca e instanciando as linhas. **Só a linha é reutilizável de
+verdade**, e é por isso que a checagem 6 precisa continuar existindo: ela é o que mantém as
+cópias da casca honestas umas com as outras.
