@@ -127,6 +127,18 @@ compara as sobreposições entre si — e ela compara um export, não o arquivo.
 
 ---
 
+## Uma armadilha do Figma, anotada porque já custou caro
+
+**`resize(largura, altura)` desliga o auto-ajuste do texto.** Um texto com `textAutoResize`
+em `HEIGHT` que recebe `resize(760, 10)` passa a ter 10px de altura fixa e mostra só a
+primeira linha — o texto continua lá, invisível. A ordem certa é redimensionar **e depois**
+ligar o auto-ajuste, ou usar `layoutSizingHorizontal = 'FILL'` e deixar o auto-layout medir.
+
+Isso já aconteceu três vezes neste projeto: na frase de abertura do case de Reembolso, em
+catorze textos da mesma tela, e em **vinte e nove** textos desta página. Nas três vezes a
+estrutura estava certa e o conteúdo estava escondido — nenhuma checagem pega, porque o nó
+existe e cabe no pai.
+
 ## Como mexer nele
 
 1. **Valor muda na variável**, nunca na peça. Se uma peça tem cor ou medida escrita na mão, é

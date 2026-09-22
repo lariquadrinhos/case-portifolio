@@ -2180,3 +2180,30 @@ lateral — ela existe nos wireframes desde que o case estreito foi desenhado.
 tela diferente. A checagem 6 só olha sobreposições. O olho não vê meio pixel de traço. **Só
 apareceu porque componentizar obriga a responder "qual é a medida certa?" uma vez só** — e aí
 as duas respostas diferentes ficam no mesmo lugar, impossíveis de ignorar.
+
+## 075 · Vinte e nove textos escondidos na página do sistema
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** instrumentacao · `#correcao`
+
+**Gatilho.** Larissa: *"parece que os frames estão com tamanho quebrado, a informação dentro
+deles não está visível."* Estavam, e era.
+
+**O que era.** `resize(largura, altura)` **desliga o auto-ajuste do texto**. Vinte e nove
+textos da página — todos os subtítulos de seção, todas as amostras de tipografia, todas as
+descrições de componente — tinham 10px de altura fixa e mostravam só a primeira linha. O
+texto estava lá, invisível.
+
+**Por que passou pela minha própria conferência.** Eu tinha rodado uma verificação geométrica
+— filho que passa da borda do pai — e ela deu **zero**. Não passava: um texto de 10px cabe
+folgadamente em qualquer frame. **A checagem estava certa e a pergunta estava errada.** O
+defeito não é conteúdo que transborda, é conteúdo que encolheu.
+
+**A terceira vez.** Aconteceu na frase de abertura do case de Reembolso, depois em catorze
+textos da mesma tela, agora em vinte e nove. Sempre o mesmo mecanismo, sempre encontrado
+olhando e não medindo. Ficou anotado em `docs/design-system.md`, com a ordem correta das
+chamadas.
+
+**Consequência.** Os vinte e nove religados. As seções cresceram e foram reempilhadas com
+folga constante. A amostra de `display` no desktop foi encurtada para caber em uma linha — um
+espécime de tipo que quebra em três linhas não mostra o nível, mostra o parágrafo. Varredura
+final: zero textos presos na página do sistema e zero nos wireframes.
