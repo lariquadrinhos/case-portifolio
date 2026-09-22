@@ -67,7 +67,7 @@ desenhado.
 | 9 | tabela de comparação | case de Reembolso, nas duas larguras | **sim**, `173:49` |
 | 10 | sobreposição | contato, menu e tema — 4 telas, as duas larguras | **sim**, `173:13` e `173:19` |
 | 11 | item da barra | dentro da barra, 27 ocorrências | **sim** |
-| 12 | bloco de destaque | previsto para os cases; **nenhuma tela usa ainda** | **sim**, 4 variantes |
+| 12 | bloco de destaque | case de Reembolso, 4 por largura | **sim**, 4 variantes |
 
 ### O que mudou em relação aos sete previstos
 
@@ -169,9 +169,9 @@ duas cores por duas larguras.
   corrido inteiro sobre cor cansa e anula o efeito.
 - Usa o **tom pálido** do case, que é o papel de superfície — recebe texto escuro e não disputa
   com a prosa em volta.
-- **Nenhuma tela usa ainda.** Hoje as frases que sustentam capítulos são marcadas por **peso**,
-  em Medium. Trocar peso por bloco é decisão de conteúdo, porque no case de Reembolso três
-  capítulos têm mais de uma frase forte e a regra permite só uma.
+- **Em uso no case de Reembolso**, quatro capítulos de cinco. O de Finanças ainda não usa.
+- **Qual frase recebe o bloco é decisão de conteúdo**, não de layout: é escolher qual frase
+  sustenta o capítulo. Ver as escolhas em `case/pagina-de-case.md`.
 - **Ele caiu da lista quando a P30 foi resolvida**, e o motivo provável é colisão de nome: o
   case tem uma "tira de destaques" — as chaves do topo — que é outra peça. Nomes parecidos
   para coisas diferentes fazem uma passar pela outra.

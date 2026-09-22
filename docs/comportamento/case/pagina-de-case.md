@@ -79,6 +79,29 @@ etapa, como evidência, não como declaração à parte.
 | página do segundo case · estreita | `148:37` | não se aplica |
 | tabela de comparação | dentro de `144:32` | não se aplica |
 
+## O bloco de destaque
+
+- **Uma frase por capítulo ganha fundo pálido da cor do case**, no máximo. Bloco colorido é
+  pontuação, não estilo de parágrafo: texto corrido inteiro sobre cor cansa e anula o efeito.
+- **Zero é permitido.** Um capítulo sem frase que o sustente não ganha bloco por obrigação.
+- **A frase escolhida é a que diz o que o capítulo prova**, não a que o narra — e **nunca a
+  que repete o título do capítulo**, porque aí o bloco diria duas vezes a mesma coisa.
+- As outras frases em peso forte do capítulo continuam em peso forte. O bloco é o degrau
+  acima delas, não o substituto.
+
+### As escolhas do case de Reembolso
+
+| Capítulo | Frase com bloco |
+|---|---|
+| 1 · Introdução | nenhuma — o capítulo não tem frase forte |
+| 2 · Diagnóstico | *"Transformei 'acho que tá ruim' em diagnóstico."* |
+| 3 · Novo fluxo | *"Cinco princípios, e um filtro para cada decisão."* |
+| 4 · Wireframes e interface | *"Um fluxo no papel é uma hipótese. Desenhar cada tela é como se testa."* |
+| 5 · Resultados | *"O resultado é um fluxo redesenhado…"* |
+
+No capítulo 2 a escolha não foi a frase de abertura: ela é *"Antes de qualquer análise houve
+observação"*, e o título do capítulo é *"Olhar antes de opinar"* — o bloco repetiria o título.
+
 ## Tabelas dentro do case
 
 - **Tabela ocupa a largura inteira do conteúdo, não a coluna de leitura.** A regra da medida

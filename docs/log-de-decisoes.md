@@ -2808,3 +2808,35 @@ capítulos são marcadas por **peso**, em Medium. A contagem:
 No case de Finanças a troca seria direta — uma por capítulo, como a regra pede. **No de
 Reembolso, três capítulos têm mais frases fortes do que a regra permite blocos**, e escolher
 qual delas carrega o bloco é decisão de conteúdo: é escolher qual frase sustenta o capítulo.
+
+## 095 · As quatro frases do case de Reembolso que ganham bloco
+
+**Quando** 2026-09-22 · **Fase** 3 · **Domínio** case · `#conteudo`
+
+**Gatilho.** O componente existia e nenhuma tela usava. Larissa: *"vamos capítulo por capítulo
+no reembolso."*
+
+**As escolhas dela.**
+
+| Capítulo | Frase |
+|---|---|
+| 2 · Diagnóstico | *"Transformei 'acho que tá ruim' em diagnóstico."* |
+| 3 · Novo fluxo | *"Cinco princípios, e um filtro para cada decisão."* |
+| 4 · Wireframes e interface | *"Um fluxo no papel é uma hipótese. Desenhar cada tela é como se testa."* |
+| 5 · Resultados | a única frase forte do capítulo |
+
+O capítulo 1 fica sem bloco: não tem frase forte, e a regra permite zero.
+
+**O critério que as escolhas revelam**, e que virou regra no contrato: **a frase escolhida é a
+que diz o que o capítulo prova, e nunca a que repete o título.** Nos capítulos 3 e 4 ela pegou
+a frase de abertura. No 2, não — a de abertura é *"Antes de qualquer análise houve
+observação"* e o título é *"Olhar antes de opinar"*: o bloco diria duas vezes a mesma coisa.
+
+**Eu tinha argumentado por outras duas.** No capítulo 4 defendi *"O app não segue o sistema da
+própria empresa"*, por ser a descoberta do case inteiro. Ela escolheu a de método. As duas
+leituras são defensáveis; a diferença é que **o bloco marca o que sustenta o capítulo, não o
+que é mais surpreendente nele** — e o achado sobre o sistema já tem subtítulo próprio.
+
+**Consequência.** Oito instâncias, quatro por largura. As duas telas do case foram
+reempilhadas: o desktop cresceu 279px e a estreita 312. As outras frases em peso forte
+continuam em peso forte — o bloco é o degrau acima delas, não o substituto.
