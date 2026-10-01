@@ -6676,3 +6676,36 @@ afastado da borda (decisão 170), que caía dentro dela.
 sangrava na página naquele canto.
 
 **Consequência.** Os números da 199 sobre tamanho e altura valem com esta correção.
+
+---
+
+## 201 · O capítulo 5 do Finanças compara o DRE, a tela mais fiel ao mockup
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** A lacuna do capítulo 5 pedia *"mockup e produto rodando lado a lado"*, para provar *"fiel
+ao que eu tinha desenhado e documentado"*. Ela escolheu a Home, empilhada. Rodado o produto com o
+cenário original do repositório e o relógio em julho de 2026, **a Home não estava igual ao mockup**:
+dez pendências contra cinco (o servidor calcula pela data real) e outro desenho de cartão. A
+Evolução Mensal também divergia (uma barra por mês no Consolidado, contra PF e PJ lado a lado). A
+barra lateral é diferente nas três.
+
+**Decisão.** *"usa o DRE"*, a tela mais fiel: o mockup (`397:2` e `448:26`) e o produto rodando no
+mesmo trecho, do título ao Lucro Líquido, empilhados na largura inteira da coluna. Igual: título,
+seletores, mês e as catorze linhas da cascata, com os mesmos rótulos e sinais. Diferente: os valores
+e o destaque dos subtotais. Legenda curta, por pedido dela: *"O mesmo DRE no mockup e no produto
+rodando."*; as diferenças ficam ditas no texto alternativo.
+
+`financas-5-desenvolvimento-claro` e `-escuro`: 411×678, arquivo em 822×1356.
+
+**Alternativa descartada.** *A Home*, como ela pediu primeiro: mostraria o contrário do que a frase
+promete. *Uma peça dividida ao meio*: mais difícil de ler. *Rever a frase do capítulo antes da
+mídia*: ela preferiu a tela fiel.
+
+**Custo aceito.** O texto dos dois recortes fica perto de 5 px na página: a peça se lê pela forma.
+**A frase "fiel ao que eu tinha desenhado" continua mais forte que o que as telas mostram**: o
+produto segue a estrutura e as regras, não o desenho pixel a pixel, e a barra lateral é outra.
+
+**Consequência.** Figma, as quatro telas; o capítulo 5 cresceu 370 px no desktop (tela com 7709) e 318
+na estreita (11477), respiros de 96 e 64. O app de demonstração roda com um banco à parte, do
+cenário original, fora do repositório.

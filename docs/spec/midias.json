@@ -351,6 +351,42 @@
       },
       "rastersQueCobrem": [],
       "origem": "figma"
+    },
+    {
+      "id": "559:1397",
+      "nome": "financas-5-desenvolvimento-claro",
+      "caso": "financas",
+      "capitulo": 5,
+      "tema": "claro",
+      "tamanho": "411×678 (arquivo em 822×1356)",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
+    },
+    {
+      "id": "559:1398",
+      "nome": "financas-5-desenvolvimento-escuro",
+      "caso": "financas",
+      "capitulo": 5,
+      "tema": "escuro",
+      "tamanho": "411×678 (arquivo em 822×1356)",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
     }
   ],
   "aindaSemNome": [

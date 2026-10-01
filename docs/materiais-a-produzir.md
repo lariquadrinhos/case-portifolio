@@ -20,7 +20,7 @@ links levantados sobre os dois.
 | 2 · Descoberta | ~~A skill e o modelo de domínio, com os hotspots marcados~~ **Entregue em 01/10**: `financas-2-descoberta`, claro e escuro. Ver decisão 192 | "nenhuma lacuna é preenchida por suposição" |
 | 3 · Desenho e documentação | ~~Fluxo mapeado ao lado de uma especificação de tela~~ **Entregue em 01/10**: `financas-3-desenho`, claro e escuro. Ver decisão 195 | "quem implementa não precisa perguntar nada que já não esteja escrito" |
 | 4 · Design system | ~~O par PF/PJ nos dois temas, com os números de contraste~~ **Entregue em 01/10**: `financas-4-design-system`, claro e escuro. Ver decisão 199 | "reprovava no escuro" |
-| 5 · Desenvolvimento | Mockup e produto rodando lado a lado | "fiel ao que eu tinha desenhado" |
+| 5 · Desenvolvimento | ~~Mockup e produto rodando lado a lado~~ **Entregue em 01/10**: `financas-5-desenvolvimento`, claro e escuro. Ver decisão 201 | "fiel ao que eu tinha desenhado" |
 | 6 · Resultados | Capturas do produto rodando de verdade | "existe, funciona e está em uso" |
 
 **Seis legendas**, uma por imagem. Nenhuma escrita.

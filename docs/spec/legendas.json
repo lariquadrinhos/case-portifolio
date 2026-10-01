@@ -60,10 +60,10 @@
           "ordem": 1,
           "trilha": "Desenvolvimento",
           "porTela": {
-            "desktop 1440 · claro": "Legenda: a escrever",
-            "tela estreita 375 · claro": "Legenda: a escrever",
-            "desktop 1440 · escuro": "Legenda: a escrever",
-            "tela estreita 375 · escuro": "Legenda: a escrever"
+            "desktop 1440 · claro": "O mesmo DRE no mockup e no produto rodando.",
+            "tela estreita 375 · claro": "O mesmo DRE no mockup e no produto rodando.",
+            "desktop 1440 · escuro": "O mesmo DRE no mockup e no produto rodando.",
+            "tela estreita 375 · escuro": "O mesmo DRE no mockup e no produto rodando."
           }
         },
         {
