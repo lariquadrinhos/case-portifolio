@@ -1,6 +1,6 @@
 {
-  "_": "Início de cada capítulo, em pixels a partir do topo da página. Exportado do Figma para a checagem 10 conseguir simular a trilha sem abrir o arquivo. Reexporte quando um capítulo mudar de tamanho.",
-  "exportado": "2026-09-29",
+  "_": "Início de cada capítulo, em pixels a partir do topo da página. Exportado do Figma para a checagem 10 conseguir simular a trilha sem abrir o arquivo. Reexporte quando um capítulo mudar de tamanho. Em 2026-10-01 só as duas telas do Case Finanças foram relidas (106:22 e 108:22).",
+  "exportado": "2026-10-01",
   "janelaSuposta": {
     "desktop": 900,
     "estreita": 740
@@ -8,7 +8,7 @@
   "telas": {
     "Case · desktop 1440": {
       "largura": "desktop",
-      "pagina": 6231,
+      "pagina": 6315,
       "capitulos": [
         [
           "Introdução",
@@ -16,29 +16,29 @@
         ],
         [
           "Descoberta",
-          1214
+          1298
         ],
         [
           "Desenho e documentação",
-          2040
+          2124
         ],
         [
           "Design system",
-          2958
+          3042
         ],
         [
           "Desenvolvimento",
-          3494
+          3578
         ],
         [
           "Resultados",
-          4054
+          4138
         ]
       ]
     },
     "Case · tela estreita 375": {
       "largura": "estreita",
-      "pagina": 9660,
+      "pagina": 9689,
       "capitulos": [
         [
           "Introdução",
@@ -46,23 +46,23 @@
         ],
         [
           "Descoberta",
-          2069
+          2158
         ],
         [
           "Desenho e documentação",
-          3622
+          3699
         ],
         [
           "Design system",
-          5289
+          5354
         ],
         [
           "Desenvolvimento",
-          6380
+          6433
         ],
         [
           "Resultados",
-          7351
+          7392
         ]
       ]
     },
