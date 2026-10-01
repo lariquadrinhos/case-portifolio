@@ -49,9 +49,10 @@ Ver P57.
   que carrega é a imagem de pôster, que segue as mesmas regras de qualquer imagem.
 - **A imagem de pôster é um quadro do próprio vídeo.** Se for outra imagem, há salto visual
   no momento em que ele toca, e o vídeo parece quebrado.
-- **A legenda do vídeo descreve o que acontece nele**, não comenta. Vídeo sem áudio exige
-  alternativa em texto: para quem não consegue vê-lo, a legenda é o conteúdo. "O produto em
-  uso" não cumpre; dizer o que a pessoa faz na tela, cumpre.
+- **O texto alternativo do vídeo descreve o que acontece nele**, passo a passo. Vídeo sem áudio
+  exige alternativa em texto, e é o texto alternativo que a cumpre: para quem não consegue
+  vê-lo, ele é o conteúdo. **A legenda pode contextualizar em vez de descrever**: dizer como o
+  vídeo foi feito ou o que ele é, desde que o texto alternativo descreva. Ver decisão 190.
 - **Vídeo é servido pelo próprio site, nunca incorporado de terceiro.** Incorporar do
   YouTube ou Vimeo traz script e cookie de rastreamento, e reintroduz o aviso de
   consentimento que a decisão de não medir existiu para evitar. Imagem que não prova
@@ -245,8 +246,8 @@ Funcionalidade: Página de case
 
   Cenário: Alguém não consegue ver o vídeo
     Dado que a mídia daquele capítulo é um vídeo sem áudio
-    Quando alguém chega à legenda sem ver as imagens
-    Então a legenda descreve o que acontece na tela
+    Quando alguém chega ao vídeo sem ver as imagens
+    Então o texto alternativo descreve o que acontece na tela
     E a afirmação do capítulo continua provada
 
   Cenário: A pessoa abre um capítulo que tem vídeo

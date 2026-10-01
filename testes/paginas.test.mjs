@@ -78,6 +78,21 @@ test('A pessoa abre um capítulo que tem vídeo', () => {
   }
 });
 
+test('Alguém não consegue ver o vídeo', () => {
+  // O texto alternativo do vídeo é o conteúdo para quem não o vê (decisão 190): ele chega ao
+  // leitor de tela como o nome do vídeo, e vem do arquivo de conteúdo.
+  for (const [pagina, trecho] of [
+    ['trabalhos/financas-pf-pj/index.html', 'Gravação do aplicativo em uso'],
+    ['trabalhos/reembolso-sulamerica/index.html', 'Gravação do protótipo em uso'],
+  ]) {
+    const videos = site.pagina(pagina).match(/<video [^>]+>/g) ?? [];
+    assert.ok(videos.length, `${pagina} sem vídeo`);
+    for (const v of videos) {
+      assert.match(v, new RegExp(`aria-label="${trecho}`), `${pagina}: o vídeo não leva o texto alternativo`);
+    }
+  }
+});
+
 test('A pessoa vai para fora do site', () => {
   const caso = site.pagina('trabalhos/reembolso-sulamerica/index.html');
   // O endereço é conteúdo e muda; o que o contrato pede é a forma: palavra sublinhada,

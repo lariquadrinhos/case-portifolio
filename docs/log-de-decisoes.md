@@ -6376,3 +6376,33 @@ alternativo são rascunho meu, à espera dela.
 desktop cresceu 84 px e tudo abaixo desceu junto. `docs/spec/legendas.json` e `midias.json`
 relidos do Figma. A base de demonstração e os scripts ficam fora do repositório, na área temporária
 desta sessão.
+
+---
+
+## 190 · A legenda do vídeo pode contextualizar; quem descreve é o texto alternativo
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case · `#recusa-de-ia`
+
+**Gatilho.** Ela escolheu para o vídeo do Finanças a legenda *"Gravado numa janela mais estreita
+que a de 1440 em que as telas foram desenhadas, com dados de demonstração."* O vídeo foi gravado
+em 960 px para caber no espaço de mídia, e ela achou mais importante dizer isso do que repetir o
+percurso. O tester apontou que o contrato pedia o contrário: *"a legenda do vídeo descreve o que
+acontece nele, não comenta"*. A legenda do Reembolso, *"Vídeo do protótipo de pedido de
+reembolso."* (173), já não cumpria a regra.
+
+**Decisão.** A regra muda. **O texto alternativo descreve o percurso, e a legenda pode
+contextualizar**: dizer como o vídeo foi feito ou o que ele é. A alternativa em texto que a WCAG
+pede para vídeo sem áudio é o texto alternativo, e os dois vídeos têm um que descreve a sequência
+inteira.
+
+**Alternativa descartada.** *Juntar descrição e condição de gravação na legenda*, que eu
+recomendei: preservaria a regra, ao custo de uma legenda de duas frases. *Manter a regra e
+registrar as duas legendas como exceção*: um contrato com duas exceções em dois vídeos deixa de
+dizer o que vale.
+
+**Custo aceito.** Quem enxerga e não dá play não lê o que o vídeo mostra, só o pôster e a
+legenda.
+
+**Consequência.** A regra antiga não vinha de entrada do log: estava escrita direto no contrato e no plano de materiais. Muda em `case/pagina-de-case.md` (regra e cenário) e a
+nota de `materiais-a-produzir.md`. As duas legendas de vídeo passam a cumprir o contrato como
+estão.
