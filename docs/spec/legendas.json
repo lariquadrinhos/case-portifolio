@@ -16,10 +16,10 @@
           "ordem": 1,
           "trilha": "Introdução",
           "porTela": {
-            "desktop 1440 · claro": "O produto em uso, com dados de demonstração: o mesmo mês lido como Consolidado, PF e PJ, os indicadores do mês anterior e o histórico filtrado por categoria.",
-            "tela estreita 375 · claro": "O produto em uso, com dados de demonstração: o mesmo mês lido como Consolidado, PF e PJ, os indicadores do mês anterior e o histórico filtrado por categoria.",
-            "desktop 1440 · escuro": "O produto em uso, com dados de demonstração: o mesmo mês lido como Consolidado, PF e PJ, os indicadores do mês anterior e o histórico filtrado por categoria.",
-            "tela estreita 375 · escuro": "O produto em uso, com dados de demonstração: o mesmo mês lido como Consolidado, PF e PJ, os indicadores do mês anterior e o histórico filtrado por categoria."
+            "desktop 1440 · claro": "Gravado numa janela mais estreita que a de 1440 em que as telas foram desenhadas, com dados de demonstração.",
+            "tela estreita 375 · claro": "Gravado numa janela mais estreita que a de 1440 em que as telas foram desenhadas, com dados de demonstração.",
+            "desktop 1440 · escuro": "Gravado numa janela mais estreita que a de 1440 em que as telas foram desenhadas, com dados de demonstração.",
+            "tela estreita 375 · escuro": "Gravado numa janela mais estreita que a de 1440 em que as telas foram desenhadas, com dados de demonstração."
           }
         },
         {
