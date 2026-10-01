@@ -6602,3 +6602,25 @@ tamanho real.
 
 **Consequência.** Figma reajustado: desktop com 6824, estreita com 10700, respiros de 96 e 64. Texto
 alternativo e `midias.json` atualizados.
+
+---
+
+## 198 · O fluxo do capítulo 3 segue o wireframe: 320 px, centralizado, e volta o "Salva, sucesso"
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** *"faz esse trabalho também com o fluxo, diminui o tamanho assim cabe mais do fluxo"*, logo
+depois da 197.
+
+**Decisão.** O recorte do FigJam passa a 320 px de largura, centralizado, como o wireframe, e desce
+até mostrar *"Salva, sucesso"* inteiro: Novo Lançamento → 4 abas → Salva, sucesso. No escuro, o
+retângulo cinza do FigJam encolhe junto. A peça fica com 411×1031, arquivo em 822×2062.
+
+**Alternativa descartada.** *Manter a altura do fluxo* e mostrar só metade do "Salva, sucesso": ficaria
+uma caixa cortada no meio, sem servir de borda nem de conteúdo.
+
+**Custo aceito.** A peça ganha 61 px e o texto das caixas fica perto de 9 px na página, legível só
+porque cada caixa tem poucas palavras.
+
+**Consequência.** Figma reajustado: desktop com 6885, estreita com 10748, respiros de 96 e 64. Texto
+alternativo e `midias.json` atualizados.
