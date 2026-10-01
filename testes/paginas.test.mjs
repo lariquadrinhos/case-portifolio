@@ -7,6 +7,8 @@ import { readFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { raizTemporaria, construirEm, texto, RAIZ } from './ajuda.mjs';
 import { TEXTOS } from '../construcao/interface.mjs';
+import { lerCase } from '../construcao/conteudo.mjs';
+import { escapar } from '../construcao/markdown.mjs';
 
 const site = construirEm(raizTemporaria());
 
@@ -80,15 +82,22 @@ test('A pessoa abre um capítulo que tem vídeo', () => {
 
 test('Alguém não consegue ver o vídeo', () => {
   // O texto alternativo do vídeo é o conteúdo para quem não o vê (decisão 190): ele chega ao
-  // leitor de tela como o nome do vídeo, e vem do arquivo de conteúdo.
-  for (const [pagina, trecho] of [
-    ['trabalhos/financas-pf-pj/index.html', 'Gravação do aplicativo em uso'],
-    ['trabalhos/reembolso-sulamerica/index.html', 'Gravação do protótipo em uso'],
-  ]) {
-    const videos = site.pagina(pagina).match(/<video [^>]+>/g) ?? [];
-    assert.ok(videos.length, `${pagina} sem vídeo`);
-    for (const v of videos) {
-      assert.match(v, new RegExp(`aria-label="${trecho}`), `${pagina}: o vídeo não leva o texto alternativo`);
+  // leitor de tela como o nome do vídeo. O teste lê o texto do arquivo de conteúdo, como a
+  // construção lê, e não fixa redação nenhuma: só exige que seja o mesmo, e que não falte.
+  for (const arquivo of ['case-study-financas-pf-pj.md', 'case-study-reembolso-sulamerica.md']) {
+    const c = lerCase(RAIZ, arquivo);
+    const videosNoArquivo = c.capitulos.flatMap((cap) => cap.nos)
+      .filter((n) => n.tipo === 'imagem' && n.caminho.endsWith('.mp4'));
+    assert.ok(videosNoArquivo.length, `${arquivo} sem vídeo`);
+    const html = site.pagina(`trabalhos/${c.slug}/index.html`);
+    for (const v of videosNoArquivo) {
+      assert.ok(v.alt.trim(), `${arquivo}:${v.linha}: vídeo sem texto alternativo`);
+      const base = v.caminho.replace(/\.mp4$/, '').split('/').pop();
+      const tags = html.match(new RegExp(`<video [^>]*src="[^"]*${base}-(claro|escuro)\\.mp4"[^>]*>`, 'g')) ?? [];
+      assert.equal(tags.length, 2, `${base}: as duas versões de tema`);
+      for (const tag of tags) {
+        assert.ok(tag.includes(`aria-label="${escapar(v.alt)}"`), `${base}: o vídeo não leva o texto alternativo do arquivo`);
+      }
     }
   }
 });
