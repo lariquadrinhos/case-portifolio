@@ -205,6 +205,44 @@
         "efeitos": 0
       },
       "rastersQueCobrem": []
+    },
+    {
+      "id": "536:1397",
+      "nome": "financas-1-produto-em-uso-claro",
+      "caso": "financas",
+      "capitulo": 1,
+      "tema": "claro",
+      "tamanho": "822×688 (pôster e vídeo)",
+      "origem": "video",
+      "arquivo": "financas-1-produto-em-uso-claro-poster.png",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": []
+    },
+    {
+      "id": "536:1398",
+      "nome": "financas-1-produto-em-uso-escuro",
+      "caso": "financas",
+      "capitulo": 1,
+      "tema": "escuro",
+      "tamanho": "822×688 (pôster e vídeo)",
+      "origem": "video",
+      "arquivo": "financas-1-produto-em-uso-escuro-poster.png",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": []
     }
   ],
   "aindaSemNome": [

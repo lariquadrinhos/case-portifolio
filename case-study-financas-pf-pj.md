@@ -29,6 +29,9 @@ Estive em todas as etapas, da primeira conversa até o código: defini o problem
 
 A entrega final foi além das telas: mantive um repositório com a documentação de todo o processo, em que cada decisão ficou registrada junto do raciocínio que a sustentava. Foi o que permitiu a informação atravessar as etapas sem se perder e chegar inteira ao desenvolvimento.
 
+![Gravação do aplicativo em uso, com dados de demonstração. A tela inicial mostra as pendências e as entradas e saídas de setembro. O cursor abre Relatórios na barra lateral e entra no DRE, que alterna entre Consolidado, PF e PJ: o mesmo mês em três leituras, com números diferentes em cada uma. Depois abre Indicadores Financeiros e volta de setembro para agosto, e termina no Histórico, filtrado por lançamentos pagos na categoria Alimentação, mês a mês desde novembro.](publico/midias/financas-1-produto-em-uso.mp4)
+Legenda: O produto em uso, com dados de demonstração: o mesmo mês lido como Consolidado, PF e PJ, os indicadores do mês anterior e o histórico filtrado por categoria.
+
 ---
 
 ## 2. Ensinei a ferramenta antes de usá-la

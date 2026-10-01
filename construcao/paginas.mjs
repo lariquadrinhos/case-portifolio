@@ -250,8 +250,11 @@ function figura(ctx, c, no, capitulo) {
       const d = v.poster ? dimensoes(`${ctx.raiz}/${v.poster}`) : null;
       const tamanho = d ? ` width="${d.largura}" height="${d.altura}"` : '';
       const poster = v.poster ? ` poster="${ctx.base}${v.poster}"` : '';
+      // Vídeo em pé (o aparelho do Reembolso, 379:454) vive numa área fixa, com o pôster
+      // contido; vídeo deitado (a tela do Finanças) ocupa a coluna na proporção dele.
+      const retrato = d && d.altura > d.largura ? ' prova__video--retrato' : '';
       // Não toca sozinho e não baixa nada até a pessoa pedir; o pôster é o que carrega.
-      return `<video class="prova__video${v.tema ? ` midia-${v.tema}` : ''}" src="${ctx.base}${v.arquivo}"${poster}${tamanho} preload="none" controls playsinline muted aria-label="${escapar(no.alt)}"></video>`;
+      return `<video class="prova__video${retrato}${v.tema ? ` midia-${v.tema}` : ''}" src="${ctx.base}${v.arquivo}"${poster}${tamanho} preload="none" controls playsinline muted aria-label="${escapar(no.alt)}"></video>`;
     }).join('');
   } else {
     midia = imagemTemada(ctx, versoes, no.alt, { classe: 'prova__img' });

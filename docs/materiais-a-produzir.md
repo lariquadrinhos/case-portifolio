@@ -16,7 +16,7 @@ links levantados sobre os dois.
 
 | Capítulo | O que produzir | Prova a afirmação |
 |---|---|---|
-| 1 · Introdução | **Vídeo curto** do produto em uso, **mais a imagem de pôster** | "funcionando e em uso por uma pessoa real" |
+| 1 · Introdução | ~~**Vídeo curto** do produto em uso, **mais a imagem de pôster**~~ **Entregue em 01/10**: `financas-1-produto-em-uso`, claro e escuro. Ver decisão 189 | "funcionando e em uso por uma pessoa real" |
 | 2 · Descoberta | A skill e o modelo de domínio, com os hotspots marcados | "nenhuma lacuna é preenchida por suposição" |
 | 3 · Desenho e documentação | Fluxo mapeado ao lado de uma especificação de tela | "quem implementa não precisa perguntar nada que já não esteja escrito" |
 | 4 · Design system | O par PF/PJ nos dois temas, com os números de contraste | "reprovava no escuro" |

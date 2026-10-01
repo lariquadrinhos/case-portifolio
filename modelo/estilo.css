@@ -25,7 +25,7 @@
   --home-paragrafo-largura-estreita: 289px; /* 66:16 */
   --erro-topo-largo: 160px;            /* 136:41: conteúdo em y=224 */
   --midia-vazia-proporcao: 4 / 3;      /* lacuna de mídia, 411×308 e 327×245 */
-  --video-proporcao: 411 / 510;        /* 379:454 */
+  --video-proporcao: 411 / 510;        /* 379:454, vídeo em pé */
   --foto-proporcao: 4 / 5;             /* 116:48 e 132:41 */
   --marca-texto-altura: 0.75;          /* inventário: 75% da entrelinha, centrada */
 }
@@ -556,9 +556,11 @@ em { font-style: normal; }
 .prova__video {
   width: 100%;
   height: auto;
+  background: var(--bg-page);
+}
+.prova__video--retrato {
   aspect-ratio: var(--video-proporcao);
   object-fit: contain;
-  background: var(--bg-page);
 }
 .prova__legenda, .prova__convite {
   color: var(--text-secondary);

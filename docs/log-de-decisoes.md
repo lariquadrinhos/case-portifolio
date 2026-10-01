@@ -6337,3 +6337,42 @@ dois temas desde a 187, e a tela de início não acompanha o tema do site.
 **Consequência.** O manifesto é gerado pela construção, a partir de `quem-sou-eu.md` e de
 `tokens.json`, e não existe como arquivo escrito à mão. Todas as páginas o declaram. O PNG
 original, transparente, não foi apagado do histórico: está no commit da 187.
+
+---
+
+## 189 · O vídeo do Finanças é gravado com dados de demonstração, e a legenda diz isso
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case · `#restricao`
+
+**Gatilho.** O capítulo 1 do Finanças pedia um vídeo do produto em uso, e não havia nenhum. O
+produto está em uso por uma pessoa real, com as finanças dela, então o vídeo não podia mostrar o
+banco de verdade.
+
+**Decisão.** *"faz um base com dados completos"*. O app (`bigorna`) rodou aqui, em modo de
+produção, sobre um banco à parte: o cenário sintético do próprio repositório estendido por script
+para doze meses, de novembro/2025 a outubro/2026, com as pendências quase todas resolvidas. Todo
+dado é inventado. O roteiro é dela: a home de setembro (*"usa setembro"*), Relatórios na barra
+lateral, o DRE alternando Consolidado, PF e PJ, Indicadores Financeiros voltando um mês, e o
+Histórico filtrado por Status e Categoria (*"achei curto"*, e ela acrescentou as duas últimas
+partes). **A legenda diz "com dados de demonstração"**, porque a frase que o vídeo prova é *"em
+uso por uma pessoa real"* e o vídeo não é o uso dela.
+
+`financas-1-produto-em-uso-claro` e `-escuro`: **822×688**, o dobro do espaço desenhado (411×344),
+30 quadros, 24 segundos, sem som, 344 KB e 393 KB, com pôster no primeiro quadro. Os quadros foram
+capturados direto do navegador em 2x, porque o gravador do navegador grava em 1x e o texto
+borrava. O cursor é desenhado na página, porque o navegador automatizado não tem cursor.
+
+**Alternativa descartada.** *Ela gravar a própria tela*, como no protótipo do Reembolso: exporia o
+banco real ou exigiria montar um de mentira do mesmo jeito. *O Novo Lançamento como roteiro*, que
+eu tinha proposto: ela escolheu os relatórios. *A Evolução Mensal como relatório*: em 1440 o
+"Último ano" corta setembro e outubro, defeito do app.
+
+**Custo aceito.** O fundo do vídeo é o do app, não o da página: a checagem 13 reprova os dois
+pôsteres, e no claro a mídia aparece como uma caixa, como os PNGs da 186. Os menus do Histórico são
+listas nativas, que não aparecem na gravação: o valor muda sem o menu abrir. A legenda e o texto
+alternativo são rascunho meu, à espera dela.
+
+**Consequência.** No Figma, o pôster de cada tema nas quatro telas; a linha do capítulo 1 nas duas
+desktop cresceu 84 px e tudo abaixo desceu junto. `docs/spec/legendas.json` e `midias.json`
+relidos do Figma. A base de demonstração e os scripts ficam fora do repositório, na área temporária
+desta sessão.
