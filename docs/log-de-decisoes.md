@@ -6230,3 +6230,30 @@ rosto mais alto e o céu inteiro, que é o que menos diz. *Reduzir ao dobro do e
 
 **Consequência.** `publico/larissa.jpg`. Os quatro marcadores "FALTA · a foto" saíram do Figma, e
 o site deixa de mostrar o seu. Em `materiais-a-produzir.md`, a foto sai da lista do que falta.
+
+---
+
+## 185 · O protótipo abre no fluxo do app, e o contrato larga a tabela que rola
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** Primeira rodada do tester sobre o site publicado (`c6a7f02`). Três apontamentos já
+tinham resposta numa regra dela ou numa decisão anterior.
+
+**Decisão.**
+- **"Abrir o protótipo"** passa a abrir no único fluxo que ela definiu na página `mockups`,
+  *"Primeiro acesso · do onboarding ao primeiro pedido"* (`235:844`). Sem ponto de partida, o
+  Figma abria o fluxo da página `apresentação do case` (`41:2`), uma capa antiga que diz *"UX/UI
+  Designer Jr."*. Mudou o link nos dois lugares do `.md`; o arquivo dela não foi tocado.
+- **"No onboarding…" e "No fluxo mensal…"** (Reembolso, cap. 3) ficam em negrito inteiro no
+  `.md`, porque no Figma são parágrafo inteiro em Medium. Pela 180, isso os faz frase de destaque,
+  como no desenho. Aplicação da 182: no texto, o Figma manda.
+- **`case/pagina-de-case.md` perde a regra da tabela que rola na horizontal.** Ela sobrou de antes
+  da 132, que tirou a tabela da tela estreita, e o contrato dizia as duas coisas.
+
+**Alternativa descartada.** *Trocar o fluxo padrão no arquivo do Reembolso*: resolveria o link
+sem parâmetro, mas é mexer no arquivo dela para consertar um link nosso.
+
+**Consequência.** Também corrigido o acento de *"heurísticas"* no capítulo 3 do Reembolso, e
+preenchidos os links do Figma e do FigJam do Finanças, que existiam desde a 111 e a 179 deixou
+vazios por engano meu.

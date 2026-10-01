@@ -204,11 +204,8 @@ se concentrar num ponto.
 
 - **Tabela ocupa a largura inteira do conteúdo, não a coluna de leitura.** A regra da medida
   governa prosa; tabela é dado, e o que governa é a comparação ficar legível lado a lado.
-- **Em tela estreita a tabela rola na horizontal**, dentro da própria janela, e a página não
-  rola junto. Empilhar as linhas destruiria a comparação, que é a única razão de a tabela
-  existir.
-- **A rolagem é avisada em palavras** logo abaixo. Sem aviso, quem não arrasta nunca descobre
-  que existe uma coluna à direita.
+- **Em tela estreita a tabela não aparece**, pela regra do topo deste contrato (decisão 132, que
+  substituiu a rolagem horizontal com aviso em palavras). Ver P57.
 
 ## Comportamento
 

@@ -80,7 +80,9 @@ test('A pessoa abre um capítulo que tem vídeo', () => {
 
 test('A pessoa vai para fora do site', () => {
   const caso = site.pagina('trabalhos/reembolso-sulamerica/index.html');
-  assert.match(caso, /href="https:\/\/www\.figma\.com\/proto\/LUp4aT7fVYH4cD8ZwrHIfd" target="_blank" rel="noopener">Abrir o protótipo<span class="aviso-nova-aba"> abre em nova aba<\/span>/);
+  // O endereço é conteúdo e muda; o que o contrato pede é a forma: palavra sublinhada,
+  // nova aba, e o rótulo avisando.
+  assert.match(caso, /href="https:\/\/www\.figma\.com\/proto\/[^"]+" target="_blank" rel="noopener">Abrir o protótipo<span class="aviso-nova-aba"> abre em nova aba<\/span>/);
 });
 
 // ── erro/endereco-inexistente.md ──────────────────────────────────────────────

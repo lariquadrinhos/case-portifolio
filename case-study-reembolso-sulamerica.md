@@ -54,7 +54,7 @@ Percebi que muitas das etapas mais pesadas existem por obrigação regulatória 
 
 **Cinco princípios, e um filtro para cada decisão.**
 
-Antes de desenhar escrevi cinco princípios, cada um amarrado às heuristicas que ele corrige.
+Antes de desenhar escrevi cinco princípios, cada um amarrado às heurísticas que ele corrige.
 
 1. OCR e reuso substituem digitação sempre que o dado já existe em algum lugar.
 2. Stepper persistente, porque ninguém deveria se perguntar quanto falta.
@@ -66,9 +66,9 @@ A causa era estrutural. Dados que nunca mudam viviam dentro do pedido e por isso
 
 Separei o que acontece uma vez na vida do que acontece a cada pedido de reembolso. O que era pré-requisito virou um preparo único, guardado depois do primeiro acesso. O que é do pedido em si ficou curto o bastante para caber num intervalo de almoço. Nenhuma exigência foi removida: elas só deixaram de ser cobradas de quem já as tinha cumprido.
 
-**No onboarding, feito só no primeiro acesso:** confirmação dos dados bancários, o termo de ciência, e a validação de identidade.
+**No onboarding, feito só no primeiro acesso: confirmação dos dados bancários, o termo de ciência, e a validação de identidade.**
 
-**No fluxo mensal:** cinco etapas, e nenhuma delas repete o que já foi resolvido.
+**No fluxo mensal: cinco etapas, e nenhuma delas repete o que já foi resolvido.**
 
 ![Recorte do fluxograma do fluxo novo no ponto em que ele se divide: a caixa Tela Conclusão encerra a sequência de validação de identidade, e uma linha que entra pela esquerda contorna esse trecho e chega direto em Solicitar Reembolso, ao lado de Solicitar a partir do último reembolso. Dali seguem Escolher Tratamento, Editar Dados do Prestador e Editar Dados da Consulta. As bordas do recorte cortam o desenho, que continua para os dois lados.](publico/midias/reembolso-3-novo-fluxo.png)
 Legenda: O ponto em que o fluxo novo se separa em dois. Tela Conclusão encerra o preparo que acontece uma vez; quem já o fez entra pela esquerda e cai direto em Solicitar Reembolso.
@@ -124,7 +124,7 @@ Legenda: Duas telas no sistema visual remontado: o laranja, a tipografia e os co
 
 ![Gravação do protótipo em uso, num aparelho sobre a cor da página. O dedo toca Pedir reembolso na tela inicial, escolhe a categoria, anexa a nota fiscal, confere os campos que o OCR preencheu, informa as sessões e as datas, anexa os três documentos, revisa o pedido e envia. A última tela mostra a solicitação em análise, com o protocolo e a previsão de resposta.](publico/midias/reembolso-5-prototipo.mp4)
 Legenda: Vídeo do protótipo de pedido de reembolso.
-Convite: Descubra mais navegando pelo protótipo completo. [Abrir o protótipo](https://www.figma.com/proto/LUp4aT7fVYH4cD8ZwrHIfd)
+Convite: Descubra mais navegando pelo protótipo completo. [Abrir o protótipo](https://www.figma.com/proto/LUp4aT7fVYH4cD8ZwrHIfd?node-id=235-844&starting-point-node-id=235%3A844)
 
 <!-- só no desktop -->
 ## O que eu entreguei
@@ -173,7 +173,7 @@ O fluxo atual anotado tela a tela, e o novo ao lado
 [Ver o board no FigJam](https://www.figma.com/board/lCpgyPMBg7BXj0DxgiOUh1)
 
 O fluxo novo, do primeiro acesso ao acompanhamento
-[Abrir o protótipo](https://www.figma.com/proto/LUp4aT7fVYH4cD8ZwrHIfd)
+[Abrir o protótipo](https://www.figma.com/proto/LUp4aT7fVYH4cD8ZwrHIfd?node-id=235-844&starting-point-node-id=235%3A844)
 
 
 ---

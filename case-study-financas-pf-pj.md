@@ -99,10 +99,10 @@ As decisões de UX, a especificação de cada tela e o modelo de dados
 [Ver o repositório]()
 
 As 46 telas em claro e escuro, o style guide e os tokens
-[Ver o arquivo no Figma]()
+[Ver o arquivo no Figma](https://www.figma.com/design/7IZBeQV15kgZp7Shcqh4c8)
 
 O fluxo do usuário mapeado, do primeiro acesso às ações do dia a dia
-[Ver o fluxo no FigJam]()
+[Ver o fluxo no FigJam](https://www.figma.com/board/6cLvP3Mwhy4yWGLJBDsp3z)
 
 <!-- bloco: extra -->
 ## O Produto
