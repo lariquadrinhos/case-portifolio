@@ -6438,3 +6438,35 @@ Reembolso sobre medidas antigas.
 
 **Consequência.** `scripts/checagens.mjs` ganha a 15, e `docs/spec/trilha.json` é relido nas
 quatro telas claras de case.
+
+---
+
+## 192 · O capítulo 2 do Finanças mostra a regra e a regra produzindo hotspots
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** A lacuna do capítulo 2 pedia *"a skill e o modelo de domínio, com os hotspots
+marcados"*, para provar *"nenhuma lacuna de informação é preenchida por suposição"*. A skill não
+estava em lugar óbvio: é `bigorna/.claude/skills/loop-produto/SKILL.md`.
+
+**Decisão.** Uma colagem de dois trechos, empilhados, com as bordas cortando o resto, como a do
+capítulo 2 do Reembolso. Em cima, a seção *"Diretriz central: nunca assuma premissas"* da skill e
+os quatro quadrantes. Embaixo, a tabela de hotspots do event storming **na versão atual do `.md`**
+(*"1 md"*), com H4, H5, H9 e H10: fechado por ADR, modelado e não testado, parcialmente revertido,
+fechado por decisão de produto. Montada por mim (*"2 você monta"*), em DM Sans, nas cores do site e
+sobre o `bg/page` de cada tema. O texto é literal; os status, que são começos de textos longos,
+terminam em reticências. **Os travessões da skill ficam** (*"mantém o travessão"*): é citação.
+
+`financas-2-descoberta-claro` e `-escuro`: 411×794, arquivo em 822×1588.
+
+**Alternativa descartada.** *A tabela de hotspots do HTML*, H1 a H10 na versão v6 do PRD: mostraria
+o artefato como era, e ela preferiu o estado atual. *Só os hotspots, sem a skill*: mostraria o
+resultado sem a regra que o capítulo diz ter vindo antes. *Trocar o travessão por outra pontuação*:
+deixaria de ser o texto do arquivo.
+
+**Custo aceito.** A colagem é recomposta em tipografia do site, não captura de tela dos arquivos:
+prova o conteúdo, não a aparência deles.
+
+**Consequência.** No Figma, as quatro telas; o capítulo 2 cresceu 224 px no desktop e 435 na
+estreita, e tudo abaixo desceu com o respiro de 96 e 64. `legendas.json` e `midias.json`
+atualizados; a checagem 13 passa para as duas versões. Legenda e texto alternativo são rascunho meu.

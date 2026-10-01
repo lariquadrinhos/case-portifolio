@@ -45,6 +45,9 @@ Com o método de pé, dirigi a construção do documento de produto a partir de 
 
 Com as regras estáveis, pedi a tradução do documento para um modelo formal de domínio: eventos, comandos, políticas e agregados. Onde havia tensão sem resposta certa ainda, instruí que ficasse marcada como hotspot em vez de decidida no automático.
 
+![Dois trechos de arquivos do projeto, um acima do outro, com as bordas cortando o resto. Em cima, a skill loop-produto: a seção Diretriz central: nunca assuma premissas, que manda tornar explícitas as lacunas de conhecimento em vez de preenchê-las por conta própria, e os quatro quadrantes, de known knowns a unknown unknowns. Embaixo, a tabela de hotspots do event storming, com o número de cada um, a decisão em aberto e o status: H4 fechado por ADR, H5 modelado e não testado, H9 parcialmente revertido e H10 fechado para o MVP por decisão de produto.](publico/midias/financas-2-descoberta.png)
+Legenda: A regra escrita antes de qualquer tela, e o que ela produziu: cada dúvida do modelo de domínio virou hotspot, com destino registrado.
+
 ---
 
 ## 3. O Figma era metade da entrega

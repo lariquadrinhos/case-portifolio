@@ -243,6 +243,42 @@
         "efeitos": 0
       },
       "rastersQueCobrem": []
+    },
+    {
+      "id": "542:1397",
+      "nome": "financas-2-descoberta-claro",
+      "caso": "financas",
+      "capitulo": 2,
+      "tema": "claro",
+      "tamanho": "411×794 (arquivo em 822×1588)",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
+    },
+    {
+      "id": "542:1398",
+      "nome": "financas-2-descoberta-escuro",
+      "caso": "financas",
+      "capitulo": 2,
+      "tema": "escuro",
+      "tamanho": "411×794 (arquivo em 822×1588)",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
     }
   ],
   "aindaSemNome": [
