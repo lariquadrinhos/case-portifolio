@@ -1,7 +1,7 @@
 # Instruções para construir a skill "Playbook do loop de produto"
 
 > Este documento não é a skill. É o briefing a partir do qual o Claude deve **construir** a skill.
-> Leia inteiro antes de escrever qualquer coisa. Onde algo aqui estiver ambíguo, pergunte — não preencha.
+> Leia inteiro antes de escrever qualquer coisa. Onde algo aqui estiver ambíguo, pergunte, não preencha.
 
 ---
 
@@ -11,10 +11,10 @@ Manter o arquivo `loop-produto-playbook.md`: o registro de como o trabalho foi c
 
 O nome diz a estrutura: o loop é **pedir → receber → conferir → corrigir → seguir**. Cada trecho do processo é uma ou mais voltas desse loop, e o playbook guarda as voltas.
 
-Ele tem dois usos, e os dois exigem a mesma coisa — honestidade:
+Ele tem dois usos, e os dois exigem a mesma coisa, honestidade:
 
 - **Repetir.** Daqui a alguns meses eu vou precisar acrescentar um case, republicar, corrigir um texto, e vou ter esquecido como isso foi feito.
-- **Mostrar como eu trabalho.** É o único documento do projeto que captura o método, porque método com IA não é decisão, é procedimento — o que eu peço, contra que critério eu confiro, onde eu recuso.
+- **Mostrar como eu trabalho.** É o único documento do projeto que captura o método, porque método com IA não é decisão, é procedimento, o que eu peço, contra que critério eu confiro, onde eu recuso.
 
 ---
 
@@ -22,7 +22,7 @@ Ele tem dois usos, e os dois exigem a mesma coisa — honestidade:
 
 **A skill copia os prompts exatamente como foram escritos.** Não a versão limpa, não a reconstrução do que eu deveria ter pedido, não uma paráfrase mais clara. O texto que saiu, com a pressa, a imprecisão e os erros de digitação que tinha.
 
-Este é o ponto onde a skill vai errar se não for instruída com firmeza, porque a tendência natural é melhorar o que copia. **Melhorar o prompt destrói o documento inteiro.** O que ele serve para mostrar é como uma pessoa conduz uma ferramenta sem saber de antemão o caminho certo — e um prompt polido mostra o contrário: alguém que já sabia.
+Este é o ponto onde a skill vai errar se não for instruída com firmeza, porque a tendência natural é melhorar o que copia. **Melhorar o prompt destrói o documento inteiro.** O que ele serve para mostrar é como uma pessoa conduz uma ferramenta sem saber de antemão o caminho certo, e um prompt polido mostra o contrário: alguém que já sabia.
 
 A mesma regra vale para a resposta: o resumo do que voltou é honesto, não generoso. "Acertou a estrutura e inventou três regras que eu não tinha pedido" é uma entrada útil. "Funcionou bem" não é.
 
@@ -38,11 +38,11 @@ Então a skill registra durante o trabalho, não depois. Ela não espera ser cha
 
 **Quando registrar:**
 
-- No começo de um trecho novo do processo — abre a entrada e anota o estado inicial.
+- No começo de um trecho novo do processo: abre a entrada e anota o estado inicial.
 - A cada volta do loop que ensinou alguma coisa: o pedido, o que voltou, o que foi corrigido.
-- Quando o trecho fecha — anota o sinal que indicou que terminou.
+- Quando o trecho fecha: anota o sinal que indicou que terminou.
 
-**O que não registrar:** cada mensagem trocada. O playbook não é transcrição. Entra a volta que ensinou algo — um pedido que deu certo de primeira e não tem nada a contar não vira entrada, vira uma linha.
+**O que não registrar:** cada mensagem trocada. O playbook não é transcrição. Entra a volta que ensinou algo: um pedido que deu certo de primeira e não tem nada a contar não vira entrada, vira uma linha.
 
 ---
 
@@ -51,7 +51,7 @@ Então a skill registra durante o trabalho, não depois. Ela não espera ser cha
 Um arquivo por projeto, organizado por trecho do processo, na ordem em que os trechos acontecem.
 
 ```markdown
-# Playbook do loop de produto — <projeto>
+# Playbook do loop de produto: <projeto>
 
 > Registro de como o trabalho foi conduzido com o Claude, escrito enquanto acontecia.
 > Os prompts estão copiados literalmente. Nenhum foi reescrito depois para parecer melhor.
@@ -71,7 +71,7 @@ Um arquivo por projeto, organizado por trecho do processo, na ordem em que os tr
 
 **Voltou.** Resumo honesto: o que acertou, o que errou, o que inventou.
 
-**Conferi contra.** O critério já escrito — qual documento, qual regra. Nunca "achei que não tinha ficado bom".
+**Conferi contra.** O critério já escrito: qual documento, qual regra. Nunca "achei que não tinha ficado bom".
 
 **Corrigi com**
 
@@ -91,7 +91,7 @@ Um arquivo por projeto, organizado por trecho do processo, na ordem em que os tr
 
 É o campo que separa dirigir a ferramenta de aprovar o que ela devolve, e é o que a skill precisa cobrar com mais rigor.
 
-O critério tem que ser **externo e anterior**: uma regra do documento de definições, uma decisão registrada no contrato, um valor que está nas variáveis. "Ficou bom" e "não gostei" não são critérios — se o único critério for o gosto do momento, qualquer resultado plausível passa.
+O critério tem que ser **externo e anterior**: uma regra do documento de definições, uma decisão registrada no contrato, um valor que está nas variáveis. "Ficou bom" e "não gostei" não são critérios, se o único critério for o gosto do momento, qualquer resultado plausível passa.
 
 Quando eu não souber dizer contra o que conferi, a skill deve perguntar. E se a resposta for que não havia critério escrito, isso é uma descoberta: falta uma decisão, e ela vira pergunta em aberto ou regra no contrato.
 
@@ -105,13 +105,13 @@ A skill precisa saber o que **não** é dela, para não duplicar:
 |---|---|---|
 | Definições | por que o produto é assim | como o trabalho foi feito |
 | Contrato de comportamento | o que existe e como se comporta | o caminho até chegar lá |
-| Perguntas em aberto | o que falta decidir | — |
+| Perguntas em aberto | o que falta decidir | nada |
 | Log de decisões | decisões, com a alternativa descartada | procedimento |
 | **Este playbook** | **o procedimento e os prompts** | **decisão de produto** |
 
-**Log e playbook se confundem e não devem.** Se o que apareceu foi uma escolha entre caminhos com custo real, é entrada de log. Se foi uma forma de conduzir a ferramenta, é entrada de playbook. Quando for os dois, cada documento guarda a sua metade e um cita o outro — nunca os dois contando a história inteira.
+**Log e playbook se confundem e não devem.** Se o que apareceu foi uma escolha entre caminhos com custo real, é entrada de log. Se foi uma forma de conduzir a ferramenta, é entrada de playbook. Quando for os dois, cada documento guarda a sua metade e um cita o outro, nunca os dois contando a história inteira.
 
-**Playbook e skill também não se confundem.** Uma skill é o procedimento que a ferramenta executa; o playbook é o registro de como o procedimento foi conduzido. Quando um trecho do playbook amadurecer a ponto de virar skill, a skill nasce dele — e o playbook continua guardando o caminho até lá, que é a parte que a skill não carrega.
+**Playbook e skill também não se confundem.** Uma skill é o procedimento que a ferramenta executa; o playbook é o registro de como o procedimento foi conduzido. Quando um trecho do playbook amadurecer a ponto de virar skill, a skill nasce dele, e o playbook continua guardando o caminho até lá, que é a parte que a skill não carrega.
 
 ---
 
@@ -119,7 +119,7 @@ A skill precisa saber o que **não** é dela, para não duplicar:
 
 Prompt real é texto real, e texto real às vezes carrega o que não deveria circular: nome de pessoa, dado de terceiro, credencial, caminho de arquivo particular.
 
-A skill deve **avisar antes de gravar** quando identificar algo assim no prompt, e propor a substituição — nome próprio por papel ("o usuário"), dado por marcador. A substituição é declarada em uma nota na entrada, para ficar claro que houve troca e que ela não é maquiagem de conteúdo.
+A skill deve **avisar antes de gravar** quando identificar algo assim no prompt, e propor a substituição: nome próprio por papel ("o usuário"), dado por marcador. A substituição é declarada em uma nota na entrada, para ficar claro que houve troca e que ela não é maquiagem de conteúdo.
 
 O que nunca acontece é a skill limpar por conta própria e não avisar.
 

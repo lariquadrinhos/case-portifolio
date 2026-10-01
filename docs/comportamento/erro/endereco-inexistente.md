@@ -18,17 +18,17 @@ servidor. Explica o que aconteceu e oferece saída.
 
 ## Regras
 
-- A página de erro tem a barra fixa, o tema e a tipografia do site — é o site, não uma
+- A página de erro tem a barra fixa, o tema e a tipografia do site: é o site, não uma
   tela de servidor.
 - Ela explica o que aconteceu, em linguagem comum.
 - **O texto desta página vive neste contrato**, não nos arquivos de conteúdo: é copy de
   interface, não conteúdo autoral.
 - Ela oferece três saídas: os trabalhos, a home e o contato.
-- **As três saídas são palavra simples** — sem contorno e sem sublinhado. Contorno prometeria
+- **As três saídas são palavra simples**, sem contorno e sem sublinhado. Contorno prometeria
   ação que acontece aqui, e não acontece nada aqui; sublinhado prometeria sair do site, e as
   três levam para dentro. Navegação interna já tem forma neste site: é a da barra.
 - **Nenhum item da barra recebe destaque de página atual.** A página de erro não é seção do
-  site, então não há item a que ela pertença — como já acontece na home.
+  site, então não há item a que ela pertença: como já acontece na home.
 - Vale para qualquer saída que devolva a pessoa para dentro do site, não só para endereço
   digitado errado.
 
@@ -40,7 +40,7 @@ forma, o que você procurava deve estar em um desses caminhos.
 **Saídas** · Ver os trabalhos · Voltar para a home · Falar comigo
 
 > **O corpo assume a falha antes de oferecer a saída.** "Um link meu que envelheceu" tira a
-> culpa de quem leu — é a mesma postura dos cases, olhar o sistema e não o usuário. Alterar
+> culpa de quem leu: é a mesma postura dos cases, olhar o sistema e não o usuário. Alterar
 > este texto é alterar este arquivo.
 
 ## Peças
@@ -83,7 +83,7 @@ Funcionalidade: Endereço inexistente
 
   @lacuna
   Cenário: Como a hospedagem entrega a página de erro
-    Então A DEFINIR — ver pergunta P15
+    Então A DEFINIR. Ver pergunta P15
 ```
 
 ## Transições

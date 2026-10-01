@@ -1,12 +1,122 @@
 {
-  "_": "GERADO A PARTIR DO FIGMA — NÃO EDITAR À MÃO. Lista todo quadro que corta o próprio conteúdo nas páginas Wireframe e Sistema visual. A checagem 8 exige que só restem os declarados: '· recorte' para janela sobre uma página maior, 'rola na horizontal' para conteúdo que rola. Para atualizar, reexporte.",
+  "_": "GERADO A PARTIR DO FIGMA, NÃO EDITAR À MÃO. Lista todo quadro que corta o próprio conteúdo nas páginas Wireframe e Sistema visual. A checagem 8 exige que só restem os declarados, e há três formas de declarar: '· recorte' para janela sobre uma página maior, 'rolável' ou 'rola na horizontal' para conteúdo que rola, e estar listado em midias.json, porque recortar material maior é o trabalho de um quadro de mídia. Para atualizar, reexporte.",
   "arquivo": "hwClE9Xpm51OW4vPsCCn8J",
-  "exportado": "2026-09-22",
-  "nosVarridos": 1801,
+  "exportado": "2026-09-30",
+  "nosVarridos": 4138,
   "cortando": [
-    { "pagina": "Wireframe", "quadro": "tabela · O que o novo fluxo mudou · rola na horizontal", "tam": "327×615", "sobra": "233 à direita" },
-    { "pagina": "Wireframe", "quadro": "tabela · O que eu entreguei · rola na horizontal", "tam": "327×342", "sobra": "233 à direita" },
-    { "pagina": "Wireframe", "quadro": "Contato revelado · tela estreita 375 · recorte", "tam": "375×700", "sobra": "224 embaixo" },
-    { "pagina": "Wireframe", "quadro": "Menu aberto · tela estreita 375 · recorte", "tam": "375×700", "sobra": "224 embaixo" }
+    {
+      "pagina": "Wireframe",
+      "quadro": "Atalho de salto · desktop 1440 · recorte",
+      "tam": "1440×560",
+      "sobra": "42 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "Atalho de salto · desktop 1440 · recorte · tema escuro",
+      "tam": "1440×560",
+      "sobra": "42 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "Atalho de salto · tela estreita 375 · recorte",
+      "tam": "375×700",
+      "sobra": "332 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "Atalho de salto · tela estreita 375 · recorte · tema escuro",
+      "tam": "375×700",
+      "sobra": "332 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "Contato revelado · tela estreita 375 · recorte",
+      "tam": "375×700",
+      "sobra": "240 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "Contato revelado · tela estreita 375 · recorte · tema escuro",
+      "tam": "375×700",
+      "sobra": "240 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "Conteúdo rolável",
+      "tam": "191×333",
+      "sobra": "39 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "Conteúdo rolável",
+      "tam": "191×333",
+      "sobra": "39 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "Etapas abertas · tela estreita 375 · recorte",
+      "tam": "375×700",
+      "sobra": "240 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "Etapas abertas · tela estreita 375 · recorte · tema escuro",
+      "tam": "375×700",
+      "sobra": "240 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "Menu aberto · tela estreita 375 · recorte",
+      "tam": "375×700",
+      "sobra": "240 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "Menu aberto · tela estreita 375 · recorte · tema escuro",
+      "tam": "375×700",
+      "sobra": "240 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "Voltar ao topo · desktop 1440 · recorte",
+      "tam": "1440×560",
+      "sobra": "821 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "Voltar ao topo · desktop 1440 · recorte · tema escuro",
+      "tam": "1440×560",
+      "sobra": "821 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "reembolso-2-diagnostico-claro",
+      "tam": "411×786",
+      "sobra": "43 à direita"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "reembolso-2-diagnostico-escuro",
+      "tam": "411×786",
+      "sobra": "148 à direita"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "reembolso-4-sistema-remontado-claro",
+      "tam": "411×487",
+      "sobra": "348 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "reembolso-4-sistema-remontado-escuro",
+      "tam": "411×487",
+      "sobra": "348 embaixo"
+    },
+    {
+      "pagina": "Wireframe",
+      "quadro": "reembolso-4-telas-de-erro-claro",
+      "tam": "411×487",
+      "sobra": "348 embaixo"
+    }
   ]
 }

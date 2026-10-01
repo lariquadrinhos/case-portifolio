@@ -1,0 +1,120 @@
+{
+  "_": "Altura de cada tela e onde o conteúdo termina. A anotação do wireframe não conta: ela documenta a tela, não é conteúdo dela. Só as telas claras entram. ATENÇÃO: a premissa de que a gêmea escura tem as mesmas medidas deixou de valer em 30/09, 'Case Reembolso · tela estreita 375 · tema escuro' tem 11940/11876, 11px a menos, porque os dois recortes do fluxograma do capítulo 3 têm altura diferente. Ver P59. Em 2026-10-01 só as duas telas do Case Finanças foram relidas do Figma (106:22 e 108:22, depois do vídeo do capítulo 1); as demais são do export de 2026-09-30.",
+  "exportado": "2026-10-01",
+  "margens": {
+    "desktop": 96,
+    "estreita": 64
+  },
+  "telas": [
+    {
+      "nome": "Home · desktop 1440",
+      "altura": 980,
+      "conteudoAte": 884
+    },
+    {
+      "nome": "Home · tela estreita 375",
+      "altura": 832,
+      "conteudoAte": 768
+    },
+    {
+      "nome": "Trabalhos · desktop 1440",
+      "altura": 1011,
+      "conteudoAte": 915
+    },
+    {
+      "nome": "Trabalhos · tela estreita 375",
+      "altura": 1198,
+      "conteudoAte": 1134
+    },
+    {
+      "nome": "Case · desktop 1440",
+      "altura": 6515,
+      "conteudoAte": 6419
+    },
+    {
+      "nome": "Case · tela estreita 375",
+      "altura": 10100,
+      "conteudoAte": 10036
+    },
+    {
+      "nome": "Quem sou eu · desktop 1440",
+      "altura": 2091,
+      "conteudoAte": 1995
+    },
+    {
+      "nome": "Quem sou eu · tela estreita 375",
+      "altura": 3444,
+      "conteudoAte": 3380
+    },
+    {
+      "nome": "Erro · desktop 1440",
+      "altura": 648,
+      "conteudoAte": 552
+    },
+    {
+      "nome": "Erro · tela estreita 375",
+      "altura": 626,
+      "conteudoAte": 562
+    },
+    {
+      "nome": "Case Reembolso · desktop 1440",
+      "altura": 8170,
+      "conteudoAte": 8074
+    },
+    {
+      "nome": "Case Reembolso · tela estreita 375",
+      "altura": 11951,
+      "conteudoAte": 11887
+    },
+    {
+      "nome": "Contato revelado · desktop 1440",
+      "altura": 598,
+      "conteudoAte": 502
+    },
+    {
+      "nome": "Contato revelado · tela estreita 375 · recorte",
+      "altura": 700,
+      "conteudoAte": 940
+    },
+    {
+      "nome": "Menu aberto · tela estreita 375 · recorte",
+      "altura": 700,
+      "conteudoAte": 940
+    },
+    {
+      "nome": "Tema revelado · desktop 1440",
+      "altura": 298,
+      "conteudoAte": 202
+    },
+    {
+      "nome": "Extra aberto · desktop 1440",
+      "altura": 1366,
+      "conteudoAte": 1270
+    },
+    {
+      "nome": "Extra aberto · tela estreita 375",
+      "altura": 2666,
+      "conteudoAte": 2602
+    },
+    {
+      "nome": "Atalho de salto · desktop 1440 · recorte",
+      "altura": 560,
+      "conteudoAte": 602
+    },
+    {
+      "nome": "Atalho de salto · tela estreita 375 · recorte",
+      "altura": 700,
+      "conteudoAte": 1032
+    },
+    {
+      "nome": "Etapas abertas · tela estreita 375 · recorte",
+      "altura": 700,
+      "conteudoAte": 940
+    },
+    {
+      "nome": "Voltar ao topo · desktop 1440 · recorte",
+      "altura": 560,
+      "conteudoAte": 1381
+    }
+  ]
+}

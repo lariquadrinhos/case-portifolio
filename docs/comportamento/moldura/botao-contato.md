@@ -16,18 +16,18 @@ figma:
 > **A barra tem 64 de altura nas duas larguras**, e o respiro é consequência disso, não
 > escolha. Era 72 no desktop sem razão escrita, com o mesmo conteúdo dos dois lados.
 >
-> **A barra é uniforme.** Todos os seus itens — Trabalhos, Quem sou eu, Contato e o
-> controle de tema — usam o mesmo peso e a mesma cor. Nenhum recebe borda, fundo ou
+> **A barra é uniforme.** Todos os seus itens (Trabalhos, Quem sou eu, Contato e o
+> controle de tema) usam o mesmo peso e a mesma cor. Nenhum recebe borda, fundo ou
 > destaque. Os itens de navegação são do mesmo nível e **não se diferenciam por peso nem
 > por cor**. O nível se marca pelo
-> tamanho, nunca pela cor — e dois itens do mesmo nível não têm o que marcar. *"Trabalhos em
+> tamanho, nunca pela cor, e dois itens do mesmo nível não têm o que marcar. *"Trabalhos em
 > primeiro lugar"* é ordem, não ênfase.
 >
 > **A barra indica onde a pessoa está.** O item correspondente recebe **sublinhado no acento
 > de sistema** e é declarado na marcação. Cor e sublinhado juntos, porque cor sozinha não
 > basta; peso fica de fora, para não confundir estado com hierarquia.
 >
-> **Um case pertence a Trabalhos.** É a única relação de pertencimento do site — nenhuma
+> **Um case pertence a Trabalhos.** É a única relação de pertencimento do site: nenhuma
 > outra página está dentro de outra. Numa página de case, "Trabalhos" recebe o mesmo
 > sublinhado, como seção. A distinção entre "estou em Trabalhos" e "estou dentro de
 > Trabalhos" não é marcada: as duas significam a mesma coisa para quem se orienta, e
@@ -37,7 +37,7 @@ figma:
 > está na entrada, não dentro de uma seção; a home é alcançada pelo nome, que é identidade e
 > não item de navegação. Na página de erro ela não está em lugar nenhum.
 
-Fica à direita da barra fixa. Navegação diz para onde ir; contato diz o que fazer — e essa
+Fica à direita da barra fixa. Navegação diz para onde ir; contato diz o que fazer, e essa
 diferença é de **comportamento, não de aparência**. Ao ser acionado, revela o endereço de
 e-mail escrito por extenso e o LinkedIn.
 
@@ -47,47 +47,47 @@ e-mail escrito por extenso e o LinkedIn.
 - **Não tem destaque visual.** A ordem da barra em desktop é: nome · Trabalhos · Quem sou eu
   · Contato · controle de tema, com o tema por último.
 - **Em tela estreita a barra é: Larissa · Trabalhos · Contato · Menu.** "Quem sou eu" e o
-  controle de tema vão para dentro do menu. **Nenhum item vira ícone** — a barra é toda
+  controle de tema vão para dentro do menu. **Nenhum item vira ícone**: a barra é toda
   palavra, nas duas larguras.
 - **O que decide a divisão é a largura, medida, não a arrumação.** A barra estreita tem
   327px úteis. "Quem sou eu" é o rótulo mais longo do site, 113px, e a combinação que cabe
-  — Larissa · Trabalhos · Contato · Menu, 308px — deixa 19px de folga. Nenhum arranjo com
+(Larissa · Trabalhos · Contato · Menu, 308px) deixa 19px de folga. Nenhum arranjo com
   "Quem sou eu" na barra fecha: com Menu falta 24px, no lugar de Contato falta 47px, com
   tudo aberto falta 109px. **Então o menu guarda uma página só, e isso não é desarrumação:
   é o resto de uma conta.** Uma terceira página futura cai ali também.
 - **Todo item da barra é escrito do mesmo jeito: inicial maiúscula.** "Tema" e "Menu"
-  seguem a grafia de "Trabalhos" e "Contato" — se são palavras como as outras, são escritas
+  seguem a grafia de "Trabalhos" e "Contato", se são palavras como as outras, são escritas
   como as outras. Uniformidade inclui grafia.
 - Quando a página atual está dentro do menu, **é a palavra "Menu" que recebe o sublinhado**.
   Sem isso, a única página escondida seria também a única sem indicador.
 - Acionar o botão revela duas saídas: o e-mail e o LinkedIn.
-- **As quatro sobreposições do site são a mesma peça: contato, menu e tema.** Mesma casca —
-  canto de 10, traço de 1, sombra — e mesmo miolo: a caixa é uma lista de linhas, e **a linha
+- **As quatro sobreposições do site são a mesma peça: contato, menu e tema.** Mesma casca
+  (canto de 10, traço de 1, sombra) e mesmo miolo: a caixa é uma lista de linhas, e **a linha
   inteira é o alvo**, não o texto dentro dela. Tocar ao lado da palavra tem que funcionar.
 - **Cada linha tem 12px de respiro em cima e embaixo**, o que dá alvo de 54px no desktop e
   56px na tela estreita. O mínimo confortável para dedo é 44; texto solto numa caixa dá 32.
 - **A linha ocupa a caixa inteira, mesmo quando o texto é curto.** Sem isso, "Claro" teria
-  alvo 15px mais estreito que "Escuro" — duas opções irmãs com áreas de toque diferentes.
+  alvo 15px mais estreito que "Escuro": duas opções irmãs com áreas de toque diferentes.
 - **A divisória tem o mesmo respiro dos dois lados.**
 - **A caixa abraça o conteúdo; a largura não é escolhida.** Ela acompanha a linha mais larga.
   Na tela estreita, onde a caixa ocupa a largura disponível, quem manda é a margem.
 - **Os rótulos são do tamanho dos itens da barra**, 18. Uma sobreposição é lista de alvos, não
-  texto de leitura — o corpo maior aqui só faria a caixa disputar com a página atrás.
-- **Toda sobreposição fica a 12px do que a abriu** — contato, menu e tema, nas duas larguras.
+  texto de leitura: o corpo maior aqui só faria a caixa disputar com a página atrás.
+- **Toda sobreposição fica a 12px do que a abriu**: contato, menu e tema, nas duas larguras.
   Quando o gatilho é item da barra, a caixa pende da borda de baixo da barra, não da palavra:
   a palavra acaba dentro da barra, e uma caixa saindo do meio dela cobriria a própria barra.
 - **A caixa se comporta diferente nas duas larguras, e o que decide é o dedo.** No desktop
-  ela ancora logo abaixo do que a abriu e não tem véu — o clique fora tem mira precisa. Em
+  ela ancora logo abaixo do que a abriu e não tem véu: o clique fora tem mira precisa. Em
   tela estreita ela ocupa a largura e ganha véu, que é o alvo grande para recolher.
-- **O e-mail e o LinkedIn aparecem como palavra sublinhada**, porque os dois saem do site —
+- **O e-mail e o LinkedIn aparecem como palavra sublinhada**, porque os dois saem do site:
   a mesma forma que eles têm em "Quem sou eu".
-- **O e-mail aparece escrito por extenso — `llquadros95@gmail.com` — visível e copiável.**
+- **O e-mail aparece escrito por extenso: `llquadros95@gmail.com`: visível e copiável.**
 - Não há formulário de contato.
 - O contato também existe dentro de "Quem sou eu", junto do currículo em PDF.
 
 **Por que o endereço aparece escrito:** um `mailto:` acionado em computador sem cliente de
 e-mail configurado não faz nada visível. Quem faz triagem costuma estar no computador e
-muitas vezes usa webmail. Falha silenciosa é o pior tipo de falha — com o endereço à
+muitas vezes usa webmail. Falha silenciosa é o pior tipo de falha: com o endereço à
 vista, mesmo que nada abra, a pessoa copia.
 
 ## Peças
@@ -97,9 +97,9 @@ vista, mesmo que nada abra, a pessoa copia.
 | contato na barra | dentro de qualquer tela | não se aplica |
 | contato revelado · desktop | `152:42` | não se aplica |
 | contato revelado · estreita | `152:61` | não se aplica |
-| endereço de e-mail | dentro de `152:42` | — |
-| atalho do LinkedIn | dentro de `152:42` | — |
-| botão "Falar comigo" | `146:63`, `148:203` | não se aplica |
+| endereço de e-mail | dentro de `152:42` | não se aplica |
+| atalho do LinkedIn | dentro de `152:42` | não se aplica |
+| botão "Falar comigo" | `215:336`, `215:338` | não se aplica |
 | menu aberto · estreita | `154:42` | não se aplica |
 | barra fixa | componente, 6 variantes | não se aplica |
 
@@ -210,6 +210,6 @@ Funcionalidade: Contato na barra
 | De | Gatilho | Para |
 |---|---|---|
 | Qualquer página | Acionar o contato | Contato revelado, sobre a mesma página |
-| Contato revelado | Tocar no endereço | Cliente de e-mail, ou nada — o endereço permanece |
+| Contato revelado | Tocar no endereço | Cliente de e-mail, ou nada: o endereço permanece |
 | Contato revelado | Acionar o LinkedIn | Nova aba com o perfil |
 | Contato revelado | Esc ou toque fora | Contato recolhido, foco de volta no botão |

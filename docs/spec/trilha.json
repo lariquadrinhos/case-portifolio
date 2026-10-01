@@ -1,0 +1,144 @@
+{
+  "_": "Início e fim de cada capítulo, em pixels a partir do topo da página: [rótulo, início, fim]. O início é o y do quadro do capítulo; o fim é a base dele, que abraça o último filho. Exportado do Figma para a checagem 10 simular a trilha e a 15 conferir que um capítulo começa depois do fim do anterior, sem abrir o arquivo. Reexporte quando um capítulo mudar de tamanho. As quatro telas claras de case relidas com get_metadata em 2026-10-01.",
+  "exportado": "2026-10-01",
+  "janelaSuposta": {
+    "desktop": 900,
+    "estreita": 740
+  },
+  "telas": {
+    "Case · desktop 1440": {
+      "largura": "desktop",
+      "pagina": 6515,
+      "capitulos": [
+        [
+          "Introdução",
+          698,
+          1178
+        ],
+        [
+          "Descoberta",
+          1274,
+          2228
+        ],
+        [
+          "Desenho e documentação",
+          2324,
+          3146
+        ],
+        [
+          "Design system",
+          3242,
+          3682
+        ],
+        [
+          "Desenvolvimento",
+          3778,
+          4242
+        ],
+        [
+          "Resultados",
+          4338,
+          4758
+        ]
+      ]
+    },
+    "Case · tela estreita 375": {
+      "largura": "estreita",
+      "pagina": 10100,
+      "capitulos": [
+        [
+          "Introdução",
+          1096,
+          2070
+        ],
+        [
+          "Descoberta",
+          2134,
+          4046
+        ],
+        [
+          "Desenho e documentação",
+          4110,
+          5701
+        ],
+        [
+          "Design system",
+          5765,
+          6780
+        ],
+        [
+          "Desenvolvimento",
+          6844,
+          7739
+        ],
+        [
+          "Resultados",
+          7803,
+          8640
+        ]
+      ]
+    },
+    "Case Reembolso · desktop 1440": {
+      "largura": "desktop",
+      "pagina": 8170,
+      "capitulos": [
+        [
+          "Introdução",
+          714,
+          954
+        ],
+        [
+          "Diagnóstico",
+          1050,
+          2026
+        ],
+        [
+          "Novo fluxo",
+          2122,
+          3723
+        ],
+        [
+          "Wireframes e interface",
+          3819,
+          5117
+        ],
+        [
+          "Resultados",
+          5213,
+          6523
+        ]
+      ]
+    },
+    "Case Reembolso · tela estreita 375": {
+      "largura": "estreita",
+      "pagina": 11951,
+      "capitulos": [
+        [
+          "Introdução",
+          1036,
+          1456
+        ],
+        [
+          "Diagnóstico",
+          1520,
+          3667
+        ],
+        [
+          "Novo fluxo",
+          3731,
+          5545
+        ],
+        [
+          "Wireframes e interface",
+          5609,
+          8465
+        ],
+        [
+          "Resultados",
+          8529,
+          10527
+        ]
+      ]
+    }
+  }
+}

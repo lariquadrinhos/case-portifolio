@@ -15,7 +15,7 @@ gerador em `construcao/`, saída em `site/` fora do Git.
 
 ---
 
-> ## Disponibilidade das histórias — leia antes de começar
+> ## Disponibilidade das histórias: leia antes de começar
 >
 > As três histórias **não estão igualmente disponíveis hoje**, e a diferença não é de
 > esforço, é de dependência de fase.
@@ -26,7 +26,7 @@ gerador em `construcao/`, saída em `site/` fora do Git.
 > | **US2** · texto vira página | **Parcialmente bloqueada** | A estrutura sim; a aparência depende do design system (Fase 2) e dos mockups (Fase 3), que não existem |
 > | **US3** · publicar sem passo manual | Disponível depois da US1 | Só depende da US1 |
 >
-> **A US1 é a única inteiramente executável neste momento** — e é exatamente o que a Fase 4
+> **A US1 é a única inteiramente executável neste momento**, e é exatamente o que a Fase 4
 > manda fazer primeiro: *"o caminho até o deploy precisa funcionar antes de existir qualquer
 > conteúdo"*. As tarefas da US2 marcadas `⏸` esperam a Fase 2 ou 3.
 
@@ -35,7 +35,7 @@ gerador em `construcao/`, saída em `site/` fora do Git.
 ## Phase 1: Setup (Shared Infrastructure)
 
 - [ ] T001 Criar a estrutura de pastas do plano: `construcao/`, `modelo/`, `publico/`, `testes/`, `.github/workflows/`
-- [ ] T002 [P] Acrescentar `site/` ao `.gitignore` — saída gerada não entra no Git
+- [ ] T002 [P] Acrescentar `site/` ao `.gitignore`, saída gerada não entra no Git
 - [ ] T003 [P] Criar `package.json` mínimo, **sem dependência nenhuma**, só com os atalhos `construir`, `publicar`, `checar` e `testar`
 
 ---
@@ -46,14 +46,14 @@ Tudo aqui bloqueia todas as histórias. Nada de aparência nesta fase.
 
 - [ ] T004 [P] Implementar `construcao/marcadores.mjs`: reconhecer `<!-- bloco: -->`, `<!-- trilha: -->`, `<!-- privado -->` e `Legenda:`. Recusar marcador fora do vocabulário, nomeando arquivo, linha e marcador (FR-002, FR-014)
 - [ ] T005 [P] Implementar `construcao/ausencia.mjs`: peça que falta é **visível na tela** em modo local e **bloqueante** em modo de publicação (FR-011, decisão 023)
-- [ ] T006 Implementar `construcao/markdown.mjs` — só o subconjunto medido: títulos 1–3, negrito, itálico, tabelas, listas, réguas, parágrafos, e o padrão `**Chave** ·` da tira de destaques (decisão 024)
-- [ ] T007 [P] Escrever `modelo/base.html`: a moldura com barra fixa, área de conteúdo, voltar ao topo e rodapé. **Sem estilo ainda** — só estrutura e marcos de acessibilidade
+- [ ] T006 Implementar `construcao/markdown.mjs`, só o subconjunto medido: títulos 1–3, negrito, itálico, tabelas, listas, réguas, parágrafos, e o padrão `**Chave** ·` da tira de destaques (decisão 024)
+- [ ] T007 [P] Escrever `modelo/base.html`: a moldura com barra fixa, área de conteúdo, voltar ao topo e rodapé. **Sem estilo ainda**, só estrutura e marcos de acessibilidade
 - [ ] T008 [P] Escrever `modelo/tema.js`: o script curto e bloqueante do `<head>`, que lê a escolha salva e marca o elemento raiz. **Falha em segurança**, caindo na preferência do sistema (FR-009, decisão 005)
 - [ ] T009 Implementar `construcao/construir.mjs`: ler o argumento de modo, ecoar o modo na primeira linha da saída, orquestrar as etapas (decisão 023, pesquisa 4)
 
 ---
 
-## Phase 3: User Story 1 — Uma página vazia no ar (Priority: P1) 🎯 MVP
+## Phase 3: User Story 1: Uma página vazia no ar (Priority: P1) 🎯 MVP
 
 **Objetivo.** O caminho até a publicação funciona antes de existir qualquer conteúdo.
 
@@ -62,8 +62,8 @@ dispositivo. Entrega valor sozinha: prova que o caminho existe.
 
 ### Tests for User Story 1
 
-- [ ] T010 [P] [US1] `testes/construcao.test.mjs` — *"A construção gera uma página com a moldura do site"*
-- [ ] T011 [P] [US1] `testes/construcao.test.mjs` — *"A construção em modo de publicação recusa quando falta peça"*
+- [ ] T010 [P] [US1] `testes/construcao.test.mjs`, *"A construção gera uma página com a moldura do site"*
+- [ ] T011 [P] [US1] `testes/construcao.test.mjs`, *"A construção em modo de publicação recusa quando falta peça"*
 
 ### Implementation for User Story 1
 
@@ -74,11 +74,11 @@ dispositivo. Entrega valor sozinha: prova que o caminho existe.
 - [ ] T016 [US1] Verificar que uma construção que falha **não publica** e o que estava no ar permanece (SC-006)
 
 **Checkpoint.** Há um site no ar, gerado, publicado por automação versionada. Nada de
-conteúdo real ainda — e é assim que deve ser.
+conteúdo real ainda, e é assim que deve ser.
 
 ---
 
-## Phase 4: User Story 2 — Editar um arquivo de texto muda a página (Priority: P2)
+## Phase 4: User Story 2: Editar um arquivo de texto muda a página (Priority: P2)
 
 **Objetivo.** Atualizar uma página é editar um arquivo de texto, sem tocar em código.
 
@@ -96,16 +96,16 @@ cenário**, como o contrato exige:
 - [ ] T020 [P] [US2] *"Imagem com legenda"*
 - [ ] T021 [P] [US2] *"A foto da página"*
 - [ ] T022 [P] [US2] *"Uma peça esperada não está no arquivo"*
-- [ ] T023 [P] [US2] `testes/tema.test.mjs` — *"O script de tema não executa"*, do contrato `tema/`
+- [ ] T023 [P] [US2] `testes/tema.test.mjs`, *"O script de tema não executa"*, do contrato `tema/`
 
 ### Implementation for User Story 2
 
 - [ ] T024 [US2] Implementar `construcao/paginas.mjs`: dos blocos às cinco páginas mais a de erro
-- [ ] T025 [US2] Montar a trilha a partir da ordem dos marcadores no arquivo do case — **sem lista em outro lugar** (FR-004)
+- [ ] T025 [US2] Montar a trilha a partir da ordem dos marcadores no arquivo do case, **sem lista em outro lugar** (FR-004)
 - [ ] T026 [US2] Gerar a home a partir do bloco `home` de `quem-sou-eu.md`, na ordem da decisão 018: frase, parágrafo, identificação, ação
 - [ ] T027 [US2] Gerar a página de erro com o texto do contrato `erro/`, não de arquivo de conteúdo (decisão 011)
-- [ ] T028 ⏸ [US2] Gerar o CSS a partir do arquivo de tokens — **bloqueada pela P07**, que espera a Fase 2
-- [ ] T029 ⏸ [US2] Aplicar o sistema visual às páginas — **bloqueada**: depende do design system e dos mockups, Fases 2 e 3
+- [ ] T028 ⏸ [US2] Gerar o CSS a partir do arquivo de tokens, **bloqueada pela P07**, que espera a Fase 2
+- [ ] T029 ⏸ [US2] Aplicar o sistema visual às páginas, **bloqueada**: depende do design system e dos mockups, Fases 2 e 3
 - [ ] T030 [US2] Verificar que, com JavaScript desligado, todo o conteúdo permanece legível (SC-004)
 
 **Checkpoint.** O conteúdo real está no ar, estruturado e legível. A aparência definitiva
@@ -113,7 +113,7 @@ espera o design system.
 
 ---
 
-## Phase 5: User Story 3 — Publicar sem passo manual (Priority: P3)
+## Phase 5: User Story 3: Publicar sem passo manual (Priority: P3)
 
 **Objetivo.** Salvar a mudança no repositório é suficiente para o site mudar.
 
@@ -132,7 +132,7 @@ espera o design system.
 ## Phase 6: Polish & Cross-Cutting
 
 - [ ] T036 [P] Preparar as imagens uma vez, em formato moderno e nos tamanhos necessários, em `publico/` (decisão 009)
-- [ ] T037 [P] Descrições de página e imagem de compartilhamento — a prévia do link é o primeiro contato de quem recebe o link de alguém
+- [ ] T037 [P] Descrições de página e imagem de compartilhamento, a prévia do link é o primeiro contato de quem recebe o link de alguém
 - [ ] T038 Ativar a checagem 3 em `scripts/checagens.mjs`: todo `Cenário:` do contrato citado por um teste (decisão 024)
 - [ ] T039 [P] Medir a primeira leitura no celular em rede móvel e confirmar abaixo de 2,5 s (SC-001)
 - [ ] T040 [P] Percorrer o site inteiro pelo teclado, com foco sempre visível
@@ -163,7 +163,7 @@ Polish (T036–T041)
 de T004; T009 depende de todas.
 
 **US2:** os sete testes (T017–T023) são independentes entre si e podem ser escritos em
-paralelo — e **antes** da implementação, já que cada um é a tradução direta de um cenário
+paralelo, e **antes** da implementação, já que cada um é a tradução direta de um cenário
 que já existe no contrato.
 
 **Polish:** T036, T037, T039 e T040 são independentes.
@@ -171,8 +171,8 @@ que já existe no contrato.
 ## Implementation Strategy
 
 **Primeiro corte: só a US1.** Sete tarefas depois da fundação, e o resultado é um site no ar
-com automação. Isso resolve o risco que a definição de pronto nomeia — *"desenhar o site
-inteiro antes de publicar qualquer coisa"* — sem depender de nenhum desenho.
+com automação. Isso resolve o risco que a definição de pronto nomeia: *"desenhar o site
+inteiro antes de publicar qualquer coisa"*, sem depender de nenhum desenho.
 
 **Depois, a US2 até onde ela vai.** Toda a estrutura funciona sem o sistema visual: o texto
 aparece, a trilha monta, as páginas existem. As duas tarefas de aparência ficam marcadas e
@@ -182,4 +182,4 @@ esperam.
 
 **O que este plano deliberadamente não faz:** nenhuma tarefa decide aparência. Isso é das
 Fases 2 e 3, no Figma, e trazê-lo para cá seria o design acontecendo por acidente dentro da
-implementação — que é o risco que as definições nomeiam.
+implementação, que é o risco que as definições nomeiam.

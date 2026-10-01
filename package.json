@@ -1,0 +1,14 @@
+{
+  "name": "case-portifolio",
+  "private": true,
+  "description": "Portfólio da Larissa Quadros: o site estático e o registro de como ele foi construído.",
+  "type": "module",
+  "engines": { "node": ">=18.20.8" },
+  "scripts": {
+    "construir": "node construcao/construir.mjs",
+    "publicar": "node construcao/construir.mjs --publicar",
+    "checar": "node scripts/checagens.mjs",
+    "testar": "node --test testes/",
+    "servir": "node construcao/construir.mjs && node construcao/servir.mjs"
+  }
+}

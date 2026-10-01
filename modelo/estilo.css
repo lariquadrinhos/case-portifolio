@@ -1,0 +1,876 @@
+/* O estilo do site. Todo valor visual vem de var(--…), gerado de docs/spec/tokens.json.
+   A largura estreita é a base; o modo Desktop entra em min-width: 1024px (ver tokens.mjs).
+
+   Medidas que o Figma desenha sem variável ficam todas aqui, num lugar só, cada uma com o
+   nó de onde veio. Não são improviso: são o desenho. Mas também não são token, e por isso
+   estão listadas no PR, para virar variável ou ser corrigidas no Figma. */
+
+:root {
+  --largura-quadro: 1440px;            /* largura das telas desktop */
+  --altura-barra: 64px;                /* barra fixa 203:164 */
+  --barra-respiro-topo: 17px;          /* 203:95: centra a palavra de 30+4 na barra */
+  --altura-faixa: 44px;                /* faixa de progresso 199:352 */
+  --trilha-topo: 100px;                /* 357:590: a trilha fica a 36 da barra */
+  --sublinhado-espessura: 2px;         /* página atual na barra, 203:79 */
+  --respiro-pastilha: 20px;            /* atalho 273:114 e voltar ao topo 356:120 */
+  --sombra-flutuante: 0 8px 24px rgba(0, 0, 0, 0.12); /* sobreposições e atalho */
+  --rastreio-display: -0.02em;         /* 61:3 e 94:22 */
+  --rastreio-titulo-case: -0.015em;    /* 106:33, 103:27 */
+  --rastreio-titulo-cap: -0.01em;      /* títulos de capítulo, valores, convite */
+  --rastreio-etiqueta: 0.06em;         /* PRÓXIMO CASE, identificação da home */
+  --home-abertura-size: 26px;          /* 59:5, só no desktop: fora da escala de tipo */
+  --home-abertura-line: 39px;          /* 59:5 */
+  --home-etiqueta-size: 16px;          /* 59:3, só no desktop: fora da escala de tipo */
+  --home-paragrafo-largura: 596px;     /* 59:5 */
+  --home-paragrafo-largura-estreita: 289px; /* 66:16 */
+  --erro-topo-largo: 160px;            /* 136:41: conteúdo em y=224 */
+  --midia-vazia-proporcao: 4 / 3;      /* lacuna de mídia, 411×308 e 327×245 */
+  --video-proporcao: 411 / 510;        /* 379:454, vídeo em pé */
+  --foto-proporcao: 4 / 5;             /* 116:48 e 132:41 */
+  --marca-texto-altura: 0.75;          /* inventário: 75% da entrelinha, centrada */
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("{{base}}publico/fontes/dm-sans.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--family), system-ui, sans-serif;
+  font-size: var(--size-corpo);
+  line-height: var(--line-corpo);
+  /* Tamanho óptico automático: o eixo acompanha o corpo do texto. O código exportado do Figma
+     diz "opsz" 14, mas o desenho não é renderizado assim: medido, "Se existe uma" em 96px
+     tem 570px no Figma, 571 com o eixo automático e 625 com ele preso em 14. */
+  font-optical-sizing: auto;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body { margin: 0; background: var(--bg-page); }
+
+h1, h2, h3, h4, h5, h6, p, figure, dl, dd, ul, ol { margin: 0; }
+img, video, svg { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; }
+
+/* Ênfase dentro de frase, de lista e de tabela fica marcada no HTML, sem peso nem
+   inclinação, como no Figma. Só o parágrafo inteiro em negrito muda de forma (decisão 180). */
+strong { font-weight: inherit; }
+em { font-style: normal; }
+
+[hidden] { display: none !important; }
+.sem-js .so-com-js { display: none !important; }
+
+@media (max-width: 1023.98px) { .so-largo { display: none !important; } }
+@media (min-width: 1024px) { .so-estreito { display: none !important; } }
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(var(--colunas), minmax(0, 1fr));
+  column-gap: var(--calha);
+  width: 100%;
+  max-width: var(--largura-quadro);
+  margin-inline: auto;
+  padding-inline: var(--margem);
+}
+.grade > * { grid-column: 1 / -1; }
+
+/* ── Foco ─────────────────────────────────────────────────────────────────────
+   Anel de 2, afastado 2, na cor de estado, só pelo teclado. O afastamento faz o anel cair
+   sempre sobre o fundo, e é por isso que uma cor basta por tema. O anel segue o canto do
+   alvo: o navegador soma o afastamento ao raio. */
+
+:focus-visible {
+  outline: var(--foco-largura) solid var(--accent-estado-strong);
+  outline-offset: var(--foco-afastamento);
+}
+#topo:focus, main:focus { outline: none; }
+
+/* ── Marca-texto ──────────────────────────────────────────────────────────────
+   Uma faixa por linha quebrada, 75% da entrelinha, centrada. Cobre a frase, não a linha. */
+
+.marca-texto {
+  color: inherit;
+  padding-block: 0.25em;
+  background: linear-gradient(var(--accent-hero-surface), var(--accent-hero-surface))
+    center / 100% calc(var(--marca-linha) * var(--marca-texto-altura)) no-repeat;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* ── Atalho de salto ──────────────────────────────────────────────────────── */
+
+.atalho {
+  position: fixed;
+  z-index: 30;
+  top: calc(var(--altura-barra) + var(--space-16));
+  left: max(var(--margem), calc((100% - var(--largura-quadro)) / 2 + var(--margem)));
+  padding: var(--space-12) var(--respiro-pastilha);
+  background: var(--bg-surface);
+  border: var(--stroke-padrao) solid var(--border-elevado);
+  border-radius: var(--radius-bloco);
+  box-shadow: var(--sombra-flutuante);
+  color: var(--text-primary);
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.atalho:not(:focus) {
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+/* ── Barra ────────────────────────────────────────────────────────────────── */
+
+.barra {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bg-page);
+}
+.barra::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: var(--stroke-padrao);
+  background: var(--border);
+}
+.barra__dentro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: var(--altura-barra);
+  max-width: var(--largura-quadro);
+  margin-inline: auto;
+  padding: var(--barra-respiro-topo) var(--margem) 0;
+}
+.barra__itens {
+  display: flex;
+  gap: var(--space-16);
+  padding: 0;
+  list-style: none;
+}
+.barra__item {
+  position: relative;
+  display: block;
+  padding: 0 0 var(--space-4);
+  border: 0;
+  border-radius: 2px;
+  background: none;
+  color: var(--text-primary);
+  font-size: var(--size-corpo);
+  line-height: var(--line-corpo);
+  font-weight: 500;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* A página atual: sublinhado na cor de estado. Cor e forma juntas; o peso não muda. */
+.barra__item[aria-current="page"]::after,
+.barra__item--atual::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: var(--sublinhado-espessura);
+  background: var(--accent-estado-strong);
+}
+
+/* ── Sobreposições: contato, tema, menu, etapas ───────────────────────────────
+   Uma peça só. Casca de canto 10, traço 1 e sombra; miolo de linhas em que a linha
+   inteira é o alvo. Abre e fecha sem transição. */
+
+.caixa {
+  position: fixed;
+  inset: auto;
+  top: calc(var(--altura-barra) + var(--space-12));
+  left: var(--margem);
+  right: var(--margem);
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: var(--space-8) 0;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  border: var(--stroke-padrao) solid var(--border-elevado);
+  border-radius: var(--radius-bloco);
+  box-shadow: var(--sombra-flutuante);
+  overflow: visible;
+}
+.caixa::backdrop {
+  /* O véu cobre a página, nunca a barra: ela continua clara e tocável. */
+  top: var(--altura-barra);
+  background: var(--overlay-veu);
+}
+.caixa__linha {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  width: 100%;
+  padding: var(--space-12) var(--space-24);
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: inherit;
+  font-size: var(--size-corpo);
+  line-height: var(--line-abertura);
+  font-weight: 500;
+  text-align: left;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.caixa__linha--sublinhada {
+  text-decoration: underline;
+  text-underline-position: from-font;
+}
+.caixa__sinal { flex: none; width: var(--space-16); }
+.caixa__divisoria { height: var(--stroke-padrao); background: var(--border); }
+.caixa .falta { margin-left: var(--space-8); }
+
+/* A lista de etapas é a faixa crescendo: ocupa a largura e nasce colada nela. O véu
+   também poupa a faixa, porque a faixa é o gatilho (decisão 133). */
+.caixa--etapas {
+  left: 0;
+  right: 0;
+  top: calc(var(--altura-barra) + var(--altura-faixa) + var(--space-12));
+}
+.caixa--etapas::backdrop { top: calc(var(--altura-barra) + var(--altura-faixa)); }
+
+@media (min-width: 1024px) {
+  .caixa {
+    left: auto;
+    right: max(var(--margem), calc((100% - var(--largura-quadro)) / 2 + var(--margem)));
+    width: max-content;
+  }
+  .caixa__linha { line-height: var(--line-corpo); }
+  /* No desktop o clique fora tem mira precisa: sem véu. */
+  .caixa::backdrop { background: transparent; }
+}
+
+/* ── Botão: preenchido, uma variante, a ação principal da página ─────────── */
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: var(--space-16) 0;
+  border: 0;
+  border-radius: var(--radius-pilula);
+  background: var(--text-primary);
+  color: var(--bg-surface);
+  font-size: var(--size-corpo);
+  line-height: var(--line-corpo);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .botao { width: auto; padding-inline: var(--space-32); }
+}
+
+/* ── Palavra sublinhada: vai para fora do site ───────────────────────────── */
+
+.sublinhado, .link-externo, .tira__link {
+  border-radius: 2px;
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-position: from-font;
+}
+.sublinhado--inerte { cursor: default; }
+.link-externo { font-weight: 500; }
+.aviso-nova-aba {
+  display: inline-block;
+  margin-left: var(--space-8);
+  color: var(--text-secondary);
+  font-size: var(--size-apoio);
+  line-height: var(--line-apoio);
+  font-weight: 400;
+}
+
+/* ── Marcador de falta ───────────────────────────────────────────────────── */
+
+.falta {
+  color: var(--text-secondary);
+  font-size: var(--size-etiqueta);
+  line-height: var(--line-etiqueta);
+  font-weight: 500;
+}
+.falta--linha { display: block; margin-top: var(--space-4); }
+.falta--midia {
+  position: absolute;
+  top: var(--space-16);
+  left: var(--space-16);
+  right: var(--space-16);
+}
+
+/* ── Home ─────────────────────────────────────────────────────────────────── */
+
+.home {
+  align-content: start;
+  row-gap: var(--space-64);
+  padding-block: var(--space-64);
+}
+.home__frase {
+  --marca-linha: var(--line-display);
+  font-size: var(--size-display);
+  line-height: var(--line-display);
+  font-weight: 700;
+  letter-spacing: var(--rastreio-display);
+}
+.home__frase .linha { display: block; }
+.quebra-larga { display: none; }
+.home__bloco {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-24);
+}
+.home__paragrafo {
+  max-width: var(--home-paragrafo-largura-estreita);
+  color: var(--text-secondary);
+  font-size: var(--size-abertura);
+  line-height: var(--line-abertura);
+  font-weight: 500;
+}
+.home__identificacao {
+  color: var(--text-secondary);
+  font-size: var(--size-etiqueta);
+  line-height: var(--line-etiqueta);
+  font-weight: 500;
+  letter-spacing: var(--rastreio-etiqueta);
+  text-transform: uppercase;
+}
+@media (min-width: 1024px) {
+  .home { row-gap: var(--space-96); padding-block: var(--space-96); }
+  .quebra-larga { display: inline; }
+  .quebra-estreita { display: none; }
+  .home__bloco { gap: var(--space-32); }
+  .home__paragrafo {
+    max-width: var(--home-paragrafo-largura);
+    font-size: var(--home-abertura-size);
+    line-height: var(--home-abertura-line);
+  }
+  .home__identificacao { font-size: var(--home-etiqueta-size); }
+}
+
+/* ── Card de case ────────────────────────────────────────────────────────── */
+
+.cor-azul { --case-surface: var(--accent-azul-surface); --case-strong: var(--accent-azul-strong); }
+.cor-laranja { --case-surface: var(--accent-laranja-surface); --case-strong: var(--accent-laranja-strong); }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  background: var(--case-surface);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+.card__capa {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--radius-imagem);
+  background: var(--bg-subtle);
+}
+.card__capa img { width: 100%; height: 100%; object-fit: cover; }
+.card__capa .falta { position: absolute; top: var(--space-24); left: var(--space-24); }
+.card__texto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: var(--space-24);
+}
+.card__titulo {
+  font-size: var(--size-titulo-cap);
+  line-height: var(--line-titulo-cap);
+  font-weight: 700;
+}
+.card__linha { color: var(--text-secondary); }
+
+/* ── Trabalhos ────────────────────────────────────────────────────────────── */
+
+.trabalhos {
+  align-content: start;
+  row-gap: var(--space-32);
+  padding-block: var(--space-48) var(--space-64);
+}
+.trabalhos__titulo {
+  font-size: var(--size-titulo-case);
+  line-height: var(--line-titulo-case);
+  font-weight: 700;
+  letter-spacing: var(--rastreio-titulo-case);
+}
+.trabalhos__cards { display: grid; gap: var(--space-32); }
+@media (min-width: 1024px) {
+  .trabalhos { row-gap: var(--space-48); padding-block: var(--space-96); }
+  .trabalhos__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--calha); }
+}
+
+/* ── Case ─────────────────────────────────────────────────────────────────── */
+
+.case__hero {
+  row-gap: var(--space-24);
+  padding-top: var(--space-64);
+}
+.case__titulo {
+  font-size: var(--size-titulo-case);
+  line-height: var(--line-titulo-case);
+  font-weight: 700;
+  letter-spacing: var(--rastreio-titulo-case);
+}
+/* Quebra escolhida do título, só na tela estreita (decisão 186). */
+.case__titulo .linha-estreita { display: block; }
+.case__abertura {
+  --marca-linha: var(--line-abertura);
+  font-size: var(--size-abertura);
+  line-height: var(--line-abertura);
+  font-weight: 500;
+}
+.tira {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding-block: var(--space-24);
+  border-block: var(--stroke-padrao) solid var(--border);
+}
+.tira__item { display: flex; flex-direction: column; gap: var(--space-8); }
+.tira dt {
+  color: var(--text-secondary);
+  font-size: var(--size-etiqueta);
+  line-height: var(--line-etiqueta);
+  font-weight: 500;
+}
+.tira dd { font-size: var(--size-apoio); line-height: var(--line-apoio); }
+.tira__link, .tira dd .falta { display: block; width: fit-content; margin-top: var(--space-8); }
+.tira__link { font-weight: 500; }
+
+@media (min-width: 1024px) {
+  .case__hero { row-gap: var(--space-32); padding-top: var(--space-96); }
+  .case__titulo .linha-estreita { display: inline; }
+  .case__abertura { grid-column: 1 / 7; }
+  .tira { flex-direction: row; gap: var(--calha); }
+  .tira__item { flex: 1 1 0; min-width: 0; }
+}
+
+/* A faixa de progresso: a trilha da tela estreita, fixa logo abaixo da barra. */
+.faixa {
+  position: sticky;
+  top: var(--altura-barra);
+  z-index: 15;
+  background: var(--bg-page);
+}
+.faixa__botao {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: var(--altura-faixa);
+  padding: 0 var(--margem);
+  border: 0;
+  background: none;
+  font-size: var(--size-apoio);
+  line-height: var(--line-apoio);
+  cursor: pointer;
+}
+.faixa__etapa { font-weight: 500; }
+.faixa__posicao { color: var(--text-secondary); }
+.faixa__trilho {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: var(--sublinhado-espessura);
+  background: var(--border);
+}
+.faixa__progresso {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--case-strong);
+}
+
+/* Leitura: trilha nas colunas 1 e 2, título e texto nas 3 a 8, mídia nas 9 a 12. */
+.case__leitura { padding-top: var(--space-64); }
+.trilha { display: none; }
+.case__capitulos { display: flex; flex-direction: column; gap: var(--space-64); }
+
+.capitulo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  scroll-margin-top: calc(var(--altura-barra) + var(--altura-faixa) + var(--space-24));
+}
+.capitulo__titulo {
+  font-size: var(--size-titulo-cap);
+  line-height: var(--line-titulo-cap);
+  font-weight: 700;
+  letter-spacing: var(--rastreio-titulo-cap);
+}
+.capitulo__leitura, .capitulo__provas { display: flex; flex-direction: column; gap: var(--space-24); }
+.capitulo__leitura p { color: var(--text-secondary); }
+.capitulo__leitura .frase-de-abertura { color: var(--text-primary); font-weight: 500; }
+.subtitulo {
+  font-size: var(--size-subtitulo);
+  line-height: var(--line-subtitulo);
+  font-weight: 700;
+}
+
+/* O bloco de destaque marca ritmo, não importância: mesmo corpo e mesmo peso da prosa. Em
+   tela estreita sangra até as bordas, e o respiro ocupa o lugar da margem. */
+.capitulo__leitura .bloco-de-destaque {
+  margin-inline: calc(-1 * var(--margem));
+  padding: var(--space-24);
+  border-radius: var(--radius-bloco);
+  background: var(--case-surface);
+  color: var(--text-primary);
+}
+
+.lista { padding: 0; list-style: none; color: var(--text-secondary); }
+.lista--solta { display: flex; flex-direction: column; gap: var(--line-corpo); }
+.lista--numerada { counter-reset: item; }
+.lista--numerada li { counter-increment: item; }
+.lista--numerada li::before { content: counter(item) ". "; }
+
+.prova { display: flex; flex-direction: column; gap: var(--space-12); }
+.prova__midia { position: relative; border-radius: var(--radius-imagem); }
+.prova__img { width: 100%; height: auto; }
+.prova__vazia { aspect-ratio: var(--midia-vazia-proporcao); background: var(--bg-subtle); }
+.prova__video {
+  width: 100%;
+  height: auto;
+  background: var(--bg-page);
+}
+.prova__video--retrato {
+  aspect-ratio: var(--video-proporcao);
+  object-fit: contain;
+}
+.prova__legenda, .prova__convite {
+  color: var(--text-secondary);
+  font-size: var(--size-apoio);
+  line-height: var(--line-apoio);
+}
+.prova__convite .link-externo { font-size: var(--size-corpo); line-height: var(--line-corpo); }
+
+/* Mídia por tema: o conteúdo declara uma, a construção serve as duas, o tema escolhe. */
+.midia-escuro { display: none; }
+:root[data-tema="escuro"] .midia-claro { display: none; }
+:root[data-tema="escuro"] .midia-escuro { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) .midia-claro { display: none; }
+  :root:not([data-tema="claro"]) .midia-escuro { display: block; }
+}
+
+/* Tabela é conteúdo de desktop (decisão 132): em tela estreita a seção sai inteira. */
+.so-largo-bloco { display: none; }
+.tabela {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: var(--size-apoio);
+  line-height: var(--line-apoio);
+}
+.tabela caption { text-align: left; }
+.tabela th, .tabela td {
+  padding: var(--space-12) var(--calha) var(--space-12) 0;
+  border-bottom: var(--stroke-padrao) solid var(--border);
+  text-align: left;
+  vertical-align: top;
+  font-weight: 400;
+}
+.tabela th:last-child, .tabela td:last-child { padding-right: 0; }
+.tabela thead th { color: var(--text-secondary); font-weight: 500; }
+/* Larguras de coluna do Figma: 507/253/253 (145:52) e 254/785 (145:128), mais a calha. */
+.tabela--3-colunas thead th:first-child { width: 50%; }
+.tabela--3-colunas thead th:nth-child(2) { width: 26%; }
+.tabela--2-colunas thead th:first-child { width: 26%; }
+
+@media (min-width: 1024px) {
+  .faixa { display: none; }
+  .case__leitura { padding-top: var(--space-96); align-items: start; }
+  .trilha {
+    display: block;
+    grid-column: 1 / 3;
+    position: sticky;
+    top: var(--trilha-topo);
+  }
+  .case__capitulos { grid-column: 3 / -1; gap: var(--space-96); }
+  .capitulo {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    column-gap: var(--calha);
+    row-gap: var(--space-32);
+    align-items: start;
+    scroll-margin-top: calc(var(--altura-barra) + var(--space-32));
+  }
+  .capitulo__titulo { grid-column: 1 / 7; }
+  .capitulo__leitura { grid-column: 1 / 7; grid-row: 2; gap: var(--space-32); }
+  .capitulo__provas { grid-column: 7 / 11; grid-row: 2; gap: var(--space-32); }
+  .capitulo__largo { grid-column: 1 / -1; grid-row: 3; }
+  .capitulo__leitura .bloco-de-destaque {
+    margin-inline: 0;
+    padding: var(--space-24) var(--space-32);
+  }
+  .so-largo-bloco { display: block; }
+}
+
+/* A trilha: o traço vive dentro de cada item, e a cor para exatamente na bolinha atual.
+   Três estados (percorrido, atual, por vir), e nenhum anima (decisão 138). */
+.trilha__lista { padding: 0; list-style: none; }
+.trilha__item { position: relative; padding-bottom: var(--space-32); }
+.trilha__item:last-child { padding-bottom: 0; }
+.trilha__link {
+  display: flex;
+  gap: var(--space-16);
+  border-radius: 2px;
+  color: var(--text-secondary);
+  font-size: var(--size-apoio);
+  line-height: var(--line-apoio);
+  text-decoration: none;
+}
+.trilha__marcador {
+  position: relative;
+  z-index: 1;
+  flex: none;
+  width: var(--space-12);
+}
+.trilha__marcador::after {
+  content: "";
+  position: absolute;
+  top: var(--space-8);
+  left: 2px;
+  width: var(--space-8);
+  height: var(--space-8);
+  border-radius: 50%;
+  background: var(--text-tertiary);
+}
+/* Traço de cima: do topo do item ao centro da bolinha. De baixo: do centro ao fim do item. */
+.trilha__item::before, .trilha__item::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  width: var(--sublinhado-espessura);
+  background: var(--border-percurso);
+}
+.trilha__item::before { top: 0; height: var(--space-12); }
+.trilha__item::after { top: var(--space-12); bottom: 0; }
+.trilha__item:first-child::before, .trilha__item:last-child::after { display: none; }
+
+.trilha__item[data-estado="percorrido"]::before,
+.trilha__item[data-estado="percorrido"]::after,
+.trilha__item[data-estado="atual"]::before { background: var(--case-strong); }
+.trilha__item[data-estado="percorrido"] .trilha__marcador::after { background: var(--case-strong); }
+.trilha__item[data-estado="atual"] .trilha__marcador::after {
+  top: 6px;
+  left: 0;
+  width: var(--space-12);
+  height: var(--space-12);
+  background: var(--case-strong);
+}
+.trilha__item[data-estado="atual"] .trilha__link { color: var(--text-primary); font-weight: 500; }
+
+/* ── Fim do case: provas, extra, próximo, convite ────────────────────────── */
+
+.case__fim { row-gap: var(--space-64); padding-top: var(--space-64); }
+.case__fim:last-child { padding-bottom: var(--space-64); }
+.provas { display: flex; flex-direction: column; gap: var(--space-32); }
+.provas__lista { display: flex; flex-direction: column; gap: var(--space-32); padding: 0; list-style: none; }
+.provas__item { display: flex; flex-direction: column; gap: var(--space-4); }
+.provas__descricao { color: var(--text-secondary); font-size: var(--size-apoio); line-height: var(--line-apoio); }
+.provas__titulo {
+  font-size: var(--size-subtitulo);
+  line-height: var(--line-subtitulo);
+  font-weight: 500;
+}
+
+.extra {
+  margin-top: var(--space-32);
+  padding-block: var(--space-32);
+  background: var(--case-surface);
+}
+.extra__aba { list-style: none; cursor: pointer; }
+.extra__aba::-webkit-details-marker { display: none; }
+.extra__titulo, .extra__conteudo {
+  max-width: var(--largura-quadro);
+  margin-inline: auto;
+  padding-inline: var(--margem);
+}
+.extra__titulo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  padding-block: var(--space-12);
+  font-size: var(--size-titulo-cap);
+  line-height: var(--line-titulo-cap);
+  font-weight: 700;
+}
+.extra__seta {
+  flex: none;
+  width: 20px;
+  height: auto;
+  fill: var(--text-primary);
+}
+.extra[open] .extra__seta { transform: rotate(180deg); }
+.extra__conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+  padding-top: var(--space-32);
+  line-height: var(--line-corpo-largo);
+}
+
+.proximo { display: flex; flex-direction: column; gap: var(--space-24); }
+.proximo__rotulo {
+  color: var(--text-secondary);
+  font-size: var(--size-etiqueta);
+  line-height: var(--line-etiqueta);
+  font-weight: 500;
+  letter-spacing: var(--rastreio-etiqueta);
+  text-transform: uppercase;
+}
+.convite { display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-24); }
+.convite__titulo {
+  font-size: var(--size-titulo-cap);
+  line-height: var(--line-titulo-cap);
+  font-weight: 700;
+  letter-spacing: var(--rastreio-titulo-cap);
+}
+
+@media (min-width: 1024px) {
+  .case__fim { row-gap: var(--space-96); padding-top: var(--space-96); }
+  .case__fim:last-child { padding-bottom: var(--space-96); }
+  .case__fim > * { grid-column: 3 / 9; }
+  .extra { margin-top: var(--space-64); padding-block: var(--space-48); }
+  /* A linha do extra começa onde começa o texto dos capítulos e vai até a margem direita:
+     a única exceção à regra de medida (decisões 106 e 107). */
+  .extra__titulo, .extra__conteudo {
+    padding-left: calc(var(--margem) + (min(100%, var(--largura-quadro)) - 2 * var(--margem) + var(--calha)) / 6);
+  }
+  .proximo { gap: var(--space-32); }
+}
+
+/* ── Quem sou eu ─────────────────────────────────────────────────────────── */
+
+.quem__topo { row-gap: var(--space-48); padding-top: var(--space-48); }
+.quem__apresentacao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+  font-size: var(--size-abertura);
+  line-height: var(--line-abertura);
+}
+.quem__foto {
+  position: relative;
+  order: -1;
+  aspect-ratio: var(--foto-proporcao);
+  background: var(--border);
+}
+.quem__foto img { width: 100%; height: 100%; object-fit: cover; }
+.quem__foto .falta { position: absolute; top: var(--space-24); left: var(--space-24); }
+
+.valores { row-gap: var(--space-32); padding-top: var(--space-64); }
+.valores__titulo {
+  font-size: var(--size-titulo-cap);
+  line-height: var(--line-titulo-cap);
+  font-weight: 700;
+  letter-spacing: var(--rastreio-titulo-cap);
+}
+.valores__lista { display: flex; flex-direction: column; row-gap: var(--space-32); }
+.valor { display: flex; flex-direction: column; row-gap: var(--space-12); }
+.valor__titulo { font-size: var(--size-subtitulo); line-height: var(--line-subtitulo); font-weight: 500; }
+.valor__texto { color: var(--text-secondary); text-wrap: pretty; }
+
+.divisoria {
+  height: var(--stroke-padrao);
+  margin: var(--space-64) 0 0;
+  border: 0;
+  background: var(--border);
+}
+
+.mais { row-gap: var(--space-24); padding-block: var(--space-48) var(--space-64); }
+.mais__titulo { font-size: var(--size-subtitulo); line-height: var(--line-subtitulo); font-weight: 500; }
+.mais__item { font-size: var(--size-abertura); line-height: var(--line-abertura); }
+.mais__direto { color: var(--text-secondary); }
+
+@media (min-width: 1024px) {
+  .quem__topo { padding-top: var(--space-96); align-items: start; }
+  .quem__apresentacao { grid-column: 1 / 7; grid-row: 1; }
+  .quem__foto { grid-column: 8 / -1; grid-row: 1; order: 0; }
+  .valores { row-gap: var(--space-48); padding-top: var(--space-96); }
+  .valores__lista {
+    display: grid;
+    grid-template-columns: subgrid;
+    row-gap: var(--space-48);
+  }
+  .valor { grid-column: span 6; display: grid; grid-template-columns: subgrid; align-content: start; }
+  .valor > * { grid-column: 1 / 5; }
+  .valor__titulo { grid-column: 1 / -1; }
+  .divisoria { margin-top: var(--space-96); }
+  .mais { padding-block: var(--space-64) var(--space-96); }
+  .mais > * { grid-column: 1 / 7; }
+}
+
+/* ── Erro ─────────────────────────────────────────────────────────────────── */
+
+.erro {
+  align-content: start;
+  row-gap: var(--space-48);
+  padding-block: var(--space-96) var(--space-64);
+}
+.erro__explicacao { display: flex; flex-direction: column; gap: var(--space-24); }
+.erro__titulo { font-size: var(--size-titulo-case); line-height: var(--line-titulo-case); font-weight: 700; }
+.erro__corpo { color: var(--text-secondary); font-size: var(--size-abertura); line-height: var(--line-abertura); }
+.erro__saidas { display: flex; flex-direction: column; gap: var(--space-16); padding: 0; list-style: none; }
+/* Palavra simples: navegação interna já tem forma neste site, a da barra. */
+.erro__saida {
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .erro { padding-block: var(--erro-topo-largo) var(--space-96); }
+  .erro > * { grid-column: 1 / 7; }
+  .erro__saidas { flex-direction: row; gap: var(--space-32); }
+}
+
+/* ── Voltar ao topo: só no desktop, sólida, sem contorno nem sombra ─────── */
+
+.voltar-ao-topo {
+  position: fixed;
+  z-index: 10;
+  right: var(--space-32);
+  bottom: var(--space-32);
+  padding: var(--space-12) var(--respiro-pastilha);
+  border-radius: var(--radius-pilula);
+  background: var(--text-primary);
+  color: var(--bg-surface);
+  font-size: var(--size-apoio);
+  line-height: var(--line-apoio);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+@media (max-width: 1023.98px) { .voltar-ao-topo { display: none !important; } }

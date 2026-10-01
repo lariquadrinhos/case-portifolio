@@ -19,7 +19,7 @@ node construcao/construir.mjs          # modo local
 Gera o site em `site/`. **Peça que falta aparece visível na página**, nomeada, para você ver
 enquanto trabalha. A primeira linha da saída diz em que modo está.
 
-Abra `site/index.html` no navegador. Não há servidor de desenvolvimento — foi custo aceito na
+Abra `site/index.html` no navegador. Não há servidor de desenvolvimento: foi custo aceito na
 decisão 009; recarregue à mão.
 
 ## Antes de publicar

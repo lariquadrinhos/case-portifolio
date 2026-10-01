@@ -1,4 +1,4 @@
-# Case Study — Finanças PF+PJ
+# Case Study: Finanças PF+PJ
 
 <!-- bloco: card -->
 # A planilha que virou produto
@@ -7,9 +7,10 @@ Desenvolvi uma aplicação desktop para organização financeira para pessoas PF
 <!-- bloco: case -->
 
 
-## 1. Ideia
+## 1. A ideia
 <!-- trilha: Introdução -->
 
+<!-- bloco: hero -->
 # A planilha que virou produto
 
 **Vi alguém tentando encaixar a vida financeira pessoal e a da empresa na mesma planilha. Decidi transformar essa cena em um aplicativo desktop. Hoje: funcionando e em uso por uma pessoa real.**
@@ -22,9 +23,14 @@ Desenvolvi uma aplicação desktop para organização financeira para pessoas PF
 
 **Status** · Em uso, sendo testado por um usuário real
 
-**Repositório** · Projeto inteiro aberto, do documento de produto às regras de implementação — [link]
+**Repositório** · Projeto inteiro aberto, do documento de produto às regras de implementação, [link]
 
-Estive em todas as etapas, da primeira conversa até o código: defini o problema, modelei o domínio, desenhei o produto inteiro, construí o design system e segui na implementação ao lado de um desenvolvedor, aprendendo versionamento e programação assistida por IA no caminho. A entrega final foi além das telas: mantive um repositório com a documentação de todo o processo, em que cada decisão ficou registrada junto do raciocínio que a sustentava. Foi o que permitiu a informação atravessar as etapas sem se perder e chegar inteira ao desenvolvimento. 
+Estive em todas as etapas, da primeira conversa até o código: defini o problema, modelei o domínio, desenhei o produto inteiro, construí o design system e segui na implementação ao lado de um desenvolvedor, aprendendo versionamento e programação assistida por IA no caminho.
+
+A entrega final foi além das telas: mantive um repositório com a documentação de todo o processo, em que cada decisão ficou registrada junto do raciocínio que a sustentava. Foi o que permitiu a informação atravessar as etapas sem se perder e chegar inteira ao desenvolvimento.
+
+![Gravação do aplicativo em uso, com dados de demonstração. A tela inicial mostra as pendências e as entradas e saídas de setembro. O cursor abre Relatórios na barra lateral e entra no DRE, que alterna entre Consolidado, PF e PJ: o mesmo mês em três leituras, com números diferentes em cada uma. Depois abre Indicadores Financeiros e volta de setembro para agosto, e termina no Histórico, filtrado por lançamentos pagos na categoria Alimentação, mês a mês desde novembro.](publico/midias/financas-1-produto-em-uso.mp4)
+Legenda: Gravado numa janela mais estreita que a de 1440 em que as telas foram desenhadas, com dados de demonstração.
 
 ---
 
@@ -33,13 +39,14 @@ Estive em todas as etapas, da primeira conversa até o código: defini o problem
 
 **Antes de abrir qualquer ferramenta de design, eu defini o método.**
 
-Conduzi o projeto inteiro com IA, e a primeira coisa que construí não foi uma tela: foi uma skill. Um conjunto de instruções reutilizável que ensinava o Claude a conduzir qualquer etapa seguinte, do brainstorming à modelagem de domínio. Apoiei essa skill em frameworks de estruturação de incerteza e formulação de perguntas, e fixei nela uma regra inegociável: nenhuma lacuna de informação é preenchida por suposição. Toda ambiguidade vira pergunta explícita, estruturada, com opções.
+Conduzi o projeto inteiro com IA, e a primeira coisa que construí não foi uma tela: foi uma skill. Um conjunto de instruções reutilizável que ensinava o Claude a conduzir qualquer etapa seguinte, do brainstorming à modelagem de domínio. Apoiei essa skill em frameworks de estruturação de incerteza e formulação de perguntas, e fixei nela uma regra inegociável: nenhuma lacuna de informação é preenchida por suposição.
 
-Com o método de pé, dirigi a construção do documento de produto (PRD) a partir de duas fontes: um documento de brainstorming e a planilha que o usuário já usava. Pedi a leitura das fórmulas da planilha, não só dos valores visíveis. Essa instrução fez aparecer a lógica de negócio que a planilha já tinha. Descobrir regra que já existe vale mais do que inventar regra nova. O documento foi versionado a cada rodada de revisão.
+Com o método de pé, dirigi a construção do documento de produto a partir de duas fontes: um documento de brainstorming e a planilha que o usuário já usava. Pedi a leitura das fórmulas da planilha, não só dos valores visíveis. Essa instrução fez aparecer a lógica de negócio que a planilha já tinha.
 
-Com as regras estáveis, pedi a tradução do PRD, escrito em linguagem de produto, para um modelo formal de domínio: eventos, comandos, políticas e agregados, seguindo a mesma skill. Onde havia tensão sem resposta certa ainda, instruí que ficasse marcada como hotspot (o termo do método para o que não está resolvido) em vez de decidida no automático. Assim ela virava decisão registrada mais adiante.
+Com as regras estáveis, pedi a tradução do documento para um modelo formal de domínio: eventos, comandos, políticas e agregados. Onde havia tensão sem resposta certa ainda, instruí que ficasse marcada como hotspot em vez de decidida no automático.
 
-Foi essa disciplina, mantida em cada prompt, que sustentou o resto do processo.
+![Dois trechos de arquivos do projeto, um acima do outro, com as bordas cortando o resto. Em cima, a skill loop-produto: a seção Diretriz central: nunca assuma premissas, que manda tornar explícitas as lacunas de conhecimento em vez de preenchê-las por conta própria, e os quatro quadrantes, de known knowns a unknown unknowns. Embaixo, a tabela de hotspots do event storming, com o número de cada um, a decisão em aberto e o status: H4 fechado por ADR, H5 modelado e não testado, H9 parcialmente revertido e H10 fechado para o MVP por decisão de produto.](publico/midias/financas-2-descoberta.png)
+Legenda: A regra escrita antes de qualquer tela, e o que ela produziu: cada dúvida do modelo de domínio virou hotspot, com destino registrado.
 
 ---
 
@@ -52,11 +59,9 @@ Comecei pelo fluxo do usuário: mapeei o caminho completo, do primeiro acesso at
 
 Desenhando os wireframes, apareceram mais decisões. Toda vez que uma tela levantava uma pergunta de comportamento, eu registrava a pergunta, a resposta e o raciocínio por trás dela, na ordem em que aconteceram. Esse hábito virou um documento: um histórico cronológico do porquê de cada tela ser do jeito que é.
 
-E a documentação virou artefato de handoff. Para cada tela, escrevi a especificação funcional separada do desenho visual — o que ela faz, sem depender de olhar o Figma —, o modelo de dados exato de cada campo, com tipo, obrigatoriedade, validação e valor padrão, e um glossário fechado de nomenclatura, para que nenhum conceito ganhasse dois nomes em dois lugares diferentes do produto. A meta era simples: quem fosse implementar não deveria precisar me perguntar nada que já não estivesse escrito.
+E a documentação virou artefato de handoff. Para cada tela, escrevi a especificação funcional separada do desenho visual, o modelo de dados exato de cada campo, e um glossário fechado de nomenclatura. A meta era simples: quem fosse implementar não deveria precisar me perguntar nada que já não estivesse escrito.
 
-Parte da interface é gerada a partir do dado — o tamanho de um bloco proporcional ao valor, a escala de um eixo, o que acontece quando um valor é zero ou negativo. Então documentei também as regras de renderização: o algoritmo por trás do desenho. Sem isso, quem fosse programar teria que inventar comportamento para cada caso extremo.
-
-Essa camada de documentação, junto com um design system construído como sistema, foi o que sustentou o desenvolvimento do produto.
+Parte da interface é gerada a partir do dado. Então documentei também as regras de renderização: o algoritmo por trás do desenho. Sem isso, quem fosse programar teria que inventar comportamento para cada caso extremo.
 
 ---
 
@@ -65,11 +70,9 @@ Essa camada de documentação, junto com um design system construído como siste
 
 **Antes de aplicar qualquer visual definitivo, construí o sistema.**
 
-Uma coleção fechada de tokens de cor nomeados por papel semântico, cada um com valor próprio para o tema claro e para o escuro. Junto, escalas de tipografia, espaçamento e raio, e uma biblioteca de componentes documentada com cada variante e cada estado: padrão, sobre, foco, desabilitado.
+Uma coleção fechada de tokens de cor nomeados por papel semântico, cada um com valor próprio para o tema claro e para o escuro. Junto, escalas de tipografia, espaçamento e raio, e uma biblioteca de componentes documentada com cada variante e cada estado.
 
-Com o sistema fechado, apliquei-o nas telas e criei os mockups. Foi aí que o produto virou algo que dava para sentir de verdade.
-
-E foi só vendo a cor na tela real que decisões novas apareceram. O par de cores que distingue pessoa física de pessoa jurídica passava no contraste no tema claro e reprovava no escuro — algo que só foi possível descobrir testando os dois temas lado a lado, com o valor real aplicado. Corrigir exigiu matizes diferentes por tema, não um ajuste automático. Tema escuro não é inversão: é um segundo sistema, e precisa ser validado sozinho.
+E foi só vendo a cor na tela real que decisões novas apareceram. O par de cores que distingue pessoa física de pessoa jurídica passava no contraste no tema claro e reprovava no escuro. Corrigir exigiu matizes diferentes por tema, não um ajuste automático. Tema escuro não é inversão: é um segundo sistema, e precisa ser validado sozinho.
 
 ---
 
@@ -82,16 +85,24 @@ Construí o produto ao lado de um desenvolvedor e do Claude: backend completo, b
 
 No fim, uma auditoria de fidelidade. Mais de cem agentes de IA rodando em paralelo, cada um cruzando uma tela implementada contra o frame real no Figma, mostrou o tamanho do que a documentação sustentava sozinha. Com tudo já especificado antes, a implementação só precisou seguir.
 
-Documentação organizada sustenta o processo mesmo quando quem escreveu não está mais na sala.
-
 ---
 
 ## 6. O que ficou
 <!-- trilha: Resultados -->
 
-**O produto existe, funciona e está em uso.** 
+**O produto existe, funciona e está em uso.**
 
 Aprendi a decidir o que as coisas são, e sustentar essa decisão em cada tela depois. Aprendi a escrever para quem vem depois de mim, e descobri que documentar bem é o que faz o design sobreviver ao contato com a implementação. E aprendi que trabalhar com IA se decide antes, não depois: o que define a qualidade do que volta é a regra que eu estabeleci no começo, não a minha avaliação de cada resposta. Sem ela, qualquer resultado plausível passa.
+
+<!-- bloco: provas -->
+As decisões de UX, a especificação de cada tela e o modelo de dados
+[Ver o repositório]()
+
+As 46 telas em claro e escuro, o style guide e os tokens
+[Ver o arquivo no Figma](https://www.figma.com/design/7IZBeQV15kgZp7Shcqh4c8)
+
+O fluxo do usuário mapeado, do primeiro acesso às ações do dia a dia
+[Ver o fluxo no FigJam](https://www.figma.com/board/6cLvP3Mwhy4yWGLJBDsp3z)
 
 <!-- bloco: extra -->
 ## O Produto
@@ -101,7 +112,7 @@ Quem tem pessoa jurídica além da física não tem uma vida financeira: tem dua
 mesma planilha podem virar uma bagunça.
 
 Essa aplicação é um único livro-razão com três leituras. Cada lançamento é registrado uma vez e
-alimenta o Consolidado, o PF e o PJ ao mesmo tempo. Sem dados duplicados. 
+alimenta o Consolidado, o PF e o PJ ao mesmo tempo. Sem dados duplicados.
 
 O resultado fecha em regime de caixa e já mostra meses futuros **sem precisar simular nada**: o
 que já está agendado (recorrência, parcela de dívida) já é a projeção. Toda divergência entre

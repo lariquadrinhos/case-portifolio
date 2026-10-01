@@ -1,4 +1,4 @@
-# Pesquisa — Fase 0
+# Pesquisa: Fase 0
 
 **Feature**: Do arquivo de texto à página no ar · **Data**: 21 de setembro de 2026
 
@@ -25,14 +25,14 @@ projeto.
 | Itens de lista | 0 | 19 | 0 |
 | Citações, código, links | 0 | 0 | 0 |
 
-**Três recursos não são usados em lugar nenhum** — citação, código embutido e link. O único
+**Três recursos não são usados em lugar nenhum**: citação, código embutido e link. O único
 `[link]` existente é um marcador não resolvido, não um link. Um analisador do subconjunto
 fica na casa de 150 a 200 linhas.
 
-**Alternativas consideradas.** *Uma biblioteca de markdown* — resolveria em uma linha e
+**Alternativas consideradas.** *Uma biblioteca de markdown*: resolveria em uma linha e
 traria centenas de recursos que este projeto não usa, mais atualizações de segurança para
 acompanhar; contraria a decisão 022, de nenhuma dependência. *Escrever o conteúdo direto em
-HTML* — mataria a regra de que atualizar uma página é editar um arquivo de texto.
+HTML*: mataria a regra de que atualizar uma página é editar um arquivo de texto.
 
 **Risco declarado.** Um erro no analisador corrompe os textos dela em silêncio. É por isso
 que a suíte de testes deixa de ser opcional: cada recurso do subconjunto precisa de um teste
@@ -45,12 +45,12 @@ que o cite pelo nome.
 **Decisão.** `node:test`, o executor embutido do Node, com `node:assert`. Verificado: existe
 no Node instalado (v18.20.8).
 
-**Razão.** Zero dependência, e resolve a checagem 3 do contrato — *"todo `Cenário:` é citado
-por um teste"* — que estava bloqueada na pergunta **P19** por falta de suíte. O nome do teste
+**Razão.** Zero dependência, e resolve a checagem 3 do contrato: *"todo `Cenário:` é citado
+por um teste"*, que estava bloqueada na pergunta **P19** por falta de suíte. O nome do teste
 passa a ser o nome do cenário, em português, como o contrato exige.
 
-**Alternativas consideradas.** *Vitest ou Jest* — melhores para projetos grandes, e
-dependências que envelhecem. *Não testar* — inviável: o analisador manipula os textos que são
+**Alternativas consideradas.** *Vitest ou Jest* (melhores para projetos grandes, e
+dependências que envelhecem. *Não testar*) inviável: o analisador manipula os textos que são
 o produto.
 
 ---
@@ -61,14 +61,14 @@ o produto.
 envio e publica a saída.
 
 **Razão.** Três motivos, em ordem de peso. Primeiro: **a configuração de publicação vira um
-arquivo versionado**, coerente com um projeto cuja regra é decisão registrada em arquivo —
+arquivo versionado**, coerente com um projeto cuja regra é decisão registrada em arquivo,
 nas alternativas, parte de como o site é construído vive num painel web que o Git não vê.
 Segundo: o repositório e o Pages já existem, sem conta nova. Terceiro: se a construção
-falhar, a automação não publica, e o que está no ar permanece — que é o SC-006.
+falhar, a automação não publica, e o que está no ar permanece, que é o SC-006.
 
-**Alternativas consideradas.** *Cloudflare Pages* — constrói sozinho sem arquivo de
+**Alternativas consideradas.** *Cloudflare Pages*: constrói sozinho sem arquivo de
 automação e entrega mais rápido; custa uma conta a mais e tira a configuração do
-repositório. *Commitar a saída construída* — dispensa automação, mas mistura fonte com
+repositório. *Commitar a saída construída*: dispensa automação, mas mistura fonte com
 gerado e enche o histórico de HTML.
 
 **Pendente.** O domínio próprio segue adiado por decisão dela, com limite antes da Fase 6
@@ -81,13 +81,13 @@ gerado e enche o histórico de HTML.
 **Decisão.** Um argumento explícito: `node construcao/construir.mjs` para o modo local e
 `--publicar` para o modo de publicação. O modo aparece na primeira linha da saída, sempre.
 
-**Razão.** A decisão 023 estabeleceu comportamentos opostos diante de peça ausente — visível
+**Razão.** A decisão 023 estabeleceu comportamentos opostos diante de peça ausente: visível
 na tela localmente, bloqueante na publicação. **O custo registrado naquela decisão foi
 exatamente este: alguém publicar achando que está em modo local.** Um argumento explícito,
 ecoado na saída, é o que impede a confusão; inferir o modo do ambiente a esconderia.
 
-**Alternativas consideradas.** *Inferir pela variável de ambiente de CI* — funciona e é
-invisível, que é o defeito. *Dois scripts separados* — duplica o código da construção.
+**Alternativas consideradas.** *Inferir pela variável de ambiente de CI* (funciona e é
+invisível, que é o defeito. *Dois scripts separados*) duplica o código da construção.
 
 ---
 
@@ -95,7 +95,7 @@ invisível, que é o defeito. *Dois scripts separados* — duplica o código da 
 
 **Resolvido em 21/09/2026, decisão 037.** Exportação para `docs/spec/tokens.json`, do qual o
 CSS é gerado. A construção não consulta o Figma pela rede. O princípio já estava fixado:
-os valores descem das variáveis, o nome é preservado — `bg/page` vira `--bg-page` — e existe
+os valores descem das variáveis, o nome é preservado, `bg/page` vira `--bg-page`, e existe
 um único lugar de onde tudo deriva.
 
 **Consequência para o plano.** A construção assume um arquivo de tokens em CSS como entrada,

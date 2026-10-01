@@ -25,9 +25,9 @@ Sou curiosa e apaixonada por entender como as coisas funcionam. Gosto de fazer p
 
 <!-- bloco: apresentacao -->
 
-Sou UX Designer e gosto de trabalhar onde pessoas, lógica e criatividade se encontram. Meu interesse vai além da interface: quero entender o problema, o contexto e tudo o que influencia uma experiência para tomar decisões de design que realmente façam sentido. Vim da Engenharia Bioquímica e trouxe comigo a curiosidade de uma cientista, o raciocínio lógico e o olhar para processos e sistemas. Gosto de entender como as pequenas partes se relacionam e como, juntas, fazem algo muito maior funcionar. Acredito que o design não deve falar mais alto do que as necessidades do usuário.
+Sou UX Designer e gosto de trabalhar onde pessoas, lógica e criatividade se encontram. Meu interesse vai além da interface: quero entender o problema, o contexto e tudo o que influencia uma experiência para tomar decisões de design que realmente façam sentido. Vim da Engenharia Bioquímica e trouxe comigo a curiosidade de uma cientista, o raciocínio lógico e o olhar para processos e sistemas.
 
-Não saber alguma coisa costuma ser o começo de uma descoberta. Quando encontro algo que ainda não compreendo, minha reação é querer chegar mais perto. Gosto da sensação de entrar em um território desconhecido e, aos poucos, começar a enxergar relações que antes eu não conseguia ver. Talvez seja por isso que aprender, para mim, tenha menos a ver com acumular conhecimento e mais com expandir o que sou capaz de compreender.
+Não saber alguma coisa costuma ser o começo de uma descoberta. Quando encontro algo que ainda não compreendo, minha reação é querer chegar mais perto. Talvez seja por isso que aprender, para mim, tenha menos a ver com acumular conhecimento e mais com expandir o que sou capaz de compreender.
 
 Existe algo muito especial, para mim, no momento em que uma pergunta muda a forma como enxergamos um problema e abre um caminho que antes não estava ali. É esse tipo de transformação que quero provocar com o meu trabalho.
 

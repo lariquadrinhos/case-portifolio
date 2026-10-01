@@ -15,48 +15,57 @@ figma:
 # Página de case
 
 Leitura longa. É o coração do site: o portfólio existe para mostrar os cases, e **são eles
-que mostram como ela trabalha** — a forma de conduzir o processo aparece dentro de cada
+que mostram como ela trabalha**, a forma de conduzir o processo aparece dentro de cada
 etapa, como evidência, não como declaração à parte.
 
 ## Regras
 
+- **Tabela é conteúdo de desktop.** Em tela estreita ela não aparece: a seção inteira sai, pelo
+  marcador `<!-- só no desktop -->` no arquivo de conteúdo. Uma tabela de três colunas não cabe
+  em 327px sem rolar para o lado, e rolar para o lado escondia metade da comparação de quem não
+  usa o dedo. **O que o estreito perde está registrado como falta, não como decisão silenciosa**.
+Ver P57.
 - A página abre com **título do case, frase de abertura e tira de destaques**, nessa ordem,
   antes de qualquer capítulo.
+- **O título do case quebra onde o Figma quebra.** Na tela estreita, o do Finanças é *"A planilha
+  que / virou produto"*, quebra escolhida, como a da frase da home; o do Reembolso, *"Toda semana,
+  do / zero"*, é a quebra natural da largura. No desktop os dois cabem numa linha. Ver decisão 186.
 - **A tira de destaques é o elemento mais escaneável da página** e, para quem faz triagem
   rápida, pode ser o mais útil da tela inteira. Traz papel, método ou escopo, entregas,
   status e repositório. Em tela estreita, empilha.
-- O marca-texto cobre um trecho da hero, **uma vez por página** — título **ou** frase de
+- O marca-texto cobre um trecho da hero, **uma vez por página**: título **ou** frase de
   abertura. Neste case ele cobre *"Decidi transformar essa cena em um aplicativo desktop."*,
   que é a virada da frase: observação, **decisão**, resultado.
 - Quando o trecho destacado atravessa mais de uma linha, **a faixa acompanha a quebra**,
-  uma por linha, e não se escolhe a quebra em função dela — parágrafo reflui, título não.
+  uma por linha, e não se escolhe a quebra em função dela: parágrafo reflui, título não.
 - **O título fica junto do texto, acima dele.** O que fica ao lado é **a mídia que prova a
   afirmação daquele capítulo**. Na leitura: trilha nas colunas 1 e 2, título e texto nas
   3 a 8, mídia nas 9 a 12.
 - **A mídia alinha com o texto, não com o título.** O topo dela acompanha a primeira linha
-  do texto do capítulo — se o título quebrar em duas linhas, a mídia desce junto. O título
+  do texto do capítulo, se o título quebrar em duas linhas, a mídia desce junto. O título
   pertence ao texto; a mídia é prova do que o texto afirma, e começa onde a afirmação começa.
 - **Cada capítulo tem a sua prova ao lado**, com legenda abaixo dela.
 - **Vídeo não é pré-carregado e não toca sozinho.** Até a pessoa pedir, baixa zero byte; o
   que carrega é a imagem de pôster, que segue as mesmas regras de qualquer imagem.
 - **A imagem de pôster é um quadro do próprio vídeo.** Se for outra imagem, há salto visual
   no momento em que ele toca, e o vídeo parece quebrado.
-- **A legenda do vídeo descreve o que acontece nele**, não comenta. Vídeo sem áudio exige
-  alternativa em texto: para quem não consegue vê-lo, a legenda é o conteúdo. "O produto em
-  uso" não cumpre; dizer o que a pessoa faz na tela, cumpre.
+- **O texto alternativo do vídeo descreve o que acontece nele**, passo a passo. Vídeo sem áudio
+  exige alternativa em texto, e é o texto alternativo que a cumpre: para quem não consegue
+  vê-lo, ele é o conteúdo. **A legenda pode contextualizar em vez de descrever**: dizer como o
+  vídeo foi feito ou o que ele é, desde que o texto alternativo descreva. Ver decisão 190.
 - **Vídeo é servido pelo próprio site, nunca incorporado de terceiro.** Incorporar do
   YouTube ou Vimeo traz script e cookie de rastreamento, e reintroduz o aviso de
   consentimento que a decisão de não medir existiu para evitar. Imagem que não prova
   nada vira galeria, e galeria ninguém olha.
 - **O texto corrido ocupa seis colunas, não cinco.** Cinco dariam 61 caracteres por linha,
-  abaixo do mínimo de 65 — e a regra da medida governa a largura da coluna, não o contrário.
+  abaixo do mínimo de 65, e a regra da medida governa a largura da coluna, não o contrário.
   Ver decisão 042.
 - **Em tela estreita a mídia desce para baixo do texto**, em vez de ficar ao lado: a largura
   não comporta duas faixas. A regra da mídia ao lado vale onde há grade para ela.
 - **O link usa a cor do texto, não a de estado.** O sublinhado dele e o sublinhado da página
   atual na barra têm a mesma forma; a cor é o que os separa. Ver decisão 088.
 - **Saída para fora do site é link, não botão.** Botão promete ação dentro do site; palavra
-  sublinhada promete ir embora. O botão do fim do case é **preenchido**, como o da home — o
+  sublinhada promete ir embora. O botão do fim do case é **preenchido**, como o da home: o
   site não tem botão secundário, então não há contorno marcando hierarquia. O rótulo avisa que abre em nova aba.
 - Cada link externo vem **precedido de uma linha que diz o que a pessoa vai encontrar lá**.
 - **O bloco de provas fecha o case**, sob o convite *"Está tudo aberto."* Ele reúne tudo que
@@ -64,13 +73,18 @@ etapa, como evidência, não como declaração à parte.
 
 | Case | Provas |
 |---|---|
-| Finanças | repositório · arquivo do Figma |
-| Reembolso | repositório · arquivo do Figma · protótipo |
+| Finanças | repositório · arquivo do Figma · fluxo no FigJam |
+| Reembolso | repositório · arquivo do Figma · board no FigJam · protótipo |
+
+- **A linha que diz o que a pessoa vai encontrar e o endereço moram no arquivo de conteúdo**,
+  sob `<!-- bloco: provas -->`: uma linha de descrição e, logo abaixo, o link, por prova. O
+  convite *"Está tudo aberto."* é interface e fica aqui. **Link com endereço vazio é prova que
+  ainda falta**, e o site mostra o marcador de falta no lugar dele. Ver decisão 179.
 
 - **O Figma entra porque o case afirma coisas sobre ele.** Um capítulo do case de Finanças se
   chama *"O Figma era metade da entrega"*; linkar só o repositório faria o case afirmar uma
   coisa e mostrar a prova de outra. **Afirmação com link é evidência; sem link é alegação.**
-- **Protótipo só onde existe.** Reembolso tem — 43 telas alcançáveis, 145 ligações. Finanças
+- **Protótipo só onde existe.** Reembolso tem: 43 telas alcançáveis, 145 ligações. Finanças
   não tem e não terá.
 - **Os dois cases não têm o mesmo número de provas, e isso é honesto:** cada um mostra o que
   de fato produziu.
@@ -83,23 +97,23 @@ etapa, como evidência, não como declaração à parte.
 |---|---|---|
 | hero do case | `106:32` | não se aplica |
 | tira de destaques | `106:36` | não se aplica |
-| capítulo | `107:36` | não se aplica |
+| capítulo | `112:27` | não se aplica |
 | marca-texto | `110:23`, `110:24` | não se aplica |
 | página em tela estreita | `108:22` | não se aplica |
-| convite ao repositório | `114:27` | não se aplica |
-| convite ao repositório · estreita | `115:76` | não se aplica |
+| as provas do case | `245:243` | não se aplica |
+| as provas do case · estreita | `245:261` | não se aplica |
 | página do segundo case | `144:32` | não se aplica |
 | página do segundo case · estreita | `148:37` | não se aplica |
 | tabela de comparação | dentro de `144:32` | não se aplica |
 
 ## O convite ao contato
 
-**Texto** · *"Vamos conversar?"* — e o botão, sem linha de apoio.
+**Texto** · *"Vamos conversar?"*, e o botão, sem linha de apoio.
 
 - **Uma frase só, sem preparação.** O case já fez o trabalho inteiro; um convite que
   argumenta disputa com ele no último centímetro da página.
 - **Não menciona o case nem o que a pessoa leu.** A frase anterior era *"Quer conversar sobre
-  isso?"*, e o *isso* não tinha referência clara — podia ser o case, o problema, o jeito de
+  isso?"*, e o *isso* não tinha referência clara: podia ser o case, o problema, o jeito de
   trabalhar.
 - É a **última coisa da página**, depois do card do próximo case. Quem quer continuar lendo já
   foi servido; quem chegou aqui tem uma porta.
@@ -111,25 +125,25 @@ etapa, como evidência, não como declaração à parte.
   que os capítulos não têm.
 - **Vem declarada por `<!-- bloco: extra -->`** no arquivo de conteúdo. Sem o marcador, a
   convenção a trataria como subseção do último capítulo, que é outra coisa.
-- **É uma aba retrátil, e chega fechada.** O título convida — *"Leia mais sobre o produto"* —
+- **É uma aba retrátil, e chega fechada.** O título convida: *"Leia mais sobre o produto"*,
   e uma seta indica que há mais. **O conteúdo é oferecido, não imposto:** quem quiser só o
   case fecha o case e vai embora; quem quiser mais, abre.
 - **A linha inteira do cabeçalho é o alvo**, não só a seta. A seta indica o estado, não é um
   botão à parte.
 - **Abre e fecha sem JavaScript.** Na web é `details`/`summary` nativo, que já faz isso e já é
-  anunciado por leitor de tela. O script não é dependência aqui — não há script.
+  anunciado por leitor de tela. O script não é dependência aqui, não há script.
 - **É uma banda de cor que sangra a tela**, no tom pálido daquele case, fechada ou aberta. O
   case acabou, e a aba precisa dizer isso antes da primeira palavra.
-- **Aberta, a linha começa onde começa o texto dos capítulos e vai até a margem direita** — no
+- **Aberta, a linha começa onde começa o texto dos capítulos e vai até a margem direita**: no
   desktop 1063px, exatamente a largura de um capítulo. São 122 caracteres por linha contra 73
   na coluna de leitura: **a única exceção à regra de medida em todo o site**, e ela é
   deliberada. Ver decisões 106 e 107.
-- Fica **depois do convite ao repositório**. O repositório é o que fecha o case — a última
+- Fica **depois do convite ao repositório**. O repositório é o que fecha o case: a última
   coisa do arco, a prova verificável do processo. O extra vem depois porque não é do arco.
 
 ### O extra do case de Finanças
 
-*"O Produto"* — nove parágrafos sobre o que a aplicação faz. Existe porque **os seis capítulos
+*"O Produto"*: nove parágrafos sobre o que a aplicação faz. Existe porque **os seis capítulos
 falam de processo e não do produto**: sem ela, o case descreve como uma coisa foi construída
 sem nunca dizer o que a coisa é.
 
@@ -144,20 +158,20 @@ sem nunca dizer o que a coisa é.
   uma linha só faz uma etiqueta, não um respiro.
 - **Não usar em lista.** Lista já tem ritmo próprio; o fundo compete com ele.
 - **O capítulo precisa de pelo menos três parágrafos de prosa.** Com dois, colorir um não é
-  pontuação: é **alternância** — o olho lê "colorido, não colorido" como padrão, não como
+  pontuação: é **alternância**, o olho lê "colorido, não colorido" como padrão, não como
   pausa. E com um só, o bloco vira o capítulo.
 - **O texto dentro do bloco tem a mesma medida da prosa em volta.** Um respiro que aperta a
-  linha é contraditório — ele existe para o olho descansar, não para a linha quebrar mais
+  linha é contraditório: ele existe para o olho descansar, não para a linha quebrar mais
   vezes.
 - **Em tela estreita, o bloco sangra até as bordas.** A cor vai de ponta a ponta e o respiro
   do bloco ocupa o lugar da margem da página, então o texto fica em 327, igual ao resto.
 - **No desktop o bloco fica dentro da coluna de leitura, e não sangra.** Não é escolha
   estética: **a coluna de mídia fica ao lado**, a 24 de distância, e um bloco sangrando
-  invadiria ela. O respiro de 32 deixa a linha em 66 caracteres — mais curta que os 74 da
+  invadiria ela. O respiro de 32 deixa a linha em 66 caracteres: mais curta que os 74 da
   prosa, mas dentro da faixa de 65 a 75. **A diferença entre as larguras tem causa estrutural,
   não é descuido.**
 - **Todo capítulo em tela estreita tem 375 de largura**, com o respiro dentro de colunas de
-  leitura — tenha bloco ou não. Antes só os capítulos com bloco eram assim, e os outros tinham
+  leitura: tenha bloco ou não. Antes só os capítulos com bloco eram assim, e os outros tinham
   327: o texto alinhava, mas "capítulo" deixava de ser uma coisa só, e ganhar um bloco depois
   obrigava a remontar a moldura.
 
@@ -165,12 +179,12 @@ sem nunca dizer o que a coisa é.
 
 | Capítulo | Parágrafo | Quanto do capítulo |
 |---|---|---|
-| 1 · Introdução | nenhum — dois parágrafos só | — |
+| 1 · Introdução | nenhum: dois parágrafos só | nada |
 | 2 · Descoberta | *"Conduzi o projeto inteiro com IA…"* | 33% |
 | 3 · Desenho e documentação | *"E a documentação virou artefato de handoff…"* | 24% |
-| 4 · Design system | nenhum — dois parágrafos só | — |
-| 5 · Desenvolvimento | nenhum — dois parágrafos só | — |
-| 6 · Resultados | nenhum — um parágrafo só, que seria 55% | — |
+| 4 · Design system | nenhum: dois parágrafos só | nada |
+| 5 · Desenvolvimento | nenhum: dois parágrafos só | nada |
+| 6 · Resultados | nenhum: um parágrafo só, que seria 55% | nada |
 
 **Os dois cases não têm a mesma densidade de bloco, e isso é consequência do texto, não
 escolha de layout.** O Reembolso tem capítulos longos com quatro a sete parágrafos; o de
@@ -181,11 +195,11 @@ há parede para quebrar.
 
 | Capítulo | Parágrafo | Quanto do capítulo |
 |---|---|---|
-| 1 · Introdução | nenhum — tem um parágrafo só, e colorir seria colorir o capítulo | — |
+| 1 · Introdução | nenhum: tem um parágrafo só, e colorir seria colorir o capítulo | nada |
 | 2 · Diagnóstico | *"Percebi que muitas das etapas mais pesadas…"* | 33% |
 | 3 · Novo fluxo | *"Separei o que acontece uma vez na vida…"* | 14% |
 | 4 · Wireframes e interface | *"Então reconstruí, o mais fielmente possível…"* | 25% |
-| 5 · Resultados | nenhum — só tem listas | — |
+| 5 · Resultados | nenhum, só tem listas | nada |
 
 Três em cinco capítulos, e espaçados: 2, 3, 4. O respiro se distribui pela leitura em vez de
 se concentrar num ponto.
@@ -194,11 +208,8 @@ se concentrar num ponto.
 
 - **Tabela ocupa a largura inteira do conteúdo, não a coluna de leitura.** A regra da medida
   governa prosa; tabela é dado, e o que governa é a comparação ficar legível lado a lado.
-- **Em tela estreita a tabela rola na horizontal**, dentro da própria janela, e a página não
-  rola junto. Empilhar as linhas destruiria a comparação, que é a única razão de a tabela
-  existir.
-- **A rolagem é avisada em palavras** logo abaixo. Sem aviso, quem não arrasta nunca descobre
-  que existe uma coluna à direita.
+- **Em tela estreita a tabela não aparece**, pela regra do topo deste contrato (decisão 132, que
+  substituiu a rolagem horizontal com aviso em palavras). Ver P57.
 
 ## Comportamento
 
@@ -235,8 +246,8 @@ Funcionalidade: Página de case
 
   Cenário: Alguém não consegue ver o vídeo
     Dado que a mídia daquele capítulo é um vídeo sem áudio
-    Quando alguém chega à legenda sem ver as imagens
-    Então a legenda descreve o que acontece na tela
+    Quando alguém chega ao vídeo sem ver as imagens
+    Então o texto alternativo descreve o que acontece na tela
     E a afirmação do capítulo continua provada
 
   Cenário: A pessoa abre um capítulo que tem vídeo
@@ -255,10 +266,12 @@ Funcionalidade: Página de case
     E a tira de destaques aparece empilhada
     E a legenda de cada mídia continua logo abaixo dela
 
-  @lacuna
   Cenário: A construção separa o hero dos capítulos
     Dado que o hero está dentro do primeiro capítulo do arquivo
-    Então A DEFINIR — ver pergunta P42
+    E que ele vem declarado por <!-- bloco: hero -->
+    Quando a construção acontece
+    Então o título, a frase de abertura e a tira de destaques formam o hero, antes dos capítulos
+    E o capítulo 1 começa no primeiro parágrafo depois da tira
 ```
 
 ## Transições
