@@ -6406,3 +6406,35 @@ legenda.
 **Consequência.** A regra antiga não vinha de entrada do log: estava escrita direto no contrato e no plano de materiais. Muda em `case/pagina-de-case.md` (regra e cenário) e a
 nota de `materiais-a-produzir.md`. As duas legendas de vídeo passam a cumprir o contrato como
 estão.
+
+---
+
+## 191 · Uma checagem para capítulo que começa antes de o anterior terminar
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case · `#restricao`
+
+**Gatilho.** Com o vídeo do capítulo 1 do Finanças (189), a mídia cresceu na 108:22 e na 298:2 e
+o capítulo 2 ficou onde estava: 37px por baixo do capítulo 1. O designer corrigiu, mas nenhuma
+checagem tinha visto. O tester mostrou por quê: a 11 olha só a altura da tela e a margem final, e
+a 10 mede de início a início de capítulo. A Larissa pediu uma checagem para isso, pelo nome:
+*"cada capítulo começa depois do fim do anterior"*.
+
+**Decisão.** Checagem 15. O `trilha.json` passa a guardar o fim de cada capítulo, além do início:
+`[rótulo, início, fim]`. A checagem reprova quando um capítulo começa antes do fim do anterior, e
+também quando o vão entre os dois não é o respiro de capítulo da largura, `space/96` no desktop e
+`space/64` na tela estreita, lidos de `tokens.json`. Provada com o defeito real: o estado de antes
+da correção, capítulo 1 terminando em 2094 e capítulo 2 começando em 2057, reprova nomeando os
+dois capítulos e os 37px.
+
+**Alternativa descartada.** *Cobrar só a sobreposição*: pegaria o defeito de hoje e deixaria
+passar o vão que abre a mais, que é o mesmo descuido no sentido contrário. *Medir na página
+construída*: o site não tinha o defeito, que estava só no Figma; é lá que a checagem precisa olhar.
+
+**Custo aceito.** O `trilha.json` precisa ser reexportado com o fim sempre que um capítulo mudar
+de tamanho, e um export sem o fim reprova em vez de passar calado. Ao reexportar, apareceu que o
+arquivo estava velho para o Reembolso: páginas de 7994 e 10778 contra 8170 e 11951 no Figma, e
+inícios de capítulo de antes das últimas mudanças. A checagem 10 vinha simulando a trilha do
+Reembolso sobre medidas antigas.
+
+**Consequência.** `scripts/checagens.mjs` ganha a 15, e `docs/spec/trilha.json` é relido nas
+quatro telas claras de case.

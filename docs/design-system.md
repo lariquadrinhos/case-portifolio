@@ -357,7 +357,7 @@ alfa nos dois últimos dígitos: antes de consultar o Figma, veja se o dado já 
    `sobreposicoes`, `cores-soltas`, `cortes`, `papeis`, `telas`, `trilha` e `enderecos`. Todos
    são gerados; editar à mão quebra o propósito. **Recriar um componente muda o id**, então
    `enderecos.json` é o que impede a documentação de apontar para o que não existe mais.
-4. **Rode `node scripts/checagens.mjs`.** Doze checagens. A sexta e a sétima imprimem a data
+4. **Rode `node scripts/checagens.mjs`.** Quinze checagens. A sexta e a sétima imprimem a data
    do export, para você saber se está conferindo o presente ou o passado.
 
 **Quadro não corta o próprio conteúdo, e a checagem 8 cobra.** Conteúdo cortado é o defeito

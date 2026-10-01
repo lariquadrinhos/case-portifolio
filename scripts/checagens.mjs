@@ -770,6 +770,43 @@ else {
 }
 
 // ─────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────
+titulo(15, 'Cada capítulo começa depois do fim do anterior');
+
+// Pedida pela Larissa (decisão 191) depois de um defeito que nenhuma outra checagem via: na
+// 108:22, a mídia do capítulo 1 cresceu e o capítulo 2 ficou onde estava, 37px por baixo dele.
+// A 11 olha só a altura da tela e a margem final; a 10 mede de início a início. Esta lê o
+// início e o fim de cada capítulo em trilha.json e cobra duas coisas: que um capítulo comece
+// depois do fim do anterior, e que o vão entre os dois seja o respiro de capítulo da largura,
+// space/96 no desktop e space/64 na tela estreita. O segundo pega também o vão que abre a mais.
+
+const fCapitulos = p('docs/spec/trilha.json');
+if (!existsSync(fCapitulos)) erro('docs/spec/trilha.json não encontrado');
+else {
+  const { exportado, telas } = JSON.parse(readFileSync(fCapitulos, 'utf8'));
+  const espaco = JSON.parse(readFileSync(p('docs/spec/tokens.json'), 'utf8')).colecoes['Espaço e forma'].variaveis;
+  const RESPIRO = { desktop: espaco['space/96']['Padrão'], estreita: espaco['space/64']['Padrão'] };
+  for (const [nome, t] of Object.entries(telas)) {
+    const respiro = RESPIRO[t.largura];
+    const semFim = t.capitulos.filter((c) => typeof c[2] !== 'number');
+    if (semFim.length) {
+      erro(`${nome}: trilha.json sem o fim de ${semFim.map((c) => `"${c[0]}"`).join(', ')}; reexporte com [rótulo, início, fim]`);
+      continue;
+    }
+    const problemas = [];
+    for (let k = 1; k < t.capitulos.length; k++) {
+      const [rotuloAntes, , fimAntes] = t.capitulos[k - 1];
+      const [rotulo, inicio] = t.capitulos[k];
+      const vao = inicio - fimAntes;
+      if (vao < 0) problemas.push(`"${rotulo}" começa em ${inicio}, ${-vao}px antes do fim de "${rotuloAntes}" (${fimAntes}): os dois se sobrepõem`);
+      else if (vao !== respiro) problemas.push(`entre "${rotuloAntes}" e "${rotulo}" o vão é ${vao}, e o respiro de capítulo da largura é ${respiro}`);
+    }
+    if (problemas.length) problemas.forEach((x) => erro(`${nome}: ${x}`));
+    else ok(`${nome}: ${t.capitulos.length} capítulos, cada um ${respiro}px depois do fim do anterior`);
+  }
+  nota(`início e fim de capítulo exportados do Figma em ${exportado}; reexporte se um capítulo mudar de tamanho`);
+}
+
 titulo('·', 'Checagens declaradas e ainda bloqueadas');
 
 nota('Todo `figma.tela` resolve: exige um token pessoal do Figma. Sem ele, nenhum script');
