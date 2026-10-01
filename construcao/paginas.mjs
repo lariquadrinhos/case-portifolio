@@ -236,6 +236,12 @@ function figura(ctx, c, no, capitulo) {
   if (!no.legenda) return ausencias.marcar(`a legenda de ${no.caminho}`, onde);
 
   const versoes = resolverMidia(ctx.raiz, no.caminho);
+  // Toda mídia de prova tem duas versões, uma por tema (contrato de conteúdo). Faltando uma,
+  // o tema dela mostraria a outra em silêncio: a que falta é marcada.
+  const temas = versoes.map((v) => v.tema).filter(Boolean);
+  const faltaTema = temas.length === 1
+    ? ausencias.marcar(`a versão ${temas[0] === 'claro' ? 'escura' : 'clara'} de ${no.caminho}`, onde, { classe: 'falta falta--linha' })
+    : '';
   let midia;
   if (!versoes.length) {
     midia = `<div class="prova__vazia">${ausencias.marcar(`o arquivo ${no.caminho}`, onde, { classe: 'falta falta--midia' })}</div>`;
@@ -259,7 +265,7 @@ function figura(ctx, c, no, capitulo) {
       : `<p class="prova__convite">${inline(no.convite)}</p>`;
   }
   return `<figure class="prova">
-          <div class="prova__midia">${midia}</div>
+          <div class="prova__midia">${midia}</div>${faltaTema}
           <figcaption class="prova__legenda">${escapar(no.legenda)}</figcaption>
           ${convite}
         </figure>`;

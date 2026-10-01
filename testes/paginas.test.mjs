@@ -3,7 +3,7 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { raizTemporaria, construirEm, texto, RAIZ } from './ajuda.mjs';
 import { TEXTOS } from '../construcao/interface.mjs';
@@ -150,6 +150,32 @@ test('O manifesto nomeia o site e os ícones', () => {
   assert.equal(m.background_color, '#F4EFE4', 'o fundo claro da página, de tokens.json');
   assert.deepEqual(m.icons.map((i) => i.sizes), ['192x192', '512x512', 'any']);
   assert.match(site.pagina('404.html'), /<link rel="manifest" href="\/manifest\.webmanifest">/);
+});
+
+test('Todo endereço local de toda página existe no site', () => {
+  // Declarar um arquivo que não foi publicado é 404 calado: o ícone, uma mídia, uma página.
+  const PAGINAS = ['index.html', 'trabalhos/index.html', 'trabalhos/financas-pf-pj/index.html',
+    'trabalhos/reembolso-sulamerica/index.html', 'quem-sou-eu/index.html', '404.html'];
+  const existe = (caminho) => {
+    const alvo = join(site.saida, caminho.split('#')[0]);
+    return existsSync(alvo) && (!statSync(alvo).isDirectory() || existsSync(join(alvo, 'index.html')));
+  };
+  for (const p of PAGINAS) {
+    for (const [, url] of site.pagina(p).matchAll(/(?:href|src|poster)="(\/[^"]*)"/g)) {
+      assert.ok(existe(url), `${p} aponta para ${url}, que não está no site`);
+    }
+  }
+  const manifesto = JSON.parse(readFileSync(join(site.saida, 'manifest.webmanifest'), 'utf8'));
+  for (const icone of manifesto.icons) {
+    assert.ok(existsSync(join(site.saida, icone.src)), `o manifesto aponta para ${icone.src}, que não está no site`);
+  }
+});
+
+test('O ícone da tela de início não tem transparência', () => {
+  // O iOS pinta de preto o que é transparente (decisão 188). No PNG, o byte 25 é o tipo de
+  // cor do cabeçalho: 2 é RGB, 6 é RGBA.
+  const png = readFileSync(join(site.saida, 'publico/icone/apple-touch-icon.png'));
+  assert.equal(png[25], 2, `tipo de cor ${png[25]}: o ícone tem canal de transparência`);
 });
 
 // ── A copy de interface tem uma fonte só ─────────────────────────────────────

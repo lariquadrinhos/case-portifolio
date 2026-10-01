@@ -2,7 +2,7 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cpSync } from 'node:fs';
+import { cpSync, rmSync } from 'node:fs';
 import { raizTemporaria, construirEm, texto } from './ajuda.mjs';
 
 const FINANCAS = 'case-study-financas-pf-pj.md';
@@ -113,4 +113,13 @@ test('Prova com endereço vazio é prova que falta', () => {
   assert.match(caso, /FALTA · o endereço de &quot;Ver o repositório&quot;/);
   assert.match(caso, /href="https:\/\/www\.figma\.com\/board\/lCpgyPMBg7BXj0DxgiOUh1"/, 'a prova com endereço vira link');
   assert.match(texto(caso), /Ver o board no FigJam abre em nova aba/, 'o rótulo avisa que abre em nova aba');
+});
+
+test('Mídia de prova com uma versão de tema só', () => {
+  const raiz = raizTemporaria();
+  rmSync(`${raiz}/publico/midias/reembolso-4-telas-de-erro-claro.png`);
+  const local = construirEm(raiz);
+  assert.match(local.pagina('trabalhos/reembolso-sulamerica/index.html'),
+    /FALTA · a versão clara de publico\/midias\/reembolso-4-telas-de-erro\.png/, 'a versão que falta fica visível');
+  assert.equal(construirEm(raiz, 'publicar').ok, false, 'e a publicação recusa');
 });
