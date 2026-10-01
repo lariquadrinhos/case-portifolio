@@ -178,6 +178,20 @@ test('O ícone da tela de início não tem transparência', () => {
   assert.equal(png[25], 2, `tipo de cor ${png[25]}: o ícone tem canal de transparência`);
 });
 
+test('O vídeo ocupa a coluna na proporção dele, e só o vídeo em pé tem área fixa', () => {
+  // O deitado do Finanças é 411x344 como no Figma (decisão 189); o em pé do Reembolso vive
+  // numa área fixa com o pôster contido (379:454).
+  const videos = (p) => site.pagina(p).match(/<video class="[^"]*"/g) ?? [];
+  const fin = videos('trabalhos/financas-pf-pj/index.html');
+  const ree = videos('trabalhos/reembolso-sulamerica/index.html');
+  assert.equal(fin.length, 2, 'o vídeo do Finanças tem as duas versões de tema');
+  for (const v of fin) assert.doesNotMatch(v, /prova__video--retrato/, `deitado com área fixa: ${v}`);
+  for (const v of ree) assert.match(v, /prova__video--retrato/, `em pé sem área fixa: ${v}`);
+  const { base } = regrasPorLargura(readFileSync(join(site.saida, 'estilo.css'), 'utf8'));
+  assert.doesNotMatch(base['.prova__video'] ?? '', /aspect-ratio/, 'todo vídeo com proporção fixa');
+  assert.match(base['.prova__video--retrato'] ?? '', /aspect-ratio/, 'o vídeo em pé sem a área fixa');
+});
+
 // ── A copy de interface tem uma fonte só ─────────────────────────────────────
 
 test('Todo texto de interface que cita um contrato está escrito nele', () => {
