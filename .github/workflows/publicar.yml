@@ -5,10 +5,7 @@ name: Publicar
 
 on:
   push:
-    # 001-construir-e-publicar publica antes do merge, para a revisão no site de verdade.
-    # Depois do merge do PR 1, tire esta ramificação daqui e da política do ambiente
-    # github-pages, e só a main volta a publicar.
-    branches: [main, 001-construir-e-publicar]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
