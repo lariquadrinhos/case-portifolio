@@ -117,7 +117,7 @@ test('Prova com endereço vazio é prova que falta', () => {
 
 test('Mídia de prova com uma versão de tema só', () => {
   const raiz = raizTemporaria();
-  rmSync(`${raiz}/publico/midias/reembolso-4-telas-de-erro-claro.png`);
+  rmSync(`${raiz}/publico/midias/reembolso-4-telas-de-erro-claro.png`, { force: true });
   const local = construirEm(raiz);
   assert.match(local.pagina('trabalhos/reembolso-sulamerica/index.html'),
     /FALTA · a versão clara de publico\/midias\/reembolso-4-telas-de-erro\.png/, 'a versão que falta fica visível');
