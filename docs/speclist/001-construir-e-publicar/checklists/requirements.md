@@ -40,7 +40,7 @@
 
 ## Notes
 
-Pronta para `/speckit-clarify`, que neste projeto **não é opcional** — as diretrizes o
+Pronta para `/speckit-clarify`, que neste projeto **não é opcional**: as diretrizes o
 declaram obrigatório, porque pular a etapa que caça ambiguidade revogaria a Diretriz 0.
 
 As três clarificações pendentes travam o plano, não a spec.

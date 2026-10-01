@@ -1,14 +1,14 @@
-# Event Storming — Portfólio
+# Event Storming: Portfólio
 
 | | |
 |---|---|
-| **Terreno** | Green field — nada construído |
+| **Terreno** | Green field: nada construído |
 | **Data** | 18 de setembro de 2026 |
 | **Entrada** | PRD `docs/prd/01-portfolio.md` · definições de produto · três textos do site |
 | **Alimenta** | Contrato de comportamento · ADR de stack · Fase 1 |
 
 > Eventos no passado, como o método pede: *"trilha marcada"*, não *"marcar trilha"*.
-> Nada aqui foi avançado sobre suposição não confirmada — ambiguidade virou hotspot.
+> Nada aqui foi avançado sobre suposição não confirmada: ambiguidade virou hotspot.
 
 ---
 
@@ -19,9 +19,9 @@ três perfis · conteúdo em arquivos de texto fora do código · dois temas · 
 sem backend · trilha nos cases · cor por case.
 
 **Known unknowns.** Stack, hospedagem, como o texto vira página, como os tokens entram no
-código, o que a barra mostra em tela estreita — todos agendados para a Fase 1.
+código, o que a barra mostra em tela estreita: todos agendados para a Fase 1.
 
-**Unknown knowns — as suposições óbvias demais para terem sido ditas.** É onde os
+**Unknown knowns: as suposições óbvias demais para terem sido ditas.** É onde os
 hotspots abaixo moram. Nenhuma foi preenchida.
 
 **Blind spot pass.** O que este mapa pode não estar considerando: o visitante que volta
@@ -61,11 +61,11 @@ Site foi publicado
 | Comando | Ator | Evento |
 |---|---|---|
 | Editar texto | Larissa | Arquivo de conteúdo alterado |
-| Construir | — | Páginas geradas |
+| Construir | nenhum | Páginas geradas |
 | Publicar | Larissa | Site no ar |
 
 > **Hotspot 1 · Peça esperada ausente.** As definições dizem que o comportamento dessa
-> falta *"é decidido no domínio Conteúdo — não improvisado na hora"*. Ainda não foi.
+> falta *"é decidido no domínio Conteúdo, não improvisado na hora"*. Ainda não foi.
 > Casos: rótulo de trilha faltando num capítulo · imagem referenciada que não existe ·
 > legenda ausente · PDF do currículo ainda não produzido.
 > **Opções:** a construção falha e o site não publica · a página gera sem a peça e registra
@@ -80,7 +80,7 @@ Site foi publicado
 ```
 Alguém colou o endereço num aplicativo de mensagem
         ↓
-A prévia do link foi montada — imagem de compartilhamento e descrição da página
+A prévia do link foi montada, imagem de compartilhamento e descrição da página
         ↓
 A pessoa decidiu se clica
 ```
@@ -111,12 +111,12 @@ Página pintada
 | Comando | Ator | Evento |
 |---|---|---|
 | Abrir endereço | Visitante | Página solicitada |
-| — | Navegador | Preferência de tema informada |
+| nenhum | Navegador | Preferência de tema informada |
 | Trocar tema | Visitante | Tema sobrescrito · escolha lembrada |
 
 > **Hotspot 2 · Não piscar o tema errado.** As definições exigem que o tema certo apareça
 > já na primeira pintura. Em site estático, a preferência salva vive no navegador e é lida
-> por script — que roda depois do HTML chegar. O caminho conhecido é um script bloqueante
+> por script, que roda depois do HTML chegar. O caminho conhecido é um script bloqueante
 > no `<head>`, o que tensiona com *"conteúdo legível sem depender de script"*.
 > **Depende da stack (Fase 1).**
 
@@ -126,7 +126,7 @@ Página pintada
 
 ---
 
-## Linha 3 · Triagem — segundos
+## Linha 3 · Triagem: segundos
 
 ```
 Home exibida (nome · cargo · frase · parágrafo)
@@ -135,7 +135,7 @@ Caminho para Trabalhos percebido como elemento mais evidente
         ↓
 Índice aberto
         ↓
-Cards listados — capa, título, linha de tensão, cor do case
+Cards listados, capa, título, linha de tensão, cor do case
         ↓
 Card escolhido (área clicável: o card inteiro)
 ```
@@ -145,7 +145,7 @@ Card escolhido (área clicável: o card inteiro)
 
 ---
 
-## Linha 4 · Leitura de um case — minutos
+## Linha 4 · Leitura de um case: minutos
 
 ```
 Case aberto
@@ -181,7 +181,7 @@ Card do próximo case oferecido · contato convidado
 
 > **Hotspot 5 · O próximo case do último case.** São dois cases. O card ao fim do case A
 > leva ao B. E o card ao fim do B leva a quê? Ao A, que a pessoa acabou de vir? Ao índice?
-> Some? O objetivo declarado é que ninguém leia só um — com dois, o segundo leitor já
+> Some? O objetivo declarado é que ninguém leia só um: com dois, o segundo leitor já
 > cumpriu o objetivo. **Não decidido, e aparece na primeira montagem da página.**
 
 > **Hotspot 6 · Trilha que se move × movimento reduzido.** Duas regras suas se tensionam:
@@ -192,7 +192,7 @@ Card do próximo case oferecido · contato convidado
 > indicador de posição.
 
 > **Hotspot 7 · Volta do protótipo.** A pessoa sai para outra aba e volta. A trilha
-> continua onde estava? A rolagem? Provavelmente sim por ser outra aba — mas não escrito.
+> continua onde estava? A rolagem? Provavelmente sim por ser outra aba, mas não escrito.
 
 > **Hotspot 8 · Link para uma seção do case.** O público inclui quem recebe link de outra
 > pessoa. Alguém pode querer mandar "olha essa etapa aqui". Endereço por seção existe?
@@ -203,7 +203,7 @@ Card do próximo case oferecido · contato convidado
 ## Linha 4b · Quem sou eu
 
 ```
-Página aberta — pela barra, ou por link direto
+Página aberta, pela barra, ou por link direto
         ↓
 Foto e apresentação exibidas
         ↓
@@ -233,7 +233,7 @@ Repositório aberto ─→ link externo
 > **Hotspot 9 · Contato como botão dispara o quê.** As definições dizem que contato *"é
 > e-mail e LinkedIn"* e que o botão *"dispara a ação direto em vez de levar a uma página"*.
 > Dois destinos, um botão. **Opções:** abre e-mail direto e o LinkedIn fica em outro lugar ·
-> abre um painel com as duas opções — mas painel é "levar a uma página" disfarçado.
+> abre um painel com as duas opções, mas painel é "levar a uma página" disfarçado.
 
 ---
 
@@ -252,7 +252,7 @@ Imagem de desktop tocada → visualizador com zoom
 ```
 
 > **Hotspot 10 · O que sai da barra.** Mínimo definido: nome e Trabalhos. O que acontece
-> com "Quem sou eu", o controle de tema e o botão de contato — menu, ícone, some?
+> com "Quem sou eu", o controle de tema e o botão de contato: menu, ícone, some?
 > **Agendado para a Fase 1.**
 
 ---
@@ -273,7 +273,7 @@ Imagem de desktop tocada → visualizador com zoom
 | # | Hotspot | Trava | Momento em que deixa de poder esperar |
 |---|---|---|---|
 | 1 | Peça esperada ausente | espera | antes de desenhar o domínio Conteúdo |
-| 2 | Tema sem piscar | **trava** | é requisito de stack — Fase 1 |
+| 2 | Tema sem piscar | **trava** | é requisito de stack: Fase 1 |
 | 3 | Sem JavaScript | **trava** | idem |
 | 4 | Home sem segunda oferta | espera | antes de desenhar a Home |
 | 5 | Próximo case do último | **trava** | antes de desenhar o domínio Case |

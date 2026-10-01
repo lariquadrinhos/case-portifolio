@@ -1,0 +1,122 @@
+{
+  "_": "Início de cada capítulo, em pixels a partir do topo da página. Exportado do Figma para a checagem 10 conseguir simular a trilha sem abrir o arquivo. Reexporte quando um capítulo mudar de tamanho.",
+  "exportado": "2026-09-29",
+  "janelaSuposta": {
+    "desktop": 900,
+    "estreita": 740
+  },
+  "telas": {
+    "Case · desktop 1440": {
+      "largura": "desktop",
+      "pagina": 6231,
+      "capitulos": [
+        [
+          "Introdução",
+          698
+        ],
+        [
+          "Descoberta",
+          1214
+        ],
+        [
+          "Desenho e documentação",
+          2040
+        ],
+        [
+          "Design system",
+          2958
+        ],
+        [
+          "Desenvolvimento",
+          3494
+        ],
+        [
+          "Resultados",
+          4054
+        ]
+      ]
+    },
+    "Case · tela estreita 375": {
+      "largura": "estreita",
+      "pagina": 9660,
+      "capitulos": [
+        [
+          "Introdução",
+          1096
+        ],
+        [
+          "Descoberta",
+          2069
+        ],
+        [
+          "Desenho e documentação",
+          3622
+        ],
+        [
+          "Design system",
+          5289
+        ],
+        [
+          "Desenvolvimento",
+          6380
+        ],
+        [
+          "Resultados",
+          7351
+        ]
+      ]
+    },
+    "Case Reembolso · desktop 1440": {
+      "largura": "desktop",
+      "pagina": 7994,
+      "capitulos": [
+        [
+          "Introdução",
+          714
+        ],
+        [
+          "Diagnóstico",
+          1050
+        ],
+        [
+          "Novo fluxo",
+          2122
+        ],
+        [
+          "Wireframes e interface",
+          3819
+        ],
+        [
+          "Resultados",
+          5073
+        ]
+      ]
+    },
+    "Case Reembolso · tela estreita 375": {
+      "largura": "estreita",
+      "pagina": 10778,
+      "capitulos": [
+        [
+          "Introdução",
+          1036
+        ],
+        [
+          "Diagnóstico",
+          1520
+        ],
+        [
+          "Novo fluxo",
+          3659
+        ],
+        [
+          "Wireframes e interface",
+          5508
+        ],
+        [
+          "Resultados",
+          7647
+        ]
+      ]
+    }
+  }
+}

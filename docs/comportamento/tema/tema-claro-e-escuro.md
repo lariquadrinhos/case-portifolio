@@ -15,7 +15,7 @@ figma:
 
 Atravessa o site inteiro, e por isso não pertence à moldura. Na primeira visita o tema
 segue a preferência do sistema; o controle na barra sobrescreve, e a escolha é lembrada.
-O tema certo aparece já na primeira pintura — nunca há troca visível depois que a página
+O tema certo aparece já na primeira pintura, nunca há troca visível depois que a página
 apareceu.
 
 ## Regras
@@ -28,7 +28,7 @@ apareceu.
   automático vale enquanto ninguém tiver escolhido, e não volta depois.
 - **"Tema" abre as duas posições; não troca direto.** A caixa mostra Claro e Escuro com a que
   está em vigor marcada. Trocar direto custaria um toque a menos, mas nunca diria qual das
-  duas está valendo — e com o tema seguindo o sistema na primeira visita, quem chega não sabe
+  duas está valendo, e com o tema seguindo o sistema na primeira visita, quem chega não sabe
   se o que vê foi escolhido ou herdado.
 - **A posição em vigor é marcada, não só colorida.** Vale aqui a mesma regra da barra: cor
   sozinha não basta.
@@ -38,11 +38,11 @@ apareceu.
   se evita.
 - **Dentro do menu não existe rótulo "Tema": as opções se nomeiam.** As linhas são
   "Tema claro" e "Tema escuro". Assim **tudo o que está no menu é da mesma forma e tudo se
-  toca** — nenhuma linha parece alvo sem ser. No desktop as opções continuam "Claro" e
+  toca**: nenhuma linha parece alvo sem ser. No desktop as opções continuam "Claro" e
   "Escuro", porque ali a palavra "Tema" está logo acima, na barra, e é ela que as nomeia.
 - **Os rótulos das três linhas alinham na mesma coluna.** "Quem sou eu" reserva a largura do
   sinal de escolhido mesmo não tendo sinal, senão a lista fica desencontrada.
-- **Escolher não fecha a caixa** — nem no desktop, nem dentro do menu. Trocar de tema é
+- **Escolher não fecha a caixa**, nem no desktop, nem dentro do menu. Trocar de tema é
   controle de *experimentar*: a ação mais provável logo depois de escolher é escolher de
   novo, para comparar. Fechar cobraria uma reabertura por tentativa. Navegação não tem esse
   padrão; tema tem. Ver decisão 063.
@@ -58,7 +58,7 @@ apareceu.
 
 **Como "sem JavaScript" convive com "nunca há piscada":** a piscada só existe por causa da
 troca manual. Se o tema apenas seguisse o sistema, o CSS resolveria antes de qualquer
-pintura. Como há controle, a escolha salva precisa ser lida antes do primeiro desenho — o
+pintura. Como há controle, a escolha salva precisa ser lida antes do primeiro desenho, o
 que exige um script curto e bloqueante no topo do documento, cuja única tarefa é marcar o
 tema no elemento raiz. Se ele não executar, o CSS cai na preferência do sistema.
 
@@ -162,5 +162,5 @@ Funcionalidade: Tema claro e escuro
 | De | Gatilho | Para |
 |---|---|---|
 | Qualquer página | Acionar o controle | A mesma página, no outro tema |
-| Primeira visita | — | Tema do sistema |
-| Visita seguinte | — | Tema escolhido, se houve escolha |
+| Primeira visita | nada | Tema do sistema |
+| Visita seguinte | nada | Tema escolhido, se houve escolha |

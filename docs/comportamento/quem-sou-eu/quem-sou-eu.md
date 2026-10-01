@@ -13,7 +13,7 @@ figma:
 
 # Quem sou eu
 
-Foco em como ela pensa, como trabalha, como toma decisões e no que valoriza — **não em
+Foco em como ela pensa, como trabalha, como toma decisões e no que valoriza: **não em
 cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um case.
 
 ## Regras
@@ -24,8 +24,8 @@ cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um
   os seis valores.
 - **A apresentação não tem título visível.** Ela é declarada por `<!-- bloco: apresentacao -->`
   e abre a página direto pelo primeiro parágrafo. "Meus valores", que vem depois, tem título
-  — porque é palavra dita ao leitor, e "Apresentação" não era.
-- **O histórico profissional não aparece na página** — fica no currículo em PDF, acessível
+porque é palavra dita ao leitor, e "Apresentação" não era.
+- **O histórico profissional não aparece na página**: fica no currículo em PDF, acessível
   a partir daqui.
 - O contato também existe aqui, junto do currículo.
 - **A página não explica por que há dois cases.** O terceiro entra quando existir; até lá a
@@ -45,20 +45,20 @@ cronologia de emprego**. É aqui que mora a reflexão que não cabe dentro de um
   por `text-wrap: pretty`, não por estreitar um bloco: a largura por bloco não existe na
   versão estreita, onde a margem governa.
 - **Nada aqui é botão.** Currículo, LinkedIn e e-mail são palavra sublinhada. Os três apontam
-  para fora do site — o PDF abre no leitor, o LinkedIn em outra aba, o e-mail no cliente de
-  correio — e a forma promete o mesmo destino para os três.
+  para fora do site (o PDF abre no leitor, o LinkedIn em outra aba, o e-mail no cliente de
+  correio) e a forma promete o mesmo destino para os três.
 - **Os três vêm sob um convite único**, "Mais sobre mim:", em vez de um convite por link.
 
 ### Na tela estreita
 
 - **A foto sobe para cima da apresentação.** No desktop as duas ficam lado a lado; em 375 não
-  há largura para duas colunas, e a foto vem primeiro — é ela que responde "quem" antes de o
+  há largura para duas colunas, e a foto vem primeiro: é ela que responde "quem" antes de o
   texto responder "o quê".
 - **Os valores viram uma coluna só.** A regra das linhas existe para alinhar títulos entre
   colunas; com uma coluna não há o que alinhar, e a ordem do arquivo já é a ordem visual.
 - **O destaque de página atual fica em "Menu".** "Quem sou eu" não é item da barra estreita:
   ele mora dentro do Menu. Vale o mesmo que já valia para a página de case, que sublinha
-  "Trabalhos" — a página que não está na barra destaca o item a que pertence.
+  "Trabalhos": a página que não está na barra destaca o item a que pertence.
 
 ## Peças
 

@@ -6,25 +6,25 @@
 
 **Status**: Draft
 
-**Input**: User description: "A construção mais o caminho de publicação. O domínio `conteudo` é comportamento puro, sem tela, já contratado — e a construção é o que o consome. Abertura da Fase 4: o caminho até o deploy precisa funcionar antes de existir qualquer conteúdo."
+**Input**: User description: "A construção mais o caminho de publicação. O domínio `conteudo` é comportamento puro, sem tela, já contratado, e a construção é o que o consome. Abertura da Fase 4: o caminho até o deploy precisa funcionar antes de existir qualquer conteúdo."
 
 > **Idioma.** Os títulos de seção vêm do template do Spec Kit e foram preservados; o
 > conteúdo está em português, que é o idioma do domínio.
 >
 > **Esta spec consome o contrato, não o substitui.** O comportamento de cada tela vive em
 > `docs/comportamento/`. Aqui está o que precisa ser construído para que aquele
-> comportamento exista — e nada do que já está escrito lá foi repetido.
+> comportamento exista, e nada do que já está escrito lá foi repetido.
 
 ## Clarifications
 
 ### Session 2026-09-19
 
-- Q: Quando a construção encontra uma peça que deveria existir e não existe, o que deve acontecer? (FR-011) → A: Os dois, por contexto — na construção local a lacuna aparece visível na tela; no caminho de publicação a construção recusa e nada sobe.
+- Q: Quando a construção encontra uma peça que deveria existir e não existe, o que deve acontecer? (FR-011) → A: Os dois, por contexto, na construção local a lacuna aparece visível na tela; no caminho de publicação a construção recusa e nada sobe.
 
 **Sessão encerrada com uma pergunta.** Duas outras foram tiradas da fila antes de serem
 feitas: o mecanismo de exportação dos tokens (FR-013), adiado então até a Fase 2 e
 **resolvido em 21/09/2026 pela decisão 037**, e a escolha do serviço de hospedagem (FR-012),
-que é comparação de stack —
+que é comparação de stack,
 excluída do escopo desta etapa pela própria skill, e pertencente ao `/speckit-plan`.
 O domínio segue adiado por decisão dela, com limite antes da Fase 6.
 
@@ -35,7 +35,7 @@ O domínio segue adiado por decisão dela, com limite antes da Fase 6.
 Como autora, quero que o caminho até a publicação funcione **antes de existir qualquer
 conteúdo**, para descobrir problema de publicação agora e não no fim do projeto.
 
-**Why this priority**: é a regra explícita da Fase 4 — *"o primeiro passo é publicar uma
+**Why this priority**: é a regra explícita da Fase 4, *"o primeiro passo é publicar uma
 página vazia; o caminho até o deploy precisa funcionar antes de existir qualquer conteúdo,
 porque é o tipo de problema que não se quer descobrir no fim"*. Sem ela, todo o resto é
 construído sobre uma suposição não verificada.
@@ -57,8 +57,8 @@ dispositivo. Entrega valor mesmo sozinha: prova que o caminho existe.
 Como autora, quero que atualizar uma página seja editar um arquivo de texto, sem tocar em
 código.
 
-**Why this priority**: é a regra que define o produto — *"atualizar uma página é editar um
-arquivo de texto"* — e o que garante que o site sobreviva a mim daqui a três meses.
+**Why this priority**: é a regra que define o produto, *"atualizar uma página é editar um
+arquivo de texto"*, e o que garante que o site sobreviva a mim daqui a três meses.
 
 **Independent Test**: trocar uma palavra em `quem-sou-eu.md`, construir, e ver a palavra na
 página. Nenhum arquivo de código tocado.
@@ -81,7 +81,7 @@ página. Nenhum arquivo de código tocado.
 Como autora, quero que salvar a mudança no repositório seja suficiente para o site mudar,
 sem eu rodar nada.
 
-**Why this priority**: é conveniência, não requisito — a US1 já entrega um site no ar. Mas é
+**Why this priority**: é conveniência, não requisito, a US1 já entrega um site no ar. Mas é
 o que separa "consigo publicar" de "vou continuar publicando daqui a seis meses".
 
 **Independent Test**: fazer uma alteração, enviar ao repositório, e ver o site mudar sem
@@ -98,7 +98,7 @@ nenhum comando local.
 
 ### Edge Cases
 
-- **Uma peça esperada não está no arquivo** — rótulo de trilha faltando, imagem referenciada
+- **Uma peça esperada não está no arquivo**: rótulo de trilha faltando, imagem referenciada
   que não existe, legenda ausente, PDF do currículo ainda não produzido. Localmente a página
   gera com a falta visível; na publicação, nada sobe. Ver FR-011.
 - **Um marcador desconhecido aparece** num arquivo de conteúdo: a construção precisa dizer
@@ -117,8 +117,8 @@ nenhum comando local.
 
 - **FR-001**: A construção MUST gerar HTML completo. Nada do conteúdo pode depender de
   script para aparecer.
-- **FR-002**: A construção MUST ler comentários HTML como estrutura — `<!-- bloco: -->`,
-  `<!-- trilha: -->`, `<!-- privado -->`, `<!-- bloco: foto -->` — e `Legenda:` como legenda
+- **FR-002**: A construção MUST ler comentários HTML como estrutura (`<!-- bloco: -->`,
+  `<!-- trilha: -->`, `<!-- privado -->`, `<!-- bloco: foto -->`) e `Legenda:` como legenda
   de imagem. MUST NOT reconhecer seção por nome.
 - **FR-003**: A construção MUST tratar como capítulo o título seguido de marcador de trilha,
   e como subseção o título sem ele.
@@ -128,8 +128,8 @@ nenhum comando local.
 - **FR-006**: Os textos da home MUST vir do bloco `home` de `quem-sou-eu.md`. A home MUST
   NOT ter arquivo próprio.
 - **FR-007**: A construção MUST gerar a página de erro, servida para endereço inexistente.
-- **FR-008**: O JavaScript MUST se limitar a três acréscimos — troca manual de tema com
-  memória, marcação automática da trilha, ampliação de imagem — e MUST falhar em segurança.
+- **FR-008**: O JavaScript MUST se limitar a três acréscimos (troca manual de tema com
+  memória, marcação automática da trilha, ampliação de imagem) e MUST falhar em segurança.
 - **FR-009**: O tema MUST estar aplicado antes da primeira pintura, sem troca visível depois.
 - **FR-010**: Nenhum valor visual MUST ser escrito à mão no código. Todos vêm das quatro
   coleções de variáveis.
@@ -139,7 +139,7 @@ nenhum comando local.
   quem trabalha e nunca por quem visita.
 - **FR-012**: A publicação MUST acontecer em hospedagem estática, com domínio próprio
   quando ele existir, e a construção MUST NOT poder derrubar o que já está no ar.
-  **Qual serviço e como a construção chega lá é decisão de plano**, não de especificação —
+  **Qual serviço e como a construção chega lá é decisão de plano**, não de especificação:
   a skill de clarificação exclui comparação de stack do seu escopo.
 - **FR-013**: Os valores das variáveis do Figma MUST chegar ao código por **exportação para
   um arquivo versionado** (`docs/spec/tokens.json`), do qual o CSS é gerado. Nem o arquivo
@@ -179,7 +179,7 @@ nenhum comando local.
 
 - **Não há backend.** Confirmado item a item: nada no site exige servidor. Decisão 009.
 - **A construção é escrita por nós, em Node, sem framework.** Decisões 009 e 022.
-- **As imagens dos cases são preparadas uma vez**, fora da construção — o conjunto é fixo e
+- **As imagens dos cases são preparadas uma vez**, fora da construção: o conjunto é fixo e
   não muda a cada publicação. Foi o que derrubou o argumento a favor de um framework.
 - **Os três arquivos de conteúdo existem e estão aprovados.** Nenhuma fase depende de
   escrita de conteúdo.

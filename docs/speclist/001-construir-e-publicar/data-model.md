@@ -1,4 +1,4 @@
-# Modelo — Fase 1
+# Modelo: Fase 1
 
 **Feature**: Do arquivo de texto à página no ar · **Data**: 21 de setembro de 2026
 
@@ -18,7 +18,7 @@ Um dos três `.md` da raiz. É a fonte do que aparece na tela.
 | `blocos` | Lista de blocos marcados, na ordem do arquivo |
 | `capitulos` | Só em arquivos de case: títulos seguidos de marcador de trilha |
 
-**Validação.** Todo marcador de bloco pertence ao vocabulário fechado — `card`, `case`,
+**Validação.** Todo marcador de bloco pertence ao vocabulário fechado: `card`, `case`,
 `home`, `hero`, `quem-sou-eu`, `foto`. Marcador desconhecido recusa a construção, nomeando
 arquivo, linha e marcador (FR-014).
 
@@ -48,7 +48,7 @@ subseção do capítulo corrente e não aparece na trilha.
 |---|---|
 | `titulo` | O texto do título, como está no arquivo |
 | `rotulo` | O que aparece na trilha |
-| `ordem` | Posição no arquivo — **não existe lista de etapas em outro lugar** (FR-004) |
+| `ordem` | Posição no arquivo: **não existe lista de etapas em outro lugar** (FR-004) |
 
 ---
 
@@ -57,7 +57,7 @@ subseção do capítulo corrente e não aparece na trilha.
 | Campo | O que é |
 |---|---|
 | `caminho` | Do markdown `![alt](caminho)` |
-| `alternativo` | O texto entre colchetes. **Obrigatório** — WCAG AA |
+| `alternativo` | O texto entre colchetes. **Obrigatório**: WCAG AA |
 | `legenda` | A linha seguinte, iniciada por `Legenda:` |
 
 **Validação.** Imagem sem `Legenda:` na linha seguinte não é publicada (FR-015). Imagem cujo

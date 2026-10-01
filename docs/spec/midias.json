@@ -1,0 +1,229 @@
+{
+  "_": "Fundo e moldura de cada mídia de prova, lidos do Figma. A decisão 157 diz que mídia sangra na página: o fundo do material é bg/page do tema dela, sem borda, raio, sombra ou superfície própria. Fundo 'raster' não é conferível daqui, a cor está nos pixels, e só o PNG exportado responde. Campo 'origem': 'figma' quando o material é exportado direto do Figma, 'video' quando é um quadro extraído de gravação de tela. A distinção importa porque gravação de tela converte de Display P3 para sRGB, o que preserva branco e preto e desloca os tons médios de 2 a 4 pontos. Campo 'arquivo': o PNG a amostrar, quando não é <nome>.png.",
+  "exportado": "2026-10-01",
+  "tokenBgPage": {
+    "claro": "#F4EFE4",
+    "escuro": "#1A1715"
+  },
+  "midias": [
+    {
+      "id": "443:2",
+      "nome": "reembolso-2-diagnostico-claro",
+      "caso": "reembolso",
+      "capitulo": 2,
+      "tema": "claro",
+      "tamanho": "411×786",
+      "fundo": {
+        "tipo": "solido",
+        "hex": "#FFFFFF",
+        "token": null
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [
+        "image 7"
+      ],
+      "origem": "figma"
+    },
+    {
+      "id": "436:1358",
+      "nome": "reembolso-2-diagnostico-escuro",
+      "caso": "reembolso",
+      "capitulo": 2,
+      "tema": "escuro",
+      "tamanho": "411×786",
+      "fundo": {
+        "tipo": "solido",
+        "hex": "#1A1715",
+        "token": null
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
+    },
+    {
+      "id": "474:2375",
+      "nome": "reembolso-3-novo-fluxo-claro",
+      "caso": "reembolso",
+      "capitulo": 3,
+      "tema": "claro",
+      "tamanho": "411×254",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
+    },
+    {
+      "id": "474:2372",
+      "nome": "reembolso-3-novo-fluxo-escuro",
+      "caso": "reembolso",
+      "capitulo": 3,
+      "tema": "escuro",
+      "tamanho": "411×240",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
+    },
+    {
+      "id": "451:1726",
+      "nome": "reembolso-4-telas-de-erro-claro",
+      "caso": "reembolso",
+      "capitulo": 4,
+      "tema": "claro",
+      "tamanho": "411×487",
+      "fundo": {
+        "tipo": "solido",
+        "hex": "#FFFFFF",
+        "token": null
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [
+        "image 7"
+      ],
+      "origem": "figma"
+    },
+    {
+      "id": "460:1727",
+      "nome": "reembolso-4-telas-de-erro-escuro",
+      "caso": "reembolso",
+      "capitulo": 4,
+      "tema": "escuro",
+      "tamanho": "411×487",
+      "fundo": {
+        "tipo": "solido",
+        "hex": "#1A1715",
+        "token": null
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
+    },
+    {
+      "id": "460:1862",
+      "nome": "reembolso-4-sistema-remontado-claro",
+      "caso": "reembolso",
+      "capitulo": 4,
+      "tema": "claro",
+      "tamanho": "411×487",
+      "fundo": {
+        "tipo": "solido",
+        "hex": "#FFFFFF",
+        "token": null
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [
+        "image 7"
+      ],
+      "origem": "figma"
+    },
+    {
+      "id": "460:2256",
+      "nome": "reembolso-4-sistema-remontado-escuro",
+      "caso": "reembolso",
+      "capitulo": 4,
+      "tema": "escuro",
+      "tamanho": "411×487",
+      "fundo": {
+        "tipo": "solido",
+        "hex": "#1A1715",
+        "token": null
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
+    },
+    {
+      "id": "504:1532",
+      "nome": "reembolso-5-prototipo-claro",
+      "caso": "reembolso",
+      "capitulo": 5,
+      "tema": "claro",
+      "tamanho": "532×1018 (pôster) · 700×1340 (vídeo)",
+      "origem": "video",
+      "arquivo": "reembolso-5-prototipo-claro-poster.png",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": []
+    },
+    {
+      "id": "504:1533",
+      "nome": "reembolso-5-prototipo-escuro",
+      "caso": "reembolso",
+      "capitulo": 5,
+      "tema": "escuro",
+      "tamanho": "532×1018 (pôster) · 700×1340 (vídeo)",
+      "origem": "video",
+      "arquivo": "reembolso-5-prototipo-escuro-poster.png",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": []
+    }
+  ],
+  "aindaSemNome": [
+    {
+      "id": "450:1456",
+      "nome": "image 8",
+      "tam": "439×342",
+      "observacao": "retângulo sem preenchimento"
+    },
+    {
+      "id": "451:1462",
+      "nome": "image 10",
+      "tam": "523×363",
+      "observacao": "origem desconhecida"
+    }
+  ],
+  "tolerancia": {
+    "figma": 2,
+    "video": 6,
+    "_": "Pontos por canal. 2 absorve perfil de cor num PNG exportado. 6 absorve também a conversão de espaço de cor de uma gravação de tela. Os dois seguem pegando o defeito que a checagem existe para pegar: o cinza do FigJam erra por 17 pontos no canal azul, quase três vezes a folga maior. Ver decisão 169."
+  }
+}

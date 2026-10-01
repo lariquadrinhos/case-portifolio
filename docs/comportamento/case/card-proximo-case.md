@@ -14,7 +14,7 @@ figma:
 # Card do próximo case
 
 Ao fim de um case, um card oferece o outro. Quem terminou de ler está no pico de interesse
-e não deveria ter que voltar ao índice — o objetivo é que ninguém leia só um.
+e não deveria ter que voltar ao índice: o objetivo é que ninguém leia só um.
 
 ## Regras
 
@@ -28,7 +28,7 @@ e não deveria ter que voltar ao índice — o objetivo é que ninguém leia só
 
 **Por que circular, e não uma exceção no último case:** um dos três públicos chega direto
 numa página interna, por link compartilhado, sem passar pela home. Quem cai no segundo case
-por esse caminho nunca viu o primeiro — para essa pessoa, o card circular aponta para
+por esse caminho nunca viu o primeiro: para essa pessoa, o card circular aponta para
 conteúdo novo, não repetido. E sem exceção, o componente sustenta a promessa de que um
 terceiro case cabe sem redesenhar nada.
 
@@ -36,8 +36,8 @@ terceiro case cabe sem redesenhar nada.
 
 | Nome no cenário | Figma | Storybook |
 |---|---|---|
-| card do próximo case | `@lacuna` | não se aplica — não há Storybook neste projeto |
-| rótulo do próximo | `@lacuna` | — |
+| card do próximo case | `@lacuna` | não se aplica, não há Storybook neste projeto |
+| rótulo do próximo | `@lacuna` | não se aplica |
 
 ## Comportamento
 
@@ -70,7 +70,7 @@ Funcionalidade: Card do próximo case
   Cenário: Um terceiro case é publicado
     Dado que existem três cases
     Quando o leitor alcança o fim de um deles
-    Então A DEFINIR — ver pergunta P21
+    Então A DEFINIR. Ver pergunta P21
     # A decisão de circular resolve dois cases sem exceção, mas não define a ordem
     # com três. Opções: ordem fixa do índice, com o último voltando ao primeiro ·
     # o case ainda não lido nesta sessão · o mais recente primeiro.

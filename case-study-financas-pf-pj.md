@@ -1,4 +1,4 @@
-# Case Study — Finanças PF+PJ
+# Case Study: Finanças PF+PJ
 
 <!-- bloco: card -->
 # A planilha que virou produto
@@ -22,9 +22,9 @@ Desenvolvi uma aplicação desktop para organização financeira para pessoas PF
 
 **Status** · Em uso, sendo testado por um usuário real
 
-**Repositório** · Projeto inteiro aberto, do documento de produto às regras de implementação — [link]
+**Repositório** · Projeto inteiro aberto, do documento de produto às regras de implementação, [link]
 
-Estive em todas as etapas, da primeira conversa até o código: defini o problema, modelei o domínio, desenhei o produto inteiro, construí o design system e segui na implementação ao lado de um desenvolvedor, aprendendo versionamento e programação assistida por IA no caminho. A entrega final foi além das telas: mantive um repositório com a documentação de todo o processo, em que cada decisão ficou registrada junto do raciocínio que a sustentava. Foi o que permitiu a informação atravessar as etapas sem se perder e chegar inteira ao desenvolvimento. 
+Estive em todas as etapas, da primeira conversa até o código: defini o problema, modelei o domínio, desenhei o produto inteiro, construí o design system e segui na implementação ao lado de um desenvolvedor, aprendendo versionamento e programação assistida por IA no caminho. A entrega final foi além das telas: mantive um repositório com a documentação de todo o processo, em que cada decisão ficou registrada junto do raciocínio que a sustentava. Foi o que permitiu a informação atravessar as etapas sem se perder e chegar inteira ao desenvolvimento.
 
 ---
 
@@ -52,9 +52,9 @@ Comecei pelo fluxo do usuário: mapeei o caminho completo, do primeiro acesso at
 
 Desenhando os wireframes, apareceram mais decisões. Toda vez que uma tela levantava uma pergunta de comportamento, eu registrava a pergunta, a resposta e o raciocínio por trás dela, na ordem em que aconteceram. Esse hábito virou um documento: um histórico cronológico do porquê de cada tela ser do jeito que é.
 
-E a documentação virou artefato de handoff. Para cada tela, escrevi a especificação funcional separada do desenho visual — o que ela faz, sem depender de olhar o Figma —, o modelo de dados exato de cada campo, com tipo, obrigatoriedade, validação e valor padrão, e um glossário fechado de nomenclatura, para que nenhum conceito ganhasse dois nomes em dois lugares diferentes do produto. A meta era simples: quem fosse implementar não deveria precisar me perguntar nada que já não estivesse escrito.
+E a documentação virou artefato de handoff. Para cada tela, escrevi a especificação funcional separada do desenho visual (o que ela faz, sem depender de olhar o Figma), o modelo de dados exato de cada campo, com tipo, obrigatoriedade, validação e valor padrão, e um glossário fechado de nomenclatura, para que nenhum conceito ganhasse dois nomes em dois lugares diferentes do produto. A meta era simples: quem fosse implementar não deveria precisar me perguntar nada que já não estivesse escrito.
 
-Parte da interface é gerada a partir do dado — o tamanho de um bloco proporcional ao valor, a escala de um eixo, o que acontece quando um valor é zero ou negativo. Então documentei também as regras de renderização: o algoritmo por trás do desenho. Sem isso, quem fosse programar teria que inventar comportamento para cada caso extremo.
+Parte da interface é gerada a partir do dado: o tamanho de um bloco proporcional ao valor, a escala de um eixo, o que acontece quando um valor é zero ou negativo. Então documentei também as regras de renderização: o algoritmo por trás do desenho. Sem isso, quem fosse programar teria que inventar comportamento para cada caso extremo.
 
 Essa camada de documentação, junto com um design system construído como sistema, foi o que sustentou o desenvolvimento do produto.
 
@@ -69,7 +69,7 @@ Uma coleção fechada de tokens de cor nomeados por papel semântico, cada um co
 
 Com o sistema fechado, apliquei-o nas telas e criei os mockups. Foi aí que o produto virou algo que dava para sentir de verdade.
 
-E foi só vendo a cor na tela real que decisões novas apareceram. O par de cores que distingue pessoa física de pessoa jurídica passava no contraste no tema claro e reprovava no escuro — algo que só foi possível descobrir testando os dois temas lado a lado, com o valor real aplicado. Corrigir exigiu matizes diferentes por tema, não um ajuste automático. Tema escuro não é inversão: é um segundo sistema, e precisa ser validado sozinho.
+E foi só vendo a cor na tela real que decisões novas apareceram. O par de cores que distingue pessoa física de pessoa jurídica passava no contraste no tema claro e reprovava no escuro: algo que só foi possível descobrir testando os dois temas lado a lado, com o valor real aplicado. Corrigir exigiu matizes diferentes por tema, não um ajuste automático. Tema escuro não é inversão: é um segundo sistema, e precisa ser validado sozinho.
 
 ---
 
@@ -89,7 +89,7 @@ Documentação organizada sustenta o processo mesmo quando quem escreveu não es
 ## 6. O que ficou
 <!-- trilha: Resultados -->
 
-**O produto existe, funciona e está em uso.** 
+**O produto existe, funciona e está em uso.**
 
 Aprendi a decidir o que as coisas são, e sustentar essa decisão em cada tela depois. Aprendi a escrever para quem vem depois de mim, e descobri que documentar bem é o que faz o design sobreviver ao contato com a implementação. E aprendi que trabalhar com IA se decide antes, não depois: o que define a qualidade do que volta é a regra que eu estabeleci no começo, não a minha avaliação de cada resposta. Sem ela, qualquer resultado plausível passa.
 
@@ -101,7 +101,7 @@ Quem tem pessoa jurídica além da física não tem uma vida financeira: tem dua
 mesma planilha podem virar uma bagunça.
 
 Essa aplicação é um único livro-razão com três leituras. Cada lançamento é registrado uma vez e
-alimenta o Consolidado, o PF e o PJ ao mesmo tempo. Sem dados duplicados. 
+alimenta o Consolidado, o PF e o PJ ao mesmo tempo. Sem dados duplicados.
 
 O resultado fecha em regime de caixa e já mostra meses futuros **sem precisar simular nada**: o
 que já está agendado (recorrência, parcela de dívida) já é a projeção. Toda divergência entre

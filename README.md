@@ -1,9 +1,9 @@
-# Portfólio — o processo, documentado enquanto acontece
+# Portfólio: o processo, documentado enquanto acontece
 
 > **Rascunho meu, à espera da voz dela.** Este README é proposta: é a Larissa falando no
 > repositório dela, então o texto abaixo precisa da aprovação dela antes de valer.
 
-Este repositório **não é o site**. É o registro de como ele está sendo construído — as
+Este repositório **não é o site**. É o registro de como ele está sendo construído: as
 decisões, o que foi descartado, e o que ainda não foi decidido.
 
 O site em si ainda não existe. Quando existir, o endereço estará aqui.
@@ -31,7 +31,7 @@ exato onde ela aparece, apontando para a pergunta correspondente. O contrato mos
 falta decidir; a lista de perguntas é o único lugar onde se lê *o que* falta.
 
 **Toda decisão é registrada no momento em que acontece**, com a alternativa descartada e o
-custo aceito — inclusive as que foram revertidas depois.
+custo aceito: inclusive as que foram revertidas depois.
 
 **A documentação é regra de trabalho, não objetivo.** Se uma decisão for tomada pensando em
 como ela vai ler depois, ela está errada.

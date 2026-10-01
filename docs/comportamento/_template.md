@@ -8,19 +8,19 @@ dono: design                      # quem escreve esta entrada
 status: rascunho                  # rascunho → em refinamento → aprovado
 atualizado: AAAA-MM-DD            # a cada passagem pelo arquivo
 
-# Bloco figma: obrigatório para fluxo que tem tela. OMITA em fluxo sem tela —
+# Bloco figma: obrigatório para fluxo que tem tela. OMITA em fluxo sem tela:
 # o domínio `conteudo` é comportamento puro e não tem frame para apontar.
 figma:
   file: hwClE9Xpm51OW4vPsCCn8J    # a chave do arquivo, igual em todo o projeto
   pagina: "00:00"                 # node-id da página; @lacuna enquanto não existir
   tela: "00:00"                   # node-id do frame; @lacuna enquanto não existir
 
-# Seções opcionais — inclua só quando existirem. Apague quando não.
-# storybook:                      # não se aplica neste projeto — ver P17
+# Seções opcionais: inclua só quando existirem. Apague quando não.
+# storybook:                      # não se aplica neste projeto: ver P17
 #   base: <url>
 #   usa:
 #     - <id-da-story>             # para que serve
-# servicos:                       # não se aplica neste projeto — não há backend (009)
+# servicos:                       # não se aplica neste projeto: não há backend (009)
 #   - POST /caminho/{id}/acao
 ---
 
@@ -40,17 +40,17 @@ figma:
     serve:      "A trilha marca a etapa cuja seção ocupa a maior parte da tela."
     não serve:  "A trilha deve se comportar bem."
 
-  Não descreva medida, cor ou espaçamento — isso desce do Figma e vive em docs/spec/.
+  Não descreva medida, cor ou espaçamento, isso desce do Figma e vive em docs/spec/.
   Quando uma regra precisar de justificativa, ela vem depois das regras, em parágrafo
   próprio começando por "Por que".
 -->
 
-- 
+-
 
 ## Peças
 
 <!--
-  OMITA esta seção inteira em fluxo sem tela — não há peça para endereçar.
+  OMITA esta seção inteira em fluxo sem tela, não há peça para endereçar.
 
   A tabela que dá profundidade ao link. O frontmatter aponta a TELA; as peças apontam
   CADA elemento: modal, variante, estado, posição.
@@ -69,7 +69,7 @@ figma:
   Dado / Quando / Então / E
 
   Havendo mais de uma variante da mesma peça, use Esquema do Cenário + Exemplos.
-  Marque com @lacuna todo caminho não decidido, e escreva as opções como comentário —
+  Marque com @lacuna todo caminho não decidido, e escreva as opções como comentário:
   para a decisão ser tomada, não opinada. Use @lacuna sem economia.
   Toda @lacuna aponta para uma pergunta em docs/perguntas-em-aberto.md.
 -->
@@ -79,17 +79,17 @@ figma:
 Funcionalidade: Nome da tela ou do fluxo
 
   Contexto:
-    Dado que 
+    Dado que
 
-  Cenário: 
-    Dado que 
-    Quando 
-    Então 
+  Cenário:
+    Dado que
+    Quando
+    Então
 
   @lacuna
-  Cenário: 
-    Dado que 
-    Então A DEFINIR — ver pergunta PNN
+  Cenário:
+    Dado que
+    Então A DEFINIR. Ver pergunta PNN
     # Opções: … · … · …
 ```
 

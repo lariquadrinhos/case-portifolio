@@ -1,0 +1,148 @@
+{
+  "_": "Legenda de cada lacuna de mídia, por case, capítulo e tela. Serve para a checagem 14, que confere três coisas que nenhum arquivo sozinho revela: se toda lacuna existe nas quatro telas do case, se a legenda diz a mesma coisa nas quatro, e se a legenda escrita bate palavra por palavra com a linha 'Legenda:' do arquivo de conteúdo. 'Legenda: a escrever' é o marcador de lacuna ainda não redigida e não é comparado com o conteúdo.",
+  "exportado": "2026-10-01",
+  "marcadorDeNaoEscrita": "Legenda: a escrever",
+  "cases": {
+    "case-study-financas-pf-pj.md": {
+      "telas": [
+        "desktop 1440 · claro",
+        "desktop 1440 · escuro",
+        "tela estreita 375 · claro",
+        "tela estreita 375 · escuro"
+      ],
+      "slots": [
+        {
+          "capitulo": 1,
+          "ordem": 1,
+          "trilha": "Introdução",
+          "porTela": {
+            "desktop 1440 · claro": "Legenda: a escrever",
+            "tela estreita 375 · claro": "Legenda: a escrever",
+            "desktop 1440 · escuro": "Legenda: a escrever",
+            "tela estreita 375 · escuro": "Legenda: a escrever"
+          }
+        },
+        {
+          "capitulo": 2,
+          "ordem": 1,
+          "trilha": "Descoberta",
+          "porTela": {
+            "desktop 1440 · claro": "Legenda: a escrever",
+            "tela estreita 375 · claro": "Legenda: a escrever",
+            "desktop 1440 · escuro": "Legenda: a escrever",
+            "tela estreita 375 · escuro": "Legenda: a escrever"
+          }
+        },
+        {
+          "capitulo": 3,
+          "ordem": 1,
+          "trilha": "Desenho e documentação",
+          "porTela": {
+            "desktop 1440 · claro": "Legenda: a escrever",
+            "tela estreita 375 · claro": "Legenda: a escrever",
+            "desktop 1440 · escuro": "Legenda: a escrever",
+            "tela estreita 375 · escuro": "Legenda: a escrever"
+          }
+        },
+        {
+          "capitulo": 4,
+          "ordem": 1,
+          "trilha": "Design system",
+          "porTela": {
+            "desktop 1440 · claro": "Legenda: a escrever",
+            "tela estreita 375 · claro": "Legenda: a escrever",
+            "desktop 1440 · escuro": "Legenda: a escrever",
+            "tela estreita 375 · escuro": "Legenda: a escrever"
+          }
+        },
+        {
+          "capitulo": 5,
+          "ordem": 1,
+          "trilha": "Desenvolvimento",
+          "porTela": {
+            "desktop 1440 · claro": "Legenda: a escrever",
+            "tela estreita 375 · claro": "Legenda: a escrever",
+            "desktop 1440 · escuro": "Legenda: a escrever",
+            "tela estreita 375 · escuro": "Legenda: a escrever"
+          }
+        },
+        {
+          "capitulo": 6,
+          "ordem": 1,
+          "trilha": "Resultados",
+          "porTela": {
+            "desktop 1440 · claro": "Legenda: a escrever",
+            "tela estreita 375 · claro": "Legenda: a escrever",
+            "desktop 1440 · escuro": "Legenda: a escrever",
+            "tela estreita 375 · escuro": "Legenda: a escrever"
+          }
+        }
+      ]
+    },
+    "case-study-reembolso-sulamerica.md": {
+      "telas": [
+        "desktop 1440 · claro",
+        "desktop 1440 · escuro",
+        "tela estreita 375 · claro",
+        "tela estreita 375 · escuro"
+      ],
+      "slots": [
+        {
+          "capitulo": 2,
+          "ordem": 1,
+          "trilha": "Diagnóstico",
+          "porTela": {
+            "desktop 1440 · claro": "Quatro das dezoito etapas do fluxo atual. O número em cada anotação é a posição dela no fluxo: é assim que cada problema fica preso ao lugar onde acontece.",
+            "tela estreita 375 · claro": "Quatro das dezoito etapas do fluxo atual. O número em cada anotação é a posição dela no fluxo: é assim que cada problema fica preso ao lugar onde acontece.",
+            "desktop 1440 · escuro": "Quatro das dezoito etapas do fluxo atual. O número em cada anotação é a posição dela no fluxo: é assim que cada problema fica preso ao lugar onde acontece.",
+            "tela estreita 375 · escuro": "Quatro das dezoito etapas do fluxo atual. O número em cada anotação é a posição dela no fluxo: é assim que cada problema fica preso ao lugar onde acontece."
+          }
+        },
+        {
+          "capitulo": 3,
+          "ordem": 1,
+          "trilha": "Novo fluxo",
+          "porTela": {
+            "desktop 1440 · claro": "O ponto em que o fluxo novo se separa em dois. Tela Conclusão encerra o preparo que acontece uma vez; quem já o fez entra pela esquerda e cai direto em Solicitar Reembolso.",
+            "tela estreita 375 · claro": "O ponto em que o fluxo novo se separa em dois. Tela Conclusão encerra o preparo que acontece uma vez; quem já o fez entra pela esquerda e cai direto em Solicitar Reembolso.",
+            "desktop 1440 · escuro": "O ponto em que o fluxo novo se separa em dois. Tela Conclusão encerra o preparo que acontece uma vez; quem já o fez entra pela esquerda e cai direto em Solicitar Reembolso.",
+            "tela estreita 375 · escuro": "O ponto em que o fluxo novo se separa em dois. Tela Conclusão encerra o preparo que acontece uma vez; quem já o fez entra pela esquerda e cai direto em Solicitar Reembolso."
+          }
+        },
+        {
+          "capitulo": 4,
+          "ordem": 1,
+          "trilha": "Wireframes e interface",
+          "porTela": {
+            "desktop 1440 · claro": "Duas das telas de erro. À esquerda, a validação acontece na digitação e a mensagem diz qual seria a data válida; à direita, a pendência diz o que falta e promete que a análise continua de onde parou.",
+            "tela estreita 375 · claro": "Duas das telas de erro. À esquerda, a validação acontece na digitação e a mensagem diz qual seria a data válida; à direita, a pendência diz o que falta e promete que a análise continua de onde parou.",
+            "desktop 1440 · escuro": "Duas das telas de erro. À esquerda, a validação acontece na digitação e a mensagem diz qual seria a data válida; à direita, a pendência diz o que falta e promete que a análise continua de onde parou.",
+            "tela estreita 375 · escuro": "Duas das telas de erro. À esquerda, a validação acontece na digitação e a mensagem diz qual seria a data válida; à direita, a pendência diz o que falta e promete que a análise continua de onde parou."
+          }
+        },
+        {
+          "capitulo": 4,
+          "ordem": 2,
+          "trilha": "Wireframes e interface",
+          "porTela": {
+            "desktop 1440 · claro": "Duas telas no sistema visual remontado: o laranja, a tipografia e os componentes vieram do CSS público e da medição das capturas. À esquerda o onboarding; à direita a confirmação do pedido.",
+            "tela estreita 375 · claro": "Duas telas no sistema visual remontado: o laranja, a tipografia e os componentes vieram do CSS público e da medição das capturas. À esquerda o onboarding; à direita a confirmação do pedido.",
+            "desktop 1440 · escuro": "Duas telas no sistema visual remontado: o laranja, a tipografia e os componentes vieram do CSS público e da medição das capturas. À esquerda o onboarding; à direita a confirmação do pedido.",
+            "tela estreita 375 · escuro": "Duas telas no sistema visual remontado: o laranja, a tipografia e os componentes vieram do CSS público e da medição das capturas. À esquerda o onboarding; à direita a confirmação do pedido."
+          }
+        },
+        {
+          "capitulo": 5,
+          "ordem": 1,
+          "trilha": "Resultados",
+          "porTela": {
+            "desktop 1440 · claro": "Vídeo do protótipo de pedido de reembolso.",
+            "tela estreita 375 · claro": "Vídeo do protótipo de pedido de reembolso.",
+            "desktop 1440 · escuro": "Vídeo do protótipo de pedido de reembolso.",
+            "tela estreita 375 · escuro": "Vídeo do protótipo de pedido de reembolso."
+          }
+        }
+      ]
+    }
+  }
+}

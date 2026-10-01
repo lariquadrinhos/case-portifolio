@@ -7,7 +7,7 @@ Duas listas do mesmo hexadecimal criariam a briga que este projeto existe para e
 > 034) e `size/abertura` de 20 para 18 (decisão 035). `line/abertura` permanece em 32.
 >
 > **A escala converge em tela estreita, por construção.** Ela comprime pelo topo contra um
-> piso fixo — `corpo`, `apoio` e `etiqueta` são idênticos nas duas larguras —, então níveis
+> piso fixo (`corpo`, `apoio` e `etiqueta` são idênticos nas duas larguras), então níveis
 > vizinhos acabam compartilhando corpo. Hoje `abertura` e `corpo` são ambos 18.
 >
 > **A regra não é oito corpos distintos; é oito níveis distinguíveis.** Dois níveis nunca
@@ -15,10 +15,10 @@ Duas listas do mesmo hexadecimal criariam a briga que este projeto existe para e
 > contra `corpo` 18/30.
 >
 > **Retrato de um sistema incompleto.** O design system ainda será construído no Figma,
-> com todas as variáveis e componentes. O que está abaixo é o que existia em 18/09/2026 —
+> com todas as variáveis e componentes. O que está abaixo é o que existia em 18/09/2026:
 > vai crescer e pode mudar de nome. Não é especificação fechada.
 
-O que este arquivo guarda é o **inventário de nomes** — o que o contrato pode citar, e o
+O que este arquivo guarda é o **inventário de nomes**, o que o contrato pode citar, e o
 que a checagem de CI 4 verifica.
 
 **Arquivo:** <https://www.figma.com/design/hwClE9Xpm51OW4vPsCCn8J/?node-id=34-2>
@@ -28,7 +28,7 @@ que a checagem de CI 4 verifica.
 
 ## Coleção Cor · modos `Claro` e `Escuro`
 
-Nomeados por papel, nunca por cor. **O escuro não é o claro invertido** — os dois modos
+Nomeados por papel, nunca por cor. **O escuro não é o claro invertido**: os dois modos
 foram escolhidos e verificados em separado, e nenhum valor de um deriva do outro.
 
 ```
@@ -44,7 +44,7 @@ Atribuição dos acentos, decidida uma vez e nunca no momento de montar a págin
 
 | Papel | Acento |
 |---|---|
-| Sistema — foco, link, botão de contato, marca-texto da hero | roxo |
+| Sistema: foco, link, botão de contato, marca-texto da hero | roxo |
 | Case de Finanças PF+PJ | azul |
 | Case de Reembolso | laranja |
 | Reservados para um terceiro case | verde, rosa |
@@ -69,12 +69,12 @@ margem      colunas      calha
 ```
 
 Composição, não espaçamento. **A regra de que espaço só sai de `space/*` não alcança a
-grade** — margem de 80 não é um passo faltando na escala de espaço, é um valor de outro
+grade**: margem de 80 não é um passo faltando na escala de espaço, é um valor de outro
 sistema.
 
 > **A grade do Figma não aceita vínculo com variável.** Testado: `setBoundVariable` recusa
 > o campo `layoutGrids`. O token é fonte para o código e referência declarada, mas **não
-> propaga sozinho para os frames** — mudar o token exige atualizar cada frame à mão. Isso
+> propaga sozinho para os frames**: mudar o token exige atualizar cada frame à mão. Isso
 > pede uma checagem: todo frame deve bater com o token do seu modo.
 
 ## Coleção Espaço e forma
@@ -86,7 +86,7 @@ stroke/padrao
 foco/largura      foco/afastamento
 ```
 
-Sem frame de documentação na página — os frames cobrem Neutros, Acentos nos dois temas e
+Sem frame de documentação na página: os frames cobrem Neutros, Acentos nos dois temas e
 Tipografia. Os nomes acima vêm do documento de definições, não de leitura do arquivo.
 Serão confirmados quando o design system for construído.
 
@@ -100,7 +100,7 @@ definições exigem.
 
 **Os modos viram contexto, não nomes diferentes.** Cor gera dois blocos com os mesmos nomes,
 um por tema. Tipografia e Grade geram dois blocos, um por largura, sob consulta de mídia.
-Espaço e forma tem modo único e gera um bloco só. **O nome nunca carrega o modo** — é isso
+Espaço e forma tem modo único e gera um bloco só. **O nome nunca carrega o modo**: é isso
 que permite escrever `var(--bg-page)` uma vez e obter o valor certo nos dois temas.
 
 ## O ciclo
@@ -115,7 +115,7 @@ CSS de custom properties    ← gerado, nunca editado à mão
 todo o resto do CSS deriva  ← só consome, com var()
 ```
 
-Os dois modos de cada coleção viram os mesmos nomes com valores diferentes por contexto —
+Os dois modos de cada coleção viram os mesmos nomes com valores diferentes por contexto:
 tema para Cor, largura de tela para Tipografia. É o que torna possível ter tokens nomeados
 por papel funcionando nos dois temas sem duplicar nome.
 
@@ -129,18 +129,18 @@ por papel funcionando nos dois temas sem duplicar nome.
 | 02 · Acentos, tema claro | `36:2` |
 | 03 · Acentos, tema escuro | `37:2` |
 | 04 · Tipografia | `37:45` |
-| 05 · Demonstração, hero | `37:88` |
-| 06 · Demonstração, leitura do case | `38:105` |
+| 05 · Demonstração, hero | `213:385` |
+| 06 · Demonstração, leitura do case | `213:386` |
 
 ## Os frames 05 e 06 são demonstração
 
 **Nada neles é fonte, nem texto nem estrutura.** Duas regras das definições cobrem isso:
 
-- **Os textos são amostra.** Toda frase ali — hero, títulos, parágrafos, legendas — existe
+- **Os textos são amostra.** Toda frase ali (hero, títulos, parágrafos, legendas) existe
   para testar tamanho, medida de linha e contraste. O conteúdo real vem dos arquivos de
   texto. Nenhuma palavra é copiada daqui para o código.
 - **Demonstração não vira regra por estar desenhada.** Se uma demonstração contrariar uma
   regra escrita no documento, quem está errado é o desenho.
 
-Divergência entre demonstração e documento, portanto, não é pergunta em aberto — é o
+Divergência entre demonstração e documento, portanto, não é pergunta em aberto: é o
 desenho a corrigir quando as telas forem feitas para valer.

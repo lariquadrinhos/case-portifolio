@@ -21,14 +21,14 @@ querer ver os trabalhos.
 - O caminho para Trabalhos é **o elemento mais evidente da tela**, rotulado
   **Ver os meus trabalhos**.
 - **A ação é botão preenchido**, a mesma peça do convite ao contato no fim de um case. Os
-  dois são a ação principal da sua página, e o site nunca tem duas — por isso há um estilo só.
+  dois são a ação principal da sua página, e o site nunca tem duas: por isso há um estilo só.
 - **Uma ação principal só.** A home não repete o contato como botão: a barra é fixa, então
   o contato já está visível no topo. Duplicar divide a atenção no único momento em que o
   site quer uma direção só.
 - Os quatro textos vêm de `quem-sou-eu.md`, sob `<!-- bloco: home -->`: nome
   **Larissa Quadros**, cargo **UX Designer**, a frase de abertura e o parágrafo.
 - **A ordem na tela é: frase, parágrafo, nome e cargo, ação.** A página abre pelo que ela
-  pensa, não por quem ela é — a identificação vem depois de a frase ter feito o trabalho,
+  pensa, não por quem ela é, a identificação vem depois de a frase ter feito o trabalho,
   imediatamente antes da ação.
 - **O cargo aparece uma vez só**, na linha de identificação. O parágrafo não o repete.
 
@@ -42,19 +42,19 @@ querer ver os trabalhos.
 - Os dois valores saem da escala de espaço. Hoje: **96 e 32** em desktop, **64 e 24** em
   tela estreita.
 
-O que a regra fixa é a **relação** — respiro igual em cima e embaixo, espaçamento uniforme
+O que a regra fixa é a **relação**: respiro igual em cima e embaixo, espaçamento uniforme
 dentro do bloco. Os números mudam com a largura; a relação não.
 - O marca-texto cobre um trecho da hero, **uma vez por página**, no acento de sistema.
   Na home esse trecho está no título; num case pode estar na frase de abertura. Fora da
   hero não existe.
 - **O destaque é de sentido, não de ritmo.** Ele cobre um trecho que fecha uma ideia, e a
-  quebra de linha de cada largura é escolhida em função dele — não o contrário. Hoje o
+  quebra de linha de cada largura é escolhida em função dele, não o contrário. Hoje o
   trecho é *"forma melhor"*, que em 1440 divide linha com o resto da frase e em 375 ocupa
   uma linha só.
 - **A quebra da frase é escolhida, não automática.** Cada linha fecha uma unidade de
   sentido. Em 1440 são três linhas; em 375, quatro:
   *"Se existe uma / forma melhor / de fazer, eu quero / descobrir qual é."*
-- A home não tem arquivo de conteúdo próprio — são quatro linhas que mudam junto com a
+- A home não tem arquivo de conteúdo próprio, são quatro linhas que mudam junto com a
   forma como ela se apresenta.
 
 **Por que o frame 37:88 não vale como referência:** ele é demonstração, tem dois botões e

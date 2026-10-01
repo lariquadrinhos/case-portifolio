@@ -11,7 +11,7 @@ entende um subconjunto pequeno de markdown mais o vocabulário de marcadores do 
 produz HTML completo. Publicar por GitHub Pages, com a automação versionada no repositório.
 
 A abordagem técnica saiu da pesquisa da Fase 0: o markdown usado é pequeno o bastante para
-um analisador de 150 a 200 linhas, e `node:test` permite testar sem acrescentar dependência —
+um analisador de 150 a 200 linhas, e `node:test` permite testar sem acrescentar dependência,
 o que desbloqueia a checagem 3 do contrato, parada na P19 desde o começo.
 
 ## Technical Context
@@ -54,7 +54,7 @@ valor visual à mão · um nome só nos três lugares.
 
 **Reavaliação depois da Fase 1.** Um ponto foi verificado de novo: `contracts/` **não foi
 gerado**, e a ausência é deliberada. O template prevê essa pasta para as interfaces que o
-projeto expõe — e a interface entre os arquivos de texto e a construção **já é o contrato
+projeto expõe, e a interface entre os arquivos de texto e a construção **já é o contrato
 `conteudo/arquivo-de-texto-vira-pagina.md`**. Criá-la aqui violaria o princípio II na própria
 execução do plano que promete respeitá-lo.
 
@@ -71,10 +71,10 @@ docs/speclist/001-construir-e-publicar/
 ├── quickstart.md        # Fase 1
 ├── checklists/
 │   └── requirements.md
-└── tasks.md             # /speckit-tasks — ainda não criado
+└── tasks.md             # /speckit-tasks, ainda não criado
 ```
 
-`contracts/` ausente de propósito — ver Constitution Check.
+`contracts/` ausente de propósito. Ver Constitution Check.
 
 ### Source Code (repository root)
 
@@ -94,7 +94,7 @@ modelo/
 ├── base.html             # moldura: barra, trilha, voltar ao topo, rodapé
 └── tema.js               # o script curto do `<head>`, que falha em segurança
 
-publico/                  # imagens, PDF, fontes — preparados uma vez, fora da construção
+publico/                  # imagens, PDF, fontes, preparados uma vez, fora da construção
 site/                     # saída gerada; fora do Git
 
 testes/                   # um arquivo por domínio; cada teste nomeado pelo cenário
@@ -104,7 +104,7 @@ scripts/checagens.mjs     # já existe
 
 **Structure Decision**: projeto único, sem separação entre frente e fundo, porque não há
 fundo. Os arquivos de conteúdo **ficam na raiz**, onde já estão e onde o contrato e o script
-de checagens os procuram — movê-los para uma pasta exigiria alterar os dois sem ganho
+de checagens os procuram: movê-los para uma pasta exigiria alterar os dois sem ganho
 correspondente. `construcao/` separa o gerador do conteúdo e do gerado; `site/` fica fora do
 Git, porque misturar fonte com saída foi alternativa descartada na pesquisa.
 
@@ -113,6 +113,6 @@ Git, porque misturar fonte com saída foi alternativa descartada na pesquisa.
 > Sem violações da constituição. Tabela vazia de propósito.
 
 Um ponto merece registro por ser tensão, não violação: **o script de tema é JavaScript
-bloqueante no `<head>`**, o que roça o princípio I. Não é exceção nova — a decisão 005 já o
+bloqueante no `<head>`**, o que roça o princípio I. Não é exceção nova: a decisão 005 já o
 resolveu: ele falha em segurança, caindo na preferência do sistema, e nenhum conteúdo
 depende dele. Está aqui para que quem ler o plano não precise reabrir a questão.
