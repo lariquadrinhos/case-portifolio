@@ -432,7 +432,6 @@ em { font-style: normal; }
   padding-top: var(--space-64);
 }
 .case__titulo {
-  text-wrap: balance;
   font-size: var(--size-titulo-case);
   line-height: var(--line-titulo-case);
   font-weight: 700;
@@ -788,8 +787,8 @@ em { font-style: normal; }
   font-weight: 700;
   letter-spacing: var(--rastreio-titulo-cap);
 }
-.valores__lista { display: flex; flex-direction: column; gap: var(--space-32); }
-.valor { display: flex; flex-direction: column; gap: var(--space-12); }
+.valores__lista { display: flex; flex-direction: column; row-gap: var(--space-32); }
+.valor { display: flex; flex-direction: column; row-gap: var(--space-12); }
 .valor__titulo { font-size: var(--size-subtitulo); line-height: var(--line-subtitulo); font-weight: 500; }
 .valor__texto { color: var(--text-secondary); text-wrap: pretty; }
 
