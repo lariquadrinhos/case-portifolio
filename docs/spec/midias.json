@@ -279,6 +279,42 @@
       },
       "rastersQueCobrem": [],
       "origem": "figma"
+    },
+    {
+      "id": "545:1397",
+      "nome": "financas-3-desenho-claro",
+      "caso": "financas",
+      "capitulo": 3,
+      "tema": "claro",
+      "tamanho": "411×798 (arquivo em 822×1596)",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
+    },
+    {
+      "id": "545:1398",
+      "nome": "financas-3-desenho-escuro",
+      "caso": "financas",
+      "capitulo": 3,
+      "tema": "escuro",
+      "tamanho": "411×798 (arquivo em 822×1596)",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
     }
   ],
   "aindaSemNome": [

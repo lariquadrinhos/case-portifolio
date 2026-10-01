@@ -38,10 +38,10 @@
           "ordem": 1,
           "trilha": "Desenho e documentação",
           "porTela": {
-            "desktop 1440 · claro": "Legenda: a escrever",
-            "tela estreita 375 · claro": "Legenda: a escrever",
-            "desktop 1440 · escuro": "Legenda: a escrever",
-            "tela estreita 375 · escuro": "Legenda: a escrever"
+            "desktop 1440 · claro": "O mesmo Novo Lançamento em três lugares: no fluxo, por que a tela existe; no wireframe, o que a pessoa vê; na especificação, o que cada campo faz.",
+            "tela estreita 375 · claro": "O mesmo Novo Lançamento em três lugares: no fluxo, por que a tela existe; no wireframe, o que a pessoa vê; na especificação, o que cada campo faz.",
+            "desktop 1440 · escuro": "O mesmo Novo Lançamento em três lugares: no fluxo, por que a tela existe; no wireframe, o que a pessoa vê; na especificação, o que cada campo faz.",
+            "tela estreita 375 · escuro": "O mesmo Novo Lançamento em três lugares: no fluxo, por que a tela existe; no wireframe, o que a pessoa vê; na especificação, o que cada campo faz."
           }
         },
         {

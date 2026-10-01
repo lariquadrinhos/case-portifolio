@@ -6518,3 +6518,41 @@ fechado por decisão de produto deixam de aparecer.
 
 **Consequência.** Figma reajustado: desktop com 6516, estreita com 10101, respiros de 96 e 64. Texto
 alternativo e `midias.json` atualizados.
+
+---
+
+## 195 · O capítulo 3 do Finanças junta fluxo, wireframe e especificação da mesma tela
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case · `#restricao`
+
+**Gatilho.** A lacuna do capítulo 3 pedia *"fluxo mapeado ao lado de uma especificação de tela"*,
+para provar *"quem fosse implementar não deveria precisar me perguntar nada que já não estivesse
+escrito"*.
+
+**Decisão.** Três trechos da mesma tela, o Novo Lançamento, empilhados:
+- **o fluxo**, recorte real do board do FigJam (Novo Lançamento → 4 abas), cortado nas bordas;
+- **o wireframe**, do Figma do Finanças (`262:873`, modal `6:29`), no bloco Informações básicas até
+  o Status, quase em tamanho real; ela perguntou se cabia, e cabia;
+- **a especificação**, linhas 125 a 130 de `01-especificacao-de-telas.md`, na versão de arquivo da
+  193.
+
+Os mesmos campos aparecem no wireframe e na especificação: *"pré-preenchida com hoje"* e
+*"padrão Pago"* se conferem no desenho. **No tema claro o fluxo fica sem o fundo do FigJam**, direto
+sobre a página; **no escuro, com o cinza do FigJam atrás** (*"a da direita"*). O wireframe é branco
+nos dois temas, porque é a superfície do próprio modal. Os travessões da especificação ficam por
+serem citação.
+
+`financas-3-desenho-claro` e `-escuro`: 411×798, arquivo em 822×1596.
+
+**Alternativa descartada.** *O fundo escuro também atrás do fluxo escuro*: as setas, cinza-escuro no
+FigJam, sumiam. *Redesenhar o ramo nas cores do site*: ela preferiu o board real. *A peça sem
+wireframe* (722 px): perdia o "o que a pessoa vê". *A peça com wireframe até a Entidade* (889 px):
+alta demais; cortada no Status, voltou para perto dos 795 do capítulo 2.
+
+**Custo aceito.** No escuro, o cinza do FigJam e o branco do wireframe aparecem como painéis claros
+sobre a página. **A checagem 13 passa, mas só porque amostra os quatro cantos**, e os cantos caem nas
+linhas de nome de arquivo e de especificação, sobre o `bg/page`. O texto das caixas do fluxo fica
+perto de 11 px, abaixo do piso de 13, como no capítulo 3 do Reembolso.
+
+**Consequência.** Figma, as quatro telas; desktop com 6652, estreita com 10563, respiros de 96 e 64.
+Legenda e texto alternativo são rascunho meu.
