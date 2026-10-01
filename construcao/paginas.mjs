@@ -9,6 +9,7 @@ import { escapar, inline, ehFraseInteiraEmNegrito, semNegrito } from './markdown
 import { dimensoes, resolverMidia, resolverCapa } from './midias.mjs';
 import {
   t, TEXTOS, FRASE_DA_HOME, MARCA_TEXTO_DO_CASE, COR_DO_CASE, BLOCO_DE_DESTAQUE,
+  QUEBRA_DO_TITULO_ESTREITA,
 } from './interface.mjs';
 
 const ATRIBUTOS_EXTERNOS = 'target="_blank" rel="noopener"';
@@ -401,7 +402,13 @@ export function paginaCase(ctx, c, proximo) {
   const { ausencias } = ctx;
   const onde = c.arquivo;
   const cor = COR_DO_CASE[c.prefixo];
-  const titulo = c.hero.titulo ? escapar(c.hero.titulo) : ausencias.marcar('o título do case', onde);
+  const quebra = QUEBRA_DO_TITULO_ESTREITA[c.prefixo];
+  let titulo;
+  if (!c.hero.titulo) titulo = ausencias.marcar('o título do case', onde);
+  else if (quebra && quebra.join(' ') === c.hero.titulo) {
+    // Um texto só: na tela estreita cada linha vira bloco, no desktop corre numa linha.
+    titulo = quebra.map((l) => `<span class="linha-estreita">${escapar(l)}</span>`).join(' ');
+  } else titulo = escapar(c.hero.titulo);
   const abertura = c.hero.abertura
     ? aberturaComMarca(c.hero.abertura, MARCA_TEXTO_DO_CASE[c.prefixo])
     : ausencias.marcar('a frase de abertura', onde);

@@ -140,3 +140,14 @@ test('Todo texto de interface que cita um contrato está escrito nele', () => {
     assert.ok(contrato.includes(t), `${chave}: "${t}" não está em ${fonte}`);
   }
 });
+
+test('O título do case quebra onde o Figma quebra', () => {
+  const fin = site.pagina('trabalhos/financas-pf-pj/index.html');
+  assert.match(fin, /<h1 class="case__titulo"><span class="linha-estreita">A planilha que<\/span> <span class="linha-estreita">virou produto<\/span><\/h1>/,
+    'Finanças: quebra escolhida');
+  assert.match(site.pagina('trabalhos/reembolso-sulamerica/index.html'), /<h1 class="case__titulo">Toda semana, do zero<\/h1>/,
+    'Reembolso: quebra natural');
+  const mudou = raizTemporaria({ 'case-study-financas-pf-pj.md': (t) => t.replace('# A planilha que virou produto\n\n**Vi', '# A planilha virou produto\n\n**Vi') });
+  assert.match(construirEm(mudou).pagina('trabalhos/financas-pf-pj/index.html'), /<h1 class="case__titulo">A planilha virou produto<\/h1>/,
+    'se o título muda no arquivo, a quebra escolhida deixa de valer');
+});

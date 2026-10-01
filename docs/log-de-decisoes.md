@@ -6257,3 +6257,28 @@ sem parâmetro, mas é mexer no arquivo dela para consertar um link nosso.
 **Consequência.** Também corrigido o acento de *"heurísticas"* no capítulo 3 do Reembolso, e
 preenchidos os links do Figma e do FigJam do Finanças, que existiam desde a 111 e a 179 deixou
 vazios por engano meu.
+
+---
+
+## 186 · Os três PNGs claros também entram como estão, e o título do Finanças quebra como no Figma
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** Dois pontos da primeira rodada do tester. A checagem 13 reprovava, além dos dois PNGs
+do capítulo 3 que a 182 cobriu, `reembolso-2-diagnostico-claro`, `reembolso-4-telas-de-erro-claro`
+e `reembolso-4-sistema-remontado-claro`, de cantos `#F5F5F5` contra o `bg/page` `#F4EFE4`. E na
+tela estreita o título do Finanças quebrava *"A planilha que virou / produto"*, quando o Figma
+(`108:22`) quebra *"A planilha que / virou produto"*.
+
+**Decisão.** *"usa esses também, siga o figma no título"*. Os três PNGs entram como estão, como os
+do capítulo 3. O título do Finanças quebra onde o Figma quebra, por escolha, como a frase da home.
+
+**Alternativa descartada.** *Reexportar os três com o fundo da página*, que a 157 pedia. *Deixar a
+largura decidir a quebra*, que o dev tinha deixado depois de tirar o `text-wrap: balance` que pôs
+por conta própria: acerta o Reembolso e erra o Finanças.
+
+**Custo aceito.** No tema claro, as três imagens aparecem como uma caixa levemente cinza sobre a
+página. A checagem 13 segue vermelha por elas, sem isenção. A quebra do título fica presa ao texto
+de hoje: se o título mudar, a quebra precisa ser escolhida de novo.
+
+**Consequência.** Regra nova em `case/pagina-de-case.md`.

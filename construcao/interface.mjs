@@ -69,6 +69,14 @@ export const MARCA_TEXTO_DO_CASE = {
   reembolso: 'Decidi redesenhar o fluxo para que a segunda vez fosse diferente da primeira.',
 };
 
+// O título do case quebra onde o Figma quebra (decisão 186). Quebra escolhida só na tela
+// estreita, e só onde o desenho a escolheu: Finanças em 108:22. Os outros quebram pela
+// largura. A construção confere que as linhas, juntas, são o título do arquivo; se o título
+// mudar, a quebra escolhida deixa de valer e o navegador quebra.
+export const QUEBRA_DO_TITULO_ESTREITA = {
+  financas: ['A planilha que', 'virou produto'],
+};
+
 // A cor de cada case (design-system.md, "Papéis de acento").
 export const COR_DO_CASE = { financas: 'azul', reembolso: 'laranja' };
 

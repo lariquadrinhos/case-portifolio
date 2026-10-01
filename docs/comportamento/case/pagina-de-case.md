@@ -27,6 +27,9 @@ etapa, como evidência, não como declaração à parte.
 Ver P57.
 - A página abre com **título do case, frase de abertura e tira de destaques**, nessa ordem,
   antes de qualquer capítulo.
+- **O título do case quebra onde o Figma quebra.** Na tela estreita, o do Finanças é *"A planilha
+  que / virou produto"*, quebra escolhida, como a da frase da home; o do Reembolso, *"Toda semana,
+  do / zero"*, é a quebra natural da largura. No desktop os dois cabem numa linha. Ver decisão 186.
 - **A tira de destaques é o elemento mais escaneável da página** e, para quem faz triagem
   rápida, pode ser o mais útil da tela inteira. Traz papel, método ou escopo, entregas,
   status e repositório. Em tela estreita, empilha.
