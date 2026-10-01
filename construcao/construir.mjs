@@ -67,6 +67,24 @@ export function construir({ modo = 'local', base = '/', raiz = RAIZ, saida = joi
     recursive: true,
     filter: (f) => !f.endsWith('.DS_Store'),
   });
+  // O manifesto nomeia o site e os ícones grandes para quem o instala ou o fixa na tela de
+  // início (decisão 188). O nome vem de quem-sou-eu.md e a cor do fundo claro da página,
+  // de tokens.json: nada aqui é escrito duas vezes. Caminhos relativos ao próprio
+  // manifesto, para valerem com qualquer base.
+  const fundoClaro = lerTokens(join(raiz, 'docs/spec/tokens.json')).colecoes.Cor.variaveis['bg/page'].Claro;
+  writeFileSync(join(saida, 'manifest.webmanifest'), JSON.stringify({
+    name: ctx.nome,
+    short_name: qse.home.nomeCurto,
+    lang: 'pt-BR',
+    start_url: './',
+    background_color: fundoClaro,
+    theme_color: fundoClaro,
+    icons: [
+      { src: 'publico/icone/icone-192.png', sizes: '192x192', type: 'image/png' },
+      { src: 'publico/icone/icone-512.png', sizes: '512x512', type: 'image/png' },
+      { src: 'publico/icone/icone.svg', sizes: 'any', type: 'image/svg+xml' },
+    ],
+  }, null, 2));
   // O Pages não precisa passar o site pelo Jekyll: ele já está pronto.
   writeFileSync(join(saida, '.nojekyll'), '');
   return { ok: true, ausencias, paginas };

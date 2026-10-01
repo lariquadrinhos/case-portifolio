@@ -94,6 +94,7 @@ function documento(ctx, { titulo, atual, corpo, classeDoCorpo = '' }) {
 <link rel="icon" href="${base}publico/icone/favicon.ico">
 <link rel="icon" href="${base}publico/icone/icone.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="${base}publico/icone/apple-touch-icon.png">
+<link rel="manifest" href="${base}manifest.webmanifest">
 <link rel="preload" href="${base}publico/fontes/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}estilo.css">
 <script src="${base}moldura.js" defer></script>

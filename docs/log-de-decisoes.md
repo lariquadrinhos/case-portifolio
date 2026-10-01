@@ -6308,3 +6308,32 @@ que se lê é o L.
 
 **Consequência.** O SVG que o Figma exporta traz o fundo da página e da seção por trás do círculo;
 o arquivo publicado foi limpo à mão para conter só o círculo e o L, e os PNGs foram gerados dele.
+
+---
+
+## 188 · O ícone da tela de início ganha o fundo claro, e o manifesto nomeia o site
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** moldura · `#restricao`
+
+**Gatilho.** Publicado o ícone de aba (187), sobraram duas pontas. O iOS não aceita transparência
+no `apple-touch-icon` e pinta de preto o que é transparente: o círculo apareceria sobre um
+quadrado preto. E os PNGs de 192 e 512 entraram no repositório sem nada que os usasse, porque só
+um manifesto os declara, e o manifesto pede nome e cores que ninguém tinha decidido.
+
+**Decisão.** Ela respondeu nas duas: *"usa a cor clara o bg"* e *"nomeia eles"*. O
+`apple-touch-icon.png` ganha o fundo claro da página, `bg/page` do tema claro (`#F4EFE4`), atrás
+do círculo; o desenho do círculo e do L não muda. O site ganha `manifest.webmanifest`, com nome
+**Larissa Quadros**, nome curto **Larissa** (os mesmos de `quem-sou-eu.md`, o curto é o da
+barra), e os ícones de 192, 512 e o SVG. Fundo e cor de tema do manifesto usam a mesma cor clara.
+
+**Alternativa descartada.** *Deixar transparente*: o preto do iOS é o pior resultado, uma cor que
+ninguém escolheu. *Fundo verde do círculo*: some a forma redonda que é o próprio ícone. *Apagar os
+PNGs grandes*: eles foram produzidos para isto, e sem manifesto o Android e o "Adicionar à tela
+de início" ficam sem nome nem ícone grande.
+
+**Custo aceito.** No tema escuro, quem fixa o site vê o ícone sobre o creme. É um ícone só para os
+dois temas desde a 187, e a tela de início não acompanha o tema do site.
+
+**Consequência.** O manifesto é gerado pela construção, a partir de `quem-sou-eu.md` e de
+`tokens.json`, e não existe como arquivo escrito à mão. Todas as páginas o declaram. O PNG
+original, transparente, não foi apagado do histórico: está no commit da 187.

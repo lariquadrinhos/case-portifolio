@@ -143,6 +143,15 @@ test('Toda página declara o ícone de aba', () => {
   }
 });
 
+test('O manifesto nomeia o site e os ícones', () => {
+  const m = JSON.parse(readFileSync(join(site.saida, 'manifest.webmanifest'), 'utf8'));
+  assert.equal(m.name, 'Larissa Quadros', 'o nome vem de quem-sou-eu.md');
+  assert.equal(m.short_name, 'Larissa', 'o nome curto é o da barra');
+  assert.equal(m.background_color, '#F4EFE4', 'o fundo claro da página, de tokens.json');
+  assert.deepEqual(m.icons.map((i) => i.sizes), ['192x192', '512x512', 'any']);
+  assert.match(site.pagina('404.html'), /<link rel="manifest" href="\/manifest\.webmanifest">/);
+});
+
 // ── A copy de interface tem uma fonte só ─────────────────────────────────────
 
 test('Todo texto de interface que cita um contrato está escrito nele', () => {
