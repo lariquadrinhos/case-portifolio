@@ -316,7 +316,7 @@ fica vermelha até os materiais trocarem de fundo. Ver decisão 158.
 
 | O que falta | Onde |
 |---|---|
-| **Foto** | Página "Quem sou eu": marcador já declarado no arquivo, apontando para `publico/larissa.jpg` |
+| ~~**Foto**~~ | **Entregue em 01/10.** `publico/larissa.jpg`, 1086×1358, recortada em 4:5. Ver decisão 184 |
 | **Currículo em PDF** | Página "Quem sou eu" |
 | **Imagem de compartilhamento** e descrições de página | Prévia do link, antes de qualquer página carregar |
 

@@ -66,14 +66,21 @@ test('Imagem de prova sem legenda', () => {
 
 test('A foto da página', () => {
   const { pagina } = construirEm(raizTemporaria());
-  // O arquivo da foto ainda não existe: a página mostra a falta no lugar dela.
-  assert.match(pagina('quem-sou-eu/index.html'), /FALTA · a foto/);
+  const quem = pagina('quem-sou-eu/index.html');
+  assert.match(quem, /<div class="quem__foto"><img class="quem__foto-img" src="\/publico\/larissa\.jpg" alt="Larissa Quadros"/,
+    'é tratada como foto da página, e o texto alternativo é preservado');
+  assert.doesNotMatch(quem, /class="prova"/, 'não como imagem de texto corrido');
+});
+
+test('A foto é trocada', () => {
+  const raiz = raizTemporaria({ 'quem-sou-eu.md': (t) => t.replace('publico/larissa.jpg', 'publico/outra.jpg') });
+  cpSync(`${raiz}/publico/larissa.jpg`, `${raiz}/publico/outra.jpg`);
+  assert.match(construirEm(raiz).pagina('quem-sou-eu/index.html'), /src="\/publico\/outra\.jpg"/,
+    'a página mostra a nova foto, sem nenhum código alterado');
 });
 
 test('A foto da página não exige legenda', () => {
   const raiz = raizTemporaria();
-  // Uma foto de mentira no caminho declarado, sem nenhuma linha de legenda.
-  cpSync(`${raiz}/publico/midias/reembolso-capa.jpg`, `${raiz}/publico/larissa.jpg`);
   const { pagina } = construirEm(raiz);
   const quem = pagina('quem-sou-eu/index.html');
   assert.match(quem, /<img class="quem__foto-img" src="\/publico\/larissa\.jpg" alt="Larissa Quadros"/,

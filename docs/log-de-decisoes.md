@@ -6204,3 +6204,29 @@ acertado. Uma checagem vermelha não impede mais nada: alguém precisa ler o reg
 
 **Consequência.** Voltar a barrar é tirar uma linha (`continue-on-error`) do workflow, e deve virar
 entrada nova quando acontecer.
+
+---
+
+## 184 · A foto entra recortada em 4:5, tirando do céu e da jaqueta
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** quem-sou-eu
+
+**Gatilho.** Ela mandou a foto (nó `503:1524`, 1086×1448, 3:4) e pediu: coloque no mockup e, se
+precisar, corte e redimensione. O espaço desenhado para ela é 4:5 nas duas larguras (`116:48`,
+519×649; `132:41`, 327×409).
+
+**Decisão.** Recortar para 4:5 sem reduzir: **1086×1358**, tirando 30 px do céu e 60 px da
+jaqueta, para o rosto não descer na moldura. JPEG, pela decisão 174: **188 KB**. Uma versão só
+serve aos dois temas, como a capa da 174, porque a foto é contida e não sangra na página. O
+recorte nas quatro telas é o mesmo do arquivo, copiado como preenchimento; o nó dela não foi
+tocado, só renomeado para `larissa`, a pedido dela.
+
+**Alternativa descartada.** *Encaixar sem cortar*, com faixas ou com a moldura mudando de
+proporção: a moldura é desenho dela e vale nas duas larguras. *Cortar só embaixo*: deixaria o
+rosto mais alto e o céu inteiro, que é o que menos diz. *Reduzir ao dobro do espaço desktop*
+(1038 de largura): ganharia uns poucos KB e perderia a folga para telas mais densas.
+
+**Custo aceito.** A borda de baixo corta a jaqueta mais perto da gola do que a foto original.
+
+**Consequência.** `publico/larissa.jpg`. Os quatro marcadores "FALTA · a foto" saíram do Figma, e
+o site deixa de mostrar o seu. Em `materiais-a-produzir.md`, a foto sai da lista do que falta.
