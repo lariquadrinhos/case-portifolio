@@ -6556,3 +6556,25 @@ perto de 11 px, abaixo do piso de 13, como no capítulo 3 do Reembolso.
 
 **Consequência.** Figma, as quatro telas; desktop com 6652, estreita com 10563, respiros de 96 e 64.
 Legenda e texto alternativo são rascunho meu.
+
+---
+
+## 196 · A especificação do capítulo 3 volta a mostrar Entidade e Categoria
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** Publicada a 195, ela pediu *"aumenta a especificação de tela"*: *"mais linhas"*, sem
+mudar o tamanho da letra.
+
+**Decisão.** O trecho da especificação vai de 125 a 132: voltam Entidade (*"padrão PF"*) e Categoria
+(*"cria categoria nova inline sem sair do formulário"*). O wireframe continua cortado no Status. A
+peça passa a 411×855, arquivo em 822×1710.
+
+**Alternativa descartada.** *Letra maior no mesmo trecho*, e *as duas coisas*: ela escolheu só as
+linhas.
+
+**Custo aceito.** A peça fica 57 px mais alta que a da 195, e mais alta que a do capítulo 2. As duas
+linhas novas não têm par no wireframe recortado.
+
+**Consequência.** Figma reajustado: desktop com 6709, estreita com 10608, respiros de 96 e 64. Texto
+alternativo e `midias.json` atualizados.
