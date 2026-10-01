@@ -6578,3 +6578,27 @@ linhas novas não têm par no wireframe recortado.
 
 **Consequência.** Figma reajustado: desktop com 6709, estreita com 10608, respiros de 96 e 64. Texto
 alternativo e `midias.json` atualizados.
+
+---
+
+## 197 · O wireframe do capítulo 3 fica mais estreito, centralizado e mostra até a Categoria
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** Depois da 196, ela pediu para aumentar *"um pouco a tela do wireframe"*, ganhando altura
+com uma largura menor; vista a primeira versão (360 px), *"diminui mais um pouco a largura [...] sem
+aumentar altura, e centraliza ele"*.
+
+**Decisão.** O wireframe passa a 320 px de largura, centralizado na coluna, e o recorte do modal
+desce até o começo de *Classificação (sugerida)*: mostra Valor, Data de pagamento, Status, Entidade
+(PF selecionado) e o campo Categoria (*"Buscar ou criar categoria…"*). **Todas as linhas da
+especificação, 128 a 132, ganham par no desenho.** A peça fica com 411×970, arquivo em 822×1940.
+
+**Alternativa descartada.** *360 px de largura, recorte até a Categoria*: mesma altura, menos tela.
+*Parar na Entidade* ou *estreitar para manter os 855*: ela preferiu mostrar mais.
+
+**Custo aceito.** A peça é a mais alta dos três capítulos. A letra do wireframe fica a dois terços do
+tamanho real.
+
+**Consequência.** Figma reajustado: desktop com 6824, estreita com 10700, respiros de 96 e 64. Texto
+alternativo e `midias.json` atualizados.
