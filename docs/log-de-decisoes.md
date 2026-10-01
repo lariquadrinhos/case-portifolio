@@ -6153,3 +6153,54 @@ cobre *"forma melhor de fazer,"*, nas duas larguras.
 contrato só não tinha acompanhado.
 
 **Consequência.** Em 375 o marca-texto passa por duas linhas, *"forma melhor"* e *"de fazer,"*.
+
+---
+
+## 182 · No texto, o Figma manda em todo o site, e os PNGs do capítulo 3 entram como estão
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** conteudo
+
+**Gatilho.** A conferência do dev achou mais dois desencontros. `quem-sou-eu.md` tinha duas frases
+na apresentação que o Figma (`116:32`, `132:32`) não tem. E os PNGs `reembolso-3-novo-fluxo-claro`
+e `-escuro`, exportados de `474:2375` e `474:2372`, têm cantos `#F5F5F5` e `#2B2824` em vez do
+`bg/page`, e a checagem 13 os reprova.
+
+**Decisão.** *"siga o figma já falei pra você atualiza o md pra ficar igual o figma"*: a regra da
+178 não vale só para os cases, vale para todo texto do site, e o `.md` acompanha o Figma sem nova
+pergunta. As duas frases saíram de `quem-sou-eu.md`. Sobre os PNGs: *"usa esses"*. Entram como
+estão.
+
+**Alternativa descartada.** *Perguntar caso a caso*, como eu vinha fazendo: ela já tinha dado a
+regra na 178. *Reexportar os PNGs com o fundo da página*, que a 157 pedia: ela escolheu os
+arquivos atuais.
+
+**Custo aceito.** Os cantos dos dois PNGs não são a cor da página, e a checagem 13 fica vermelha
+por um defeito conhecido e listado. Ela não ganhou isenção: a palavra foi para usar os arquivos,
+não para mudar a checagem.
+
+**Consequência.** A página "Quem sou eu" fica da altura do desenho.
+
+---
+
+## 183 · A tira e os títulos do Finanças valem para os dois cases, e as checagens não barram o ar
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case · `#restricao`
+
+**Gatilho.** Duas perguntas do dev. No Figma do Reembolso (`144:32`) a tira de destaques não tem
+as bordas de cima e de baixo, e os títulos não têm o rastreio negativo; no Finanças (`106:22`)
+têm. E o workflow que ele escreveu roda as checagens sem deixar que elas barrem a publicação,
+porque a 13 reprova os PNGs do capítulo 3 (decisão 182) e travaria o site desde já.
+
+**Decisão.** O desenho do Finanças vale nos dois cases, como o código já fazia. As checagens rodam
+e aparecem no registro, mas **não barram a publicação por enquanto**.
+
+**Alternativa descartada.** *Cada case como está no Figma*: o mesmo componente teria duas formas
+sem motivo. *Adotar o Reembolso nos dois*: mudaria o case que já estava certo. *Checagens barrando
+a publicação*: o site só iria ao ar depois de os PNGs do capítulo 3 passarem, e ela já decidiu
+usar os atuais.
+
+**Custo aceito.** O Figma do Reembolso fica diferente do site na tira e nos títulos até ser
+acertado. Uma checagem vermelha não impede mais nada: alguém precisa ler o registro.
+
+**Consequência.** Voltar a barrar é tirar uma linha (`continue-on-error`) do workflow, e deve virar
+entrada nova quando acontecer.
