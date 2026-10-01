@@ -91,7 +91,7 @@ Construí o produto ao lado de um desenvolvedor e do Claude: backend completo, b
 
 No fim, uma auditoria de fidelidade. Mais de cem agentes de IA rodando em paralelo, cada um cruzando uma tela implementada contra o frame real no Figma, mostrou o tamanho do que a documentação sustentava sozinha. Com tudo já especificado antes, a implementação só precisou seguir.
 
-![Duas telas do DRE de julho de 2026, uma acima da outra. Em cima, o mockup no Figma; embaixo, o produto rodando, com dados de demonstração. As duas têm o mesmo título, os mesmos seletores Consolidado, PF e PJ, e Pago e Previsto, o seletor de mês e a mesma cascata, de Receita Bruta a Lucro Líquido, com os mesmos rótulos e sinais em cada linha. Mudam os valores e o destaque dos subtotais, que no mockup têm uma faixa cinza e no produto aparecem só em negrito.](publico/midias/financas-5-desenvolvimento.png)
+![Duas telas do DRE de julho de 2026, uma acima da outra. Em cima, o mockup no Figma; embaixo, o produto rodando, com dados de demonstração. As duas têm o mesmo título, os mesmos seletores Consolidado, PF e PJ, e Pago e Previsto, o seletor de mês e a mesma cascata, de Receita Bruta a Lucro Líquido, com os mesmos rótulos e sinais em cada linha. Mudam os valores; o destaque dos subtotais, que no mockup têm uma faixa cinza e no produto aparecem só em negrito; o Lucro Líquido, maior no mockup e do tamanho das outras linhas no produto; o seletor de mês, um botão com contorno no mockup e texto solto no produto; e a frase de ajuda abaixo dos seletores, que no mockup fala do toggle Pago/Previsto e no produto fala de navegar entre meses.](publico/midias/financas-5-desenvolvimento.png)
 Legenda: O mesmo DRE no mockup e no produto rodando.
 
 ---

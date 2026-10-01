@@ -6709,3 +6709,21 @@ produto segue a estrutura e as regras, não o desenho pixel a pixel, e a barra l
 **Consequência.** Figma, as quatro telas; o capítulo 5 cresceu 370 px no desktop (tela com 7709) e 318
 na estreita (11477), respiros de 96 e 64. O app de demonstração roda com um banco à parte, do
 cenário original, fora do repositório.
+
+---
+
+## 202 · O texto alternativo do capítulo 5 passa a listar todas as diferenças
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** O tester apontou que o texto alternativo da 201 dizia só *"mudam os valores e o destaque
+dos subtotais"*, e na peça mudam também o tamanho do Lucro Líquido, o seletor de mês (botão com
+contorno no mockup, texto solto no produto) e a frase de ajuda abaixo dos seletores. Quem usa leitor
+de tela recebia uma descrição mais igual do que a imagem é.
+
+**Decisão.** O texto alternativo lista as cinco diferenças. A legenda curta não muda.
+
+**Alternativa descartada.** *Manter o texto alternativo enxuto*: descreveria a imagem errado.
+
+**Consequência.** Correção também de um número da 201: a cascata tem **treze** linhas, não catorze,
+nas duas telas.
