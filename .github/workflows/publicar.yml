@@ -1,0 +1,60 @@
+# Constrói o site a partir dos arquivos de texto e publica no GitHub Pages.
+# Se a construção ou os testes falharem, nada é publicado e o que está no ar permanece.
+
+name: Publicar
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Testes, um por cenário do contrato
+        run: node --test testes/
+
+      # As checagens rodam e aparecem no registro, mas ainda não barram: a checagem 13 falha
+      # de propósito enquanto as três mídias claras do Reembolso não estão sobre bg/page
+      # (trabalho no Figma, decisão 157). Quando ela passar, tire o continue-on-error.
+      - name: Checagens do contrato
+        run: node scripts/checagens.mjs
+        continue-on-error: true
+
+      # Modo local, e não --publicar: o site vai ao ar com as faltas visíveis enquanto os
+      # materiais não chegam (decisão 177). Voltar ao que a decisão 023 pede é trocar esta
+      # linha, e isso pede entrada nova no log.
+      - name: Construção
+        run: node construcao/construir.mjs --base=/${{ github.event.repository.name }}/
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  publicar:
+    needs: construir
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.publicacao.outputs.page_url }}
+    steps:
+      - id: publicacao
+        uses: actions/deploy-pages@v4

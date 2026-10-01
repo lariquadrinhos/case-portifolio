@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 30 de setembro de 2026 · **14 perguntas**, nenhuma travando
+**Atualizado:** 1 de outubro de 2026 · **16 perguntas**, nenhuma travando
 
 ---
 
@@ -166,14 +166,41 @@ o que as definições já preveem para tela estreita · a coluna de mídia cresc
 encolhe, o que a regra da medida não permite.
 **Momento:** antes de produzir as imagens do case de Finanças.
 
-### P42 · Como a construção separa o hero dos capítulos
-Nos arquivos de case, o título, a frase de abertura e a tira de destaques estão **dentro do
-primeiro capítulo**, antes da prosa dele. A construção precisa distingui-los, e hoje só
-conseguiria por posição, que é o tipo de regra que a decisão 006 recusou.
-**Opções:** marcar o hero com `<!-- bloco: hero -->`, que já existe no vocabulário e é usado
-em `quem-sou-eu.md` · separar o hero num bloco próprio antes do primeiro capítulo · aceitar
-regra por posição só neste caso.
-**Momento:** antes de implementar a construção da página de case.
+### ~~P42~~ · Resolvida pela decisão 176
+Os dois cases ganharam `<!-- bloco: hero -->` antes do título. O hero termina na última linha
+da tira; a prosa do capítulo 1 começa logo depois.
+
+### P63 · As larguras entre 375 e 1440 não foram desenhadas
+As telas existem em 1440 e em 375. O código precisava de um ponto de troca e usa **1024**: daí
+para cima vale o modo Desktop (grade de 12 colunas, tipografia e margem do desktop); abaixo, o
+modo Tela pequena. O número é suposição minha, não decisão.
+O que se vê nas pontas: em 1024 a coluna de leitura do case fica com cerca de 48 caracteres,
+abaixo do piso de 65; logo abaixo de 1024, a coluna única da tela estreita fica larga demais e
+passa dos 75. Acima de 1440 o conteúdo fica centrado em 1440 e as faixas de cor sangram.
+**Opções:** desenhar uma largura intermediária (768 ou 1024) · mover o ponto de troca para onde
+a medida do texto ainda cabe (perto de 1280) e limitar a largura da coluna estreita · aceitar
+como está.
+**Momento:** antes de divulgar o endereço. Não trava a revisão. · *Código: `QUEBRA_DESKTOP` em `construcao/tokens.mjs`*
+
+### P64 · Os endereços das páginas
+Nenhum documento fixava o caminho de cada página. O código usa, derivado dos nomes dos
+arquivos: `/`, `/trabalhos/`, `/trabalhos/financas-pf-pj/`, `/trabalhos/reembolso-sulamerica/`,
+`/quem-sou-eu/`, e `404.html` para endereço inexistente (é o que o GitHub Pages serve). Endereço
+publicado é promessa: trocar depois quebra link compartilhado.
+**Opções:** manter · nomes mais curtos (`/financas/`, `/reembolso/`) · outro.
+**Momento:** antes de divulgar o endereço.
+
+### P65 · Valores que o Figma desenha sem variável
+O código os concentra num bloco só, no topo de `modelo/estilo.css`, cada um com o nó de origem.
+Os que mais pesam: o parágrafo da home no desktop em **26/39** e a identificação em **16**, fora da
+escala de tipo (a estreita usa `abertura` e `etiqueta`); o rastreio dos títulos (−2%, −1,5%,
+−1%, +6%), que não tem coleção; a sombra das superfícies que flutuam; a barra de 64, a faixa de
+44 e a trilha a 100 do topo; o respiro de 20 das pastilhas; a entrada do conteúdo da página de
+erro em 160 no desktop. Dois vãos fora da escala foram arredondados para o degrau mais
+próximo, como o design system manda: provas → extra (60 → 64, e 28 → 32 na estreita).
+**Opções:** criar as variáveis no Figma e reexportar `tokens.json` · corrigir no desenho os que
+fugiram da escala · aceitar como medida de componente.
+**Momento:** a qualquer tempo; nenhum trava.
 
 ### P41 · O texto do título de Trabalhos, em rascunho
 Que a página tem título está decidido (040). O texto (*"Dois problemas que eu vi de perto,

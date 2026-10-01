@@ -6008,6 +6008,61 @@ temas e nas duas larguras.
 
 ---
 
+## 176 · O hero do case é declarado por marcador, não por posição
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** conteudo · `#restricao`
+
+**Gatilho.** A P42 dizia que precisava ser decidida antes de implementar a construção da página
+de case, e a implementação começou. O título, a frase de abertura e a tira de destaques estão
+dentro do capítulo 1 dos dois arquivos, e a construção não tinha como separá-los sem regra de
+posição.
+
+**Decisão.** Os dois arquivos de case ganham `<!-- bloco: hero -->` logo antes do título. O hero
+é o título, a frase de abertura e as linhas `**Chave** · valor` que vêm logo abaixo dela; a prosa
+do capítulo 1 começa no primeiro parágrafo depois da tira.
+
+**Alternativa descartada.** *Regra por posição*: o primeiro `#` do bloco do case, mais o que o
+segue, vira hero. Não tocaria nos arquivos, e é exatamente o tipo de regra que a decisão 006
+recusou: um título movido de lugar mudaria o que a página é, em silêncio. *Separar o hero num
+bloco próprio antes do primeiro capítulo* exigiria mover texto autoral, para um ganho que o
+marcador já entrega.
+
+**Custo aceito.** O fim do hero ainda é definido por forma, não por marcador: termina na última
+linha da tira. É a mesma convenção que o contrato de conteúdo já usa para achar a tira.
+
+**Consequência.** P42 sai da lista de perguntas. O `@lacuna` do contrato `case/pagina-de-case.md`
+vira cenário real. `hero` passa a valer dentro de um case, como já valia dentro da home.
+
+---
+
+## 177 · O site vai ao ar com as faltas visíveis
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** conteudo · `#escopo` `#restricao`
+
+**Gatilho.** A construção ficou pronta e o caminho de publicação recusaria: faltam a foto, o PDF
+do currículo, o endereço do LinkedIn, os repositórios dos dois cases, o arquivo do Figma do
+Finanças e as seis mídias do Finanças. Seguindo a decisão 023, o site não iria ao ar até tudo
+existir.
+
+**Decisão.** Publicar já, no modo local: o site público mostra os marcadores de falta, nomeando
+cada peça, até os materiais chegarem. O modo de publicação continua existindo e continua
+recusando; a automação é que passa a construir no modo local, e o diz na primeira linha da saída.
+
+**Alternativa descartada.** *Seguir a 023*: a automação pronta, recusando até o último material
+chegar, e o site entrando no ar sozinho depois. Perdeu porque o caminho até o ar precisa ser
+visto funcionando agora, com o conteúdo real, para ela revisar e comentar. *Não publicar ainda*:
+adiaria justamente a verificação que a Fase 4 manda fazer primeiro.
+
+**Custo aceito.** Quem visitar antes dos materiais vê o andaime: "FALTA · a foto" no lugar da
+foto. É a terceira alternativa que a 023 descartou, *lacuna visível sempre, inclusive para quem
+visita*, agora escolhida de propósito e por tempo limitado.
+
+**Consequência.** `.github/workflows/publicar.yml` constrói sem `--publicar`. Voltar ao
+comportamento da 023 é trocar uma linha nesse arquivo, e deve virar entrada nova quando
+acontecer.
+
+---
+
 ## 178 · Onde o texto dos cases diverge, vale o que ela deixou no Figma
 
 **Quando** 2026-10-01 · **Fase** 4 · **Domínio** conteudo · `#recusa-de-ia`

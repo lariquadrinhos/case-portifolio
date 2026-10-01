@@ -26,7 +26,7 @@ aparece no site. Não há seção reconhecida por nome: nome muda, marcador não
 | `<!-- bloco: card -->` | O que segue é o texto do card no índice: um título e uma linha |
 | `<!-- bloco: case -->` | Começa o corpo do case |
 | `<!-- bloco: home -->` | O que segue são os textos da home |
-| `<!-- bloco: hero -->` | Dentro da home: a frase de abertura e o parágrafo |
+| `<!-- bloco: hero -->` | Dentro da home: a frase de abertura e o parágrafo. Dentro de um case: o título, a frase de abertura e a tira de destaques, que termina na última linha `**Chave** · valor` (decisão 176) |
 | `<!-- bloco: quem-sou-eu -->` | Começa a página "Quem sou eu" |
 | `<!-- bloco: apresentacao -->` | Dentro de "Quem sou eu": os parágrafos de apresentação, sem título visível |
 | `<!-- bloco: foto -->` | A imagem na linha seguinte é a foto da página, não imagem de texto corrido |

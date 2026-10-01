@@ -265,10 +265,12 @@ Funcionalidade: Página de case
     E a tira de destaques aparece empilhada
     E a legenda de cada mídia continua logo abaixo dela
 
-  @lacuna
   Cenário: A construção separa o hero dos capítulos
     Dado que o hero está dentro do primeiro capítulo do arquivo
-    Então A DEFINIR. Ver pergunta P42
+    E que ele vem declarado por <!-- bloco: hero -->
+    Quando a construção acontece
+    Então o título, a frase de abertura e a tira de destaques formam o hero, antes dos capítulos
+    E o capítulo 1 começa no primeiro parágrafo depois da tira
 ```
 
 ## Transições

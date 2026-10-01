@@ -10,6 +10,7 @@ Redesenhei o fluxo de usuário para pedido de reembolso recorrente pelo app de s
 ## 1. A ideia
 <!-- trilha: Introdução -->
 
+<!-- bloco: hero -->
 # Toda semana, do zero
 
 **Observei de perto alguém que precisa fazer pedido de reembolso. Apesar de ser uma tarefa recorrente, o aplicativo trata como se fosse sempre a primeira vez. Decidi redesenhar o fluxo para que a segunda vez fosse diferente da primeira.**

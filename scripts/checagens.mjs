@@ -10,6 +10,7 @@
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { inflateSync } from 'node:zlib';
 import { join, relative } from 'node:path';
+import { BLOCOS, SOLTOS } from '../construcao/marcadores.mjs';
 
 const RAIZ = new URL('..', import.meta.url).pathname;
 const p = (...t) => join(RAIZ, ...t);
@@ -143,8 +144,9 @@ if (colecoes && colecoes['Tipografia']) {
 titulo(4, 'Os arquivos de conteúdo seguem a convenção');
 
 const CONTEUDO = ['case-study-financas-pf-pj.md', 'case-study-reembolso-sulamerica.md', 'quem-sou-eu.md'];
-const BLOCOS_VALIDOS = ['card', 'case', 'home', 'hero', 'quem-sou-eu', 'apresentacao', 'foto', 'extra'];
-const MARCADORES_SOLTOS = ['privado', 'só no desktop'];
+// O vocabulário mora num lugar só: o mesmo que a construção usa.
+const BLOCOS_VALIDOS = BLOCOS;
+const MARCADORES_SOLTOS = SOLTOS;
 
 for (const nome of CONTEUDO) {
   const f = p(nome);

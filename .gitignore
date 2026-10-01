@@ -2,3 +2,7 @@
 
 # Arquivos só para o Claude ler — nunca vão para o GitHub
 _privado/
+
+# Saída da construção: é gerada, não é fonte
+site/
+node_modules/

@@ -10,6 +10,7 @@ Desenvolvi uma aplicação desktop para organização financeira para pessoas PF
 ## 1. A ideia
 <!-- trilha: Introdução -->
 
+<!-- bloco: hero -->
 # A planilha que virou produto
 
 **Vi alguém tentando encaixar a vida financeira pessoal e a da empresa na mesma planilha. Decidi transformar essa cena em um aplicativo desktop. Hoje: funcionando e em uso por uma pessoa real.**
