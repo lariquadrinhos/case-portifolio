@@ -315,6 +315,42 @@
       },
       "rastersQueCobrem": [],
       "origem": "figma"
+    },
+    {
+      "id": "555:1397",
+      "nome": "financas-4-design-system-claro",
+      "caso": "financas",
+      "capitulo": 4,
+      "tema": "claro",
+      "tamanho": "411×710 (arquivo em 822×1420)",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
+    },
+    {
+      "id": "555:1398",
+      "nome": "financas-4-design-system-escuro",
+      "caso": "financas",
+      "capitulo": 4,
+      "tema": "escuro",
+      "tamanho": "411×710 (arquivo em 822×1420)",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
     }
   ],
   "aindaSemNome": [

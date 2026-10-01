@@ -77,6 +77,9 @@ Uma coleção fechada de tokens de cor nomeados por papel semântico, cada um co
 
 E foi só vendo a cor na tela real que decisões novas apareceram. O par de cores que distingue pessoa física de pessoa jurídica passava no contraste no tema claro e reprovava no escuro. Corrigir exigiu matizes diferentes por tema, não um ajuste automático. Tema escuro não é inversão: é um segundo sistema, e precisa ser validado sozinho.
 
+![Em cima, o card Lucro Líquido por entidade, recortado do mockup da Evolução Mensal, duas vezes: no tema claro e no tema escuro, com as barras de PF e PJ de fevereiro a abril, cada tema com o seu par de cores. Embaixo, três amostras de barras sobre o card de cada tema, com o contraste de cada cor e o mínimo de 3:1 para gráfico: no claro, PF 4,56:1 e PJ 5,99:1, os dois passam; no escuro com o par do claro, PF 3,79:1 passa e PJ 2,89:1 reprova; no escuro com o par corrigido, PF 5,80:1 e PJ 5,13:1, os dois passam.](publico/midias/financas-4-design-system.png)
+Legenda: O par PF/PJ em uso nos dois temas, e o que os números mostraram: aplicado no escuro, o PJ do claro fica abaixo de 3:1, e o escuro precisou de matizes próprios.
+
 ---
 
 ## 5. Cem agentes conferindo o meu desenho

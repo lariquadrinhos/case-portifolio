@@ -6624,3 +6624,36 @@ porque cada caixa tem poucas palavras.
 
 **Consequência.** Figma reajustado: desktop com 6885, estreita com 10748, respiros de 96 e 64. Texto
 alternativo e `midias.json` atualizados.
+
+---
+
+## 199 · O capítulo 4 do Finanças mostra o par PF/PJ em uso e o contraste que reprovou
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case · `#restricao`
+
+**Gatilho.** A lacuna do capítulo 4 pedia *"o par PF/PJ nos dois temas, com os números de
+contraste"*, para provar *"passava no contraste no tema claro e reprovava no escuro"*. O registro do
+Finanças (`files_design/07-style-guide.md`) conta a reprovação por outra métrica: *"ΔE 13,5, abaixo de
+15"*, separação entre as duas cores, não contraste. Não reproduzi o 13,5: pela CIEDE2000 o par do
+claro dá 22,1 e o do escuro, 27,7.
+
+**Decisão.** Medir o contraste, que é a palavra do case. Pela fórmula da WCAG, contra o card de cada
+tema (`#FFFFFF` e `#161B21`), com o mínimo de 3:1 para gráfico: no claro, PF 4,56 e PJ 5,99; **no
+escuro com o par do claro, PJ 2,89, reprova**; no escuro com o par corrigido, PF 5,80 e PJ 5,13. A
+peça tem o card *Lucro Líquido por entidade* recortado do mockup da Evolução Mensal nos dois temas
+(`406:4` e `427:30`), em 320 px e centralizado, e embaixo as três situações, com amostras de barras
+desenhadas nas cores reais. **O ΔE 13,5 fica fora** (*"deixa fora"*).
+
+`financas-4-design-system-claro` e `-escuro`: 411×710, arquivo em 822×1420.
+
+**Alternativa descartada.** *Citar o ΔE 13,5 como "medido no projeto"*: um número que não se
+reproduz não sustenta a afirmação. *Só as amostras, sem o gráfico*: o par não apareceria em uso.
+
+**Custo aceito.** O "antes" não existe em tela nenhuma: as amostras são desenhadas, não recortadas. Os
+dois cards do gráfico aparecem como painéis, branco e escuro, no meio da peça; a checagem 13 passa
+pelos cantos.
+
+**Consequência.** Figma, as quatro telas; o capítulo 4 cresceu 430 px no desktop (tela com 7315) e 392
+na estreita (11140), respiros de 96 e 64. Legenda e texto alternativo são rascunho meu. O case e o
+registro do Finanças continuam dizendo coisas diferentes sobre a métrica: o case diz contraste, o
+style guide diz ΔE.

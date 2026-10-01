@@ -49,10 +49,10 @@
           "ordem": 1,
           "trilha": "Design system",
           "porTela": {
-            "desktop 1440 · claro": "Legenda: a escrever",
-            "tela estreita 375 · claro": "Legenda: a escrever",
-            "desktop 1440 · escuro": "Legenda: a escrever",
-            "tela estreita 375 · escuro": "Legenda: a escrever"
+            "desktop 1440 · claro": "O par PF/PJ em uso nos dois temas, e o que os números mostraram: aplicado no escuro, o PJ do claro fica abaixo de 3:1, e o escuro precisou de matizes próprios.",
+            "tela estreita 375 · claro": "O par PF/PJ em uso nos dois temas, e o que os números mostraram: aplicado no escuro, o PJ do claro fica abaixo de 3:1, e o escuro precisou de matizes próprios.",
+            "desktop 1440 · escuro": "O par PF/PJ em uso nos dois temas, e o que os números mostraram: aplicado no escuro, o PJ do claro fica abaixo de 3:1, e o escuro precisou de matizes próprios.",
+            "tela estreita 375 · escuro": "O par PF/PJ em uso nos dois temas, e o que os números mostraram: aplicado no escuro, o PJ do claro fica abaixo de 3:1, e o escuro precisou de matizes próprios."
           }
         },
         {
