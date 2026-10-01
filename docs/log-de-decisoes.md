@@ -6470,3 +6470,31 @@ prova o conteúdo, não a aparência deles.
 **Consequência.** No Figma, as quatro telas; o capítulo 2 cresceu 224 px no desktop e 435 na
 estreita, e tudo abaixo desceu com o respiro de 96 e 64. `legendas.json` e `midias.json`
 atualizados; a checagem 13 passa para as duas versões. Legenda e texto alternativo são rascunho meu.
+
+---
+
+## 193 · A colagem do capítulo 2 mostra os arquivos como arquivo
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case · `#reversao`
+
+**Gatilho.** Publicada a colagem da 192, ela achou que faltava *"um diferenciador visual pra quebrar
+essa sensação de muito texto"* e sugeriu uma borda. Os trechos estavam na mesma fonte, tamanho e
+cor do texto do capítulo ao lado, e liam como mais texto da página.
+
+**Decisão.** *"arquivo"*. Os trechos passam a aparecer como num editor: fonte monoespaçada, a
+marcação do markdown visível em cinza (`##`, `**`, `-`, `|`), números de linha reais à esquerda
+(15 a 24 da skill, 755 a 768 do event storming), e as linhas puladas da tabela marcadas como uma
+dobra, *"⋯ 3 linhas"*. A tabela agora mostra as quatro colunas do arquivo. **Reverte, da 192, a
+recomposição na tipografia do site**; o conteúdo, os cortes e os travessões continuam.
+
+`financas-2-descoberta-claro` e `-escuro`: 411×947, arquivo em 822×1894.
+
+**Alternativa descartada.** *A borda que ela sugeriu*, e *um fundo `bg/subtle` atrás dos trechos*:
+os dois são moldura ou superfície própria, exceção à 157, e a borda faria a checagem 13 reclamar.
+*Manter a versão da 192*: o problema que ela viu continuava.
+
+**Custo aceito.** A mídia ficou 153 px mais alta no desktop e 122 na estreita. A linha fina que
+separa os números do texto é o único traço da peça.
+
+**Consequência.** Figma, as quatro telas reajustadas com o respiro de 96 e 64; desktop com 6668 e
+estreita com 10222. Texto alternativo reescrito para a versão nova; a legenda não mudou.
