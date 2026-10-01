@@ -8,7 +8,7 @@
   "telas": {
     "Case · desktop 1440": {
       "largura": "desktop",
-      "pagina": 6668,
+      "pagina": 6516,
       "capitulos": [
         [
           "Introdução",
@@ -18,33 +18,33 @@
         [
           "Descoberta",
           1274,
-          2381
+          2229
         ],
         [
           "Desenho e documentação",
-          2477,
-          3299
+          2325,
+          3147
         ],
         [
           "Design system",
-          3395,
-          3835
+          3243,
+          3683
         ],
         [
           "Desenvolvimento",
-          3931,
-          4395
+          3779,
+          4243
         ],
         [
           "Resultados",
-          4491,
-          4911
+          4339,
+          4759
         ]
       ]
     },
     "Case · tela estreita 375": {
       "largura": "estreita",
-      "pagina": 10222,
+      "pagina": 10101,
       "capitulos": [
         [
           "Introdução",
@@ -54,27 +54,27 @@
         [
           "Descoberta",
           2134,
-          4168
+          4047
         ],
         [
           "Desenho e documentação",
-          4232,
-          5823
+          4111,
+          5702
         ],
         [
           "Design system",
-          5887,
-          6902
+          5766,
+          6781
         ],
         [
           "Desenvolvimento",
-          6966,
-          7861
+          6845,
+          7740
         ],
         [
           "Resultados",
-          7925,
-          8762
+          7804,
+          8641
         ]
       ]
     },

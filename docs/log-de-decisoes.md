@@ -6498,3 +6498,23 @@ separa os números do texto é o único traço da peça.
 
 **Consequência.** Figma, as quatro telas reajustadas com o respiro de 96 e 64; desktop com 6668 e
 estreita com 10222. Texto alternativo reescrito para a versão nova; a legenda não mudou.
+
+---
+
+## 194 · A colagem do capítulo 2 corta depois do H5
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** A versão de arquivo da 193 ficou com 947 px, e ela: *"ficou grande mesmo, pode cortar"*.
+
+**Decisão.** O segundo trecho termina no H5 (linha 763). Saem a segunda dobra, o H9 e o H10. A peça
+volta a 411×795, a altura da 192.
+
+**Alternativa descartada.** *Cortar o trecho da skill*: ele é a regra que o capítulo cita, e o corte
+cairia nos quatro quadrantes. *Encolher a fonte*: o texto já está em 12,5 px.
+
+**Custo aceito.** A tabela mostra só dois status, fechado e modelado sem teste; os casos revertido e
+fechado por decisão de produto deixam de aparecer.
+
+**Consequência.** Figma reajustado: desktop com 6516, estreita com 10101, respiros de 96 e 64. Texto
+alternativo e `midias.json` atualizados.
