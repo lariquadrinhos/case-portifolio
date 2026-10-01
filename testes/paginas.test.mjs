@@ -147,7 +147,50 @@ test('O título do case quebra onde o Figma quebra', () => {
     'Finanças: quebra escolhida');
   assert.match(site.pagina('trabalhos/reembolso-sulamerica/index.html'), /<h1 class="case__titulo">Toda semana, do zero<\/h1>/,
     'Reembolso: quebra natural');
+  // A quebra só existe se o CSS a desenha: cada linha é bloco na tela estreita e volta a
+  // correr numa linha no desktop. Sem isso o HTML estaria certo e a tela, não.
+  const css = readFileSync(join(site.saida, 'estilo.css'), 'utf8');
+  const { base, largo } = regrasPorLargura(css);
+  assert.match(base['.case__titulo .linha-estreita'] ?? '', /display:\s*block/, 'na tela estreita cada linha é bloco');
+  assert.match(largo['.case__titulo .linha-estreita'] ?? '', /display:\s*inline/, 'no desktop o título corre numa linha');
   const mudou = raizTemporaria({ 'case-study-financas-pf-pj.md': (t) => t.replace('# A planilha que virou produto\n\n**Vi', '# A planilha virou produto\n\n**Vi') });
   assert.match(construirEm(mudou).pagina('trabalhos/financas-pf-pj/index.html'), /<h1 class="case__titulo">A planilha virou produto<\/h1>/,
     'se o título muda no arquivo, a quebra escolhida deixa de valer');
 });
+
+// Lê o CSS gerado contando chaves: as regras de fora de qualquer @media (a tela estreita, que
+// é a base) e as de dentro de `@media (min-width: 1024px)`. Seletor repetido acumula.
+function regrasPorLargura(css) {
+  const base = {};
+  const largo = {};
+  const semComentarios = css.replace(/\/\*[\s\S]*?\*\//g, '');
+  let i = 0;
+  const lerBloco = (destino, fim) => {
+    while (i < fim) {
+      const abre = semComentarios.indexOf('{', i);
+      if (abre < 0 || abre >= fim) break;
+      const seletor = semComentarios.slice(i, abre).trim();
+      let profundidade = 1;
+      let j = abre + 1;
+      while (profundidade && j < semComentarios.length) {
+        if (semComentarios[j] === '{') profundidade++;
+        else if (semComentarios[j] === '}') profundidade--;
+        j++;
+      }
+      const corpo = semComentarios.slice(abre + 1, j - 1);
+      if (seletor.startsWith('@media')) {
+        if (/^@media \(min-width: 1024px\)$/.test(seletor)) {
+          const salvo = i;
+          i = abre + 1;
+          lerBloco(largo, j - 1);
+          i = salvo;
+        }
+      } else if (destino) {
+        for (const sel of seletor.split(',').map((x) => x.trim())) destino[sel] = (destino[sel] ?? '') + corpo;
+      }
+      i = j;
+    }
+  };
+  lerBloco(base, semComentarios.length);
+  return { base, largo };
+}
