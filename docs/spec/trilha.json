@@ -8,7 +8,7 @@
   "telas": {
     "Case · desktop 1440": {
       "largura": "desktop",
-      "pagina": 7315,
+      "pagina": 7339,
       "capitulos": [
         [
           "Introdução",
@@ -28,23 +28,23 @@
         [
           "Design system",
           3612,
-          4482
+          4506
         ],
         [
           "Desenvolvimento",
-          4578,
-          5042
+          4602,
+          5066
         ],
         [
           "Resultados",
-          5138,
-          5558
+          5162,
+          5582
         ]
       ]
     },
     "Case · tela estreita 375": {
       "largura": "estreita",
-      "pagina": 11140,
+      "pagina": 11159,
       "capitulos": [
         [
           "Introdução",
@@ -64,17 +64,17 @@
         [
           "Design system",
           6413,
-          7820
+          7839
         ],
         [
           "Desenvolvimento",
-          7884,
-          8779
+          7903,
+          8798
         ],
         [
           "Resultados",
-          8843,
-          9680
+          8862,
+          9699
         ]
       ]
     },

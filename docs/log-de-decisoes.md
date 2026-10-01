@@ -6657,3 +6657,22 @@ pelos cantos.
 na estreita (11140), respiros de 96 e 64. Legenda e texto alternativo são rascunho meu. O case e o
 registro do Finanças continuam dizendo coisas diferentes sobre a métrica: o case diz contraste, o
 style guide diz ΔE.
+
+---
+
+## 200 · A peça do capítulo 4 ganha respiro embaixo, porque a checagem 13 a reprovou
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** case · `#restricao`
+
+**Gatilho.** Logo depois da 199, antes de publicar: a checagem 13 reprovou as duas versões no canto
+inferior esquerdo. A última amostra (`#161B21`) encostava no rodapé, e a checagem amostra um bloco
+afastado da borda (decisão 170), que caía dentro dela.
+
+**Decisão.** A peça ganha um respiro de 10 px embaixo, e o canto volta a cair no `bg/page`. Passa a
+411×734, arquivo em 822×1468; o capítulo 4 fica com 894 no desktop (tela com 7339) e 1426 na estreita
+(11159).
+
+**Alternativa descartada.** *Afrouxar a checagem para esta peça*: o defeito era real, a mídia não
+sangrava na página naquele canto.
+
+**Consequência.** Os números da 199 sobre tamanho e altura valem com esta correção.
