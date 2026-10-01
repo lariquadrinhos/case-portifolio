@@ -130,6 +130,19 @@ test('O script de tema não executa', () => {
   assert.match(css, /@media \(prefers-color-scheme: dark\)/, 'o CSS segue o tema do sistema');
 });
 
+// ── Ícone de aba (decisão 187) ────────────────────────────────────────────────
+
+test('Toda página declara o ícone de aba', () => {
+  // Sem declaração, o navegador pede /favicon.ico na raiz do domínio, fora do site.
+  for (const p of ['index.html', 'trabalhos/index.html', 'trabalhos/financas-pf-pj/index.html',
+    'trabalhos/reembolso-sulamerica/index.html', 'quem-sou-eu/index.html', '404.html']) {
+    const html = site.pagina(p);
+    for (const arquivo of ['favicon.ico', 'icone.svg', 'apple-touch-icon.png']) {
+      assert.match(html, new RegExp(`href="/publico/icone/${arquivo.replace('.', '\\.')}"`), `${p} sem ${arquivo}`);
+    }
+  }
+});
+
 // ── A copy de interface tem uma fonte só ─────────────────────────────────────
 
 test('Todo texto de interface que cita um contrato está escrito nele', () => {

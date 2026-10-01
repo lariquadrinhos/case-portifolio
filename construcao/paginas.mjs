@@ -91,6 +91,9 @@ function documento(ctx, { titulo, atual, corpo, classeDoCorpo = '' }) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escapar(tituloDaAba)}</title>
 <script>${temaJs}</script>
+<link rel="icon" href="${base}publico/icone/favicon.ico">
+<link rel="icon" href="${base}publico/icone/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="${base}publico/icone/apple-touch-icon.png">
 <link rel="preload" href="${base}publico/fontes/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${base}estilo.css">
 <script src="${base}moldura.js" defer></script>

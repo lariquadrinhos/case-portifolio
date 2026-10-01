@@ -6282,3 +6282,29 @@ página. A checagem 13 segue vermelha por elas, sem isenção. A quebra do títu
 de hoje: se o título mudar, a quebra precisa ser escolhida de novo.
 
 **Consequência.** Regra nova em `case/pagina-de-case.md`.
+
+---
+
+## 187 · O ícone de aba é um L num círculo do verde do marca-texto
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** moldura · `#escopo`
+
+**Gatilho.** O tester notou que o site não declara ícone de aba e que a primeira página registra um
+404 de `/favicon.ico`. Nenhum contrato falava dele.
+
+**Decisão.** *"cria um circulo no verde do marca texto do modo claro com um L dentro"*. Componente
+`ícone de aba` (`534:1482`) na página Sistema visual, seção `10 · Ícone de aba`: círculo em
+`accent/verde/surface` (`#D9EED4`) e o L em DM Sans Bold, `text/primary` (`#221F20`), os dois
+fixos no modo Claro. **É um ícone só para os dois temas.** Arquivos em `publico/icone/`: `icone.svg`,
+`favicon.ico` (16, 32 e 48), `icone-192.png`, `icone-512.png` e `apple-touch-icon.png` (180), com
+os cantos transparentes.
+
+**Alternativa descartada.** *Deixar sem ícone*: o navegador mostra o genérico, e o console registra
+um erro em toda primeira visita. *Duas versões, uma por tema*: o ícone mora na aba do navegador,
+cujo tema não é o do site.
+
+**Custo aceito.** O verde é claro: numa aba de navegador clara a borda do círculo quase some e o
+que se lê é o L.
+
+**Consequência.** O SVG que o Figma exporta traz o fundo da página e da seção por trás do círculo;
+o arquivo publicado foi limpo à mão para conter só o círculo e o L, e os PNGs foram gerados dele.
