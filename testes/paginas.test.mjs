@@ -81,8 +81,11 @@ test('A pessoa abre um capítulo que tem vídeo', () => {
 test('A pessoa vai para fora do site', () => {
   const caso = site.pagina('trabalhos/reembolso-sulamerica/index.html');
   // O endereço é conteúdo e muda; o que o contrato pede é a forma: palavra sublinhada,
-  // nova aba, e o rótulo avisando.
-  assert.match(caso, /href="https:\/\/www\.figma\.com\/proto\/[^"]+" target="_blank" rel="noopener">Abrir o protótipo<span class="aviso-nova-aba"> abre em nova aba<\/span>/);
+  // nova aba, e o rótulo avisando. E o protótipo abre no fluxo do app (decisão 185): sem
+  // ponto de partida, o Figma abre outro fluxo do arquivo. O nó em si não é fixado aqui.
+  const prototipos = [...caso.matchAll(/href="(https:\/\/www\.figma\.com\/proto\/[^"]+)" target="_blank" rel="noopener">Abrir o protótipo<span class="aviso-nova-aba"> abre em nova aba<\/span>/g)];
+  assert.ok(prototipos.length >= 1, 'o link do protótipo é palavra sublinhada que abre em nova aba');
+  for (const [, url] of prototipos) assert.match(url, /starting-point-node-id=/, `sem ponto de partida: ${url}`);
 });
 
 // ── erro/endereco-inexistente.md ──────────────────────────────────────────────
