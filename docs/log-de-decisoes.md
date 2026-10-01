@@ -6005,3 +6005,96 @@ alcança um fill. É a mesma técnica das mídias dos capítulos 2, 3 e 4.
 `reembolso-capa.jpg` com 146 KB, `financas-capa-claro.jpg` com 109 KB e
 `financas-capa-escuro.jpg` com 106 KB. **O índice de Trabalhos deixa de ter buraco** nos dois
 temas e nas duas larguras.
+
+---
+
+## 178 · Onde o texto dos cases diverge, vale o que ela deixou no Figma
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** conteudo · `#recusa-de-ia`
+
+**Gatilho.** Ao construir, o dev encontrou o `.md` dos cases e as telas do Figma dizendo coisas
+diferentes, e seguia a regra de que no código vale o `.md`. Levou à Larissa caso a caso.
+
+**Decisão.** Nos quatro pontos, vale o Figma, e o `.md` foi atualizado para ficar igual:
+
+| | antes, no `.md` | agora, como no Figma |
+|---|---|---|
+| capítulo 1, os dois cases | Ideia | A ideia |
+| numeração dos capítulos | "1.", "2." no título | some na página; o `.md` guarda o número e a construção o tira, por ser forma |
+| Reembolso, capítulo 4 | subtítulo "Onde o arquivo parou de ser desenho" com a frase do protótipo embaixo | sem subtítulo; a frase entra no fim do parágrafo "Com o sistema remontado", como ela fundiu no Figma |
+| Reembolso, "No onboarding" | com o parêntese "(que já vêm do cadastro do plano, então é conferir e não digitar)" | sem o parêntese |
+| Reembolso, "O que eu faria a seguir" | itens 1, 2, 3 e 5 com a justificativa | só a ação, como no Figma |
+
+**Alternativa descartada.** *Usar o `.md`*, como o dev propôs para o capítulo 4 (renderizar o
+título como subtítulo) e para o capítulo 5 (o texto longo). Perdeu porque os cortes no Figma
+foram decisão dela, feita depois do `.md`, e o `.md` só não tinha acompanhado.
+
+**Custo aceito.** O capítulo 5 perde os porquês de quatro dos seis próximos passos. Quem quiser
+saber por que validar o OCR com engenharia não encontra mais a resposta na página.
+
+**Consequência.** A regra de construção, em que no texto o `.md` ganha do Figma, continua valendo:
+o que mudou foi o `.md`, trazido até o Figma, e agora os dois dizem o mesmo. O título de abertura do capítulo 1 do Reembolso não aparece no Figma (o
+capítulo começa direto no hero), então "A ideia" ali vem da resposta dela, não da tela.
+
+---
+
+## 179 · O bloco de provas mora no arquivo do case, e o endereço vazio é a falta
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** conteudo · `#restricao`
+
+**Gatilho.** O dev foi construir o bloco "Está tudo aberto." e não achou de onde tirar o texto:
+as linhas que dizem o que há em cada prova existiam só no Figma (`245:243` e `245:279`), e os
+endereços, quase todos, em lugar nenhum. Texto autoral não pode nascer no código.
+
+**Decisão.** Cada case ganha `<!-- bloco: provas -->`, com uma linha de descrição e, logo abaixo,
+o link, por prova. As descrições foram copiadas do Figma como estão. O convite *"Está tudo
+aberto."* continua no contrato, por ser interface. **Link com endereço vazio é prova que ainda
+falta**, e o site mostra o marcador de falta no lugar. Proposta do dev, aprovada por ela.
+
+**Alternativa descartada.** *Deixar o bloco inteiro no contrato da página de case*, como copy de
+interface: as descrições dizem o que cada case produziu, então são conteúdo do case, não da tela.
+*Construir a partir do Figma*: faria o código ler texto de uma fonte que a regra de conteúdo não
+reconhece.
+
+**Custo aceito.** O endereço de cada prova passa a ser editado no arquivo de texto, longe de onde
+ela desenha o bloco. Se mudar uma descrição no Figma, ela precisa ser trazida para o `.md`.
+
+**Consequência.** O Figma já tinha uma prova a mais em cada case, o FigJam, que o contrato não
+listava. A tabela de provas de `case/pagina-de-case.md` foi trazida até o Figma. Endereços já
+conhecidos foram preenchidos no Reembolso (Figma, FigJam e protótipo); faltam os três do Finanças
+e o repositório do Reembolso.
+
+---
+
+## 180 · A ênfase dentro da frase fica marcada, mas não aparece
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** conteudo
+
+**Gatilho.** O `.md` tem negrito e itálico dentro de frases, listas e tabelas; o Figma não mostra
+nenhum deles. Só o parágrafo inteiro em negrito vira frase de destaque.
+
+**Decisão.** Seguir o Figma. A ênfase continua marcada no HTML, sem peso nem itálico visível.
+
+**Alternativa descartada.** *Mostrar a ênfase do `.md`*: o texto ganharia pontos de peso que o
+desenho não tem, e a frase de destaque deixaria de ser a única coisa com peso no corpo.
+
+**Custo aceito.** O realce que ela escreveu no texto (por exemplo, *"um sistema que o app não
+segue"*) não se vê na página. Fica só no HTML, onde leitor de tela ainda pode anunciá-lo.
+
+**Consequência.** Regra nova em `conteudo/arquivo-de-texto-vira-pagina.md`.
+
+---
+
+## 181 · O marca-texto da home cobre "forma melhor de fazer,"
+
+**Quando** 2026-10-01 · **Fase** 4 · **Domínio** home
+
+**Gatilho.** O contrato `home/home.md` dizia que o marca-texto cobria *"forma melhor"*; o Figma
+cobre *"forma melhor de fazer,"*, nas duas larguras.
+
+**Decisão.** Vale o Figma. O contrato foi atualizado.
+
+**Alternativa descartada.** *Voltar o Figma ao contrato*: o desenho é o mais recente e é dela; o
+contrato só não tinha acompanhado.
+
+**Consequência.** Em 375 o marca-texto passa por duas linhas, *"forma melhor"* e *"de fazer,"*.

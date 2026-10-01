@@ -69,8 +69,13 @@ Ver P57.
 
 | Case | Provas |
 |---|---|
-| Finanças | repositório · arquivo do Figma |
-| Reembolso | repositório · arquivo do Figma · protótipo |
+| Finanças | repositório · arquivo do Figma · fluxo no FigJam |
+| Reembolso | repositório · arquivo do Figma · board no FigJam · protótipo |
+
+- **A linha que diz o que a pessoa vai encontrar e o endereço moram no arquivo de conteúdo**,
+  sob `<!-- bloco: provas -->`: uma linha de descrição e, logo abaixo, o link, por prova. O
+  convite *"Está tudo aberto."* é interface e fica aqui. **Link com endereço vazio é prova que
+  ainda falta**, e o site mostra o marcador de falta no lugar dele. Ver decisão 179.
 
 - **O Figma entra porque o case afirma coisas sobre ele.** Um capítulo do case de Finanças se
   chama *"O Figma era metade da entrega"*; linkar só o repositório faria o case afirmar uma

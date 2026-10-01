@@ -7,7 +7,7 @@ Redesenhei o fluxo de usuário para pedido de reembolso recorrente pelo app de s
 
 <!-- bloco: case -->
 
-## 1. Ideia
+## 1. A ideia
 <!-- trilha: Introdução -->
 
 # Toda semana, do zero
@@ -65,9 +65,7 @@ A causa era estrutural. Dados que nunca mudam viviam dentro do pedido e por isso
 
 Separei o que acontece uma vez na vida do que acontece a cada pedido de reembolso. O que era pré-requisito virou um preparo único, guardado depois do primeiro acesso. O que é do pedido em si ficou curto o bastante para caber num intervalo de almoço. Nenhuma exigência foi removida: elas só deixaram de ser cobradas de quem já as tinha cumprido.
 
-**No onboarding, feito só no primeiro acesso:** confirmação dos dados bancários (que
-já vêm do cadastro do plano, então é conferir e não digitar), o termo de ciência, e a
-validação de identidade.
+**No onboarding, feito só no primeiro acesso:** confirmação dos dados bancários, o termo de ciência, e a validação de identidade.
 
 **No fluxo mensal:** cinco etapas, e nenhuma delas repete o que já foi resolvido.
 
@@ -113,14 +111,10 @@ Então reconstruí, o mais fielmente possível, o sistema visual que já existia
 Eu esperava encontrar um app sem sistema. Encontrei **um sistema que o app não segue**. E esses são problemas diferentes: o primeiro pede construção, o segundo pede governança e migração.
 
 
-Com o sistema remontado, os mockups puderam ter a cara do aplicativo de verdade. Então pude comparar de verdade os dois fluxos.
+Com o sistema remontado, os mockups puderam ter a cara do aplicativo de verdade. Então pude comparar de verdade os dois fluxos. Até aqui eu tinha 44 telas bonitas e um sistema bem documentado. Liguei tudo em um protótipo navegável.
 
 ![Duas telas do aplicativo redesenhado, sobrepostas, já com as cores e a tipografia do sistema visual da SulAmérica. À esquerda, o cadastro da conta bancária no onboarding, com banco, agência e conta preenchidos e o botão laranja Salvar e continuar. À direita, a tela de solicitação enviada, com um sinal de confirmação, o número do protocolo com o aviso de copiado, a lista do que acontece a seguir e o botão laranja Acompanhar status.](publico/midias/reembolso-4-sistema-remontado.png)
 Legenda: Duas telas no sistema visual remontado: o laranja, a tipografia e os componentes vieram do CSS público e da medição das capturas. À esquerda o onboarding; à direita a confirmação do pedido.
-
-## Onde o arquivo parou de ser desenho
-
-Até aqui eu tinha 44 telas bonitas e um sistema bem documentado. Liguei tudo em um protótipo navegável
 
 ## 5. O que ficou
 <!-- trilha: Resultados -->
@@ -155,21 +149,30 @@ Convite: Descubra mais navegando pelo protótipo completo. [Abrir o protótipo](
 - **Menos chamados** sobre "o que é CRP", "o app não aceita meu arquivo" e "como pego
   o recibo do imposto de renda".
 
-  ## O que eu faria a seguir
+## O que eu faria a seguir
 
 1. **Levar o protótipo para 5 a 8 pessoas** em tratamento recorrente, com tarefa de
-   ponta a ponta. É isso que transforma o que eu observei com uma pessoa em padrão, ou
-   mostra que não era.
-2. **Validar o OCR e o tutorial embutido** com engenharia, porque as duas maiores
-   economias do fluxo dependem deles.
-3. **Sentar com compliance e jurídico** para a versão cidadã do termo, mantendo a
-   conformidade.
+   ponta a ponta.
+2. **Validar o OCR e o tutorial embutido** com engenharia.
+3. **Sentar com compliance e jurídico** para a versão cidadã do termo.
 4. **Definir baseline antes de qualquer rollout**: tempo até envio, abandono por
    etapa, retrabalho por solicitação.
-5. **Resolver o laranja com o time de marca.** É a única decisão do sistema que muda a
-   percepção da cor da marca, e adiar só aumenta o número de telas a refazer.
+5. **Resolver o laranja com o time de marca.**
 6. **Definir a governança.** Sem alguém responsável pelo sistema, cinco cinzas viram
    seis.
+
+<!-- bloco: provas -->
+O diagnóstico e as regras de implementação
+[Ver o repositório]()
+
+A avaliação das 32 telas, o fluxo atual mapeado etapa a etapa, e o redesenho em wireframe e mockup
+[Ver o arquivo no Figma](https://www.figma.com/design/LUp4aT7fVYH4cD8ZwrHIfd)
+
+O fluxo atual anotado tela a tela, e o novo ao lado
+[Ver o board no FigJam](https://www.figma.com/board/lCpgyPMBg7BXj0DxgiOUh1)
+
+O fluxo novo, do primeiro acesso ao acompanhamento
+[Abrir o protótipo](https://www.figma.com/proto/LUp4aT7fVYH4cD8ZwrHIfd)
 
 
 ---

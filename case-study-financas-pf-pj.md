@@ -7,7 +7,7 @@ Desenvolvi uma aplicação desktop para organização financeira para pessoas PF
 <!-- bloco: case -->
 
 
-## 1. Ideia
+## 1. A ideia
 <!-- trilha: Introdução -->
 
 # A planilha que virou produto
@@ -92,6 +92,16 @@ Documentação organizada sustenta o processo mesmo quando quem escreveu não es
 **O produto existe, funciona e está em uso.**
 
 Aprendi a decidir o que as coisas são, e sustentar essa decisão em cada tela depois. Aprendi a escrever para quem vem depois de mim, e descobri que documentar bem é o que faz o design sobreviver ao contato com a implementação. E aprendi que trabalhar com IA se decide antes, não depois: o que define a qualidade do que volta é a regra que eu estabeleci no começo, não a minha avaliação de cada resposta. Sem ela, qualquer resultado plausível passa.
+
+<!-- bloco: provas -->
+As decisões de UX, a especificação de cada tela e o modelo de dados
+[Ver o repositório]()
+
+As 46 telas em claro e escuro, o style guide e os tokens
+[Ver o arquivo no Figma]()
+
+O fluxo do usuário mapeado, do primeiro acesso às ações do dia a dia
+[Ver o fluxo no FigJam]()
 
 <!-- bloco: extra -->
 ## O Produto

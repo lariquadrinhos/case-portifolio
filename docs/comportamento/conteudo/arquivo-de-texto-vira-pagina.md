@@ -30,6 +30,7 @@ aparece no site. Não há seção reconhecida por nome: nome muda, marcador não
 | `<!-- bloco: quem-sou-eu -->` | Começa a página "Quem sou eu" |
 | `<!-- bloco: apresentacao -->` | Dentro de "Quem sou eu": os parágrafos de apresentação, sem título visível |
 | `<!-- bloco: foto -->` | A imagem na linha seguinte é a foto da página, não imagem de texto corrido |
+| `<!-- bloco: provas -->` | O que segue é o bloco de provas do case: pares de uma linha de descrição e um link logo abaixo. Link com endereço vazio é prova que falta |
 | `<!-- bloco: extra -->` | O que segue é conteúdo extra do case: vem depois do último capítulo, **fora da trilha**, e não é subseção do capítulo anterior |
 | `<!-- trilha: Rótulo -->` | O título imediatamente acima é um capítulo, e `Rótulo` é o nome dele na trilha |
 | `<!-- privado -->` | A seção seguinte, e tudo abaixo dela até um título de nível igual ou superior, **não vai para o site** |
@@ -73,6 +74,9 @@ aparece no site. Não há seção reconhecida por nome: nome muda, marcador não
   nenhuma, é peça da página. Texto alternativo continua obrigatório; legenda, não.
 - A tira de destaques de um case são as linhas `**Chave** · valor` logo abaixo da frase de
   abertura do capítulo 1.
+- **Negrito e itálico dentro de frase, de lista e de tabela ficam marcados, mas não aparecem.**
+  O site guarda a ênfase no HTML e não lhe dá peso nem inclinação, como no Figma. Só o
+  parágrafo inteiro em negrito muda de forma: vira frase de destaque. Ver decisão 180.
 - **Conteúdo autoral vive nos arquivos de texto; copy de interface vive no contrato da tela
   que a exibe.** Rótulo de botão, texto da página de erro e rótulo de seção são interface.
   A exceção declarada são os rótulos da trilha, que ficam nos arquivos dos cases porque
