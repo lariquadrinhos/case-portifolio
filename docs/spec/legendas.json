@@ -71,10 +71,10 @@
           "ordem": 1,
           "trilha": "Resultados",
           "porTela": {
-            "desktop 1440 · claro": "Legenda: a escrever",
-            "tela estreita 375 · claro": "Legenda: a escrever",
-            "desktop 1440 · escuro": "Legenda: a escrever",
-            "tela estreita 375 · escuro": "Legenda: a escrever"
+            "desktop 1440 · claro": "O produto rodando: onde está o dinheiro e os indicadores do mês.",
+            "tela estreita 375 · claro": "O produto rodando: onde está o dinheiro e os indicadores do mês.",
+            "desktop 1440 · escuro": "O produto rodando: onde está o dinheiro e os indicadores do mês.",
+            "tela estreita 375 · escuro": "O produto rodando: onde está o dinheiro e os indicadores do mês."
           }
         }
       ]

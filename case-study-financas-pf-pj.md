@@ -103,6 +103,9 @@ Legenda: O mesmo DRE no mockup e no produto rodando.
 
 Aprendi a decidir o que as coisas são, e sustentar essa decisão em cada tela depois. Aprendi a escrever para quem vem depois de mim, e descobri que documentar bem é o que faz o design sobreviver ao contato com a implementação. E aprendi que trabalhar com IA se decide antes, não depois: o que define a qualidade do que volta é a regra que eu estabeleci no começo, não a minha avaliação de cada resposta. Sem ela, qualquer resultado plausível passa.
 
+![Duas capturas do produto rodando, com dados de demonstração, uma acima da outra. Em cima, o bloco Onde Está Meu Dinheiro da Home: um treemap com Investimentos, R$ 264.779, Nubank, R$ 48.650, e Itaú PJ, R$ 41.765, cada bloco do tamanho do saldo; embaixo dele as Dívidas, R$ 320.745, e o Patrimônio Líquido, R$ 34.449,02. Embaixo, os Indicadores Financeiros de setembro de 2026, em quatro grupos: Rentabilidade, com margem bruta de 86,3% e taxa de poupança de 59,2%; Crescimento Patrimonial, com o patrimônio crescendo 3,8% no mês; Liquidez; e Endividamento, cada indicador com um ícone de ajuda.](publico/midias/financas-6-resultados.png)
+Legenda: O produto rodando: onde está o dinheiro e os indicadores do mês.
+
 <!-- bloco: provas -->
 As decisões de UX, a especificação de cada tela e o modelo de dados
 [Ver o repositório]()

@@ -6727,3 +6727,36 @@ de tela recebia uma descrição mais igual do que a imagem é.
 
 **Consequência.** Correção também de um número da 201: a cascata tem **treze** linhas, não catorze,
 nas duas telas.
+
+---
+
+## 203 · O capítulo 6 do Finanças mostra o produto rodando em duas telas que só ele calcula
+
+**Quando** 2026-10-02 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** A última lacuna do Finanças pedia *"capturas do produto rodando de verdade"*, para provar
+*"o produto existe, funciona e está em uso"*. O vídeo do capítulo 1 e o DRE do capítulo 5 já mostram o
+produto rodando, então o capítulo 6 mostra o que nenhum dos dois mostrou: interface gerada pelos dados.
+
+**Decisão.** Duas capturas do produto rodando, com a base de demonstração de um ano, em setembro, numa
+janela de 960 px como a do vídeo: o bloco **Onde Está Meu Dinheiro** da Home (o treemap de contas e
+investimentos, com o patrimônio líquido) e os **Indicadores Financeiros** do mês. Legenda curta, por
+pedido dela: *"O produto rodando: onde está o dinheiro e os indicadores do mês."* O texto alternativo
+diz que os dados são de demonstração.
+
+`financas-6-resultados-claro` e `-escuro`: 411×768, arquivo em 822×1536.
+
+**Alternativa descartada.** *Despesas por Categoria*, a segunda captura que eu tinha proposto: ela viu
+algo errado (*"despesas por categoria tem alguma coisa errada"*); o que eu vi foi um bloco estreito sem
+rótulo e o "Outras" engolindo a parcela do financiamento. *Evolução Mensal*: corta o eixo em 960 e em
+1440, e em 960 para em agosto. *Balanço Patrimonial*: repete os saldos do Onde Está Meu Dinheiro.
+
+**Custo aceito.** Os dados não são os da pessoa que usa o produto: a frase *"está em uso"* fala dela, e
+a imagem mostra o produto, não o uso dela. Os três defeitos achados no caminho (o treemap de despesas,
+o eixo da Evolução Mensal e as diferenças entre a Home e o mockup, da 201) são do repositório do
+Finanças e ficam para lá.
+
+**Consequência.** Figma, as quatro telas; o capítulo 6 cresceu 484 px no desktop (tela com 8193) e 390
+na estreita (11867), e o bloco de provas desceu junto, a 96 e 64. **Com isso, as seis mídias do
+Finanças estão entregues**, e as onze lacunas de mídia dos dois cases têm legenda; todas são rascunho
+meu à espera dela.

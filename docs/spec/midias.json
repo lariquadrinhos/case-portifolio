@@ -387,6 +387,42 @@
       },
       "rastersQueCobrem": [],
       "origem": "figma"
+    },
+    {
+      "id": "565:1397",
+      "nome": "financas-6-resultados-claro",
+      "caso": "financas",
+      "capitulo": 6,
+      "tema": "claro",
+      "tamanho": "411×768 (arquivo em 822×1536)",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
+    },
+    {
+      "id": "565:1398",
+      "nome": "financas-6-resultados-escuro",
+      "caso": "financas",
+      "capitulo": 6,
+      "tema": "escuro",
+      "tamanho": "411×768 (arquivo em 822×1536)",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
     }
   ],
   "aindaSemNome": [
