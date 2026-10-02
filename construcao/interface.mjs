@@ -77,6 +77,11 @@ export const QUEBRA_DO_TITULO_ESTREITA = {
   financas: ['A planilha que', 'virou produto'],
 };
 
+// Cases em que a mídia é mais alta que o texto: no desktop, texto e mídia correm em colunas
+// separadas, cada uma com o respiro de capítulo (case/pagina-de-case.md, decisão 204). Nos
+// outros, cada mídia fica alinhada ao seu capítulo.
+export const COLUNAS_SEPARADAS = ['financas'];
+
 // A cor de cada case (design-system.md, "Papéis de acento").
 export const COR_DO_CASE = { financas: 'azul', reembolso: 'laranja' };
 

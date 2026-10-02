@@ -102,6 +102,47 @@ test('Alguém não consegue ver o vídeo', () => {
   }
 });
 
+test('A pessoa lê um capítulo em desktop', () => {
+  // Num case de mídias mais altas que o texto, texto e mídia correm em colunas separadas
+  // (decisão 204): a mídia vem antes do texto no HTML e flutua à direita, com o respiro de
+  // capítulo depois dela; o par de telas limpa as duas colunas. Nos outros cases, não.
+  const fin = site.pagina('trabalhos/financas-pf-pj/index.html');
+  const ree = site.pagina('trabalhos/reembolso-sulamerica/index.html');
+  assert.match(fin, /<main id="conteudo" class="case cor-azul case--colunas-separadas"/);
+  assert.doesNotMatch(ree, /case--colunas-separadas/);
+  const ordem = (html) => [...html.matchAll(/<section class="capitulo"[\s\S]*?<\/section>/g)]
+    .map(([sec]) => sec.match(/capitulo__(leitura|provas)/g)?.join(' '));
+  for (const o of ordem(fin)) if (o?.includes('provas')) assert.equal(o, 'capitulo__provas capitulo__leitura');
+  for (const o of ordem(ree)) if (o?.includes('provas')) assert.equal(o, 'capitulo__leitura capitulo__provas');
+
+  const { base, largo } = regrasPorLargura(readFileSync(join(site.saida, 'estilo.css'), 'utf8'));
+  const provas = largo['.case--colunas-separadas .capitulo__provas'] ?? '';
+  assert.match(provas, /float:\s*right/, 'a mídia flutua na coluna da direita');
+  assert.match(provas, /clear:\s*right/, 'e nunca sobe ao lado da mídia anterior');
+  assert.match(provas, /margin-bottom:\s*var\(--space-96\)/, 'o respiro depois de cada mídia');
+  assert.match(largo['.case--colunas-separadas .capitulo__par'] ?? '', /clear:\s*both/, 'o par vem depois das duas colunas');
+  assert.match(largo['.case--colunas-separadas .case__capitulos'] ?? '', /display:\s*flow-root/);
+  assert.doesNotMatch(base['.capitulo__provas'] ?? '', /float/, 'em tela estreita nada flutua');
+  assert.match(base['.capitulo__provas'] ?? '', /order:\s*2/, 'em tela estreita a mídia vem depois do texto');
+});
+
+test('O par de telas é uma peça só', () => {
+  // `<!-- bloco: par -->` (decisão 205): duas imagens, cada uma com o seu texto alternativo,
+  // e uma legenda só, a da segunda.
+  const fin = site.pagina('trabalhos/financas-pf-pj/index.html');
+  const pares = fin.match(/<figure class="par">[\s\S]*?<\/figure>/g) ?? [];
+  assert.equal(pares.length, 1);
+  const [par] = pares;
+  assert.equal((par.match(/<div class="par__tela">/g) ?? []).length, 2, 'duas telas');
+  assert.equal((par.match(/<figcaption/g) ?? []).length, 1, 'uma legenda só');
+  for (const nome of ['financas-6-mockup-evolucao', 'financas-6-mockup-dre']) {
+    for (const tema of ['claro', 'escuro']) assert.match(par, new RegExp(`${nome}-${tema}\\.png`));
+  }
+  const alts = [...par.matchAll(/alt="([^"]+)"/g)].map((m) => m[1]);
+  assert.equal(new Set(alts).size, 2, 'cada tela com o seu texto alternativo');
+  assert.match(fin.split('id="resultados"')[1].split('</section>')[0], /class="capitulo__par"/, 'o par é a mídia do capítulo 6');
+});
+
 test('A pessoa vai para fora do site', () => {
   const caso = site.pagina('trabalhos/reembolso-sulamerica/index.html');
   // O endereço é conteúdo e muda; o que o contrato pede é a forma: palavra sublinhada,

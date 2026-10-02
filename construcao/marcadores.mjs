@@ -4,7 +4,7 @@
 // Marcador fora da lista recusa a construção, nomeando arquivo, linha e marcador:
 // um erro de digitação num marcador solto publicaria calado o que era para sumir.
 
-export const BLOCOS = ['card', 'case', 'home', 'hero', 'quem-sou-eu', 'apresentacao', 'foto', 'provas', 'extra'];
+export const BLOCOS = ['card', 'case', 'home', 'hero', 'quem-sou-eu', 'apresentacao', 'foto', 'par', 'provas', 'extra'];
 export const SOLTOS = ['privado', 'só no desktop'];
 
 export function lerMarcador(texto) {

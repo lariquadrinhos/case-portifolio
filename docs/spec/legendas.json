@@ -56,25 +56,14 @@
           }
         },
         {
-          "capitulo": 5,
-          "ordem": 1,
-          "trilha": "Desenvolvimento",
-          "porTela": {
-            "desktop 1440 · claro": "O mesmo DRE no mockup e no produto rodando.",
-            "tela estreita 375 · claro": "O mesmo DRE no mockup e no produto rodando.",
-            "desktop 1440 · escuro": "O mesmo DRE no mockup e no produto rodando.",
-            "tela estreita 375 · escuro": "O mesmo DRE no mockup e no produto rodando."
-          }
-        },
-        {
           "capitulo": 6,
           "ordem": 1,
           "trilha": "Resultados",
           "porTela": {
-            "desktop 1440 · claro": "O produto rodando: onde está o dinheiro e os indicadores do mês.",
-            "tela estreita 375 · claro": "O produto rodando: onde está o dinheiro e os indicadores do mês.",
-            "desktop 1440 · escuro": "O produto rodando: onde está o dinheiro e os indicadores do mês.",
-            "tela estreita 375 · escuro": "O produto rodando: onde está o dinheiro e os indicadores do mês."
+            "desktop 1440 · claro": "A Evolução Mensal e o DRE, no desenho do produto.",
+            "tela estreita 375 · claro": "A Evolução Mensal e o DRE, no desenho do produto.",
+            "desktop 1440 · escuro": "A Evolução Mensal e o DRE, no desenho do produto.",
+            "tela estreita 375 · escuro": "A Evolução Mensal e o DRE, no desenho do produto."
           }
         }
       ]

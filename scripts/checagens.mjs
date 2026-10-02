@@ -185,6 +185,14 @@ for (const nome of CONTEUDO) {
     const [, alt, arquivo] = m;
     if (!alt.trim()) problemas.push(`mídia na linha ${i + 1} sem texto alternativo`);
     if ((linhas[i - 1] || '').includes('<!-- bloco: foto -->')) return;
+    // Par de telas (decisão 205): a primeira imagem do par não tem legenda própria; a
+    // Legenda depois da segunda vale para as duas.
+    if ((linhas[i - 1] || '').includes('<!-- bloco: par -->')) {
+      if (!/^!\[.*?\]\(.+?\)/.test((linhas[i + 1] || '').trim())) {
+        problemas.push(`par de telas na linha ${i} sem a segunda imagem logo abaixo da primeira`);
+      }
+      return;
+    }
 
     const prox = (linhas[i + 1] || '').trim();
     if (!prox.startsWith('Legenda:')) {

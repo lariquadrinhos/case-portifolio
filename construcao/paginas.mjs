@@ -8,7 +8,7 @@
 import { escapar, inline, ehFraseInteiraEmNegrito, semNegrito } from './markdown.mjs';
 import { dimensoes, resolverMidia, resolverCapa } from './midias.mjs';
 import {
-  t, TEXTOS, FRASE_DA_HOME, MARCA_TEXTO_DO_CASE, COR_DO_CASE, BLOCO_DE_DESTAQUE,
+  t, TEXTOS, FRASE_DA_HOME, MARCA_TEXTO_DO_CASE, COR_DO_CASE, BLOCO_DE_DESTAQUE, COLUNAS_SEPARADAS,
   QUEBRA_DO_TITULO_ESTREITA,
 } from './interface.mjs';
 
@@ -274,6 +274,35 @@ function figura(ctx, c, no, capitulo) {
         </figure>`;
 }
 
+// Par de telas (decisão 205): duas imagens que são uma peça só, cada uma com o seu texto
+// alternativo e uma legenda só, a da segunda. No desktop lado a lado na largura do conteúdo;
+// em tela estreita uma embaixo da outra.
+function parDeTelas(ctx, c, imagens) {
+  const { ausencias } = ctx;
+  const onde = `${c.arquivo}:${imagens[0]?.linha ?? ''}`;
+  if (imagens.length !== 2) return ausencias.marcar('a segunda imagem do par de telas', onde);
+  const legenda = imagens[1].legenda;
+  if (!legenda) return ausencias.marcar('a legenda do par de telas', onde);
+  const telas = imagens.map((no) => {
+    if (!no.alt) return `<div class="par__tela">${ausencias.marcar(`o texto alternativo de ${no.caminho}`, onde)}</div>`;
+    const versoes = resolverMidia(ctx.raiz, no.caminho);
+    const temas = versoes.map((v) => v.tema).filter(Boolean);
+    const faltaTema = temas.length === 1
+      ? ausencias.marcar(`a versão ${temas[0] === 'claro' ? 'escura' : 'clara'} de ${no.caminho}`, onde, { classe: 'falta falta--linha' })
+      : '';
+    const midia = versoes.length
+      ? imagemTemada(ctx, versoes, no.alt, { classe: 'par__img' })
+      : `<div class="prova__vazia">${ausencias.marcar(`o arquivo ${no.caminho}`, onde, { classe: 'falta falta--midia' })}</div>`;
+    return `<div class="par__tela">${midia}${faltaTema}</div>`;
+  }).join('\n            ');
+  return `<figure class="par">
+          <div class="par__telas">
+            ${telas}
+          </div>
+          <figcaption class="prova__legenda">${escapar(legenda)}</figcaption>
+        </figure>`;
+}
+
 function provaQueFalta(ctx, c, capitulo) {
   return `<figure class="prova">
           <div class="prova__midia prova__vazia">${ctx.ausencias.marcar(`a mídia de prova do capítulo "${capitulo.rotulo}"`, c.arquivo, { classe: 'falta falta--midia' })}</div>
@@ -305,6 +334,8 @@ function capitulo(ctx, c, cap, indice) {
   const leitura = [];
   const provas = [];
   const largos = [];
+  const par = [];
+  let noPar = false;
   let soDesktop = true;
   const destaques = BLOCO_DE_DESTAQUE[c.prefixo] ?? [];
 
@@ -322,6 +353,11 @@ function capitulo(ctx, c, cap, indice) {
       leitura.push(`<h${nivel} class="subtitulo">${inline(no.texto)}</h${nivel}>`);
     } else if (no.tipo === 'lista') {
       leitura.push(lista(no));
+    } else if (no.tipo === 'comentario') {
+      noPar = true; // `<!-- bloco: par -->`: as duas imagens seguintes são uma peça só
+    } else if (no.tipo === 'imagem' && noPar) {
+      par.push(no);
+      if (par.length === 2) noPar = false;
     } else if (no.tipo === 'imagem') {
       provas.push(figura(ctx, c, no, cap));
     } else if (no.tipo === 'tabela') {
@@ -340,17 +376,25 @@ function capitulo(ctx, c, cap, indice) {
 
   // Capítulo com lacuna de mídia declarada no Figma (docs/spec/legendas.json) e sem mídia
   // no arquivo: a prova falta.
-  if (!provas.length && ctx.slotsDeMidia(c.arquivo).includes(indice + 1)) {
+  if (!provas.length && !par.length && ctx.slotsDeMidia(c.arquivo).includes(indice + 1)) {
     provas.push(provaQueFalta(ctx, c, cap));
   }
 
-  return `<section class="capitulo" id="${id}" data-etapa="${indice}" aria-labelledby="${id}-titulo">
-      <h2 class="capitulo__titulo" id="${id}-titulo">${inline(tituloDeCapitulo(cap.titulo))}</h2>
-      <div class="capitulo__leitura">
+  const tituloHtml = `<h2 class="capitulo__titulo" id="${id}-titulo">${inline(tituloDeCapitulo(cap.titulo))}</h2>`;
+  const leituraHtml = `<div class="capitulo__leitura">
         ${leitura.join('\n        ')}
-      </div>
-      ${provas.length ? `<div class="capitulo__provas">\n        ${provas.join('\n        ')}\n      </div>` : ''}
-      ${largos.length ? `<div class="capitulo__largo${soDesktop ? ' so-largo' : ''}">\n        ${largos.join('\n        ')}\n      </div>` : ''}
+      </div>`;
+  const provasHtml = provas.length ? `<div class="capitulo__provas">\n        ${provas.join('\n        ')}\n      </div>` : '';
+  const largoHtml = largos.length ? `<div class="capitulo__largo${soDesktop ? ' so-largo' : ''}">\n        ${largos.join('\n        ')}\n      </div>` : '';
+  const parHtml = par.length || noPar ? `<div class="capitulo__par">\n        ${parDeTelas(ctx, c, par)}\n      </div>` : '';
+  // Com colunas separadas (decisão 204), a mídia vem antes do texto no HTML: é o que a deixa
+  // flutuar na coluna da direita a partir da primeira linha do capítulo. Em tela estreita a
+  // ordem visual volta a ser texto e depois mídia.
+  const partes = COLUNAS_SEPARADAS.includes(c.prefixo)
+    ? [tituloHtml, provasHtml, leituraHtml, largoHtml, parHtml]
+    : [tituloHtml, leituraHtml, provasHtml, largoHtml, parHtml];
+  return `<section class="capitulo" id="${id}" data-etapa="${indice}" aria-labelledby="${id}-titulo">
+      ${partes.filter(Boolean).join('\n      ')}
     </section>`;
 }
 
@@ -426,7 +470,8 @@ export function paginaCase(ctx, c, proximo) {
     ? aberturaComMarca(c.hero.abertura, MARCA_TEXTO_DO_CASE[c.prefixo])
     : ausencias.marcar('a frase de abertura', onde);
 
-  const corpo = `<main id="conteudo" class="case cor-${cor}" tabindex="-1">
+  const colunas = COLUNAS_SEPARADAS.includes(c.prefixo) ? ' case--colunas-separadas' : '';
+  const corpo = `<main id="conteudo" class="case cor-${cor}${colunas}" tabindex="-1">
   ${faixa(c)}
   <header class="case__hero grade">
     <h1 class="case__titulo">${titulo}</h1>

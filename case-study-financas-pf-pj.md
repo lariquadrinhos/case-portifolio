@@ -6,7 +6,6 @@ Desenvolvi uma aplicação desktop para organização financeira para pessoas PF
 
 <!-- bloco: case -->
 
-
 ## 1. A ideia
 <!-- trilha: Introdução -->
 
@@ -63,7 +62,7 @@ E a documentação virou artefato de handoff. Para cada tela, escrevi a especifi
 
 Parte da interface é gerada a partir do dado. Então documentei também as regras de renderização: o algoritmo por trás do desenho. Sem isso, quem fosse programar teria que inventar comportamento para cada caso extremo.
 
-![Três trechos do projeto, um acima do outro. Em cima, centralizado e mais estreito, um recorte do board do FigJam com o fluxo do usuário: a caixa Novo Lançamento leva a 4 abas: Despesa, Receita, Pró-labore e Distribuição, IR, que leva a Salva, sucesso; setas tracejadas chegam pela esquerda, cortadas na borda. No meio, centralizado e mais estreito, o wireframe do Novo Lançamento na aba Despesa: o campo Valor com R$ 0,00, a Data de pagamento já preenchida com hoje, 20/07/2026, o Status com Pago selecionado, a Entidade com PF selecionado e, em Categorização, o campo Buscar ou criar categoria; o corte cai no começo de Classificação. Embaixo, as linhas 125 a 132 da especificação de telas, como num editor: Valor numérico com máscara de moeda, Data de pagamento pré-preenchida com hoje, Status Previsto ou Pago com padrão Pago, Entidade com padrão PF, e Categoria com busca e criação de categoria nova sem sair do formulário.](publico/midias/financas-3-desenho.png)
+![Três trechos do projeto, um acima do outro. Em cima, mais estreito que a coluna, um recorte do board do FigJam com o fluxo do usuário: a caixa Novo Lançamento leva a 4 abas: Despesa, Receita, Pró-labore e Distribuição, IR, que leva a Salva, sucesso; setas tracejadas chegam pela esquerda, cortadas na borda. No meio, mais estreito que a coluna, o wireframe do Novo Lançamento na aba Despesa: o campo Valor com R$ 0,00, a Data de pagamento já preenchida com hoje, 20/07/2026, o Status com Pago selecionado, a Entidade com PF selecionado e, em Categorização, o campo Buscar ou criar categoria; o corte cai no começo de Classificação. Embaixo, as linhas 125 a 132 da especificação de telas, como num editor: Valor numérico com máscara de moeda, Data de pagamento pré-preenchida com hoje, Status Previsto ou Pago com padrão Pago, Entidade com padrão PF, e Categoria com busca e criação de categoria nova sem sair do formulário.](publico/midias/financas-3-desenho.png)
 Legenda: O mesmo Novo Lançamento em três lugares: no fluxo, por que a tela existe; no wireframe, o que a pessoa vê; na especificação, o que cada campo faz.
 
 ---
@@ -91,9 +90,6 @@ Construí o produto ao lado de um desenvolvedor e do Claude: backend completo, b
 
 No fim, uma auditoria de fidelidade. Mais de cem agentes de IA rodando em paralelo, cada um cruzando uma tela implementada contra o frame real no Figma, mostrou o tamanho do que a documentação sustentava sozinha. Com tudo já especificado antes, a implementação só precisou seguir.
 
-![Duas telas do DRE de julho de 2026, uma acima da outra. Em cima, o mockup no Figma; embaixo, o produto rodando, com dados de demonstração. As duas têm o mesmo título, os mesmos seletores Consolidado, PF e PJ, e Pago e Previsto, o seletor de mês e a mesma cascata, de Receita Bruta a Lucro Líquido, com os mesmos rótulos e sinais em cada linha. Mudam os valores; o destaque dos subtotais, que no mockup têm uma faixa cinza e no produto aparecem só em negrito; o Lucro Líquido, maior no mockup e do tamanho das outras linhas no produto; o seletor de mês, um botão com contorno no mockup e texto solto no produto; e a frase de ajuda abaixo dos seletores, que no mockup fala do toggle Pago/Previsto e no produto fala de navegar entre meses.](publico/midias/financas-5-desenvolvimento.png)
-Legenda: O mesmo DRE no mockup e no produto rodando.
-
 ---
 
 ## 6. O que ficou
@@ -103,8 +99,10 @@ Legenda: O mesmo DRE no mockup e no produto rodando.
 
 Aprendi a decidir o que as coisas são, e sustentar essa decisão em cada tela depois. Aprendi a escrever para quem vem depois de mim, e descobri que documentar bem é o que faz o design sobreviver ao contato com a implementação. E aprendi que trabalhar com IA se decide antes, não depois: o que define a qualidade do que volta é a regra que eu estabeleci no começo, não a minha avaliação de cada resposta. Sem ela, qualquer resultado plausível passa.
 
-![Duas capturas do produto rodando, com dados de demonstração, uma acima da outra. Em cima, o bloco Onde Está Meu Dinheiro da Home: um treemap com Investimentos, R$ 264.779, Nubank, R$ 48.650, e Itaú PJ, R$ 41.765, cada bloco do tamanho do saldo; embaixo dele as Dívidas, R$ 320.745, e o Patrimônio Líquido, R$ 34.449,02. Embaixo, os Indicadores Financeiros de setembro de 2026, em quatro grupos: Rentabilidade, com margem bruta de 86,3% e taxa de poupança de 59,2%; Crescimento Patrimonial, com o patrimônio crescendo 3,8% no mês; Liquidez; e Endividamento, cada indicador com um ícone de ajuda.](publico/midias/financas-6-resultados.png)
-Legenda: O produto rodando: onde está o dinheiro e os indicadores do mês.
+<!-- bloco: par -->
+![O mockup da Evolução Mensal no Figma: o gráfico Lucro Líquido por entidade, com o valor de julho, R$ 10.400,00, mais 44,4% sobre junho, e barras de PF e PJ lado a lado em cada mês, de fevereiro a julho, nas duas cores do par, com legenda; embaixo, o começo da tabela mês a mês.](publico/midias/financas-6-mockup-evolucao.png)
+![O mockup do DRE no Figma, em julho de 2026: os seletores Consolidado, PF e PJ, e Pago e Previsto, o mês, e a cascata de Receita Bruta a Lucro Líquido, com os subtotais numa faixa cinza e o Lucro Líquido, R$ 10.400,00, em destaque.](publico/midias/financas-6-mockup-dre.png)
+Legenda: A Evolução Mensal e o DRE, no desenho do produto.
 
 <!-- bloco: provas -->
 As decisões de UX, a especificação de cada tela e o modelo de dados
@@ -118,7 +116,6 @@ O fluxo do usuário mapeado, do primeiro acesso às ações do dia a dia
 
 <!-- bloco: extra -->
 ## O Produto
-
 
 Quem tem pessoa jurídica além da física não tem uma vida financeira: tem duas. Misturadas na
 mesma planilha podem virar uma bagunça.
@@ -158,8 +155,6 @@ A profundidade é de ferramenta financeira de verdade: cronograma de amortizaç�
 juros recalculando só o que ainda não venceu, venda de bem dividida entre vários destinos, 18
 indicadores financeiros, recorrência com parcelamento propagada automaticamente mês a mês. Tudo
 local, sem login, sem fricção de conta.
-
-
 
 ---
 

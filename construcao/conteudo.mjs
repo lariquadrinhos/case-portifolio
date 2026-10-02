@@ -50,7 +50,8 @@ function emBlocos(nos) {
   let atual = null;
   for (const no of nos) {
     const m = no.tipo === 'comentario' ? lerMarcador(no.texto) : null;
-    if (m?.tipo === 'bloco') {
+    // `par` marca duas imagens dentro de um capítulo; não abre bloco novo (decisão 205).
+    if (m?.tipo === 'bloco' && m.nome !== 'par') {
       atual = { nome: m.nome, nos: [], linha: no.linha };
       blocos.push(atual);
     } else if (atual) {
@@ -164,7 +165,8 @@ export function lerCase(raiz, arquivo) {
       k++;
       continue;
     }
-    if (no.tipo === 'regua' || no.tipo === 'comentario') continue;
+    if (no.tipo === 'regua') continue;
+    if (no.tipo === 'comentario' && lerMarcador(no.texto).nome !== 'par') continue;
     if (!capitulos.length) {
       throw new ErroDeConteudo(`${arquivo}:${no.linha}: conteúdo antes do primeiro capítulo`);
     }

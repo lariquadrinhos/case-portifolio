@@ -45,6 +45,16 @@ Ver P57.
   do texto do capítulo, se o título quebrar em duas linhas, a mídia desce junto. O título
   pertence ao texto; a mídia é prova do que o texto afirma, e começa onde a afirmação começa.
 - **Cada capítulo tem a sua prova ao lado**, com legenda abaixo dela.
+- **Quando as mídias são mais altas que o texto, as duas colunas correm separadas.** É o caso
+  do Finanças. Esperar a mídia de cada capítulo abria um vão embaixo de cada texto e quebrava a
+  fluidez da leitura. Então o texto segue com o respiro de capítulo (96 no desktop) entre um
+  capítulo e o próximo, e a coluna de mídia segue com o mesmo respiro entre uma mídia e a
+  próxima, na ordem dos capítulos. **Uma mídia nunca começa antes do próprio capítulo**: o topo
+  dela é o mais baixo entre a primeira linha do texto do capítulo e o fim da mídia anterior
+  mais 96. No Finanças, o capítulo 5 não tem mídia, e a do capítulo 6 é um **par de telas**
+  (`<!-- bloco: par -->`) na largura inteira do conteúdo, 96 depois da coluna que terminar por
+  último. O bloco de provas vem 96 depois dele. No Reembolso, onde texto e mídia têm alturas parecidas,
+  vale a regra de alinhar cada mídia com o seu capítulo. Ver decisões 204 e 205.
 - **Vídeo não é pré-carregado e não toca sozinho.** Até a pessoa pedir, baixa zero byte; o
   que carrega é a imagem de pôster, que segue as mesmas regras de qualquer imagem.
 - **A imagem de pôster é um quadro do próprio vídeo.** Se for outra imagem, há salto visual
@@ -236,6 +246,7 @@ Funcionalidade: Página de case
     E o texto corrido ocupa seis colunas
     E a mídia que prova aquele capítulo fica ao lado, com legenda abaixo
     E o topo da mídia alinha com a primeira linha do texto, não com o título
+    E, num case de mídias mais altas que o texto, a mídia começa no mais baixo entre essa linha e o fim da mídia anterior mais o respiro de capítulo
 
   Cenário: A pessoa vai para fora do site
     Dado que o case tem link externo

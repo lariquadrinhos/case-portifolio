@@ -123,3 +123,10 @@ test('Mídia de prova com uma versão de tema só', () => {
     /FALTA · a versão clara de publico\/midias\/reembolso-4-telas-de-erro\.png/, 'a versão que falta fica visível');
   assert.equal(construirEm(raiz, 'publicar').ok, false, 'e a publicação recusa');
 });
+
+test('Par de telas sem a segunda imagem', () => {
+  const raiz = raizTemporaria({
+    'case-study-financas-pf-pj.md': (t) => t.replace(/(<!-- bloco: par -->\n!\[[^\n]*\n)!\[[^\n]*\n/, '$1'),
+  });
+  assert.match(construirEm(raiz).pagina('trabalhos/financas-pf-pj/index.html'), /FALTA · a (segunda imagem|legenda) do par de telas/);
+});

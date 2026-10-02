@@ -6760,3 +6760,100 @@ Finanças e ficam para lá.
 na estreita (11867), e o bloco de provas desceu junto, a 96 e 64. **Com isso, as seis mídias do
 Finanças estão entregues**, e as onze lacunas de mídia dos dois cases têm legenda; todas são rascunho
 meu à espera dela.
+
+---
+
+## 204 · No Finanças, texto e mídia correm em colunas separadas
+
+**Quando** 2026-10-02 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** Com as seis mídias no lugar, ela: *"não gosto como a area da midia vaza a area de texto,
+as midias desse case são maiores que os textos [...] tentar manter esse alinhamento com a hora que
+são mencionados prejudica a fluidez do texto"*. Cada capítulo tinha a altura da maior das duas
+colunas, e a mídia, mais alta, abria um vão embaixo de cada texto.
+
+**Decisão.** No desktop do Finanças, as colunas se dissociam. **O texto** segue com 96 entre
+capítulos; **a mídia** segue com os mesmos 96 entre uma mídia e a próxima, na ordem, e nunca começa
+antes do próprio capítulo. Feito isso, a coluna de mídia terminava em 6108 e a de texto em 4320; por
+sugestão minha, aceita (*"leva a mídia do 6 pra baixo do texto"*), **a mídia do capítulo 6 desce para
+baixo do próprio texto**, a 32 dele. As colunas terminam em 5180 e 5184, e o bloco de provas vem 96
+depois. A tela desktop vai de 8289 para 6941.
+
+Junto, aprovadas antes: **moldura** com a textura de pontos do FigJam (`451:1725`, a mesma do capítulo
+4 do Reembolso) atrás das partes estreitas dos capítulos 3 e 4, só no tema claro; no escuro, sem
+moldura e **alinhadas à esquerda** (*"no modo preto acho que da pra alinhar a esquerda"*). Capítulo 3
+com 411×1095, capítulo 4 com 411×766.
+
+**Alternativa descartada.** *Manter cada mídia ao lado do seu capítulo*: é a regra que causava o vão.
+*Mover outra mídia para baixo do texto*: a do 6 era a mais atrasada em relação ao próprio capítulo.
+
+**Custo aceito.** A partir do capítulo 3, a mídia aparece depois do texto que a menciona, não ao lado:
+a do capítulo 5 começa quase 600 px depois do texto do capítulo 5. A tela estreita não muda.
+
+**Consequência.** Regra nova em `case/pagina-de-case.md`, só para o Finanças; o Reembolso mantém a
+mídia alinhada ao capítulo. A construção do site precisa mudar para o desktop do Finanças.
+
+---
+
+## 205 · Os capítulos 5 e 6 do Finanças trocam duas mídias pequenas por um par de telas grandes
+
+**Quando** 2026-10-02 · **Fase** 4 · **Domínio** case · `#reversao`
+
+**Gatilho.** *"é legal a ideia de mostrar o mockup ao lado do produto [...] mas no fim os resultados são
+duas telas iguais ocupando espaço [...] e na mídia do último capítulo [...] as telas estão tão pequenas
+que nem mostram direito o produto real"*.
+
+**Decisão.** Reverte as mídias da 201 (capítulo 5) e da 203 (capítulo 6). No lugar das duas, **uma peça
+só**: a Home e o DRE do produto rodando, com a base de demonstração, em setembro, cada uma com um título
+em cima e **uma legenda embaixo das duas**, *"A Home e o DRE do produto rodando, com dados de
+demonstração."* No desktop, as duas lado a lado na **largura inteira do conteúdo** (1063), depois do
+texto do capítulo 6 e 96 depois da coluna de mídia; em tela estreita, uma embaixo da outra. **O
+capítulo 5 fica sem mídia.** Capturas numa janela de 1100×720; cada tela aparece com 515 de largura,
+pouco menos da metade do tamanho real. Respiro de 10 embaixo de cada uma, pela checagem 13.
+
+`financas-6-produto-home` e `financas-6-produto-dre`, claro e escuro: 515×376, arquivo em 1030×752. O
+conteúdo declara o par com um marcador novo, `<!-- bloco: par -->`.
+
+**Alternativa descartada.** *Uma tela por capítulo*, e *o par na coluna de mídia* (cada tela com uns
+200 px) ou *sangrando a tela toda*: ela escolheu uma peça só, na largura do conteúdo, com Home e DRE.
+
+**Custo aceito.** O texto do produto fica perto de 6 a 7 px na página: legível nos títulos e valores
+grandes, não nas linhas pequenas. O capítulo 5 deixa de ter prova visual própria; a frase *"fiel ao que
+eu tinha desenhado"*, que a 201 provava com o mockup, fica sem imagem.
+
+**Consequência.** Figma, as quatro telas: as mídias do capítulo 5 ficam ocultas, e a do 6 vira o par;
+desktop com 6639, estreita com 11212. `case/pagina-de-case.md` e `arquivo-de-texto-vira-pagina.md`
+ganham a regra e o marcador. Saem de `publico/midias/` os arquivos da 201 e da 203. A checagem 4 e a
+construção precisam aprender o marcador novo, e `legendas.json` perdeu a lacuna do capítulo 5.
+
+---
+
+## 206 · O par do capítulo 6 mostra os mockups, não o produto rodando
+
+**Quando** 2026-10-02 · **Fase** 4 · **Domínio** case · `#reversao`
+
+**Gatilho.** Ela pediu a Evolução Mensal no lugar da Home do par da 205, e perguntou *"por que tá saindo
+diferente do figma?"*. O produto rodando diverge do mockup: na Evolução Mensal, o Consolidado tem uma
+barra azul por mês em vez das barras de PF e PJ lado a lado, sem legenda e sem o valor em destaque, e o
+rótulo do eixo sai cortado; no DRE, os subtotais perdem a faixa e o Lucro Líquido perde o destaque; a
+barra lateral é outra. A cópia local do `bigorna` (`feat/produto-e-backend`, 14/09) já inclui os
+branches de fidelidade ao Figma, e o `origin/main` só tem o merge dela: a diferença está no código, e é
+de aparência, não de funcionamento.
+
+**Decisão.** *"vamos por o mockups então"*. Reverte da 205 o conteúdo do par: no lugar das capturas do
+produto, **os mockups da Evolução Mensal (`406:4` e `427:30`) e do DRE (`397:2` e `448:26`)** do Figma
+do Finanças, recortados na mesma proporção, com os títulos *"Figma · mockup da Evolução Mensal"* e
+*"Figma · mockup do DRE"*. Legenda: *"A Evolução Mensal e o DRE, no desenho do produto."* O formato da
+205 continua: par na largura inteira do conteúdo, lado a lado no desktop, empilhado no estreito.
+
+`financas-6-mockup-evolucao` e `financas-6-mockup-dre`, claro e escuro: 515×376, arquivo em 1030×752.
+
+**Alternativa descartada.** *Mostrar o produto como ele é*: mostraria justamente o que não seguiu o
+desenho. *Corrigir o produto antes de capturar*: é trabalho no repositório do Finanças, fora deste
+projeto. *Procurar telas do produto que já batam com o mockup*: ela preferiu os mockups.
+
+**Custo aceito.** O capítulo 6 afirma *"o produto existe, funciona e está em uso"* e a mídia dele mostra
+o desenho. A única imagem do produto rodando no case passa a ser o vídeo do capítulo 1.
+
+**Consequência.** Figma, as quatro telas, sem mudança de altura. As divergências entre o produto e o
+mockup ficam como achado para o repositório do Finanças, junto das que a 201 e a 203 já registraram.

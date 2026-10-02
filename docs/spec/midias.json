@@ -286,7 +286,7 @@
       "caso": "financas",
       "capitulo": 3,
       "tema": "claro",
-      "tamanho": "411×1031 (arquivo em 822×2062)",
+      "tamanho": "411×1095 (arquivo em 822×2190)",
       "fundo": {
         "tipo": "raster"
       },
@@ -304,7 +304,7 @@
       "caso": "financas",
       "capitulo": 3,
       "tema": "escuro",
-      "tamanho": "411×1031 (arquivo em 822×2062)",
+      "tamanho": "411×1095 (arquivo em 822×2190)",
       "fundo": {
         "tipo": "raster"
       },
@@ -322,7 +322,7 @@
       "caso": "financas",
       "capitulo": 4,
       "tema": "claro",
-      "tamanho": "411×734 (arquivo em 822×1468)",
+      "tamanho": "411×766 (arquivo em 822×1532)",
       "fundo": {
         "tipo": "raster"
       },
@@ -340,7 +340,7 @@
       "caso": "financas",
       "capitulo": 4,
       "tema": "escuro",
-      "tamanho": "411×734 (arquivo em 822×1468)",
+      "tamanho": "411×766 (arquivo em 822×1532)",
       "fundo": {
         "tipo": "raster"
       },
@@ -353,48 +353,12 @@
       "origem": "figma"
     },
     {
-      "id": "559:1397",
-      "nome": "financas-5-desenvolvimento-claro",
-      "caso": "financas",
-      "capitulo": 5,
-      "tema": "claro",
-      "tamanho": "411×678 (arquivo em 822×1356)",
-      "fundo": {
-        "tipo": "raster"
-      },
-      "moldura": {
-        "contorno": false,
-        "raio": 0,
-        "efeitos": 0
-      },
-      "rastersQueCobrem": [],
-      "origem": "figma"
-    },
-    {
-      "id": "559:1398",
-      "nome": "financas-5-desenvolvimento-escuro",
-      "caso": "financas",
-      "capitulo": 5,
-      "tema": "escuro",
-      "tamanho": "411×678 (arquivo em 822×1356)",
-      "fundo": {
-        "tipo": "raster"
-      },
-      "moldura": {
-        "contorno": false,
-        "raio": 0,
-        "efeitos": 0
-      },
-      "rastersQueCobrem": [],
-      "origem": "figma"
-    },
-    {
-      "id": "565:1397",
-      "nome": "financas-6-resultados-claro",
+      "id": "581:1397",
+      "nome": "financas-6-mockup-evolucao-claro",
       "caso": "financas",
       "capitulo": 6,
       "tema": "claro",
-      "tamanho": "411×768 (arquivo em 822×1536)",
+      "tamanho": "515×376 (arquivo em 1030×752); no Figma, as duas lado a lado em 1063×376",
       "fundo": {
         "tipo": "raster"
       },
@@ -407,12 +371,48 @@
       "origem": "figma"
     },
     {
-      "id": "565:1398",
-      "nome": "financas-6-resultados-escuro",
+      "id": "581:1398",
+      "nome": "financas-6-mockup-evolucao-escuro",
       "caso": "financas",
       "capitulo": 6,
       "tema": "escuro",
-      "tamanho": "411×768 (arquivo em 822×1536)",
+      "tamanho": "515×376 (arquivo em 1030×752); no Figma, as duas lado a lado em 1063×376",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
+    },
+    {
+      "id": "581:1397",
+      "nome": "financas-6-mockup-dre-claro",
+      "caso": "financas",
+      "capitulo": 6,
+      "tema": "claro",
+      "tamanho": "515×376 (arquivo em 1030×752); no Figma, as duas lado a lado em 1063×376",
+      "fundo": {
+        "tipo": "raster"
+      },
+      "moldura": {
+        "contorno": false,
+        "raio": 0,
+        "efeitos": 0
+      },
+      "rastersQueCobrem": [],
+      "origem": "figma"
+    },
+    {
+      "id": "581:1398",
+      "nome": "financas-6-mockup-dre-escuro",
+      "caso": "financas",
+      "capitulo": 6,
+      "tema": "escuro",
+      "tamanho": "515×376 (arquivo em 1030×752); no Figma, as duas lado a lado em 1063×376",
       "fundo": {
         "tipo": "raster"
       },

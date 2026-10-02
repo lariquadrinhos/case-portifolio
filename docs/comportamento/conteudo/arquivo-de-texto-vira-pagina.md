@@ -31,6 +31,7 @@ aparece no site. Não há seção reconhecida por nome: nome muda, marcador não
 | `<!-- bloco: apresentacao -->` | Dentro de "Quem sou eu": os parágrafos de apresentação, sem título visível |
 | `<!-- bloco: foto -->` | A imagem na linha seguinte é a foto da página, não imagem de texto corrido |
 | `<!-- bloco: provas -->` | O que segue é o bloco de provas do case: pares de uma linha de descrição e um link logo abaixo. Link com endereço vazio é prova que falta |
+| `<!-- bloco: par -->` | As duas imagens nas linhas seguintes são **uma peça só**, com **uma** `Legenda:` depois da segunda. No desktop, as duas lado a lado na largura inteira do conteúdo, depois do texto do capítulo; em tela estreita, uma embaixo da outra. Cada imagem tem o seu texto alternativo |
 | `<!-- bloco: extra -->` | O que segue é conteúdo extra do case: vem depois do último capítulo, **fora da trilha**, e não é subseção do capítulo anterior |
 | `<!-- trilha: Rótulo -->` | O título imediatamente acima é um capítulo, e `Rótulo` é o nome dele na trilha |
 | `<!-- privado -->` | A seção seguinte, e tudo abaixo dela até um título de nível igual ou superior, **não vai para o site** |
