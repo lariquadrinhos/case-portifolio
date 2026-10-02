@@ -122,6 +122,13 @@ test('A pessoa lê um capítulo em desktop', () => {
   assert.match(provas, /margin-bottom:\s*var\(--space-96\)/, 'o respiro depois de cada mídia');
   assert.match(largo['.case--colunas-separadas .capitulo__par'] ?? '', /clear:\s*both/, 'o par vem depois das duas colunas');
   assert.match(largo['.case--colunas-separadas .case__capitulos'] ?? '', /display:\s*flow-root/);
+  assert.match(largo['.case--colunas-separadas .capitulo + .capitulo'] ?? '', /margin-top:\s*var\(--space-96\)/,
+    'o texto segue com o respiro de capítulo');
+  assert.match(largo['.case--colunas-separadas .capitulo__par'] ?? '', /margin-top:\s*var\(--space-96\)/,
+    'o par fica o respiro depois da coluna que terminar por último');
+  for (const sel of ['.capitulo__leitura', '.capitulo__titulo']) {
+    assert.match(largo[`.case--colunas-separadas ${sel}`] ?? '', /width:\s*var\(--largura-texto\)/, `${sel} na largura da coluna de texto`);
+  }
   assert.doesNotMatch(base['.capitulo__provas'] ?? '', /float/, 'em tela estreita nada flutua');
   assert.match(base['.capitulo__provas'] ?? '', /order:\s*2/, 'em tela estreita a mídia vem depois do texto');
 });
