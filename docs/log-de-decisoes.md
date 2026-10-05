@@ -6926,3 +6926,25 @@ aparecem.
 **Alternativa descartada.** *Tirar o número do recorte*, que eu recomendei, e *recortar maio a julho*.
 
 **Custo aceito.** Quem ler com atenção pode estranhar o junho.
+
+---
+
+## 210 · O currículo vai ao site como está, com o telefone
+
+**Quando** 2026-10-05 · **Fase** 4 · **Domínio** quem-sou-eu · `#escopo`
+
+**Gatilho.** Ela pôs o PDF do currículo no projeto. Ele traz dados que o site ainda não tinha: o
+telefone, o nome completo (*Larissa Lopes de Quadros*) e a cidade (*Florianópolis, SC*). O repositório
+e o site são públicos.
+
+**Decisão.** *"2"*: publicar como está. `publico/curriculo.pdf`, 36,6 KB. Os metadados do arquivo não
+trazem nada pessoal (autor *Un-named*, gerado no LibreOffice).
+
+**Alternativa descartada.** *Tirar o telefone do PDF antes*, que eu recomendei. *Deixar o currículo só
+no LinkedIn* e tirar o link do site.
+
+**Custo aceito.** O telefone fica num arquivo público, indexável por buscador, e no histórico do Git
+mesmo que o arquivo seja trocado depois. O currículo diz *Product Designer · UX/UI*; o site diz *UX
+Designer*.
+
+**Consequência.** A falta do currículo some do site.

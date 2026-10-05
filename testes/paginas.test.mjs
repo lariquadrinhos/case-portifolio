@@ -240,6 +240,15 @@ test('Leitor procura como falar com ela', () => {
   assert.match(home, /href="mailto:llquadros95@gmail\.com">llquadros95@gmail\.com</, 'o endereço aparece escrito por extenso');
 });
 
+test('A pessoa baixa o currículo', () => {
+  // O PDF é entregue, e o currículo aparece como palavra sublinhada, não como botão.
+  const quem = site.pagina('quem-sou-eu/index.html');
+  const m = quem.match(/<a class="sublinhado" href="\/(publico\/[^"]+\.pdf)">Baixar currículo em PDF<\/a>/);
+  assert.ok(m, 'o currículo é palavra sublinhada que aponta para um PDF');
+  assert.ok(existsSync(join(site.saida, m[1])), 'o PDF está no site');
+  assert.doesNotMatch(quem, /FALTA · o arquivo do currículo/);
+});
+
 test('Leitor escolhe o LinkedIn', () => {
   // O perfil abre em nova aba, no contato de toda página e em "Quem sou eu". O endereço vem do
   // mesmo lugar que a construção usa, que o teste de copy amarra ao contrato: o teste não fixa
