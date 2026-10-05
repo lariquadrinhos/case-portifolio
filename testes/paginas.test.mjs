@@ -163,6 +163,12 @@ test('A coluna de mídia segue a regra da decisão 204', () => {
   };
   const topos = funcao('topos');
   const margemDoPar = funcao('margemDoPar');
+  // E a página usa essas duas contas, e não outra: o topo de cada mídia vem de topos(), e a
+  // margem do par vem de margemDoPar().
+  const posicionar = colunasJs.match(/function posicionar\(\) \{[\s\S]*?\n  \}/)?.[0] ?? '';
+  assert.match(posicionar, /var calculados = topos\(primeirasLinhas, alturas, respiro\);/, 'o topo das mídias vem de topos()');
+  assert.match(posicionar, /provas\.style\.top = calculados\[i\] \+ 'px';/, 'cada mídia recebe o topo calculado');
+  assert.match(posicionar, /par\.style\.marginTop = margemDoPar\(/, 'a margem do par vem de margemDoPar()');
   // Primeira linha de cada capítulo e altura de cada mídia, medidas no site em 1440.
   assert.deepEqual(topos([768, 1212, 2038, 2956], [404, 878, 1178, 849], 96), [768, 1268, 2242, 3516],
     'o mais baixo entre a primeira linha do capítulo e o fim da mídia anterior mais o respiro');
