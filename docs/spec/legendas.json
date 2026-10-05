@@ -27,10 +27,10 @@
           "ordem": 1,
           "trilha": "Descoberta",
           "porTela": {
-            "desktop 1440 · claro": "A regra escrita antes de qualquer tela, e o que ela produziu: cada dúvida do modelo de domínio virou hotspot, com destino registrado.",
-            "tela estreita 375 · claro": "A regra escrita antes de qualquer tela, e o que ela produziu: cada dúvida do modelo de domínio virou hotspot, com destino registrado.",
-            "desktop 1440 · escuro": "A regra escrita antes de qualquer tela, e o que ela produziu: cada dúvida do modelo de domínio virou hotspot, com destino registrado.",
-            "tela estreita 375 · escuro": "A regra escrita antes de qualquer tela, e o que ela produziu: cada dúvida do modelo de domínio virou hotspot, com destino registrado."
+            "desktop 1440 · claro": "A regra na skill, e as dúvidas que ela transformou em hotspots.",
+            "tela estreita 375 · claro": "A regra na skill, e as dúvidas que ela transformou em hotspots.",
+            "desktop 1440 · escuro": "A regra na skill, e as dúvidas que ela transformou em hotspots.",
+            "tela estreita 375 · escuro": "A regra na skill, e as dúvidas que ela transformou em hotspots."
           }
         },
         {
@@ -38,10 +38,10 @@
           "ordem": 1,
           "trilha": "Desenho e documentação",
           "porTela": {
-            "desktop 1440 · claro": "O mesmo Novo Lançamento em três lugares: no fluxo, por que a tela existe; no wireframe, o que a pessoa vê; na especificação, o que cada campo faz.",
-            "tela estreita 375 · claro": "O mesmo Novo Lançamento em três lugares: no fluxo, por que a tela existe; no wireframe, o que a pessoa vê; na especificação, o que cada campo faz.",
-            "desktop 1440 · escuro": "O mesmo Novo Lançamento em três lugares: no fluxo, por que a tela existe; no wireframe, o que a pessoa vê; na especificação, o que cada campo faz.",
-            "tela estreita 375 · escuro": "O mesmo Novo Lançamento em três lugares: no fluxo, por que a tela existe; no wireframe, o que a pessoa vê; na especificação, o que cada campo faz."
+            "desktop 1440 · claro": "O Novo Lançamento no fluxo, no wireframe e na especificação.",
+            "tela estreita 375 · claro": "O Novo Lançamento no fluxo, no wireframe e na especificação.",
+            "desktop 1440 · escuro": "O Novo Lançamento no fluxo, no wireframe e na especificação.",
+            "tela estreita 375 · escuro": "O Novo Lançamento no fluxo, no wireframe e na especificação."
           }
         },
         {
@@ -49,10 +49,10 @@
           "ordem": 1,
           "trilha": "Design system",
           "porTela": {
-            "desktop 1440 · claro": "O par PF/PJ em uso nos dois temas, e o que os números mostraram: aplicado no escuro, o PJ do claro fica abaixo de 3:1, e o escuro precisou de matizes próprios.",
-            "tela estreita 375 · claro": "O par PF/PJ em uso nos dois temas, e o que os números mostraram: aplicado no escuro, o PJ do claro fica abaixo de 3:1, e o escuro precisou de matizes próprios.",
-            "desktop 1440 · escuro": "O par PF/PJ em uso nos dois temas, e o que os números mostraram: aplicado no escuro, o PJ do claro fica abaixo de 3:1, e o escuro precisou de matizes próprios.",
-            "tela estreita 375 · escuro": "O par PF/PJ em uso nos dois temas, e o que os números mostraram: aplicado no escuro, o PJ do claro fica abaixo de 3:1, e o escuro precisou de matizes próprios."
+            "desktop 1440 · claro": "O par PF/PJ nos dois temas: no escuro, o roxo do claro reprovava.",
+            "tela estreita 375 · claro": "O par PF/PJ nos dois temas: no escuro, o roxo do claro reprovava.",
+            "desktop 1440 · escuro": "O par PF/PJ nos dois temas: no escuro, o roxo do claro reprovava.",
+            "tela estreita 375 · escuro": "O par PF/PJ nos dois temas: no escuro, o roxo do claro reprovava."
           }
         },
         {

@@ -45,7 +45,7 @@ Com o método de pé, dirigi a construção do documento de produto a partir de 
 Com as regras estáveis, pedi a tradução do documento para um modelo formal de domínio: eventos, comandos, políticas e agregados. Onde havia tensão sem resposta certa ainda, instruí que ficasse marcada como hotspot em vez de decidida no automático.
 
 ![Dois trechos de arquivos do projeto como aparecem num editor de texto, com os números de linha à esquerda e a marcação do markdown visível. Em cima, as linhas 15 a 24 da skill loop-produto: a seção Diretriz central: nunca assuma premissas, que manda tornar explícitas as lacunas de conhecimento em vez de preenchê-las por conta própria, e os quatro quadrantes, de known knowns a unknown unknowns. Embaixo, o começo da tabela de hotspots do event storming, com o número de cada um, a decisão em aberto, o trade-off e o status: H4 fechado por ADR e H5 modelado e não testado.](publico/midias/financas-2-descoberta.png)
-Legenda: A regra escrita antes de qualquer tela, e o que ela produziu: cada dúvida do modelo de domínio virou hotspot, com destino registrado.
+Legenda: A regra na skill, e as dúvidas que ela transformou em hotspots.
 
 ---
 
@@ -63,7 +63,7 @@ E a documentação virou artefato de handoff. Para cada tela, escrevi a especifi
 Parte da interface é gerada a partir do dado. Então documentei também as regras de renderização: o algoritmo por trás do desenho. Sem isso, quem fosse programar teria que inventar comportamento para cada caso extremo.
 
 ![Três trechos do projeto, um acima do outro. Em cima, mais estreito que a coluna, um recorte do board do FigJam com o fluxo do usuário: a caixa Novo Lançamento leva a 4 abas: Despesa, Receita, Pró-labore e Distribuição, IR, que leva a Salva, sucesso; setas tracejadas chegam pela esquerda, cortadas na borda. No meio, mais estreito que a coluna, o wireframe do Novo Lançamento na aba Despesa: o campo Valor com R$ 0,00, a Data de pagamento já preenchida com hoje, 20/07/2026, o Status com Pago selecionado, a Entidade com PF selecionado e, em Categorização, o campo Buscar ou criar categoria; o corte cai no começo de Classificação. Embaixo, as linhas 125 a 132 da especificação de telas, como num editor: Valor numérico com máscara de moeda, Data de pagamento pré-preenchida com hoje, Status Previsto ou Pago com padrão Pago, Entidade com padrão PF, e Categoria com busca e criação de categoria nova sem sair do formulário.](publico/midias/financas-3-desenho.png)
-Legenda: O mesmo Novo Lançamento em três lugares: no fluxo, por que a tela existe; no wireframe, o que a pessoa vê; na especificação, o que cada campo faz.
+Legenda: O Novo Lançamento no fluxo, no wireframe e na especificação.
 
 ---
 
@@ -77,7 +77,7 @@ Uma coleção fechada de tokens de cor nomeados por papel semântico, cada um co
 E foi só vendo a cor na tela real que decisões novas apareceram. O par de cores que distingue pessoa física de pessoa jurídica passava no contraste no tema claro e reprovava no escuro. Corrigir exigiu matizes diferentes por tema, não um ajuste automático. Tema escuro não é inversão: é um segundo sistema, e precisa ser validado sozinho.
 
 ![Em cima, o card Lucro Líquido por entidade, recortado do mockup da Evolução Mensal, duas vezes: no tema claro e no tema escuro, com as barras de PF e PJ de fevereiro a abril, cada tema com o seu par de cores. Embaixo, três amostras de barras sobre o card de cada tema, com o contraste de cada cor e o mínimo de 3:1 para gráfico: no claro, PF 4,56:1 e PJ 5,99:1, os dois passam; no escuro com o par do claro, PF 3,79:1 passa e PJ 2,89:1 reprova; no escuro com o par corrigido, PF 5,80:1 e PJ 5,13:1, os dois passam.](publico/midias/financas-4-design-system.png)
-Legenda: O par PF/PJ em uso nos dois temas, e o que os números mostraram: aplicado no escuro, o PJ do claro fica abaixo de 3:1, e o escuro precisou de matizes próprios.
+Legenda: O par PF/PJ nos dois temas: no escuro, o roxo do claro reprovava.
 
 ---
 
