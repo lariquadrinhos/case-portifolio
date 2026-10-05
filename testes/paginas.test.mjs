@@ -246,6 +246,7 @@ test('A pessoa baixa o currículo', () => {
   const m = quem.match(/<a class="sublinhado" href="\/(publico\/[^"]+\.pdf)">Baixar currículo em PDF<\/a>/);
   assert.ok(m, 'o currículo é palavra sublinhada que aponta para um PDF');
   assert.ok(existsSync(join(site.saida, m[1])), 'o PDF está no site');
+  assert.equal(readFileSync(join(site.saida, m[1])).subarray(0, 5).toString('latin1'), '%PDF-', 'o arquivo entregue é um PDF');
   assert.doesNotMatch(quem, /FALTA · o arquivo do currículo/);
 });
 
