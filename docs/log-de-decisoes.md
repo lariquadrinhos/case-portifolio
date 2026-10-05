@@ -6910,3 +6910,19 @@ quando o script rodar; é o salto visível.
 instantes. Numa conexão muito lenta, a mídia pode surgir um instante depois do texto, sem deslizar.
 
 **Consequência.** Regra em `case/pagina-de-case.md`, corrigindo também o "sem script" da 207.
+
+---
+
+## 209 · O "+44,4% vs. junho" fica no recorte do capítulo 4
+
+**Quando** 2026-10-05 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** O tester observou, na rodada 15, que o recorte do card do mockup no capítulo 4 mostra
+*"R$ 10.400,00 · +44,4% vs. junho"* sobre barras de fevereiro a abril: o número fala de meses que não
+aparecem.
+
+**Decisão.** *"pode deixar assim a mídia é claramente um recorte de algo maior"*. A peça não muda.
+
+**Alternativa descartada.** *Tirar o número do recorte*, que eu recomendei, e *recortar maio a julho*.
+
+**Custo aceito.** Quem ler com atenção pode estranhar o junho.

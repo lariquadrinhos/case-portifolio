@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { lerTokens, gerarCssDeTokens } from './tokens.mjs';
 import { lerQuemSouEu, lerCase, ErroDeConteudo } from './conteudo.mjs';
 import { criarAusencias } from './ausencia.mjs';
-import { ORDEM_DOS_CASES } from './interface.mjs';
+import { ORDEM_DOS_CASES, t } from './interface.mjs';
 import { paginaHome, paginaTrabalhos, paginaCase, paginaQuemSouEu, paginaErro } from './paginas.mjs';
 
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -34,9 +34,10 @@ export function construir({ modo = 'local', base = '/', raiz = RAIZ, saida = joi
     temaJs: readFileSync(join(raiz, 'modelo/tema.js'), 'utf8').replace(/^\s*\/\/.*$/gm, '').replace(/\s*\n\s*/g, ''),
     // Roda na hora, logo depois dos capítulos de um case com colunas separadas (decisão 208).
     colunasJs: readFileSync(join(raiz, 'modelo/colunas.js'), 'utf8').replace(/^\s*\/\/.*\n/gm, ''),
-    // O PDF do currículo e o endereço do LinkedIn ainda não existem em lugar nenhum.
+    // O PDF do currículo ainda não existe. O endereço do LinkedIn é copy de interface do
+    // contrato moldura/botao-contato.md, ao lado do e-mail.
     curriculo: existsSync(join(raiz, 'publico/curriculo.pdf')) ? 'publico/curriculo.pdf' : null,
-    linkedin: null,
+    linkedin: t('linkedinEndereco'),
     legendaNaoEscrita: legendas.marcadorDeNaoEscrita,
     slotsDeMidia: (arquivo) => (legendas.cases[arquivo]?.slots ?? []).map((s) => s.capitulo),
   };

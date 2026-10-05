@@ -15,6 +15,7 @@ export const TEXTOS = {
   temaEscuro: { texto: 'Tema escuro', fonte: 'contrato:tema/tema-claro-e-escuro.md' },
   email: { texto: 'llquadros95@gmail.com', fonte: 'contrato:moldura/botao-contato.md' },
   linkedin: { texto: 'LinkedIn', fonte: 'contrato:moldura/botao-contato.md' },
+  linkedinEndereco: { texto: 'https://www.linkedin.com/in/lari-quadros/', fonte: 'contrato:moldura/botao-contato.md' },
 
   verTrabalhos: { texto: 'Ver os meus trabalhos', fonte: 'contrato:home/home.md' },
   tituloTrabalhos: {

@@ -82,6 +82,7 @@ e-mail escrito por extenso e o LinkedIn.
 - **O e-mail e o LinkedIn aparecem como palavra sublinhada**, porque os dois saem do site:
   a mesma forma que eles têm em "Quem sou eu".
 - **O e-mail aparece escrito por extenso: `llquadros95@gmail.com`: visível e copiável.**
+- **O LinkedIn aponta para `https://www.linkedin.com/in/lari-quadros/`** e aparece com o rótulo "LinkedIn", não com o endereço. Abre em outra aba. Vale também para "Ver LinkedIn" em "Quem sou eu".
 - Não há formulário de contato.
 - O contato também existe dentro de "Quem sou eu", junto do currículo em PDF.
 

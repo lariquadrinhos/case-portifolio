@@ -240,6 +240,16 @@ test('Leitor procura como falar com ela', () => {
   assert.match(home, /href="mailto:llquadros95@gmail\.com">llquadros95@gmail\.com</, 'o endereço aparece escrito por extenso');
 });
 
+test('Leitor escolhe o LinkedIn', () => {
+  // O perfil abre em nova aba, no contato de toda página e em "Quem sou eu".
+  const link = /<a class="[^"]*" href="https:\/\/www\.linkedin\.com\/in\/lari-quadros\/" target="_blank" rel="noopener">(LinkedIn|Ver LinkedIn)</g;
+  for (const p of ['index.html', 'trabalhos/index.html', '404.html']) {
+    assert.deepEqual([...site.pagina(p).matchAll(link)].map((m) => m[1]), ['LinkedIn'], `${p}: o LinkedIn no contato`);
+  }
+  assert.deepEqual([...site.pagina('quem-sou-eu/index.html').matchAll(link)].map((m) => m[1]).sort(), ['LinkedIn', 'Ver LinkedIn']);
+  assert.doesNotMatch(site.pagina('index.html'), /FALTA · o endereço do LinkedIn/);
+});
+
 test('O script de tema não executa', () => {
   const home = site.pagina('index.html');
   assert.match(home, /<html lang="pt-BR" class="sem-js">/, 'sem script, a página começa marcada como sem script');
