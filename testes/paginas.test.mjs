@@ -104,32 +104,48 @@ test('Alguém não consegue ver o vídeo', () => {
 
 test('A pessoa lê um capítulo em desktop', () => {
   // Num case de mídias mais altas que o texto, texto e mídia correm em colunas separadas
-  // (decisão 204): a mídia vem antes do texto no HTML e flutua à direita, com o respiro de
-  // capítulo depois dela; o par de telas limpa as duas colunas. Nos outros cases, não.
+  // (decisões 204, 207 e 208). O texto vem antes da mídia no HTML em todo case. Sem script, o
+  // case fica no layout de cada mídia ao lado do seu capítulo; com script, o texto nasce no
+  // layout certo e a mídia só aparece depois de posicionada.
   const fin = site.pagina('trabalhos/financas-pf-pj/index.html');
   const ree = site.pagina('trabalhos/reembolso-sulamerica/index.html');
   assert.match(fin, /<main id="conteudo" class="case cor-azul case--colunas-separadas"/);
   assert.doesNotMatch(ree, /case--colunas-separadas/);
   const ordem = (html) => [...html.matchAll(/<section class="capitulo"[\s\S]*?<\/section>/g)]
     .map(([sec]) => sec.match(/capitulo__(leitura|provas)/g)?.join(' '));
-  for (const o of ordem(fin)) if (o?.includes('provas')) assert.equal(o, 'capitulo__provas capitulo__leitura');
-  for (const o of ordem(ree)) if (o?.includes('provas')) assert.equal(o, 'capitulo__leitura capitulo__provas');
+  for (const o of [...ordem(fin), ...ordem(ree)]) {
+    if (o?.includes('provas')) assert.equal(o, 'capitulo__leitura capitulo__provas', 'a afirmação antes da prova');
+  }
+
+  // O script roda logo depois dos capítulos, e só no case de colunas separadas.
+  const colunasJs = readFileSync(join(RAIZ, 'modelo/colunas.js'), 'utf8');
+  assert.match(fin, /<\/div>\s*<script>\(function \(\) \{\s*var main = document\.querySelector\('\.case--colunas-separadas'\)/);
+  assert.equal((ree.match(/case--colunas-separadas/g) ?? []).length, 0);
+  // Ele não mexe no texto: só escreve o topo das mídias, a margem do par e a sobra no fim.
+  const escritas = [...colunasJs.matchAll(/(\w+)\.style\.(\w+) =/g)].map((m) => `${m[1]}.${m[2]}`);
+  assert.deepEqual([...new Set(escritas)].sort(), ['colunas.paddingBottom', 'p.top', 'par.marginTop', 'provas.top'].sort());
 
   const { base, largo } = regrasPorLargura(readFileSync(join(site.saida, 'estilo.css'), 'utf8'));
-  const provas = largo['.case--colunas-separadas .capitulo__provas'] ?? '';
-  assert.match(provas, /float:\s*right/, 'a mídia flutua na coluna da direita');
-  assert.match(provas, /clear:\s*right/, 'e nunca sobe ao lado da mídia anterior');
-  assert.match(provas, /margin-bottom:\s*var\(--space-96\)/, 'o respiro depois de cada mídia');
-  assert.match(largo['.case--colunas-separadas .capitulo__par'] ?? '', /clear:\s*both/, 'o par vem depois das duas colunas');
-  assert.match(largo['.case--colunas-separadas .case__capitulos'] ?? '', /display:\s*flow-root/);
-  assert.match(largo['.case--colunas-separadas .capitulo + .capitulo'] ?? '', /margin-top:\s*var\(--space-96\)/,
-    'o texto segue com o respiro de capítulo');
-  assert.match(largo['.case--colunas-separadas .capitulo__par'] ?? '', /margin-top:\s*var\(--space-96\)/,
-    'o par fica o respiro depois da coluna que terminar por último');
-  for (const sel of ['.capitulo__leitura', '.capitulo__titulo']) {
-    assert.match(largo[`.case--colunas-separadas ${sel}`] ?? '', /width:\s*var\(--largura-texto\)/, `${sel} na largura da coluna de texto`);
+  const sel = (x) => `.com-js .case--colunas-separadas:not(.sem-colunas) ${x}`;
+  // Sem script: nenhuma regra própria, fica o layout de cada mídia ao lado do capítulo.
+  for (const regra of Object.keys({ ...base, ...largo })) {
+    if (regra.includes('case--colunas-separadas') && regra !== '.case--colunas-separadas') {
+      assert.ok(regra.startsWith('.com-js '), `regra das colunas que vale sem script: ${regra}`);
+    }
   }
-  assert.doesNotMatch(base['.capitulo__provas'] ?? '', /float/, 'em tela estreita nada flutua');
+  // Com script: o texto segue com o respiro, na largura da coluna de texto.
+  assert.match(largo[sel('.capitulo + .capitulo')] ?? '', /margin-top:\s*var\(--space-96\)/, 'o texto segue com o respiro de capítulo');
+  for (const x of ['.capitulo__leitura', '.capitulo__titulo']) {
+    assert.match(largo[sel(x)] ?? '', /width:\s*var\(--largura-texto\)/, `${x} na largura da coluna de texto`);
+  }
+  // A mídia e o par só aparecem depois de posicionados.
+  assert.match(largo[sel('.capitulo__provas')] ?? '', /position:\s*absolute/);
+  assert.match(largo[sel('.capitulo__provas')] ?? '', /visibility:\s*hidden/, 'a mídia não aparece fora do lugar');
+  assert.match(largo[sel('.capitulo__par')] ?? '', /visibility:\s*hidden/, 'o par não aparece fora do lugar');
+  assert.match(largo[sel('.capitulo__par')] ?? '', /margin-top:\s*var\(--space-96\)/, 'o par fica o respiro depois do texto');
+  for (const x of ['.capitulo__provas', '.capitulo__par']) {
+    assert.match(largo[sel(`.colunas-posicionadas ${x}`)] ?? '', /visibility:\s*visible/, `${x} aparece quando posicionado`);
+  }
   assert.match(base['.capitulo__provas'] ?? '', /order:\s*2/, 'em tela estreita a mídia vem depois do texto');
 });
 

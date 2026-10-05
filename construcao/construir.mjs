@@ -32,6 +32,8 @@ export function construir({ modo = 'local', base = '/', raiz = RAIZ, saida = joi
     nome: qse.home.nome ?? '',
     nomeCurto: qse.home.nomeCurto ?? ausencias.marcar('o nome curto da barra', 'quem-sou-eu.md'),
     temaJs: readFileSync(join(raiz, 'modelo/tema.js'), 'utf8').replace(/^\s*\/\/.*$/gm, '').replace(/\s*\n\s*/g, ''),
+    // Roda na hora, logo depois dos capítulos de um case com colunas separadas (decisão 208).
+    colunasJs: readFileSync(join(raiz, 'modelo/colunas.js'), 'utf8').replace(/^\s*\/\/.*\n/gm, ''),
     // O PDF do currículo e o endereço do LinkedIn ainda não existem em lugar nenhum.
     curriculo: existsSync(join(raiz, 'publico/curriculo.pdf')) ? 'publico/curriculo.pdf' : null,
     linkedin: null,

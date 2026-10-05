@@ -387,12 +387,9 @@ function capitulo(ctx, c, cap, indice) {
   const provasHtml = provas.length ? `<div class="capitulo__provas">\n        ${provas.join('\n        ')}\n      </div>` : '';
   const largoHtml = largos.length ? `<div class="capitulo__largo${soDesktop ? ' so-largo' : ''}">\n        ${largos.join('\n        ')}\n      </div>` : '';
   const parHtml = par.length || noPar ? `<div class="capitulo__par">\n        ${parDeTelas(ctx, c, par)}\n      </div>` : '';
-  // Com colunas separadas (decisão 204), a mídia vem antes do texto no HTML: é o que a deixa
-  // flutuar na coluna da direita a partir da primeira linha do capítulo. Em tela estreita a
-  // ordem visual volta a ser texto e depois mídia.
-  const partes = COLUNAS_SEPARADAS.includes(c.prefixo)
-    ? [tituloHtml, provasHtml, leituraHtml, largoHtml, parHtml]
-    : [tituloHtml, leituraHtml, provasHtml, largoHtml, parHtml];
+  // O texto vem antes da mídia no HTML, em todo case: a afirmação antes da prova, para quem
+  // lê com leitor de tela também (decisão 207).
+  const partes = [tituloHtml, leituraHtml, provasHtml, largoHtml, parHtml];
   return `<section class="capitulo" id="${id}" data-etapa="${indice}" aria-labelledby="${id}-titulo">
       ${partes.filter(Boolean).join('\n      ')}
     </section>`;
@@ -484,7 +481,7 @@ export function paginaCase(ctx, c, proximo) {
     ${trilha(c)}
     <div class="case__capitulos">
     ${c.capitulos.map((cap, i) => capitulo(ctx, c, cap, i)).join('\n    ')}
-    </div>
+    </div>${COLUNAS_SEPARADAS.includes(c.prefixo) ? `\n    <script>${ctx.colunasJs}</script>` : ''}
   </div>
   <div class="case__fim grade">
     ${provasDoCase(ctx, c)}

@@ -54,7 +54,14 @@ Ver P57.
   mais 96. No Finanças, o capítulo 5 não tem mídia, e a do capítulo 6 é um **par de telas**
   (`<!-- bloco: par -->`) na largura inteira do conteúdo, 96 depois da coluna que terminar por
   último. O bloco de provas vem 96 depois dele. No Reembolso, onde texto e mídia têm alturas parecidas,
-  vale a regra de alinhar cada mídia com o seu capítulo. Ver decisões 204 e 205.
+  vale a regra de alinhar cada mídia com o seu capítulo.
+  **No HTML, o texto vem antes da mídia em cada capítulo**, para o leitor de tela ouvir a afirmação
+  antes da prova e para a ordem da leitura bater com a da tela estreita (WCAG 1.3.2). No desktop,
+  um script posiciona cada mídia na coluna pela regra acima. **Sem script, o Finanças cai no layout do
+  Reembolso**: cada mídia ao lado do seu capítulo, e o capítulo esperando a mídia; nada se perde.
+  **Com script, o texto já nasce no layout de colunas separadas e nunca salta**: a página se marca
+  como "com script" antes da primeira pintura, e as mídias ficam invisíveis até um script curto,
+  logo depois dos capítulos, calcular as posições e mostrá-las já no lugar. Ver decisões 207 e 208. Ver decisões 204 e 205.
 - **Vídeo não é pré-carregado e não toca sozinho.** Até a pessoa pedir, baixa zero byte; o
   que carrega é a imagem de pôster, que segue as mesmas regras de qualquer imagem.
 - **A imagem de pôster é um quadro do próprio vídeo.** Se for outra imagem, há salto visual

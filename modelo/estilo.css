@@ -646,30 +646,36 @@ em { font-style: normal; }
   .so-largo-bloco { display: block; }
 }
 
-/* Colunas separadas (decisão 204), no desktop dos cases em que a mídia é mais alta que o
-   texto. O texto segue com o respiro de capítulo entre um capítulo e o próximo, e não espera
-   a mídia. Cada mídia flutua na coluna da direita: um float não sobe acima do lugar dele no
-   HTML (a primeira linha do capítulo) nem invade a margem do float anterior (o fim da mídia
-   anterior mais o respiro). O topo dela é o mais baixo dos dois, sem script. O par de telas
-   limpa os floats: fica o respiro depois da coluna que terminar por último. */
+/* Colunas separadas (decisões 204, 207 e 208), no desktop dos cases em que a mídia é mais alta
+   que o texto. O texto segue com o respiro de capítulo e não espera a mídia; cada mídia é posta
+   na coluna da direita pelo script modelo/colunas.js, que roda logo depois dos capítulos.
+
+   Sem script, nada disto vale e o case fica no layout do Reembolso, com cada mídia ao lado do
+   seu capítulo. Com script, o texto já nasce no layout certo (o <head> marca .com-js antes da
+   primeira pintura), e a mídia e o par ficam invisíveis até o script os posicionar: o texto não
+   se mexe e nenhuma mídia aparece fora do lugar. Se o script falhar, .sem-colunas devolve o
+   layout de cada mídia ao lado do seu capítulo. */
 @media (min-width: 1024px) {
   .case--colunas-separadas {
     --largura-texto: calc((100% - 9 * var(--calha)) * 6 / 10 + 5 * var(--calha));
     --largura-midia: calc((100% - 9 * var(--calha)) * 4 / 10 + 3 * var(--calha));
   }
-  .case--colunas-separadas .case__capitulos { display: flow-root; }
-  .case--colunas-separadas .capitulo { display: block; }
-  .case--colunas-separadas .capitulo + .capitulo { margin-top: var(--space-96); }
-  .case--colunas-separadas .capitulo__titulo { width: var(--largura-texto); margin-bottom: var(--space-32); }
-  .case--colunas-separadas .capitulo__leitura { width: var(--largura-texto); }
-  .case--colunas-separadas .capitulo__provas {
-    float: right;
-    clear: right;
+  .com-js .case--colunas-separadas:not(.sem-colunas) .case__capitulos { display: block; position: relative; }
+  .com-js .case--colunas-separadas:not(.sem-colunas) .capitulo { display: block; }
+  .com-js .case--colunas-separadas:not(.sem-colunas) .capitulo + .capitulo { margin-top: var(--space-96); }
+  .com-js .case--colunas-separadas:not(.sem-colunas) .capitulo__titulo { width: var(--largura-texto); margin-bottom: var(--space-32); }
+  .com-js .case--colunas-separadas:not(.sem-colunas) .capitulo__leitura { width: var(--largura-texto); }
+  .com-js .case--colunas-separadas:not(.sem-colunas) .capitulo__provas {
+    position: absolute;
+    right: 0;
     width: var(--largura-midia);
-    margin-bottom: var(--space-96);
+    visibility: hidden;
   }
-  .case--colunas-separadas .capitulo__par { clear: both; margin-top: var(--space-96); }
+  .com-js .case--colunas-separadas:not(.sem-colunas) .capitulo__par { margin-top: var(--space-96); visibility: hidden; }
+  .com-js .case--colunas-separadas:not(.sem-colunas) .colunas-posicionadas .capitulo__provas,
+  .com-js .case--colunas-separadas:not(.sem-colunas) .colunas-posicionadas .capitulo__par { visibility: visible; }
 }
+
 
 /* A trilha: o traço vive dentro de cada item, e a cor para exatamente na bolinha atual.
    Três estados (percorrido, atual, por vir), e nenhum anima (decisão 138). */

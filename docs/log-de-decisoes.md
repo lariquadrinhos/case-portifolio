@@ -6857,3 +6857,56 @@ o desenho. A única imagem do produto rodando no case passa a ser o vídeo do ca
 
 **Consequência.** Figma, as quatro telas, sem mudança de altura. As divergências entre o produto e o
 mockup ficam como achado para o repositório do Finanças, junto das que a 201 e a 203 já registraram.
+
+---
+
+## 207 · No Finanças, o texto vem antes da mídia no HTML, e um script posiciona as mídias
+
+**Quando** 2026-10-05 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** A construção da 204 coube só em CSS, com a mídia flutuando a partir da primeira linha do
+capítulo, e para isso ela vinha **antes** do texto no HTML. O tester mediu o efeito: o leitor de tela
+anunciava o texto alternativo e a legenda antes dos parágrafos que a mídia prova, e em 375 a tela
+mostrava o texto antes da mídia, o contrário do que se lia. Fere a WCAG 1.3.2 (sequência com
+significado); o ponto do foco do teclado (2.4.3) ele mesmo descartou, porque o texto do capítulo 1 não
+tem nada focável.
+
+**Decisão.** *"vai com o script"*. O HTML volta a ter o texto antes da mídia em cada capítulo. No
+desktop, um script calcula a posição de cada mídia pela regra da 204. **Sem script, a mídia cai para
+depois do texto**, como no Reembolso: o site perde a coluna lateral, nunca o conteúdo.
+
+**Alternativa descartada.** *Manter a mídia antes no HTML*, como estava: descumpre o nível AA que o
+site promete. *Procurar uma saída só com CSS*: a regra "nunca antes do próprio capítulo, nunca por
+cima da anterior" depende de medir alturas, e nenhum caminho conhecido faz isso sem calcular.
+
+**Custo aceito.** O desktop do Finanças passa a depender de script para o layout em duas colunas. É a
+exceção que a regra da casa admite: o HTML entrega o conteúdo, o script acrescenta a disposição.
+
+**Consequência.** Regra em `case/pagina-de-case.md`. A construção e os testes de layout da 204 mudam.
+
+---
+
+## 208 · O texto do Finanças nasce no layout de colunas, e as mídias aparecem já no lugar
+
+**Quando** 2026-10-05 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** Implementando a 207, o dev apontou um salto estrutural: o script só mede depois que o texto
+está montado, e o `moldura.js` carrega com `defer`. Numa conexão lenta, a página pintaria no layout sem
+script e, um instante depois, o texto dos capítulos 2 a 6 subiria e as mídias mudariam de lugar. Ele
+também leu o "sem script" da 207 como o layout do Reembolso (mídia ao lado, capítulo esperando a
+mídia), e não como mídia empilhada embaixo do texto; a leitura dele ficou.
+
+**Decisão.** *"vai com a A"*. O `<head>` marca a página como "com script" antes da primeira pintura, como
+já faz com o tema, e o CSS monta o texto com os vãos de 96 desde o começo: **o texto nunca se mexe**. As
+mídias e o par ficam invisíveis até um script curto, logo depois dos capítulos e sem `defer`, calcular as
+posições e mostrá-las já no lugar. Recalcula ao redimensionar, quando a fonte carrega e quando cada
+imagem carrega. Sem script, o layout do Reembolso.
+
+**Alternativa descartada.** *B*: o cálculo no `moldura.js`, com `defer`; o texto também não salta, mas as
+mídias ficam invisíveis mais tempo numa conexão lenta. *C*: nascer no layout do Reembolso e reorganizar
+quando o script rodar; é o salto visível.
+
+**Custo aceito.** Um script de umas 30 linhas no meio da página, bloqueando a leitura do HTML por
+instantes. Numa conexão muito lenta, a mídia pode surgir um instante depois do texto, sem deslizar.
+
+**Consequência.** Regra em `case/pagina-de-case.md`, corrigindo também o "sem script" da 207.
