@@ -13,6 +13,25 @@
   var colunas = main.querySelector('.case__capitulos');
   var largo = window.matchMedia('(min-width: 1024px)');
 
+  // A conta, separada da página para poder ser testada sozinha (testes/paginas.test.mjs):
+  // o topo de cada mídia, a partir da primeira linha de cada capítulo e da altura de cada mídia.
+  function topos(primeirasLinhas, alturas, respiro) {
+    var resultado = [];
+    var fimAnterior = -Infinity;
+    for (var i = 0; i < primeirasLinhas.length; i++) {
+      var topo = Math.max(primeirasLinhas[i], fimAnterior + respiro);
+      resultado.push(topo);
+      fimAnterior = topo + alturas[i];
+    }
+    return resultado;
+  }
+
+  // A margem do par: o respiro depois do texto, mais o que faltar para ficar o respiro depois
+  // da coluna de mídia, se ela terminar mais baixo.
+  function margemDoPar(topoNatural, fimDasMidias, respiro) {
+    return respiro + Math.max(0, fimDasMidias + respiro - topoNatural);
+  }
+
   function limpar() {
     colunas.querySelectorAll('.capitulo__provas').forEach(function (p) { p.style.top = ''; });
     var par = colunas.querySelector('.capitulo__par');
@@ -26,20 +45,21 @@
       if (!largo.matches) { colunas.classList.remove('colunas-posicionadas'); return; }
       var respiro = parseFloat(getComputedStyle(colunas).getPropertyValue('--space-96'));
       var origem = colunas.getBoundingClientRect().top;
-      var fimAnterior = -Infinity;
-      colunas.querySelectorAll('.capitulo__provas').forEach(function (provas) {
-        var leitura = provas.parentNode.querySelector('.capitulo__leitura');
-        var primeiraLinha = leitura.getBoundingClientRect().top - origem;
-        var topo = Math.max(primeiraLinha, fimAnterior + respiro);
-        provas.style.top = topo + 'px';
-        fimAnterior = topo + provas.offsetHeight;
+      var midias = Array.prototype.slice.call(colunas.querySelectorAll('.capitulo__provas'));
+      var primeirasLinhas = midias.map(function (provas) {
+        return provas.parentNode.querySelector('.capitulo__leitura').getBoundingClientRect().top - origem;
       });
+      var alturas = midias.map(function (provas) { return provas.offsetHeight; });
+      var calculados = topos(primeirasLinhas, alturas, respiro);
+      midias.forEach(function (provas, i) { provas.style.top = calculados[i] + 'px'; });
+      var ultima = midias.length - 1;
+      var fimAnterior = ultima >= 0 ? calculados[ultima] + alturas[ultima] : -Infinity;
       var par = colunas.querySelector('.capitulo__par');
       if (par) {
         // O CSS já põe o respiro depois do texto; se a coluna de mídia termina mais baixo, o
         // par desce o que faltar.
         var natural = par.getBoundingClientRect().top - origem;
-        par.style.marginTop = (respiro + Math.max(0, fimAnterior + respiro - natural)) + 'px';
+        par.style.marginTop = margemDoPar(natural, fimAnterior, respiro) + 'px';
       } else {
         var fimDoTexto = colunas.getBoundingClientRect().bottom - origem;
         colunas.style.paddingBottom = Math.max(0, fimAnterior - fimDoTexto) + 'px';

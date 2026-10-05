@@ -124,6 +124,10 @@ test('A pessoa lê um capítulo em desktop', () => {
   // Ele não mexe no texto: só escreve o topo das mídias, a margem do par e a sobra no fim.
   const escritas = [...colunasJs.matchAll(/(\w+)\.style\.(\w+) =/g)].map((m) => `${m[1]}.${m[2]}`);
   assert.deepEqual([...new Set(escritas)].sort(), ['colunas.paddingBottom', 'p.top', 'par.marginTop', 'provas.top'].sort());
+  // Ele mostra as mídias quando termina, e, se falhar, devolve o layout em que tudo aparece.
+  const [, corpoDoTry, corpoDoCatch] = colunasJs.match(/try \{([\s\S]*?)\} catch \(erro\) \{([\s\S]*?)\}/) ?? [];
+  assert.match(corpoDoTry ?? '', /colunas\.classList\.add\('colunas-posicionadas'\)/, 'as mídias aparecem depois de posicionadas');
+  assert.match(corpoDoCatch ?? '', /main\.classList\.add\('sem-colunas'\)/, 'se o script falhar, as mídias aparecem no layout sem script');
 
   const { base, largo } = regrasPorLargura(readFileSync(join(site.saida, 'estilo.css'), 'utf8'));
   const sel = (x) => `.com-js .case--colunas-separadas:not(.sem-colunas) ${x}`;
@@ -147,6 +151,27 @@ test('A pessoa lê um capítulo em desktop', () => {
     assert.match(largo[sel(`.colunas-posicionadas ${x}`)] ?? '', /visibility:\s*visible/, `${x} aparece quando posicionado`);
   }
   assert.match(base['.capitulo__provas'] ?? '', /order:\s*2/, 'em tela estreita a mídia vem depois do texto');
+});
+
+test('A coluna de mídia segue a regra da decisão 204', () => {
+  // A conta do script, tirada do próprio arquivo que vai para a página, com as medidas de 1440.
+  const colunasJs = readFileSync(join(RAIZ, 'modelo/colunas.js'), 'utf8');
+  const funcao = (nome) => {
+    const fonte = colunasJs.match(new RegExp(`function ${nome}\\([^)]*\\) \\{[\\s\\S]*?\\n  \\}`))?.[0];
+    assert.ok(fonte, `colunas.js sem a função ${nome}`);
+    return new Function(`${fonte}; return ${nome};`)();
+  };
+  const topos = funcao('topos');
+  const margemDoPar = funcao('margemDoPar');
+  // Primeira linha de cada capítulo e altura de cada mídia, medidas no site em 1440.
+  assert.deepEqual(topos([768, 1212, 2038, 2956], [404, 878, 1178, 849], 96), [768, 1268, 2242, 3516],
+    'o mais baixo entre a primeira linha do capítulo e o fim da mídia anterior mais o respiro');
+  assert.deepEqual(topos([100, 1000], [200, 200], 96), [100, 1000], 'mídia curta: cada uma na primeira linha do seu capítulo');
+  // O par: o texto do capítulo 6 termina em 4314, e o CSS já põe o par 96 abaixo, em 4410 (o
+  // topo natural, com a margem do CSS). A coluna de mídia termina em 4365; o par precisa ficar
+  // 96 depois dela, em 4461. A margem calculada substitui a do CSS.
+  assert.equal(4410 - 96 + margemDoPar(4410, 4365, 96), 4461);
+  assert.equal(margemDoPar(5000, 4365, 96), 96, 'texto mais baixo: fica só o respiro depois do texto');
 });
 
 test('O par de telas é uma peça só', () => {
