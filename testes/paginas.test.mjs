@@ -241,8 +241,11 @@ test('Leitor procura como falar com ela', () => {
 });
 
 test('Leitor escolhe o LinkedIn', () => {
-  // O perfil abre em nova aba, no contato de toda página e em "Quem sou eu".
-  const link = /<a class="[^"]*" href="https:\/\/www\.linkedin\.com\/in\/lari-quadros\/" target="_blank" rel="noopener">(LinkedIn|Ver LinkedIn)</g;
+  // O perfil abre em nova aba, no contato de toda página e em "Quem sou eu". O endereço vem do
+  // mesmo lugar que a construção usa, que o teste de copy amarra ao contrato: o teste não fixa
+  // qual perfil é.
+  const endereco = escapar(TEXTOS.linkedinEndereco.texto).replace(/[.*+?^${}()|[\]\\/]/g, '\\$&');
+  const link = new RegExp(`<a class="[^"]*" href="${endereco}" target="_blank" rel="noopener">(LinkedIn|Ver LinkedIn)<`, 'g');
   for (const p of ['index.html', 'trabalhos/index.html', '404.html']) {
     assert.deepEqual([...site.pagina(p).matchAll(link)].map((m) => m[1]), ['LinkedIn'], `${p}: o LinkedIn no contato`);
   }
