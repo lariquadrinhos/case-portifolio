@@ -16,7 +16,7 @@ figma:
   tela: "00:00"                   # node-id do frame; @lacuna enquanto não existir
 
 # Seções opcionais: inclua só quando existirem. Apague quando não.
-# storybook:                      # não se aplica neste projeto: ver P17
+# storybook:                      # não se aplica neste projeto: ver decisão 224
 #   base: <url>
 #   usa:
 #     - <id-da-story>             # para que serve
