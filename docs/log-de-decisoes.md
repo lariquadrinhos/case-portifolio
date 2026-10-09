@@ -7222,3 +7222,26 @@ página de erro; como o site ainda não foi divulgado, não há link compartilha
 **Consequência.** A regra entra em `conteudo/arquivo-de-texto-vira-pagina.md`, e a P64 sai da lista.
 Fica aberto o começo do endereço, `lariquadrinhos.github.io/case-portifolio/`, que depende do domínio
 (P15) ou do nome do repositório.
+
+---
+
+## 222 · O site sai de /case-portifolio/ e passa a abrir na raiz
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** conteudo · `#escopo`
+
+**Gatilho.** Fechada a P64, ficou o começo do endereço: `https://lariquadrinhos.github.io/case-portifolio/`.
+O nome do repositório entra no endereço, e "portifolio" tem um "i" a mais.
+
+**Decisão.** O repositório passa a se chamar **`lariquadrinhos.github.io`**, e o site abre em
+**`https://lariquadrinhos.github.io/`**. Escolhido por ela entre as duas opções que aprovou.
+
+**Alternativa descartada.** *Renomear para `portfolio`*, que corrigia a grafia e mantinha um prefixo
+no endereço. *Domínio próprio* (P15): ela ainda não comprou; quando comprar, ele entra por cima deste
+endereço, sem retrabalho.
+
+**Custo aceito.** O endereço antigo do site deixa de abrir. O GitHub redireciona o endereço do
+repositório, mas não o das páginas. Onde o endereço antigo tiver sido posto (LinkedIn, currículo),
+precisa ser trocado à mão.
+
+**Consequência.** O dev renomeia o repositório e troca o prefixo de publicação para `/` no mesmo
+movimento, para o site não ficar no ar com os caminhos errados.
