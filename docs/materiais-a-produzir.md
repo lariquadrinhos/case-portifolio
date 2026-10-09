@@ -328,10 +328,10 @@ Copy de interface, que pela decisão 011 vive no contrato da tela e não nos arq
 conteúdo:
 
 - O convite ao contato ao fim de cada case.
-- O texto da página de erro (rascunhado, à espera da voz dela (P31).
-- O título da página de Trabalhos) rascunhado, à espera da voz dela (P41).
-- **O parágrafo sobre o site sendo documentado**, em "Quem sou eu" (P44). Não é copy de
-  interface: é texto autoral, e é o que sustenta o site nascer com dois cases.
+- ~~O texto da página de erro~~: **é dela.** O rascunho ficou como estava. Ver decisão 223.
+- ~~O título da página de Trabalhos~~: **é dela.** Ver decisão 220.
+- ~~O parágrafo sobre o site sendo documentado~~: **não será escrito.** O site publica com dois
+  cases e sem comentar a ausência. Ver decisão 053.
 - ~~O convite ao repositório~~: **escrito.** Virou o bloco *"as provas do case"*, com o
   convite *"Está tudo aberto."* Ver decisões 110 e 111.
 
