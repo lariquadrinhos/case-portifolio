@@ -39,9 +39,10 @@ jobs:
 
       # Modo local, e não --publicar: o site vai ao ar com as faltas visíveis enquanto os
       # materiais não chegam (decisão 177). Voltar ao que a decisão 023 pede é trocar esta
-      # linha, e isso pede entrada nova no log.
+      # linha, e isso pede entrada nova no log. O site é de usuária e abre na raiz do
+      # domínio, então o prefixo é "/" (decisão 222).
       - name: Construção
-        run: node construcao/construir.mjs --base=/${{ github.event.repository.name }}/
+        run: node construcao/construir.mjs --base=/
 
       - uses: actions/configure-pages@v5
 

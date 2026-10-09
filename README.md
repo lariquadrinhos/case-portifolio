@@ -6,7 +6,7 @@
 Este repositório **não é o site**. É o registro de como ele está sendo construído: as
 decisões, o que foi descartado, e o que ainda não foi decidido.
 
-O site é gerado a partir daqui e publicado em <https://lariquadrinhos.github.io/case-portifolio/>.
+O site é gerado a partir daqui e publicado em <https://lariquadrinhos.github.io/>.
 
 ## O que tem aqui
 

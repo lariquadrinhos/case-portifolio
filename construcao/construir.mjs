@@ -3,7 +3,7 @@
 //
 //   node construcao/construir.mjs                 modo local: peça que falta fica visível
 //   node construcao/construir.mjs --publicar      modo de publicação: peça que falta recusa
-//   --base=/case-portifolio/                      prefixo dos endereços (GitHub Pages de projeto)
+//   --base=/                                      prefixo dos endereços (o site abre na raiz, decisão 222)
 //
 // O modo aparece na primeira linha da saída, sempre (pesquisa da spec 001, item 4).
 

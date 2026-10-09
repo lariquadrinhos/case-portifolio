@@ -326,7 +326,7 @@ congelado errado, sim.
 
 ## Diretriz 8 — Público por padrão é risco
 
-O repositório `lariquadrinhos/case-portifolio` é **público**. Tudo que for commitado fica
+O repositório `lariquadrinhos/lariquadrinhos.github.io` é **público**. Tudo que for commitado fica
 visível para qualquer pessoa, e permanece no histórico mesmo depois de apagado.
 
 | Onde | O que vai | Quem vê |
@@ -442,7 +442,7 @@ Contexto que não é pendência e continua valendo:
 - O produto: site estático, cinco páginas mais erro, dois cases — Finanças PF+PJ (azul) e
   Reembolso SulAmérica (laranja)
 - Sem backend, confirmado item a item em 18/09/2026
-- Repositório `lariquadrinhos/case-portifolio`, público
+- Repositório `lariquadrinhos/lariquadrinhos.github.io`, público
 - O processo é matéria-prima de um terceiro case — **mas documentação é regra de trabalho,
   não objetivo.** Decisão tomada pensando em como vai ler no case é decisão errada
 - Existe uma skill `loop-produto` no projeto `bigorna`, duas semanas mais antiga que os
