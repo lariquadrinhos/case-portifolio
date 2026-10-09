@@ -3,12 +3,18 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, existsSync, statSync } from 'node:fs';
+import { readFileSync, existsSync, statSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { raizTemporaria, construirEm, texto, RAIZ } from './ajuda.mjs';
-import { TEXTOS } from '../construcao/interface.mjs';
+import { TEXTOS, caminhoDoCase } from '../construcao/interface.mjs';
 import { lerCase } from '../construcao/conteudo.mjs';
 import { escapar } from '../construcao/markdown.mjs';
+
+// O endereço de cada case, lido de onde a construção lê (decisão 221): o teste não o fixa.
+const enderecoDoCase = (arquivo) => caminhoDoCase(lerCase(RAIZ, arquivo));
+const FINANCAS = enderecoDoCase('case-study-financas-pf-pj.md');
+const REEMBOLSO = enderecoDoCase('case-study-reembolso-sulamerica.md');
+const re = (caminho) => `/${caminho}`.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&');
 
 const site = construirEm(raizTemporaria());
 
@@ -42,26 +48,26 @@ test('A ordem dos cards', () => {
 
 test('A pessoa abre um case', () => {
   const indice = site.pagina('trabalhos/index.html');
-  assert.match(indice, /<a class="card cor-azul" href="\/trabalhos\/financas-pf-pj\/">/, 'o card inteiro é o link');
-  assert.match(indice, /<a class="card cor-laranja" href="\/trabalhos\/reembolso-sulamerica\/">/);
+  assert.match(indice, new RegExp(`<a class="card cor-azul" href="${re(FINANCAS)}">`), 'o card inteiro é o link');
+  assert.match(indice, new RegExp(`<a class="card cor-laranja" href="${re(REEMBOLSO)}">`));
 });
 
 // ── case/card-proximo-case.md ─────────────────────────────────────────────────
 
 test('Leitor termina o case de Finanças', () => {
-  const fim = site.pagina('trabalhos/financas-pf-pj/index.html').split('class="proximo"')[1];
-  assert.match(fim, /class="card cor-laranja" href="\/trabalhos\/reembolso-sulamerica\/"/);
+  const fim = site.pagina(`${FINANCAS}index.html`).split('class="proximo"')[1];
+  assert.match(fim, new RegExp(`class="card cor-laranja" href="${re(REEMBOLSO)}"`));
 });
 
 test('Leitor termina o case de Reembolso', () => {
-  const fim = site.pagina('trabalhos/reembolso-sulamerica/index.html').split('class="proximo"')[1];
-  assert.match(fim, /class="card cor-azul" href="\/trabalhos\/financas-pf-pj\/"/);
+  const fim = site.pagina(`${REEMBOLSO}index.html`).split('class="proximo"')[1];
+  assert.match(fim, new RegExp(`class="card cor-azul" href="${re(FINANCAS)}"`));
 });
 
 // ── case/pagina-de-case.md ────────────────────────────────────────────────────
 
 test('A pessoa abre um case', () => {
-  const caso = site.pagina('trabalhos/financas-pf-pj/index.html');
+  const caso = site.pagina(`${FINANCAS}index.html`);
   const t = texto(caso);
   assert.ok(t.indexOf('A planilha que virou produto') < t.indexOf('Papel') && t.indexOf('Papel') < t.indexOf('Estive em todas'),
     'título, frase de abertura e tira aparecem antes dos capítulos');
@@ -70,7 +76,7 @@ test('A pessoa abre um case', () => {
 });
 
 test('A pessoa abre um capítulo que tem vídeo', () => {
-  const caso = site.pagina('trabalhos/reembolso-sulamerica/index.html');
+  const caso = site.pagina(`${REEMBOLSO}index.html`);
   const videos = caso.match(/<video[^>]+>/g) ?? [];
   assert.equal(videos.length, 2, 'uma versão por tema');
   for (const v of videos) {
@@ -89,7 +95,7 @@ test('Alguém não consegue ver o vídeo', () => {
     const videosNoArquivo = c.capitulos.flatMap((cap) => cap.nos)
       .filter((n) => n.tipo === 'imagem' && n.caminho.endsWith('.mp4'));
     assert.ok(videosNoArquivo.length, `${arquivo} sem vídeo`);
-    const html = site.pagina(`trabalhos/${c.slug}/index.html`);
+    const html = site.pagina(`${caminhoDoCase(c)}index.html`);
     for (const v of videosNoArquivo) {
       assert.ok(v.alt.trim(), `${arquivo}:${v.linha}: vídeo sem texto alternativo`);
       const base = v.caminho.replace(/\.mp4$/, '').split('/').pop();
@@ -107,8 +113,8 @@ test('A pessoa lê um capítulo em desktop', () => {
   // (decisões 204, 207 e 208). O texto vem antes da mídia no HTML em todo case. Sem script, o
   // case fica no layout de cada mídia ao lado do seu capítulo; com script, o texto nasce no
   // layout certo e a mídia só aparece depois de posicionada.
-  const fin = site.pagina('trabalhos/financas-pf-pj/index.html');
-  const ree = site.pagina('trabalhos/reembolso-sulamerica/index.html');
+  const fin = site.pagina(`${FINANCAS}index.html`);
+  const ree = site.pagina(`${REEMBOLSO}index.html`);
   assert.match(fin, /<main id="conteudo" class="case cor-azul case--colunas-separadas"/);
   assert.doesNotMatch(ree, /case--colunas-separadas/);
   const ordem = (html) => [...html.matchAll(/<section class="capitulo"[\s\S]*?<\/section>/g)]
@@ -266,7 +272,7 @@ test('A janela é mais baixa que o mínimo', () => {
 test('O par de telas é uma peça só', () => {
   // `<!-- bloco: par -->` (decisão 205): duas imagens, cada uma com o seu texto alternativo,
   // e uma legenda só, a da segunda.
-  const fin = site.pagina('trabalhos/financas-pf-pj/index.html');
+  const fin = site.pagina(`${FINANCAS}index.html`);
   const pares = fin.match(/<figure class="par">[\s\S]*?<\/figure>/g) ?? [];
   assert.equal(pares.length, 1);
   const [par] = pares;
@@ -281,7 +287,7 @@ test('O par de telas é uma peça só', () => {
 });
 
 test('A pessoa vai para fora do site', () => {
-  const caso = site.pagina('trabalhos/reembolso-sulamerica/index.html');
+  const caso = site.pagina(`${REEMBOLSO}index.html`);
   // O endereço é conteúdo e muda; o que o contrato pede é a forma: palavra sublinhada,
   // nova aba, e o rótulo avisando. E o protótipo abre no fluxo do app (decisão 185): sem
   // ponto de partida, o Figma abre outro fluxo do arquivo. O nó em si não é fixado aqui.
@@ -298,6 +304,22 @@ test('A pessoa vai para fora do site', () => {
   assert.deepEqual(links, [[escapar(endereco), 'Ver o repositório']]);
   assert.match(dd, /<a class="tira__link" [^>]*target="_blank" rel="noopener">/, 'abre em nova aba');
   assert.doesNotMatch(dd, /\[|\]/, 'nenhum colchete do arquivo na página');
+});
+
+test('O endereço de cada página é declarado, não derivado do nome do arquivo', () => {
+  // Decisão 221, regra de conteudo/arquivo-de-texto-vira-pagina.md. Os endereços vêm do
+  // contrato (o teste de copy confere); o teste não os fixa.
+  const cases = ['case-study-financas-pf-pj.md', 'case-study-reembolso-sulamerica.md'].map((a) => lerCase(RAIZ, a));
+  for (const c of cases) {
+    assert.ok(existsSync(join(site.saida, caminhoDoCase(c), 'index.html')), `${c.arquivo}: o endereço declarado é gerado`);
+    assert.notEqual(caminhoDoCase(c), `trabalhos/${c.slug}/`, `${c.arquivo}: o endereço não sai do nome do arquivo`);
+    assert.ok(!existsSync(join(site.saida, 'trabalhos', c.slug)), `${c.arquivo}: o endereço antigo, do nome do arquivo, não é gerado`);
+  }
+  // Em trabalhos/ só existem as pastas declaradas.
+  const declaradas = cases.map((c) => caminhoDoCase(c).split('/')[1]).sort();
+  const geradas = readdirSync(join(site.saida, 'trabalhos'), { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name).sort();
+  assert.deepEqual(geradas, declaradas);
+  // Link interno quebrado é o teste "Todo endereço local de toda página existe no site".
 });
 
 // ── erro/endereco-inexistente.md ──────────────────────────────────────────────
@@ -370,8 +392,8 @@ test('O script de tema não executa', () => {
 
 test('Toda página declara o ícone de aba', () => {
   // Sem declaração, o navegador pede /favicon.ico na raiz do domínio, fora do site.
-  for (const p of ['index.html', 'trabalhos/index.html', 'trabalhos/financas-pf-pj/index.html',
-    'trabalhos/reembolso-sulamerica/index.html', 'quem-sou-eu/index.html', '404.html']) {
+  for (const p of ['index.html', 'trabalhos/index.html', `${FINANCAS}index.html`,
+    `${REEMBOLSO}index.html`, 'quem-sou-eu/index.html', '404.html']) {
     const html = site.pagina(p);
     for (const arquivo of ['favicon.ico', 'icone.svg', 'apple-touch-icon.png']) {
       assert.match(html, new RegExp(`href="/publico/icone/${arquivo.replace('.', '\\.')}"`), `${p} sem ${arquivo}`);
@@ -390,8 +412,8 @@ test('O manifesto nomeia o site e os ícones', () => {
 
 test('Todo endereço local de toda página existe no site', () => {
   // Declarar um arquivo que não foi publicado é 404 calado: o ícone, uma mídia, uma página.
-  const PAGINAS = ['index.html', 'trabalhos/index.html', 'trabalhos/financas-pf-pj/index.html',
-    'trabalhos/reembolso-sulamerica/index.html', 'quem-sou-eu/index.html', '404.html'];
+  const PAGINAS = ['index.html', 'trabalhos/index.html', `${FINANCAS}index.html`,
+    `${REEMBOLSO}index.html`, 'quem-sou-eu/index.html', '404.html'];
   const existe = (caminho) => {
     const alvo = join(site.saida, caminho.split('#')[0]);
     return existsSync(alvo) && (!statSync(alvo).isDirectory() || existsSync(join(alvo, 'index.html')));
@@ -418,8 +440,8 @@ test('O vídeo ocupa a coluna na proporção dele, e só o vídeo em pé tem ár
   // O deitado do Finanças é 411x344 como no Figma (decisão 189); o em pé do Reembolso vive
   // numa área fixa com o pôster contido (379:454).
   const videos = (p) => site.pagina(p).match(/<video class="[^"]*"/g) ?? [];
-  const fin = videos('trabalhos/financas-pf-pj/index.html');
-  const ree = videos('trabalhos/reembolso-sulamerica/index.html');
+  const fin = videos(`${FINANCAS}index.html`);
+  const ree = videos(`${REEMBOLSO}index.html`);
   assert.equal(fin.length, 2, 'o vídeo do Finanças tem as duas versões de tema');
   for (const v of fin) assert.doesNotMatch(v, /prova__video--retrato/, `deitado com área fixa: ${v}`);
   for (const v of ree) assert.match(v, /prova__video--retrato/, `em pé sem área fixa: ${v}`);
@@ -440,10 +462,10 @@ test('Todo texto de interface que cita um contrato está escrito nele', () => {
 });
 
 test('O título do case quebra onde o Figma quebra', () => {
-  const fin = site.pagina('trabalhos/financas-pf-pj/index.html');
+  const fin = site.pagina(`${FINANCAS}index.html`);
   assert.match(fin, /<h1 class="case__titulo"><span class="linha-estreita">A planilha que<\/span> <span class="linha-estreita">virou produto<\/span><\/h1>/,
     'Finanças: quebra escolhida');
-  assert.match(site.pagina('trabalhos/reembolso-sulamerica/index.html'), /<h1 class="case__titulo">Toda semana, do zero<\/h1>/,
+  assert.match(site.pagina(`${REEMBOLSO}index.html`), /<h1 class="case__titulo">Toda semana, do zero<\/h1>/,
     'Reembolso: quebra natural');
   // A quebra só existe se o CSS a desenha: cada linha é bloco na tela estreita e volta a
   // correr numa linha no desktop. Sem isso o HTML estaria certo e a tela, não.
@@ -452,7 +474,7 @@ test('O título do case quebra onde o Figma quebra', () => {
   assert.match(base['.case__titulo .linha-estreita'] ?? '', /display:\s*block/, 'na tela estreita cada linha é bloco');
   assert.match(largo['.case__titulo .linha-estreita'] ?? '', /display:\s*inline/, 'no desktop o título corre numa linha');
   const mudou = raizTemporaria({ 'case-study-financas-pf-pj.md': (t) => t.replace('# A planilha que virou produto\n\n**Vi', '# A planilha virou produto\n\n**Vi') });
-  assert.match(construirEm(mudou).pagina('trabalhos/financas-pf-pj/index.html'), /<h1 class="case__titulo">A planilha virou produto<\/h1>/,
+  assert.match(construirEm(mudou).pagina(`${FINANCAS}index.html`), /<h1 class="case__titulo">A planilha virou produto<\/h1>/,
     'se o título muda no arquivo, a quebra escolhida deixa de valer');
 });
 

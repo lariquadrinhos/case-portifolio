@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { lerTokens, gerarCssDeTokens } from './tokens.mjs';
 import { lerQuemSouEu, lerCase, ErroDeConteudo } from './conteudo.mjs';
 import { criarAusencias } from './ausencia.mjs';
-import { ORDEM_DOS_CASES, t } from './interface.mjs';
+import { ORDEM_DOS_CASES, t, caminhoDoCase } from './interface.mjs';
 import { paginaHome, paginaTrabalhos, paginaCase, paginaQuemSouEu, paginaErro } from './paginas.mjs';
 
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -50,7 +50,7 @@ export function construir({ modo = 'local', base = '/', raiz = RAIZ, saida = joi
   };
   // Com dois cases, o próximo de cada um é o outro. Sem caso especial para o último.
   cases.forEach((c, i) => {
-    paginas[`trabalhos/${c.slug}/index.html`] = paginaCase(ctx, c, cases[(i + 1) % cases.length]);
+    paginas[`${caminhoDoCase(c)}index.html`] = paginaCase(ctx, c, cases[(i + 1) % cases.length]);
   });
 
   if (modo === 'publicar' && ausencias.faltas.length) {

@@ -9,7 +9,7 @@ import { escapar, inline, ehFraseInteiraEmNegrito, semNegrito } from './markdown
 import { dimensoes, resolverMidia, resolverCapa } from './midias.mjs';
 import {
   t, TEXTOS, FRASE_DA_HOME, MARCA_TEXTO_DO_CASE, COR_DO_CASE, BLOCO_DE_DESTAQUE, COLUNAS_SEPARADAS,
-  QUEBRA_DO_TITULO_ESTREITA,
+  QUEBRA_DO_TITULO_ESTREITA, caminhoDoCase,
 } from './interface.mjs';
 
 const ATRIBUTOS_EXTERNOS = 'target="_blank" rel="noopener"';
@@ -184,7 +184,7 @@ function card(ctx, c, onde, nivel = 'h2') {
     : ausencias.marcar(`a capa do case ${c.card.titulo ?? c.slug}`, onde);
   const titulo = c.card.titulo ? escapar(c.card.titulo) : ausencias.marcar('o título do card', onde);
   const linha = c.card.linha ? escapar(c.card.linha) : ausencias.marcar('a linha do card', onde);
-  return `<a class="card cor-${COR_DO_CASE[c.prefixo]}" href="${ctx.base}trabalhos/${c.slug}/">
+  return `<a class="card cor-${COR_DO_CASE[c.prefixo]}" href="${ctx.base}${caminhoDoCase(c)}">
     <div class="card__capa">${capa}</div>
     <div class="card__texto">
       <${nivel} class="card__titulo">${titulo}</${nivel}>

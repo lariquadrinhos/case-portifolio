@@ -38,6 +38,9 @@ export const TEXTOS = {
   },
   erroVerTrabalhos: { texto: 'Ver os trabalhos', fonte: 'contrato:erro/endereco-inexistente.md' },
   erroVoltarHome: { texto: 'Voltar para a home', fonte: 'contrato:erro/endereco-inexistente.md' },
+  // O endereço de cada case é declarado, não derivado do nome do arquivo (decisão 221).
+  enderecoFinancas: { texto: '/trabalhos/financas/', fonte: 'contrato:conteudo/arquivo-de-texto-vira-pagina.md' },
+  enderecoReembolso: { texto: '/trabalhos/reembolso/', fonte: 'contrato:conteudo/arquivo-de-texto-vira-pagina.md' },
 
   // Desenhados no Figma, sem texto escrito em contrato.
   pularParaConteudo: { texto: 'Pular para o conteúdo', fonte: 'figma:273:114' },
@@ -51,6 +54,16 @@ export const TEXTOS = {
 };
 
 export const t = (chave) => TEXTOS[chave].texto;
+
+// O caminho de cada case dentro do site, sem a barra inicial, a partir do endereço declarado
+// no contrato. Renomear o arquivo de conteúdo não muda o endereço; case sem endereço declarado
+// para a construção, em vez de ganhar um endereço adivinhado do nome do arquivo.
+const ENDERECO_DO_CASE = { financas: 'enderecoFinancas', reembolso: 'enderecoReembolso' };
+export function caminhoDoCase(c) {
+  const chave = ENDERECO_DO_CASE[c.prefixo];
+  if (!chave) throw new Error(`${c.arquivo}: o case não tem endereço declarado (contrato conteudo/arquivo-de-texto-vira-pagina.md)`);
+  return t(chave).replace(/^\//, '');
+}
 
 // A frase da home tem quebra escolhida, não automática (contrato home/home.md): cada linha
 // fecha uma unidade de sentido, e o trecho com marca-texto é de sentido, não de ritmo.
