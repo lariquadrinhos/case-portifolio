@@ -7310,3 +7310,25 @@ uma largura intermediária*: pedia desenho novo dos dois cases.
 marca-texto da frase de abertura não foi desenhado nessa largura: o código o posiciona.
 
 **Consequência.** Regra em `case/pagina-de-case.md`. A P63 sai da lista, que fica com 6.
+
+---
+
+## 226 · O celular fica sem os números das tabelas do Reembolso
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** P57: com a 132, as duas tabelas do Reembolso saíram da tela estreita. Conferido no texto de
+hoje, o "44 telas" já está na prosa do capítulo 4; seguem só nas tabelas o ~12 → 5 etapas com digitação,
+30+ → ~10 telas, 3 → 0 modais, a digitação de CRP, CPF e valor trocada por OCR, 43 telas alcançáveis
+com 145 ligações, 94 variáveis, 18 componentes e 148 ícones, e os 14 scripts de medição.
+
+**Decisão.** *"1"*: aceitar a perda. O celular fica com o resumo do capítulo 5, *"de dezoito etapas
+para cinco"*, e o desktop é a versão completa.
+
+**Alternativa descartada.** *Devolver ao estreito a tabela de entregas como lista*, que era a minha
+recomendação. *Ela escrever uma ou duas frases com os números que mais importam.*
+
+**Custo aceito.** Quem lê no celular não vê os números do protótipo, do design system e da comparação
+etapa a etapa.
+
+**Consequência.** A P57 sai da lista, que fica com 5. Nada a construir.

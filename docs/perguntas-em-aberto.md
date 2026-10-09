@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 9 de outubro de 2026 · **6 perguntas**, nenhuma travando
+**Atualizado:** 9 de outubro de 2026 · **5 perguntas**, nenhuma travando
 
 ---
 
@@ -68,30 +68,6 @@ descartado por cálculo. O problema era maior que a pergunta dizia: as sobreposi
 o atalho de salto não têm véu e reprovavam **também no claro**. O valor claro foi corrigido na
 127, depois de eu descobrir que tinha lido o alfa do véu errado. Doze superfícies flutuantes,
 zero reprovações nos dois temas.
-
-### P57 · O que a tela estreita deixou de mostrar com a saída das tabelas
-A decisão 132 tirou as duas tabelas do estreito. **Alguns números não existem em nenhum outro
-lugar do case**, e some quem lê no celular, que é a maioria de quem abre link de portfólio.
-
-| Sai do estreito | Onde mais esse número aparece |
-|---|---|
-| ~12 → 5 etapas com digitação | *"cinco etapas"* está na prosa; **o "~12" não está em lugar nenhum** |
-| 30+ → ~10 telas até o envio | em nenhum |
-| 3 → 0 modais em cima do fluxo | em nenhum |
-| 44 telas desenhadas | em nenhum |
-| 43 telas alcançáveis, 145 ligações | em nenhum |
-| 94 variáveis, 18 componentes, 148 ícones | em nenhum |
-| 14 scripts de medição | em nenhum |
-
-A frase de abertura do capítulo 5 salva uma parte: *"de dezoito etapas para cinco"*. As demais
-não têm resgate.
-
-**Opções:** escrever um parágrafo curto no capítulo 3 e outro no 5 que carreguem os números que
-importam, e aí o estreito não perde argumento, é texto autoral, dela · aceitar a perda e deixar
-o desktop ser a versão completa · devolver só a tabela de entregas ao estreito como lista de
-pares, já que ela nunca foi comparação e empilha sem custo.
-
-**Momento:** antes de publicar. Não trava o desenho.
 
 ### ~~P58~~ · Resolvida pela decisão 135
 Nenhuma das três opções valia: as três supunham defeito na trilha. **A etapa dura exatamente o
