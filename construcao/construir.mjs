@@ -10,7 +10,7 @@
 import { mkdirSync, writeFileSync, readFileSync, rmSync, cpSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { lerTokens, gerarCssDeTokens } from './tokens.mjs';
+import { lerTokens, gerarCssDeTokens, comQuebra, QUEBRA_DO_CASE } from './tokens.mjs';
 import { lerQuemSouEu, lerCase, ErroDeConteudo } from './conteudo.mjs';
 import { criarAusencias } from './ausencia.mjs';
 import { ORDEM_DOS_CASES, t, caminhoDoCase } from './interface.mjs';
@@ -65,6 +65,7 @@ export function construir({ modo = 'local', base = '/', raiz = RAIZ, saida = joi
   const css = gerarCssDeTokens(lerTokens(join(raiz, 'docs/spec/tokens.json')))
     + '\n' + readFileSync(join(raiz, 'modelo/estilo.css'), 'utf8').replaceAll('{{base}}', base);
   writeFileSync(join(saida, 'estilo.css'), css);
+  writeFileSync(join(saida, 'estilo-case.css'), comQuebra(css, QUEBRA_DO_CASE));
   writeFileSync(join(saida, 'moldura.js'), readFileSync(join(raiz, 'modelo/moldura.js'), 'utf8'));
   cpSync(join(raiz, 'publico'), join(saida, 'publico'), {
     recursive: true,

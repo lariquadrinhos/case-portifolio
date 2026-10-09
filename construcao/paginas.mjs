@@ -7,6 +7,7 @@
 
 import { escapar, inline, ehFraseInteiraEmNegrito, semNegrito } from './markdown.mjs';
 import { dimensoes, resolverMidia, resolverCapa } from './midias.mjs';
+import { QUEBRA_DESKTOP, QUEBRA_DO_CASE } from './tokens.mjs';
 import {
   t, TEXTOS, FRASE_DA_HOME, MARCA_TEXTO_DO_CASE, COR_DO_CASE, BLOCO_DE_DESTAQUE, COLUNAS_SEPARADAS,
   QUEBRA_DO_TITULO_ESTREITA, caminhoDoCase,
@@ -84,8 +85,12 @@ function sobreposicoes(ctx, atual) {
 function documento(ctx, { titulo, atual, corpo, classeDoCorpo = '' }) {
   const { base, temaJs } = ctx;
   const tituloDaAba = titulo ? `${titulo} · ${ctx.nome}` : ctx.nome;
+  // O case troca de modo em outra largura (decisão 225): ele leva o CSS com a quebra dele, e
+  // os scripts leem a quebra da própria página.
+  const ehCase = classeDoCorpo === 'pagina-case';
+  const quebra = ehCase ? QUEBRA_DO_CASE : QUEBRA_DESKTOP;
   return `<!doctype html>
-<html lang="pt-BR" class="sem-js">
+<html lang="pt-BR" class="sem-js" data-quebra="${quebra}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -96,7 +101,7 @@ function documento(ctx, { titulo, atual, corpo, classeDoCorpo = '' }) {
 <link rel="apple-touch-icon" href="${base}publico/icone/apple-touch-icon.png">
 <link rel="manifest" href="${base}manifest.webmanifest">
 <link rel="preload" href="${base}publico/fontes/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="${base}estilo.css">
+<link rel="stylesheet" href="${base}${ehCase ? 'estilo-case.css' : 'estilo.css'}">
 <script src="${base}moldura.js" defer></script>
 </head>
 <body class="${classeDoCorpo}">

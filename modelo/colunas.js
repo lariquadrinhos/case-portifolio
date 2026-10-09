@@ -11,7 +11,7 @@
   var main = document.querySelector('.case--colunas-separadas');
   if (!main) return;
   var colunas = main.querySelector('.case__capitulos');
-  var largo = window.matchMedia('(min-width: 1024px)');
+  var largo = window.matchMedia('(min-width: ' + document.documentElement.getAttribute('data-quebra') + 'px)');
 
   // A conta, separada da página para poder ser testada sozinha (testes/paginas.test.mjs):
   // o topo de cada mídia, a partir da primeira linha de cada capítulo e da altura de cada mídia.

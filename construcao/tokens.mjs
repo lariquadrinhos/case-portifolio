@@ -10,6 +10,19 @@ import { readFileSync } from 'node:fs';
 // 375; o ponto de troca entre as duas não foi decidido. Ver o PR e perguntas-em-aberto.
 export const QUEBRA_DESKTOP = 1024;
 
+// Nas páginas de case, o modo Desktop só entra em 1280 (decisão 225): abaixo disso, o case
+// usa o modo de tela estreita, com a coluna de leitura limitada. A mesma fronteira da Home e
+// de Trabalhos (decisão 212).
+export const QUEBRA_DO_CASE = 1280;
+
+// O CSS do case é o mesmo CSS, com o ponto de troca movido: todo `min-width` do modo Desktop
+// e todo `max-width` do modo estreito passam para a quebra do case. Uma fonte só.
+export function comQuebra(css, quebra) {
+  return css
+    .replaceAll(`(min-width: ${QUEBRA_DESKTOP}px)`, `(min-width: ${quebra}px)`)
+    .replaceAll(`(max-width: ${QUEBRA_DESKTOP - 0.02}px)`, `(max-width: ${quebra - 0.02}px)`);
+}
+
 const nomeCss = (nome) => `--${nome.replaceAll('/', '-')}`;
 
 function valorCss(colecao, nome, valor) {

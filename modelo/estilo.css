@@ -1,5 +1,6 @@
 /* O estilo do site. Todo valor visual vem de var(--…), gerado de docs/spec/tokens.json.
-   A largura estreita é a base; o modo Desktop entra em min-width: 1024px (ver tokens.mjs).
+   A largura estreita é a base; o modo Desktop entra em min-width: 1024px (ver tokens.mjs). O
+   case sai como estilo-case.css, o mesmo CSS com a troca em 1280 (decisão 225).
 
    Medidas que o Figma desenha sem variável ficam todas aqui, num lugar só, cada uma com o
    nó de onde veio. Não são improviso: são o desenho. Mas também não são token, e por isso
@@ -36,6 +37,9 @@
   --capa-baixa: 285px;                 /* 592:1588 */
   --card-titulo-baixo-size: 28px;      /* 592:1590 */
   --card-titulo-baixo-line: 36px;      /* 592:1590 */
+  /* O case entre 728 e 1280 de largura (decisão 225), quadro 602:1487. */
+  --coluna-do-case: 680px;             /* 602:1493: a coluna de leitura, centrada */
+  --midia-do-case: 411px;              /* 602:1515: a largura da mídia no desktop */
   --erro-topo-largo: 160px;            /* 136:41: conteúdo em y=224 */
   --midia-vazia-proporcao: 4 / 3;      /* lacuna de mídia, 411×308 e 327×245 */
   --video-proporcao: 411 / 510;        /* 379:454, vídeo em pé */
@@ -813,6 +817,35 @@ em { font-style: normal; }
   background: var(--case-strong);
 }
 .trilha__item[data-estado="atual"] .trilha__link { color: var(--text-primary); font-weight: 500; }
+
+/* ── O case no modo estreito, com a coluna limitada (decisão 225) ────────────
+   No case, o modo estreito vai até 1280 (o CSS do case troca a quebra, ver tokens.mjs). A
+   coluna de leitura tem no máximo 680 e fica no meio; a mídia, no máximo 411. Abaixo de 728
+   (680 mais a margem dos dois lados) estas regras não mudam nada: a coluna já é mais estreita
+   que o limite. O bloco de destaque continua sangrando até as bordas, e o respiro de dentro
+   cresce o que for preciso para o texto dele ficar na mesma coluna. */
+@media (max-width: 1023.98px) {
+  .case__hero > *,
+  .capitulo > :not(.capitulo__leitura),
+  .capitulo__leitura > :not(.bloco-de-destaque),
+  .case__fim > * {
+    width: 100%;
+    max-width: var(--coluna-do-case);
+    margin-inline: auto;
+  }
+  .capitulo__leitura .bloco-de-destaque {
+    padding-inline: calc(var(--space-24) + max(0px, (100% - var(--coluna-do-case)) / 2));
+  }
+  .prova, .par {
+    width: 100%;
+    max-width: var(--midia-do-case);
+    margin-inline: auto;
+  }
+}
+/* Com a coluna limitada, o botão do convite tem a largura do texto, como no desktop. */
+@media (min-width: 728px) and (max-width: 1023.98px) {
+  .convite .botao { width: auto; padding-inline: var(--space-32); }
+}
 
 /* ── Fim do case: provas, extra, próximo, convite ────────────────────────── */
 

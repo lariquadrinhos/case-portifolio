@@ -9,6 +9,7 @@ import { raizTemporaria, construirEm, texto, RAIZ } from './ajuda.mjs';
 import { TEXTOS, caminhoDoCase } from '../construcao/interface.mjs';
 import { lerCase } from '../construcao/conteudo.mjs';
 import { escapar } from '../construcao/markdown.mjs';
+import { comQuebra, QUEBRA_DESKTOP, QUEBRA_DO_CASE } from '../construcao/tokens.mjs';
 
 // O endereço de cada case, lido de onde a construção lê (decisão 221): o teste não o fixa.
 const enderecoDoCase = (arquivo) => caminhoDoCase(lerCase(RAIZ, arquivo));
@@ -286,6 +287,42 @@ test('O par de telas é uma peça só', () => {
   assert.match(fin.split('id="resultados"')[1].split('</section>')[0], /class="capitulo__par"/, 'o par é a mídia do capítulo 6');
 });
 
+test('Entre 1024 e 1280 de largura', () => {
+  // Decisão 225, seção de case/pagina-de-case.md. O case leva o mesmo CSS com a troca de modo
+  // na quebra dele, e os scripts leem a quebra da página. A medida no navegador fica com a
+  // conferência; aqui, a forma.
+  const css = readFileSync(join(site.saida, 'estilo.css'), 'utf8');
+  const cssDoCase = readFileSync(join(site.saida, 'estilo-case.css'), 'utf8');
+  assert.equal(cssDoCase, comQuebra(css, QUEBRA_DO_CASE), 'o CSS do case é o mesmo, com a quebra do case');
+  assert.doesNotMatch(cssDoCase.replace(/\/\*[\s\S]*?\*\//g, ''), new RegExp(`\\((min|max)-width: ${QUEBRA_DESKTOP}px|${QUEBRA_DESKTOP - 0.02}px\\)`),
+    'no CSS do case não sobra troca de modo na quebra das outras páginas');
+  for (const p of [`${FINANCAS}index.html`, `${REEMBOLSO}index.html`]) {
+    const html = site.pagina(p);
+    assert.match(html, new RegExp(`<html [^>]*data-quebra="${QUEBRA_DO_CASE}"`), `${p}: a quebra do case`);
+    assert.match(html, /<link rel="stylesheet" href="\/estilo-case\.css">/, `${p}: o CSS do case`);
+  }
+  for (const p of ['index.html', 'trabalhos/index.html', 'quem-sou-eu/index.html', '404.html']) {
+    const html = site.pagina(p);
+    assert.match(html, new RegExp(`<html [^>]*data-quebra="${QUEBRA_DESKTOP}"`), `${p}: a quebra das outras páginas`);
+    assert.match(html, /<link rel="stylesheet" href="\/estilo\.css">/, `${p}: o CSS de sempre`);
+  }
+  for (const script of ['moldura.js', 'colunas.js']) {
+    const fonte = readFileSync(join(RAIZ, 'modelo', script), 'utf8');
+    assert.match(fonte, /matchMedia\('\(min-width: ' \+ [^;]*getAttribute\('data-quebra'\)/, `${script}: a quebra vem da página`);
+    assert.doesNotMatch(fonte, /matchMedia\('\(min-width: \d+px\)'\)/, `${script}: nenhuma quebra escrita no script`);
+  }
+  // No modo estreito: coluna de no máximo 680 no meio, mídia de no máximo 411, e o bloco de
+  // destaque sangrando com o texto na coluna. Abaixo de 728, as regras não mudam nada.
+  const estreito = [...css.replace(/\/\*[\s\S]*?\*\//g, '').matchAll(/@media \(max-width: 1023\.98px\) \{([\s\S]*?)\n\}/g)].map((m) => m[1]).join('\n');
+  for (const seletor of ['.case__hero > *', '.capitulo > :not(.capitulo__leitura)', '.capitulo__leitura > :not(.bloco-de-destaque)', '.case__fim > *']) {
+    assert.ok(estreito.includes(seletor), `coluna: ${seletor}`);
+  }
+  assert.match(estreito, /max-width: var\(--coluna-do-case\);\s*margin-inline: auto;/);
+  assert.match(estreito, /\.capitulo__leitura \.bloco-de-destaque \{\s*padding-inline: calc\(var\(--space-24\) \+ max\(0px, \(100% - var\(--coluna-do-case\)\) \/ 2\)\);/);
+  assert.match(estreito, /\.prova, \.par \{\s*width: 100%;\s*max-width: var\(--midia-do-case\);/);
+  assert.match(css, /@media \(min-width: 728px\) and \(max-width: 1023\.98px\) \{\s*\.convite \.botao \{ width: auto;/, 'o botão do convite com a largura do texto');
+});
+
 test('A pessoa vai para fora do site', () => {
   const caso = site.pagina(`${REEMBOLSO}index.html`);
   // O endereço é conteúdo e muda; o que o contrato pede é a forma: palavra sublinhada,
@@ -365,7 +402,7 @@ test('Leitor escolhe o LinkedIn', () => {
 
 test('O script de tema não executa', () => {
   const home = site.pagina('index.html');
-  assert.match(home, /<html lang="pt-BR" class="sem-js">/, 'sem script, a página começa marcada como sem script');
+  assert.match(home, /<html lang="pt-BR" class="sem-js"[ >]/, 'sem script, a página começa marcada como sem script');
   assert.match(home, /class="caixa caixa--tema so-com-js"/, 'e o controle de tema não promete o que não pode cumprir');
   const css = readFileSync(join(site.saida, 'estilo.css'), 'utf8');
   assert.match(css, /\.sem-js \.so-com-js \{ display: none !important; \}/);

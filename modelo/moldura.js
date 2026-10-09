@@ -7,7 +7,8 @@
   'use strict';
 
   var raiz = document.documentElement;
-  var largo = window.matchMedia('(min-width: 1024px)');
+  // A largura do modo Desktop vem da página: 1024, ou 1280 no case (decisão 225).
+  var largo = window.matchMedia('(min-width: ' + (document.documentElement.getAttribute('data-quebra') || '1024') + 'px)');
   var escuroNoSistema = window.matchMedia('(prefers-color-scheme: dark)');
   var semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)');
 
