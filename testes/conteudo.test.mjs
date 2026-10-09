@@ -167,6 +167,17 @@ test('O endereço de um case não depende do nome do arquivo', () => {
     assert.match(site.pagina(`${endereco.replace(/^\//, '')}index.html`), new RegExp(`<title>${escaparRegex(escapar(titulo))} · `),
       `${endereco} é o case de ${nome}`);
   }
+  // No ar, o endereço declarado só vale se a publicação construir com o prefixo de onde ele
+  // começa: a parte antes de "trabalhos/", a raiz desde a decisão 222. O teste tira o prefixo
+  // do contrato e exige o mesmo na automação de publicação.
+  const prefixo = contrato.match(/o case de Finanças abre em "([^"]*?)trabalhos\//)?.[1];
+  assert.ok(prefixo, 'o cenário diz o endereço do case a partir da raiz do site');
+  const automacao = readFileSync(join(RAIZ, '.github/workflows/publicar.yml'), 'utf8');
+  const construcoes = [...automacao.matchAll(/node construcao\/construir\.mjs([^\n]*)/g)].map((m) => m[1]);
+  assert.ok(construcoes.length, 'a automação constrói o site');
+  for (const argumentos of construcoes) {
+    assert.equal(argumentos.match(/--base=(\S+)/)?.[1], prefixo, `a publicação constrói com o prefixo ${prefixo}: ${argumentos.trim()}`);
+  }
   // Link interno quebrado é o teste "Todo endereço local de toda página existe no site", em
   // paginas.test.mjs.
 });
