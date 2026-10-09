@@ -3,7 +3,7 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, existsSync, statSync, readdirSync } from 'node:fs';
+import { readFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { raizTemporaria, construirEm, texto, RAIZ } from './ajuda.mjs';
 import { TEXTOS, caminhoDoCase } from '../construcao/interface.mjs';
@@ -304,22 +304,6 @@ test('A pessoa vai para fora do site', () => {
   assert.deepEqual(links, [[escapar(endereco), 'Ver o repositório']]);
   assert.match(dd, /<a class="tira__link" [^>]*target="_blank" rel="noopener">/, 'abre em nova aba');
   assert.doesNotMatch(dd, /\[|\]/, 'nenhum colchete do arquivo na página');
-});
-
-test('O endereço de cada página é declarado, não derivado do nome do arquivo', () => {
-  // Decisão 221, regra de conteudo/arquivo-de-texto-vira-pagina.md. Os endereços vêm do
-  // contrato (o teste de copy confere); o teste não os fixa.
-  const cases = ['case-study-financas-pf-pj.md', 'case-study-reembolso-sulamerica.md'].map((a) => lerCase(RAIZ, a));
-  for (const c of cases) {
-    assert.ok(existsSync(join(site.saida, caminhoDoCase(c), 'index.html')), `${c.arquivo}: o endereço declarado é gerado`);
-    assert.notEqual(caminhoDoCase(c), `trabalhos/${c.slug}/`, `${c.arquivo}: o endereço não sai do nome do arquivo`);
-    assert.ok(!existsSync(join(site.saida, 'trabalhos', c.slug)), `${c.arquivo}: o endereço antigo, do nome do arquivo, não é gerado`);
-  }
-  // Em trabalhos/ só existem as pastas declaradas.
-  const declaradas = cases.map((c) => caminhoDoCase(c).split('/')[1]).sort();
-  const geradas = readdirSync(join(site.saida, 'trabalhos'), { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name).sort();
-  assert.deepEqual(geradas, declaradas);
-  // Link interno quebrado é o teste "Todo endereço local de toda página existe no site".
 });
 
 // ── erro/endereco-inexistente.md ──────────────────────────────────────────────

@@ -2,7 +2,8 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cpSync, rmSync } from 'node:fs';
+import { cpSync, rmSync, existsSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
 import { raizTemporaria, construirEm, texto, RAIZ } from './ajuda.mjs';
 import { caminhoDoCase } from '../construcao/interface.mjs';
 import { lerCase } from '../construcao/conteudo.mjs';
@@ -138,4 +139,22 @@ test('Par de telas sem a segunda imagem', () => {
     'case-study-financas-pf-pj.md': (t) => t.replace(/(<!-- bloco: par -->\n!\[[^\n]*\n)!\[[^\n]*\n/, '$1'),
   });
   assert.match(construirEm(raiz).pagina(`${PAGINA_FINANCAS}index.html`), /FALTA · a (segunda imagem|legenda) do par de telas/);
+});
+
+test('O endereço de um case não depende do nome do arquivo', () => {
+  const site = construirEm(raizTemporaria());
+  // Decisão 221, regra de conteudo/arquivo-de-texto-vira-pagina.md. Os endereços vêm do
+  // contrato (o teste de copy confere); o teste não os fixa.
+  const cases = [FINANCAS, REEMBOLSO].map((a) => lerCase(RAIZ, a));
+  for (const c of cases) {
+    assert.ok(existsSync(join(site.saida, caminhoDoCase(c), 'index.html')), `${c.arquivo}: o endereço declarado é gerado`);
+    assert.notEqual(caminhoDoCase(c), `trabalhos/${c.slug}/`, `${c.arquivo}: o endereço não sai do nome do arquivo`);
+    assert.ok(!existsSync(join(site.saida, 'trabalhos', c.slug)), `${c.arquivo}: o endereço antigo, do nome do arquivo, não é gerado`);
+  }
+  // Em trabalhos/ só existem as pastas declaradas.
+  const declaradas = cases.map((c) => caminhoDoCase(c).split('/')[1]).sort();
+  const geradas = readdirSync(join(site.saida, 'trabalhos'), { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name).sort();
+  assert.deepEqual(geradas, declaradas);
+  // Link interno quebrado é o teste "Todo endereço local de toda página existe no site", em
+  // paginas.test.mjs.
 });
