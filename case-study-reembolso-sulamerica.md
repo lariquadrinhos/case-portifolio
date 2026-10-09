@@ -21,7 +21,7 @@ Redesenhei o fluxo de usuário para pedido de reembolso recorrente pelo app de s
 
 **Entregas** · Avaliação heurística de 32 telas, fluxo redesenhado, wireframes, design system, mockups, microcopy completa, estados de erro, vazio e carregamento, protótipo navegável
 
-**Repositório** · Documentação do processo, do diagnóstico às regras de implementação, [link]
+**Repositório** · Documentação do processo, do diagnóstico às regras de implementação, [link](https://github.com/lariquadrinhos/case-reembolso)
 
 Acompanhei a frustração de alguém que eu conheço repetindo todo mês um processo que o aplicativo tornava mais difícil do que precisava ser. Antes de propor qualquer coisa eu medi o fluxo real, tela por tela. E reconstruí o sistema visual do próprio aplicativo. O resultado é: um fluxo que se resolve em 5 telas com input ativo e captura inicial que dispensa digitação e um onboarding que coleta informações para que o usuário não precise repetir. Este case vai até o protótipo, onde o fluxo proposto pode ser testado.
 
@@ -164,7 +164,7 @@ Convite: Descubra mais navegando pelo protótipo completo. [Abrir o protótipo](
 
 <!-- bloco: provas -->
 O diagnóstico e as regras de implementação
-[Ver o repositório]()
+[Ver o repositório](https://github.com/lariquadrinhos/case-reembolso)
 
 A avaliação das 32 telas, o fluxo atual mapeado etapa a etapa, e o redesenho em wireframe e mockup
 [Ver o arquivo no Figma](https://www.figma.com/design/LUp4aT7fVYH4cD8ZwrHIfd)

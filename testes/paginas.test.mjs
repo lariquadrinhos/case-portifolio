@@ -288,6 +288,16 @@ test('A pessoa vai para fora do site', () => {
   const prototipos = [...caso.matchAll(/href="(https:\/\/www\.figma\.com\/proto\/[^"]+)" target="_blank" rel="noopener">Abrir o protótipo<span class="aviso-nova-aba"> abre em nova aba<\/span>/g)];
   assert.ok(prototipos.length >= 1, 'o link do protótipo é palavra sublinhada que abre em nova aba');
   for (const [, url] of prototipos) assert.match(url, /starting-point-node-id=/, `sem ponto de partida: ${url}`);
+  // Na tira, o repositório aparece uma vez só, como "Ver o repositório", no endereço que está
+  // no arquivo; o "[link]" do arquivo não vira um segundo link no texto.
+  const md = readFileSync(join(RAIZ, 'case-study-reembolso-sulamerica.md'), 'utf8');
+  const endereco = md.match(/^\*\*Repositório\*\* · .*\[[^\]]+\]\(([^)]+)\)\s*$/m)?.[1];
+  assert.ok(endereco, 'o arquivo do Reembolso tem o endereço do repositório na tira');
+  const dd = caso.match(/<dt>Repositório<\/dt><dd>([\s\S]*?)<\/dd>/)?.[1] ?? '';
+  const links = [...dd.matchAll(/<a [^>]*href="([^"]+)"[^>]*>([^<]+)<\/a>/g)].map((m) => [m[1], m[2]]);
+  assert.deepEqual(links, [[escapar(endereco), 'Ver o repositório']]);
+  assert.match(dd, /<a class="tira__link" [^>]*target="_blank" rel="noopener">/, 'abre em nova aba');
+  assert.doesNotMatch(dd, /\[|\]/, 'nenhum colchete do arquivo na página');
 });
 
 // ── erro/endereco-inexistente.md ──────────────────────────────────────────────

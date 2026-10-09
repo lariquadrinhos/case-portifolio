@@ -216,8 +216,9 @@ function tira(ctx, c) {
   const onde = `${c.arquivo}, tira de destaques`;
   return c.hero.tira.map(({ chave, valor }) => {
     let link = '';
-    // `[link]` sem endereço é o repositório que ainda não existe.
-    const valorHtml = inline(valor.replace(/,?\s*\[link\]\s*$/, ''));
+    // O link no fim do valor vira "Ver o repositório" na linha de baixo, e sai do texto, com ou
+    // sem endereço. `[link]` sem endereço é o repositório que ainda não existe.
+    const valorHtml = inline(valor.replace(/,?\s*\[[^\]]+\](\([^)]*\))?\s*$/, ''));
     if (/\[link\]\s*$/.test(valor)) {
       link = ctx.ausencias.marcar('o endereço do repositório', onde);
     } else {

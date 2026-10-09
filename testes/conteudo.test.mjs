@@ -108,7 +108,10 @@ test('Marcador fora do vocabulário recusa a construção', () => {
 });
 
 test('Prova com endereço vazio é prova que falta', () => {
-  const { pagina } = construirEm(raizTemporaria());
+  // O endereço é esvaziado numa cópia: o teste não depende de qual repositório ainda falta.
+  const { pagina } = construirEm(raizTemporaria({
+    'case-study-reembolso-sulamerica.md': (t) => t.replace(/\[Ver o repositório\]\([^)]*\)/, '[Ver o repositório]()'),
+  }));
   const caso = pagina('trabalhos/reembolso-sulamerica/index.html');
   assert.match(caso, /FALTA · o endereço de &quot;Ver o repositório&quot;/);
   assert.match(caso, /href="https:\/\/www\.figma\.com\/board\/lCpgyPMBg7BXj0DxgiOUh1"/, 'a prova com endereço vira link');

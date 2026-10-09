@@ -7032,3 +7032,30 @@ pouco, até 62 em 1024×650.
 
 **Consequência.** `trabalhos/indice-de-trabalhos.md`: regra e cenário ajustados, e um cenário novo para
 o título em janela estreita.
+
+---
+
+## 214 · O repositório do Reembolso vai a público num repositório novo, sem as capturas reais
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** case · `#restricao`
+
+**Gatilho.** A prova "Ver o repositório" do Reembolso precisava de endereço, e o repositório do case
+(`lariquadrinhos/case-sulamerica`) é privado. O histórico dele guarda, num commit anterior a
+*"Remove the real user's screenshots from the repository"*, as 32 capturas do app real e um `.zip`, com
+nome, CPF, dados bancários e foto de identidade da pessoa que acompanhou o projeto. Torná-lo público
+expunha tudo isso a quem voltasse no histórico. Na varredura do estado atual, sobrava uma captura real,
+`entregaveis/case-imagens/fluxo-atual-erro-de-data.png`, com as datas de sessões de terapia.
+
+**Decisão.** *"vai com a 1"*: um repositório público novo, **`lariquadrinhos/case-reembolso`**, com o
+estado atual em **um commit só**, assinado por Larissa Quadros. *"pode excluir todas as capturas de
+tela"*: a captura real saiu, junto da linha que a exibia em `case-study-reembolso-sulamerica.md`. O nome
+*Rafael A. C. Moreira* e o banco, agência e conta dos documentos são inventados, por palavra dela, e
+ficam. O privado não mudou.
+
+**Alternativa descartada.** *Reescrever o histórico do privado e torná-lo público*: preserva os commits,
+mas é destrutivo e dessincroniza outras cópias. *Não publicar o repositório*: o case perderia uma prova.
+
+**Custo aceito.** O público não tem o histórico de commits do trabalho. Os documentos de pesquisa
+continuam dizendo que a pessoa faz terapia de psicologia e quanto paga por sessão, sem nome real.
+
+**Consequência.** O endereço entra na tira e no bloco de provas do Reembolso. Uma falta a menos.
