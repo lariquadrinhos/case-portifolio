@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 9 de outubro de 2026 · **5 perguntas**, nenhuma travando
+**Atualizado:** 9 de outubro de 2026 · **4 perguntas**, nenhuma travando
 
 ---
 
@@ -97,26 +97,6 @@ versões escuras já era a cor quente da página; o das claras era o cinza neutr
 entrega. A `#F5F5F5` fica a **1,05:1** do creme e ainda assim se vê, porque o olho lê temperatura
 antes de claridade. Nenhuma das três opções que eu listei era necessária: **mídia sangra na
 página, sem moldura**, e o material é produzido sobre `bg/page` do tema.
-
-### P59 · As duas versões da mídia do capítulo 3 têm altura diferente
-O recorte claro tem **411×254** e o escuro **411×240**: 14px de diferença, que é margem do
-recorte e não conteúdo: os dois mostram o mesmo trecho do fluxograma. Era 31px antes de ela
-refazer os recortes em 30/09.
-
-**No desktop não custa nada:** a mídia vive numa linha de altura fixa, mais alta que ela, e as
-duas telas continuam com 7994px. **Na tela estreita custa:** a coluna empilha, e a tela escura
-fica **11px mais curta** que a clara, 11.106 contra 11.117.
-
-Isso contraria a ideia de que o tema escuro é a mesma página noutra paleta. Nenhum visitante vê
-os dois lados a lado, mas a conferência lado a lado: o método que achou quase todos os defeitos
-deste arquivo: passa a acusar diferença em tudo que vem abaixo do capítulo 3 no estreito.
-
-**Opções:** aceitar, porque 25px em 10.950 não muda nada que se veja · igualar os dois recortes
-em 279, tirando 31px de margem do claro, que não perde conteúdo · igualar pelo mockup, dando à
-moldura a altura maior nos dois temas e deixando uma faixa vazia no escuro, que é a única que
-introduz um defeito visível.
-
-**Momento:** antes da próxima conferência lado a lado das telas estreitas. Não trava.
 
 ### ~~P42~~ · Resolvida pela decisão 176
 Os dois cases ganharam `<!-- bloco: hero -->` antes do título. O hero termina na última linha

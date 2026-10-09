@@ -7332,3 +7332,23 @@ recomendação. *Ela escrever uma ou duas frases com os números que mais import
 etapa a etapa.
 
 **Consequência.** A P57 sai da lista, que fica com 5. Nada a construir.
+
+---
+
+## 227 · As duas versões da mídia do capítulo 3 do Reembolso ficam com alturas diferentes
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** P59: os recortes do capítulo 3 têm alturas diferentes no claro e no escuro (508 e 480 no
+arquivo, 254 e 240 na tela). No desktop não custa nada; na tela estreita, a página escura fica um pouco
+mais curta que a clara, e a conferência lado a lado acusa a diferença em tudo que vem abaixo.
+
+**Decisão.** *"nao tem problema"*: aceitar. Os recortes são dela e ficam como estão.
+
+**Alternativa descartada.** *Igualar os dois recortes, tirando margem do claro.* *Igualar pela moldura
+mais alta, com uma faixa vazia no escuro.*
+
+**Custo aceito.** Na tela estreita, os dois temas não têm a mesma altura abaixo do capítulo 3, e quem
+confere lado a lado precisa descontar essa diferença.
+
+**Consequência.** A P59 sai da lista, que fica com 4. Nada a construir.

@@ -130,7 +130,7 @@ desenho.
 
 > **As duas versões têm altura diferente**: 310 no claro, 279 no escuro. No desktop isso não
 > aparece, porque a linha que abriga a mídia tem altura fixa e o texto ao lado é mais alto. **Na
-> tela estreita aparece:** a tela escura fica **25px mais curta** que a clara. Ver P59.
+> tela estreita aparece:** a tela escura fica **25px mais curta** que a clara. Aceito na decisão 227.
 
 ### Capítulo 4 · Wireframes e interface: **montada e aplicada**, à espera de exportação
 
