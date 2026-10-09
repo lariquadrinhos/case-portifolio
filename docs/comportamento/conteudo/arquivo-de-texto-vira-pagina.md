@@ -43,6 +43,10 @@ aparece no site. Não há seção reconhecida por nome: nome muda, marcador não
 
 - Os arquivos de conteúdo são três: `case-study-financas-pf-pj.md`,
   `case-study-reembolso-sulamerica.md` e `quem-sou-eu.md`.
+- **O endereço de cada página é declarado, não derivado do nome do arquivo:** `/` (home),
+  `/trabalhos/`, `/trabalhos/financas/`, `/trabalhos/reembolso/` e `/quem-sou-eu/`. Endereço
+  inexistente recebe a página de erro. Renomear um arquivo de conteúdo não muda o endereço; mudar
+  o endereço é decisão, porque quebra link compartilhado. Ver decisão 221.
 - A home não tem arquivo próprio. Seus textos vivem em `quem-sou-eu.md`, sob
   `<!-- bloco: home -->`.
 - **Capítulo é o título seguido de `<!-- trilha: -->`.** Título sem esse marcador é

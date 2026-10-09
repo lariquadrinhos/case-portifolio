@@ -7199,3 +7199,26 @@ superadas por decisões posteriores, e eu as conferi antes de propor a saída.
 
 **Consequência.** A lista tem 13 perguntas, nenhuma travando. O contrato de Trabalhos perde a marca de
 lacuna do título. Nada a construir.
+
+---
+
+## 221 · Os cases ganham endereços curtos
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** conteudo
+
+**Gatilho.** P64: nenhum documento fixava o endereço das páginas. O código os derivava dos nomes dos
+arquivos, e os cases saíam em `/trabalhos/financas-pf-pj/` e `/trabalhos/reembolso-sulamerica/`.
+
+**Decisão.** *"encurtar"*: **`/trabalhos/financas/`** e **`/trabalhos/reembolso/`**. Os outros ficam:
+`/`, `/trabalhos/`, `/quem-sou-eu/`. O endereço passa a ser declarado, e não derivado do nome do
+arquivo.
+
+**Alternativa descartada.** *Manter como está*, que era a minha recomendação. *Tirar o nível de
+Trabalhos* (`/financas/`), que deixaria de mostrar que o case pertence a Trabalhos.
+
+**Custo aceito.** "financas" diz menos que "financas-pf-pj". Os endereços antigos passam a dar a
+página de erro; como o site ainda não foi divulgado, não há link compartilhado a preservar.
+
+**Consequência.** A regra entra em `conteudo/arquivo-de-texto-vira-pagina.md`, e a P64 sai da lista.
+Fica aberto o começo do endereço, `lariquadrinhos.github.io/case-portifolio/`, que depende do domínio
+(P15) ou do nome do repositório.

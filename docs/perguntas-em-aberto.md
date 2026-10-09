@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 9 de outubro de 2026 · **13 perguntas**, nenhuma travando
+**Atualizado:** 9 de outubro de 2026 · **12 perguntas**, nenhuma travando
 
 ---
 
@@ -161,14 +161,6 @@ fica centrado em 1440 e as faixas de cor sangram.
 cases para onde a medida do texto ainda cabe (perto de 1280) e limitar a largura da coluna estreita ·
 aceitar como está.
 **Momento:** antes de divulgar o endereço. Não trava a revisão. · *Código: `QUEBRA_DESKTOP` em `construcao/tokens.mjs`*
-
-### P64 · Os endereços das páginas
-Nenhum documento fixava o caminho de cada página. O código usa, derivado dos nomes dos
-arquivos: `/`, `/trabalhos/`, `/trabalhos/financas-pf-pj/`, `/trabalhos/reembolso-sulamerica/`,
-`/quem-sou-eu/`, e `404.html` para endereço inexistente (é o que o GitHub Pages serve). Endereço
-publicado é promessa: trocar depois quebra link compartilhado.
-**Opções:** manter · nomes mais curtos (`/financas/`, `/reembolso/`) · outro.
-**Momento:** antes de divulgar o endereço.
 
 ### P65 · Valores que o Figma desenha sem variável
 O código os concentra num bloco só, no topo de `modelo/estilo.css`, cada um com o nó de origem.
