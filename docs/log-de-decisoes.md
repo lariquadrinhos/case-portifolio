@@ -7137,3 +7137,22 @@ minha recomendação.
 
 **Consequência.** `moldura/botao-contato.md` registra a regra. O código já se comporta assim: nada a
 construir.
+
+---
+
+## 218 · O LinkedIn pede login a quem não tem conta, e fica assim
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** moldura
+
+**Gatilho.** A conferência pendente desde a inclusão do LinkedIn: o que vê quem abre o perfil sem estar
+logado. Ela abriu numa janela anônima, e aparece a tela de login do LinkedIn, não o perfil.
+
+**Decisão.** *"não é um problema qualquer pessoa sabe que precisa de login pra entrar no linkdin"*. O
+link continua apontando para o perfil.
+
+**Alternativa descartada.** Nenhuma foi proposta.
+
+**Custo aceito.** Quem não tem conta, ou não está logado, não vê o perfil. Os mesmos dados de contato
+estão no site: o e-mail e o currículo em PDF.
+
+**Consequência.** Nada a construir.
