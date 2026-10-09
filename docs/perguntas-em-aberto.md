@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 1 de outubro de 2026 · **16 perguntas**, nenhuma travando
+**Atualizado:** 9 de outubro de 2026 · **13 perguntas**, nenhuma travando
 
 ---
 
@@ -21,15 +21,6 @@ Nenhuma.
 Onde ele vive está decidido (011): no contrato da tela. O texto em si é rascunho meu e
 precisa da voz dela.
 **Momento:** antes de desenhar a página de erro. · *Contrato, `erro/`*
-
-### P32 · O nome aparece duas vezes na home
-As definições dizem que a home tem "nome, cargo, uma frase e um parágrafo", e que a barra
-tem "meu nome (clicar volta para a home)". No wireframe isso virou "Larissa" na barra e
-"LARISSA QUADROS · UX DESIGNER" na hero. A demonstração do Figma não repete: lá o nome só
-aparece na barra.
-**Opções:** a barra conta como o nome da home e a hero começa pela frase · o nome fica nos
-dois, com pesos diferentes · a hera traz só o cargo.
-**Momento:** antes de fechar o wireframe da home. · *Contrato, `home/`*
 
 ### ~~P44~~ · Resolvida pela decisão 053
 O parágrafo não será escrito. O site publica com dois cases e sem comentar a ausência.
@@ -156,30 +147,19 @@ introduz um defeito visível.
 
 **Momento:** antes da próxima conferência lado a lado das telas estreitas. Não trava.
 
-### P43 · A coluna de mídia comporta captura de tela de desktop?
-A grade nova dá **411px** à mídia de prova. As definições dizem que o case de Finanças mostra
-telas de desktop largas e que elas **são a prova visual do trabalho**: reduzidas demais,
-viram mancha ilegível. Em 411px uma captura de 1440 cabe em 29% do tamanho.
-**Opções:** a mídia larga rompe a coluna e ocupa a largura inteira, quebrando o padrão de
-"ao lado" em casos específicos · a captura mostra recorte de detalhe em vez da tela inteira,
-o que as definições já preveem para tela estreita · a coluna de mídia cresce e a leitura
-encolhe, o que a regra da medida não permite.
-**Momento:** antes de produzir as imagens do case de Finanças.
-
 ### ~~P42~~ · Resolvida pela decisão 176
 Os dois cases ganharam `<!-- bloco: hero -->` antes do título. O hero termina na última linha
 da tira; a prosa do capítulo 1 começa logo depois.
 
-### P63 · As larguras entre 375 e 1440 não foram desenhadas
-As telas existem em 1440 e em 375. O código precisava de um ponto de troca e usa **1024**: daí
-para cima vale o modo Desktop (grade de 12 colunas, tipografia e margem do desktop); abaixo, o
-modo Tela pequena. O número é suposição minha, não decisão.
-O que se vê nas pontas: em 1024 a coluna de leitura do case fica com cerca de 48 caracteres,
-abaixo do piso de 65; logo abaixo de 1024, a coluna única da tela estreita fica larga demais e
-passa dos 75. Acima de 1440 o conteúdo fica centrado em 1440 e as faixas de cor sangram.
-**Opções:** desenhar uma largura intermediária (768 ou 1024) · mover o ponto de troca para onde
-a medida do texto ainda cabe (perto de 1280) e limitar a largura da coluna estreita · aceitar
-como está.
+### P63 · As páginas de case entre 1024 e 1440 de largura
+As telas existem em 1440 e em 375, e o código troca de modo em **1024**, número que foi suposição
+minha. Na Home e em Trabalhos, as decisões 211 a 213 já resolveram o desktop. **Nas páginas de case,
+não:** em 1024 a coluna de leitura fica com cerca de 48 caracteres, abaixo do piso de 65; logo abaixo
+de 1024, a coluna única da tela estreita fica larga demais e passa dos 75. Acima de 1440 o conteúdo
+fica centrado em 1440 e as faixas de cor sangram.
+**Opções:** desenhar o case numa largura intermediária (1024 ou 1280) · mover o ponto de troca dos
+cases para onde a medida do texto ainda cabe (perto de 1280) e limitar a largura da coluna estreita ·
+aceitar como está.
 **Momento:** antes de divulgar o endereço. Não trava a revisão. · *Código: `QUEBRA_DESKTOP` em `construcao/tokens.mjs`*
 
 ### P64 · Os endereços das páginas
@@ -204,11 +184,6 @@ com **285** e **314** de altura. Os espaços dessa proposta já são da escala (
 **Opções:** criar as variáveis no Figma e reexportar `tokens.json` · corrigir no desenho os que
 fugiram da escala · aceitar como medida de componente.
 **Momento:** a qualquer tempo; nenhum trava.
-
-### P41 · O texto do título de Trabalhos, em rascunho
-Que a página tem título está decidido (040). O texto (*"Dois problemas que eu vi de perto,
-e o que fiz com eles."*) é rascunho meu e precisa da voz dela.
-**Momento:** antes de publicar Trabalhos.
 
 ### ~~P40~~ · Resolvida pela decisão 059
 Os três valores foram escolhidos e deixaram de ser provisórios. Capa 3:2 porque a tela

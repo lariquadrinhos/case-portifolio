@@ -7174,3 +7174,28 @@ a pergunta era se ela pode nomeá-los num arquivo público.
 ela.
 
 **Consequência.** Nada a construir.
+
+---
+
+## 220 · O título de Trabalhos é dela, e a lista de perguntas perde três
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** trabalhos
+
+**Gatilho.** Revisão da lista de perguntas em aberto, parada desde 1º de outubro. Quatro pareciam
+superadas por decisões posteriores, e eu as conferi antes de propor a saída.
+
+**Decisão.** *"sim, o título é meu, pode atualizar a lista"*.
+- **P41:** o título *"Dois problemas que eu vi de perto, e o que fiz com eles."* deixa de ser rascunho
+  meu. Ele estava nas telas que ela aprovou, e nas decisões 211 a 213 ela escolheu onde ele quebra.
+- **P43** sai: as decisões 204 a 206 deram às telas do Finanças colunas separadas e o par de telas em
+  largura inteira.
+- **P32** sai: a decisão 018 já tinha deixado o nome nos dois lugares com pesos diferentes, "Larissa" na
+  barra e "LARISSA QUADROS · UX DESIGNER" no bloco, que é uma das opções da pergunta.
+- **P63** fica, reduzida às páginas de case: em 1024 a coluna de leitura tem uns 48 caracteres.
+
+**Alternativa descartada.** Nenhuma: as três saídas registram o que já estava decidido.
+
+**Custo aceito.** Nenhum novo.
+
+**Consequência.** A lista tem 13 perguntas, nenhuma travando. O contrato de Trabalhos perde a marca de
+lacuna do título. Nada a construir.

@@ -55,9 +55,8 @@ Copy de interface, que por decisão 011 vive aqui e não nos arquivos de conteú
 |---|---|
 | Título da página | **Dois problemas que eu vi de perto, e o que fiz com eles.** |
 
-> `@lacuna` · **Rascunho meu, à espera da voz dela.** É ela falando no site dela. O título
-> convida e diz algo verdadeiro dos dois cases: os dois começaram observando uma pessoa
-> travar numa tarefa comum. Está registrado como P41 nas perguntas em aberto.
+O texto é dela (decisão 220). Ele convida e diz algo verdadeiro dos dois cases: os dois
+começaram observando uma pessoa travar numa tarefa comum.
 
 Título e linha de cada card **não** estão aqui: são conteúdo autoral e vêm do bloco
 `<!-- bloco: card -->` do arquivo de cada case.
