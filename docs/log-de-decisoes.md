@@ -7007,3 +7007,28 @@ e 1279, uma janela alta mostra a Home no tamanho do mínimo, com sobra de respir
 
 **Consequência.** Figma: os quatro quadros afetados reajustados. `home/home.md`,
 `trabalhos/indice-de-trabalhos.md` e a P65 atualizados.
+
+---
+
+## 213 · Abaixo de 1120 de largura, o título de Trabalhos quebra onde ela escolheu
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** trabalhos
+
+**Gatilho.** Depois da 212, o dev e o tester mediram que Trabalhos não cabia em toda janela de desktop
+com 650 de altura: abaixo de 1120 de largura, o título em 40 não cabe numa linha e a página rola (31 a
+62 em 650, 11 a 12 em 700; de 789 de altura em diante, cabe). E, entre 1024 e 1100, em qualquer altura,
+o título quebrava sozinho com *"eles."* isolado na segunda linha.
+
+**Decisão.** *"vai assim"*, proposta minha. Abaixo de 1120 de largura, o título usa a quebra escolhida
+em duas linhas do desenho de 790, *"Dois problemas que eu vi de perto, / e o que fiz com eles."*, em
+qualquer altura. O cenário passa a prometer a página sem rolagem a partir de 1120 de largura **ou** 790
+de altura.
+
+**Alternativa descartada.** *Um degrau menor abaixo de 1120*, com título menor: pediria desenho novo
+para janelas fora da referência. *Manter o cenário como estava*: prometeria o que o site não cumpre.
+
+**Custo aceito.** Janelas ao mesmo tempo estreitas (menos de 1120) e baixas (menos de 790) rolam um
+pouco, até 62 em 1024×650.
+
+**Consequência.** `trabalhos/indice-de-trabalhos.md`: regra e cenário ajustados, e um cenário novo para
+o título em janela estreita.

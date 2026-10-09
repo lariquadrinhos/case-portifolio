@@ -501,6 +501,11 @@ em { font-style: normal; }
     line-height: var(--card-titulo-baixo-line);
   }
 }
+/* Abaixo de 1120 de largura, o título de 40 não cabe numa linha: volta a quebra escolhida, em
+   qualquer altura, e nenhuma palavra fica sozinha (decisão 213). */
+@media (min-width: 1024px) and (width < 1120px) {
+  .trabalhos__titulo br { display: revert; }
+}
 
 /* ── Case ─────────────────────────────────────────────────────────────────── */
 

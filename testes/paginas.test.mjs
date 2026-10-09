@@ -190,7 +190,7 @@ function semRolagem() {
 // Nenhum valor escrito à mão nos degraus: eles só trocam uma variável por outra.
 function soVariaveis(porAltura, filtro) {
   for (const [altura, regras] of Object.entries(porAltura)) {
-    if (altura === 'larguraDoMinimo') continue;
+    if (altura === 'larguraDoMinimo' || altura === 'porLargura') continue;
     for (const [seletor, corpo] of Object.entries(regras)) {
       if (!filtro.test(seletor)) continue;
       for (const [, prop, valor] of corpo.matchAll(/([\w-]+):\s*([^;]+);/g)) {
@@ -237,6 +237,20 @@ test('Trabalhos cabe na janela do desktop', () => {
   }
 });
 
+test('O título de Trabalhos numa janela estreita', () => {
+  // Abaixo de 1120 de largura, a quebra escolhida volta, em qualquer altura (decisão 213).
+  const { porAltura } = semRolagem();
+  const html = site.pagina('trabalhos/index.html');
+  const [, primeira, segunda] = html.match(/<h1 class="trabalhos__titulo">([^<]+)<br class="so-largo">([^<]+)<\/h1>/) ?? [];
+  assert.equal(primeira?.trim(), 'Dois problemas que eu vi de perto,');
+  assert.equal(segunda?.trim(), 'e o que fiz com eles.');
+  assert.deepEqual(Object.keys(porAltura.porLargura ?? {}), ['1120'], 'a regra vale abaixo de 1120 de largura');
+  assert.match(porAltura.porLargura['1120']['.trabalhos__titulo br'], /display: revert/, 'abaixo de 1120, a quebra aparece');
+  // A regra vem depois do degrau que esconde a quebra, para vencer em qualquer altura.
+  const css = readFileSync(join(site.saida, 'estilo.css'), 'utf8');
+  assert.ok(css.indexOf('(width < 1120px)') > css.lastIndexOf('.trabalhos__titulo br { display: none; }'), 'a quebra vence o degrau de 650');
+});
+
 test('A janela é mais baixa que o mínimo', () => {
   // Abaixo do mínimo, vale o desenho de 650 e a página rola, com respiro de pelo menos 24.
   // Os degraus só existem no desktop; abaixo de 1280 de largura, vale sempre o de 650.
@@ -245,7 +259,7 @@ test('A janela é mais baixa que o mínimo', () => {
     assert.match(largo[pagina], /padding-block: var\(--space-24\)[^}]*$/, `${pagina}: abaixo do mínimo, o respiro não fica menor que 24`);
   }
   assert.equal(porAltura.foraDoDesktop, undefined, 'nenhum degrau de altura vale fora do desktop');
-  assert.deepEqual(Object.keys(porAltura).filter((k) => k !== 'larguraDoMinimo').sort(), ['1010', '790', '980']);
+  assert.deepEqual(Object.keys(porAltura).filter((k) => !['larguraDoMinimo', 'porLargura'].includes(k)).sort(), ['1010', '790', '980']);
   assert.deepEqual(porAltura.larguraDoMinimo, ['790 abaixo de 1280', '790 abaixo de 1280'], 'Home e Trabalhos: abaixo de 1280 de largura, o desenho de 650');
 });
 
@@ -463,7 +477,14 @@ function regrasPorLargura(css) {
           i = abre + 1;
           lerBloco(degrau ? (porAltura[degrau[1]] ??= {}) : largo, j - 1);
           i = salvo;
-        } else if (/height/.test(seletor)) {
+        } else if (/^@media \(min-width: 1024px\) and \(width < (\d+)px\)$/.test(seletor)) {
+          // Regra só de largura dentro do desktop (decisão 213).
+          const largura = seletor.match(/width < (\d+)px/)[1];
+          const salvo = i;
+          i = abre + 1;
+          lerBloco((porAltura.porLargura ??= {})[largura] ??= {}, j - 1);
+          i = salvo;
+        } else if (/height|width </.test(seletor)) {
           porAltura.foraDoDesktop = seletor;
         }
       } else if (destino) {
