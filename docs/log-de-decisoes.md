@@ -7156,3 +7156,21 @@ link continua apontando para o perfil.
 estão no site: o e-mail e o currículo em PDF.
 
 **Consequência.** Nada a construir.
+
+---
+
+## 219 · Os clientes citados no currículo ficam
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** quem-sou-eu
+
+**Gatilho.** Ficou aberto desde a 210: o currículo publicado cita clientes atendidos no emprego dela, e
+a pergunta era se ela pode nomeá-los num arquivo público.
+
+**Decisão.** *"pode deixar assim"*. O PDF fica como está.
+
+**Alternativa descartada.** *Tirar os nomes dos clientes do PDF.*
+
+**Custo aceito.** Se houver algum acordo de confidencialidade com o empregador, quem responde por ele é
+ela.
+
+**Consequência.** Nada a construir.
