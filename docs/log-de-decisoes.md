@@ -7117,3 +7117,23 @@ envelhece a cada mudança; o link mostra sempre a versão atual.
 cópias, mas um serviço de arquivamento pode tê-lo guardado.
 
 **Consequência.** Os links do Reembolso no site voltam a abrir o repositório.
+
+---
+
+## 217 · O LinkedIn abre em outra aba sem aviso
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** moldura
+
+**Gatilho.** Os links externos dos cases levam o aviso *"abre em nova aba"* no rótulo. O LinkedIn, no
+contato da barra e no "Ver LinkedIn" de Quem sou eu, abre em outra aba sem aviso, e a pergunta era se
+ganhava o mesmo aviso, visível ou só para leitor de tela.
+
+**Decisão.** *"nao precisa aviso"*. O rótulo fica "LinkedIn" e "Ver LinkedIn", como está no site.
+
+**Alternativa descartada.** *Aviso visível*, como nos cases. *Aviso só para leitor de tela*, que era a
+minha recomendação.
+
+**Custo aceito.** Quem usa leitor de tela não é avisado de que vai para outra aba.
+
+**Consequência.** `moldura/botao-contato.md` registra a regra. O código já se comporta assim: nada a
+construir.
