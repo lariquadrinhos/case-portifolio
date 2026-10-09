@@ -7059,3 +7059,36 @@ mas é destrutivo e dessincroniza outras cópias. *Não publicar o repositório*
 continuam dizendo que a pessoa faz terapia de psicologia e quanto paga por sessão, sem nome real.
 
 **Consequência.** O endereço entra na tira e no bloco de provas do Reembolso. Uma falta a menos.
+
+---
+
+## 215 · As capturas reais saem do FigJam e do Figma do Reembolso, e as mídias do site ficam
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** case · `#restricao`
+
+**Gatilho.** Depois da 214, o dev achou no repositório público o arquivo `Reembolso SulAmerica.jam`,
+com 74 capturas do app real embutidas: selfie, nome completo, CPF, recibos e dados bancários. Tornei
+o repositório privado de imediato. A conferência seguinte achou as mesmas capturas no quadro do FigJam
+(`lCpgyPMBg7BXj0DxgiOUh1`) e na página "mapeamento do fluxo atual" do arquivo de design
+(`LUp4aT7fVYH4cD8ZwrHIfd`), os dois abertos sem login pelos links do case. Os wireframes e mockups
+ainda traziam números dos documentos reais: CPF, CRP e conta, protocolo e número de solicitação. A
+varredura da 214 só leu texto, e não olhou dentro das imagens: erro meu.
+
+**Decisão.** Ela desenhou o modelo, um quadro branco com o nome da tela e *"(conteúdo privado)"*, e
+pediu *"faz assim pra todas as telas com dados pessoais, o nome de cada tela ta no post it"*. Foram 13
+capturas no FigJam e 14 no Figma, ligadas aos seus post-its no FigJam. O desfoque que ela tinha posto
+sobre a selfie saiu (*"apaga"*). Os dados reais dos wireframes e mockups viraram dados inventados
+(*"trocar por dados inventados"*): Rafael A. C. Moreira, a conta 00123/4567, o CPF 123.456.789-09 e o
+CRP 06/12345 do prestador, o CPF 987.654.321-00 do titular, o protocolo 1234.5678.9012.3456.7890 e a
+solicitação 1234567890. As três telas de datas do tratamento ficam (*"deixa"*): só datas, sem nome.
+
+**Alternativa descartada.** *Reexportar a capa e as mídias dos capítulos 4 e 5 do site*, que mostram o
+protocolo real e o CPF 024.418.260-26 dos mockups antigos, sem nome nem foto: *"não tem problema com
+as midias do site"*.
+
+**Custo aceito.** O site e o Figma passam a mostrar números diferentes na mesma tela. As capturas
+originais continuam no histórico de versões dos dois arquivos do Figma e no repositório privado
+`case-sulamerica`.
+
+**Consequência.** O `case-reembolso` continua privado até ser refeito sem o `.jam` antigo e com os
+PNGs reexportados.
