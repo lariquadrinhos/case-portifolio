@@ -198,6 +198,9 @@ escala de tipo (a estreita usa `abertura` e `etiqueta`); o rastreio dos títulos
 44 e a trilha a 100 do topo; o respiro de 20 das pastilhas; a entrada do conteúdo da página de
 erro em 160 no desktop. Dois vãos fora da escala foram arredondados para o degrau mais
 próximo, como o design system manda: provas → extra (60 → 64, e 28 → 32 na estreita).
+**Da 211, sem sobrar em rolagem (seção `592:1383`):** a frase da home em **64/64** e **80/80**, o
+parágrafo em **22/33**, o título de Trabalhos em **40/48**, o título do card em **28/36** e as capas
+com **285** e **314** de altura. Os espaços dessa proposta já são da escala (decisão 212).
 **Opções:** criar as variáveis no Figma e reexportar `tokens.json` · corrigir no desenho os que
 fugiram da escala · aceitar como medida de componente.
 **Momento:** a qualquer tempo; nenhum trava.

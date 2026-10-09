@@ -3,7 +3,8 @@
 
    Medidas que o Figma desenha sem variável ficam todas aqui, num lugar só, cada uma com o
    nó de onde veio. Não são improviso: são o desenho. Mas também não são token, e por isso
-   estão listadas no PR, para virar variável ou ser corrigidas no Figma. */
+   estão listadas na P65 (docs/perguntas-em-aberto.md), para virar variável ou ser corrigidas
+   no Figma. */
 
 :root {
   --largura-quadro: 1440px;            /* largura das telas desktop */
@@ -27,7 +28,6 @@
      altura. Fora da escala de tipo e de espaço, como o resto deste bloco. */
   --home-frase-media: 80px;            /* 592:1414, frase em 80/80 */
   --home-frase-baixa: 64px;            /* 592:1388, frase em 64/64 */
-  --home-respiro-frase-medio: 72px;    /* 592:1419: frase até o bloco */
   --home-abertura-size-baixa: 22px;    /* 592:1394 */
   --home-abertura-line-baixa: 33px;    /* 592:1394 */
   --trabalhos-titulo-baixo-size: 40px; /* 592:1535, numa linha só */
@@ -36,7 +36,6 @@
   --capa-baixa: 285px;                 /* 592:1588 */
   --card-titulo-baixo-size: 28px;      /* 592:1590 */
   --card-titulo-baixo-line: 36px;      /* 592:1590 */
-  --card-texto-respiro-baixo: 20px;    /* 592:1589: 20 em cima e embaixo, 24 dos lados */
   --erro-topo-largo: 160px;            /* 136:41: conteúdo em y=224 */
   --midia-vazia-proporcao: 4 / 3;      /* lacuna de mídia, 411×308 e 327×245 */
   --video-proporcao: 411 / 510;        /* 379:454, vídeo em pé */
@@ -388,7 +387,8 @@ em { font-style: normal; }
 /* Sem rolagem no desktop (decisão 211): a página ocupa a altura da janela, menos a barra, e o
    conteúdo fica no meio, com o mesmo respiro em cima e embaixo. Em janela mais baixa, o
    conteúdo desce em degraus até a âncora de 650 (1366×768); abaixo dela, a página rola, e o
-   respiro não fica menor que 24. Os degraus usam só os valores desenhados. */
+   respiro não fica menor que 24. Abaixo de 1280 de largura vale sempre o degrau de 650, em
+   que a frase mantém as três linhas (decisão 212). Os degraus usam só os valores desenhados. */
 @media (min-width: 1024px) {
   .home {
     min-height: calc(100vh - var(--altura-barra));
@@ -398,14 +398,14 @@ em { font-style: normal; }
   }
 }
 @media (min-width: 1024px) and (height < 980px) {
-  .home { row-gap: var(--home-respiro-frase-medio); }
+  .home { row-gap: var(--space-64); }
   .home__frase {
     --marca-linha: var(--home-frase-media);
     font-size: var(--home-frase-media);
     line-height: var(--home-frase-media);
   }
 }
-@media (min-width: 1024px) and (height < 790px) {
+@media (min-width: 1024px) and (height < 790px), (min-width: 1024px) and (width < 1280px) {
   .home { row-gap: var(--space-48); }
   .home__frase {
     --marca-linha: var(--home-frase-baixa);
@@ -475,7 +475,8 @@ em { font-style: normal; }
 
 /* Sem rolagem no desktop (decisão 211), como a Home. A capa baixa vale só aqui: o card do
    próximo case, ao fim de um case, continua em 3:2. A capa nunca fica mais alta que o 3:2,
-   e a imagem é recortada pelo centro. */
+   e a imagem é recortada pelo centro. Abaixo de 1280 de largura, o degrau de 650, como na
+   Home (decisão 212). */
 @media (min-width: 1024px) {
   .trabalhos {
     min-height: calc(100vh - var(--altura-barra));
@@ -487,7 +488,7 @@ em { font-style: normal; }
 @media (min-width: 1024px) and (height < 1010px) {
   .trabalhos .card__capa { max-height: var(--capa-media); }
 }
-@media (min-width: 1024px) and (height < 790px) {
+@media (min-width: 1024px) and (height < 790px), (min-width: 1024px) and (width < 1280px) {
   .trabalhos { row-gap: var(--space-32); }
   .trabalhos__titulo {
     font-size: var(--trabalhos-titulo-baixo-size);
@@ -495,7 +496,6 @@ em { font-style: normal; }
   }
   .trabalhos__titulo br { display: none; }
   .trabalhos .card__capa { max-height: var(--capa-baixa); }
-  .trabalhos .card__texto { padding: var(--card-texto-respiro-baixo) var(--space-24); }
   .trabalhos .card__titulo {
     font-size: var(--card-titulo-baixo-size);
     line-height: var(--card-titulo-baixo-line);

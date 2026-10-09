@@ -54,7 +54,9 @@ dentro do bloco. Os números mudam com a largura; a relação não.
   Sobram 27 de respiro acima e abaixo.
 - **Em janelas mais altas o conteúdo cresce junto, até o tamanho original** (frase em 96, espaço
   de 96, bloco com 32, parágrafo em 26/39), alcançado com perto de 980 px de altura. Em 790 px:
-  frase em 80, espaço de 72, bloco com 32, parágrafo em 26.
+  frase em 80, espaço de 64, bloco com 32, parágrafo em 26.
+- **Abaixo de 1280 de largura, vale sempre o desenho do mínimo**, qualquer que seja a altura: é
+  o tamanho em que a frase mantém as suas três linhas escolhidas. Ver decisão 212.
 - **Abaixo do mínimo, a página volta a rolar**, sem cortar nada. Em tela estreita, nada muda.
   Ver decisão 211. Figma: seção "proposta · Home e Trabalhos sem rolagem (desktop)".
 - O marca-texto cobre um trecho da hero, **uma vez por página**, no acento de sistema.
@@ -117,6 +119,17 @@ Funcionalidade: Home
     Então a página gera com a falta visível, nomeando o elemento
     Quando a construção acontece no caminho de publicação
     Então ela recusa e nada é publicado
+
+  Cenário: A Home cabe na janela do desktop
+    Dado que a janela é de desktop, com pelo menos 650 de altura visível
+    Quando a Home abre
+    Então a página inteira cabe na janela, sem rolagem
+    E o respiro acima da frase é igual ao respiro abaixo do botão
+
+  Cenário: A janela é mais baixa que o mínimo
+    Dado que a janela de desktop tem menos de 650 de altura visível
+    Quando a Home abre
+    Então a página rola, e nada fica cortado ou sobreposto
 ```
 
 ## Transições

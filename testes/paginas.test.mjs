@@ -180,40 +180,73 @@ test('A coluna de mídia segue a regra da decisão 204', () => {
   assert.equal(margemDoPar(5000, 4365, 96), 96, 'texto mais baixo: fica só o respiro depois do texto');
 });
 
-test('Sem rolagem no desktop', () => {
-  // Decisão 211, regra de home/home.md e trabalhos/indice-de-trabalhos.md. O node não monta a
-  // página; a altura medida em cada janela fica com a conferência no navegador. Aqui, a forma.
-  const css = readFileSync(join(site.saida, 'estilo.css'), 'utf8');
-  const { base, largo, porAltura } = regrasPorLargura(css);
-  for (const pagina of ['.home', '.trabalhos']) {
-    // A página ocupa a janela menos a barra, e o conteúdo fica no meio.
-    assert.match(largo[pagina], /min-height: calc\(100vh - var\(--altura-barra\)\)/, `${pagina}: altura da janela`);
-    assert.match(largo[pagina], /min-height: calc\(100svh - var\(--altura-barra\)\)/, `${pagina}: altura da janela, com a barra do navegador`);
-    assert.match(largo[pagina], /align-content: center/, `${pagina}: conteúdo no meio`);
-    assert.match(largo[pagina], /padding-block: var\(--space-24\)[^}]*$/, `${pagina}: abaixo do mínimo, o respiro não fica menor que 24`);
-    assert.doesNotMatch(base[pagina], /min-height|align-content: center/, `${pagina}: na tela estreita, nada muda`);
-  }
-  assert.equal(porAltura.foraDoDesktop, undefined, 'nenhum degrau de altura vale fora do desktop');
-  // Os degraus: na âncora de 790 e na de 650; o tamanho original volta em 980 (Home) e 1010
-  // (Trabalhos).
-  assert.deepEqual(Object.keys(porAltura).sort(), ['1010', '790', '980']);
-  assert.match(porAltura['980']['.home__frase'], /font-size: var\(--home-frase-media\)/);
-  assert.match(porAltura['790']['.home__frase'], /font-size: var\(--home-frase-baixa\)/);
-  assert.match(porAltura['790']['.home__frase'], /--marca-linha: var\(--home-frase-baixa\)/, 'o marca-texto acompanha a frase');
-  assert.match(porAltura['790']['.home__paragrafo'], /font-size: var\(--home-abertura-size-baixa\)/);
-  assert.match(porAltura['1010']['.trabalhos .card__capa'], /max-height: var\(--capa-media\)/);
-  assert.match(porAltura['790']['.trabalhos .card__capa'], /max-height: var\(--capa-baixa\)/);
-  assert.match(porAltura['790']['.trabalhos__titulo br'], /display: none/, 'no mínimo, o título numa linha só');
+// Decisões 211 e 212, nos contratos home/home.md e trabalhos/indice-de-trabalhos.md. O node não
+// monta a página: a altura medida em cada janela fica com a conferência no navegador. Aqui, a
+// forma do CSS que produz o desenho.
+function semRolagem() {
+  return regrasPorLargura(readFileSync(join(site.saida, 'estilo.css'), 'utf8'));
+}
+
+// Nenhum valor escrito à mão nos degraus: eles só trocam uma variável por outra.
+function soVariaveis(porAltura, filtro) {
   for (const [altura, regras] of Object.entries(porAltura)) {
+    if (altura === 'larguraDoMinimo') continue;
     for (const [seletor, corpo] of Object.entries(regras)) {
-      // Nenhum valor escrito à mão: os degraus só trocam uma variável por outra.
+      if (!filtro.test(seletor)) continue;
       for (const [, prop, valor] of corpo.matchAll(/([\w-]+):\s*([^;]+);/g)) {
         assert.match(valor.trim(), /^(var\(--[\w-]+\)( var\(--[\w-]+\))?|none)$/, `${altura}, ${seletor} { ${prop}: ${valor} }`);
       }
-      // A capa baixa vale só em Trabalhos: o card do próximo case continua em 3:2.
-      if (/card/.test(seletor)) assert.match(seletor, /^\.trabalhos /, `${altura}: ${seletor} fora de Trabalhos`);
     }
   }
+}
+
+function ocupaAJanela(base, largo, pagina) {
+  // A página ocupa a janela menos a barra, e o conteúdo fica no meio, com o mesmo respiro em
+  // cima e embaixo.
+  assert.match(largo[pagina], /min-height: calc\(100vh - var\(--altura-barra\)\)/, `${pagina}: altura da janela`);
+  assert.match(largo[pagina], /min-height: calc\(100svh - var\(--altura-barra\)\)/, `${pagina}: altura da janela, com a barra do navegador`);
+  assert.match(largo[pagina], /align-content: center/, `${pagina}: conteúdo no meio`);
+  assert.doesNotMatch(base[pagina], /min-height|align-content: center/, `${pagina}: na tela estreita, nada muda`);
+}
+
+test('A Home cabe na janela do desktop', () => {
+  const { base, largo, porAltura } = semRolagem();
+  ocupaAJanela(base, largo, '.home');
+  // Degraus: abaixo de 980, o desenho de 790; abaixo de 790, ou de 1280 de largura, o de 650.
+  assert.match(porAltura['980']['.home__frase'], /font-size: var\(--home-frase-media\)/);
+  assert.match(porAltura['980']['.home'], /row-gap: var\(--space-64\)/, 'em 790, 64 entre a frase e o bloco');
+  assert.match(porAltura['790']['.home__frase'], /font-size: var\(--home-frase-baixa\)/);
+  assert.match(porAltura['790']['.home__frase'], /--marca-linha: var\(--home-frase-baixa\)/, 'o marca-texto acompanha a frase');
+  assert.match(porAltura['790']['.home__paragrafo'], /font-size: var\(--home-abertura-size-baixa\)/);
+  soVariaveis(porAltura, /home/);
+});
+
+test('Trabalhos cabe na janela do desktop', () => {
+  const { base, largo, porAltura } = semRolagem();
+  ocupaAJanela(base, largo, '.trabalhos');
+  // Degraus: abaixo de 1010, o desenho de 790; abaixo de 790, ou de 1280 de largura, o de 650.
+  assert.match(porAltura['1010']['.trabalhos .card__capa'], /max-height: var\(--capa-media\)/);
+  assert.match(porAltura['790']['.trabalhos .card__capa'], /max-height: var\(--capa-baixa\)/);
+  assert.match(porAltura['790']['.trabalhos__titulo br'], /display: none/, 'no mínimo, o título numa linha só');
+  assert.match(porAltura['790']['.trabalhos .card__titulo'], /font-size: var\(--card-titulo-baixo-size\)/);
+  assert.equal(porAltura['790']['.trabalhos .card__texto'], undefined, 'o texto do card mantém o respiro de 24');
+  soVariaveis(porAltura, /trabalhos/);
+  for (const regras of Object.values(porAltura)) {
+    // A capa baixa vale só em Trabalhos: o card do próximo case continua em 3:2.
+    for (const seletor of Object.keys(regras)) if (/card/.test(seletor)) assert.match(seletor, /^\.trabalhos /, `${seletor} fora de Trabalhos`);
+  }
+});
+
+test('A janela é mais baixa que o mínimo', () => {
+  // Abaixo do mínimo, vale o desenho de 650 e a página rola, com respiro de pelo menos 24.
+  // Os degraus só existem no desktop; abaixo de 1280 de largura, vale sempre o de 650.
+  const { largo, porAltura } = semRolagem();
+  for (const pagina of ['.home', '.trabalhos']) {
+    assert.match(largo[pagina], /padding-block: var\(--space-24\)[^}]*$/, `${pagina}: abaixo do mínimo, o respiro não fica menor que 24`);
+  }
+  assert.equal(porAltura.foraDoDesktop, undefined, 'nenhum degrau de altura vale fora do desktop');
+  assert.deepEqual(Object.keys(porAltura).filter((k) => k !== 'larguraDoMinimo').sort(), ['1010', '790', '980']);
+  assert.deepEqual(porAltura.larguraDoMinimo, ['790 abaixo de 1280', '790 abaixo de 1280'], 'Home e Trabalhos: abaixo de 1280 de largura, o desenho de 650');
 });
 
 test('O par de telas é uma peça só', () => {
@@ -421,7 +454,10 @@ function regrasPorLargura(css) {
       }
       const corpo = semComentarios.slice(abre + 1, j - 1);
       if (seletor.startsWith('@media')) {
-        const degrau = seletor.match(/^@media \(min-width: 1024px\) and \(height < (\d+)px\)$/);
+        // O degrau mais baixo vale também em toda largura abaixo de 1280 (decisão 212); ele é
+        // guardado pela altura, e a largura fica anotada nele.
+        const degrau = seletor.match(/^@media \(min-width: 1024px\) and \(height < (\d+)px\)(?:, \(min-width: 1024px\) and \(width < (\d+)px\))?$/);
+        if (degrau?.[2]) porAltura.larguraDoMinimo = [...(porAltura.larguraDoMinimo ?? []), `${degrau[1]} abaixo de ${degrau[2]}`];
         if (/^@media \(min-width: 1024px\)$/.test(seletor) || degrau) {
           const salvo = i;
           i = abre + 1;

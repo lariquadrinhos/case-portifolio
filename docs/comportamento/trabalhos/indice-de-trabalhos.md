@@ -31,11 +31,11 @@ Os cases em cards. É para onde a home leva e para onde a barra aponta. Existe p
 - **No desktop, a página ocupa a altura da janela e cabe inteira, sem rolagem**, com respiro
   igual acima do título e abaixo dos cards. **Referência mínima: 1366×768**, uns 650 px
   visíveis. Nela: título numa linha só, em **40/48**; **32** até os cards; capa dos cards com
-  **285** de altura, recortada pelo centro; título do card em **28/36**; texto do card com 20 de
-  respiro. Sobram 37 acima e abaixo. **Em 790 px:** título em duas linhas de **56/62**, **48** até
+  **285** de altura, recortada pelo centro; título do card em **28/36**; texto do card com 24 de
+  respiro. Sobram 33 acima e abaixo. **Em 790 px:** título em duas linhas de **56/62**, **48** até
   os cards, capa com **314**, título do card em 36/44. **O tamanho original**, capa em 3:2 com
   419, volta perto de 1010 px de altura. Abaixo do mínimo, a página rola; em tela estreita,
-  nada muda. **A capa mais baixa vale só aqui**: o card do próximo case, ao fim de um case,
+  nada muda. Abaixo de 1280 de largura, vale sempre o desenho do mínimo, como na Home. **A capa mais baixa vale só aqui**: o card do próximo case, ao fim de um case,
   continua em 3:2. Ver decisão 211.
 
 **Por que ordem fixa e não "mais recente primeiro":** uma regra automática decide para
@@ -102,6 +102,17 @@ Funcionalidade: Índice de trabalhos
     Então o card gera com a falta visível no lugar da capa
     Quando a construção acontece no caminho de publicação
     Então ela recusa e nada é publicado
+
+  Cenário: Trabalhos cabe na janela do desktop
+    Dado que a janela é de desktop, com pelo menos 650 de altura visível
+    Quando a página de Trabalhos abre
+    Então o título e os dois cards cabem na janela, sem rolagem
+    E o respiro acima do título é igual ao respiro abaixo dos cards
+
+  Cenário: A janela é mais baixa que o mínimo
+    Dado que a janela de desktop tem menos de 650 de altura visível
+    Quando a página de Trabalhos abre
+    Então a página rola, e nada fica cortado ou sobreposto
 ```
 
 ## Transições

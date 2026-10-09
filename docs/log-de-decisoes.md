@@ -6976,3 +6976,34 @@ capas no formato baixo fica como possibilidade, não como pedido.
 
 **Consequência.** Regras em `home/home.md` e `trabalhos/indice-de-trabalhos.md`. A capa baixa vale só
 em Trabalhos; o card do próximo case continua em 3:2. O site precisa medir a altura da janela.
+
+---
+
+## 212 · Os espaços da 211 voltam à escala, e abaixo de 1280 de largura vale o desenho do mínimo
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** home
+
+**Gatilho.** Três pontos do dev e um do tester depois da 211. Dois espaços fora da escala (72 entre a
+frase e o bloco da Home em 790; 20 no texto do card em 650). O salto do respiro ao redimensionar,
+porque a regra vai por degraus. A largura: entre 1024 e 1279, a frase da Home quebrava sozinha em
+quatro ou cinco linhas, contra a quebra escolhida do contrato, e em 1024 a janela mais alta rolava e a
+mais baixa não; isso vinha de antes da 211. E onde listar as medidas novas sem token, agora que o
+trabalho vai direto na `main`, sem PR.
+
+**Decisão.** *"vai com as quatro"*, todas propostas minhas:
+1. **72 vira 64, e 20 vira 24**, da escala de espaço. Home em 790 com 42 de respiro; Trabalhos em 650
+   com 33.
+2. **Degraus**, sem interpolar: só aparecem tamanhos desenhados.
+3. **Abaixo de 1280 de largura, vale o desenho do mínimo**, qualquer que seja a altura: a frase fica
+   nas três linhas escolhidas, e as duas páginas cabem.
+4. **As medidas novas sem token entram na P65**: 64, 80, 22/33, 40/48, 28/36, 285 e 314.
+
+**Alternativa descartada.** *Interpolar com clamp*: contínuo, mas cria tamanhos que ninguém desenhou.
+*Aceitar a quebra automática entre 1024 e 1279*: contraria o contrato da Home. *Manter 72 e 20*: fogem
+da escala sem motivo de leitura.
+
+**Custo aceito.** Quem arrasta a janela vê o respiro mudar de uma vez nos pontos de degrau. Entre 1024
+e 1279, uma janela alta mostra a Home no tamanho do mínimo, com sobra de respiro.
+
+**Consequência.** Figma: os quatro quadros afetados reajustados. `home/home.md`,
+`trabalhos/indice-de-trabalhos.md` e a P65 atualizados.
