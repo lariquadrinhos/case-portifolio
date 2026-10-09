@@ -24,7 +24,7 @@ etapa, como evidência, não como declaração à parte.
   marcador `<!-- só no desktop -->` no arquivo de conteúdo. Uma tabela de três colunas não cabe
   em 327px sem rolar para o lado, e rolar para o lado escondia metade da comparação de quem não
   usa o dedo. **O que o estreito perde está registrado como falta, não como decisão silenciosa**.
-Ver P57.
+Ver decisão 226.
 - A página abre com **título do case, frase de abertura e tira de destaques**, nessa ordem,
   antes de qualquer capítulo.
 - **O título do case quebra onde o Figma quebra.** Na tela estreita, o do Finanças é *"A planilha
@@ -241,7 +241,7 @@ se concentrar num ponto.
 - **Tabela ocupa a largura inteira do conteúdo, não a coluna de leitura.** A regra da medida
   governa prosa; tabela é dado, e o que governa é a comparação ficar legível lado a lado.
 - **Em tela estreita a tabela não aparece**, pela regra do topo deste contrato (decisão 132, que
-  substituiu a rolagem horizontal com aviso em palavras). Ver P57.
+  substituiu a rolagem horizontal com aviso em palavras). Ver decisão 226.
 
 ## Comportamento
 
