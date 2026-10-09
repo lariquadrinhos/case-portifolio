@@ -7264,3 +7264,26 @@ passam a ser dela.
 **Custo aceito.** Nenhum.
 
 **Consequência.** A P31 sai da lista, que fica com 11 perguntas. Nada a construir.
+
+---
+
+## 224 · Quatro perguntas saem da lista porque já tinham resposta
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** conteudo
+
+**Gatilho.** *"confere se as perguntas já não tem respostas"*. Conferi as 11 contra o log, os contratos
+e o site no ar.
+
+**Decisão.** *"sim, pode tirar"*.
+- **P12** (endereço para uma seção do case): cada capítulo tem âncora, como
+  `/trabalhos/reembolso/#diagnostico`, e `case/trilha.md` já tem o cenário de quem chega por link direto.
+- **P14** (volta do protótipo): links externos abrem em outra aba (`case/pagina-de-case.md`), então a
+  página do case fica onde estava, com trilha e rolagem.
+- **P16** (textos públicos antes do site): o site está no ar com eles.
+- **P17** (não há Storybook): os contratos marcam o Storybook como "não se aplica".
+
+**Alternativa descartada.** Nenhuma.
+
+**Custo aceito.** Nenhum.
+
+**Consequência.** A lista fica com 7: P57, P59, P63, P65, P21, P09 e P15. Nada a construir.

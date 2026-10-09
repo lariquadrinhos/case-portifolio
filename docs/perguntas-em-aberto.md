@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 9 de outubro de 2026 · **11 perguntas**, nenhuma travando
+**Atualizado:** 9 de outubro de 2026 · **7 perguntas**, nenhuma travando
 
 ---
 
@@ -195,14 +195,6 @@ categorias: o que é derivado da rolagem **não anima nunca**; o que a pessoa ac
 página **salta sem transição** com movimento reduzido; o que aparece ou some **nunca tem
 transição**. O sistema não precisa de token de duração.
 
-### P12 · Endereço para uma seção do case
-Quem recebe link de outra pessoa pode querer apontar para uma etapa específica.
-**Momento:** antes de desenhar o domínio Case. · *Event storming, hotspot 8*
-
-### P14 · Volta do protótipo
-A pessoa abre o protótipo em nova aba e volta. Trilha e rolagem preservadas?
-**Momento:** antes do código. · *Event storming, hotspot 7*
-
 ### P15 · Qual domínio
 "Domínio próprio" é critério de liberação; nenhum foi escolhido. Publicar em
 `lariquadrinhos.github.io` funciona desde já, e apontar um domínio depois não gera
@@ -210,18 +202,12 @@ retrabalho: por isso espera.
 **Momento:** antes da Fase 6. Comprar leva minutos, mas a propagação de DNS e a emissão do
 certificado levam horas.
 
-### P16 · Os textos do site ficam públicos desde já
-Seis arquivos entraram no repositório público por um `git add -A`. Os três textos do site
-serão públicos no site de qualquer forma; a questão é se antes dele existir.
-**Momento:** a qualquer tempo, mas cada dia conta.
-
 ---
 
 ## Adaptações dos briefings a este projeto
 
-### P17 · Não há Storybook
-A checagem de CI 1 e o campo `storybook.usa` se aplicam?
-**Momento:** primeira execução da skill do contrato.
+Nenhuma em aberto. A P17 (não há Storybook) foi resolvida na prática: os contratos marcam o
+Storybook como "não se aplica" (decisão 224).
 
 ## ~~P46~~: Resolvida pela decisão 051
 
