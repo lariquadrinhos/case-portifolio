@@ -190,6 +190,7 @@ test('Sem rolagem no desktop', () => {
     assert.match(largo[pagina], /min-height: calc\(100vh - var\(--altura-barra\)\)/, `${pagina}: altura da janela`);
     assert.match(largo[pagina], /min-height: calc\(100svh - var\(--altura-barra\)\)/, `${pagina}: altura da janela, com a barra do navegador`);
     assert.match(largo[pagina], /align-content: center/, `${pagina}: conteúdo no meio`);
+    assert.match(largo[pagina], /padding-block: var\(--space-24\)[^}]*$/, `${pagina}: abaixo do mínimo, o respiro não fica menor que 24`);
     assert.doesNotMatch(base[pagina], /min-height|align-content: center/, `${pagina}: na tela estreita, nada muda`);
   }
   assert.equal(porAltura.foraDoDesktop, undefined, 'nenhum degrau de altura vale fora do desktop');
