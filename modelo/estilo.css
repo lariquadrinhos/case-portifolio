@@ -2,10 +2,9 @@
    A largura estreita é a base; o modo Desktop entra em min-width: 1024px (ver tokens.mjs). O
    case sai como estilo-case.css, o mesmo CSS com a troca em 1280 (decisão 225).
 
-   Medidas que o Figma desenha sem variável ficam todas aqui, num lugar só, cada uma com o
-   nó de onde veio. Não são improviso: são o desenho. Mas também não são token, e por isso
-   estão listadas na P65 (docs/perguntas-em-aberto.md), para virar variável ou ser corrigidas
-   no Figma. */
+   Medidas de componente: o que o Figma desenha sem variável e só existe numa peça fica aqui,
+   num lugar só, cada medida com o nó de onde veio. Não são improviso: são o desenho. Token é
+   o que se repete pelo sistema; estas não se repetem. Ver decisão 228. */
 
 :root {
   --largura-quadro: 1440px;            /* largura das telas desktop */
