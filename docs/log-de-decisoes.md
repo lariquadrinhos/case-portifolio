@@ -7287,3 +7287,26 @@ e o site no ar.
 **Custo aceito.** Nenhum.
 
 **Consequência.** A lista fica com 7: P57, P59, P63, P65, P21, P09 e P15. Nada a construir.
+
+---
+
+## 225 · Entre 1024 e 1280, o case usa o modo estreito com a coluna limitada
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** P63. Medido no site no ar, em caracteres por linha da prosa: logo abaixo de 1024, a coluna
+única esticava até 103 (Reembolso) e 104 (Finanças); entre 1024 e 1280, a coluna do desktop ficava com
+38 a 57. O piso é 65.
+
+**Decisão.** Opção 1, proposta minha, desenhada em `602:1487` (Reembolso em 1100) e aprovada:
+*"aprovado, limita o botão e manda pro dev"*. Abaixo de 1280, o case usa o modo estreito, com a coluna
+de leitura de no máximo 680, centralizada (uns 70 caracteres). A mídia fica nos 411 do desktop,
+centralizada. O bloco de destaque sangra até as bordas. O botão do convite tem a largura do texto.
+
+**Alternativa descartada.** *Só limitar a coluna estreita*: deixava 1024 a 1280 apertado. *Desenhar
+uma largura intermediária*: pedia desenho novo dos dois cases.
+
+**Custo aceito.** Entre 1024 e 1280, a mídia vem entre os textos, como no celular, e não ao lado. O
+marca-texto da frase de abertura não foi desenhado nessa largura: o código o posiciona.
+
+**Consequência.** Regra em `case/pagina-de-case.md`. A P63 sai da lista, que fica com 6.

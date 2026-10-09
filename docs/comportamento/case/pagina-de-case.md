@@ -221,6 +221,21 @@ há parede para quebrar.
 Três em cinco capítulos, e espaçados: 2, 3, 4. O respiro se distribui pela leitura em vez de
 se concentrar num ponto.
 
+## Entre 1024 e 1280 de largura
+
+- **Abaixo de 1280 de largura, o case usa o modo de tela estreita**, com a barra e a faixa de
+  progresso da tela estreita. É a mesma fronteira da Home e de Trabalhos (decisão 212).
+- **A coluna de leitura tem no máximo 680 e fica centralizada**, uns 70 caracteres por linha.
+  Abaixo de 728 de largura (680 mais 24 de cada lado), ela volta a ocupar a largura com a margem
+  da tela estreita.
+- **A mídia de prova tem no máximo 411 de largura**, a mesma do desktop, e fica centralizada na
+  coluna: as imagens são exportadas para 411 e esticá-las as borraria.
+- **O bloco de destaque sangra até as bordas**, como na tela estreita, e o texto dentro dele fica
+  na coluna de 680.
+- **O botão do convite ao contato tem a largura do texto**, como no desktop, e não a da coluna.
+- O card do próximo case acompanha a coluna, com a capa em 3:2.
+- Figma: `602:1487`. Ver decisão 225.
+
 ## Tabelas dentro do case
 
 - **Tabela ocupa a largura inteira do conteúdo, não a coluna de leitura.** A regra da medida

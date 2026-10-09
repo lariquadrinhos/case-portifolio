@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 9 de outubro de 2026 · **7 perguntas**, nenhuma travando
+**Atualizado:** 9 de outubro de 2026 · **6 perguntas**, nenhuma travando
 
 ---
 
@@ -145,17 +145,6 @@ introduz um defeito visível.
 ### ~~P42~~ · Resolvida pela decisão 176
 Os dois cases ganharam `<!-- bloco: hero -->` antes do título. O hero termina na última linha
 da tira; a prosa do capítulo 1 começa logo depois.
-
-### P63 · As páginas de case entre 1024 e 1440 de largura
-As telas existem em 1440 e em 375, e o código troca de modo em **1024**, número que foi suposição
-minha. Na Home e em Trabalhos, as decisões 211 a 213 já resolveram o desktop. **Nas páginas de case,
-não:** em 1024 a coluna de leitura fica com cerca de 48 caracteres, abaixo do piso de 65; logo abaixo
-de 1024, a coluna única da tela estreita fica larga demais e passa dos 75. Acima de 1440 o conteúdo
-fica centrado em 1440 e as faixas de cor sangram.
-**Opções:** desenhar o case numa largura intermediária (1024 ou 1280) · mover o ponto de troca dos
-cases para onde a medida do texto ainda cabe (perto de 1280) e limitar a largura da coluna estreita ·
-aceitar como está.
-**Momento:** antes de divulgar o endereço. Não trava a revisão. · *Código: `QUEBRA_DESKTOP` em `construcao/tokens.mjs`*
 
 ### P65 · Valores que o Figma desenha sem variável
 O código os concentra num bloco só, no topo de `modelo/estilo.css`, cada um com o nó de origem.
