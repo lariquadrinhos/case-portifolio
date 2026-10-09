@@ -180,6 +180,41 @@ test('A coluna de mídia segue a regra da decisão 204', () => {
   assert.equal(margemDoPar(5000, 4365, 96), 96, 'texto mais baixo: fica só o respiro depois do texto');
 });
 
+test('Sem rolagem no desktop', () => {
+  // Decisão 211, regra de home/home.md e trabalhos/indice-de-trabalhos.md. O node não monta a
+  // página; a altura medida em cada janela fica com a conferência no navegador. Aqui, a forma.
+  const css = readFileSync(join(site.saida, 'estilo.css'), 'utf8');
+  const { base, largo, porAltura } = regrasPorLargura(css);
+  for (const pagina of ['.home', '.trabalhos']) {
+    // A página ocupa a janela menos a barra, e o conteúdo fica no meio.
+    assert.match(largo[pagina], /min-height: calc\(100vh - var\(--altura-barra\)\)/, `${pagina}: altura da janela`);
+    assert.match(largo[pagina], /min-height: calc\(100svh - var\(--altura-barra\)\)/, `${pagina}: altura da janela, com a barra do navegador`);
+    assert.match(largo[pagina], /align-content: center/, `${pagina}: conteúdo no meio`);
+    assert.doesNotMatch(base[pagina], /min-height|align-content: center/, `${pagina}: na tela estreita, nada muda`);
+  }
+  assert.equal(porAltura.foraDoDesktop, undefined, 'nenhum degrau de altura vale fora do desktop');
+  // Os degraus: na âncora de 790 e na de 650; o tamanho original volta em 980 (Home) e 1010
+  // (Trabalhos).
+  assert.deepEqual(Object.keys(porAltura).sort(), ['1010', '790', '980']);
+  assert.match(porAltura['980']['.home__frase'], /font-size: var\(--home-frase-media\)/);
+  assert.match(porAltura['790']['.home__frase'], /font-size: var\(--home-frase-baixa\)/);
+  assert.match(porAltura['790']['.home__frase'], /--marca-linha: var\(--home-frase-baixa\)/, 'o marca-texto acompanha a frase');
+  assert.match(porAltura['790']['.home__paragrafo'], /font-size: var\(--home-abertura-size-baixa\)/);
+  assert.match(porAltura['1010']['.trabalhos .card__capa'], /max-height: var\(--capa-media\)/);
+  assert.match(porAltura['790']['.trabalhos .card__capa'], /max-height: var\(--capa-baixa\)/);
+  assert.match(porAltura['790']['.trabalhos__titulo br'], /display: none/, 'no mínimo, o título numa linha só');
+  for (const [altura, regras] of Object.entries(porAltura)) {
+    for (const [seletor, corpo] of Object.entries(regras)) {
+      // Nenhum valor escrito à mão: os degraus só trocam uma variável por outra.
+      for (const [, prop, valor] of corpo.matchAll(/([\w-]+):\s*([^;]+);/g)) {
+        assert.match(valor.trim(), /^(var\(--[\w-]+\)( var\(--[\w-]+\))?|none)$/, `${altura}, ${seletor} { ${prop}: ${valor} }`);
+      }
+      // A capa baixa vale só em Trabalhos: o card do próximo case continua em 3:2.
+      if (/card/.test(seletor)) assert.match(seletor, /^\.trabalhos /, `${altura}: ${seletor} fora de Trabalhos`);
+    }
+  }
+});
+
 test('O par de telas é uma peça só', () => {
   // `<!-- bloco: par -->` (decisão 205): duas imagens, cada uma com o seu texto alternativo,
   // e uma legenda só, a da segunda.
@@ -367,6 +402,8 @@ test('O título do case quebra onde o Figma quebra', () => {
 function regrasPorLargura(css) {
   const base = {};
   const largo = {};
+  // Degraus de altura do desktop (decisão 211): `@media (min-width: 1024px) and (height < Npx)`.
+  const porAltura = {};
   const semComentarios = css.replace(/\/\*[\s\S]*?\*\//g, '');
   let i = 0;
   const lerBloco = (destino, fim) => {
@@ -383,11 +420,14 @@ function regrasPorLargura(css) {
       }
       const corpo = semComentarios.slice(abre + 1, j - 1);
       if (seletor.startsWith('@media')) {
-        if (/^@media \(min-width: 1024px\)$/.test(seletor)) {
+        const degrau = seletor.match(/^@media \(min-width: 1024px\) and \(height < (\d+)px\)$/);
+        if (/^@media \(min-width: 1024px\)$/.test(seletor) || degrau) {
           const salvo = i;
           i = abre + 1;
-          lerBloco(largo, j - 1);
+          lerBloco(degrau ? (porAltura[degrau[1]] ??= {}) : largo, j - 1);
           i = salvo;
+        } else if (/height/.test(seletor)) {
+          porAltura.foraDoDesktop = seletor;
         }
       } else if (destino) {
         for (const sel of seletor.split(',').map((x) => x.trim())) destino[sel] = (destino[sel] ?? '') + corpo;
@@ -396,5 +436,5 @@ function regrasPorLargura(css) {
     }
   };
   lerBloco(base, semComentarios.length);
-  return { base, largo };
+  return { base, largo, porAltura };
 }

@@ -23,6 +23,20 @@
   --home-etiqueta-size: 16px;          /* 59:3, só no desktop: fora da escala de tipo */
   --home-paragrafo-largura: 596px;     /* 59:5 */
   --home-paragrafo-largura-estreita: 289px; /* 66:16 */
+  /* Home e Trabalhos sem rolagem (decisão 211), seção 592:1383: as âncoras de 790 e de 650 de
+     altura. Fora da escala de tipo e de espaço, como o resto deste bloco. */
+  --home-frase-media: 80px;            /* 592:1414, frase em 80/80 */
+  --home-frase-baixa: 64px;            /* 592:1388, frase em 64/64 */
+  --home-respiro-frase-medio: 72px;    /* 592:1419: frase até o bloco */
+  --home-abertura-size-baixa: 22px;    /* 592:1394 */
+  --home-abertura-line-baixa: 33px;    /* 592:1394 */
+  --trabalhos-titulo-baixo-size: 40px; /* 592:1535, numa linha só */
+  --trabalhos-titulo-baixo-line: 48px; /* 592:1535 */
+  --capa-media: 314px;                 /* 592:1598 */
+  --capa-baixa: 285px;                 /* 592:1588 */
+  --card-titulo-baixo-size: 28px;      /* 592:1590 */
+  --card-titulo-baixo-line: 36px;      /* 592:1590 */
+  --card-texto-respiro-baixo: 20px;    /* 592:1589: 20 em cima e embaixo, 24 dos lados */
   --erro-topo-largo: 160px;            /* 136:41: conteúdo em y=224 */
   --midia-vazia-proporcao: 4 / 3;      /* lacuna de mídia, 411×308 e 327×245 */
   --video-proporcao: 411 / 510;        /* 379:454, vídeo em pé */
@@ -371,6 +385,40 @@ em { font-style: normal; }
   .home__identificacao { font-size: var(--home-etiqueta-size); }
 }
 
+/* Sem rolagem no desktop (decisão 211): a página ocupa a altura da janela, menos a barra, e o
+   conteúdo fica no meio, com o mesmo respiro em cima e embaixo. Em janela mais baixa, o
+   conteúdo desce em degraus até a âncora de 650 (1366×768); abaixo dela, a página rola, e o
+   respiro não fica menor que 24. Os degraus usam só os valores desenhados. */
+@media (min-width: 1024px) {
+  .home {
+    min-height: calc(100vh - var(--altura-barra));
+    min-height: calc(100svh - var(--altura-barra));
+    align-content: center;
+    padding-block: var(--space-24);
+  }
+}
+@media (min-width: 1024px) and (height < 980px) {
+  .home { row-gap: var(--home-respiro-frase-medio); }
+  .home__frase {
+    --marca-linha: var(--home-frase-media);
+    font-size: var(--home-frase-media);
+    line-height: var(--home-frase-media);
+  }
+}
+@media (min-width: 1024px) and (height < 790px) {
+  .home { row-gap: var(--space-48); }
+  .home__frase {
+    --marca-linha: var(--home-frase-baixa);
+    font-size: var(--home-frase-baixa);
+    line-height: var(--home-frase-baixa);
+  }
+  .home__bloco { gap: var(--space-24); }
+  .home__paragrafo {
+    font-size: var(--home-abertura-size-baixa);
+    line-height: var(--home-abertura-line-baixa);
+  }
+}
+
 /* ── Card de case ────────────────────────────────────────────────────────── */
 
 .cor-azul { --case-surface: var(--accent-azul-surface); --case-strong: var(--accent-azul-strong); }
@@ -423,6 +471,35 @@ em { font-style: normal; }
 @media (min-width: 1024px) {
   .trabalhos { row-gap: var(--space-48); padding-block: var(--space-96); }
   .trabalhos__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--calha); }
+}
+
+/* Sem rolagem no desktop (decisão 211), como a Home. A capa baixa vale só aqui: o card do
+   próximo case, ao fim de um case, continua em 3:2. A capa nunca fica mais alta que o 3:2,
+   e a imagem é recortada pelo centro. */
+@media (min-width: 1024px) {
+  .trabalhos {
+    min-height: calc(100vh - var(--altura-barra));
+    min-height: calc(100svh - var(--altura-barra));
+    align-content: center;
+    padding-block: var(--space-24);
+  }
+}
+@media (min-width: 1024px) and (height < 1010px) {
+  .trabalhos .card__capa { max-height: var(--capa-media); }
+}
+@media (min-width: 1024px) and (height < 790px) {
+  .trabalhos { row-gap: var(--space-32); }
+  .trabalhos__titulo {
+    font-size: var(--trabalhos-titulo-baixo-size);
+    line-height: var(--trabalhos-titulo-baixo-line);
+  }
+  .trabalhos__titulo br { display: none; }
+  .trabalhos .card__capa { max-height: var(--capa-baixa); }
+  .trabalhos .card__texto { padding: var(--card-texto-respiro-baixo) var(--space-24); }
+  .trabalhos .card__titulo {
+    font-size: var(--card-titulo-baixo-size);
+    line-height: var(--card-titulo-baixo-line);
+  }
 }
 
 /* ── Case ─────────────────────────────────────────────────────────────────── */

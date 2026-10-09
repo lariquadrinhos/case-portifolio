@@ -28,6 +28,15 @@ Os cases em cards. É para onde a home leva e para onde a barra aponta. Existe p
 - **A página tem título**, acima dos cards, convidando a olhá-los.
 - **A ordem dos cards é fixa e declarada, nunca derivada de data.** Hoje: Finanças PF+PJ,
   depois Reembolso SulAmérica.
+- **No desktop, a página ocupa a altura da janela e cabe inteira, sem rolagem**, com respiro
+  igual acima do título e abaixo dos cards. **Referência mínima: 1366×768**, uns 650 px
+  visíveis. Nela: título numa linha só, em **40/48**; **32** até os cards; capa dos cards com
+  **285** de altura, recortada pelo centro; título do card em **28/36**; texto do card com 20 de
+  respiro. Sobram 37 acima e abaixo. **Em 790 px:** título em duas linhas de **56/62**, **48** até
+  os cards, capa com **314**, título do card em 36/44. **O tamanho original**, capa em 3:2 com
+  419, volta perto de 1010 px de altura. Abaixo do mínimo, a página rola; em tela estreita,
+  nada muda. **A capa mais baixa vale só aqui**: o card do próximo case, ao fim de um case,
+  continua em 3:2. Ver decisão 211.
 
 **Por que ordem fixa e não "mais recente primeiro":** uma regra automática decide para
 sempre sem ninguém olhar, o terceiro case subiria ao topo sozinho, talvez certo, talvez

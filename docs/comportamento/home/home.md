@@ -44,6 +44,19 @@ querer ver os trabalhos.
 
 O que a regra fixa é a **relação**: respiro igual em cima e embaixo, espaçamento uniforme
 dentro do bloco. Os números mudam com a largura; a relação não.
+
+### Sem rolagem no desktop
+
+- **No desktop, a Home ocupa a altura da janela e cabe inteira, sem rolagem.** Respiro igual
+  acima e abaixo do conteúdo, entre a barra e o pé da janela.
+- **A referência mínima é 1366×768**, com uns 650 px visíveis. Nela: frase em **64/64**,
+  espaço entre frase e bloco **48**, bloco com **24** entre as peças e parágrafo em **22/33**.
+  Sobram 27 de respiro acima e abaixo.
+- **Em janelas mais altas o conteúdo cresce junto, até o tamanho original** (frase em 96, espaço
+  de 96, bloco com 32, parágrafo em 26/39), alcançado com perto de 980 px de altura. Em 790 px:
+  frase em 80, espaço de 72, bloco com 32, parágrafo em 26.
+- **Abaixo do mínimo, a página volta a rolar**, sem cortar nada. Em tela estreita, nada muda.
+  Ver decisão 211. Figma: seção "proposta · Home e Trabalhos sem rolagem (desktop)".
 - O marca-texto cobre um trecho da hero, **uma vez por página**, no acento de sistema.
   Na home esse trecho está no título; num case pode estar na frase de abertura. Fora da
   hero não existe.

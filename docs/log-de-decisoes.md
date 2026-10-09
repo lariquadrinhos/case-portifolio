@@ -6948,3 +6948,31 @@ mesmo que o arquivo seja trocado depois. O currículo diz *Product Designer · U
 Designer*.
 
 **Consequência.** A falta do currículo some do site.
+
+---
+
+## 211 · Home e Trabalhos cabem na janela do desktop, sem rolagem
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** home · `#escopo`
+
+**Gatilho.** *"a tela da home e dos trabalhos devia caber inteira sem rolagem"*. Medido no site: em
+1366×768, a Home passava 211 px e Trabalhos 218 px; mesmo em 1440×900, 79 e 111, sem contar a barra do
+navegador.
+
+**Decisão.** No desktop, as duas páginas ocupam a altura da janela e cabem inteiras, com o conteúdo
+centralizado entre a barra e o pé. Referência mínima **1366×768** (uns 650 px visíveis), escolhida por
+ela, só desktop. No mínimo: a frase da Home em 64 e o parágrafo em 22; o título de Trabalhos numa
+linha, em 40; as capas com 285 de altura. Em janelas mais altas, tudo cresce até o tamanho original.
+Abaixo do mínimo, rola. Desenhado em oito quadros (dois temas, duas alturas, 650 e 790), numa seção
+de proposta, e aprovado.
+
+**Alternativa descartada.** *Referência 1440×900*: o ajuste seria menor, e quem tem um notebook comum
+rolaria. *Incluir o celular*: em Trabalhos, os dois cards empilhados pedem quase 1200 px. *Respiros
+fixos e conteúdo do tamanho original*: é o que não cabe.
+
+**Custo aceito.** O título da Home perde força no mínimo. As capas ficam panorâmicas e são recortadas
+pelo centro: o topo do tablet do Finanças e o dos celulares do Reembolso saem cortados; recompor as
+capas no formato baixo fica como possibilidade, não como pedido.
+
+**Consequência.** Regras em `home/home.md` e `trabalhos/indice-de-trabalhos.md`. A capa baixa vale só
+em Trabalhos; o card do próximo case continua em 3:2. O site precisa medir a altura da janela.
