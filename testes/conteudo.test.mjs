@@ -2,11 +2,12 @@
 
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cpSync, rmSync, existsSync, readdirSync } from 'node:fs';
+import { cpSync, rmSync, existsSync, readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { raizTemporaria, construirEm, texto, RAIZ } from './ajuda.mjs';
 import { caminhoDoCase } from '../construcao/interface.mjs';
 import { lerCase } from '../construcao/conteudo.mjs';
+import { escapar } from '../construcao/markdown.mjs';
 
 const FINANCAS = 'case-study-financas-pf-pj.md';
 const REEMBOLSO = 'case-study-reembolso-sulamerica.md';
@@ -14,6 +15,7 @@ const REEMBOLSO = 'case-study-reembolso-sulamerica.md';
 const enderecoDoCase = (arquivo) => caminhoDoCase(lerCase(RAIZ, arquivo));
 const PAGINA_FINANCAS = enderecoDoCase(FINANCAS);
 const PAGINA_REEMBOLSO = enderecoDoCase(REEMBOLSO);
+const escaparRegex = (texto) => texto.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&');
 
 test('Construir a página de um case', () => {
   const { pagina } = construirEm(raizTemporaria());
@@ -155,6 +157,16 @@ test('O endereço de um case não depende do nome do arquivo', () => {
   const declaradas = cases.map((c) => caminhoDoCase(c).split('/')[1]).sort();
   const geradas = readdirSync(join(site.saida, 'trabalhos'), { withFileTypes: true }).filter((d) => d.isDirectory()).map((d) => d.name).sort();
   assert.deepEqual(geradas, declaradas);
+  // Cada endereço leva ao seu case: qual é de qual vem do cenário do contrato, e o case é
+  // reconhecido pelo título do arquivo dele, sem fixar texto nenhum.
+  const contrato = readFileSync(join(RAIZ, 'docs/comportamento/conteudo/arquivo-de-texto-vira-pagina.md'), 'utf8');
+  for (const [nome, arquivo] of [['Finanças', FINANCAS], ['Reembolso', REEMBOLSO]]) {
+    const endereco = contrato.match(new RegExp(`o case de ${nome} abre em "([^"]+)"`))?.[1];
+    assert.ok(endereco, `o cenário diz onde abre o case de ${nome}`);
+    const titulo = lerCase(RAIZ, arquivo).hero.titulo;
+    assert.match(site.pagina(`${endereco.replace(/^\//, '')}index.html`), new RegExp(`<title>${escaparRegex(escapar(titulo))} · `),
+      `${endereco} é o case de ${nome}`);
+  }
   // Link interno quebrado é o teste "Todo endereço local de toda página existe no site", em
   // paginas.test.mjs.
 });
