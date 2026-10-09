@@ -83,7 +83,10 @@ deixa de ser feita.
   `<!-- bloco: -->`, `<!-- trilha: -->`, `<!-- privado -->`, `<!-- bloco: foto -->` e
   `Legenda:`, e **NÃO DEVE** reconhecer seção por nome. *(Decisão 006)*
 - **Nenhum valor visual digitado à mão.** Todo valor vem de uma das três coleções de
-  variáveis. Valor necessário que não existe lá é lacuna, não improviso.
+  variáveis. Valor necessário que não existe lá é lacuna, não improviso. **Exceção: medida de
+  componente.** Uma medida que o Figma desenha sem variável e que só existe numa peça vive num
+  bloco único no topo de `modelo/estilo.css`, com o nó de origem ao lado. Token é o que se repete
+  pelo sistema. *(Decisão 228)*
 - **Desempenho:** primeira leitura possível em menos de 2,5 segundos no celular, em rede
   móvel comum.
 - **Um nome só, nos três lugares:** frame no Figma, título no contrato, nome no código.
@@ -121,4 +124,4 @@ princípio ou seção nova; CORREÇÃO para esclarecimento sem mudança de senti
 caminho implementado, nenhum valor visual digitado à mão, nenhuma informação em dois
 lugares, e acessibilidade declarada dentro de cada componente tocado.
 
-**Version**: 1.0.0 | **Ratified**: 2026-09-18 | **Last Amended**: 2026-09-18
+**Version**: 1.1.0 | **Ratified**: 2026-09-18 | **Last Amended**: 2026-10-09

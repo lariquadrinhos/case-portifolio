@@ -7352,3 +7352,29 @@ mais alta, com uma faixa vazia no escuro.*
 confere lado a lado precisa descontar essa diferença.
 
 **Consequência.** A P59 sai da lista, que fica com 4. Nada a construir.
+
+---
+
+## 228 · Medida que só existe numa peça é medida de componente, não token
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** sistema visual · `#emenda`
+
+**Gatilho.** P65: 38 medidas que o Figma desenha sem variável, reunidas pelo código num bloco no topo de
+`modelo/estilo.css`, cada uma com o nó de origem. São a estrutura da página (barra, faixa, trilha,
+coluna do case, mídia, capas baixas), onze tamanhos de texto fora da escala (Home e Trabalhos sem
+rolagem, parágrafo e etiqueta da Home), ajustes finos (rastreio, sombra, sublinhado) e proporções.
+
+**Decisão.** *"3, pode aceitar como medida de componente"*, proposta minha. Token é o que se repete
+pelo sistema; medida que só existe numa peça vive nesse bloco, com o nó de origem, e valor novo fora da
+escala continua indo para lá, nunca solto no código. **Emenda à constituição, 1.0.0 → 1.1.0** (MENOR:
+exceção nova a um princípio, sem mudar o resto dele).
+
+**Alternativa descartada.** *Criar as variáveis no Figma*: a escala de tipo ganharia onze degraus que
+só existem numa tela. *Corrigir no desenho*: mudaria telas aprovadas, como as da 211.
+
+**Custo aceito.** A conformidade deixa de ser "nenhum valor fora dos tokens" e passa a ser "nenhum valor
+fora dos tokens ou do bloco de medidas de componente". O bloco precisa continuar com o nó de cada valor,
+ou a exceção vira improviso.
+
+**Consequência.** A P65 sai da lista, que fica com 3: P15, P21 e P09. O comentário do bloco no
+`estilo.css` ainda cita a P65.

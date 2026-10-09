@@ -9,7 +9,7 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 9 de outubro de 2026 · **4 perguntas**, nenhuma travando
+**Atualizado:** 9 de outubro de 2026 · **3 perguntas**, nenhuma travando
 
 ---
 
@@ -101,21 +101,6 @@ página, sem moldura**, e o material é produzido sobre `bg/page` do tema.
 ### ~~P42~~ · Resolvida pela decisão 176
 Os dois cases ganharam `<!-- bloco: hero -->` antes do título. O hero termina na última linha
 da tira; a prosa do capítulo 1 começa logo depois.
-
-### P65 · Valores que o Figma desenha sem variável
-O código os concentra num bloco só, no topo de `modelo/estilo.css`, cada um com o nó de origem.
-Os que mais pesam: o parágrafo da home no desktop em **26/39** e a identificação em **16**, fora da
-escala de tipo (a estreita usa `abertura` e `etiqueta`); o rastreio dos títulos (−2%, −1,5%,
-−1%, +6%), que não tem coleção; a sombra das superfícies que flutuam; a barra de 64, a faixa de
-44 e a trilha a 100 do topo; o respiro de 20 das pastilhas; a entrada do conteúdo da página de
-erro em 160 no desktop. Dois vãos fora da escala foram arredondados para o degrau mais
-próximo, como o design system manda: provas → extra (60 → 64, e 28 → 32 na estreita).
-**Da 211, sem sobrar em rolagem (seção `592:1383`):** a frase da home em **64/64** e **80/80**, o
-parágrafo em **22/33**, o título de Trabalhos em **40/48**, o título do card em **28/36** e as capas
-com **285** e **314** de altura. Os espaços dessa proposta já são da escala (decisão 212).
-**Opções:** criar as variáveis no Figma e reexportar `tokens.json` · corrigir no desenho os que
-fugiram da escala · aceitar como medida de componente.
-**Momento:** a qualquer tempo; nenhum trava.
 
 ### ~~P40~~ · Resolvida pela decisão 059
 Os três valores foram escolhidos e deixaram de ser provisórios. Capa 3:2 porque a tela
