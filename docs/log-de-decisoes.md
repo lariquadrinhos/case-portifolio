@@ -7092,3 +7092,28 @@ originais continuam no histórico de versões dos dois arquivos do Figma e no re
 
 **Consequência.** O `case-reembolso` continua privado até ser refeito sem o `.jam` antigo e com os
 PNGs reexportados.
+
+---
+
+## 216 · O repositório do Reembolso é refeito sem o arquivo do FigJam, com o link no lugar
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** case · `#restricao`
+
+**Gatilho.** Depois da 215, o `case-reembolso` continuava privado, com o `.jam` antigo no único commit.
+Um OCR das 127 imagens achou dados reais em 16 telas, repetidas em `mockups/`, `wireframes/` e
+`wireframes/composicoes/`, exportadas antes de o Figma ser corrigido.
+
+**Decisão.** *"nao quero essa captura de figjam quero o link só"*: o `.jam` sai, e um `README.md` na
+raiz leva ao FigJam, ao Figma e ao protótipo. As 16 telas e os dois quadros completos foram exportados de
+novo do Figma; nas composições, a tela nova entrou no lugar exato da antiga. O protocolo real saiu de
+`microcopy.md` e `anotacoes-ux.md`. Com a permissão dela (*"gh auth refresh -h github.com -s
+delete_repo"*), o repositório antigo foi apagado e recriado com um commit só, e ficou público com
+*"pode deixar público"*. Um OCR final não acha nenhum dado real nas imagens.
+
+**Alternativa descartada.** *Salvar uma cópia nova do `.jam`*: é uma foto datada do quadro, que
+envelhece a cada mudança; o link mostra sempre a versão atual.
+
+**Custo aceito.** O repositório antigo ficou público por uns dez minutos na 214. Pela API ele não tinha
+cópias, mas um serviço de arquivamento pode tê-lo guardado.
+
+**Consequência.** Os links do Reembolso no site voltam a abrir o repositório.
