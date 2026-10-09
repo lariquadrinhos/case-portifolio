@@ -23,8 +23,8 @@ etapa, como evidência, não como declaração à parte.
 - **Tabela é conteúdo de desktop.** Em tela estreita ela não aparece: a seção inteira sai, pelo
   marcador `<!-- só no desktop -->` no arquivo de conteúdo. Uma tabela de três colunas não cabe
   em 327px sem rolar para o lado, e rolar para o lado escondia metade da comparação de quem não
-  usa o dedo. **O que o estreito perde está registrado como falta, não como decisão silenciosa**.
-Ver decisão 226.
+  usa o dedo. **O que o estreito perde foi conferido número por número e aceito por ela**, não
+ficou como decisão silenciosa. Ver decisão 226.
 - A página abre com **título do case, frase de abertura e tira de destaques**, nessa ordem,
   antes de qualquer capítulo.
 - **O título do case quebra onde o Figma quebra.** Na tela estreita, o do Finanças é *"A planilha
