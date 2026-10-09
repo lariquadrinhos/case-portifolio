@@ -1,5 +1,5 @@
 {
-  "_": "Altura de cada tela e onde o conteúdo termina. A anotação do wireframe não conta: ela documenta a tela, não é conteúdo dela. Só as telas claras entram. ATENÇÃO: a premissa de que a gêmea escura tem as mesmas medidas deixou de valer em 30/09, 'Case Reembolso · tela estreita 375 · tema escuro' tem 11940/11876, 11px a menos, porque os dois recortes do fluxograma do capítulo 3 têm altura diferente. Ver P59. Em 2026-10-01 só as duas telas do Case Finanças foram relidas do Figma (106:22 e 108:22, depois do vídeo do capítulo 1); as demais são do export de 2026-09-30.",
+  "_": "Altura de cada tela e onde o conteúdo termina. A anotação do wireframe não conta: ela documenta a tela, não é conteúdo dela. Só as telas claras entram. ATENÇÃO: a premissa de que a gêmea escura tem as mesmas medidas deixou de valer em 30/09, 'Case Reembolso · tela estreita 375 · tema escuro' tem 11940/11876, 11px a menos, porque os dois recortes do fluxograma do capítulo 3 têm altura diferente. Ver decisão 227. Em 2026-10-01 só as duas telas do Case Finanças foram relidas do Figma (106:22 e 108:22, depois do vídeo do capítulo 1); as demais são do export de 2026-09-30.",
   "exportado": "2026-10-01",
   "margens": {
     "desktop": 96,
