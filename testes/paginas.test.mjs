@@ -346,9 +346,10 @@ test('A pessoa baixa o currículo', () => {
 test('Leitor escolhe o LinkedIn', () => {
   // O perfil abre em nova aba, no contato de toda página e em "Quem sou eu". O endereço vem do
   // mesmo lugar que a construção usa, que o teste de copy amarra ao contrato: o teste não fixa
-  // qual perfil é.
+  // qual perfil é. O rótulo é só a palavra, sem o aviso de nova aba (decisão 217): o link é
+  // lido até o </a>, e o que houver além do rótulo aparece na comparação.
   const endereco = escapar(TEXTOS.linkedinEndereco.texto).replace(/[.*+?^${}()|[\]\\/]/g, '\\$&');
-  const link = new RegExp(`<a class="[^"]*" href="${endereco}" target="_blank" rel="noopener">(LinkedIn|Ver LinkedIn)<`, 'g');
+  const link = new RegExp(`<a class="[^"]*" href="${endereco}" target="_blank" rel="noopener">([\\s\\S]*?)<\\/a>`, 'g');
   for (const p of ['index.html', 'trabalhos/index.html', '404.html']) {
     assert.deepEqual([...site.pagina(p).matchAll(link)].map((m) => m[1]), ['LinkedIn'], `${p}: o LinkedIn no contato`);
   }
