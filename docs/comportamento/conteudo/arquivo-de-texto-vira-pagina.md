@@ -148,6 +148,13 @@ Funcionalidade: Um arquivo de texto vira página
     Quando a construção acontece
     Então nada dela aparece na página
     E ela continua no arquivo, disponível para quem escreve as legendas
+
+  Cenário: O endereço de um case não depende do nome do arquivo
+    Dado que o arquivo de conteúdo de um case tem o nome que tem hoje
+    Quando o site é construído
+    Então o case de Finanças abre em "/trabalhos/financas/"
+    E o case de Reembolso abre em "/trabalhos/reembolso/"
+    E nenhuma página é gerada no endereço derivado do nome do arquivo
 ```
 
 ## Transições
