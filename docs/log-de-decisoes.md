@@ -7245,3 +7245,22 @@ precisa ser trocado à mão.
 
 **Consequência.** O dev renomeia o repositório e troca o prefixo de publicação para `/` no mesmo
 movimento, para o site não ficar no ar com os caminhos errados.
+
+---
+
+## 223 · O texto da página de erro é dela
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** erro
+
+**Gatilho.** P31: o texto da página de erro era rascunho meu, à espera da voz dela. Ele é o mesmo no
+contrato, no Figma (`136:32` e `136:51`) e no site, e com a 221 e a 222 passou a ser a página que
+recebe os endereços antigos.
+
+**Decisão.** *"1, pode ficar como está"*. O título, o corpo e as três saídas ficam como estão, e
+passam a ser dela.
+
+**Alternativa descartada.** *Ela reescrever no Figma.* *Eu propor variações.*
+
+**Custo aceito.** Nenhum.
+
+**Consequência.** A P31 sai da lista, que fica com 11 perguntas. Nada a construir.

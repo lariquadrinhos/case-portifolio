@@ -40,8 +40,8 @@ forma, o que você procurava deve estar em um desses caminhos.
 **Saídas** · Ver os trabalhos · Voltar para a home · Falar comigo
 
 > **O corpo assume a falha antes de oferecer a saída.** "Um link meu que envelheceu" tira a
-> culpa de quem leu: é a mesma postura dos cases, olhar o sistema e não o usuário. Alterar
-> este texto é alterar este arquivo.
+> culpa de quem leu: é a mesma postura dos cases, olhar o sistema e não o usuário. O texto é
+> dela (decisão 223). Alterar este texto é alterar este arquivo.
 
 ## Peças
 

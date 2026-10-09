@@ -9,18 +9,13 @@
 > e entrada no log se tiver alternativa real. Lista com metade dos itens riscados deixa de
 > ser consultável.
 
-**Atualizado:** 9 de outubro de 2026 · **12 perguntas**, nenhuma travando
+**Atualizado:** 9 de outubro de 2026 · **11 perguntas**, nenhuma travando
 
 ---
 
 ## Travam
 
 Nenhuma.
-
-### P31 · O texto da página de erro, em rascunho
-Onde ele vive está decidido (011): no contrato da tela. O texto em si é rascunho meu e
-precisa da voz dela.
-**Momento:** antes de desenhar a página de erro. · *Contrato, `erro/`*
 
 ### ~~P44~~ · Resolvida pela decisão 053
 O parágrafo não será escrito. O site publica com dois cases e sem comentar a ausência.
