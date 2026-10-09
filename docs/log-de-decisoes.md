@@ -7378,3 +7378,29 @@ ou a exceção vira improviso.
 
 **Consequência.** A P65 sai da lista, que fica com 3: P15, P21 e P09. O comentário do bloco no
 `estilo.css` ainda cita a P65.
+
+---
+
+## 229 · A coluna do case entre 676 e 1280 passa a 628, e o extra entra nela
+
+**Quando** 2026-10-09 · **Fase** 4 · **Domínio** case
+
+**Gatilho.** O dev publicou a 225 (`6575da4`) e trouxe três pontos. Em 680 a prosa dava 71 a 84
+caracteres por linha (Reembolso 71/80/79/72, Finanças 81/78/84/76), acima da meta de 65 a 75. O extra
+"O Produto" do Finanças não estava na lista do que segue a coluna, por esquecimento meu, e em 1100 ia
+de borda a borda, com uns 130 caracteres. E o botão do convite com a largura do texto valia a partir de
+onde a coluna tem limite, não só a partir de 1024.
+
+**Decisão.** *"sim, vai com as três"*, propostas minhas:
+1. A coluna passa a **628**, a mesma da coluna de texto do desktop; o limite começa em **676** (628 mais
+   24 de cada lado).
+2. Todo texto segue a coluna, inclusive o conteúdo extra.
+3. O botão do convite tem a largura do texto sempre que a coluna tem limite.
+
+**Alternativa descartada.** *Manter 680*, acima da meta. *Botão de largura inteira até 1024.*
+
+**Custo aceito.** O Finanças fica com uns 70 a 78 caracteres, o mesmo que já tem no desktop.
+
+**Consequência.** `602:1487` reajustado: coluna em x236, 628 de largura, capa do próximo em 628×419,
+altura 9693. `case/pagina-de-case.md` atualizado, com o cenário "O case numa janela entre a tela estreita
+e o desktop". `--coluna-do-case` passa a 628.

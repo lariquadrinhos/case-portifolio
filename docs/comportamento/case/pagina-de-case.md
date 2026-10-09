@@ -225,16 +225,20 @@ se concentrar num ponto.
 
 - **Abaixo de 1280 de largura, o case usa o modo de tela estreita**, com a barra e a faixa de
   progresso da tela estreita. É a mesma fronteira da Home e de Trabalhos (decisão 212).
-- **A coluna de leitura tem no máximo 680 e fica centralizada**, uns 70 caracteres por linha.
-  Abaixo de 728 de largura (680 mais 24 de cada lado), ela volta a ocupar a largura com a margem
-  da tela estreita.
+- **A coluna de leitura tem no máximo 628 e fica centralizada**, a mesma largura da coluna de texto
+  do desktop. Abaixo de 676 de largura (628 mais 24 de cada lado), ela volta a ocupar a largura com
+  a margem da tela estreita.
+- **Tudo o que é texto segue a coluna**: hero, tira, prosa, conteúdo extra (como "O Produto" do
+  Finanças), provas, rótulo do próximo e convite.
 - **A mídia de prova tem no máximo 411 de largura**, a mesma do desktop, e fica centralizada na
-  coluna: as imagens são exportadas para 411 e esticá-las as borraria.
+  coluna: as imagens são exportadas para 411 e esticá-las as borraria. O par de telas do Finanças
+  empilha, cada uma com 411.
 - **O bloco de destaque sangra até as bordas**, como na tela estreita, e o texto dentro dele fica
-  na coluna de 680.
-- **O botão do convite ao contato tem a largura do texto**, como no desktop, e não a da coluna.
+  na coluna.
+- **O botão do convite ao contato tem a largura do texto** sempre que a coluna tem limite, a partir
+  de 676. Abaixo disso, ocupa a largura, como na tela estreita.
 - O card do próximo case acompanha a coluna, com a capa em 3:2.
-- Figma: `602:1487`. Ver decisão 225.
+- Figma: `602:1487`. Ver decisões 225 e 229.
 
 ## Tabelas dentro do case
 
@@ -305,6 +309,14 @@ Funcionalidade: Página de case
     Quando a construção acontece
     Então o título, a frase de abertura e a tira de destaques formam o hero, antes dos capítulos
     E o capítulo 1 começa no primeiro parágrafo depois da tira
+
+  Cenário: O case numa janela entre a tela estreita e o desktop
+    Dado que a janela tem entre 676 e 1279 de largura
+    Quando a pessoa abre um case
+    Então a página usa a barra e a faixa de progresso da tela estreita
+    E todo texto fica numa coluna centralizada de no máximo 628
+    E nenhuma mídia passa de 411 de largura
+    E o botão do convite tem a largura do texto
 ```
 
 ## Transições
