@@ -1,7 +1,7 @@
 {
   "_": "Resultado da conferência de endereços: cada `nnn:nn` citado na documentação foi resolvido dentro do Figma. `mortos` lista os que não existem mais; `orfaos`, os que existem mas não estão em página nenhuma: componente removido que sobrevive porque alguma instância o segura. Reexporte depois de recriar qualquer componente: recriar muda o id, e o endereço antigo continua parecendo válido.",
-  "exportado": "2026-09-28",
-  "citados": 54,
+  "exportado": "2026-10-09",
+  "citados": 55,
   "mortos": [],
   "orfaos": []
 }
