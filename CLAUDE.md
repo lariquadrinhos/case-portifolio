@@ -64,6 +64,8 @@ O GitHub Pages é publicado pela automação em `.github/workflows/publicar.yml`
   conveniência, nunca conteúdo.
 - **Nenhum valor visual escrito à mão.** O CSS consome `var(--…)`, gerado de
   `tokens.json` (`bg/page` → `--bg-page`). Valor que não existe nos tokens é lacuna.
+  Exceção: a medida de componente, que o Figma desenha sem variável e só existe numa
+  peça, vive no bloco do topo de `modelo/estilo.css`, com o nó de origem (decisão 228).
 - **Marcador é comentário HTML; título é conteúdo.** O vocabulário fechado está em
   `docs/comportamento/conteudo/arquivo-de-texto-vira-pagina.md`. Seção nunca é
   reconhecida pelo nome.
