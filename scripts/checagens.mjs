@@ -821,7 +821,7 @@ nota('Todo `figma.tela` resolve: exige um token pessoal do Figma. Sem ele, nenhu
 nota('  fora do editor lê o arquivo. Os node-id dos contratos seguem @lacuna de qualquer forma.');
 nota('Todo `Cenário:` é citado por um teste, a suíte usará `node --test testes/`, decidida');
 nota('  na pesquisa da spec 001. A checagem entra quando o primeiro teste existir.');
-nota('Todo `storybook.usa` existe, não se aplica: não há Storybook. Ver pergunta P17.');
+nota('Todo `storybook.usa` existe, não se aplica: não há Storybook. Ver decisão 224.');
 nota('Todo frame bate com o token de grade do seu modo, a grade do Figma não aceita vínculo');
 nota('  com variável (decisão 021), então a conferência não pode ser automática daqui.');
 
