@@ -287,8 +287,8 @@ test('O par de telas é uma peça só', () => {
   assert.match(fin.split('id="resultados"')[1].split('</section>')[0], /class="capitulo__par"/, 'o par é a mídia do capítulo 6');
 });
 
-test('Entre 1024 e 1280 de largura', () => {
-  // Decisão 225, seção de case/pagina-de-case.md. O case leva o mesmo CSS com a troca de modo
+test('O case numa janela entre a tela estreita e o desktop', () => {
+  // Decisões 225 e 229, seção "Entre 1024 e 1280 de largura" de case/pagina-de-case.md. O case leva o mesmo CSS com a troca de modo
   // na quebra dele, e os scripts leem a quebra da página. A medida no navegador fica com a
   // conferência; aqui, a forma.
   const css = readFileSync(join(site.saida, 'estilo.css'), 'utf8');
@@ -320,7 +320,8 @@ test('Entre 1024 e 1280 de largura', () => {
   assert.match(estreito, /max-width: var\(--coluna-do-case\);\s*margin-inline: auto;/);
   assert.match(estreito, /\.capitulo__leitura \.bloco-de-destaque \{\s*padding-inline: calc\(var\(--space-24\) \+ max\(0px, \(100% - var\(--coluna-do-case\)\) \/ 2\)\);/);
   assert.match(estreito, /\.prova, \.par \{\s*width: 100%;\s*max-width: var\(--midia-do-case\);/);
-  assert.match(css, /@media \(min-width: 728px\) and \(max-width: 1023\.98px\) \{\s*\.convite \.botao \{ width: auto;/, 'o botão do convite com a largura do texto');
+  assert.match(estreito, /\.extra \.extra__titulo, \.extra \.extra__conteudo \{\s*padding-inline: max\(var\(--margem\), \(100% - var\(--coluna-do-case\)\) \/ 2\);/, 'o extra segue a coluna');
+  assert.match(css, /@media \(min-width: 676px\) and \(max-width: 1023\.98px\) \{\s*\.convite \.botao \{ width: auto;/, 'o botão do convite com a largura do texto onde a coluna tem limite');
 });
 
 test('A pessoa vai para fora do site', () => {
